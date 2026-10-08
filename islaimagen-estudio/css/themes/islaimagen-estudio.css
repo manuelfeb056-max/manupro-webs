@@ -45,7 +45,7 @@ body{font-family:'Jost',sans-serif}
 .ii-rec{width:11px;height:11px;border-radius:50%;background:#e5484d;animation:pulse 1.4s ease-in-out infinite}
 
 /* tema oscuro */
-.theme-islaimagen-estudio{--bg:#101014;--bg2:#17171d;--card:#1c1c23;--ink:#f4f2fa;--muted:#a098b8;--line:rgba(255,255,255,.09);--accent:#7c5cff}
+.theme-islaimagen-estudio{--bg:#101014;--bg2:#17171d;--card:#1c1c23;--ink:#f4f2fa;--muted:#a8a8b0;--line:rgba(255,255,255,.09);--accent:#d4a24e}
 .theme-islaimagen-estudio .header{background:rgba(16,16,20,.9);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
 .theme-islaimagen-estudio .btn-accent{background:var(--accent);color:#fff}
 .theme-islaimagen-estudio .btn-ghost{border:2px solid rgba(255,255,255,.5);color:#fff;background:transparent}

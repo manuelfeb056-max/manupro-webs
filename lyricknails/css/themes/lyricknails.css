@@ -4,7 +4,7 @@ body{font-family:'Quicksand',sans-serif}
 .hero-soft{position:relative;padding:150px 0 80px;overflow:hidden;text-align:center}
 .blob{position:absolute;border-radius:50%;filter:blur(90px);opacity:.5;pointer-events:none}
 .b1{width:420px;height:420px;background:var(--accent);top:-120px;left:-120px}
-.b2{width:360px;height:360px;background:#7c5cff;bottom:-100px;right:-100px;opacity:.35}
+.b2{width:360px;height:360px;background:#ff5c8a;bottom:-100px;right:-100px;opacity:.35}
 .hero-soft-inner{position:relative}
 .hero-soft-inner h1{font-size:clamp(2.8rem,8vw,4.6rem);font-weight:800;margin:0 0 6px}
 .hero-soft .hero-sub{margin:18px auto 30px}
