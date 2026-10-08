@@ -1,0 +1,64 @@
+/* SALÓN EL PALACIO — gran apertura, cortinas y confeti dorado */
+body{font-family:'Jost',sans-serif}
+.logo,.sec-title{font-family:'Marcellus',serif}
+
+.sp-hero{position:relative;overflow:hidden;padding:130px 0 80px;text-align:center;background:radial-gradient(ellipse 70% 55% at 50% 0%,#3a2415 0%,#1a0f0a 65%)}
+.sp-hero-inner{position:relative;z-index:3}
+.sp-hero h1{font-family:'Marcellus',serif;font-size:clamp(2.4rem,9vw,4.8rem);line-height:1.1;margin:0 0 8px;color:#f7ecd4}
+.sp-gold{background:linear-gradient(100deg,#8a6a2a,#f4dfa0 30%,#d9a441 55%,#f7ecc8 80%,#8a6a2a);background-size:220% auto;-webkit-background-clip:text;background-clip:text;color:transparent;animation:spSheen 5s linear infinite}
+@keyframes spSheen{to{background-position:220% center}}
+.sp-tagline{font-family:'Marcellus',serif;font-style:italic;font-size:1.3rem;color:var(--accent);margin:0 0 10px}
+
+/* cortinas que se abren */
+.sp-curtain{position:absolute;top:0;bottom:0;width:52%;z-index:2;pointer-events:none;
+  background:repeating-linear-gradient(90deg,#5c1f1f 0 26px,#6e2626 26px 52px);
+  box-shadow:inset 0 0 80px rgba(0,0,0,.55)}
+.sp-curtain.left{left:0;transform-origin:left;animation:spOpenL 2.4s ease-out .3s forwards}
+.sp-curtain.right{right:0;transform-origin:right;animation:spOpenR 2.4s ease-out .3s forwards}
+@keyframes spOpenL{to{transform:scaleX(.06)}}
+@keyframes spOpenR{to{transform:scaleX(.06)}}
+
+/* confeti dorado */
+.sp-confetti{position:absolute;inset:0;pointer-events:none;z-index:2;overflow:hidden}
+.sp-confetti span{position:absolute;top:-4%;width:9px;height:13px;opacity:.85;animation:spFall 6s linear infinite}
+.sp-confetti span:nth-child(odd){background:#d9a441}
+.sp-confetti span:nth-child(even){background:#f4dfa0;border-radius:50%}
+.sp-confetti span:nth-child(1){left:5%;animation-delay:0s}.sp-confetti span:nth-child(2){left:15%;animation-delay:1.2s}
+.sp-confetti span:nth-child(3){left:28%;animation-delay:2.4s}.sp-confetti span:nth-child(4){left:42%;animation-delay:.6s}
+.sp-confetti span:nth-child(5){left:55%;animation-delay:3s}.sp-confetti span:nth-child(6){left:68%;animation-delay:1.8s}
+.sp-confetti span:nth-child(7){left:78%;animation-delay:4s}.sp-confetti span:nth-child(8){left:88%;animation-delay:2.8s}
+.sp-confetti span:nth-child(9){left:95%;animation-delay:.9s}.sp-confetti span:nth-child(10){left:35%;animation-delay:3.6s}
+@keyframes spFall{to{transform:translateY(110vh) rotate(720deg)}}
+
+/* candelabro */
+.sp-chandelier{position:absolute;top:26px;left:50%;transform:translateX(-50%);display:flex;gap:14px;z-index:2}
+.sp-chandelier i{width:8px;height:8px;border-radius:50%;background:#ffe9ad;box-shadow:0 0 14px 4px rgba(255,220,140,.8);animation:spTwinkle 2.2s ease-in-out infinite}
+.sp-chandelier i:nth-child(2){animation-delay:.4s}.sp-chandelier i:nth-child(3){animation-delay:.8s}
+.sp-chandelier i:nth-child(4){animation-delay:1.2s}.sp-chandelier i:nth-child(5){animation-delay:1.6s}
+@keyframes spTwinkle{0%,100%{opacity:1}50%{opacity:.35}}
+
+.sp-frame{position:relative;max-width:660px;margin:36px auto 0}
+.sp-frame img{width:100%;height:min(58vw,420px);object-fit:cover;border-radius:8px;border:10px solid #2c1c10;outline:2px solid var(--accent);box-shadow:0 30px 70px rgba(0,0,0,.55)}
+.sp-frame .sp-f2{position:absolute;width:36%;right:-4%;bottom:-10%;border:8px solid #2c1c10;outline:2px solid var(--accent);border-radius:8px;transform:rotate(4deg);height:auto;aspect-ratio:4/3}
+
+.theme-salon-el-palacio{--bg:#1a0f0a;--bg2:#241610;--card:#2a1a10;--ink:#f7ecd4;--muted:#c9a97e;--line:#4a2f1c;--accent:#d9a441}
+.theme-salon-el-palacio .header{background:rgba(26,15,10,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.theme-salon-el-palacio .hero-sub{color:var(--muted)}
+.theme-salon-el-palacio .btn-accent{background:linear-gradient(120deg,#b98a2e,#e8c874);color:#241505}
+.theme-salon-el-palacio .btn-ghost{border:2px solid var(--accent);color:var(--accent);background:transparent}
+.theme-salon-el-palacio .kicker{color:var(--accent);letter-spacing:.3em}
+
+@media(max-width:640px){.sp-hero{padding:110px 0 64px}.sp-frame .sp-f2{right:0}}
+
+/* ---- contacto único ---- */
+.theme-salon-el-palacio .ct-invite-card{max-width:600px;margin:0 auto;background:#fbf7ee;color:#3a2f22;padding:48px 40px;text-align:center;border:1px solid #d8c9a3;box-shadow:0 30px 70px rgba(90,70,30,.25);position:relative}
+.theme-salon-el-palacio .ct-invite-card::before{content:"";position:absolute;inset:12px;border:2px solid #c9a86a;pointer-events:none}
+.theme-salon-el-palacio .ct-invite-kick{font-style:italic;color:#8a744a;letter-spacing:.06em}
+.theme-salon-el-palacio .ct-invite-card h2{font-family:serif;font-size:2.4rem;margin:10px 0;letter-spacing:.04em}
+.theme-salon-el-palacio .ct-invite-div{color:#c9a86a;font-size:1.4rem;margin:6px 0}
+.theme-salon-el-palacio .ct-invite-phone{font-family:serif;font-size:clamp(1.5rem,5.5vw,2rem);color:#6a5320;text-decoration:none;letter-spacing:.06em}
+.theme-salon-el-palacio .ct-invite-lines{margin-top:14px;line-height:2;color:#6a5a3a}
+.theme-salon-el-palacio .ct-invite-lines a{color:#6a5320;font-weight:700}
+.theme-salon-el-palacio .ct-invite-map{margin-top:20px}
+.theme-salon-el-palacio .ct-invite-map iframe{width:100%;height:200px;border:1px solid #d8c9a3}
+.theme-salon-el-palacio .ct-invite-rsvp{margin-top:18px;font-style:italic;color:#8a744a;letter-spacing:.14em;text-transform:uppercase;font-size:.78rem}

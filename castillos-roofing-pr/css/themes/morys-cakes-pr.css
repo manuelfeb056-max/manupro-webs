@@ -1,0 +1,59 @@
+/* MORY'S CAKES PR — vitrina dulce (tema claro) */
+body{font-family:'Poppins',sans-serif}
+.theme-morys-cakes-pr .logo,.theme-morys-cakes-pr .sec-title,.theme-morys-cakes-pr .hero-mo h1{font-family:'Caveat',sans-serif}
+.theme-morys-cakes-pr{--bg:#fdf3f7;--bg2:#fae6ee;--card:#ffffff;--ink:#4a2436;--muted:#a97f92;--line:#f3d5e1}
+.theme-morys-cakes-pr .header{background:rgba(253,243,247,.88);border-bottom:1px solid var(--line)}
+
+/* ---- hero vitrina ---- */
+.hero-mo{padding:136px 0 84px;text-align:center;position:relative;overflow:hidden;
+  background:radial-gradient(820px 420px at 50% -80px,#ffe0ec,transparent),linear-gradient(180deg,var(--bg),var(--bg2))}
+.hero-mo-inner{position:relative;z-index:2}
+.mo-pill{display:inline-block;background:#fff;color:#c24a82;font-weight:700;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;
+  padding:10px 26px;border-radius:999px;border:2px dashed var(--accent);transform:rotate(-2deg);box-shadow:0 10px 24px rgba(232,93,158,.18);margin-bottom:14px}
+.hero-mo h1{font-size:clamp(3.4rem,10vw,5.6rem);font-weight:700;color:var(--ink);margin:0 0 4px;line-height:1.05;
+  animation:moBob 4.5s ease-in-out infinite}
+.hero-mo .hero-sub{color:var(--muted);text-shadow:none;margin:14px auto 28px;max-width:46ch}
+.hero-mo .hero-ctas{justify-content:center}
+.theme-morys-cakes-pr .btn-accent{color:#fff;box-shadow:0 14px 30px rgba(232,93,158,.4)}
+.theme-morys-cakes-pr .btn-ghost{background:#fff;border-color:var(--line);color:var(--ink)}
+
+/* ---- confeti cayendo ---- */
+.mo-confetti{position:absolute;top:-5vh;width:8px;height:12px;border-radius:2px;opacity:.9;z-index:1;pointer-events:none;
+  animation-name:moFall;animation-timing-function:linear;animation-iteration-count:infinite}
+.mo-confetti:nth-child(4n+1){background:#e85d9e}
+.mo-confetti:nth-child(4n+2){background:#f5c518}
+.mo-confetti:nth-child(4n+3){background:#7ed6a7}
+.mo-confetti:nth-child(4n+4){background:#b79ced}
+@keyframes moFall{0%{transform:translateY(-10vh) rotate(0)}100%{transform:translateY(110vh) rotate(720deg)}}
+@keyframes moBob{0%,100%{transform:translateY(0) rotate(-1.2deg)}50%{transform:translateY(-10px) rotate(1.2deg)}}
+
+/* ---- foto sobre pedestal ---- */
+.mo-showcase{margin-top:44px;display:flex;flex-direction:column;align-items:center}
+.mo-photo{width:clamp(220px,42vw,310px);aspect-ratio:1/1;border-radius:50%;object-fit:cover;
+  border:8px solid #fff;box-shadow:0 26px 60px rgba(232,93,158,.45);position:relative;z-index:2;
+  animation:floaty 6s ease-in-out infinite}
+.mo-plate{width:70%;max-width:400px;height:34px;background:#fff;border-radius:50%;
+  box-shadow:0 12px 26px rgba(232,93,158,.28),inset 0 -6px 12px rgba(232,93,158,.12);
+  margin-top:-16px;position:relative;z-index:1}
+.mo-ground{width:56%;max-width:320px;height:26px;margin-top:12px;border-radius:50%;
+  background:radial-gradient(ellipse at center,rgba(194,74,130,.32),transparent 70%)}
+
+/* ---- logo: etiqueta colgante ---- */
+
+@media(max-width:560px){
+  .hero-mo{padding:118px 0 64px}
+  .mo-photo{width:min(64vw,240px)}
+  .mo-plate{width:84%}
+}
+
+/* ---- contacto único ---- */
+.theme-morys-cakes-pr .ct-cakebox-box{position:relative;max-width:540px;margin:30px auto 0;background:#fff;border-radius:14px;padding:46px 30px;box-shadow:0 26px 60px rgba(190,90,130,.3)}
+.theme-morys-cakes-pr .ct-cakebox-ribbon-v{position:absolute;top:0;bottom:0;left:50%;width:26px;transform:translateX(-50%);background:linear-gradient(180deg,#e85d9e,#c2437f)}
+.theme-morys-cakes-pr .ct-cakebox-ribbon-h{position:absolute;left:0;right:0;top:50%;height:26px;transform:translateY(-50%);background:linear-gradient(90deg,#e85d9e,#c2437f);opacity:.9}
+.theme-morys-cakes-pr .ct-cakebox-bow{position:absolute;top:-24px;left:50%;transform:translateX(-50%);font-size:2.6rem}
+.theme-morys-cakes-pr .ct-cakebox-in{position:relative;background:#fff;padding:6px}
+.theme-morys-cakes-pr .ct-cakebox-phone{font-size:clamp(1.6rem,6vw,2.2rem);font-weight:800;color:#a33a6b;text-decoration:none}
+.theme-morys-cakes-pr .ct-cakebox-in p{margin-top:10px;color:#8a5a6e}
+.theme-morys-cakes-pr .ct-cakebox-in p a{color:#c2437f;font-weight:700}
+.theme-morys-cakes-pr .ct-cakebox-map{max-width:540px;margin:26px auto 0}
+.theme-morys-cakes-pr .ct-cakebox-map iframe{width:100%;height:210px;border:0;border-radius:14px}

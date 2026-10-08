@@ -1,0 +1,60 @@
+/* BEBO'S CARWASH — Túnel de lavado (tema oscuro azul profundo) */
+body{font-family:'Inter',sans-serif}
+.logo,.sec-title,.bc-hero h1{font-family:'Bungee',sans-serif}
+.bc-hero{position:relative;padding:150px 0 90px;overflow:hidden;
+  background:linear-gradient(160deg,#06222f,#0a2f40 60%,#06222f)}
+.bc-glow{position:absolute;border-radius:50%;filter:blur(90px);pointer-events:none;z-index:0}
+.bc-glow.bg1{width:480px;height:480px;background:#1e9be0;top:-140px;right:-120px;opacity:.32}
+.bc-glow.bg2{width:420px;height:420px;background:#0e6fa0;bottom:-160px;left:-140px;opacity:.28}
+.bc-grid{position:relative;z-index:2;display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center}
+.bc-eyebrow{display:inline-block;padding:9px 22px;border:1px solid var(--line);border-radius:999px;
+  background:rgba(255,255,255,.06);font-size:.78rem;letter-spacing:.22em;text-transform:uppercase;
+  font-weight:700;color:#9fd8f5;margin:0 0 22px}
+.bc-hero h1{font-size:clamp(2.6rem,7.5vw,4.8rem);margin:0 0 6px;color:var(--ink);line-height:1.08}
+/* shine sobre el nombre */
+.bc-shine{position:relative;overflow:hidden;display:inline-block}
+.bc-shine::after{content:"";position:absolute;inset:0;
+  background:linear-gradient(115deg,transparent 30%,rgba(255,255,255,.55) 50%,transparent 70%);
+  transform:translateX(-120%);animation:bcShine 4.5s ease-in-out infinite}
+@keyframes bcShine{0%{transform:translateX(-120%)}55%,100%{transform:translateX(120%)}}
+.bc-hero .hero-sub{margin:20px 0 32px}
+/* marco con borde gradiente animado */
+.bc-frame{padding:10px;border-radius:28px;
+  background:linear-gradient(135deg,var(--accent),#7dd3fc,#1e6fa0);
+  animation:glowPulse 4s infinite}
+.bc-frame img{display:block;width:100%;height:520px;object-fit:cover;border-radius:20px}
+/* burbujas subiendo */
+.bc-bub{position:absolute;bottom:-60px;border-radius:50%;background:rgba(255,255,255,.25);
+  pointer-events:none;z-index:1;animation:bcRise linear infinite}
+@keyframes bcRise{0%{transform:translateY(20vh);opacity:0}15%{opacity:.8}100%{transform:translateY(-105vh);opacity:0}}
+.bc-bub.b1{left:6%;width:14px;height:14px;animation-duration:9s;animation-delay:-2s}
+.bc-bub.b2{left:16%;width:28px;height:28px;background:rgba(125,211,252,.3);animation-duration:12s;animation-delay:-7s}
+.bc-bub.b3{left:27%;width:10px;height:10px;filter:blur(2px);animation-duration:8s;animation-delay:-4s}
+.bc-bub.b4{left:38%;width:40px;height:40px;background:rgba(255,255,255,.16);animation-duration:13s;animation-delay:-9s}
+.bc-bub.b5{left:49%;width:18px;height:18px;animation-duration:10s;animation-delay:-1s}
+.bc-bub.b6{left:58%;width:26px;height:26px;background:rgba(125,211,252,.28);filter:blur(2px);animation-duration:11s;animation-delay:-6s}
+.bc-bub.b7{left:68%;width:12px;height:12px;animation-duration:9.5s;animation-delay:-8s}
+.bc-bub.b8{left:79%;width:34px;height:34px;background:rgba(255,255,255,.14);animation-duration:14s;animation-delay:-3s}
+.bc-bub.b9{left:88%;width:16px;height:16px;filter:blur(2px);animation-duration:10.5s;animation-delay:-5s}
+.bc-bub.b10{left:95%;width:22px;height:22px;background:rgba(125,211,252,.3);animation-duration:12.5s;animation-delay:-10s}
+/* logo: doble anillo */
+/* tema oscuro azul profundo */
+.theme-bebos-carwash{--bg:#06222f;--bg2:#0a2f40;--card:#0d3a4d;--ink:#eaf7ff;--muted:#8fb6c7;--line:rgba(255,255,255,.1)}
+.theme-bebos-carwash .header{background:rgba(6,34,47,.92)}
+.theme-bebos-carwash .footer{background:#04161e;border-top-color:#04161e}
+@media(max-width:900px){
+  .bc-grid{grid-template-columns:1fr;gap:40px}
+  .bc-frame img{height:380px}
+}
+
+/* ---- contacto único ---- */
+.theme-bebos-carwash .ct-tunnel-track{display:flex;gap:14px;overflow-x:auto;padding:20px;scroll-snap-type:x mandatory}
+.theme-bebos-carwash .ct-tunnel-station{flex:0 0 min(300px,80vw);scroll-snap-align:center;background:var(--card);border:1px solid var(--line);border-radius:18px;padding:26px 22px;position:relative;overflow:hidden}
+.theme-bebos-carwash .ct-tunnel-station::before{content:"";position:absolute;top:0;left:0;right:0;height:8px;background:repeating-linear-gradient(90deg,var(--accent) 0 26px,#fff 26px 52px);animation:tunnelMove 1.2s linear infinite}
+@keyframes tunnelMove{to{background-position:52px 0}}
+.theme-bebos-carwash .ct-st-num{display:inline-block;width:34px;height:34px;border-radius:50%;background:var(--accent);color:#fff;font-weight:800;line-height:34px;text-align:center;margin-bottom:10px}
+.theme-bebos-carwash .ct-tunnel-station strong{display:block;font-size:1.05rem;margin-bottom:6px}
+.theme-bebos-carwash .ct-tunnel-station a{color:var(--accent);font-weight:700;font-size:1.1rem}
+.theme-bebos-carwash .ct-tunnel-station em{font-style:normal;color:var(--muted)}
+.theme-bebos-carwash .ct-tunnel-map{margin-top:22px}
+.theme-bebos-carwash .ct-tunnel-map iframe{width:100%;height:220px;border:0;border-radius:16px}

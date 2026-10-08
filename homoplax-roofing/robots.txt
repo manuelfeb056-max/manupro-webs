@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://darkgreen-heron-675477.hostingersite.com/homoplax-roofing/sitemap.xml

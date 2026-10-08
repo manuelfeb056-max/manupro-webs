@@ -1,0 +1,26 @@
+/* MAX SUPERCUTS — diagonal barbershop */
+body{font-family:'Oswald',sans-serif}
+.logo,.sec-title,.hero-diag-text h1{font-family:'Alfa Slab One',serif;font-weight:400}
+.hero-diag{background:linear-gradient(160deg,#16161c,#0b0b10);clip-path:polygon(0 0,100% 0,100% calc(100% - 4vw),0 100%);padding:150px 0 calc(70px + 4vw)}
+.hero-diag-grid{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center}
+.hero-diag-text h1{font-size:clamp(2.2rem,5.6vw,3.8rem);line-height:1.08;margin:0 0 6px}
+.hero-diag .hero-sub{margin:18px 0 30px}
+.hero-diag-photo{clip-path:polygon(12% 0,100% 0,88% 100%,0 100%);height:460px;box-shadow:0 24px 60px rgba(0,0,0,.5)}
+.hero-diag-photo img{width:100%;height:100%;object-fit:cover}
+@media(max-width:860px){.hero-diag-grid{grid-template-columns:1fr}.hero-diag-photo{height:300px}}
+/* logo: diamante */
+/* identidad: negro cálido de barbería */
+.theme-max-supercuts{--bg:#0f0c09;--bg2:#161009;--card:#1a1410;--ink:#f6efe2;--muted:#ab9c84;--line:rgba(255,220,170,.1)}
+
+/* ---- contacto único ---- */
+.theme-max-supercuts .ct-pole-flex{display:flex;gap:26px;align-items:center;justify-content:center;flex-wrap:wrap;margin:24px 0}
+.theme-max-supercuts .ct-pole-bar{width:74px;height:300px;border-radius:40px;background:repeating-linear-gradient(-48deg,#d21f2c 0 26px,#fff 26px 52px,#1f4fd2 52px 78px,#fff 78px 104px);box-shadow:0 18px 40px rgba(0,0,0,.35);position:relative;overflow:hidden}
+.theme-max-supercuts .ct-pole-bar span{position:absolute;inset:0;background:repeating-linear-gradient(-48deg,transparent 0 26px,rgba(255,255,255,.35) 26px 40px,transparent 40px 104px);animation:poleSpin 2.6s linear infinite}
+@keyframes poleSpin{to{transform:translateY(104px)}}
+.theme-max-supercuts .ct-pole-info{text-align:left;max-width:380px}
+.theme-max-supercuts .ct-pole-info h2{font-size:2rem;margin:4px 0 10px}
+.theme-max-supercuts .ct-pole-phone{font-size:clamp(1.5rem,5.5vw,2rem);font-weight:800;color:var(--ink);text-decoration:none}
+.theme-max-supercuts .ct-pole-info p{margin-top:10px;color:var(--muted);line-height:1.9}
+.theme-max-supercuts .ct-pole-info p a{color:var(--accent);font-weight:700}
+.theme-max-supercuts .ct-pole-map{max-width:640px;margin:0 auto}
+.theme-max-supercuts .ct-pole-map iframe{width:100%;height:220px;border:0;border-radius:14px}

@@ -1,0 +1,63 @@
+/* OPTICOLORS ÓPTICA — visión: enfoque que se aclara, limpio y clínico */
+body{font-family:'Inter',sans-serif}
+.theme-opticolors-optica{--bg:#f6fbfd;--bg2:#e9f3f8;--card:#ffffff;--ink:#12343f;--muted:#5d7f8c;--line:#d8e9f1;--accent:#0891b2}
+.theme-opticolors-optica .logo,.theme-opticolors-optica .sec-title,.hero-oc h1{font-family:'Outfit',sans-serif}
+.theme-opticolors-optica .header{background:rgba(246,251,253,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.theme-opticolors-optica .btn-accent{color:#fff;box-shadow:0 14px 30px rgba(8,145,178,.38)}
+.theme-opticolors-optica .btn-ghost{border:2px solid var(--line);color:var(--ink);background:#fff}
+
+.hero-oc{position:relative;padding:140px 0 96px;overflow:hidden;text-align:center;background:linear-gradient(180deg,var(--bg),var(--bg2))}
+.hero-oc-inner{position:relative;z-index:2}
+.hero-oc h1{font-size:clamp(3rem,9vw,5.4rem);font-weight:700;margin:0;letter-spacing:-.01em;color:var(--ink)}
+.oc-tit{font-size:clamp(1.35rem,3.4vw,2rem);font-weight:600;color:var(--ink);margin:8px 0 0}
+.oc-tit .hl{color:var(--accent)}
+.hero-oc .hero-sub{color:var(--muted);text-shadow:none;margin:16px auto 28px}
+.hero-oc .hero-ctas{justify-content:center}
+
+/* lentes: anillos concéntricos que respiran */
+.oc-lens{position:absolute;inset:0;pointer-events:none;z-index:1}
+.oc-ring{position:absolute;top:46%;left:50%;transform:translate(-50%,-50%);border-radius:50%;border:2px solid rgba(8,145,178,.16)}
+.oc-ring.r1{width:min(560px,96vw);height:min(560px,96vw);animation:ocBreath 6s ease-in-out infinite}
+.oc-ring.r2{width:min(400px,70vw);height:min(400px,70vw);animation:ocBreath 6s ease-in-out 1s infinite}
+.oc-ring.r3{width:min(260px,46vw);height:min(260px,46vw);border-color:rgba(8,145,178,.22);animation:ocBreath 6s ease-in-out 2s infinite}
+@keyframes ocBreath{0%,100%{transform:translate(-50%,-50%) scale(1)}50%{transform:translate(-50%,-50%) scale(1.06)}}
+
+/* foto: empieza borrosa y se enfoca al cargar */
+.oc-frame{position:relative;max-width:620px;margin:44px auto 0}
+.oc-photo{display:block;width:100%;height:min(58vw,400px);object-fit:cover;border-radius:26px;box-shadow:0 30px 70px rgba(18,52,63,.22);
+  animation:ocFocus 2.4s ease-out forwards}
+@keyframes ocFocus{0%{filter:blur(16px) saturate(.6);transform:scale(1.045)}100%{filter:blur(0) saturate(1);transform:scale(1)}}
+.oc-corner{position:absolute;width:34px;height:34px;border:3px solid var(--accent);pointer-events:none}
+.oc-corner.tl{top:-10px;left:-10px;border-right:none;border-bottom:none;border-radius:10px 0 0 0}
+.oc-corner.tr{top:-10px;right:-10px;border-left:none;border-bottom:none;border-radius:0 10px 0 0}
+.oc-corner.bl{bottom:-10px;left:-10px;border-right:none;border-top:none;border-radius:0 0 0 10px}
+.oc-corner.br{bottom:-10px;right:-10px;border-left:none;border-top:none;border-radius:0 0 10px 0}
+.oc-focus{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:120px;height:120px;pointer-events:none;opacity:0;animation:ocPing 2.4s ease-out .4s forwards}
+.oc-focus b{display:block;width:100%;height:100%;border:3px solid #fff;border-radius:12px;box-shadow:0 0 0 2px var(--accent)}
+@keyframes ocPing{0%{opacity:1;transform:translate(-50%,-50%) scale(1.6)}60%{opacity:1}100%{opacity:0;transform:translate(-50%,-50%) scale(.9)}}
+
+/* línea de dioptrías */
+.oc-diopter{display:flex;align-items:center;justify-content:center;gap:14px;margin-top:30px;font-size:.74rem;letter-spacing:.3em;text-transform:uppercase;color:var(--muted);font-weight:700}
+.oc-diopter i{width:44px;height:1px;background:var(--accent);opacity:.5}
+
+.theme-opticolors-optica .footer{background:#0f2b36;border-top-color:#0f2b36}
+.theme-opticolors-optica .footer .foot-sub,.theme-opticolors-optica .foot-legal{color:#8fb3c0}
+.theme-opticolors-optica .foot-legal{border-top-color:#12343f}
+
+@media(max-width:640px){
+  .hero-oc{padding:116px 0 76px}
+  .oc-diopter{font-size:.62rem;gap:8px}
+  .oc-diopter i{width:26px}
+}
+
+/* ---- contacto único ---- */
+.theme-opticolors-optica .ct-glasses-frame{display:flex;align-items:center;justify-content:center;margin:10px 0 4px}
+.theme-opticolors-optica .ct-lens{width:110px;height:86px;border:9px solid #222;border-radius:48%;background:linear-gradient(140deg,rgba(120,200,255,.35),rgba(120,200,255,.05))}
+.theme-opticolors-optica .ct-bridge{width:44px;height:10px;background:#222;border-radius:6px;margin:0 -6px;align-self:flex-start;margin-top:18px}
+.theme-opticolors-optica .ct-glasses-row{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin:22px 0}
+.theme-opticolors-optica .ct-glass-card{background:var(--card);border:1px solid var(--line);border-radius:60px;padding:18px 30px;text-decoration:none;color:var(--ink);box-shadow:0 14px 30px rgba(0,0,0,.12)}
+.theme-opticolors-optica .ct-glass-card strong{display:block;font-size:.7rem;letter-spacing:.26em;text-transform:uppercase;color:var(--accent);margin-bottom:6px}
+.theme-opticolors-optica .ct-glass-card span{font-weight:700;word-break:break-word}
+.theme-opticolors-optica .ct-glasses-town{color:var(--muted);font-size:.92rem}
+.theme-opticolors-optica .ct-glasses-map{max-width:520px;margin:22px auto 0}
+.theme-opticolors-optica .ct-glasses-map iframe{width:100%;height:200px;border:0;border-radius:80px}

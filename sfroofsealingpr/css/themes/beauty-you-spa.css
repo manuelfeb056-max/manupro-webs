@@ -1,0 +1,57 @@
+/* BEAUTY YOU SPA — zen y calma, jardín de arena + respiro */
+body{font-family:'Nunito',sans-serif}
+.theme-beauty-you-spa{--bg:#fbfdf9;--bg2:#f1f7ec;--card:#ffffff;--ink:#33402c;--muted:#8a9b80;--line:#dfe8d6;--accent:#6a994e}
+.theme-beauty-you-spa .logo,.theme-beauty-you-spa .sec-title,.hero-by h1{font-family:'Playfair Display',serif}
+.theme-beauty-you-spa .header{background:rgba(251,253,249,.9);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.theme-beauty-you-spa .btn-accent{color:#fff;box-shadow:0 14px 30px rgba(106,153,78,.4)}
+.theme-beauty-you-spa .btn-ghost{background:#fff;border:1px solid var(--line);color:var(--ink)}
+
+.hero-by{position:relative;padding:150px 0 100px;overflow:hidden;text-align:center;background:linear-gradient(180deg,var(--bg),var(--bg2))}
+.hero-by-inner{position:relative;z-index:2}
+.by-kicker{font-size:.74rem;letter-spacing:.42em;text-transform:uppercase;color:var(--accent);font-weight:700;margin-bottom:16px}
+.hero-by h1{font-size:clamp(3rem,9vw,5.4rem);font-weight:600;margin:0;color:var(--ink)}
+.hero-by h1::first-letter{color:var(--accent)}
+.by-tit{font-family:'Playfair Display',serif;font-style:italic;font-size:clamp(1.35rem,3.4vw,1.9rem);color:var(--ink);margin:10px 0 0}
+.by-tit .hl{color:var(--accent);font-style:normal}
+.hero-by .hero-sub{color:var(--muted);text-shadow:none;margin:16px auto 30px}
+.hero-by .hero-ctas{justify-content:center}
+
+/* pétalos de loto flotando */
+.by-petal{position:absolute;width:64px;height:34px;border-radius:80% 80% 80% 80%/70% 70% 100% 100%;background:linear-gradient(160deg,#cfe3bd,#9dc08a);opacity:.55;pointer-events:none;z-index:1;animation:byDrift 9s ease-in-out infinite}
+.pt1{top:16%;left:8%}.pt2{top:26%;right:10%;animation-delay:2.2s;transform:rotate(40deg)}
+.pt3{top:62%;left:12%;animation-delay:4.4s;transform:rotate(-30deg)}
+.pt4{top:70%;right:8%;animation-delay:6.6s;transform:rotate(70deg)}
+@keyframes byDrift{0%,100%{transform:translateY(0) rotate(var(--r,0deg))}50%{transform:translateY(-30px) rotate(calc(var(--r,0deg) + 12deg))}}
+
+/* círculo zen con ondas de arena que respiran */
+.by-circle{position:relative;display:inline-block;margin-top:50px}
+.by-ripple{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);border-radius:50%;border:1.5px solid rgba(106,153,78,.5);pointer-events:none;animation:byExpand 7s ease-in-out infinite}
+.by-ripple.rp1{width:330px;height:330px}
+.by-ripple.rp2{width:330px;height:330px;animation-delay:2.3s}
+.by-ripple.rp3{width:330px;height:330px;animation-delay:4.6s}
+@keyframes byExpand{0%,100%{transform:translate(-50%,-50%) scale(1);opacity:.8}50%{transform:translate(-50%,-50%) scale(1.14);opacity:.25}}
+.by-photo{display:block;width:min(300px,68vw);height:min(300px,68vw);border-radius:50%;object-fit:cover;border:10px solid #fff;box-shadow:0 30px 70px rgba(51,64,44,.2);position:relative;z-index:2;animation:byBreathe 6s ease-in-out infinite}
+@keyframes byBreathe{0%,100%{transform:scale(1)}50%{transform:scale(1.03)}}
+.by-breath{position:absolute;inset:-26px;border-radius:50%;background:radial-gradient(circle,rgba(106,153,78,.18),transparent 65%);z-index:1;pointer-events:none;animation:byBreathe 6s ease-in-out infinite}
+.by-zen{margin-top:30px;font-size:.78rem;letter-spacing:.36em;text-transform:uppercase;color:var(--muted);font-weight:700}
+
+.theme-beauty-you-spa .footer{background:#24301f;border-top-color:#24301f}
+.theme-beauty-you-spa .footer .foot-sub,.theme-beauty-you-spa .foot-legal{color:#a9bc9c}
+.theme-beauty-you-spa .foot-legal{border-top-color:#33402c}
+
+@media(max-width:640px){
+  .hero-by{padding:120px 0 84px}
+  .by-ripple.rp1,.by-ripple.rp2,.by-ripple.rp3{width:250px;height:250px}
+  .by-petal.pt3{display:none}
+}
+
+/* ---- contacto único ---- */
+.theme-beauty-you-spa .ct-ritual{text-align:center}
+.theme-beauty-you-spa .ct-breath{display:flex;justify-content:center;margin-bottom:18px}
+.theme-beauty-you-spa .ct-breath span{width:74px;height:74px;border-radius:50%;border:2px solid var(--accent);animation:breath 4s ease-in-out infinite}
+@keyframes breath{0%,100%{transform:scale(.82);opacity:.5}50%{transform:scale(1.12);opacity:1}}
+.theme-beauty-you-spa .ct-ritual-phone{display:inline-block;font-size:clamp(1.8rem,7vw,2.6rem);font-weight:300;letter-spacing:.06em;color:var(--ink);text-decoration:none;margin:14px 0 6px}
+.theme-beauty-you-spa .ct-ritual-lines{color:var(--muted);line-height:2}
+.theme-beauty-you-spa .ct-ritual-lines a{color:var(--accent);font-weight:700}
+.theme-beauty-you-spa .ct-ritual-map{max-width:520px;margin:28px auto 0}
+.theme-beauty-you-spa .ct-ritual-map iframe{width:100%;height:210px;border:0;border-radius:999px}

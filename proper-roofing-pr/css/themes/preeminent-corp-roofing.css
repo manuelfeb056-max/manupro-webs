@@ -1,0 +1,33 @@
+/* PREEMINENT CORP ROOFING - espuma de poliuretano expandiéndose (grafito + lima) */
+.theme-preeminent-corp-roofing{--accent:#a8e10c;--bg:#141619;--bg2:#1b1e22;--card:#20242a;--ink:#f2f5ea;--muted:#a9b39a;--line:rgba(168,225,12,.14)}
+.theme-preeminent-corp-roofing .hero-title,.theme-preeminent-corp-roofing .h2,.theme-preeminent-corp-roofing .card-num,.theme-preeminent-corp-roofing .stat-num,.theme-preeminent-corp-roofing .ticker-track{font-family:'Rokkitt',serif}
+.theme-preeminent-corp-roofing .hero-title .hl{text-shadow:0 0 34px rgba(168,225,12,.55)}
+.theme-preeminent-corp-roofing .ticker-track{color:#141619}
+
+/* burbujas de espuma subiendo y expandiéndose */
+.theme-preeminent-corp-roofing .foam-field{position:absolute;inset:0;z-index:1;pointer-events:none;overflow:hidden}
+.theme-preeminent-corp-roofing .fb{position:absolute;bottom:-14%;border-radius:50%;
+  background:radial-gradient(circle at 35% 30%,rgba(255,255,255,.55),rgba(168,225,12,.30) 45%,rgba(168,225,12,.07) 70%,transparent 72%);
+  animation:foamRise 15s ease-in infinite}
+.theme-preeminent-corp-roofing .f1{left:5%;width:84px;height:84px;animation-delay:0s}
+.theme-preeminent-corp-roofing .f2{left:18%;width:44px;height:44px;animation-delay:2.4s;animation-duration:12s}
+.theme-preeminent-corp-roofing .f3{left:33%;width:120px;height:120px;animation-delay:5s;animation-duration:18s}
+.theme-preeminent-corp-roofing .f4{left:52%;width:56px;height:56px;animation-delay:1.2s;animation-duration:11s}
+.theme-preeminent-corp-roofing .f5{left:64%;width:96px;height:96px;animation-delay:7.5s}
+.theme-preeminent-corp-roofing .f6{left:78%;width:40px;height:40px;animation-delay:3.8s;animation-duration:13s}
+.theme-preeminent-corp-roofing .f7{left:90%;width:70px;height:70px;animation-delay:9.2s;animation-duration:16s}
+.theme-preeminent-corp-roofing .f8{left:44%;width:34px;height:34px;animation-delay:11s;animation-duration:10s}
+@keyframes foamRise{0%{transform:translateY(0) scale(.55);opacity:0}12%{opacity:.9}100%{transform:translateY(-118vh) scale(1.3);opacity:0}}
+
+/* borde de espuma en la base del héroe */
+.theme-preeminent-corp-roofing .foam-wave{position:absolute;left:0;right:0;bottom:-4px;height:52px;z-index:2;pointer-events:none;opacity:.55;
+  background-image:radial-gradient(circle at 32px -6px,rgba(168,225,12,.5) 30px,transparent 31px);
+  background-size:64px 52px;background-repeat:repeat-x}
+
+/* contacto: tarjeta grafito con aro lima */
+.theme-preeminent-corp-roofing .ct-foam{position:relative;overflow:hidden;background:radial-gradient(1100px 380px at 50% -10%,rgba(168,225,12,.13),transparent 62%)}
+.theme-preeminent-corp-roofing .ct-foam-phone{display:inline-block;font-family:'Rokkitt',serif;font-weight:800;font-size:clamp(2.1rem,9vw,3.6rem);color:#fff;text-decoration:none;margin:14px 0;padding:8px 30px;border:2px solid var(--accent);border-radius:999px;box-shadow:0 0 36px rgba(168,225,12,.28),inset 0 0 24px rgba(168,225,12,.12)}
+.theme-preeminent-corp-roofing .ct-foam-sub{color:var(--muted)}
+.theme-preeminent-corp-roofing .ct-foam-sub a{color:var(--accent);font-weight:700}
+.theme-preeminent-corp-roofing .ct-foam-map{max-width:620px;margin:26px auto 0}
+.theme-preeminent-corp-roofing .ct-foam-map iframe{width:100%;height:230px;border:0;border-radius:18px}

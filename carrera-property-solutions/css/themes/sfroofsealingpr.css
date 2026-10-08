@@ -1,0 +1,28 @@
+/* S&F ROOFSEALINGPR - tormenta nocturna, lluvia sobre techo sellado */
+.theme-sfroofsealingpr{--bg:#081120;--ink:#f4f7fb;--muted:#9fb3c8;--accent:#ffc400}
+.theme-sfroofsealingpr body{background:var(--bg)}
+.theme-sfroofsealingpr .hero{min-height:100svh}
+.theme-sfroofsealingpr .hero-slide img{filter:saturate(.85) brightness(.8)}
+.theme-sfroofsealingpr .hero-scrim{background:linear-gradient(180deg,rgba(4,10,22,.72) 0%,rgba(4,10,22,.35) 45%,rgba(4,10,22,.88) 100%)}
+.theme-sfroofsealingpr .storm-rain{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:3}
+.theme-sfroofsealingpr .storm-flash{position:absolute;inset:0;background:#cfe4ff;opacity:0;pointer-events:none;z-index:4;animation:flash 9s infinite}
+@keyframes flash{0%,93%,96%,100%{opacity:0}94%{opacity:.14}95%{opacity:0}}
+.theme-sfroofsealingpr .hero-content{z-index:5}
+.theme-sfroofsealingpr .storm-badge{display:inline-block;background:var(--accent);color:#111;font-family:Teko,sans-serif;letter-spacing:.14em;font-size:.95rem;padding:.15em .7em;margin-right:.6em;border-radius:2px;vertical-align:middle}
+.theme-sfroofsealingpr .hero-kicker{color:#cfe0f2;letter-spacing:.28em;font-size:.8rem;text-transform:uppercase}
+.theme-sfroofsealingpr .hero-title{font-family:Teko,sans-serif;font-weight:600;font-size:clamp(3.2rem,13vw,7.5rem);line-height:.92;letter-spacing:.01em;text-transform:uppercase;text-shadow:0 4px 30px rgba(0,0,0,.6)}
+.theme-sfroofsealingpr .hero-title .hl{color:var(--accent);text-shadow:0 0 26px rgba(255,196,0,.55)}
+.theme-sfroofsealingpr .hero-sub{color:#dbe7f3;max-width:34rem}
+.theme-sfroofsealingpr .storm-proof{color:#8fa8c2;font-size:.9rem;margin-top:1.1rem;border-left:3px solid var(--accent);padding-left:.8rem;max-width:30rem}
+.theme-sfroofsealingpr .btn-accent{background:var(--accent);color:#101820;font-weight:800}
+.theme-sfroofsealingpr .section{background:var(--bg)}
+.theme-sfroofsealingpr .h2{font-family:Teko,sans-serif;text-transform:uppercase;letter-spacing:.03em}
+.theme-sfroofsealingpr .card{background:#0d1a30;border:1px solid rgba(255,196,0,.18);border-top:3px solid var(--accent)}
+.theme-sfroofsealingpr .card-num{color:var(--accent);font-family:Teko,sans-serif}
+.theme-sfroofsealingpr .ticker{background:var(--accent);color:#101820;font-family:Teko,sans-serif;letter-spacing:.12em}
+.theme-sfroofsealingpr .ct-storm-phone{display:inline-block;font-family:Teko,sans-serif;font-size:clamp(2.6rem,10vw,4.4rem);color:var(--accent);text-decoration:none;letter-spacing:.03em;text-shadow:0 0 22px rgba(255,196,0,.35);margin:.6rem 0}
+.theme-sfroofsealingpr .ct-storm-sub{color:var(--muted)}
+.theme-sfroofsealingpr .ct-storm-sub a{color:var(--accent);font-weight:700}
+.theme-sfroofsealingpr .ct-storm-map{max-width:620px;margin:24px auto 0;border:2px solid rgba(255,196,0,.4)}
+.theme-sfroofsealingpr .ct-storm-map iframe{width:100%;height:230px;border:0;display:block}
+.theme-sfroofsealingpr .kicker{color:var(--accent)}

@@ -1,0 +1,47 @@
+/* SALAZAR COMMUNICATIONS — circuito vivo, señal y reparación */
+body{font-family:'DM Sans',sans-serif}
+.logo,.sec-title{font-family:'Michroma',sans-serif}
+
+.sc-hero{position:relative;overflow:hidden;padding:130px 0 80px;text-align:center;background:#0d1117}
+.sc-hero-inner{position:relative;z-index:2}
+.sc-hero h1{font-family:'Michroma',sans-serif;font-size:clamp(1.9rem,8vw,3.6rem);line-height:1.25;margin:18px 0 10px;color:#fff}
+.sc-name{color:var(--accent);text-shadow:0 0 26px rgba(59,130,246,.7)}
+.sc-sub{display:block;font-size:.62em;letter-spacing:.4em;color:#9fb3d9;margin-top:10px}
+
+/* circuito animado */
+.sc-circuit{position:absolute;top:0;left:0;width:100%;height:130px;color:#1e3a5f;opacity:.9;pointer-events:none}
+.sc-trace{stroke-dasharray:14 10;animation:scFlow 2.6s linear infinite}
+.sc-trace:nth-child(2){animation-duration:3.4s}.sc-trace:nth-child(3){animation-duration:2.1s}
+@keyframes scFlow{to{stroke-dashoffset:-48}}
+
+/* teléfono con ondas de señal */
+.sc-phone{position:relative;width:74px;height:74px;margin:0 auto;border:3px solid var(--accent);border-radius:20px;
+  display:grid;place-items:center;box-shadow:0 0 30px rgba(59,130,246,.45)}
+.sc-screen{width:34px;height:44px;border-radius:8px;background:linear-gradient(160deg,#1e3a5f,#0d1117);border:2px solid #3b82f6}
+.sc-wave{position:absolute;inset:-3px;border:2px solid var(--accent);border-radius:24px;opacity:0;animation:scWave 2.4s ease-out infinite}
+.sc-wave.w2{animation-delay:.8s}.sc-wave.w3{animation-delay:1.6s}
+@keyframes scWave{0%{transform:scale(.8);opacity:.9}100%{transform:scale(1.9);opacity:0}}
+
+.sc-frame{max-width:600px;margin:36px auto 0}
+.sc-frame img{width:100%;height:min(58vw,400px);object-fit:cover;border-radius:20px;border:1px solid #223148;box-shadow:0 24px 70px rgba(0,0,0,.6),0 0 44px rgba(59,130,246,.14)}
+
+.theme-salazar-communications{--bg:#0d1117;--bg2:#11161f;--card:#151c27;--ink:#eef3fb;--muted:#8fa0bd;--line:#223148;--accent:#3b82f6}
+.theme-salazar-communications .header{background:rgba(13,17,23,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.theme-salazar-communications .hero-sub{color:var(--muted)}
+.theme-salazar-communications .btn-accent{background:var(--accent);color:#fff}
+.theme-salazar-communications .btn-ghost{border:2px solid var(--accent);color:var(--accent);background:transparent}
+.theme-salazar-communications .kicker{color:var(--accent)}
+
+@media(max-width:640px){.sc-hero{padding:110px 0 64px}}
+
+/* ---- contacto único ---- */
+.theme-salazar-communications .ct-phone-mock{max-width:380px;margin:26px auto;background:#0b0d10;border-radius:38px;padding:30px 24px 34px;position:relative;box-shadow:0 30px 70px rgba(0,0,0,.55);border:3px solid #2a2e35;color:#eef}
+.theme-salazar-communications .ct-notch{width:130px;height:22px;background:#2a2e35;border-radius:0 0 14px 14px;margin:-30px auto 18px}
+.theme-salazar-communications .ct-screen-kick{font-size:.7rem;letter-spacing:.3em;text-transform:uppercase;color:#8a9199;margin-bottom:14px}
+.theme-salazar-communications .ct-app{display:flex;align-items:center;gap:14px;background:#16191e;border:1px solid #2a2e35;border-radius:16px;padding:14px 16px;margin:10px 0;text-decoration:none;color:#eef;text-align:left}
+.theme-salazar-communications .ct-app-ic{width:44px;height:44px;border-radius:14px;background:linear-gradient(140deg,var(--accent),#0e5aa8);display:flex;align-items:center;justify-content:center;font-size:1.3rem;flex:0 0 44px}
+.theme-salazar-communications .ct-app strong{display:block;font-size:.95rem}
+.theme-salazar-communications .ct-app em{font-style:normal;font-size:.82rem;color:#8a9199;word-break:break-word}
+.theme-salazar-communications .ct-screen-town{color:#8a9199;font-size:.88rem;margin-top:14px}
+.theme-salazar-communications .ct-screen-map{max-width:520px;margin:26px auto 0}
+.theme-salazar-communications .ct-screen-map iframe{width:100%;height:200px;border:0;border-radius:26px}

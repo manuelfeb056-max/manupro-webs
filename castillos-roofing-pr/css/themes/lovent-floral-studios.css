@@ -1,0 +1,52 @@
+/* LOVENT FLORAL STUDIOS — florece, pétalos al viento */
+body{font-family:'DM Sans',sans-serif}
+.logo,.sec-title{font-family:'DM Serif Display',serif}
+
+.lf-hero{position:relative;overflow:hidden;padding:130px 0 80px;text-align:center;
+  background:linear-gradient(180deg,#f7f5ef 0%,#eef0e2 60%,#e6ebda 100%)}
+.lf-hero-inner{position:relative;z-index:2}
+.lf-hero h1{margin:14px 0 10px;color:var(--ink)}
+.lf-name{font-family:'DM Serif Display',serif;font-size:clamp(3rem,11vw,5.8rem);line-height:1;color:var(--accent)}
+.lf-sub{display:block;font-size:.8rem;letter-spacing:.5em;color:var(--muted);margin-top:8px;font-weight:700}
+
+/* flor que florece */
+.lf-bloom{position:relative;width:110px;height:110px;margin:0 auto}
+.lf-petal{position:absolute;left:50%;top:50%;width:34px;height:52px;margin:-26px 0 0 -17px;border-radius:50% 50% 50% 50%/60% 60% 40% 40%;
+  background:linear-gradient(180deg,#a9c48a,#7d9b5a);transform-origin:50% 100%;animation:lfBloom 4s ease-in-out infinite}
+.lf-petal.p1{transform:rotate(0deg) translateY(-30px)}.lf-petal.p2{transform:rotate(60deg) translateY(-30px)}
+.lf-petal.p3{transform:rotate(120deg) translateY(-30px)}.lf-petal.p4{transform:rotate(180deg) translateY(-30px)}
+.lf-petal.p5{transform:rotate(240deg) translateY(-30px)}.lf-petal.p6{transform:rotate(300deg) translateY(-30px)}
+@keyframes lfBloom{0%,100%{scale:1}50%{scale:1.12}}
+.lf-core{position:absolute;left:50%;top:50%;width:26px;height:26px;margin:-13px 0 0 -13px;border-radius:50%;
+  background:radial-gradient(circle at 35% 35%,#ffe9a8,#e8b93c);box-shadow:0 0 18px rgba(232,185,60,.7)}
+
+/* pétalos emoji cayendo */
+.lf-petals{position:absolute;inset:0;pointer-events:none;overflow:hidden;font-size:1.3rem}
+.lf-petals span{position:absolute;top:-6%;opacity:.8;animation:lfDrift 9s linear infinite}
+.lf-petals span:nth-child(1){left:6%;animation-delay:0s}.lf-petals span:nth-child(2){left:18%;animation-delay:2.4s}
+.lf-petals span:nth-child(3){left:33%;animation-delay:4.8s}.lf-petals span:nth-child(4){left:48%;animation-delay:1.2s}
+.lf-petals span:nth-child(5){left:62%;animation-delay:3.6s}.lf-petals span:nth-child(6){left:76%;animation-delay:6s}
+.lf-petals span:nth-child(7){left:88%;animation-delay:2s}.lf-petals span:nth-child(8){left:42%;animation-delay:7.2s}
+@keyframes lfDrift{to{transform:translateY(112vh) rotate(360deg)}}
+
+.lf-frame{position:relative;max-width:620px;margin:36px auto 0}
+.lf-frame img{width:100%;height:min(58vw,400px);object-fit:cover;border-radius:60px;box-shadow:0 26px 60px rgba(90,120,70,.25);border:6px solid #fff}
+.lf-frame .lf-f2{position:absolute;width:34%;left:-5%;bottom:-12%;border-radius:40px;border:5px solid #fff;transform:rotate(-7deg);height:auto;aspect-ratio:1;object-fit:cover}
+
+.theme-lovent-floral-studios{--bg:#f7f5ef;--bg2:#eef0e2;--card:#ffffff;--ink:#2e3a24;--muted:#75805f;--line:#dde2cd;--accent:#7d9b5a}
+.theme-lovent-floral-studios .header{background:rgba(247,245,239,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.theme-lovent-floral-studios .hero-sub{color:var(--muted)}
+.theme-lovent-floral-studios .btn-accent{background:var(--accent);color:#fff}
+.theme-lovent-floral-studios .btn-ghost{border:2px solid var(--accent);color:var(--accent);background:transparent}
+
+@media(max-width:640px){.lf-hero{padding:110px 0 64px}.lf-frame .lf-f2{left:0}}
+
+/* ---- contacto único ---- */
+.theme-lovent-floral-studios .ct-bouquet-row{display:flex;gap:18px;justify-content:center;flex-wrap:wrap;margin:30px 0}
+.theme-lovent-floral-studios .ct-bloom{background:var(--card);border:1px solid var(--line);border-radius:50% 50% 50% 4px;padding:30px 24px;min-width:180px;max-width:220px;text-decoration:none;color:var(--ink);box-shadow:0 18px 40px rgba(180,90,140,.18);transition:transform .25s}
+.theme-lovent-floral-studios .ct-bloom:hover{transform:rotate(-3deg) scale(1.04)}
+.theme-lovent-floral-studios .ct-bloom-p{font-size:2.2rem;display:block;color:var(--accent)}
+.theme-lovent-floral-studios .ct-bloom strong{display:block;margin:10px 0 6px;font-size:.78rem;letter-spacing:.24em;text-transform:uppercase;color:var(--muted)}
+.theme-lovent-floral-studios .ct-bloom em{font-style:normal;font-weight:700;word-break:break-word}
+.theme-lovent-floral-studios .ct-bouquet-map{max-width:560px;margin:0 auto}
+.theme-lovent-floral-studios .ct-bouquet-map iframe{width:100%;height:210px;border:0;border-radius:100px}

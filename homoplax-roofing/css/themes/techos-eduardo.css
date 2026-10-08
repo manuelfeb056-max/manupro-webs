@@ -1,0 +1,37 @@
+/* TECHOS EDUARDO - heritage, 29 años de oficio (marrón cuero + crema) */
+.theme-techos-eduardo{--accent:#8a5a24;--bg:#f4ecdc;--bg2:#e9dcc3;--card:#fffaf0;--ink:#2e2114;--muted:#6f5b3f;--line:rgba(46,33,20,.16)}
+.theme-techos-eduardo .hero-title,.theme-techos-eduardo .h2,.theme-techos-eduardo .card-num,.theme-techos-eduardo .stat-num,.theme-techos-eduardo .ticker-track{font-family:'Hanken Grotesk',sans-serif}
+.theme-techos-eduardo .hero-title{color:#fdf6e7}
+.theme-techos-eduardo .hero-sub{color:#f0e6d0}
+.theme-techos-eduardo .hero-scrim{background:linear-gradient(180deg,rgba(38,25,12,.62) 0%,rgba(38,25,12,.30) 42%,rgba(38,25,12,.90) 100%)}
+.theme-techos-eduardo .header{background:rgba(244,236,220,.88)}
+.theme-techos-eduardo .nav{background:#f4ecdc}
+.theme-techos-eduardo .btn-accent{color:#fff8ea}
+.theme-techos-eduardo .btn-ghost{border:2px solid rgba(253,246,231,.7);color:#fdf6e7}
+.theme-techos-eduardo .ticker-track{color:#fdf6e7}
+.theme-techos-eduardo .info-ic{color:#fdf6e7}
+.theme-techos-eduardo .faq-item summary .fx{color:#fdf6e7}
+.theme-techos-eduardo .cform input,.theme-techos-eduardo .cform select,.theme-techos-eduardo .cform textarea{background:#fffaf0;color:#2e2114}
+.theme-techos-eduardo .card:hover{border-color:var(--accent)}
+
+/* sello vintage de 29 años */
+.theme-techos-eduardo .heritage-stamp{position:absolute;top:104px;right:5%;width:150px;height:150px;z-index:2;pointer-events:none;transform:rotate(-8deg);animation:stampIn .7s cubic-bezier(.2,1.5,.4,1) .45s backwards}
+@keyframes stampIn{from{transform:scale(1.7) rotate(-22deg);opacity:0}to{transform:scale(1) rotate(-8deg);opacity:1}}
+.theme-techos-eduardo .heritage-stamp svg{width:100%;height:100%;animation:stampSpin 48s linear infinite}
+@keyframes stampSpin{to{transform:rotate(360deg)}}
+.theme-techos-eduardo .st-ring{fill:none;stroke:#e8c987;stroke-width:3}
+.theme-techos-eduardo .st-bg{fill:rgba(46,33,20,.45)}
+.theme-techos-eduardo .st-text{fill:#f3e6c9;font-size:15.5px;letter-spacing:3.5px;font-weight:700;font-family:'Hanken Grotesk',sans-serif}
+.theme-techos-eduardo .st-num{fill:#f3e6c9;font-size:54px;font-weight:800;font-family:'Hanken Grotesk',sans-serif}
+@media(max-width:640px){.theme-techos-eduardo .heritage-stamp{width:104px;height:104px;top:92px}}
+
+/* contacto: membrete de oficio */
+.theme-techos-eduardo .ct-heritage{position:relative;background:
+  repeating-linear-gradient(0deg,transparent 0 34px,rgba(138,90,36,.10) 34px 35px),var(--bg)}
+.theme-techos-eduardo .ct-heritage-card{max-width:700px;margin:0 auto;padding:46px 30px 40px;background:#fffaf0;border:1px solid var(--line);border-radius:6px;box-shadow:0 24px 60px rgba(46,33,20,.18);position:relative}
+.theme-techos-eduardo .ct-heritage-card::before{content:"";position:absolute;top:0;left:0;right:0;height:10px;background:repeating-linear-gradient(90deg,var(--accent) 0 26px,#5d3d18 26px 52px);border-radius:6px 6px 0 0}
+.theme-techos-eduardo .ct-heritage-phone{display:inline-block;font-family:'Hanken Grotesk',sans-serif;font-weight:800;font-size:clamp(2rem,8.5vw,3.4rem);color:#2e2114;text-decoration:none;margin:12px 0;letter-spacing:.01em}
+.theme-techos-eduardo .ct-heritage-sub{color:var(--muted)}
+.theme-techos-eduardo .ct-heritage-sub a{color:var(--accent);font-weight:700}
+.theme-techos-eduardo .ct-heritage-map{max-width:620px;margin:26px auto 0}
+.theme-techos-eduardo .ct-heritage-map iframe{width:100%;height:230px;border:1px solid var(--line);border-radius:6px}
