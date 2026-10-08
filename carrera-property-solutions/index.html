@@ -93,39 +93,14 @@
         <span>Lavado</span><i>·</i><span>Reparación</span><i>·</i><span>Sellado</span>
       </div>
     </div>
-    <div class="cp-widget reveal" id="cpWidget">
-      <div class="cp-frame">
-        <img class="cp-after" src="img/hero4.jpg" alt="Techo después del sellado">
-        <div class="cp-before-wrap" id="cpBefore">
-          <img class="cp-before" src="img/hero3.jpg" alt="Techo antes del sellado">
-        </div>
-        <span class="cp-tag cp-tag-a">ANTES</span>
-        <span class="cp-tag cp-tag-b">DESPUÉS</span>
-        <div class="cp-handle" id="cpHandle"><span></span></div>
+    <div class="cp-widget reveal">
+      <div class="cp-frame cp-frame-single">
+        <img src="img/hero4.jpg" alt="Techo sellado por Carrera Property Solutions">
       </div>
-      <p class="cp-hint">Arrastra el control para comparar</p>
     </div>
   </div>
   <a href="#servicios" class="scroll-hint" aria-label="Bajar"><span></span></a>
 </section>
-<script>
-(function(){
-  var w=document.getElementById('cpWidget');if(!w)return;
-  var before=document.getElementById('cpBefore'),handle=document.getElementById('cpHandle');
-  var beforeImg=before.querySelector('img');
-  var pos=50,drag=false;
-  function sync(){var f=w.querySelector('.cp-frame');beforeImg.style.width=f.clientWidth+'px';beforeImg.style.height=f.clientHeight+'px';}
-  function set(p){pos=Math.max(2,Math.min(98,p));before.style.width=pos+'%';handle.style.left=pos+'%';}
-  function fromEvent(e){var r=w.querySelector('.cp-frame').getBoundingClientRect();
-    var x=(e.touches?e.touches[0].clientX:e.clientX)-r.left;set(x/r.width*100);}
-  var frame=w.querySelector('.cp-frame');
-  frame.addEventListener('pointerdown',function(e){drag=true;fromEvent(e);frame.setPointerCapture(e.pointerId);});
-  frame.addEventListener('pointermove',function(e){if(drag)fromEvent(e);});
-  frame.addEventListener('pointerup',function(){drag=false;});
-  window.addEventListener('resize',sync);
-  sync();set(50);
-})();
-</script>
 
 
 <div class="ticker"><div class="ticker-track">Sellado de techos ✦ Lavado a presión ✦ Reparación ✦ Grietas y empozamientos ✦ Ciales, PR ✦ Sellado de techos ✦ Lavado a presión ✦ Reparación ✦ Grietas y empozamientos ✦ Ciales, PR ✦ </div></div>
@@ -135,11 +110,11 @@
     <p class="kicker reveal">Lo que hacemos</p>
     <h2 class="h2 reveal">Servicios</h2>
     <div class="cards">
-      <div class="card reveal"><div class="card-num">01</div><div class="card-imgs"><img src="img/g1.jpg" alt="Métodos de pago aceptados: ATH, ATH Móvil, Visa, Mastercard, PayPal, Apple Pay y más" loading="lazy" draggable="false" class="on"><img src="img/g2.jpg" alt="Impermeabilización y sellado de techos, servicio en todo Puerto Rico" loading="lazy" draggable="false"><img src="img/g3.jpg" alt="Antes y después: de techo desgastado a techo protegido con terminación blanca" loading="lazy" draggable="false"><div class="card-dots"><i class="on"></i><i></i><i></i></div></div><h3>Sellado de techos</h3><p>Protección completa contra filtraciones con sistemas de sellado profesionales.</p></div>
-      <div class="card reveal"><div class="card-num">02</div><div class="card-imgs"><img src="img/g3.jpg" alt="Antes y después: de techo desgastado a techo protegido con terminación blanca" loading="lazy" draggable="false" class="on"><img src="img/g4.jpg" alt="Reparamos tu techo, servicio premium: lavado, reparación y sellado" loading="lazy" draggable="false"><img src="img/g5.jpg" alt="Especialistas en techos: lavado, reparación y sellado, antes y después" loading="lazy" draggable="false"><div class="card-dots"><i class="on"></i><i></i><i></i></div></div><h3>Lavado de techos a presión</h3><p>Limpieza profunda del techo antes del sellado para una adherencia perfecta.</p></div>
-      <div class="card reveal"><div class="card-num">03</div><div class="card-imgs"><img src="img/g5.jpg" alt="Especialistas en techos: lavado, reparación y sellado, antes y después" loading="lazy" draggable="false" class="on"><img src="img/g6.jpg" alt="Corrección de áreas críticas: removemos el material deteriorado desde la base" loading="lazy" draggable="false"><img src="img/g7.jpg" alt="Techo recién sellado con terminación gris uniforme" loading="lazy" draggable="false"><div class="card-dots"><i class="on"></i><i></i><i></i></div></div><h3>Reparación de techos</h3><p>Corregimos daños, áreas críticas y material deteriorado desde la base.</p></div>
-      <div class="card reveal"><div class="card-num">04</div><div class="card-imgs"><img src="img/g7.jpg" alt="Techo recién sellado con terminación gris uniforme" loading="lazy" draggable="false" class="on"><img src="img/g8.jpg" alt="Tratamos las grietas antes de sellar: cada grieta se identifica y se refuerza" loading="lazy" draggable="false"><img src="img/g9.jpg" alt="Techo protegido con terminación uniforme, resultado final" loading="lazy" draggable="false"><div class="card-dots"><i class="on"></i><i></i><i></i></div></div><h3>Corrección de grietas y empozamientos</h3><p>Tratamos cada grieta y punto de empozamiento antes de aplicar el sellado.</p></div>
-      <div class="card reveal"><div class="card-num">05</div><div class="card-imgs"><img src="img/g9.jpg" alt="Techo protegido con terminación uniforme, resultado final" loading="lazy" draggable="false" class="on"><img src="img/g10.jpg" alt="Grietas tratadas y techo sellado, con evaluaciones disponibles" loading="lazy" draggable="false"><img src="img/g1.jpg" alt="Métodos de pago aceptados: ATH, ATH Móvil, Visa, Mastercard, PayPal, Apple Pay y más" loading="lazy" draggable="false"><div class="card-dots"><i class="on"></i><i></i><i></i></div></div><h3>Mantenimiento preventivo</h3><p>Planes de mantenimiento para extender la vida de tu techo.</p></div>
+      <div class="card reveal"><div class="card-num">01</div><div class="card-img-fixed"><img src="img/g1.jpg" alt="Métodos de pago aceptados: ATH, ATH Móvil, Visa, Mastercard, PayPal, Apple Pay y más" loading="lazy"></div><h3>Sellado de techos</h3><p>Protección completa contra filtraciones con sistemas de sellado profesionales.</p></div>
+      <div class="card reveal"><div class="card-num">02</div><div class="card-img-fixed"><img src="img/g10.jpg" alt="Antes y después: de techo desgastado a techo protegido con terminación blanca" loading="lazy"></div><h3>Lavado de techos a presión</h3><p>Limpieza profunda del techo antes del sellado para una adherencia perfecta.</p></div>
+      <div class="card reveal"><div class="card-num">03</div><div class="card-img-fixed"><img src="img/g2.jpg" alt="Especialistas en techos: lavado, reparación y sellado, antes y después" loading="lazy"></div><h3>Reparación de techos</h3><p>Corregimos daños, áreas críticas y material deteriorado desde la base.</p></div>
+      <div class="card reveal"><div class="card-num">04</div><div class="card-img-fixed"><img src="img/g3.jpg" alt="Techo recién sellado con terminación gris uniforme" loading="lazy"></div><h3>Corrección de grietas y empozamientos</h3><p>Tratamos cada grieta y punto de empozamiento antes de aplicar el sellado.</p></div>
+      <div class="card reveal"><div class="card-num">05</div><div class="card-img-fixed"><img src="img/g4.jpg" alt="Techo protegido con terminación uniforme, resultado final" loading="lazy"></div><h3>Mantenimiento preventivo</h3><p>Planes de mantenimiento para extender la vida de tu techo.</p></div>
     </div>
   </div>
 </section>

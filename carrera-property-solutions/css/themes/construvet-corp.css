@@ -1,31 +1,80 @@
-/* CONSTRUVET CORP — membrana elástica, líneas que se estiran; rojo + negro */
-.hero-elastic{background:#0a0a0c}
-.hero-elastic .hero-scrim{background:linear-gradient(180deg,rgba(5,5,6,.62),rgba(5,5,6,.88))}
-.el-lines{position:absolute;inset:0;z-index:2;pointer-events:none;overflow:hidden}
-.el-line{position:absolute;left:-10%;right:-10%;height:5px;border-radius:99px;background:linear-gradient(90deg,transparent,#d8362f 20%,#ff6a5e 50%,#d8362f 80%,transparent);transform-origin:center;animation:elStretch 5s cubic-bezier(.68,-0.55,.27,1.55) infinite}
-.el-l1{top:22%;animation-delay:0s}
-.el-l2{top:44%;animation-delay:1.2s;height:7px}
-.el-l3{top:66%;animation-delay:2.4s}
-.el-l4{top:84%;animation-delay:3.6s;height:4px;opacity:.7}
-@keyframes elStretch{0%,100%{transform:scaleX(.25);opacity:.25}45%{transform:scaleX(1);opacity:1}70%{transform:scaleX(.6);opacity:.6}}
-.hero-elastic .hero-content{z-index:3}
-.el-title{font-family:'Kanit',sans-serif;font-weight:800;text-transform:uppercase;letter-spacing:.005em;color:#fff;line-height:1}
-.el-title .hl{color:#ff3b30;text-shadow:0 0 34px rgba(255,59,48,.55)}
-.hero-elastic .hero-kicker{color:#ff8a80}
-.hero-elastic .hero-sub{color:#b9bcc4;max-width:48ch}
-.el-stats{display:flex;gap:12px;flex-wrap:wrap;margin-top:32px}
-.el-stat{background:rgba(216,54,47,.1);border:1px solid rgba(216,54,47,.45);border-radius:14px;padding:12px 18px;backdrop-filter:blur(4px)}
-.el-stat b{display:block;font-family:'Kanit',sans-serif;font-size:1.05rem;color:#fff;font-weight:700}
-.el-stat i{font-style:normal;font-size:.78rem;color:#ff8a80;text-transform:uppercase;letter-spacing:.14em}
-/* logo: cuadrado con esquinas elásticas rojas */
-.logo-img img{width:46px;height:46px;border-radius:12px 22px 12px 22px;object-fit:cover;border:2px solid #d8362f;box-shadow:0 0 16px rgba(216,54,47,.5)}
-.logo-img{font-family:'Kanit',sans-serif;font-weight:700;text-transform:uppercase}
-/* ---- contacto único ---- */
-.theme-construvet-corp .ct-band{position:relative;overflow:hidden;background:#0d0d0f;border-top:3px solid #d8362f;border-bottom:3px solid #d8362f}
-.theme-construvet-corp .ct-band::before{content:"";position:absolute;top:50%;left:0;right:0;height:2px;background:#d8362f;opacity:.35;transform:translateY(-50%)}
-.theme-construvet-corp .ct-band-phone{display:inline-block;font-family:'Kanit',sans-serif;font-weight:800;font-size:clamp(2rem,8.5vw,3.4rem);color:#fff;text-decoration:none;margin:8px 0;position:relative}
-.theme-construvet-corp .ct-band-phone::after{content:"";display:block;height:6px;margin-top:8px;background:linear-gradient(90deg,#d8362f,#ff6a5e,#d8362f);border-radius:99px;animation:elStretch 5s cubic-bezier(.68,-0.55,.27,1.55) infinite;transform-origin:center}
-.theme-construvet-corp .ct-band-sub{color:#9a9da6}
-.theme-construvet-corp .ct-band-sub a{color:#ff8a80;font-weight:700}
-.theme-construvet-corp .ct-band-map{max-width:620px;margin:24px auto 0}
-.theme-construvet-corp .ct-band-map iframe{width:100%;height:230px;border:0;filter:grayscale(.4) contrast(1.05);border:2px solid #d8362f}
+/* CONSTRUVET CORP — "BLINDAJE TOTAL" · rojo blindaje + negro carbón */
+.theme-construvet-corp{--font-h:'Kanit',sans-serif;--font-b:'Inter',sans-serif;background:#08080a;color:#f2f3f5}
+.theme-construvet-corp .h2,.theme-construvet-corp h2{font-family:'Kanit',sans-serif;font-weight:800;text-transform:uppercase;letter-spacing:.01em;color:#fff}
+.theme-construvet-corp .kicker{color:#ff5a50;font-weight:800;letter-spacing:.22em;text-transform:uppercase;font-size:.78rem}
+/* ---------- HERO ---------- */
+.cv-hero{background:#08080a;min-height:100svh;display:flex;align-items:center;overflow:hidden}
+.cv-hero .hero-scrim{background:linear-gradient(180deg,rgba(6,6,8,.55) 0%,rgba(6,6,8,.15) 34%,rgba(6,6,8,.92) 100%)}
+.cv-rain{position:absolute;inset:0;width:100%;height:100%;z-index:1;pointer-events:none}
+.cv-hero .hero-content{z-index:3;padding-top:110px;padding-bottom:70px}
+.cv-pulse{display:inline-block;width:9px;height:9px;border-radius:50%;background:#ff3b30;margin-right:10px;box-shadow:0 0 12px #ff3b30;animation:cvPulse 1.8s ease-in-out infinite;vertical-align:1px}
+@keyframes cvPulse{0%,100%{transform:scale(1);opacity:1}50%{transform:scale(1.5);opacity:.55}}
+.cv-hero .hero-kicker{color:#ff8a80;font-weight:700;letter-spacing:.2em;text-transform:uppercase;font-size:.8rem}
+.cv-title{font-family:'Kanit',sans-serif;font-weight:800;text-transform:uppercase;color:#fff;line-height:.95;letter-spacing:-.01em;font-size:clamp(2.9rem,11.5vw,6.8rem);margin:18px 0 20px;text-wrap:balance}
+.cv-title .hl{color:transparent;-webkit-text-stroke:2px #ff3b30;text-shadow:0 0 44px rgba(255,59,48,.45)}
+.cv-hero .hero-sub{color:#c3c7d1;max-width:52ch;font-size:clamp(1rem,2.6vw,1.18rem);line-height:1.7}
+.cv-hero .hero-ctas{display:flex;gap:14px;flex-wrap:wrap;margin-top:30px}
+.cv-hero .btn-accent{background:linear-gradient(180deg,#f04438,#c4271f);border:0;color:#fff;font-family:'Kanit',sans-serif;font-weight:700;text-transform:uppercase;letter-spacing:.06em;padding:18px 38px;border-radius:14px;box-shadow:0 12px 34px rgba(240,68,56,.35),inset 0 1px 0 rgba(255,255,255,.25);transition:transform .18s ease,box-shadow .18s ease}
+.cv-hero .btn-accent:hover{transform:translateY(-3px);box-shadow:0 18px 44px rgba(240,68,56,.5),inset 0 1px 0 rgba(255,255,255,.25)}
+.cv-hero .btn-ghost{border:2px solid rgba(255,255,255,.28);color:#fff;font-family:'Kanit',sans-serif;font-weight:600;text-transform:uppercase;letter-spacing:.06em;padding:16px 34px;border-radius:14px;backdrop-filter:blur(6px);transition:border-color .18s,transform .18s}
+.cv-hero .btn-ghost:hover{border-color:#ff3b30;transform:translateY(-3px)}
+/* antes / después */
+.cv-ba{margin-top:44px;max-width:640px}
+.cv-ba-label{font-size:.75rem;letter-spacing:.24em;text-transform:uppercase;color:#ff8a80;font-weight:700;margin-bottom:12px}
+.cv-ba-wrap{position:relative;border-radius:18px;overflow:hidden;border:1px solid rgba(255,59,48,.4);box-shadow:0 24px 60px rgba(0,0,0,.55);aspect-ratio:16/10;cursor:ew-resize;touch-action:pan-y;user-select:none}
+.cv-ba-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;pointer-events:none}
+.cv-ba-top{position:absolute;inset:0;clip-path:inset(0 50% 0 0)}
+.cv-ba-handle{position:absolute;top:0;bottom:0;left:50%;width:0;z-index:3}
+.cv-ba-handle::before{content:"";position:absolute;top:0;bottom:0;left:-1.5px;width:3px;background:#ff3b30;box-shadow:0 0 14px rgba(255,59,48,.8)}
+.cv-ba-handle span{position:absolute;top:50%;left:0;transform:translate(-50%,-50%);width:52px;height:52px;border-radius:50%;background:#ff3b30;display:grid;place-items:center;box-shadow:0 8px 26px rgba(255,59,48,.6);font-size:1.3rem;color:#fff}
+.cv-ba-handle span::before{content:"◂ ▸"}
+.cv-ba-tag{position:absolute;top:14px;z-index:2;font-family:'Kanit',sans-serif;font-size:.72rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;padding:8px 14px;border-radius:99px;backdrop-filter:blur(6px)}
+.cv-ba-tag-a{left:14px;background:rgba(0,0,0,.6);color:#ffb3ad;border:1px solid rgba(255,59,48,.5)}
+.cv-ba-tag-b{right:14px;background:rgba(255,59,48,.85);color:#fff}
+/* stats */
+.cv-stats{display:flex;gap:12px;flex-wrap:wrap;margin-top:36px}
+.cv-stat{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.12);border-radius:16px;padding:16px 22px;min-width:130px;backdrop-filter:blur(8px);position:relative;overflow:hidden}
+.cv-stat::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,#f04438,#ff8a5e)}
+.cv-stat b{display:block;font-family:'Kanit',sans-serif;font-size:1.7rem;font-weight:800;color:#fff;line-height:1}
+.cv-stat i{font-style:normal;font-size:.72rem;color:#a7abb6;text-transform:uppercase;letter-spacing:.16em}
+/* ---------- LOGO ---------- */
+.logo-img img{width:52px;height:52px;border-radius:16px;object-fit:cover;border:2px solid #f04438;box-shadow:0 0 22px rgba(240,68,56,.55),0 4px 14px rgba(0,0,0,.5)}
+.logo-img{font-family:'Kanit',sans-serif;font-weight:800;text-transform:uppercase;letter-spacing:.04em;color:#fff}
+/* ---------- SERVICIOS ---------- */
+.theme-construvet-corp .card{background:#101014;border:1px solid rgba(255,255,255,.09);border-radius:20px;overflow:hidden;transition:transform .22s ease,border-color .22s ease,box-shadow .22s ease;position:relative}
+.theme-construvet-corp .card::before{content:"";position:absolute;top:0;left:0;right:0;height:5px;background:linear-gradient(90deg,#f04438,#ff8a5e);opacity:0;transition:opacity .22s}
+.theme-construvet-corp .card:hover{transform:translateY(-6px);border-color:rgba(240,68,56,.55);box-shadow:0 24px 50px rgba(0,0,0,.5)}
+.theme-construvet-corp .card:hover::before{opacity:1}
+.theme-construvet-corp .card-num{font-family:'Kanit',sans-serif;font-weight:800;font-size:.85rem;color:#ff5a50;letter-spacing:.2em;padding:20px 22px 0}
+.theme-construvet-corp .card h3{font-family:'Kanit',sans-serif;font-weight:700;color:#fff;text-transform:uppercase;letter-spacing:.02em;padding:8px 22px 0;font-size:1.15rem}
+.theme-construvet-corp .card p{color:#a7abb6;padding:10px 22px 24px;line-height:1.65}
+/* ---------- FAQ ---------- */
+.theme-construvet-corp .faq-item{background:#121218;border:1px solid rgba(255,255,255,.1);border-radius:16px}
+.theme-construvet-corp .faq-item[open]{border-color:#f04438}
+.theme-construvet-corp .faq-item summary{color:#fff}
+.theme-construvet-corp .faq-item summary .fx{background:#f04438;color:#fff}
+.theme-construvet-corp .faq-item .fa{color:#c3c7d1}
+.theme-construvet-corp .faq-item .fa a{color:#ff8a80}
+/* ---------- CONTACTO: el blindaje final ---------- */
+.theme-construvet-corp .ct-shield{position:relative;overflow:hidden;background:radial-gradient(ellipse 80% 90% at 50% 110%,rgba(240,68,56,.22),transparent 60%),#0a0a0c;border-top:1px solid rgba(240,68,56,.4);text-align:center}
+.ct-radar{position:absolute;left:50%;bottom:-260px;width:520px;height:520px;transform:translateX(-50%);border-radius:50%;border:1px solid rgba(240,68,56,.25);pointer-events:none}
+.ct-radar::before{content:"";position:absolute;inset:60px;border-radius:50%;border:1px solid rgba(240,68,56,.18)}
+.ct-radar::after{content:"";position:absolute;inset:0;border-radius:50%;background:conic-gradient(from 0deg,rgba(240,68,56,.35),transparent 24%);animation:ctSweep 5s linear infinite}
+@keyframes ctSweep{to{transform:rotate(360deg)}}
+.theme-construvet-corp .ct-shield .kicker{color:#ff8a80}
+.theme-construvet-corp .ct-shield .h2{color:#fff;font-size:clamp(2.2rem,8vw,4rem)}
+.ct-shield-phone{display:inline-block;font-family:'Kanit',sans-serif;font-weight:800;font-size:clamp(2.2rem,10vw,4.2rem);color:#fff;text-decoration:none;margin:18px 0 6px;letter-spacing:.01em;text-shadow:0 0 40px rgba(240,68,56,.4);transition:transform .18s}
+.ct-shield-phone:hover{transform:scale(1.03)}
+.ct-shield-rule{width:120px;height:5px;margin:14px auto;background:linear-gradient(90deg,transparent,#f04438,transparent);border-radius:99px}
+.ct-shield-sub{color:#a7abb6;max-width:52ch;margin:0 auto;line-height:1.7}
+.ct-shield-sub a{color:#ff8a80;font-weight:700}
+.ct-shield-chips{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:22px}
+.ct-shield-chips span{font-size:.75rem;letter-spacing:.16em;text-transform:uppercase;font-weight:700;color:#ffd9d5;border:1px solid rgba(240,68,56,.5);background:rgba(240,68,56,.1);padding:10px 18px;border-radius:99px}
+.theme-construvet-corp .ct-shield-map{max-width:640px;margin:30px auto 0;position:relative;z-index:2}
+.theme-construvet-corp .ct-shield-map iframe{width:100%;height:250px;border:1px solid rgba(240,68,56,.5);border-radius:20px;filter:grayscale(.35) contrast(1.05)}
+/* ---------- responsive ---------- */
+@media(max-width:640px){
+  .cv-title{-webkit-text-stroke-width:1.4px}
+  .cv-ba-wrap{aspect-ratio:4/3}
+  .cv-stat{min-width:calc(50% - 8px);flex:1}
+}

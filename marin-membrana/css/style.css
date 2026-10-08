@@ -1,5 +1,5 @@
 :root{
-  --accent: #0053d8;
+  --accent: %%ACCENT%%;
   --bg:#0b0b10; --bg2:#111118; --card:#15151d;
   --ink:#f5f3ee; --muted:#a7a3b8; --line:rgba(255,255,255,.09);
   --wa:#25d366;
@@ -211,3 +211,7 @@ a.info-card:hover{transform:translateX(6px);border-color:var(--accent)}
 /* bloque de llamada (reemplaza formulario en sitios sin WhatsApp duplicado) */
 .cform-call{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:44px 34px;display:flex;flex-direction:column;gap:18px;align-items:center;text-align:center}
 .cform-note{color:var(--muted);font-size:.95rem;margin:0}
+
+/* recuadro de imagen fija por tarjeta (sin repetición entre tarjetas) */
+.card-img-fixed{height:170px;border-radius:14px;overflow:hidden;margin:20px 0 4px;background:var(--bg2)}
+.card-img-fixed img{width:100%;height:100%;object-fit:cover;display:block}

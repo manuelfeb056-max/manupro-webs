@@ -31,3 +31,8 @@
 .theme-amazing-roofing .ct-badge-sub a{color:#fff;font-weight:700}
 .theme-amazing-roofing .ct-badge-map{max-width:640px;margin:26px auto 0}
 .theme-amazing-roofing .ct-badge-map iframe{width:100%;height:240px;border:6px solid #fff;border-radius:18px}
+/* FAQ: letra blanca sobre tarjeta oscura */
+.theme-amazing-roofing .faq-item{background:#1a2340;border-color:#1a2340}
+.theme-amazing-roofing .faq-item summary{color:#fff}
+.theme-amazing-roofing .faq-item .fa{color:#dbe7fa}
+.theme-amazing-roofing .faq-item .fa a{color:#fff}
