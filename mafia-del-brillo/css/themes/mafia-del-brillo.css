@@ -1,7 +1,11 @@
 /* MAFIA DEL BRILLO — gloss shine */
 body{font-family:'Rajdhani',sans-serif}
 .logo,.sec-title,.gloss-title{font-family:'Russo One',sans-serif;font-weight:400}
-.hero-gloss{position:relative;padding:150px 0 0;overflow:hidden;text-align:center}
+.hero-gloss{position:relative;padding:112px 0 0;overflow:hidden;text-align:center}
+.gloss-titular{font-family:'Russo One',sans-serif;font-size:clamp(1.25rem,4.6vw,2.1rem);margin:12px 0 2px;letter-spacing:.02em}
+.gloss-titular .hl{color:var(--accent)}
+.gloss-chips{list-style:none;display:flex;gap:10px;justify-content:center;flex-wrap:wrap;padding:0;margin:16px 0 6px}
+.gloss-chips li{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.16);padding:8px 18px;border-radius:999px;font-size:.85rem;font-weight:600;letter-spacing:.03em}
 .gloss-title{font-size:clamp(2.4rem,8.5vw,5.2rem);font-style:italic;text-transform:uppercase;line-height:1.05;margin:0 0 6px;
   background:linear-gradient(110deg,#fff 20%,var(--accent) 40%,#fff 60%);background-size:220% 100%;
   -webkit-background-clip:text;background-clip:text;color:transparent;animation:shine 4s linear infinite}
