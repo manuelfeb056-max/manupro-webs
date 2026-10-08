@@ -1,0 +1,54 @@
+/* JENDY'S HELADERÍA — pastel juguetón, scoop stack */
+body{font-family:'Nunito',sans-serif}
+.theme-jendys-heladeria{--bg:#fff8fa;--bg2:#ffeef2;--card:#ffffff;--ink:#57233a;--muted:#a07a88;--line:#f7dbe2;--accent:#e85d75}
+.theme-jendys-heladeria .logo,.theme-jendys-heladeria .sec-title,.hero-je h1{font-family:'Chewy',cursive}
+.theme-jendys-heladeria .header{background:rgba(255,248,250,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.theme-jendys-heladeria .btn-accent{color:#fff;box-shadow:0 14px 30px rgba(232,93,117,.45)}
+.theme-jendys-heladeria .btn-ghost{background:#fff;border:2px solid var(--line);color:var(--ink)}
+
+.hero-je{position:relative;padding:140px 0 100px;overflow:hidden;text-align:center;
+  background:radial-gradient(760px 400px at 50% -70px,#ffd9e3,transparent),linear-gradient(180deg,var(--bg),var(--bg2))}
+.hero-je-inner{position:relative;z-index:2}
+.je-sticker{display:inline-block;background:#fff;color:var(--accent);font-weight:800;font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;padding:10px 24px;border-radius:999px;border:2px dashed var(--accent);transform:rotate(-2deg);margin-bottom:16px;box-shadow:0 10px 24px rgba(232,93,117,.18)}
+.hero-je h1{font-size:clamp(3.2rem,11vw,6rem);margin:0 0 4px;color:var(--ink);animation:jeWobble 5s ease-in-out infinite}
+@keyframes jeWobble{0%,100%{transform:rotate(-1.4deg)}50%{transform:rotate(1.4deg) translateY(-6px)}}
+.je-tit{font-family:'Chewy',cursive;font-size:clamp(1.4rem,4vw,2.2rem);color:var(--ink);margin:6px 0 0}
+.je-tit .hl{color:var(--accent)}
+.hero-je .hero-sub{color:var(--muted);text-shadow:none;margin:16px auto 28px}
+.hero-je .hero-ctas{justify-content:center}
+
+/* fondo pastel: blobs + scoops flotantes */
+.je-blob{position:absolute;border-radius:50%;filter:blur(70px);opacity:.55;pointer-events:none}
+.jb1{width:380px;height:380px;background:#ffd0dc;top:-100px;left:-110px}
+.jb2{width:340px;height:340px;background:#ffe9b8;bottom:-90px;right:-100px;opacity:.4}
+.jb3{width:260px;height:260px;background:#cdeefc;top:38%;right:-70px;opacity:.4}
+.je-float{position:absolute;border-radius:50%;pointer-events:none;z-index:1;animation:jeFloat 6s ease-in-out infinite;box-shadow:inset -6px -8px 0 rgba(0,0,0,.06)}
+.jf1{width:56px;height:56px;background:#ffb3c4;top:16%;left:8%}
+.jf2{width:38px;height:38px;background:#9fdcf5;top:64%;left:14%;animation-delay:2s}
+.jf3{width:46px;height:46px;background:#c9b8f2;top:30%;right:9%;animation-delay:3.4s}
+@keyframes jeFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-26px)}}
+
+/* scoop stack: bolas de helado sobre barquilla */
+.je-stack{margin-top:52px;display:inline-block;position:relative;animation:jeFloat 7s ease-in-out infinite}
+.je-scoop{display:block;border-radius:50%;object-fit:cover;border:7px solid #fff;box-shadow:0 20px 44px rgba(87,35,58,.22)}
+.je-scoop.s1{width:150px;height:150px;margin:0 auto -34px;position:relative;z-index:1;filter:saturate(1.1)}
+.je-scoop.s2{width:210px;height:210px;margin:0 auto -42px;position:relative;z-index:2}
+.je-scoop.s3{width:120px;height:120px;margin:0 auto -20px;position:relative;z-index:3}
+.je-cherry{position:absolute;top:-22px;left:50%;margin-left:-14px;width:28px;height:28px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#ff8fa0,#c2255c 70%);box-shadow:0 6px 14px rgba(194,37,92,.5);z-index:4}
+.je-cherry::after{content:"";position:absolute;top:-14px;left:12px;width:5px;height:16px;background:#6a994e;border-radius:3px;transform:rotate(14deg)}
+.je-cone{position:relative;z-index:0;width:0;height:0;margin:0 auto;border-left:80px solid transparent;border-right:80px solid transparent;border-top:170px solid #e8a86e;filter:drop-shadow(0 22px 26px rgba(87,35,58,.25))}
+.je-cone::before{content:"";position:absolute;top:-170px;left:-80px;width:160px;height:170px;
+  background:repeating-linear-gradient(45deg,rgba(120,72,20,.28) 0 8px,transparent 8px 16px),repeating-linear-gradient(-45deg,rgba(120,72,20,.28) 0 8px,transparent 8px 16px)}
+
+.theme-jendys-heladeria .footer{background:#3d1626;border-top-color:#3d1626}
+.theme-jendys-heladeria .footer .foot-sub,.theme-jendys-heladeria .foot-legal{color:#dca9bb}
+.theme-jendys-heladeria .foot-legal{border-top-color:#57233a}
+
+@media(max-width:640px){
+  .hero-je{padding:110px 0 80px}
+  .je-scoop.s1{width:110px;height:110px}
+  .je-scoop.s2{width:160px;height:160px}
+  .je-scoop.s3{width:92px;height:92px}
+  .je-cone{border-left-width:62px;border-right-width:62px;border-top-width:130px}
+  .jf2{display:none}
+}

@@ -1,0 +1,51 @@
+/* SAN FERNANDO VET — cálido y confiable, foto blob orgánica + sello 1994 */
+body{font-family:'Nunito',sans-serif}
+.theme-san-fernando-vet{--bg:#faf6ef;--bg2:#f3ecdd;--card:#ffffff;--ink:#2c3a35;--muted:#7d8577;--line:#e7dcc4;--accent:#2a9d8f}
+.theme-san-fernando-vet .logo,.theme-san-fernando-vet .sec-title,.hero-sfv h1{font-family:'Quicksand',sans-serif}
+.theme-san-fernando-vet .header{background:rgba(250,246,239,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.theme-san-fernando-vet .btn-accent{color:#fff;box-shadow:0 14px 30px rgba(42,157,143,.4)}
+.theme-san-fernando-vet .btn-ghost{border:2px solid var(--accent);color:var(--accent);background:transparent}
+
+.hero-sfv{position:relative;padding:140px 0 96px;overflow:hidden;background:linear-gradient(180deg,var(--bg),var(--bg2))}
+.sfv-pulse{position:absolute;top:110px;left:50%;transform:translateX(-50%);width:min(860px,120vw);height:110px;color:#cfe3da;opacity:.8;pointer-events:none}
+.sfv-pulse path{stroke-dasharray:34 18;animation:sfvBeat 2.6s linear infinite}
+@keyframes sfvBeat{to{stroke-dashoffset:-104}}
+.sfv-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center;position:relative;z-index:1}
+.hero-sfv h1{font-size:clamp(2.6rem,6.5vw,4.2rem);font-weight:700;margin:0 0 8px;color:var(--ink)}
+.sfv-tit{font-size:clamp(1.3rem,3vw,1.9rem);font-weight:700;color:var(--ink);margin:4px 0 0}
+.sfv-tit .hl{color:var(--accent)}
+.hero-sfv .hero-sub{color:var(--muted);text-shadow:none;margin:16px 0 22px}
+.sfv-proof{display:flex;gap:10px;flex-wrap:wrap;margin:0 0 26px}
+.sfv-pill{background:#fff;border:1px solid var(--line);border-radius:999px;padding:9px 18px;font-size:.88rem;color:var(--muted);box-shadow:0 8px 20px rgba(44,58,53,.08)}
+.sfv-pill strong{color:var(--accent)}
+
+/* foto en blob orgánico que respira */
+.sfv-photo{position:relative;display:flex;justify-content:center}
+.sfv-blob{width:min(400px,82vw);aspect-ratio:1/1.05;object-fit:cover;
+  border-radius:58% 42% 55% 45%/52% 55% 45% 48%;border:8px solid #fff;
+  box-shadow:0 30px 70px rgba(42,157,143,.3);animation:sfvMorph 9s ease-in-out infinite}
+@keyframes sfvMorph{0%,100%{border-radius:58% 42% 55% 45%/52% 55% 45% 48%}50%{border-radius:45% 55% 42% 58%/55% 45% 58% 42%}}
+
+/* sello giratorio desde 1994 */
+.sfv-seal{position:absolute;top:-16px;right:6%;width:118px;height:118px;border-radius:50%;background:var(--accent);display:grid;place-items:center;box-shadow:0 14px 32px rgba(42,157,143,.5);border:4px solid #fff}
+.sfv-seal svg{position:absolute;inset:6px;animation:sfvSpin 16s linear infinite}
+.sfv-seal text{font-size:10.5px;font-weight:800;letter-spacing:.22em;fill:#fff;font-family:'Quicksand',sans-serif}
+.sfv-seal b{font-family:'Quicksand',sans-serif;font-size:2rem;color:#fff;z-index:1}
+@keyframes sfvSpin{to{transform:rotate(360deg)}}
+
+/* huellitas decorativas estáticas */
+.sfv-paw{position:absolute;width:52px;opacity:.28}
+.sfv-paw svg{fill:#d9a05b}
+.sfv-paw.p1{left:-8px;bottom:12%;transform:rotate(-24deg)}
+.sfv-paw.p2{right:-4px;bottom:34%;transform:rotate(30deg) scale(.7)}
+
+.theme-san-fernando-vet .footer{background:#1f2b27;border-top-color:#1f2b27}
+.theme-san-fernando-vet .footer .foot-sub,.theme-san-fernando-vet .foot-legal{color:#9db5ab}
+.theme-san-fernando-vet .foot-legal{border-top-color:#2c3a35}
+
+@media(max-width:820px){
+  .sfv-grid{grid-template-columns:1fr;text-align:center;gap:36px}
+  .hero-sfv .hero-ctas,.sfv-proof{justify-content:center}
+  .sfv-seal{width:96px;height:96px;right:2%}
+  .hero-sfv{padding:120px 0 80px}
+}

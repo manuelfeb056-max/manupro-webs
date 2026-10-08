@@ -1,0 +1,33 @@
+/* LMR EXTERMINATING — zona protegida, radar y escudo */
+body{font-family:'Inter',sans-serif}
+.logo,.sec-title{font-family:'Exo 2',sans-serif}
+
+.lm-hero{position:relative;overflow:hidden;padding:130px 0 80px;text-align:center;
+  background:linear-gradient(180deg,#f4f7f4 0%,#e3ede3 100%)}
+.lm-hero-inner{position:relative;z-index:2}
+.lm-hero h1{font-family:'Exo 2',sans-serif;font-weight:800;font-size:clamp(2.6rem,10vw,5rem);line-height:1;margin:14px 0 10px;color:var(--ink)}
+.lm-name{color:var(--accent)}
+.lm-sub{display:block;font-size:.85rem;letter-spacing:.45em;color:var(--muted);margin-top:8px;font-weight:700}
+.lm-shield{width:84px;height:84px;margin:0 auto;color:var(--accent);animation:lmGuard 3s ease-in-out infinite}
+.lm-shield svg{width:100%;height:100%;filter:drop-shadow(0 8px 18px rgba(30,122,60,.3))}
+@keyframes lmGuard{0%,100%{transform:scale(1) rotate(-2deg)}50%{transform:scale(1.06) rotate(2deg)}}
+
+/* radar de protección */
+.lm-radar{position:absolute;top:60px;right:-70px;width:280px;height:280px;pointer-events:none;opacity:.5}
+.lm-ring{position:absolute;inset:0;border:2px solid var(--accent);border-radius:50%;opacity:.35}
+.lm-ring.r2{inset:36px}.lm-ring.r3{inset:72px}
+.lm-sweep{position:absolute;inset:0;border-radius:50%;background:conic-gradient(from 0deg,rgba(30,122,60,.5),transparent 22%);animation:lmSpin 4s linear infinite}
+@keyframes lmSpin{to{transform:rotate(360deg)}}
+
+.lm-frame{max-width:600px;margin:36px auto 0;position:relative}
+.lm-frame::after{content:"ZONA PROTEGIDA";position:absolute;top:14px;right:14px;background:var(--accent);color:#fff;
+  font-weight:800;font-size:.72rem;letter-spacing:.14em;padding:8px 16px;border-radius:999px;box-shadow:0 8px 20px rgba(30,122,60,.4)}
+.lm-frame img{width:100%;height:min(58vw,400px);object-fit:cover;border-radius:20px;border:4px solid #fff;box-shadow:0 24px 60px rgba(30,122,60,.2)}
+
+.theme-lmr-exterminating{--bg:#f4f7f4;--bg2:#e3ede3;--card:#ffffff;--ink:#12261a;--muted:#5f7263;--line:#cfdccf;--accent:#1e7a3c}
+.theme-lmr-exterminating .header{background:rgba(244,247,244,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.theme-lmr-exterminating .hero-sub{color:var(--muted)}
+.theme-lmr-exterminating .btn-accent{background:var(--accent);color:#fff}
+.theme-lmr-exterminating .btn-ghost{border:2px solid var(--accent);color:var(--accent);background:transparent}
+
+@media(max-width:640px){.lm-hero{padding:110px 0 64px}.lm-radar{width:190px;height:190px;right:-50px}}

@@ -1,0 +1,20 @@
+/* MASTELL — type-led */
+body{font-family:'Space Grotesk',sans-serif}
+.logo,.sec-title,.mega{font-family:'Space Grotesk',sans-serif}
+.hero-type{padding:150px 0 70px;overflow:hidden}
+.mega{font-size:clamp(3.2rem,12.5vw,8.5rem);font-weight:700;line-height:.95;letter-spacing:-.03em;text-transform:uppercase;margin:0 0 6px}
+.hero-type .hero-sub{margin:18px 0 30px}
+.hts{margin-top:46px;overflow:hidden}
+.hts-track{display:flex;gap:14px;width:max-content;animation:hts 30s linear infinite}
+.hts-track img{height:190px;width:300px;object-fit:cover;border-radius:16px;flex:none}
+@keyframes hts{to{transform:translateX(-50%)}}
+/* logo: hexagonal */
+/* identidad: hielo ártico */
+.theme-mastell-aires{--bg:#f1f6fa;--bg2:#e5edf4;--card:#ffffff;--ink:#0f222e;--muted:#5d7a8d;--line:#d3e2eb}
+.theme-mastell-aires .header{background:rgba(241,246,250,.88)}
+.theme-mastell-aires .hero-sub{color:var(--muted);text-shadow:none}
+.theme-mastell-aires .cform input,.theme-mastell-aires .cform select,.theme-mastell-aires .cform textarea{background:#fff}
+.theme-mastell-aires .stat-num{font-family:'Space Grotesk',sans-serif}
+.theme-mastell-aires .footer{background:#0d1b25;border-top-color:#0d1b25}
+.theme-mastell-aires .footer .foot-sub,.theme-mastell-aires .foot-legal{color:#8ba3b5}
+.theme-mastell-aires .foot-legal{border-top-color:#1d303d}
