@@ -1,0 +1,15 @@
+/* MAFIA DEL BRILLO — gloss shine */
+body{font-family:'Rajdhani',sans-serif}
+.logo,.sec-title,.gloss-title{font-family:'Russo One',sans-serif;font-weight:400}
+.hero-gloss{position:relative;padding:150px 0 0;overflow:hidden;text-align:center}
+.gloss-title{font-size:clamp(2.4rem,8.5vw,5.2rem);font-style:italic;text-transform:uppercase;line-height:1.05;margin:0 0 6px;
+  background:linear-gradient(110deg,#fff 20%,var(--accent) 40%,#fff 60%);background-size:220% 100%;
+  -webkit-background-clip:text;background-clip:text;color:transparent;animation:shine 4s linear infinite}
+@keyframes shine{to{background-position:-220% 0}}
+.hero-gloss .hero-sub{margin:18px auto 30px}
+.hero-gloss .hero-ctas{justify-content:center}
+.hero-gloss-photo{margin:42px auto 0;max-width:920px}
+.hero-gloss-photo img{width:100%;height:380px;object-fit:cover;display:block;-webkit-box-reflect:below 0 linear-gradient(transparent 60%,rgba(255,255,255,.16))}
+/* header compacto: nombre largo */
+.theme-mafia-del-brillo .logo{font-size:1.12rem;line-height:1.15}
+/* logo: circular con pulso de brillo */

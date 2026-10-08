@@ -1,0 +1,49 @@
+/* FINE LAWN LANDSCAPING — Amanecer en el jardín (tema claro fresco) */
+body{font-family:'Mulish',sans-serif}
+.logo,.sec-title,.fl-hero h1{font-family:'Baloo 2',sans-serif}
+.fl-hero{position:relative;padding:150px 0 0;overflow:hidden;text-align:center}
+.fl-inner{position:relative;z-index:2}
+.fl-sun{width:120px;height:120px;border-radius:50%;margin:0 auto 22px;
+  background:radial-gradient(circle at 50% 38%,#fff3a3,#ffe45e 45%,#b7e26a 100%);
+  animation:glowPulse 4s ease-in-out infinite}
+.fl-hero .kicker{color:#2f7a40}
+.fl-hero h1{font-size:clamp(3rem,9vw,5.4rem);font-weight:800;margin:0 0 6px;color:var(--ink);line-height:1.05}
+.fl-hero .hero-sub{margin:18px auto 30px;color:var(--muted);text-shadow:none}
+.fl-hero .hero-ctas{justify-content:center}
+/* shine del CTA primario cada 4s */
+.fl-cta{position:relative;overflow:hidden}
+.fl-cta::after{content:"";position:absolute;top:0;left:-60%;width:40%;height:100%;
+  background:linear-gradient(105deg,transparent,rgba(255,255,255,.55),transparent);
+  transform:skewX(-20deg);animation:flSweep 4s ease-in-out infinite}
+@keyframes flSweep{0%{left:-60%}60%,100%{left:135%}}
+/* foto en ventana de jardín */
+.fl-arch{margin:44px auto 0;position:relative;z-index:2}
+.fl-arch img{width:min(380px,80vw);aspect-ratio:3/4;object-fit:cover;display:block;margin:0 auto;
+  border-radius:48% 48% 22px 22px / 30% 30% 22px 22px;
+  border:8px solid #fff;outline:2px solid #3d9a50;outline-offset:6px;
+  box-shadow:0 30px 60px rgba(30,58,36,.18)}
+/* colinas SVG en el fondo inferior */
+.fl-hills{position:absolute;left:0;bottom:-2px;width:100%;height:180px;z-index:1}
+/* hojas flotando */
+.fl-leaf{position:absolute;width:26px;height:14px;z-index:2;pointer-events:none;opacity:.8;
+  border-radius:50% 50% 50% 50% / 60% 60% 40% 40%;animation:floaty 6s ease-in-out infinite}
+.fl-leaf.f1{background:#7cc47f;top:16%;left:7%;animation-delay:-1s}
+.fl-leaf.f2{background:#4fae5c;top:34%;right:10%;animation-duration:7.5s;animation-delay:-3s;width:32px;height:17px}
+.fl-leaf.f3{background:#a9dba8;top:55%;left:12%;animation-duration:5s;animation-delay:-2s;width:22px;height:12px}
+.fl-leaf.f4{background:#7cc47f;top:26%;right:22%;animation-duration:8s;animation-delay:-5s}
+.fl-leaf.f5{background:#4fae5c;top:62%;right:16%;animation-duration:6.5s;animation-delay:-4s;width:24px;height:13px}
+.fl-leaf.f6{background:#a9dba8;top:44%;left:22%;animation-duration:7s;animation-delay:-6s;width:20px;height:11px}
+/* logo: escudo */
+/* tema claro fresco */
+.theme-fine-lawn-landscaping{--bg:#f3f9f0;--bg2:#e8f3e2;--card:#ffffff;--ink:#1e3a24;--muted:#5f7a63;--line:#d9e8d2}
+.theme-fine-lawn-landscaping .header{background:rgba(243,249,240,.9)}
+.theme-fine-lawn-landscaping .hero-sub{color:var(--muted);text-shadow:none}
+.theme-fine-lawn-landscaping .cform input,.theme-fine-lawn-landscaping .cform select,.theme-fine-lawn-landscaping .cform textarea{background:#fff}
+.theme-fine-lawn-landscaping .footer{background:#1e3a24;border-top-color:#1e3a24}
+.theme-fine-lawn-landscaping .footer .foot-sub,.theme-fine-lawn-landscaping .foot-legal{color:#b9d4bc}
+.theme-fine-lawn-landscaping .foot-legal{border-top-color:#2c5235}
+@media(max-width:640px){
+  .fl-sun{width:88px;height:88px;margin-bottom:16px}
+  .fl-hills{height:120px}
+  .fl-arch img{width:min(300px,82vw)}
+}

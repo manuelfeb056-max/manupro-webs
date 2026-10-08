@@ -1,0 +1,62 @@
+/* NANDO CLEANING PR — antes/después interactivo, tema claro azulado fresco */
+body{font-family:'Heebo',sans-serif}
+.logo,.sec-title{font-family:'Staatliches',sans-serif;letter-spacing:.04em}
+
+.na-hero{position:relative;overflow:hidden;padding:120px 0 90px;text-align:center}
+.na-hero-inner{position:relative;z-index:2}
+.na-hero h1{font-family:'Staatliches',sans-serif;font-size:clamp(3rem,11vw,6.2rem);line-height:1;margin:0 0 14px;letter-spacing:.03em;color:var(--ink)}
+
+/* shine de agua cruzando el nombre cada 4s */
+.na-shine{position:relative;display:inline-block;overflow:hidden;padding:0 .12em}
+.na-shine::after{content:"";position:absolute;top:0;bottom:0;width:45%;left:-60%;
+  background:linear-gradient(100deg,transparent,rgba(255,255,255,.85),transparent);
+  animation:naShine 4s ease-in-out infinite}
+@keyframes naShine{0%{left:-60%}55%,100%{left:130%}}
+
+/* comparador protagonista */
+.na-compare{--pos:50;position:relative;border-radius:24px;overflow:hidden;
+  box-shadow:0 30px 70px rgba(14,165,233,.25);touch-action:pan-y;margin-top:40px;cursor:ew-resize}
+.na-after{display:block;width:100%;height:min(58vw,440px);object-fit:cover}
+.na-before-wrap{position:absolute;top:0;bottom:0;left:0;width:50%;overflow:hidden}
+.na-before{position:absolute;top:0;left:0;height:100%;object-fit:cover;max-width:none;filter:saturate(.75) brightness(.92)}
+.na-divider{position:absolute;top:0;bottom:0;left:calc(var(--pos)*1%);width:3px;background:#fff;
+  box-shadow:0 0 12px rgba(0,0,0,.4);transform:translateX(-50%);pointer-events:none;z-index:3}
+.na-handle{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:44px;height:44px;border-radius:50%;
+  background:#fff;box-shadow:0 4px 16px rgba(11,42,58,.35);display:grid;place-items:center}
+.na-handle::before{content:"\276E\276F";font-size:.85rem;color:var(--accent);letter-spacing:-2px}
+.na-range{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:ew-resize;margin:0;z-index:4}
+.na-tag{position:absolute;top:16px;font-size:.75rem;font-weight:800;letter-spacing:.18em;text-transform:uppercase;
+  padding:8px 16px;border-radius:999px;z-index:2;pointer-events:none}
+.na-tag-b{left:16px;background:rgba(11,42,58,.75);color:#fff}
+.na-tag-a{right:16px;background:var(--accent);color:#fff}
+.na-hint{margin:18px 0 0;font-size:.9rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:600}
+
+/* gotas de agua cayendo */
+.na-drops{position:absolute;inset:0;pointer-events:none;z-index:1}
+.na-drops span{position:absolute;top:-8%;width:10px;height:14px;border-radius:50% 50% 60% 60%;
+  background:#0ea5e9;opacity:.55;filter:blur(1px);animation:naDrop 5.5s ease-in infinite}
+.na-drops span:nth-child(1){left:8%;animation-delay:0s}
+.na-drops span:nth-child(2){left:24%;animation-delay:1.4s;width:7px;height:10px}
+.na-drops span:nth-child(3){left:46%;animation-delay:2.6s}
+.na-drops span:nth-child(4){left:63%;animation-delay:.9s;width:12px;height:16px}
+.na-drops span:nth-child(5){left:79%;animation-delay:3.4s;width:7px;height:10px}
+.na-drops span:nth-child(6){left:92%;animation-delay:2s}
+@keyframes naDrop{to{transform:translateY(120vh);opacity:0}}
+
+/* tema claro */
+.theme-nando-cleaning-pr{--bg:#f2f8fd;--bg2:#e4f1fa;--card:#ffffff;--ink:#0b2a3a;--muted:#5d7f93;--line:#d4e7f2;--accent:#0ea5e9}
+.theme-nando-cleaning-pr .header{background:rgba(242,248,253,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.theme-nando-cleaning-pr .hero-sub{color:var(--muted);text-shadow:none}
+.theme-nando-cleaning-pr .btn-accent{background:var(--accent);color:#fff}
+.theme-nando-cleaning-pr .btn-ghost{border:2px solid var(--accent);color:var(--accent);background:transparent}
+
+/* logo: círculo con órbita */
+  border:2px solid var(--accent);border-radius:50%;animation:spin 9s linear infinite}
+
+@media(max-width:640px){
+  .na-hero{padding:100px 0 70px}
+  .na-tag{top:12px;font-size:.65rem;padding:6px 12px}
+  .na-tag-b{left:12px}
+  .na-tag-a{right:12px}
+  .na-handle{width:38px;height:38px}
+}
