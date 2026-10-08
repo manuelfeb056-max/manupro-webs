@@ -77,37 +77,91 @@
   </div>
 </header>
 
-<section class="hero hero-elastic" id="inicio">
-  <div class="hero-slides">
-    <div class="hero-slide active"><img src="img/hero1.jpg" alt="Grieta en plafón interior por filtración de agua"></div>
-    <div class="hero-slide"><img src="img/hero2.jpg" alt="Mancha de humedad y grietas en plafón de sala"></div>
-    <div class="hero-slide"><img src="img/hero3.jpg" alt="Filtración activa: manchas y deterioro en techo interior"></div>
-    <div class="hero-slide"><img src="img/hero4.jpg" alt="Deterioro de pintura y grietas por humedad en techo"></div>
-    <div class="hero-slide"><img src="img/hero5.jpg" alt="Pintura desprendida y humedad en área de filtración"></div>
-  </div>
+<section class="hero cv-hero" id="inicio">
+  <canvas class="cv-rain" id="cvRain" aria-hidden="true"></canvas>
   <div class="hero-scrim"></div>
-  <div class="el-lines" aria-hidden="true">
-    <span class="el-line el-l1"></span>
-    <span class="el-line el-l2"></span>
-    <span class="el-line el-l3"></span>
-    <span class="el-line el-l4"></span>
-  </div>
+  <div class="cv-shield-arc" aria-hidden="true"></div>
   <div class="hero-content">
-    <p class="hero-kicker reveal">Zona este (Río Grande/Gurabo) · Puerto Rico</p>
-    <h1 class="hero-title reveal el-title">TU TECHO <span class="hl">SIN EMPOZAMIENTOS</span>, SIN FILTRACIONES</h1>
+    <p class="hero-kicker reveal"><span class="cv-pulse" aria-hidden="true"></span>Zona este (Río Grande/Gurabo) · Puerto Rico</p>
+    <h1 class="hero-title reveal cv-title">TU TECHO <span class="hl">SIN EMPOZAMIENTOS</span>, SIN FILTRACIONES</h1>
     <p class="hero-sub reveal">Corrección de empozamientos, reparación de grietas y sellado profesional en la zona este.</p>
     <div class="hero-ctas reveal">
-      <a class="btn btn-accent btn-lg" data-track="cta_contacto" href="#contacto">Pide tu cotización</a>
-      <a class="btn btn-ghost btn-lg" href="#servicios">Ver servicios</a>
+      <a class="btn btn-accent btn-lg cv-magnet" data-track="cta_contacto" href="#contacto">Pide tu cotización</a>
+      <a class="btn btn-ghost btn-lg cv-magnet" href="#servicios">Ver servicios</a>
     </div>
-    <div class="el-stats reveal">
-      <div class="el-stat"><b>Membrana</b><i>elástica</i></div>
-      <div class="el-stat"><b>Empozamientos</b><i>corregidos</i></div>
-      <div class="el-stat"><b>Zona este</b><i>de Puerto Rico</i></div>
+    <div class="cv-ba reveal">
+      <p class="cv-ba-label">Arrastra para comparar el antes y el después</p>
+      <div class="cv-ba-wrap" id="cvBa">
+        <img src="img/10.jpg" alt="Techo sellado por ConstruVet Corp" class="cv-ba-img" draggable="false">
+        <div class="cv-ba-top" id="cvBaTop">
+          <img src="img/05.jpg" alt="Techo antes del sellado" class="cv-ba-img" draggable="false">
+        </div>
+        <div class="cv-ba-handle" id="cvBaHandle" aria-hidden="true"><span></span></div>
+        <span class="cv-ba-tag cv-ba-tag-a">Antes</span>
+        <span class="cv-ba-tag cv-ba-tag-b">Después</span>
+      </div>
+    </div>
+    <div class="cv-stats reveal">
+      <div class="cv-stat"><b>05</b><i>Servicios</i></div>
+      <div class="cv-stat"><b>100%</b><i>Membrana nueva</i></div>
+      <div class="cv-stat"><b>Este</b><i>Zona de Puerto Rico</i></div>
     </div>
   </div>
-  <div class="hero-dots" id="heroDots"></div>
   <a href="#servicios" class="scroll-hint" aria-label="Bajar"><span></span></a>
+<script>
+(function(){
+  var c = document.getElementById('cvRain');
+  if(!c) return;
+  var ctx = c.getContext('2d'), W, H, drops = [];
+  function size(){ W = c.width = c.offsetWidth; H = c.height = c.offsetHeight; }
+  size(); addEventListener('resize', size);
+  var N = W < 640 ? 60 : 110;
+  function drop(){ return {x: Math.random()*W, y: Math.random()*-H, l: 10+Math.random()*14, s: 7+Math.random()*7, o: .12+Math.random()*.22}; }
+  for(var i=0;i<N;i++){ var d = drop(); d.y = Math.random()*H; drops.push(d); }
+  function shieldY(x){
+    var cx = W/2, rx = W*0.42;
+    var t = (x-cx)/rx; if(t<-1||t>1) return H+50;
+    return H*0.34 + (1-t*t)*H*0.10;
+  }
+  var reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  (function loop(){
+    requestAnimationFrame(loop);
+    ctx.clearRect(0,0,W,H);
+    ctx.lineWidth = 1.4;
+    for(var i=0;i<drops.length;i++){
+      var p = drops[i];
+      if(!reduce){ p.y += p.s; }
+      var sy = shieldY(p.x);
+      if(p.y > sy){
+        ctx.strokeStyle = 'rgba(255,90,80,'+(p.o+0.25)+')';
+        ctx.beginPath(); ctx.arc(p.x, sy, 2.2, 0, 6.283); ctx.stroke();
+        drops[i] = drop();
+        continue;
+      }
+      ctx.strokeStyle = 'rgba(160,180,210,'+p.o+')';
+      ctx.beginPath(); ctx.moveTo(p.x, p.y); ctx.lineTo(p.x-2, p.y+p.l); ctx.stroke();
+      if(p.y > H+20) drops[i] = drop();
+    }
+    if(!reduce){
+      ctx.strokeStyle = 'rgba(216,54,47,.28)'; ctx.lineWidth = 2;
+      ctx.beginPath();
+      for(var x=0;x<=W;x+=14){ var y = shieldY(x); x===0 ? ctx.moveTo(x,y) : ctx.lineTo(x,y); }
+      ctx.stroke();
+    }
+  })();
+  var ba = document.getElementById('cvBa'), top = document.getElementById('cvBaTop'), hd = document.getElementById('cvBaHandle');
+  if(ba && top && hd){
+    var pct = 50;
+    function set(v){ pct = Math.max(4, Math.min(96, v)); top.style.clipPath = 'inset(0 '+(100-pct)+'% 0 0)'; hd.style.left = pct+'%'; }
+    set(50);
+    var drag = false;
+    function pos(e){ var r = ba.getBoundingClientRect(); var x = (e.touches ? e.touches[0].clientX : e.clientX); set((x-r.left)/r.width*100); }
+    ba.addEventListener('pointerdown', function(e){ drag = true; pos(e); });
+    addEventListener('pointermove', function(e){ if(drag) pos(e); });
+    addEventListener('pointerup', function(){ drag = false; });
+  }
+})();
+</script>
 </section>
 
 
@@ -192,13 +246,20 @@
   </div>
 </section>
 
-<section class="section ct-band" id="contacto">
+<section class="section ct-shield" id="contacto">
+  <div class="ct-radar" aria-hidden="true"></div>
   <div class="wrap" style="text-align:center;position:relative;z-index:2">
-    <p class="kicker reveal">Estiramos la protección hasta el límite</p>
+    <p class="kicker reveal">El blindaje final</p>
     <h2 class="h2 reveal">Contacto</h2>
-    <a class="ct-band-phone reveal" href="tel:+12539612199">253-961-2199</a>
-    <p class="ct-band-sub reveal">Corrección de empozamientos y sellado de techos · <a href="https://www.instagram.com/construvetcorp" target="_blank" rel="noopener">@construvetcorp</a> · Zona este (Río Grande/Gurabo) y la zona este</p>
-    <div class="ct-band-map reveal"><iframe title="Mapa" src="https://www.google.com/maps?q=Rio Grande,Puerto+Rico&output=embed" loading="lazy"></iframe></div>
+    <a class="ct-shield-phone reveal" href="tel:+12539612199">253-961-2199</a>
+    <div class="ct-shield-rule reveal" aria-hidden="true"></div>
+    <p class="ct-shield-sub reveal">Corrección de empozamientos y sellado de techos · <a href="https://www.instagram.com/construvetcorp" target="_blank" rel="noopener">@construvetcorp</a> · Zona este (Río Grande/Gurabo)</p>
+    <div class="ct-shield-chips reveal">
+      <span>Cotización por WhatsApp</span>
+      <span>Zona este</span>
+      <span>Membrana nueva</span>
+    </div>
+    <div class="ct-shield-map reveal"><iframe title="Mapa" src="https://www.google.com/maps?q=Rio Grande,Puerto+Rico&output=embed" loading="lazy"></iframe></div>
   </div>
 </section>
 
