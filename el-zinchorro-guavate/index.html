@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>El Zinchorro · Guavate, Cayey - El Rey del Mofongo</title>
+<meta name="description" content="El Zinchorro en Guavate, Cayey: el chinchorro de zinc famoso por sus mofongos y la chuleta kan kan. Dom-Mié 11:30am-8/9pm, Jue-Sáb hasta las 10pm. Tel 787-430-6301.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script type="importmap">{"imports":{"three":"https://unpkg.com/three@0.160.0/build/three.module.js"}}</script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --bg:#141518; --bg2:#1b1d22; --card:#20232a; --ink:#f5f2ea; --muted:#b9bec9;
+  --acc:#f26a1b; --acc2:#ffb35c; --line:rgba(242,106,27,.25); --wa:#25d366;
+}
+html{scroll-behavior:smooth}
+body{font-family:'Manrope',system-ui,sans-serif;background:var(--bg);color:var(--ink);overflow-x:hidden;line-height:1.6}
+img{max-width:100%}
+a{color:inherit}
+.wrap{max-width:1100px;margin:0 auto;padding:0 20px}
+header{position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(20,21,24,.85);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.hd-in{display:flex;align-items:center;gap:14px;padding:10px 20px;max-width:1100px;margin:0 auto}
+.logo-diamond{width:58px;height:58px;flex:none;;overflow:hidden;}
+.logo-diamond img{width:100%;height:100%;object-fit:cover;display:block;background:#000}
+.brand{font-family:'Bebas Neue',sans-serif; font-size:1.25rem;letter-spacing:.02em;line-height:1.1}
+.brand small{display:block;font-family:'Manrope';font-size:.62rem;letter-spacing:.28em;color:var(--muted);font-weight:700}
+nav{margin-left:auto;display:flex;gap:18px;font-size:.85rem;font-weight:600}
+nav a{text-decoration:none;opacity:.85}
+nav a:hover{color:var(--acc)}
+@media(max-width:720px){nav{display:none}}
+.hero{position:relative;min-height:100svh;display:flex;align-items:flex-end;overflow:hidden;
+  background:radial-gradient(1100px 600px at 50% 110%,#2b1c10 0%,var(--bg) 60%)}
+#gl{position:absolute;inset:0;width:100%;height:100%;display:block;touch-action:pan-y}
+.hero-fallback{position:absolute;inset:0;display:none;overflow:hidden}
+.hero-fallback img{width:100%;height:100%;object-fit:cover;animation:kenburns 18s ease-in-out infinite alternate;opacity:.55}
+@keyframes kenburns{from{transform:scale(1)}to{transform:scale(1.12)}}
+.no-webgl #gl{display:none}
+.no-webgl .hero-fallback{display:block}
+.hero-inner{position:relative;z-index:3;width:100%;padding:120px 20px 90px;text-align:center}
+.kicker{display:inline-block;font-size:.72rem;font-weight:800;letter-spacing:.3em;text-transform:uppercase;color:var(--acc2);
+  border:1px solid var(--line);padding:9px 20px;border-radius:999px;background:rgba(20,21,24,.55);margin-bottom:18px}
+h1{font-family:'Bebas Neue',sans-serif;font-size:clamp(3rem,11vw,6.2rem);line-height:1.02;
+  background:linear-gradient(180deg,#ffffff 20%,var(--acc2) 55%,var(--acc) 90%);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+  filter:drop-shadow(0 6px 24px rgba(242,106,27,.4));margin-bottom:10px}
+.hero-sub{max-width:34rem;margin:0 auto 26px;color:var(--muted);font-size:1.02rem}
+.hero-sub strong{color:var(--ink)}
+.cta-row{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:15px 30px;border-radius:999px;font-weight:800;text-decoration:none;
+  transition:transform .18s ease,box-shadow .18s ease;will-change:transform}
+.btn-acc{background:linear-gradient(180deg,var(--acc2),var(--acc));color:#2a1204;box-shadow:0 12px 32px rgba(242,106,27,.4)}
+.btn-ghost{border:1px solid var(--line);color:var(--ink);background:rgba(20,21,24,.5)}
+.scroll-cue{position:absolute;left:50%;bottom:22px;transform:translateX(-50%);z-index:3;width:26px;height:44px;border:2px solid var(--muted);
+  border-radius:14px;opacity:.8}
+.scroll-cue::after{content:"";position:absolute;left:50%;top:8px;width:5px;height:9px;margin-left:-2.5px;border-radius:3px;background:var(--acc);animation:cue 1.8s ease-in-out infinite}
+@keyframes cue{0%{transform:translateY(0);opacity:1}70%{transform:translateY(14px);opacity:0}100%{opacity:0}}
+section{padding:84px 0;position:relative}
+.sec-head{text-align:center;margin-bottom:44px}
+.sec-kick{font-size:.72rem;font-weight:800;letter-spacing:.3em;text-transform:uppercase;color:var(--acc);margin-bottom:12px}
+h2{font-family:'Bebas Neue',sans-serif;font-size:clamp(1.9rem,5.5vw,3rem);line-height:1.1}
+.sec-sub{color:var(--muted);max-width:36rem;margin:12px auto 0}
+.rv{opacity:0;transform:translateY(36px) scale(.985);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.7,.2,1)}
+.rv.in{opacity:1;transform:none}
+.svc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:22px}
+.svc{background:linear-gradient(180deg,var(--card),#17181d);border:1px solid var(--line);border-radius:20px;overflow:hidden;
+  transition:transform .25s ease,box-shadow .25s ease;will-change:transform}
+.svc:hover{box-shadow:0 24px 60px rgba(0,0,0,.5)}
+.svc .ph{height:210px;overflow:hidden;position:relative}
+.svc .ph img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .8s ease}
+.svc:hover .ph img{transform:scale(1.07)}
+.svc .n{position:absolute;top:14px;left:14px;background:rgba(20,21,24,.8);border:1px solid var(--line);color:var(--acc2);
+  font-weight:800;font-size:.8rem;padding:6px 14px;border-radius:999px;letter-spacing:.12em}
+.svc .tx{padding:22px 22px 26px}
+.svc h3{font-size:1.25rem;margin-bottom:8px}
+.svc p{color:var(--muted);font-size:.94rem}
+.gal{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px}
+.gal a{display:block;border-radius:14px;overflow:hidden;border:1px solid var(--line);aspect-ratio:1}
+.gal img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .6s ease}
+.gal a:hover img{transform:scale(1.08)}
+.faq{max-width:720px;margin:0 auto}
+.faq details{background:var(--card);border:1px solid var(--line);border-radius:14px;margin-bottom:12px;overflow:hidden}
+.faq summary{cursor:pointer;padding:18px 22px;font-weight:700;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:12px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";font-size:1.5rem;color:var(--acc);flex:none;transition:transform .25s}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq .a{padding:0 22px 20px;color:var(--muted);font-size:.95rem}
+.faq .a a{color:var(--acc2)}
+.contact{background:radial-gradient(800px 420px at 50% 0%,#2b1c10 0%,var(--bg) 65%)}
+.cta-card{max-width:760px;margin:0 auto;text-align:center;background:linear-gradient(180deg,#26221a,#17181d);border:1px solid var(--line);
+  border-radius:28px;padding:56px 30px;position:relative;overflow:hidden}
+.cta-card::before{content:"";position:absolute;inset:-40%;background:conic-gradient(from 0deg,transparent 70%,rgba(242,106,27,.16) 85%,transparent 100%);animation:spinSlow 9s linear infinite;pointer-events:none}
+@keyframes spinSlow{to{transform:rotate(360deg)}}
+.cta-card>*{position:relative}
+.cta-emoji{font-size:3rem;filter:drop-shadow(0 0 18px rgba(242,106,27,.8));animation:flick 2.2s ease-in-out infinite}
+@keyframes flick{0%,100%{transform:scale(1) rotate(-2deg)}50%{transform:scale(1.08) rotate(2deg)}}
+.cta-card h2{margin:14px 0 8px}
+.tel-big{display:inline-block;font-family:'Bebas Neue',sans-serif;font-size:clamp(1.8rem,7vw,3rem);color:var(--acc2);text-decoration:none;margin:14px 0 6px;
+  text-shadow:0 0 30px rgba(255,179,92,.5)}
+.tel-big:hover{color:#fff}
+.chips{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin:20px 0 26px}
+.chip{font-size:.82rem;font-weight:700;border:1px solid var(--line);border-radius:999px;padding:9px 18px;color:var(--muted);text-decoration:none;background:rgba(20,21,24,.5)}
+.chip:hover{color:var(--acc2);border-color:var(--acc)}
+.map{border-radius:18px;overflow:hidden;border:1px solid var(--line);margin-top:8px}
+.map iframe{width:100%;height:300px;border:0;display:block;filter:sepia(.3) saturate(1.1)}
+footer{border-top:1px solid var(--line);padding:44px 0 110px;background:#0c0d10}
+.ft{display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.ft .logo-diamond{width:52px;height:52px}
+.ft small{color:var(--muted);display:block;font-size:.8rem}
+.soc{margin-left:auto;display:flex;gap:12px}
+.soc a{width:52px;height:52px;border-radius:16px;display:grid;place-items:center;background:linear-gradient(145deg,#2a2d36,#17181d);
+  border:1px solid var(--line);box-shadow:0 8px 20px rgba(0,0,0,.4),inset 0 1px 0 rgba(255,255,255,.08);
+  transform:perspective(400px) rotateX(8deg);transition:transform .2s}
+.soc a:hover{transform:perspective(400px) rotateX(0) translateY(-3px)}
+.soc svg{width:24px;height:24px;fill:var(--acc2)}
+.copy{text-align:center;color:var(--muted);font-size:.78rem;margin-top:30px;opacity:.7}
+.wa-float{position:fixed;right:18px;bottom:18px;z-index:60;width:62px;height:62px;border-radius:50%;
+  background:radial-gradient(circle at 30% 30%,#3ddc74,var(--wa));display:grid;place-items:center;
+  box-shadow:0 10px 30px rgba(37,211,102,.45);animation:waPulse 2.4s ease-in-out infinite}
+.wa-float svg{width:32px;height:32px;fill:#fff}
+@keyframes waPulse{0%,100%{transform:scale(1)}50%{transform:scale(1.07)}}
+.logo-diamond{transform:rotate(45deg);background:linear-gradient(145deg,#3a3d46,#22242b);border:2px solid var(--acc);box-shadow:0 0 22px rgba(242,106,27,.4);animation:diamondFloat 5s ease-in-out infinite}.logo-diamond img{transform:rotate(-45deg) scale(1.45)}@keyframes diamondFloat{0%,100%{transform:rotate(45deg) translateY(0)}50%{transform:rotate(45deg) translateY(-4px)}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<header>
+  <div class="hd-in">
+    <span class="logo-diamond"><img src="img/logo.jpg" alt="El Zinchorro"></span>
+    <span class="brand">El Zinchorro<small>CHINCHORRO · GUAVATE</small></span>
+    <nav>
+      <a href="#servicios">Menú</a><a href="#galeria">Galería</a><a href="#faq">Preguntas</a><a href="#contacto">Contacto</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero" id="inicio">
+  <canvas id="gl"></canvas>
+  <div class="hero-fallback"><img src="img/03.jpg" alt="Menú de El Zinchorro"></div>
+  <div class="hero-inner">
+    <span class="kicker">Chinchorro · Guavate, Cayey</span>
+    <h1>EL<br>ZINCHORRO</h1>
+    <p class="hero-sub">Los expertos dicen que un buen chinchorro tiene que ser de zinc. Famosos por los <strong>mofongos</strong> y la <strong>chuleta kan kan</strong>.</p>
+    <div class="cta-row">
+      <a class="btn btn-acc mg" href="#servicios">Ver el menú</a>
+      <a class="btn btn-ghost mg" href="tel:+17874306301">787-430-6301</a>
+    </div>
+  </div>
+  <div class="scroll-cue" aria-hidden="true"></div>
+</section>
+
+<section id="servicios">
+  <div class="wrap">
+    <div class="sec-head rv"><p class="sec-kick">Del zinc</p><h2>El rey del mofongo</h2>
+    <p class="sec-sub">Bar & grill con vista a las montañas, menú a la carta y ambiente familiar.</p></div>
+    <div class="svc-grid">
+      <article class="svc rv"><div class="ph"><span class="n">01</span><img src="img/02.jpg" alt="Menú de mofongos rellenos" loading="lazy"></div><div class="tx"><h3>Mofongos rellenos</h3><p>Los reyes de la casa: rellenos de churrasco, langosta, pulpo, camarones y más.</p></div></article>
+<article class="svc rv"><div class="ph"><span class="n">02</span><img src="img/03.jpg" alt="Menú de carnes y chuleta kan kan" loading="lazy"></div><div class="tx"><h3>Chuleta kan kan</h3><p>La legendaria chuleta kan kan, con su hueso largo y su cuerito. También ahumada.</p></div></article>
+<article class="svc rv"><div class="ph"><span class="n">03</span><img src="img/10.jpg" alt="Hamburguesa La Zinchorro" loading="lazy"></div><div class="tx"><h3>La Zinchorro burger</h3><p>Hamburguesa rellena de plátano maduro, tocineta y queso crema.</p></div></article>
+<article class="svc rv"><div class="ph"><span class="n">04</span><img src="img/04.jpg" alt="Menú de pastas" loading="lazy"></div><div class="tx"><h3>Pastas</h3><p>Mar y tierra, camarones, churrasco: pastas con personalidad.</p></div></article>
+<article class="svc rv"><div class="ph"><span class="n">05</span><img src="img/05.jpg" alt="Menú de acompañantes" loading="lazy"></div><div class="tx"><h3>Acompañantes</h3><p>Mofongo, tostones, arañitas, maduros y todo lo criollo.</p></div></article>
+<article class="svc rv"><div class="ph"><span class="n">06</span><img src="img/01.jpg" alt="Menú El Zinchorro" loading="lazy"></div><div class="tx"><h3>El menú del zinc</h3><p>Aperitivos, surtidos y especialidades de la casa. Pregunta por el plato del día.</p></div></article>
+    </div>
+  </div>
+</section>
+
+<section id="galeria">
+  <div class="wrap">
+    <div class="sec-head rv"><p class="sec-kick">El chinchorro</p><h2>Así se chinchorrea</h2>
+    <p class="sec-sub">El menú, los platos y el ambiente de zinc en Guavate.</p></div>
+    <div class="gal">
+      <a class="rv" href="img/01.jpg"><img src="img/01.jpg" alt="Menú El Zinchorro" loading="lazy"></a>
+<a class="rv" href="img/02.jpg"><img src="img/02.jpg" alt="Mofongos rellenos" loading="lazy"></a>
+<a class="rv" href="img/03.jpg"><img src="img/03.jpg" alt="Carnes y kan kan" loading="lazy"></a>
+<a class="rv" href="img/04.jpg"><img src="img/04.jpg" alt="Pastas" loading="lazy"></a>
+<a class="rv" href="img/05.jpg"><img src="img/05.jpg" alt="Acompañantes" loading="lazy"></a>
+<a class="rv" href="img/06.jpg"><img src="img/06.jpg" alt="Plato de la casa" loading="lazy"></a>
+<a class="rv" href="img/07.jpg"><img src="img/07.jpg" alt="Café" loading="lazy"></a>
+<a class="rv" href="img/08.jpg"><img src="img/08.jpg" alt="Buffet" loading="lazy"></a>
+<a class="rv" href="img/09.jpg"><img src="img/09.jpg" alt="Pizza" loading="lazy"></a>
+<a class="rv" href="img/10.jpg"><img src="img/10.jpg" alt="Hamburguesa" loading="lazy"></a>
+    </div>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="wrap">
+    <div class="sec-head rv"><p class="sec-kick">Dudas</p><h2>Preguntas frecuentes</h2></div>
+    <div class="faq">
+      <details class="rv"><summary>¿Cuál es el horario?</summary><div class="a">Domingo a miércoles de 11:30 AM a 8:00/9:00 PM. Jueves a sábado de 11:30 AM a 10:00 PM.</div></details>
+<details class="rv"><summary>¿Dónde están ubicados?</summary><div class="a">Carr. 184 Km 32.5, Bo. Guavate, Cayey, PR.</div></details>
+<details class="rv"><summary>¿Qué es la chuleta kan kan?</summary><div class="a">Un corte con hueso largo y piel crujiente, insignia de la casa. La tenemos regular y ahumada.</div></details>
+<details class="rv"><summary>¿Por qué se llama El Zinchorro?</summary><div class="a">Porque un buen chinchorro tiene que ser de zinc, dicen los expertos en chinchorreos.</div></details>
+<details class="rv"><summary>¿Cómo reservo?</summary><div class="a">Llámanos al <a href="tel:+17874306301">787-430-6301</a> o escríbenos por WhatsApp.</div></details>
+    </div>
+  </div>
+</section>
+
+<section id="contacto" class="contact">
+  <div class="wrap">
+    <div class="sec-head rv"><p class="sec-kick">Cae al zinc</p><h2>El zinc está caliente</h2>
+    <p class="sec-sub">Sube a Guavate y chinchorrea como se debe.</p></div>
+    <div class="cta-card rv">
+      <div class="cta-emoji">🍖</div>
+      <h2>Llama y separa tu mesa</h2>
+      <a class="tel-big mg" href="tel:+17874306301">787-430-6301</a>
+      <div class="chips">
+        <span class="chip">Dom-Mié · 11:30am-8/9pm</span>
+<span class="chip">Jue-Sáb · hasta 10pm</span>
+<span class="chip">Guavate, Cayey</span>
+      </div>
+      <div class="map"><iframe title="Mapa - Guavate, Cayey, Puerto Rico" src="https://www.google.com/maps?q=Carr.+184+Km+32.5,+Guavate,+Cayey,+PR&output=embed" loading="lazy"></iframe></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="ft">
+      <span class="logo-diamond"><img src="img/logo.jpg" alt="El Zinchorro"></span>
+      <div><strong>El Zinchorro</strong><small>Chinchorro · Guavate, Cayey, Puerto Rico</small></div>
+      <div class="soc">
+        <a href="tel:+17874306301" aria-label="Llamar"><svg viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z"/></svg></a>
+      </div>
+    </div>
+    <p class="copy">El Zinchorro · Chinchorro · Guavate, Cayey, Puerto Rico · Web por Manupro</p>
+  </div>
+</footer>
+
+<a class="wa-float" href="https://wa.me/17874306301?text=Hola%20El%20Zinchorro%2C%20quiero%20separar%20una%20mesa." aria-label="WhatsApp"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.6-6.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.3-.6.8-.8 1-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4 0-.5.1-.7l.4-.5c.1-.2.1-.3 0-.5L9.4 8c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.2-.7.5-.2.3-.9.9-.9 2.2s.9 2.5 1.1 2.7c.1.2 1.8 2.8 4.4 3.9 1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2 0-.1-.2-.1-.4-.2z"/></svg></a>
+
+<script type="module">
+import * as THREE from 'three';
+const isMobile = matchMedia('(max-width:720px)').matches;
+const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+let started = false;
+function fallback(){ document.body.classList.add('no-webgl'); }
+const failTimer = setTimeout(()=>{ if(!started) fallback(); }, 6000);
+function clearFail(){ clearTimeout(failTimer); }
+try{
+if(!window.WebGLRenderingContext) throw 0;
+const canvas = document.getElementById('gl');
+const renderer = new THREE.WebGLRenderer({canvas, alpha:true, antialias:!isMobile, powerPreference:'high-performance'});
+renderer.setPixelRatio(Math.min(devicePixelRatio||1, isMobile?1.5:2));
+const scene = new THREE.Scene();
+const camera = new THREE.PerspectiveCamera(38, 1, 0.1, 80);
+camera.position.set(0, 0.7, 7.4);
+// luces
+scene.add(new THREE.AmbientLight(0x4a4d55, 0.5));
+const key = new THREE.DirectionalLight(0xfff0dd, 1.6); key.position.set(4,6,5); scene.add(key);
+const rim = new THREE.PointLight(0xf26a1b, 15, 26); rim.position.set(-5.5,2.5,-3.5); scene.add(rim);
+const low = new THREE.PointLight(0x9aa1ab, 8, 16); low.position.set(0,-2.6,2.6); scene.add(low);
+// sombra suave
+const shC = document.createElement('canvas'); shC.width=shC.height=128;
+const sx = shC.getContext('2d'); const grd = sx.createRadialGradient(64,64,8,64,64,62);
+grd.addColorStop(0,'rgba(0,0,0,.5)'); grd.addColorStop(1,'rgba(0,0,0,0)');
+sx.fillStyle=grd; sx.fillRect(0,0,128,128);
+const shadow = new THREE.Mesh(new THREE.PlaneGeometry(4.4,4.4),
+  new THREE.MeshBasicMaterial({map:new THREE.CanvasTexture(shC), transparent:true, depthWrite:false}));
+shadow.rotation.x = -Math.PI/2; shadow.position.y = -0.95; scene.add(shadow);
+const hero3d = new THREE.Group(); scene.add(hero3d);
+// --- chuleta kan kan con mofongo ---
+const plate = new THREE.Mesh(new THREE.CylinderGeometry(1.7, 1.35, 0.12, 40), new THREE.MeshStandardMaterial({color:0xf2ede2, roughness:.35}));
+plate.position.y = -0.55; hero3d.add(plate);
+const chop = new THREE.Mesh(new THREE.CylinderGeometry(0.85, 0.8, 0.3, 28), new THREE.MeshStandardMaterial({color:0x9a5a30, roughness:.5}));
+chop.position.set(-0.55, -0.28, 0.1); chop.rotation.y = 0.4; hero3d.add(chop);
+const fat = new THREE.Mesh(new THREE.CylinderGeometry(0.86, 0.86, 0.1, 28), new THREE.MeshStandardMaterial({color:0xe8c98f, roughness:.55}));
+fat.position.set(-0.55, -0.12, 0.1); fat.rotation.y = 0.4; hero3d.add(fat);
+const boneM = new THREE.MeshStandardMaterial({color:0xf5efe4, roughness:.35});
+const bone = new THREE.Mesh(new THREE.CylinderGeometry(0.085, 0.085, 1.5, 12), boneM);
+bone.rotation.z = Math.PI/2 - 0.15; bone.position.set(0.35, -0.25, 0.1); hero3d.add(bone);
+const knob = new THREE.Mesh(new THREE.SphereGeometry(0.14, 12, 10), boneM);
+knob.position.set(1.08, -0.14, 0.1); hero3d.add(knob);
+const mofG = new THREE.SphereGeometry(0.55, 28, 20);
+{ const p = mofG.attributes.position; for(let i=0;i<p.count;i++){ const a=0.06; p.setXYZ(i, p.getX(i)+(Math.random()-.5)*a, p.getY(i)+(Math.random()-.5)*a, p.getZ(i)+(Math.random()-.5)*a);} mofG.computeVertexNormals(); }
+const mof = new THREE.Mesh(mofG, new THREE.MeshStandardMaterial({color:0xd9a441, roughness:.95}));
+mof.position.set(0.75, -0.15, -0.55); mof.scale.set(1, 0.85, 1); hero3d.add(mof);
+const mayo = new THREE.Mesh(new THREE.CylinderGeometry(0.16, 0.2, 0.1, 16), new THREE.MeshStandardMaterial({color:0xf6e7c8, roughness:.4}));
+mayo.position.set(0.75, 0.32, -0.55); hero3d.add(mayo);
+for(let i=0;i<3;i++){
+  const ts = new THREE.Mesh(new THREE.CylinderGeometry(0.28, 0.3, 0.09, 18), new THREE.MeshStandardMaterial({color:0xe0aa3e, roughness:.8}));
+  ts.position.set(-0.4 + i*0.45, -0.32, 0.85 - (i%2)*0.25); ts.rotation.y = Math.random(); hero3d.add(ts);
+}
+
+// particulas ambientales
+const pCount = isMobile ? 26 : 60;
+const pGeo = new THREE.BufferGeometry();
+const pPos = new Float32Array(pCount*3), pSpd = new Float32Array(pCount), pSwy = new Float32Array(pCount);
+for(let i=0;i<pCount;i++){
+  pPos[i*3]=(Math.random()-.5)*8; pPos[i*3+1]=-2.5+Math.random()*7; pPos[i*3+2]=-2-Math.random()*4;
+  pSpd[i]=0.6*(0.5+Math.random()); pSwy[i]=Math.random()*6.28;
+}
+pGeo.setAttribute('position', new THREE.BufferAttribute(pPos,3));
+const points = new THREE.Points(pGeo, new THREE.PointsMaterial({color:0xffc46b, size:0.05, transparent:true, opacity:0.85, blending:THREE.AdditiveBlending, depthWrite:false}));
+scene.add(points);
+let tx=0, ty=0;
+addEventListener('pointermove', e=>{ tx=(e.clientX/innerWidth-.5); ty=(e.clientY/innerHeight-.5); }, {passive:true});
+addEventListener('deviceorientation', e=>{
+  if(e.gamma==null) return;
+  tx = Math.max(-.5, Math.min(.5, e.gamma/45)); ty = Math.max(-.5, Math.min(.5, (e.beta-45)/45));
+});
+function size(){
+  const w = canvas.clientWidth||innerWidth, h = canvas.clientHeight||innerHeight;
+  renderer.setSize(w, h, false); camera.aspect = w/h; camera.updateProjectionMatrix();
+}
+size(); addEventListener('resize', size);
+const hero = document.querySelector('.hero');
+const heroInner = document.querySelector('.hero-inner');
+let visible = true;
+new IntersectionObserver(en=>{ visible = en[0].isIntersecting; }).observe(hero);
+const clock = new THREE.Clock();
+started = true; clearFail();
+(function loop(){
+  requestAnimationFrame(loop);
+  if(!visible){ return; }
+  const t = clock.getElapsedTime();
+  if(!reduced){
+    hero3d.rotation.y += 0.005;
+    hero3d.position.y = 0.25 + Math.sin(t*1.1)*0.14;
+    hero3d.rotation.x += ((ty*0.32) - hero3d.rotation.x)*0.045;
+    hero3d.rotation.z += ((tx*-0.18) - hero3d.rotation.z)*0.045;
+    camera.position.x += ((tx*1.15) - camera.position.x)*0.03;
+    camera.position.y += ((0.7 - ty*0.85) - camera.position.y)*0.03;
+    camera.lookAt(0, -0.1, 0);
+    const pa = pGeo.attributes.position;
+    for(let i=0;i<pCount;i++){
+      pa.array[i*3+1] += pSpd[i]*0.016;
+      pa.array[i*3] += Math.sin(t*0.9+pSwy[i])*0.0035;
+      if(pa.array[i*3+1] > 4) pa.array[i*3+1] = -2.5;
+    }
+    pa.needsUpdate = true;
+    
+  }
+  const sy = scrollY;
+  heroInner.style.transform = `translateY(${sy*0.22}px)`;
+  heroInner.style.opacity = Math.max(0, 1 - sy/(innerHeight*0.75));
+  const sc = Math.max(0.72, 1 - sy/(innerHeight*2.2));
+  hero3d.scale.setScalar(sc);
+  renderer.render(scene, camera);
+})();
+}catch(e){ fallback(); }
+
+</script>
+<script>
+const io = new IntersectionObserver(es=>es.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} }),{threshold:.12});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+if(matchMedia('(pointer:fine)').matches){
+  document.querySelectorAll('.mg').forEach(b=>{
+    b.addEventListener('pointermove',e=>{
+      const r=b.getBoundingClientRect();
+      b.style.transform=`translate(${(e.clientX-r.left-r.width/2)*.18}px,${(e.clientY-r.top-r.height/2)*.28}px)`;
+    });
+    b.addEventListener('pointerleave',()=>{ b.style.transform=''; });
+  });
+  document.querySelectorAll('.svc').forEach(c2=>{
+    c2.addEventListener('pointermove',e=>{
+      const r=c2.getBoundingClientRect(), x=(e.clientX-r.left)/r.width-.5, y=(e.clientY-r.top)/r.height-.5;
+      c2.style.transform=`perspective(800px) rotateY(${x*7}deg) rotateX(${-y*7}deg) translateY(-4px)`;
+    });
+    c2.addEventListener('pointerleave',()=>{ c2.style.transform=''; });
+  });
+}
+</script>
+</body>
+</html>

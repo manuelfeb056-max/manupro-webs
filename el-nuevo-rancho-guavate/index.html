@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Lechonera El Nuevo Rancho · Guavate, Cayey</title>
+<meta name="description" content="Lechonera El Nuevo Rancho en Guavate, Cayey: lechón asado en vara, arroz con gandules, morcilla y catering a nivel isla. Música en vivo fines de semana. Tel 787-286-0265.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rye&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script type="importmap">{"imports":{"three":"https://unpkg.com/three@0.160.0/build/three.module.js"}}</script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --bg:#160d06; --bg2:#1f1108; --card:#251408; --ink:#faf0dc; --muted:#d8a86a;
+  --acc:#ff7a1a; --acc2:#ffc46b; --line:rgba(255,122,26,.22); --wa:#25d366;
+}
+html{scroll-behavior:smooth}
+body{font-family:'Manrope',system-ui,sans-serif;background:var(--bg);color:var(--ink);overflow-x:hidden;line-height:1.6}
+img{max-width:100%}
+a{color:inherit}
+.wrap{max-width:1100px;margin:0 auto;padding:0 20px}
+header{position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(22,13,6,.85);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.hd-in{display:flex;align-items:center;gap:14px;padding:10px 20px;max-width:1100px;margin:0 auto}
+.logo-fire{width:58px;height:58px;flex:none;border-radius:18px;;overflow:hidden;padding:3px;background:linear-gradient(145deg,var(--acc),#7a2e08);box-shadow:0 0 26px rgba(255,122,26,.5);animation:floaty 4s ease-in-out infinite}
+.logo-fire img{width:100%;height:100%;object-fit:cover;display:block;background:#000}
+.brand{font-family:'Rye',serif; font-size:1.25rem;letter-spacing:.02em;line-height:1.1}
+.brand small{display:block;font-family:'Manrope';font-size:.62rem;letter-spacing:.28em;color:var(--muted);font-weight:700}
+nav{margin-left:auto;display:flex;gap:18px;font-size:.85rem;font-weight:600}
+nav a{text-decoration:none;opacity:.85}
+nav a:hover{color:var(--acc)}
+@media(max-width:720px){nav{display:none}}
+.hero{position:relative;min-height:100svh;display:flex;align-items:flex-end;overflow:hidden;
+  background:radial-gradient(1100px 600px at 50% 110%,#3a1c08 0%,var(--bg) 60%)}
+#gl{position:absolute;inset:0;width:100%;height:100%;display:block;touch-action:pan-y}
+.hero-fallback{position:absolute;inset:0;display:none;overflow:hidden}
+.hero-fallback img{width:100%;height:100%;object-fit:cover;animation:kenburns 18s ease-in-out infinite alternate;opacity:.55}
+@keyframes kenburns{from{transform:scale(1)}to{transform:scale(1.12)}}
+.no-webgl #gl{display:none}
+.no-webgl .hero-fallback{display:block}
+.hero-inner{position:relative;z-index:3;width:100%;padding:120px 20px 90px;text-align:center}
+.kicker{display:inline-block;font-size:.72rem;font-weight:800;letter-spacing:.3em;text-transform:uppercase;color:var(--acc2);
+  border:1px solid var(--line);padding:9px 20px;border-radius:999px;background:rgba(22,13,6,.55);margin-bottom:18px}
+h1{font-family:'Rye',serif;font-size:clamp(3rem,11vw,6.2rem);line-height:1.02;
+  background:linear-gradient(180deg,#fff3d9 20%,var(--acc2) 55%,#c96a1a 90%);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+  filter:drop-shadow(0 6px 24px rgba(255,122,26,.35));margin-bottom:10px}
+.hero-sub{max-width:34rem;margin:0 auto 26px;color:var(--muted);font-size:1.02rem}
+.hero-sub strong{color:var(--ink)}
+.cta-row{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:15px 30px;border-radius:999px;font-weight:800;text-decoration:none;
+  transition:transform .18s ease,box-shadow .18s ease;will-change:transform}
+.btn-acc{background:linear-gradient(180deg,var(--acc2),var(--acc));color:#2a1204;box-shadow:0 12px 32px rgba(255,122,26,.35)}
+.btn-ghost{border:1px solid var(--line);color:var(--ink);background:rgba(22,13,6,.5)}
+.scroll-cue{position:absolute;left:50%;bottom:22px;transform:translateX(-50%);z-index:3;width:26px;height:44px;border:2px solid var(--muted);
+  border-radius:14px;opacity:.8}
+.scroll-cue::after{content:"";position:absolute;left:50%;top:8px;width:5px;height:9px;margin-left:-2.5px;border-radius:3px;background:var(--acc);animation:cue 1.8s ease-in-out infinite}
+@keyframes cue{0%{transform:translateY(0);opacity:1}70%{transform:translateY(14px);opacity:0}100%{opacity:0}}
+section{padding:84px 0;position:relative}
+.sec-head{text-align:center;margin-bottom:44px}
+.sec-kick{font-size:.72rem;font-weight:800;letter-spacing:.3em;text-transform:uppercase;color:var(--acc);margin-bottom:12px}
+h2{font-family:'Rye',serif;font-size:clamp(1.9rem,5.5vw,3rem);line-height:1.1}
+.sec-sub{color:var(--muted);max-width:36rem;margin:12px auto 0}
+.rv{opacity:0;transform:translateY(36px) scale(.985);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.7,.2,1)}
+.rv.in{opacity:1;transform:none}
+.svc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:22px}
+.svc{background:linear-gradient(180deg,var(--card),#1c0e05);border:1px solid var(--line);border-radius:20px;overflow:hidden;
+  transition:transform .25s ease,box-shadow .25s ease;will-change:transform}
+.svc:hover{box-shadow:0 24px 60px rgba(0,0,0,.5)}
+.svc .ph{height:210px;overflow:hidden;position:relative}
+.svc .ph img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .8s ease}
+.svc:hover .ph img{transform:scale(1.07)}
+.svc .n{position:absolute;top:14px;left:14px;background:rgba(22,13,6,.8);border:1px solid var(--line);color:var(--acc2);
+  font-weight:800;font-size:.8rem;padding:6px 14px;border-radius:999px;letter-spacing:.12em}
+.svc .tx{padding:22px 22px 26px}
+.svc h3{font-size:1.25rem;margin-bottom:8px}
+.svc p{color:var(--muted);font-size:.94rem}
+.gal{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px}
+.gal a{display:block;border-radius:14px;overflow:hidden;border:1px solid var(--line);aspect-ratio:1}
+.gal img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .6s ease}
+.gal a:hover img{transform:scale(1.08)}
+.faq{max-width:720px;margin:0 auto}
+.faq details{background:var(--card);border:1px solid var(--line);border-radius:14px;margin-bottom:12px;overflow:hidden}
+.faq summary{cursor:pointer;padding:18px 22px;font-weight:700;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:12px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";font-size:1.5rem;color:var(--acc);flex:none;transition:transform .25s}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq .a{padding:0 22px 20px;color:var(--muted);font-size:.95rem}
+.faq .a a{color:var(--acc2)}
+.contact{background:radial-gradient(800px 420px at 50% 0%,#331a08 0%,var(--bg) 65%)}
+.cta-card{max-width:760px;margin:0 auto;text-align:center;background:linear-gradient(180deg,#2c1608,#1c0e05);border:1px solid var(--line);
+  border-radius:28px;padding:56px 30px;position:relative;overflow:hidden}
+.cta-card::before{content:"";position:absolute;inset:-40%;background:conic-gradient(from 0deg,transparent 70%,rgba(255,122,26,.16) 85%,transparent 100%);animation:spinSlow 9s linear infinite;pointer-events:none}
+@keyframes spinSlow{to{transform:rotate(360deg)}}
+.cta-card>*{position:relative}
+.cta-emoji{font-size:3rem;filter:drop-shadow(0 0 18px rgba(255,122,26,.8));animation:flick 2.2s ease-in-out infinite}
+@keyframes flick{0%,100%{transform:scale(1) rotate(-2deg)}50%{transform:scale(1.08) rotate(2deg)}}
+.cta-card h2{margin:14px 0 8px}
+.tel-big{display:inline-block;font-family:'Rye',serif;font-size:clamp(1.8rem,7vw,3rem);color:var(--acc2);text-decoration:none;margin:14px 0 6px;
+  text-shadow:0 0 30px rgba(255,196,107,.5)}
+.tel-big:hover{color:#fff}
+.chips{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin:20px 0 26px}
+.chip{font-size:.82rem;font-weight:700;border:1px solid var(--line);border-radius:999px;padding:9px 18px;color:var(--muted);text-decoration:none;background:rgba(22,13,6,.5)}
+.chip:hover{color:var(--acc2);border-color:var(--acc)}
+.map{border-radius:18px;overflow:hidden;border:1px solid var(--line);margin-top:8px}
+.map iframe{width:100%;height:300px;border:0;display:block;filter:sepia(.35) saturate(1.2)}
+footer{border-top:1px solid var(--line);padding:44px 0 110px;background:#0f0803}
+.ft{display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.ft .logo-fire{width:52px;height:52px}
+.ft small{color:var(--muted);display:block;font-size:.8rem}
+.soc{margin-left:auto;display:flex;gap:12px}
+.soc a{width:52px;height:52px;border-radius:16px;display:grid;place-items:center;background:linear-gradient(145deg,#33200e,#1c0e05);
+  border:1px solid var(--line);box-shadow:0 8px 20px rgba(0,0,0,.4),inset 0 1px 0 rgba(255,255,255,.08);
+  transform:perspective(400px) rotateX(8deg);transition:transform .2s}
+.soc a:hover{transform:perspective(400px) rotateX(0) translateY(-3px)}
+.soc svg{width:24px;height:24px;fill:var(--acc2)}
+.copy{text-align:center;color:var(--muted);font-size:.78rem;margin-top:30px;opacity:.7}
+.wa-float{position:fixed;right:18px;bottom:18px;z-index:60;width:62px;height:62px;border-radius:50%;
+  background:radial-gradient(circle at 30% 30%,#3ddc74,var(--wa));display:grid;place-items:center;
+  box-shadow:0 10px 30px rgba(37,211,102,.45);animation:waPulse 2.4s ease-in-out infinite}
+.wa-float svg{width:32px;height:32px;fill:#fff}
+@keyframes waPulse{0%,100%{transform:scale(1)}50%{transform:scale(1.07)}}
+.logo-fire{border-radius:18px;padding:3px;background:linear-gradient(145deg,var(--acc),#7a2e08);box-shadow:0 0 26px rgba(255,122,26,.5);animation:floaty 4s ease-in-out infinite}@keyframes floaty{0%,100%{transform:translateY(0)}50%{transform:translateY(-5px)}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<header>
+  <div class="hd-in">
+    <span class="logo-fire"><img src="img/logo.jpg" alt="Lechonera El Nuevo Rancho"></span>
+    <span class="brand">El Nuevo Rancho<small>LECHONERA · GUAVATE</small></span>
+    <nav>
+      <a href="#servicios">Menú</a><a href="#galeria">Galería</a><a href="#faq">Preguntas</a><a href="#contacto">Contacto</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero" id="inicio">
+  <canvas id="gl"></canvas>
+  <div class="hero-fallback"><img src="img/10.jpg" alt="Lechón asado en la vara en El Nuevo Rancho"></div>
+  <div class="hero-inner">
+    <span class="kicker">Lechonera · Guavate, Cayey</span>
+    <h1>EL NUEVO<br>RANCHO</h1>
+    <p class="hero-sub"><strong>Donde mejor se come lechón en Guavate</strong>: vara prendida, cuerito crujiente y música en vivo los fines de semana.</p>
+    <div class="cta-row">
+      <a class="btn btn-acc mg" href="#servicios">Ver el menú</a>
+      <a class="btn btn-ghost mg" href="tel:+17872860265">787-286-0265</a>
+    </div>
+  </div>
+  <div class="scroll-cue" aria-hidden="true"></div>
+</section>
+
+<section id="servicios">
+  <div class="wrap">
+    <div class="sec-head rv"><p class="sec-kick">De la vara</p><h2>Sabor que suena a cuerito</h2>
+    <p class="sec-sub">Comida típica criolla de vara, servida en familia en la Ruta del Lechón.</p></div>
+    <div class="svc-grid">
+      <article class="svc rv"><div class="ph"><span class="n">01</span><img src="img/10.jpg" alt="Lechón asado entero en la vara" loading="lazy"></div><div class="tx"><h3>Lechón asado en vara</h3><p>El rey de la casa: cerdo entero a la vara, dorado y crujiente, con su cuerito que suena.</p></div></article>
+<article class="svc rv"><div class="ph"><span class="n">02</span><img src="img/01.jpg" alt="Arroz con gandules" loading="lazy"></div><div class="tx"><h3>Arroz con gandules</h3><p>El compañero inseparable del lechón, con el grano suelto y el sabor de siempre.</p></div></article>
+<article class="svc rv"><div class="ph"><span class="n">03</span><img src="img/04.jpg" alt="Morcilla" loading="lazy"></div><div class="tx"><h3>Morcilla</h3><p>Morcilla de la casa, para los que saben de lo bueno.</p></div></article>
+<article class="svc rv"><div class="ph"><span class="n">04</span><img src="img/08.jpg" alt="Plato de lechón con cuerito" loading="lazy"></div><div class="tx"><h3>Lechón al plato</h3><p>Plato de lechón con cuerito crujiente y arroz con gandules. Puro Guavate.</p></div></article>
+<article class="svc rv"><div class="ph"><span class="n">05</span><img src="img/02.jpg" alt="Área familiar de la lechonera" loading="lazy"></div><div class="tx"><h3>Música en vivo</h3><p>Sábados, domingos y feriados con música en vivo desde la 1:00 PM. Ambiente familiar.</p></div></article>
+<article class="svc rv"><div class="ph"><span class="n">06</span><img src="img/05.jpg" alt="Fachada de El Nuevo Rancho" loading="lazy"></div><div class="tx"><h3>Catering a nivel isla</h3><p>Llevamos el sabor de la vara a tu actividad, en cualquier parte de Puerto Rico.</p></div></article>
+    </div>
+  </div>
+</section>
+
+<section id="galeria">
+  <div class="wrap">
+    <div class="sec-head rv"><p class="sec-kick">La lechonera</p><h2>Así se vive aquí</h2>
+    <p class="sec-sub">La vara, el cuerito y la familia: Guavate de verdad.</p></div>
+    <div class="gal">
+      <a class="rv" href="img/01.jpg"><img src="img/01.jpg" alt="Arroz con gandules" loading="lazy"></a>
+<a class="rv" href="img/02.jpg"><img src="img/02.jpg" alt="Área familiar" loading="lazy"></a>
+<a class="rv" href="img/03.jpg"><img src="img/03.jpg" alt="Kiosko" loading="lazy"></a>
+<a class="rv" href="img/04.jpg"><img src="img/04.jpg" alt="Morcilla de la casa" loading="lazy"></a>
+<a class="rv" href="img/05.jpg"><img src="img/05.jpg" alt="Fachada El Nuevo Rancho" loading="lazy"></a>
+<a class="rv" href="img/06.jpg"><img src="img/06.jpg" alt="Pavochón" loading="lazy"></a>
+<a class="rv" href="img/07.jpg"><img src="img/07.jpg" alt="Arroz con gandules" loading="lazy"></a>
+<a class="rv" href="img/08.jpg"><img src="img/08.jpg" alt="Lechón con cuerito" loading="lazy"></a>
+<a class="rv" href="img/09.jpg"><img src="img/09.jpg" alt="Lechón y arroz" loading="lazy"></a>
+<a class="rv" href="img/10.jpg"><img src="img/10.jpg" alt="Lechón en la vara" loading="lazy"></a>
+    </div>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="wrap">
+    <div class="sec-head rv"><p class="sec-kick">Dudas</p><h2>Preguntas frecuentes</h2></div>
+    <div class="faq">
+      <details class="rv"><summary>¿Cuál es el horario?</summary><div class="a">Abierto hasta las 10:00 PM. Música en vivo los sábados, domingos y días feriados desde la 1:00 PM.</div></details>
+<details class="rv"><summary>¿Dónde están ubicados?</summary><div class="a">Carr. 184 Km 27.9, Bo. Guavate, Cayey, PR 00736.</div></details>
+<details class="rv"><summary>¿Hacen catering?</summary><div class="a">Sí, servicio de catering a nivel isla. Llámanos al 787-286-0265 para cotizar tu actividad.</div></details>
+<details class="rv"><summary>¿Qué platos típicos tienen?</summary><div class="a">Lechón asado en vara, arroz con gandules, morcilla, pasteles y desayunos criollos.</div></details>
+<details class="rv"><summary>¿Cómo ordeno?</summary><div class="a">Llámanos al <a href="tel:+17872860265">787-286-0265</a> o escríbenos por WhatsApp.</div></details>
+    </div>
+  </div>
+</section>
+
+<section id="contacto" class="contact">
+  <div class="wrap">
+    <div class="sec-head rv"><p class="sec-kick">Cae a Guavate</p><h2>La vara está prendida</h2>
+    <p class="sec-sub">Súbete a la Ruta del Lechón y come como se debe.</p></div>
+    <div class="cta-card rv">
+      <div class="cta-emoji">🔥</div>
+      <h2>Reserva tu mesa</h2>
+      <a class="tel-big mg" href="tel:+17872860265">787-286-0265</a>
+      <div class="chips">
+        <span class="chip">Abierto hasta las 10:00 PM</span>
+<span class="chip">Música en vivo fin de semana</span>
+<span class="chip">Guavate, Cayey</span>
+      </div>
+      <div class="map"><iframe title="Mapa - Guavate, Cayey, Puerto Rico" src="https://www.google.com/maps?q=Carr.+184+Km+27.9,+Guavate,+Cayey,+PR&output=embed" loading="lazy"></iframe></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="ft">
+      <span class="logo-fire"><img src="img/logo.jpg" alt="Lechonera El Nuevo Rancho"></span>
+      <div><strong>Lechonera El Nuevo Rancho</strong><small>Lechonera · Guavate, Cayey, Puerto Rico</small></div>
+      <div class="soc">
+        <a href="tel:+17872860265" aria-label="Llamar"><svg viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z"/></svg></a>
+      </div>
+    </div>
+    <p class="copy">Lechonera El Nuevo Rancho · Lechonera · Guavate, Cayey, Puerto Rico · Web por Manupro</p>
+  </div>
+</footer>
+
+<a class="wa-float" href="https://wa.me/17872860265?text=Hola%20El%20Nuevo%20Rancho%2C%20quiero%20hacer%20una%20orden." aria-label="WhatsApp"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.6-6.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.3-.6.8-.8 1-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4 0-.5.1-.7l.4-.5c.1-.2.1-.3 0-.5L9.4 8c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.2-.7.5-.2.3-.9.9-.9 2.2s.9 2.5 1.1 2.7c.1.2 1.8 2.8 4.4 3.9 1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2 0-.1-.2-.1-.4-.2z"/></svg></a>
+
+<script type="module">
+import * as THREE from 'three';
+const isMobile = matchMedia('(max-width:720px)').matches;
+const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+let started = false;
+function fallback(){ document.body.classList.add('no-webgl'); }
+const failTimer = setTimeout(()=>{ if(!started) fallback(); }, 6000);
+function clearFail(){ clearTimeout(failTimer); }
+try{
+if(!window.WebGLRenderingContext) throw 0;
+const canvas = document.getElementById('gl');
+const renderer = new THREE.WebGLRenderer({canvas, alpha:true, antialias:!isMobile, powerPreference:'high-performance'});
+renderer.setPixelRatio(Math.min(devicePixelRatio||1, isMobile?1.5:2));
+const scene = new THREE.Scene();
+const camera = new THREE.PerspectiveCamera(38, 1, 0.1, 80);
+camera.position.set(0, 0.7, 7.4);
+// luces
+scene.add(new THREE.AmbientLight(0x5a3a22, 0.5));
+const key = new THREE.DirectionalLight(0xffc98a, 1.7); key.position.set(4,6,5); scene.add(key);
+const rim = new THREE.PointLight(0xff5a00, 16, 26); rim.position.set(-5.5,2.5,-3.5); scene.add(rim);
+const low = new THREE.PointLight(0xff7a1a, 22, 16); low.position.set(0,-2.6,2.6); scene.add(low);
+// sombra suave
+const shC = document.createElement('canvas'); shC.width=shC.height=128;
+const sx = shC.getContext('2d'); const grd = sx.createRadialGradient(64,64,8,64,64,62);
+grd.addColorStop(0,'rgba(0,0,0,.5)'); grd.addColorStop(1,'rgba(0,0,0,0)');
+sx.fillStyle=grd; sx.fillRect(0,0,128,128);
+const shadow = new THREE.Mesh(new THREE.PlaneGeometry(4.4,4.4),
+  new THREE.MeshBasicMaterial({map:new THREE.CanvasTexture(shC), transparent:true, depthWrite:false}));
+shadow.rotation.x = -Math.PI/2; shadow.position.y = -1.7; scene.add(shadow);
+const hero3d = new THREE.Group(); scene.add(hero3d);
+// --- lechon asado entero en la vara ---
+function noisy(geo, amt){
+  const p = geo.attributes.position;
+  for(let i=0;i<p.count;i++){ p.setXYZ(i, p.getX(i)+(Math.random()-.5)*amt, p.getY(i)+(Math.random()-.5)*amt, p.getZ(i)+(Math.random()-.5)*amt); }
+  geo.computeVertexNormals(); return geo;
+}
+const crispy = new THREE.MeshPhysicalMaterial({color:0xb26a28, roughness:.38, clearcoat:.85, clearcoatRoughness:.45});
+const pig = new THREE.Group();
+const pbody = new THREE.Mesh(noisy(new THREE.SphereGeometry(1, 48, 32), 0.07), crispy);
+pbody.scale.set(1.55, 0.95, 0.92); pbody.position.y = 0.35; pig.add(pbody);
+const phead = new THREE.Mesh(noisy(new THREE.SphereGeometry(0.55, 32, 24), 0.05), crispy);
+phead.position.set(1.75, 0.42, 0); phead.scale.set(1.05, 0.95, 0.9); pig.add(phead);
+const snout = new THREE.Mesh(new THREE.CylinderGeometry(0.2, 0.26, 0.35, 20), new THREE.MeshStandardMaterial({color:0x8a4f1e, roughness:.5}));
+snout.rotation.z = Math.PI/2; snout.position.set(2.32, 0.32, 0); pig.add(snout);
+for(const s of [-1,1]){
+  const ear = new THREE.Mesh(new THREE.ConeGeometry(0.16, 0.42, 4), crispy);
+  ear.position.set(1.62, 0.92, s*0.3); ear.rotation.set(s*0.5, 0, -0.3); pig.add(ear);
+  const eye = new THREE.Mesh(new THREE.SphereGeometry(0.055, 10, 10), new THREE.MeshStandardMaterial({color:0x1a0d05, roughness:.3}));
+  eye.position.set(2.02, 0.55, s*0.28); pig.add(eye);
+}
+const legM = new THREE.MeshStandardMaterial({color:0x8a4f1e, roughness:.55});
+for(const [lx2, lz] of [[0.9,0.42],[0.9,-0.42],[-0.9,0.42],[-0.9,-0.42]]){
+  const leg = new THREE.Mesh(new THREE.CylinderGeometry(0.11, 0.09, 0.75, 12), legM);
+  leg.position.set(lx2, -0.15, lz); leg.rotation.z = lx2>0 ? 0.35 : -0.35; pig.add(leg);
+}
+const vara = new THREE.Mesh(new THREE.CylinderGeometry(0.085, 0.085, 5.6, 16), new THREE.MeshStandardMaterial({color:0x6b4423, roughness:.8}));
+vara.rotation.z = Math.PI/2; vara.position.y = 0.35; pig.add(vara);
+const steelM = new THREE.MeshStandardMaterial({color:0x8f96a3, metalness:.85, roughness:.35});
+const woodM = new THREE.MeshStandardMaterial({color:0x4a3018, roughness:.9});
+for(const s of [-1,1]){
+  const tip = new THREE.Mesh(new THREE.CylinderGeometry(0.06, 0.06, 0.5, 12), steelM);
+  tip.rotation.z = Math.PI/2; tip.position.set(s*2.95, 0.35, 0); pig.add(tip);
+  const post = new THREE.Mesh(new THREE.BoxGeometry(0.16, 1.9, 0.16), woodM);
+  post.position.set(s*2.55, -0.6, 0); pig.add(post);
+}
+pig.rotation.y = -0.35;
+hero3d.add(pig);
+const coalM = new THREE.MeshStandardMaterial({color:0x2a1408, emissive:0xff5a00, emissiveIntensity:1.6, roughness:.9});
+for(let i=0;i<14;i++){
+  const c = new THREE.Mesh(new THREE.IcosahedronGeometry(0.09+Math.random()*0.08, 0), coalM);
+  c.position.set((Math.random()-.5)*3.4, -1.5+Math.random()*0.15, (Math.random()-.5)*1.2);
+  hero3d.add(c);
+}
+
+// particulas ambientales
+const pCount = isMobile ? 36 : 80;
+const pGeo = new THREE.BufferGeometry();
+const pPos = new Float32Array(pCount*3), pSpd = new Float32Array(pCount), pSwy = new Float32Array(pCount);
+for(let i=0;i<pCount;i++){
+  pPos[i*3]=(Math.random()-.5)*9; pPos[i*3+1]=-2.5+Math.random()*7; pPos[i*3+2]=-2-Math.random()*4;
+  pSpd[i]=0.5*(0.5+Math.random()); pSwy[i]=Math.random()*6.28;
+}
+pGeo.setAttribute('position', new THREE.BufferAttribute(pPos,3));
+const points = new THREE.Points(pGeo, new THREE.PointsMaterial({color:0xff8a2a, size:0.075, transparent:true, opacity:0.9, blending:THREE.AdditiveBlending, depthWrite:false}));
+scene.add(points);
+let tx=0, ty=0;
+addEventListener('pointermove', e=>{ tx=(e.clientX/innerWidth-.5); ty=(e.clientY/innerHeight-.5); }, {passive:true});
+addEventListener('deviceorientation', e=>{
+  if(e.gamma==null) return;
+  tx = Math.max(-.5, Math.min(.5, e.gamma/45)); ty = Math.max(-.5, Math.min(.5, (e.beta-45)/45));
+});
+function size(){
+  const w = canvas.clientWidth||innerWidth, h = canvas.clientHeight||innerHeight;
+  renderer.setSize(w, h, false); camera.aspect = w/h; camera.updateProjectionMatrix();
+}
+size(); addEventListener('resize', size);
+const hero = document.querySelector('.hero');
+const heroInner = document.querySelector('.hero-inner');
+let visible = true;
+new IntersectionObserver(en=>{ visible = en[0].isIntersecting; }).observe(hero);
+const clock = new THREE.Clock();
+started = true; clearFail();
+(function loop(){
+  requestAnimationFrame(loop);
+  if(!visible){ return; }
+  const t = clock.getElapsedTime();
+  if(!reduced){
+    hero3d.rotation.y += 0.004;
+    hero3d.position.y = 0.55 + Math.sin(t*0.9)*0.12;
+    hero3d.rotation.x += ((ty*0.32) - hero3d.rotation.x)*0.045;
+    hero3d.rotation.z += ((tx*-0.18) - hero3d.rotation.z)*0.045;
+    camera.position.x += ((tx*1.15) - camera.position.x)*0.03;
+    camera.position.y += ((0.7 - ty*0.85) - camera.position.y)*0.03;
+    camera.lookAt(0, 0.1, 0);
+    const pa = pGeo.attributes.position;
+    for(let i=0;i<pCount;i++){
+      pa.array[i*3+1] += pSpd[i]*0.016;
+      pa.array[i*3] += Math.sin(t*0.9+pSwy[i])*0.0035;
+      if(pa.array[i*3+1] > 5) pa.array[i*3+1] = -2.5;
+    }
+    pa.needsUpdate = true;
+    low.intensity = 22*(0.82+Math.sin(t*9.3)*0.1+Math.sin(t*23.7)*0.06);
+  }
+  const sy = scrollY;
+  heroInner.style.transform = `translateY(${sy*0.22}px)`;
+  heroInner.style.opacity = Math.max(0, 1 - sy/(innerHeight*0.75));
+  const sc = Math.max(0.72, 1 - sy/(innerHeight*2.2));
+  hero3d.scale.setScalar(sc);
+  renderer.render(scene, camera);
+})();
+}catch(e){ fallback(); }
+
+</script>
+<script>
+const io = new IntersectionObserver(es=>es.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} }),{threshold:.12});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+if(matchMedia('(pointer:fine)').matches){
+  document.querySelectorAll('.mg').forEach(b=>{
+    b.addEventListener('pointermove',e=>{
+      const r=b.getBoundingClientRect();
+      b.style.transform=`translate(${(e.clientX-r.left-r.width/2)*.18}px,${(e.clientY-r.top-r.height/2)*.28}px)`;
+    });
+    b.addEventListener('pointerleave',()=>{ b.style.transform=''; });
+  });
+  document.querySelectorAll('.svc').forEach(c2=>{
+    c2.addEventListener('pointermove',e=>{
+      const r=c2.getBoundingClientRect(), x=(e.clientX-r.left)/r.width-.5, y=(e.clientY-r.top)/r.height-.5;
+      c2.style.transform=`perspective(800px) rotateY(${x*7}deg) rotateX(${-y*7}deg) translateY(-4px)`;
+    });
+    c2.addEventListener('pointerleave',()=>{ c2.style.transform=''; });
+  });
+}
+</script>
+</body>
+</html>

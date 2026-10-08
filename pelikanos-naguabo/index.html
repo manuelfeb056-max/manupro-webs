@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Pelikanos Bar & Restaurant · Malecón de Naguabo</title>
+<meta name="description" content="Pelikanos Bar & Restaurant en el malecón de Naguabo: langosta fresca, mofongo relleno de mariscos y mojitos. Happy hour 2x$10. Mié-Dom 11:30am-9pm. Tel 787-953-4770.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script type="importmap">{"imports":{"three":"https://unpkg.com/three@0.160.0/build/three.module.js"}}</script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --bg:#06222b; --bg2:#082b36; --card:#0b3340; --ink:#f2f7f4; --muted:#9fd4dd;
+  --acc:#ff6b4a; --acc2:#ffd97a; --line:rgba(255,107,74,.22); --wa:#25d366;
+}
+html{scroll-behavior:smooth}
+body{font-family:'Manrope',system-ui,sans-serif;background:var(--bg);color:var(--ink);overflow-x:hidden;line-height:1.6}
+img{max-width:100%}
+a{color:inherit}
+.wrap{max-width:1100px;margin:0 auto;padding:0 20px}
+header{position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(6,34,43,.85);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.hd-in{display:flex;align-items:center;gap:14px;padding:10px 20px;max-width:1100px;margin:0 auto}
+.logo-hex{width:58px;height:58px;flex:none;clip-path:polygon(25% 0,75% 0,100% 50%,75% 100%,25% 100%,0 50%);;overflow:hidden;background:linear-gradient(145deg,var(--acc),#a83a22);box-shadow:0 0 24px rgba(255,107,74,.5);position:relative;}
+.logo-hex img{width:100%;height:100%;object-fit:cover;display:block;background:#000}
+.brand{font-family:'Bebas Neue',sans-serif; font-size:1.25rem;letter-spacing:.02em;line-height:1.1}
+.brand small{display:block;font-family:'Manrope';font-size:.62rem;letter-spacing:.28em;color:var(--muted);font-weight:700}
+nav{margin-left:auto;display:flex;gap:18px;font-size:.85rem;font-weight:600}
+nav a{text-decoration:none;opacity:.85}
+nav a:hover{color:var(--acc)}
+@media(max-width:720px){nav{display:none}}
+.hero{position:relative;min-height:100svh;display:flex;align-items:flex-end;overflow:hidden;
+  background:radial-gradient(1100px 600px at 50% 110%,#0d3a4a 0%,var(--bg) 60%)}
+#gl{position:absolute;inset:0;width:100%;height:100%;display:block;touch-action:pan-y}
+.hero-fallback{position:absolute;inset:0;display:none;overflow:hidden}
+.hero-fallback img{width:100%;height:100%;object-fit:cover;animation:kenburns 18s ease-in-out infinite alternate;opacity:.55}
+@keyframes kenburns{from{transform:scale(1)}to{transform:scale(1.12)}}
+.no-webgl #gl{display:none}
+.no-webgl .hero-fallback{display:block}
+.hero-inner{position:relative;z-index:3;width:100%;padding:120px 20px 90px;text-align:center}
+.kicker{display:inline-block;font-size:.72rem;font-weight:800;letter-spacing:.3em;text-transform:uppercase;color:var(--acc2);
+  border:1px solid var(--line);padding:9px 20px;border-radius:999px;background:rgba(6,34,43,.55);margin-bottom:18px}
+h1{font-family:'Bebas Neue',sans-serif;font-size:clamp(3rem,11vw,6.2rem);line-height:1.02;
+  background:linear-gradient(180deg,#ffffff 20%,var(--acc2) 55%,var(--acc) 90%);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+  filter:drop-shadow(0 6px 24px rgba(255,107,74,.35));margin-bottom:10px}
+.hero-sub{max-width:34rem;margin:0 auto 26px;color:var(--muted);font-size:1.02rem}
+.hero-sub strong{color:var(--ink)}
+.cta-row{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:15px 30px;border-radius:999px;font-weight:800;text-decoration:none;
+  transition:transform .18s ease,box-shadow .18s ease;will-change:transform}
+.btn-acc{background:linear-gradient(180deg,var(--acc2),var(--acc));color:#2a0f04;box-shadow:0 12px 32px rgba(255,107,74,.35)}
+.btn-ghost{border:1px solid var(--line);color:var(--ink);background:rgba(6,34,43,.5)}
+.scroll-cue{position:absolute;left:50%;bottom:22px;transform:translateX(-50%);z-index:3;width:26px;height:44px;border:2px solid var(--muted);
+  border-radius:14px;opacity:.8}
+.scroll-cue::after{content:"";position:absolute;left:50%;top:8px;width:5px;height:9px;margin-left:-2.5px;border-radius:3px;background:var(--acc);animation:cue 1.8s ease-in-out infinite}
+@keyframes cue{0%{transform:translateY(0);opacity:1}70%{transform:translateY(14px);opacity:0}100%{opacity:0}}
+section{padding:84px 0;position:relative}
+.sec-head{text-align:center;margin-bottom:44px}
+.sec-kick{font-size:.72rem;font-weight:800;letter-spacing:.3em;text-transform:uppercase;color:var(--acc);margin-bottom:12px}
+h2{font-family:'Bebas Neue',sans-serif;font-size:clamp(1.9rem,5.5vw,3rem);line-height:1.1}
+.sec-sub{color:var(--muted);max-width:36rem;margin:12px auto 0}
+.rv{opacity:0;transform:translateY(36px) scale(.985);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.7,.2,1)}
+.rv.in{opacity:1;transform:none}
+.svc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:22px}
+.svc{background:linear-gradient(180deg,var(--card),#07232d);border:1px solid var(--line);border-radius:20px;overflow:hidden;
+  transition:transform .25s ease,box-shadow .25s ease;will-change:transform}
+.svc:hover{box-shadow:0 24px 60px rgba(0,0,0,.5)}
+.svc .ph{height:210px;overflow:hidden;position:relative}
+.svc .ph img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .8s ease}
+.svc:hover .ph img{transform:scale(1.07)}
+.svc .n{position:absolute;top:14px;left:14px;background:rgba(6,34,43,.8);border:1px solid var(--line);color:var(--acc2);
+  font-weight:800;font-size:.8rem;padding:6px 14px;border-radius:999px;letter-spacing:.12em}
+.svc .tx{padding:22px 22px 26px}
+.svc h3{font-size:1.25rem;margin-bottom:8px}
+.svc p{color:var(--muted);font-size:.94rem}
+.gal{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px}
+.gal a{display:block;border-radius:14px;overflow:hidden;border:1px solid var(--line);aspect-ratio:1}
+.gal img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .6s ease}
+.gal a:hover img{transform:scale(1.08)}
+.faq{max-width:720px;margin:0 auto}
+.faq details{background:var(--card);border:1px solid var(--line);border-radius:14px;margin-bottom:12px;overflow:hidden}
+.faq summary{cursor:pointer;padding:18px 22px;font-weight:700;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:12px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";font-size:1.5rem;color:var(--acc);flex:none;transition:transform .25s}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq .a{padding:0 22px 20px;color:var(--muted);font-size:.95rem}
+.faq .a a{color:var(--acc2)}
+.contact{background:radial-gradient(800px 420px at 50% 0%,#0d3a4a 0%,var(--bg) 65%)}
+.cta-card{max-width:760px;margin:0 auto;text-align:center;background:linear-gradient(180deg,#0d3a4a,#07232d);border:1px solid var(--line);
+  border-radius:28px;padding:56px 30px;position:relative;overflow:hidden}
+.cta-card::before{content:"";position:absolute;inset:-40%;background:conic-gradient(from 0deg,transparent 70%,rgba(57,194,215,.16) 85%,transparent 100%);animation:spinSlow 9s linear infinite;pointer-events:none}
+@keyframes spinSlow{to{transform:rotate(360deg)}}
+.cta-card>*{position:relative}
+.cta-emoji{font-size:3rem;filter:drop-shadow(0 0 18px rgba(255,107,74,.8));animation:flick 2.2s ease-in-out infinite}
+@keyframes flick{0%,100%{transform:scale(1) rotate(-2deg)}50%{transform:scale(1.08) rotate(2deg)}}
+.cta-card h2{margin:14px 0 8px}
+.tel-big{display:inline-block;font-family:'Bebas Neue',sans-serif;font-size:clamp(1.8rem,7vw,3rem);color:var(--acc2);text-decoration:none;margin:14px 0 6px;
+  text-shadow:0 0 30px rgba(255,217,122,.5)}
+.tel-big:hover{color:#fff}
+.chips{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin:20px 0 26px}
+.chip{font-size:.82rem;font-weight:700;border:1px solid var(--line);border-radius:999px;padding:9px 18px;color:var(--muted);text-decoration:none;background:rgba(6,34,43,.5)}
+.chip:hover{color:var(--acc2);border-color:var(--acc)}
+.map{border-radius:18px;overflow:hidden;border:1px solid var(--line);margin-top:8px}
+.map iframe{width:100%;height:300px;border:0;display:block;filter:sepia(.2) saturate(1.3) hue-rotate(-10deg)}
+footer{border-top:1px solid var(--line);padding:44px 0 110px;background:#04161c}
+.ft{display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.ft .logo-hex{width:52px;height:52px}
+.ft small{color:var(--muted);display:block;font-size:.8rem}
+.soc{margin-left:auto;display:flex;gap:12px}
+.soc a{width:52px;height:52px;border-radius:16px;display:grid;place-items:center;background:linear-gradient(145deg,#0d3a4a,#07232d);
+  border:1px solid var(--line);box-shadow:0 8px 20px rgba(0,0,0,.4),inset 0 1px 0 rgba(255,255,255,.08);
+  transform:perspective(400px) rotateX(8deg);transition:transform .2s}
+.soc a:hover{transform:perspective(400px) rotateX(0) translateY(-3px)}
+.soc svg{width:24px;height:24px;fill:var(--acc2)}
+.copy{text-align:center;color:var(--muted);font-size:.78rem;margin-top:30px;opacity:.7}
+.wa-float{position:fixed;right:18px;bottom:18px;z-index:60;width:62px;height:62px;border-radius:50%;
+  background:radial-gradient(circle at 30% 30%,#3ddc74,var(--wa));display:grid;place-items:center;
+  box-shadow:0 10px 30px rgba(37,211,102,.45);animation:waPulse 2.4s ease-in-out infinite}
+.wa-float svg{width:32px;height:32px;fill:#fff}
+@keyframes waPulse{0%,100%{transform:scale(1)}50%{transform:scale(1.07)}}
+.logo-hex{clip-path:polygon(25% 0,75% 0,100% 50%,75% 100%,25% 100%,0 50%);background:linear-gradient(145deg,var(--acc),#a83a22);box-shadow:0 0 24px rgba(255,107,74,.5);position:relative;overflow:hidden}.logo-hex::after{content:'';position:absolute;inset:-60%;background:linear-gradient(105deg,transparent 40%,rgba(255,255,255,.5) 50%,transparent 60%);animation:shine 3.6s ease-in-out infinite}@keyframes shine{0%{transform:translateX(-70%)}60%,100%{transform:translateX(70%)}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<header>
+  <div class="hd-in">
+    <span class="logo-hex"><img src="img/logo.jpg" alt="Pelikanos Bar & Restaurant"></span>
+    <span class="brand">Pelikanos<small>BAR & RESTAURANT · NAGUABO</small></span>
+    <nav>
+      <a href="#servicios">Menú</a><a href="#galeria">Galería</a><a href="#faq">Preguntas</a><a href="#contacto">Contacto</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero" id="inicio">
+  <canvas id="gl"></canvas>
+  <div class="hero-fallback"><img src="img/01.jpg" alt="Mofongo relleno de langosta en Pelikanos"></div>
+  <div class="hero-inner">
+    <span class="kicker">Bar & restaurant · Malecón de Naguabo</span>
+    <h1>PELIKANOS</h1>
+    <p class="hero-sub">Si sabes de mariscos sabes que en Pelikanos somos los <strong>#1</strong>: langosta fresca y pesca del día frente al mar.</p>
+    <div class="cta-row">
+      <a class="btn btn-acc mg" href="#servicios">Ver el menú</a>
+      <a class="btn btn-ghost mg" href="tel:+17879534770">787-953-4770</a>
+    </div>
+  </div>
+  <div class="scroll-cue" aria-hidden="true"></div>
+</section>
+
+<section id="servicios">
+  <div class="wrap">
+    <div class="sec-head rv"><p class="sec-kick">Del mar al plato</p><h2>Frescura que se nota</h2>
+    <p class="sec-sub">Pesca del día exhibida y servida frente al malecón de Naguabo.</p></div>
+    <div class="svc-grid">
+      <article class="svc rv"><div class="ph"><span class="n">01</span><img src="img/01.jpg" alt="Mofongo relleno de langosta" loading="lazy"></div><div class="tx"><h3>Langosta fresca</h3><p>Pesca del día servida entera: la reina del malecón.</p></div></article>
+<article class="svc rv"><div class="ph"><span class="n">02</span><img src="img/02.jpg" alt="Mofongo relleno de mariscos" loading="lazy"></div><div class="tx"><h3>Mofongo relleno</h3><p>Mofongo relleno de mariscos mixtos, como se debe.</p></div></article>
+<article class="svc rv"><div class="ph"><span class="n">03</span><img src="img/04.jpg" alt="Rabo de langosta mar y tierra" loading="lazy"></div><div class="tx"><h3>Mar y tierra</h3><p>Rabo de langosta con carne: lo mejor de los dos mundos en un plato.</p></div></article>
+<article class="svc rv"><div class="ph"><span class="n">04</span><img src="img/08.jpg" alt="Mariscada" loading="lazy"></div><div class="tx"><h3>Pesca del día</h3><p>Lo que trajo la lancha hoy, directo a tu mesa.</p></div></article>
+<article class="svc rv"><div class="ph"><span class="n">05</span><img src="img/09.jpg" alt="Mojito" loading="lazy"></div><div class="tx"><h3>Mojitos</h3><p>Happy hour todos los días: 2 mojitos por $10.</p></div></article>
+<article class="svc rv"><div class="ph"><span class="n">06</span><img src="img/07.jpg" alt="Vista al mar desde Pelikanos" loading="lazy"></div><div class="tx"><h3>Frente al mar</h3><p>Come con la brisa del malecón de Naguabo de frente.</p></div></article>
+    </div>
+  </div>
+</section>
+
+<section id="galeria">
+  <div class="wrap">
+    <div class="sec-head rv"><p class="sec-kick">El malecón</p><h2>Así se goza aquí</h2>
+    <p class="sec-sub">La tripulación, los platos y la vista: Naguabo de verdad.</p></div>
+    <div class="gal">
+      <a class="rv" href="img/01.jpg"><img src="img/01.jpg" alt="Mofongo de langosta" loading="lazy"></a>
+<a class="rv" href="img/02.jpg"><img src="img/02.jpg" alt="Mofongo de mariscos" loading="lazy"></a>
+<a class="rv" href="img/03.jpg"><img src="img/03.jpg" alt="Pasta de la casa" loading="lazy"></a>
+<a class="rv" href="img/04.jpg"><img src="img/04.jpg" alt="Mar y tierra" loading="lazy"></a>
+<a class="rv" href="img/05.jpg"><img src="img/05.jpg" alt="Vista al malecón" loading="lazy"></a>
+<a class="rv" href="img/06.jpg"><img src="img/06.jpg" alt="Plato mar y tierra" loading="lazy"></a>
+<a class="rv" href="img/07.jpg"><img src="img/07.jpg" alt="Banquete frente al mar" loading="lazy"></a>
+<a class="rv" href="img/08.jpg"><img src="img/08.jpg" alt="Mofongo" loading="lazy"></a>
+<a class="rv" href="img/09.jpg"><img src="img/09.jpg" alt="Mojito" loading="lazy"></a>
+<a class="rv" href="img/10.jpg"><img src="img/10.jpg" alt="Mariscada" loading="lazy"></a>
+    </div>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="wrap">
+    <div class="sec-head rv"><p class="sec-kick">Dudas</p><h2>Preguntas frecuentes</h2></div>
+    <div class="faq">
+      <details class="rv"><summary>¿Cuál es el horario?</summary><div class="a">Miércoles a domingo de 11:30 AM a 9:00 PM.</div></details>
+<details class="rv"><summary>¿Dónde están ubicados?</summary><div class="a">Malecón de Naguabo, Naguabo, PR.</div></details>
+<details class="rv"><summary>¿Tienen happy hour?</summary><div class="a">Sí, happy hour de mojitos: 2 por $10.</div></details>
+<details class="rv"><summary>¿La pesca es fresca?</summary><div class="a">Sí, trabajamos con pesca del día exhibida. Si sabes de mariscos, sabes que somos los #1.</div></details>
+<details class="rv"><summary>¿Cómo reservo?</summary><div class="a">Llámanos al <a href="tel:+17879534770">787-953-4770</a> o escríbenos por WhatsApp.</div></details>
+    </div>
+  </div>
+</section>
+
+<section id="contacto" class="contact">
+  <div class="wrap">
+    <div class="sec-head rv"><p class="sec-kick">Cae al malecón</p><h2>Marea alta de sabor</h2>
+    <p class="sec-sub">Siéntate frente al mar y pide la langosta.</p></div>
+    <div class="cta-card rv">
+      <div class="cta-emoji">🦞</div>
+      <h2>Reserva tu mesa</h2>
+      <a class="tel-big mg" href="tel:+17879534770">787-953-4770</a>
+      <div class="chips">
+        <span class="chip">Mié-Dom · 11:30am-9pm</span>
+<span class="chip">Happy hour 2x$10</span>
+<a class="chip" href="https://www.tiktok.com/@pelikanosrest">TikTok</a>
+      </div>
+      <div class="map"><iframe title="Mapa - Malecón de Naguabo, Puerto Rico" src="https://www.google.com/maps?q=Malec%C3%B3n+de+Naguabo,+Naguabo,+PR&output=embed" loading="lazy"></iframe></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="ft">
+      <span class="logo-hex"><img src="img/logo.jpg" alt="Pelikanos Bar & Restaurant"></span>
+      <div><strong>Pelikanos Bar & Restaurant</strong><small>Bar & restaurant · Malecón de Naguabo</small></div>
+      <div class="soc">
+        <a href="https://www.tiktok.com/@pelikanosrest" aria-label="TikTok"><svg viewBox="0 0 24 24"><path d="M19.6 7.2a5.1 5.1 0 0 1-3.4-1.3 5.1 5.1 0 0 1-1.8-3.4h-3.4v13.9a2.9 2.9 0 1 1-2.9-2.9c.3 0 .6 0 .9.1V9.1a6.3 6.3 0 1 0 5.4 6.2V8.5a8.4 8.4 0 0 0 5.2 1.8V7.2z"/></svg></a><a href="tel:+17879534770" aria-label="Llamar"><svg viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z"/></svg></a>
+      </div>
+    </div>
+    <p class="copy">Pelikanos Bar & Restaurant · Bar & restaurant · Malecón de Naguabo · Web por Manupro</p>
+  </div>
+</footer>
+
+<a class="wa-float" href="https://wa.me/17879534770?text=Hola%20Pelikanos%2C%20quiero%20reservar%20una%20mesa." aria-label="WhatsApp"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.6-6.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.3-.6.8-.8 1-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4 0-.5.1-.7l.4-.5c.1-.2.1-.3 0-.5L9.4 8c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.2-.7.5-.2.3-.9.9-.9 2.2s.9 2.5 1.1 2.7c.1.2 1.8 2.8 4.4 3.9 1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2 0-.1-.2-.1-.4-.2z"/></svg></a>
+
+<script type="module">
+import * as THREE from 'three';
+const isMobile = matchMedia('(max-width:720px)').matches;
+const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+let started = false;
+function fallback(){ document.body.classList.add('no-webgl'); }
+const failTimer = setTimeout(()=>{ if(!started) fallback(); }, 6000);
+function clearFail(){ clearTimeout(failTimer); }
+try{
+if(!window.WebGLRenderingContext) throw 0;
+const canvas = document.getElementById('gl');
+const renderer = new THREE.WebGLRenderer({canvas, alpha:true, antialias:!isMobile, powerPreference:'high-performance'});
+renderer.setPixelRatio(Math.min(devicePixelRatio||1, isMobile?1.5:2));
+const scene = new THREE.Scene();
+const camera = new THREE.PerspectiveCamera(38, 1, 0.1, 80);
+camera.position.set(0, 0.7, 7.4);
+// luces
+scene.add(new THREE.AmbientLight(0x2a5a6b, 0.55));
+const key = new THREE.DirectionalLight(0xe8f4ff, 1.5); key.position.set(4,6,5); scene.add(key);
+const rim = new THREE.PointLight(0x39c2d7, 18, 26); rim.position.set(-5.5,2.5,-3.5); scene.add(rim);
+const low = new THREE.PointLight(0xff6b4a, 10, 16); low.position.set(0,-2.6,2.6); scene.add(low);
+// sombra suave
+const shC = document.createElement('canvas'); shC.width=shC.height=128;
+const sx = shC.getContext('2d'); const grd = sx.createRadialGradient(64,64,8,64,64,62);
+grd.addColorStop(0,'rgba(0,0,0,.5)'); grd.addColorStop(1,'rgba(0,0,0,0)');
+sx.fillStyle=grd; sx.fillRect(0,0,128,128);
+const shadow = new THREE.Mesh(new THREE.PlaneGeometry(4.4,4.4),
+  new THREE.MeshBasicMaterial({map:new THREE.CanvasTexture(shC), transparent:true, depthWrite:false}));
+shadow.rotation.x = -Math.PI/2; shadow.position.y = -1.15; scene.add(shadow);
+const hero3d = new THREE.Group(); scene.add(hero3d);
+// --- langosta fresca entera ---
+const shellM = (c)=> new THREE.MeshPhysicalMaterial({color:c, roughness:.3, clearcoat:1, clearcoatRoughness:.25});
+const lob = new THREE.Group();
+const segCols = [0xc23a1c, 0xcf4a20, 0xda5a24, 0xe56a28, 0xee7a2e, 0xf58a32];
+let segX = 0.9;
+for(let i=0;i<6;i++){
+  const r = 0.52 - i*0.045;
+  const s = new THREE.Mesh(new THREE.SphereGeometry(r, 28, 20), shellM(segCols[i]));
+  s.position.set(segX, 0.1+Math.sin(i*0.5)*0.06, 0);
+  s.scale.set(1.15, 0.95, 0.9);
+  lob.add(s); segX -= r*1.55;
+}
+const headL = new THREE.Mesh(new THREE.SphereGeometry(0.5, 28, 20), shellM(0xb83218));
+headL.position.set(1.55, 0.12, 0); headL.scale.set(1.2, 1, 0.95); lob.add(headL);
+const ros = new THREE.Mesh(new THREE.ConeGeometry(0.14, 0.7, 8), shellM(0xa82c14));
+ros.rotation.z = -Math.PI/2 - 0.25; ros.position.set(2.25, 0.28, 0); lob.add(ros);
+const eyeM = new THREE.MeshStandardMaterial({color:0x0a0a0a, roughness:.2});
+const antM = new THREE.MeshStandardMaterial({color:0xd98a4a, roughness:.5});
+for(const s of [-1,1]){
+  const eye = new THREE.Mesh(new THREE.SphereGeometry(0.07, 10, 10), eyeM);
+  eye.position.set(1.95, 0.32, s*0.22); lob.add(eye);
+  const curve = new THREE.CatmullRomCurve3([
+    new THREE.Vector3(2.05, 0.25, s*0.15),
+    new THREE.Vector3(2.7, 0.55, s*0.5),
+    new THREE.Vector3(3.3, 0.35, s*0.9),
+    new THREE.Vector3(3.8, 0.6, s*1.2),
+  ]);
+  lob.add(new THREE.Mesh(new THREE.TubeGeometry(curve, 20, 0.022, 6), antM));
+  const arm = new THREE.Mesh(new THREE.CylinderGeometry(0.09, 0.12, 0.7, 10), shellM(0xc23a1c));
+  arm.position.set(1.75, -0.15, s*0.35); arm.rotation.set(s*0.7, 0, -1.1); lob.add(arm);
+  const claw = new THREE.Mesh(new THREE.SphereGeometry(0.3, 20, 14), shellM(0xd0441f));
+  claw.position.set(2.15, -0.42, s*0.62); claw.scale.set(1.25, 0.85, 0.7); lob.add(claw);
+  const pin = new THREE.Mesh(new THREE.ConeGeometry(0.11, 0.42, 8), shellM(0xb83218));
+  pin.position.set(2.5, -0.5, s*0.62); pin.rotation.z = -Math.PI/2 - 0.35; lob.add(pin);
+  for(let l=0;l<3;l++){
+    const leg = new THREE.Mesh(new THREE.CylinderGeometry(0.035, 0.025, 0.55, 8), new THREE.MeshStandardMaterial({color:0xb84a22, roughness:.5}));
+    leg.position.set(1.2 - l*0.5, -0.28, s*(0.42+l*0.03)); leg.rotation.x = s*0.9; lob.add(leg);
+  }
+}
+for(let f=-2;f<=2;f++){
+  const fin = new THREE.Mesh(new THREE.BoxGeometry(0.5, 0.06, 0.3), shellM(0xf58a32));
+  fin.position.set(segX-0.25, 0.12, f*0.16); fin.rotation.y = f*0.35; lob.add(fin);
+}
+lob.rotation.y = 0.5;
+hero3d.add(lob);
+
+// particulas ambientales
+const pCount = isMobile ? 30 : 70;
+const pGeo = new THREE.BufferGeometry();
+const pPos = new Float32Array(pCount*3), pSpd = new Float32Array(pCount), pSwy = new Float32Array(pCount);
+for(let i=0;i<pCount;i++){
+  pPos[i*3]=(Math.random()-.5)*10; pPos[i*3+1]=-2.5+Math.random()*7; pPos[i*3+2]=-2-Math.random()*4;
+  pSpd[i]=0.45*(0.5+Math.random()); pSwy[i]=Math.random()*6.28;
+}
+pGeo.setAttribute('position', new THREE.BufferAttribute(pPos,3));
+const points = new THREE.Points(pGeo, new THREE.PointsMaterial({color:0xbfeaff, size:0.05, transparent:true, opacity:0.8, blending:THREE.AdditiveBlending, depthWrite:false}));
+scene.add(points);
+let tx=0, ty=0;
+addEventListener('pointermove', e=>{ tx=(e.clientX/innerWidth-.5); ty=(e.clientY/innerHeight-.5); }, {passive:true});
+addEventListener('deviceorientation', e=>{
+  if(e.gamma==null) return;
+  tx = Math.max(-.5, Math.min(.5, e.gamma/45)); ty = Math.max(-.5, Math.min(.5, (e.beta-45)/45));
+});
+function size(){
+  const w = canvas.clientWidth||innerWidth, h = canvas.clientHeight||innerHeight;
+  renderer.setSize(w, h, false); camera.aspect = w/h; camera.updateProjectionMatrix();
+}
+size(); addEventListener('resize', size);
+const hero = document.querySelector('.hero');
+const heroInner = document.querySelector('.hero-inner');
+let visible = true;
+new IntersectionObserver(en=>{ visible = en[0].isIntersecting; }).observe(hero);
+const clock = new THREE.Clock();
+started = true; clearFail();
+(function loop(){
+  requestAnimationFrame(loop);
+  if(!visible){ return; }
+  const t = clock.getElapsedTime();
+  if(!reduced){
+    hero3d.rotation.y += 0.005;
+    hero3d.position.y = 0.2 + Math.sin(t*1.0)*0.18;
+    hero3d.rotation.x += ((ty*0.32) - hero3d.rotation.x)*0.045;
+    hero3d.rotation.z += ((tx*-0.18) - hero3d.rotation.z)*0.045;
+    camera.position.x += ((tx*1.15) - camera.position.x)*0.03;
+    camera.position.y += ((0.7 - ty*0.85) - camera.position.y)*0.03;
+    camera.lookAt(0, 0, 0);
+    const pa = pGeo.attributes.position;
+    for(let i=0;i<pCount;i++){
+      pa.array[i*3+1] += pSpd[i]*0.016;
+      pa.array[i*3] += Math.sin(t*0.9+pSwy[i])*0.0035;
+      if(pa.array[i*3+1] > 5) pa.array[i*3+1] = -2.5;
+    }
+    pa.needsUpdate = true;
+    lob.rotation.z = Math.sin(t*1.2)*0.045;
+  }
+  const sy = scrollY;
+  heroInner.style.transform = `translateY(${sy*0.22}px)`;
+  heroInner.style.opacity = Math.max(0, 1 - sy/(innerHeight*0.75));
+  const sc = Math.max(0.72, 1 - sy/(innerHeight*2.2));
+  hero3d.scale.setScalar(sc);
+  renderer.render(scene, camera);
+})();
+}catch(e){ fallback(); }
+
+</script>
+<script>
+const io = new IntersectionObserver(es=>es.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} }),{threshold:.12});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+if(matchMedia('(pointer:fine)').matches){
+  document.querySelectorAll('.mg').forEach(b=>{
+    b.addEventListener('pointermove',e=>{
+      const r=b.getBoundingClientRect();
+      b.style.transform=`translate(${(e.clientX-r.left-r.width/2)*.18}px,${(e.clientY-r.top-r.height/2)*.28}px)`;
+    });
+    b.addEventListener('pointerleave',()=>{ b.style.transform=''; });
+  });
+  document.querySelectorAll('.svc').forEach(c2=>{
+    c2.addEventListener('pointermove',e=>{
+      const r=c2.getBoundingClientRect(), x=(e.clientX-r.left)/r.width-.5, y=(e.clientY-r.top)/r.height-.5;
+      c2.style.transform=`perspective(800px) rotateY(${x*7}deg) rotateX(${-y*7}deg) translateY(-4px)`;
+    });
+    c2.addEventListener('pointerleave',()=>{ c2.style.transform=''; });
+  });
+}
+</script>
+</body>
+</html>
