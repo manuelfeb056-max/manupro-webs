@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Techos Rubén · Sellado de Techos en Dorado, Puerto Rico</title>
+<meta name="description" content="Sellado de techos, reparación de terrazas y reparación de filtraciones en Dorado, Puerto Rico. Tel 787-533-7722.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script type="importmap">{"imports":{"three":"https://unpkg.com/three@0.160.0/build/three.module.js"}}</script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --bg:#04222a; --bg2:#063038; --card:#083038; --ink:#eafcff; --muted:#8fc3c9;
+  --aqua:#3ee6c4; --aqua2:#9ff5e4; --cyan:#59d8ff; --line:rgba(62,230,196,.20);
+  --wa:#25d366;
+}
+html{scroll-behavior:smooth}
+body{font-family:'Manrope',system-ui,sans-serif;background:var(--bg);color:var(--ink);overflow-x:hidden;line-height:1.6}
+img{max-width:100}
+a{color:inherit}
+.wrap{max-width:1100px;margin:0 auto;padding:0 20px}
+/* ---------- header ---------- */
+header{position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(4,34,42,.82);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.hd-in{display:flex;align-items:center;gap:14px;padding:10px 20px;max-width:1100px;margin:0 auto}
+.logo-drop{width:58px;height:58px;flex:none;border-radius:28%;overflow:hidden;
+  border:3px solid var(--aqua);box-shadow:0 0 22px rgba(62,230,196,.45), inset 0 0 12px rgba(62,230,196,.25)}
+.logo-drop img{width:100%;height:100%;object-fit:cover;display:block;background:#04222a}
+.brand{font-family:'Outfit',sans-serif;font-size:1.25rem;font-weight:800;letter-spacing:.02em}
+.brand small{display:block;font-family:'Manrope';font-size:.62rem;letter-spacing:.28em;color:var(--muted);font-weight:700}
+nav{margin-left:auto;display:flex;gap:18px;font-size:.85rem;font-weight:600}
+nav a{text-decoration:none;opacity:.85}
+nav a:hover{color:var(--aqua)}
+@media(max-width:720px){nav{display:none}}
+/* ---------- hero 3d ---------- */
+.hero{position:relative;min-height:100svh;display:flex;align-items:flex-end;overflow:hidden;
+  background:radial-gradient(1100px 620px at 50% 115%,#0a4450 0%,var(--bg) 62%)}
+#gl{position:absolute;inset:0;width:100%;height:100%;display:block;touch-action:pan-y}
+.hero-fallback{position:absolute;inset:0;display:none;overflow:hidden}
+.hero-fallback img{width:100%;height:100%;object-fit:cover;animation:kenburns 18s ease-in-out infinite alternate;opacity:.5}
+@keyframes kenburns{from{transform:scale(1)}to{transform:scale(1.12)}}
+.no-webgl #gl{display:none}
+.no-webgl .hero-fallback{display:block}
+.hero-inner{position:relative;z-index:3;width:100%;padding:120px 20px 90px;text-align:center}
+.kicker{display:inline-block;font-size:.72rem;font-weight:800;letter-spacing:.3em;text-transform:uppercase;color:var(--aqua2);
+  border:1px solid var(--line);padding:9px 20px;border-radius:999px;background:rgba(4,34,42,.55);margin-bottom:18px}
+h1{font-family:'Outfit',sans-serif;font-weight:800;font-size:clamp(2.6rem,10vw,5.6rem);line-height:1.04;
+  background:linear-gradient(180deg,#ffffff 15%,var(--aqua2) 45%,var(--aqua) 80%);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+  filter:drop-shadow(0 6px 24px rgba(62,230,196,.35));margin-bottom:10px}
+.hero-sub{max-width:36rem;margin:0 auto 26px;color:var(--muted);font-size:1.02rem}
+.hero-sub strong{color:var(--ink)}
+.cta-row{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:15px 30px;border-radius:999px;font-weight:800;text-decoration:none;
+  transition:transform .18s ease,box-shadow .18s ease;will-change:transform}
+.btn-aqua{background:linear-gradient(180deg,var(--aqua2),var(--aqua));color:#03322a;box-shadow:0 12px 32px rgba(62,230,196,.35)}
+.btn-aqua:hover{box-shadow:0 16px 40px rgba(62,230,196,.55)}
+.btn-ghost{border:1px solid var(--line);color:var(--ink);background:rgba(4,34,42,.5)}
+.scroll-cue{position:absolute;left:50%;bottom:22px;transform:translateX(-50%);z-index:3;width:26px;height:44px;border:2px solid var(--muted);
+  border-radius:14px;opacity:.8}
+.scroll-cue::after{content:"";position:absolute;left:50%;top:8px;width:5px;height:9px;margin-left:-2.5px;border-radius:3px;background:var(--aqua);animation:cue 1.8s ease-in-out infinite}
+@keyframes cue{0%{transform:translateY(0);opacity:1}70%{transform:translateY(14px);opacity:0}100%{opacity:0}}
+/* ---------- secciones ---------- */
+section{padding:84px 0;position:relative}
+.sec-head{text-align:center;margin-bottom:44px}
+.sec-kick{font-size:.72rem;font-weight:800;letter-spacing:.3em;text-transform:uppercase;color:var(--aqua);margin-bottom:12px}
+h2{font-family:'Outfit',sans-serif;font-weight:800;font-size:clamp(1.9rem,5.5vw,3rem);line-height:1.1}
+.sec-sub{color:var(--muted);max-width:36rem;margin:12px auto 0}
+.rv{opacity:0;transform:translateY(36px) scale(.985);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.7,.2,1)}
+.rv.in{opacity:1;transform:none}
+/* servicios */
+.svc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:22px}
+.svc{background:linear-gradient(180deg,var(--card),#052630);border:1px solid var(--line);border-radius:20px;overflow:hidden;
+  transition:transform .25s ease,box-shadow .25s ease;will-change:transform}
+.svc:hover{box-shadow:0 24px 60px rgba(0,0,0,.5)}
+.svc .ph{height:210px;overflow:hidden;position:relative}
+.svc .ph img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .8s ease}
+.svc:hover .ph img{transform:scale(1.07)}
+.svc .n{position:absolute;top:14px;left:14px;background:rgba(4,34,42,.82);border:1px solid var(--line);color:var(--aqua2);
+  font-weight:800;font-size:.8rem;padding:6px 14px;border-radius:999px;letter-spacing:.12em}
+.svc .tx{padding:22px 22px 26px}
+.svc h3{font-size:1.2rem;margin-bottom:8px;font-family:'Outfit',sans-serif}
+.svc p{color:var(--muted);font-size:.94rem}
+/* galería */
+.gal{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px}
+.gal figure{position:relative;border-radius:14px;overflow:hidden;border:1px solid var(--line);aspect-ratio:1;margin:0}
+.gal img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .6s ease}
+.gal figure:hover img{transform:scale(1.08)}
+.gal figcaption{position:absolute;left:10px;bottom:10px;font-size:.68rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;
+  background:rgba(4,34,42,.78);border:1px solid var(--line);padding:5px 12px;border-radius:999px;color:var(--aqua2)}
+/* faq */
+.faq{max-width:720px;margin:0 auto}
+.faq details{background:var(--card);border:1px solid var(--line);border-radius:14px;margin-bottom:12px;overflow:hidden}
+.faq summary{cursor:pointer;padding:18px 22px;font-weight:700;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:12px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";font-size:1.5rem;color:var(--aqua);flex:none;transition:transform .25s}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq .a{padding:0 22px 20px;color:var(--muted);font-size:.95rem}
+.faq .a a{color:var(--aqua2)}
+/* contacto */
+.contact{background:radial-gradient(800px 420px at 50% 0%,#0a4450 0%,var(--bg) 65%)}
+.cta-card{max-width:760px;margin:0 auto;text-align:center;background:linear-gradient(180deg,#0a3a44,#052630);
+  border:1px solid var(--line);border-radius:28px;padding:56px 30px;position:relative;overflow:hidden}
+.cta-card::before{content:"";position:absolute;inset:-40%;background:conic-gradient(from 0deg,transparent 70%,rgba(62,230,196,.14) 85%,transparent 100%);animation:spinSlow 9s linear infinite;pointer-events:none}
+@keyframes spinSlow{to{transform:rotate(360deg)}}
+.cta-card>*{position:relative}
+.drop-ico{font-size:3rem;filter:drop-shadow(0 0 18px rgba(62,230,196,.8));animation:flick 2.2s ease-in-out infinite;display:inline-block}
+@keyframes flick{0%,100%{transform:scale(1) rotate(-2deg)}50%{transform:scale(1.08) rotate(2deg)}}
+.cta-card h2{margin:14px 0 8px}
+.tel-big{display:inline-block;font-family:'Outfit',sans-serif;font-weight:800;font-size:clamp(1.8rem,7vw,3rem);color:var(--aqua2);text-decoration:none;margin:14px 0 6px;
+  text-shadow:0 0 30px rgba(62,230,196,.5)}
+.tel-big:hover{color:#fff}
+.chips{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin:20px 0 26px}
+.chip{font-size:.82rem;font-weight:700;border:1px solid var(--line);border-radius:999px;padding:9px 18px;color:var(--muted);text-decoration:none;background:rgba(4,34,42,.5)}
+.chip:hover{color:var(--aqua2);border-color:var(--aqua)}
+.map{border-radius:18px;overflow:hidden;border:1px solid var(--line);margin-top:8px}
+.map iframe{width:100%;height:300px;border:0;display:block}
+/* footer */
+footer{border-top:1px solid var(--line);padding:44px 0 110px;background:#02161b}
+.ft{display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.ft .logo-drop{width:52px;height:52px}
+.ft small{color:var(--muted);display:block;font-size:.8rem}
+.soc{margin-left:auto;display:flex;gap:12px}
+.soc a{width:52px;height:52px;border-radius:16px;display:grid;place-items:center;background:linear-gradient(145deg,#0a3a44,#052630);
+  border:1px solid var(--line);box-shadow:0 8px 20px rgba(0,0,0,.4),inset 0 1px 0 rgba(255,255,255,.08);
+  transform:perspective(400px) rotateX(8deg);transition:transform .2s}
+.soc a:hover{transform:perspective(400px) rotateX(0) translateY(-3px)}
+.soc svg{width:24px;height:24px;fill:var(--aqua2)}
+.copy{text-align:center;color:#4d7a82;font-size:.78rem;margin-top:30px}
+/* flotante whatsapp */
+.wa-float{position:fixed;right:18px;bottom:18px;z-index:60;width:62px;height:62px;border-radius:50%;
+  background:radial-gradient(circle at 30% 30%,#3ddc74,var(--wa));display:grid;place-items:center;
+  box-shadow:0 10px 30px rgba(37,211,102,.45);animation:waPulse 2.4s ease-in-out infinite}
+.wa-float svg{width:32px;height:32px;fill:#fff}
+@keyframes waPulse{0%,100%{transform:scale(1)}50%{transform:scale(1.07)}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<header>
+  <div class="hd-in">
+    <span class="logo-drop"><img src="img/logo.jpg" alt="Techos Rubén"></span>
+    <span class="brand">Techos Rubén<small>SELLADO DE TECHOS · DORADO</small></span>
+    <nav>
+      <a href="#servicios">Servicios</a><a href="#galeria">Galería</a><a href="#faq">Preguntas</a><a href="#contacto">Contacto</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero" id="inicio">
+  <canvas id="gl"></canvas>
+  <div class="hero-fallback"><img src="img/02.jpg" alt="Techo de teja terminado por Techos Rubén"></div>
+  <div class="hero-inner">
+    <span class="kicker">Sellado de techos · Dorado, PR</span>
+    <h1>El agua rueda,<br>no se queda</h1>
+    <p class="hero-sub">Superficie sellada de verdad: el agua <strong>se perla y rueda</strong> sin mojar, sin filtrar, sin empozarse.</p>
+    <div class="cta-row">
+      <a class="btn btn-aqua mg" href="#servicios">Ver servicios</a>
+      <a class="btn btn-ghost mg" href="tel:+17875337722">787-533-7722</a>
+    </div>
+  </div>
+  <div class="scroll-cue" aria-hidden="true"></div>
+</section>
+
+<section id="servicios">
+  <div class="wrap">
+    <div class="sec-head rv"><p class="sec-kick">Lo que hacemos</p><h2>Servicios de sellado</h2>
+    <p class="sec-sub">Techos, terrazas y filtraciones: lo dejamos seco.</p></div>
+    <div class="svc-grid">
+      <article class="svc rv"><div class="ph"><span class="n">01</span><img src="img/02.jpg" alt="Techo de teja sellado por Techos Rubén" loading="lazy"></div><div class="tx"><h3>Sellado de techos</h3><p>Sellado completo de techos residenciales para que la lluvia no entre más.</p></div></article>
+      <article class="svc rv"><div class="ph"><span class="n">02</span><img src="img/03.jpg" alt="Reparación en techo de teja" loading="lazy"></div><div class="tx"><h3>Reparación de terrazas</h3><p>Reparamos terrazas dañadas por el agua y las dejamos listas para sellar.</p></div></article>
+      <article class="svc rv"><div class="ph"><span class="n">03</span><img src="img/04.jpg" alt="Techo reparado por Techos Rubén" loading="lazy"></div><div class="tx"><h3>Reparación de filtraciones</h3><p>Localizamos el punto de entrada del agua y lo reparamos de raíz.</p></div></article>
+    </div>
+  </div>
+</section>
+
+<section id="galeria">
+  <div class="wrap">
+    <div class="sec-head rv"><p class="sec-kick">Trabajo real</p><h2>Antes y después</h2>
+    <p class="sec-sub">Fotos reales de trabajos de Techos Rubén.</p></div>
+    <div class="gal">
+      <figure class="rv"><img src="img/01.jpg" alt="Techo de tablilla dañado antes de reparar" loading="lazy"><figcaption>Antes</figcaption></figure>
+      <figure class="rv"><img src="img/02.jpg" alt="Techo de teja terminado" loading="lazy"><figcaption>Después</figcaption></figure>
+      <figure class="rv"><img src="img/03.jpg" alt="Trabajando en techo de teja" loading="lazy"><figcaption>En proceso</figcaption></figure>
+      <figure class="rv"><img src="img/04.jpg" alt="Techo de teja terminado" loading="lazy"><figcaption>Después</figcaption></figure>
+      <figure class="rv"><img src="img/05.jpg" alt="Trabajo de zinc en techo" loading="lazy"><figcaption>En proceso</figcaption></figure>
+      <figure class="rv"><img src="img/06.jpg" alt="Piezas de zinc para techo" loading="lazy"><figcaption>En proceso</figcaption></figure>
+      <figure class="rv"><img src="img/07.jpg" alt="Techo de teja terminado" loading="lazy"><figcaption>Después</figcaption></figure>
+      <figure class="rv"><img src="img/08.jpg" alt="Trabajo de zinc en techo" loading="lazy"><figcaption>En proceso</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="wrap">
+    <div class="sec-head rv"><p class="sec-kick">Dudas</p><h2>Preguntas frecuentes</h2></div>
+    <div class="faq">
+      <details class="rv"><summary>¿Dónde están ubicados?</summary><div class="a">En Dorado, Puerto Rico.</div></details>
+      <details class="rv"><summary>¿Qué servicios ofrecen?</summary><div class="a">Sellado de techos, reparación de terrazas y reparación de filtraciones.</div></details>
+      <details class="rv"><summary>¿Cómo los contacto?</summary><div class="a">Llama al <a href="tel:+17875337722">787-533-7722</a> o síguelos en <a href="https://www.instagram.com/techosruben/">Instagram</a>.</div></details>
+    </div>
+  </div>
+</section>
+
+<section id="contacto" class="contact">
+  <div class="wrap">
+    <div class="sec-head rv"><p class="sec-kick">Cotiza hoy</p><h2>Que la lluvia no entre</h2>
+    <p class="sec-sub">Llama y deja tu techo en manos de Techos Rubén.</p></div>
+    <div class="cta-card rv">
+      <span class="drop-ico">💧</span>
+      <h2>Sella tu techo hoy</h2>
+      <a class="tel-big mg" href="tel:+17875337722">787-533-7722</a>
+      <div class="chips">
+        <span class="chip">Dorado, PR</span>
+        <a class="chip" href="https://www.instagram.com/techosruben/">Instagram</a>
+        <span class="chip">Sin filtraciones</span>
+      </div>
+      <div class="map"><iframe title="Mapa - Dorado, Puerto Rico" src="https://www.google.com/maps?q=Dorado,Puerto+Rico&output=embed" loading="lazy"></iframe></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="ft">
+      <span class="logo-drop"><img src="img/logo.jpg" alt="Techos Rubén"></span>
+      <div><strong>Techos Rubén</strong><small>Sellado de techos · Dorado, Puerto Rico</small></div>
+      <div class="soc">
+        <a href="https://www.instagram.com/techosruben/" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 3.3.1 4.8 1.7 4.9 4.9.1 1.3.1 1.6.1 4.8s0 3.6-.1 4.8c-.1 3.2-1.7 4.8-4.9 4.9-1.3.1-1.6.1-4.9.1s-3.6 0-4.9-.1c-3.3-.1-4.8-1.7-4.9-4.9C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.8C2.4 4 4 2.4 7.2 2.3 8.4 2.2 8.8 2.2 12 2.2zm0 3.6a6.2 6.2 0 1 0 0 12.4 6.2 6.2 0 0 0 0-12.4zm0 10.2a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.4-10.5a1.4 1.4 0 1 0 0 2.9 1.4 1.4 0 0 0 0-2.9z"/></svg></a>
+        <a href="tel:+17875337722" aria-label="Llamar"><svg viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z"/></svg></a>
+      </div>
+    </div>
+    <p class="copy">Techos Rubén · Dorado, Puerto Rico · Web por Manupro</p>
+  </div>
+</footer>
+
+<a class="wa-float" href="https://wa.me/17875337722?text=Hola%20Techos%20Rub%C3%A9n%2C%20quiero%20cotizar%20el%20sellado%20de%20mi%20techo." aria-label="WhatsApp"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.6-6.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.3-.6.8-.8 1-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4 0-.5.1-.7l.4-.5c.1-.2.1-.3 0-.5L9.4 8c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.2-.7.5-.2.3-.9.9-.9 2.2s.9 2.5 1.1 2.7c.1.2 1.8 2.8 4.4 3.9 1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2 0-.1-.2-.1-.4-.2z"/></svg></a>
+
+<script type="module">
+import * as THREE from 'three';
+const isMobile = matchMedia('(max-width:720px)').matches;
+const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+let started = false;
+function fallback(){ document.body.classList.add('no-webgl'); }
+setTimeout(()=>{ if(!started) fallback(); }, 5000);
+try{
+  if(!window.WebGLRenderingContext) throw 0;
+  const canvas = document.getElementById('gl');
+  const renderer = new THREE.WebGLRenderer({canvas, alpha:true, antialias:!isMobile});
+  renderer.setPixelRatio(Math.min(devicePixelRatio, isMobile?1.5:2));
+  const scene = new THREE.Scene();
+  const camera = new THREE.PerspectiveCamera(38, 1, 0.1, 60);
+  camera.position.set(0, 0.6, 8.2);
+  scene.add(new THREE.AmbientLight(0x6fa8b8, 0.55));
+  const key = new THREE.DirectionalLight(0xeafcff, 1.8); key.position.set(3, 5, 4); scene.add(key);
+  const rim = new THREE.PointLight(0x3ee6c4, 16, 20); rim.position.set(-5, 1, -2); scene.add(rim);
+
+  // --- superficie sellada (macro) ---
+  const surf = new THREE.Mesh(new THREE.PlaneGeometry(13, 9),
+    new THREE.MeshPhysicalMaterial({color:0x0a3a42, roughness:.06, clearcoat:1, clearcoatRoughness:.05}));
+  surf.rotation.x = -Math.PI/2.55;
+  surf.position.y = -1.4;
+  scene.add(surf);
+
+  // --- gotas perladas que ruedan ---
+  const dropMat = new THREE.MeshPhysicalMaterial({color:0xcfefff, transparent:true, opacity:.55, roughness:.02, clearcoat:1, clearcoatRoughness:0});
+  const hlMat = new THREE.MeshBasicMaterial({color:0xffffff, transparent:true, opacity:.9});
+  const drops = [];
+  const dn = isMobile?8:14;
+  function resetDrop(d, init){
+    d.userData.r = 0.16 + Math.random()*0.26;
+    d.scale.setScalar(d.userData.r/0.25);
+    d.position.set(-5.5+Math.random()*11, init? (-0.6+Math.random()*3.4) : 3.4+Math.random(), 0.4+Math.random()*2.4);
+    d.userData.vx = (Math.random()-.5)*0.25;
+    d.userData.vy = 0.35+Math.random()*0.5;
+    d.userData.ph = Math.random()*Math.PI*2;
+  }
+  for(let i=0;i<dn;i++){
+    const g = new THREE.Group();
+    const body = new THREE.Mesh(new THREE.SphereGeometry(0.25, 28, 28), dropMat);
+    body.scale.y = 0.82;
+    const hl = new THREE.Mesh(new THREE.SphereGeometry(0.055, 12, 12), hlMat);
+    hl.position.set(-0.07, 0.1, 0.19);
+    g.add(body); g.add(hl);
+    resetDrop(g, true);
+    drops.push(g); scene.add(g);
+  }
+  // --- micro chispas de agua ---
+  const wn = isMobile?30:70;
+  const wpos = new Float32Array(wn*3);
+  for(let i=0;i<wn;i++){ wpos[i*3]=(Math.random()-.5)*12; wpos[i*3+1]=-1+Math.random()*5; wpos[i*3+2]=-2-Math.random()*3; }
+  const wgeo = new THREE.BufferGeometry(); wgeo.setAttribute('position', new THREE.BufferAttribute(wpos,3));
+  const mist = new THREE.Points(wgeo, new THREE.PointsMaterial({color:0x9ff5e4, size:.055, transparent:true, opacity:.6, blending:THREE.AdditiveBlending, depthWrite:false}));
+  scene.add(mist);
+
+  // parallax mouse / gyro
+  let tx=0, ty=0;
+  addEventListener('pointermove', e=>{ tx=(e.clientX/innerWidth-.5); ty=(e.clientY/innerHeight-.5); }, {passive:true});
+  addEventListener('deviceorientation', e=>{
+    if(e.gamma==null) return;
+    tx = Math.max(-.5, Math.min(.5, e.gamma/45)); ty = Math.max(-.5, Math.min(.5, (e.beta-45)/45));
+  });
+  function size(){
+    const w = canvas.clientWidth, h = canvas.clientHeight;
+    renderer.setSize(w, h, false); camera.aspect = w/h; camera.updateProjectionMatrix();
+  }
+  size(); addEventListener('resize', size);
+  const hero = document.querySelector('.hero');
+  const heroInner = document.querySelector('.hero-inner');
+  let visible = true;
+  new IntersectionObserver(en=>{ visible = en[0].isIntersecting; }).observe(hero);
+  const clock = new THREE.Clock();
+  started = true;
+  (function loop(){
+    requestAnimationFrame(loop);
+    if(!visible) return;
+    if(reduced){ renderer.render(scene, camera); return; }
+    const t = clock.getElapsedTime();
+    for(const d of drops){
+      d.position.x += (d.userData.vx + Math.sin(t*1.4+d.userData.ph)*0.12)*0.016;
+      d.position.y -= d.userData.vy*0.016;
+      d.position.z += Math.cos(t*1.1+d.userData.ph)*0.0015;
+      d.rotation.z = Math.sin(t*2+d.userData.ph)*0.08;
+      if(d.position.y < -1.25 || Math.abs(d.position.x) > 6.2) resetDrop(d, false);
+    }
+    const pa = wgeo.attributes.position;
+    for(let i=0;i<wn;i++){ pa.array[i*3+1] += 0.008; if(pa.array[i*3+1] > 4.5) pa.array[i*3+1] = -1; }
+    pa.needsUpdate = true;
+    key.position.x = 3 + Math.sin(t*0.5)*0.8;
+    camera.position.x += ((tx*1.2) - camera.position.x)*0.03;
+    camera.position.y += ((0.6 - ty*0.9) - camera.position.y)*0.03;
+    camera.lookAt(0, 0.2, 0);
+    const sy = scrollY;
+    heroInner.style.transform = `translateY(${sy*0.22}px)`;
+    heroInner.style.opacity = Math.max(0, 1 - sy/(innerHeight*0.75));
+    renderer.render(scene, camera);
+  })();
+}catch(e){ fallback(); }
+</script>
+<script>
+// reveals
+const io = new IntersectionObserver(es=>es.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} }),{threshold:.12});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+// botones magnéticos + tilt
+if(matchMedia('(pointer:fine)').matches){
+  document.querySelectorAll('.mg').forEach(b=>{
+    b.addEventListener('pointermove',e=>{
+      const r=b.getBoundingClientRect();
+      b.style.transform=`translate(${(e.clientX-r.left-r.width/2)*.18}px,${(e.clientY-r.top-r.height/2)*.28}px)`;
+    });
+    b.addEventListener('pointerleave',()=>{ b.style.transform=''; });
+  });
+  document.querySelectorAll('.svc').forEach(c=>{
+    c.addEventListener('pointermove',e=>{
+      const r=c.getBoundingClientRect(), x=(e.clientX-r.left)/r.width-.5, y=(e.clientY-r.top)/r.height-.5;
+      c.style.transform=`perspective(800px) rotateY(${x*7}deg) rotateX(${-y*7}deg) translateY(-4px)`;
+    });
+    c.addEventListener('pointerleave',()=>{ c.style.transform=''; });
+  });
+}
+</script>
+</body>
+</html>

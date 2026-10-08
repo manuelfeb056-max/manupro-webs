@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Techos Eduardo · 29 años sellando techos en todo Puerto Rico</title>
+<meta name="description" content="Techos Eduardo: 29 años sellando techos en todo Puerto Rico. Garantía por escrito de 10 a 20 años. Cotización gratis con medidas y fotos. Tel 939-451-6197.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bitter:wght@700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script type="importmap">{"imports":{"three":"https://unpkg.com/three@0.160.0/build/three.module.js"}}</script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --bg:#221305; --bg2:#2e1a08; --card:#2c1c0b; --ink:#fbf3e4; --muted:#d3ae74;
+  --ac:#e8a33d; --ac2:#ffd97a; --line:rgba(232,163,61,.20); --wa:#25d366;
+}
+html{scroll-behavior:smooth}
+body{font-family:'Manrope',system-ui,sans-serif;background:var(--bg);color:var(--ink);overflow-x:hidden;line-height:1.6}
+img{max-width:100}
+a{color:inherit}
+.wrap{max-width:1100px;margin:0 auto;padding:0 20px}
+header{position:fixed;top:0;left:0;right:0;z-index:50;background:color-mix(in srgb,var(--bg) 82%,transparent);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.hd-in{display:flex;align-items:center;gap:14px;padding:10px 20px;max-width:1100px;margin:0 auto}
+.logo-ring{width:58px;height:58px;border-radius:50%;padding:3px;background:conic-gradient(from 20deg,var(--ac),var(--bg2),var(--ac2),var(--bg2),var(--ac));box-shadow:0 0 22px var(--line);animation:spinSlow 14s linear infinite}
+.logo-ring img{width:100%;height:100%;border-radius:50%;object-fit:cover;display:block;background:#000}
+@keyframes spinSlow{to{transform:rotate(360deg)}}
+.brand{font-family:'Bitter',serif;font-size:1.2rem;letter-spacing:.02em;line-height:1.15}
+.brand small{display:block;font-family:'Manrope';font-size:.62rem;letter-spacing:.26em;color:var(--muted);font-weight:700;margin-top:2px}
+nav{margin-left:auto;display:flex;gap:18px;font-size:.85rem;font-weight:600}
+nav a{text-decoration:none;opacity:.85}
+nav a:hover{color:var(--ac)}
+@media(max-width:720px){nav{display:none}}
+.hero{position:relative;min-height:100svh;display:flex;align-items:flex-end;overflow:hidden;
+  background:radial-gradient(1100px 600px at 50% 110%,var(--bg2) 0%,var(--bg) 62%)}
+#gl{position:absolute;inset:0;width:100%;height:100%;display:block;touch-action:pan-y}
+.hero-fallback{position:absolute;inset:0;display:none;overflow:hidden}
+.hero-fallback img{width:100%;height:100%;object-fit:cover;animation:kenburns 18s ease-in-out infinite alternate;opacity:.55}
+@keyframes kenburns{from{transform:scale(1)}to{transform:scale(1.12)}}
+.no-webgl #gl{display:none}
+.no-webgl .hero-fallback{display:block}
+.hero-inner{position:relative;z-index:3;width:100%;padding:120px 20px 90px;text-align:center}
+.kicker{display:inline-block;font-size:.72rem;font-weight:800;letter-spacing:.3em;text-transform:uppercase;color:var(--ac2);
+  border:1px solid var(--line);padding:9px 20px;border-radius:999px;background:color-mix(in srgb,var(--bg) 55%,transparent);margin-bottom:18px}
+h1{font-family:'Bitter',serif;font-size:clamp(2.6rem,10vw,5.6rem);line-height:1.04;
+  background:linear-gradient(180deg,var(--ink) 15%,var(--ac2) 55%,var(--ac) 92%);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+  filter:drop-shadow(0 6px 24px var(--line));margin-bottom:12px}
+.hero-sub{max-width:36rem;margin:0 auto 26px;color:var(--muted);font-size:1.02rem}
+.hero-sub strong{color:var(--ink)}
+.cta-row{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:15px 30px;border-radius:999px;font-weight:800;text-decoration:none;
+  transition:transform .18s ease,box-shadow .18s ease;will-change:transform}
+.btn-ac{background:linear-gradient(180deg,var(--ac2),var(--ac));color:#14100a;box-shadow:0 12px 32px var(--line)}
+.btn-ac:hover{box-shadow:0 16px 40px var(--line)}
+.btn-ghost{border:1px solid var(--line);color:var(--ink);background:color-mix(in srgb,var(--bg) 50%,transparent)}
+.scroll-cue{position:absolute;left:50%;bottom:22px;transform:translateX(-50%);z-index:3;width:26px;height:44px;border:2px solid var(--muted);border-radius:14px;opacity:.8}
+.scroll-cue::after{content:"";position:absolute;left:50%;top:8px;width:5px;height:9px;margin-left:-2.5px;border-radius:3px;background:var(--ac);animation:cue 1.8s ease-in-out infinite}
+@keyframes cue{0%{transform:translateY(0);opacity:1}70%{transform:translateY(14px);opacity:0}100%{opacity:0}}
+section{padding:84px 0;position:relative}
+.sec-head{text-align:center;margin-bottom:44px}
+.sec-kick{font-size:.72rem;font-weight:800;letter-spacing:.3em;text-transform:uppercase;color:var(--ac);margin-bottom:12px}
+h2{font-family:'Bitter',serif;font-size:clamp(1.9rem,5.5vw,3rem);line-height:1.1}
+.sec-sub{color:var(--muted);max-width:38rem;margin:12px auto 0}
+.rv{opacity:0;transform:translateY(36px) scale(.985);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.7,.2,1)}
+.rv.in{opacity:1;transform:none}
+.svc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:22px}
+.svc{background:linear-gradient(180deg,var(--card),var(--bg));border:1px solid var(--line);border-radius:20px;overflow:hidden;
+  transition:transform .25s ease,box-shadow .25s ease;will-change:transform}
+.svc:hover{box-shadow:0 24px 60px rgba(0,0,0,.5)}
+.svc .ph{height:210px;overflow:hidden;position:relative}
+.svc .ph img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .8s ease}
+.svc:hover .ph img{transform:scale(1.07)}
+.svc .n{position:absolute;top:14px;left:14px;background:color-mix(in srgb,var(--bg) 80%,transparent);border:1px solid var(--line);color:var(--ac2);
+  font-weight:800;font-size:.8rem;padding:6px 14px;border-radius:999px;letter-spacing:.12em}
+.svc .tx{padding:22px 22px 26px}
+.svc h3{font-size:1.25rem;margin-bottom:8px}
+.svc p{color:var(--muted);font-size:.94rem}
+/* antes / despues */
+.ba{display:grid;grid-template-columns:1fr 1fr;gap:18px;max-width:900px;margin:0 auto 50px}
+.ba figure{position:relative;border-radius:18px;overflow:hidden;border:1px solid var(--line)}
+.ba img{width:100%;height:300px;object-fit:cover;display:block}
+.ba figcaption{position:absolute;left:14px;bottom:14px;font-weight:800;font-size:.8rem;letter-spacing:.14em;
+  padding:8px 16px;border-radius:999px;background:color-mix(in srgb,var(--bg) 78%,transparent);border:1px solid var(--line);color:var(--ac2)}
+@media(max-width:640px){.ba{grid-template-columns:1fr}.ba img{height:240px}}
+.gal{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px}
+.gal a{display:block;border-radius:14px;overflow:hidden;border:1px solid var(--line);aspect-ratio:1}
+.gal img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .6s ease}
+.gal a:hover img{transform:scale(1.08)}
+.faq{max-width:720px;margin:0 auto}
+.faq details{background:var(--card);border:1px solid var(--line);border-radius:14px;margin-bottom:12px;overflow:hidden}
+.faq summary{cursor:pointer;padding:18px 22px;font-weight:700;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:12px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";font-size:1.5rem;color:var(--ac);flex:none;transition:transform .25s}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq .a{padding:0 22px 20px;color:var(--muted);font-size:.95rem}
+.faq .a a{color:var(--ac2)}
+.contact{background:radial-gradient(800px 420px at 50% 0%,var(--bg2) 0%,var(--bg) 65%)}
+.cta-card{max-width:760px;margin:0 auto;text-align:center;background:linear-gradient(180deg,var(--card),var(--bg));
+  border:1px solid var(--line);border-radius:28px;padding:56px 30px;position:relative;overflow:hidden}
+.cta-card::before{content:"";position:absolute;inset:-40%;background:conic-gradient(from 0deg,transparent 70%,var(--line) 85%,transparent 100%);animation:spinSlow 9s linear infinite;pointer-events:none}
+.cta-card>*{position:relative}
+.cta-ico{font-size:3rem;filter:drop-shadow(0 0 18px var(--line));animation:flick 2.2s ease-in-out infinite}
+@keyframes flick{0%,100%{transform:scale(1) rotate(-2deg)}50%{transform:scale(1.08) rotate(2deg)}}
+.cta-card h2{margin:14px 0 8px}
+.tel-big{display:inline-block;font-family:'Bitter',serif;font-size:clamp(1.8rem,7vw,3rem);color:var(--ac2);text-decoration:none;margin:14px 0 6px;
+  text-shadow:0 0 30px var(--line)}
+.tel-big:hover{color:#fff}
+.chips{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin:20px 0 26px}
+.chip{font-size:.82rem;font-weight:700;border:1px solid var(--line);border-radius:999px;padding:9px 18px;color:var(--muted);text-decoration:none;background:color-mix(in srgb,var(--bg) 50%,transparent)}
+a.chip:hover{color:var(--ac2);border-color:var(--ac)}
+.map{border-radius:18px;overflow:hidden;border:1px solid var(--line);margin-top:8px}
+.map iframe{width:100%;height:300px;border:0;display:block}
+footer{border-top:1px solid var(--line);padding:44px 0 110px;background:color-mix(in srgb,#000 40%,var(--bg))}
+.ft{display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.ft .logo-ring{width:52px;height:52px;animation:none}
+.ft small{color:var(--muted);display:block;font-size:.8rem}
+.soc{margin-left:auto;display:flex;gap:12px}
+.soc a{width:52px;height:52px;border-radius:16px;display:grid;place-items:center;background:linear-gradient(145deg,var(--card),var(--bg));
+  border:1px solid var(--line);box-shadow:0 8px 20px rgba(0,0,0,.4),inset 0 1px 0 rgba(255,255,255,.08);
+  transform:perspective(400px) rotateX(8deg);transition:transform .2s}
+.soc a:hover{transform:perspective(400px) rotateX(0) translateY(-3px)}
+.soc svg{width:24px;height:24px;fill:var(--ac2)}
+.copy{text-align:center;color:var(--muted);font-size:.78rem;margin-top:30px;opacity:.8}
+.wa-float{position:fixed;right:18px;bottom:18px;z-index:60;width:62px;height:62px;border-radius:50%;
+  background:radial-gradient(circle at 30% 30%,#3ddc74,var(--wa));display:grid;place-items:center;
+  box-shadow:0 10px 30px rgba(37,211,102,.45);animation:waPulse 2.4s ease-in-out infinite}
+.wa-float svg{width:32px;height:32px;fill:#fff}
+@keyframes waPulse{0%,100%{transform:scale(1)}50%{transform:scale(1.07)}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<header>
+  <div class="hd-in">
+    <span class="logo-ring"><img src="img/logo.jpg" alt="Techos Eduardo"></span>
+    <span class="brand">Techos Eduardo<small>29 AÑOS SELLANDO TECHOS</small></span>
+    <nav>
+      <a href="#servicios">Servicios</a><a href="#galeria">Galería</a><a href="#faq">Preguntas</a><a href="#contacto">Contacto</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero" id="inicio">
+  <canvas id="gl"></canvas>
+  <div class="hero-fallback"><img src="img/05.jpg" alt="Techo sellado por Techos Eduardo"></div>
+  <div class="hero-inner">
+    <span class="kicker">29 años en el oficio · Toda la isla</span>
+    <h1>Techos<br>Eduardo</h1>
+    <p class="hero-sub">29 años sellando techos en todo Puerto Rico. <strong>Garantía por escrito de 10 a 20 años</strong>. Cotización gratis: mándame medidas y fotos.</p>
+    <div class="cta-row">
+      <a class="btn btn-ac mg" href="#servicios">Ver servicios</a>
+      <a class="btn btn-ghost mg" href="tel:+19394516197">939-451-6197</a>
+    </div>
+  </div>
+  <div class="scroll-cue" aria-hidden="true"></div>
+</section>
+
+<section id="servicios">
+  <div class="wrap">
+    <div class="sec-head rv"><p class="sec-kick">Lo que hacemos</p><h2>Servicios</h2>
+    <p class="sec-sub">29 años sellando techos en los 78 pueblos.</p></div>
+    <div class="svc-grid">
+<article class="svc rv"><div class="ph"><span class="n">01</span><img src="img/04.jpg" alt="Identificación de filtraciones" loading="lazy"></div><div class="tx"><h3>Identificación de filtraciones</h3><p>Encuentran por dónde entra el agua antes de sellar.</p></div></article>
+<article class="svc rv"><div class="ph"><span class="n">02</span><img src="img/05.jpg" alt="Corrección de empozamientos" loading="lazy"></div><div class="tx"><h3>Corrección de empozamientos</h3><p>Nivelan las zonas donde el agua se acumula.</p></div></article>
+<article class="svc rv"><div class="ph"><span class="n">03</span><img src="img/06.jpg" alt="Sellado de uniones y tubos" loading="lazy"></div><div class="tx"><h3>Sellado de uniones y tubos</h3><p>Sellan uniones, tubos y cables que atraviesan el techo.</p></div></article>
+<article class="svc rv"><div class="ph"><span class="n">04</span><img src="img/02.jpg" alt="Garantía escrita 10-20 años" loading="lazy"></div><div class="tx"><h3>Garantía escrita 10-20 años</h3><p>Sistemas con garantía por escrito de 10 a 20 años.</p></div></article>
+<article class="svc rv"><div class="ph"><span class="n">05</span><img src="img/09.jpg" alt="Limpieza de techo" loading="lazy"></div><div class="tx"><h3>Limpieza de techo</h3><p>Lavan y preparan el techo para que el sellador pegue bien.</p></div></article>
+<article class="svc rv"><div class="ph"><span class="n">06</span><img src="img/03.jpg" alt="Cotización gratis" loading="lazy"></div><div class="tx"><h3>Cotización gratis</h3><p>Cotización gratis en los 78 pueblos: envía medidas y fotos.</p></div></article>
+    </div>
+  </div>
+</section>
+
+<section id="galeria">
+  <div class="wrap">
+    <div class="sec-head rv"><p class="sec-kick">Trabajos reales</p><h2>Antes y después</h2>
+    <p class="sec-sub">Fotos reales del negocio. Así queda un techo bien sellado.</p></div>
+    <div class="ba">
+      <figure class="rv"><img src="img/01.jpg" alt="Filtración recogiendo agua dentro de la casa" loading="lazy"><figcaption>ANTES</figcaption></figure>
+      <figure class="rv"><img src="img/10.jpg" alt="Techo sellado y protegido" loading="lazy"><figcaption>DESPUÉS</figcaption></figure>
+    </div>
+    <div class="gal">
+<a class="rv" href="img/01.jpg"><img src="img/01.jpg" alt="Anuncio sobre problemas de filtración" loading="lazy"></a>
+<a class="rv" href="img/02.jpg"><img src="img/02.jpg" alt="Anuncio de garantía por escrito" loading="lazy"></a>
+<a class="rv" href="img/03.jpg"><img src="img/03.jpg" alt="Cobertura en los 78 pueblos" loading="lazy"></a>
+<a class="rv" href="img/04.jpg"><img src="img/04.jpg" alt="Techo sellado de blanco" loading="lazy"></a>
+<a class="rv" href="img/05.jpg"><img src="img/05.jpg" alt="Techo sellado terminado" loading="lazy"></a>
+<a class="rv" href="img/06.jpg"><img src="img/06.jpg" alt="Detalle de techo sellado" loading="lazy"></a>
+<a class="rv" href="img/07.jpg"><img src="img/07.jpg" alt="Cubetas de sellador" loading="lazy"></a>
+<a class="rv" href="img/08.jpg"><img src="img/08.jpg" alt="Techo sellado con vista al paisaje" loading="lazy"></a>
+<a class="rv" href="img/09.jpg"><img src="img/09.jpg" alt="Techo limpio listo para sellar" loading="lazy"></a>
+<a class="rv" href="img/10.jpg"><img src="img/10.jpg" alt="Techo sellado final" loading="lazy"></a>
+    </div>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="wrap">
+    <div class="sec-head rv"><p class="sec-kick">Dudas</p><h2>Preguntas frecuentes</h2></div>
+    <div class="faq">
+<details class="rv"><summary>¿Cuántos años de experiencia tienen?</summary><div class="a">29 años en el oficio, según su bio de Instagram.</div></details>
+<details class="rv"><summary>¿Qué garantía ofrecen?</summary><div class="a">Garantía por escrito de 10 a 20 años, según el sistema aplicado.</div></details>
+<details class="rv"><summary>¿Cómo pido una cotización?</summary><div class="a">Es gratis: envíales las medidas y fotos de tu techo al <a href="tel:+19394516197">939-451-6197</a>.</div></details>
+<details class="rv"><summary>¿Trabajan en mi pueblo?</summary><div class="a">Atienden toda la isla: los 78 pueblos de Puerto Rico.</div></details>
+<details class="rv"><summary>¿Cómo los contacto?</summary><div class="a">Llama al <a href="tel:+19394516197">939-451-6197</a> o en Instagram <a href="https://www.instagram.com/techoseduardopr">@techoseduardopr</a>.</div></details>
+    </div>
+  </div>
+</section>
+
+<section id="contacto" class="contact">
+  <div class="wrap">
+    <div class="sec-head rv"><p class="sec-kick">Cotización gratis</p><h2>29 años que hablan solos</h2>
+    <p class="sec-sub">Manda medidas y fotos de tu techo y recibe tu cotización gratis.</p></div>
+    <div class="cta-card rv">
+      <div class="cta-ico">🔍</div>
+      <h2>Llama o escribe hoy</h2>
+      <a class="tel-big mg" href="tel:+19394516197">939-451-6197</a>
+      <div class="chips">
+<span class="chip">Toda la isla</span>
+<span class="chip">Cotización gratis</span>
+<a class="chip" href="https://www.instagram.com/techoseduardopr/">@techoseduardopr</a>
+<span class="chip">Garantía escrita 20 años</span>
+      </div>
+      <div class="map"><iframe title="Mapa - Toda la isla · Puerto Rico" src="https://www.google.com/maps?q=Puerto+Rico&output=embed" loading="lazy"></iframe></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="ft">
+      <span class="logo-ring"><img src="img/logo.jpg" alt="Techos Eduardo"></span>
+      <div><strong>Techos Eduardo</strong><small>Toda la isla · Puerto Rico</small></div>
+      <div class="soc">
+        <a href="https://www.instagram.com/techoseduardopr/" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 3.3.1 4.8 1.7 4.9 4.9.1 1.3.1 1.6.1 4.8s0 3.6-.1 4.8c-.1 3.2-1.7 4.8-4.9 4.9-1.3.1-1.6.1-4.9.1s-3.6 0-4.9-.1c-3.3-.1-4.8-1.7-4.9-4.9C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.8C2.4 4 4 2.4 7.2 2.3 8.4 2.2 8.8 2.2 12 2.2zm0 3.6a6.2 6.2 0 1 0 0 12.4 6.2 6.2 0 0 0 0-12.4zm0 10.2a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.4-10.5a1.4 1.4 0 1 0 0 2.9 1.4 1.4 0 0 0 0-2.9z"/></svg></a>
+        <a href="tel:+19394516197" aria-label="Llamar"><svg viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z"/></svg></a>
+      </div>
+    </div>
+    <p class="copy">Techos Eduardo · Toda la isla · Puerto Rico · Web por Manupro</p>
+  </div>
+</footer>
+
+<a class="wa-float" href="https://wa.me/19394516197?text=Hola%20Techos%20Eduardo%2C%20quiero%20una%20cotizaci%C3%B3n%20gratis.%20Te%20env%C3%ADo%20medidas%20y%20fotos%20de%20mi%20techo." aria-label="WhatsApp"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.6-6.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.3-.6.8-.8 1-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4 0-.5.1-.7l.4-.5c.1-.2.1-.3 0-.5L9.4 8c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.2-.7.5-.2.3-.9.9-.9 2.2s.9 2.5 1.1 2.7c.1.2 1.8 2.8 4.4 3.9 1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2 0-.1-.2-.1-.4-.2z"/></svg></a>
+
+<script type="module">
+
+import * as THREE from 'three';
+const isMobile = matchMedia('(max-width:720px)').matches;
+const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+let started = false;
+function fallback(){ document.body.classList.add('no-webgl'); }
+setTimeout(()=>{ if(!started) fallback(); }, 6000);
+try{
+if(!window.WebGLRenderingContext) throw new Error('nogl');
+const canvas = document.getElementById('gl');
+const renderer = new THREE.WebGLRenderer({canvas, alpha:true, antialias:!isMobile});
+renderer.setPixelRatio(Math.min(window.devicePixelRatio||1, isMobile?1.5:2));
+const scene = new THREE.Scene();
+const camera = new THREE.PerspectiveCamera(38, 1, 0.1, 80);
+const rig = new THREE.Group(); scene.add(rig);
+
+camera.position.set(0,4.6,8.2);
+scene.add(new THREE.AmbientLight(0xd8b98a,0.5));
+const key=new THREE.DirectionalLight(0xffe2ae,1.5); key.position.set(4,7,3); scene.add(key);
+const warm=new THREE.PointLight(0xe8a33d,22,24); warm.position.set(-4,3,-2); scene.add(warm);
+const roof=new THREE.Mesh(new THREE.PlaneGeometry(9.5,6.5), new THREE.MeshStandardMaterial({color:0x5c4c39,roughness:.95}));
+roof.rotation.x=-Math.PI/2; rig.add(roof);
+const cracks=[];
+const darkC=new THREE.Color(0x14100b), sealC=new THREE.Color(0xf8f3e6);
+for(let i=0;i<11;i++){
+  const len=0.7+Math.random()*1.6;
+  const m=new THREE.Mesh(new THREE.BoxGeometry(0.07,0.03,len), new THREE.MeshStandardMaterial({color:darkC.clone(),roughness:.9,emissive:0xe8a33d,emissiveIntensity:0}));
+  m.position.set((Math.random()-.5)*8,0.02,(Math.random()-.5)*5.4);
+  m.rotation.y=Math.random()*Math.PI;
+  m.userData={p:0,sealed:false};
+  rig.add(m); cracks.push(m);
+}
+const lupa=new THREE.Group();
+const ring=new THREE.Mesh(new THREE.TorusGeometry(0.95,0.1,14,40), new THREE.MeshStandardMaterial({color:0xe8a33d,roughness:.3,metalness:.75}));
+lupa.add(ring);
+const lens=new THREE.Mesh(new THREE.CircleGeometry(0.88,40), new THREE.MeshPhysicalMaterial({color:0xcfe8ff,transparent:true,opacity:.28,roughness:.05,side:THREE.DoubleSide}));
+lupa.add(lens);
+const grip=new THREE.Mesh(new THREE.CylinderGeometry(0.09,0.11,1.7,12), new THREE.MeshStandardMaterial({color:0x6b4423,roughness:.6}));
+grip.position.set(1.55,0,0); grip.rotation.z=Math.PI/2-0.25; lupa.add(grip);
+lupa.rotation.x=-Math.PI/2+0.35;
+lupa.position.y=1.7;
+rig.add(lupa);
+const spot=new THREE.SpotLight(0xfff3d2,40,10,0.42,0.65,1.6);
+rig.add(spot); rig.add(spot.target);
+const PN=isMobile?24:60;
+const pgeo=new THREE.BufferGeometry(); const pp=new Float32Array(PN*3); const pv=new Float32Array(PN);
+for(let i=0;i<PN;i++){ pp[i*3+1]=-5; }
+pgeo.setAttribute('position', new THREE.BufferAttribute(pp,3));
+const pts=new THREE.Points(pgeo, new THREE.PointsMaterial({color:0xffe9a8,size:.08,transparent:true,opacity:.9,blending:THREE.AdditiveBlending,depthWrite:false}));
+rig.add(pts);
+let pi=0;
+function puff(x,y,z){ for(let k=0;k<2;k++){ const i=pi++%PN; pp[i*3]=x+(Math.random()-.5)*.3; pp[i*3+1]=y; pp[i*3+2]=z+(Math.random()-.5)*.3; pv[i]=0.5+Math.random()*0.7; } }
+function animate(t){
+  const lx=Math.sin(t*0.45)*3.3, lz=Math.sin(t*0.8+1.2)*2.1;
+  lupa.position.x=lx; lupa.position.z=lz; lupa.position.y=1.7+Math.sin(t*1.3)*0.08;
+  spot.position.set(lx,1.65,lz); spot.target.position.set(lx,0,lz);
+  for(const c of cracks){
+    if(c.userData.sealed) continue;
+    const d=Math.hypot(c.position.x-lx,c.position.z-lz);
+    if(d<1.05){
+      c.userData.p=Math.min(1,c.userData.p+0.03);
+      c.material.color.lerpColors(darkC,sealC,c.userData.p);
+      c.material.emissiveIntensity=c.userData.p*0.55;
+      if(Math.random()<0.3) puff(c.position.x,0.12,c.position.z);
+      if(c.userData.p>=1) c.userData.sealed=true;
+    }
+  }
+  const pa=pgeo.attributes.position;
+  for(let i=0;i<PN;i++){
+    if(pv[i]<=0) continue;
+    pa.array[i*3+1]+=pv[i]*0.03; pv[i]*=0.985;
+    if(pv[i]<0.02){ pv[i]=0; pa.array[i*3+1]=-5; }
+  }
+  pa.needsUpdate=true;
+}
+
+let tx=0, ty=0;
+addEventListener('pointermove', e=>{ tx=(e.clientX/window.innerWidth-.5); ty=(e.clientY/window.innerHeight-.5); }, {passive:true});
+addEventListener('deviceorientation', e=>{ if(e.gamma==null) return; tx=Math.max(-.5,Math.min(.5,e.gamma/45)); ty=Math.max(-.5,Math.min(.5,(e.beta-45)/45)); });
+function size(){ const w=canvas.clientWidth, h=canvas.clientHeight; if(!w||!h) return; renderer.setSize(w,h,false); camera.aspect=w/h; camera.updateProjectionMatrix(); }
+size(); addEventListener('resize', size);
+const hero=document.querySelector('.hero'), heroInner=document.querySelector('.hero-inner');
+let visible=true;
+new IntersectionObserver(en=>{ visible=en[0].isIntersecting; }).observe(hero);
+const clock=new THREE.Clock();
+started=true;
+if(reduced){ animate(0); renderer.render(scene,camera); }
+else{
+(function loop(){
+  requestAnimationFrame(loop);
+  if(!visible) return;
+  const t=clock.getElapsedTime();
+  animate(t);
+  rig.rotation.y += ((tx*0.22)-rig.rotation.y)*0.045;
+  rig.rotation.x += ((ty*0.14)-rig.rotation.x)*0.045;
+  camera.lookAt(0,0.8,0);
+  const sy=window.scrollY||0;
+  if(heroInner){ heroInner.style.transform='translateY('+(sy*0.22)+'px)'; heroInner.style.opacity=Math.max(0,1-sy/(window.innerHeight*0.75)); }
+  renderer.render(scene,camera);
+})();
+}
+}catch(e){ fallback(); }
+
+</script>
+<script>
+// reveals
+const io = new IntersectionObserver(es=>es.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} }),{threshold:.12});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+if(matchMedia('(pointer:fine)').matches){
+  document.querySelectorAll('.mg').forEach(b=>{
+    b.addEventListener('pointermove',e=>{
+      const r=b.getBoundingClientRect();
+      b.style.transform='translate('+((e.clientX-r.left-r.width/2)*.18)+'px,'+((e.clientY-r.top-r.height/2)*.28)+'px)';
+    });
+    b.addEventListener('pointerleave',()=>{ b.style.transform=''; });
+  });
+  document.querySelectorAll('.svc').forEach(c=>{
+    c.addEventListener('pointermove',e=>{
+      const r=c.getBoundingClientRect(), x=(e.clientX-r.left)/r.width-.5, y=(e.clientY-r.top)/r.height-.5;
+      c.style.transform='perspective(800px) rotateY('+(x*7)+'deg) rotateX('+(-y*7)+'deg) translateY(-4px)';
+    });
+    c.addEventListener('pointerleave',()=>{ c.style.transform=''; });
+  });
+}
+</script>
+</body>
+</html>
