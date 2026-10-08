@@ -1,0 +1,42 @@
+/* AP BODY SHOP — taller industrial, chispas y metal */
+body{font-family:'Inter',sans-serif}
+.logo,.sec-title{font-family:'Chakra Petch',sans-serif;letter-spacing:.02em}
+
+.ap-hero{position:relative;overflow:hidden;padding:130px 0 80px;text-align:center;
+  background:linear-gradient(180deg,#101216 0%,#16181d 60%,#1c1f26 100%)}
+.ap-hero::before{content:"";position:absolute;inset:0;pointer-events:none;opacity:.5;
+  background:repeating-linear-gradient(-45deg,transparent 0 18px,rgba(255,106,0,.05) 18px 36px)}
+.ap-hero-inner{position:relative;z-index:2}
+.ap-hero h1{font-family:'Chakra Petch',sans-serif;font-weight:700;font-size:clamp(2.6rem,10vw,5.2rem);line-height:1;margin:16px 0 12px}
+.ap-metal{background:linear-gradient(180deg,#fdfdfd 20%,#9aa3b2 48%,#e8ecf3 52%,#6b7484 80%);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+  filter:drop-shadow(0 3px 0 rgba(0,0,0,.6))}
+.ap-years{display:inline-flex;align-items:center;gap:12px;border:2px solid var(--accent);border-radius:16px;padding:10px 22px;background:rgba(255,106,0,.08)}
+.ap-years strong{font-family:'Chakra Petch',sans-serif;font-size:2.6rem;color:var(--accent);line-height:1}
+.ap-years span{font-size:.85rem;text-transform:uppercase;letter-spacing:.12em;color:var(--muted);text-align:left}
+
+/* chispas del taller */
+.ap-sparks{position:absolute;inset:0;pointer-events:none;overflow:hidden}
+.ap-sparks span{position:absolute;bottom:8%;width:4px;height:14px;border-radius:2px;background:var(--accent);
+  box-shadow:0 0 10px var(--accent);opacity:0;animation:apSpark 3.2s ease-out infinite}
+.ap-sparks span:nth-child(1){left:12%;animation-delay:0s}.ap-sparks span:nth-child(2){left:28%;animation-delay:.9s}
+.ap-sparks span:nth-child(3){left:47%;animation-delay:1.7s}.ap-sparks span:nth-child(4){left:63%;animation-delay:.4s}
+.ap-sparks span:nth-child(5){left:76%;animation-delay:2.3s}.ap-sparks span:nth-child(6){left:86%;animation-delay:1.2s}
+.ap-sparks span:nth-child(7){left:38%;animation-delay:2.8s}
+@keyframes apSpark{0%{transform:translateY(0) scaleY(1);opacity:0}15%{opacity:1}100%{transform:translateY(-46vh) scaleY(.4);opacity:0}}
+
+.ap-compare{position:relative;max-width:640px;margin:36px auto 0}
+.ap-compare img{width:100%;height:min(58vw,410px);object-fit:cover;border-radius:16px;
+  clip-path:polygon(0 0,100% 0,96% 100%,4% 100%);box-shadow:0 24px 70px rgba(0,0,0,.6);border:1px solid #333a46}
+.ap-stamp{position:absolute;bottom:14px;left:50%;transform:translateX(-50%) rotate(-2deg);background:var(--accent);
+  color:#1c1000;font-weight:800;font-size:.8rem;letter-spacing:.06em;padding:8px 18px;border-radius:6px;
+  box-shadow:0 8px 22px rgba(255,106,0,.45);white-space:nowrap}
+
+.theme-ap-body-shop{--bg:#101216;--bg2:#16181d;--card:#1d2129;--ink:#f4f6fa;--muted:#9aa3b2;--line:#2c333f;--accent:#ff6a00}
+.theme-ap-body-shop .header{background:rgba(16,18,22,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.theme-ap-body-shop .hero-sub{color:var(--muted)}
+.theme-ap-body-shop .btn-accent{background:var(--accent);color:#1c1000}
+.theme-ap-body-shop .btn-ghost{border:2px solid var(--accent);color:var(--accent);background:transparent}
+.theme-ap-body-shop .kicker{color:var(--accent)}
+
+@media(max-width:640px){.ap-hero{padding:110px 0 64px}.ap-stamp{font-size:.7rem}}

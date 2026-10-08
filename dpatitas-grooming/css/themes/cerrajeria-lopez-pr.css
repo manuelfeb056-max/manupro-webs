@@ -1,0 +1,37 @@
+/* CERRAJERÍA LÓPEZ PR — la llave maestra, latón sobre acero */
+body{font-family:'Inter',sans-serif}
+.logo,.sec-title{font-family:'Oswald',sans-serif;letter-spacing:.03em}
+
+.cl-hero{position:relative;overflow:hidden;padding:130px 0 80px;text-align:center;
+  background:linear-gradient(180deg,#14161a 0%,#1d2126 70%,#23282f 100%)}
+.cl-hero::before{content:"";position:absolute;inset:0;pointer-events:none;opacity:.35;
+  background:repeating-linear-gradient(0deg,transparent 0 34px,rgba(201,162,39,.06) 34px 35px)}
+.cl-hero-inner{position:relative;z-index:2}
+.cl-hero h1{font-family:'Oswald',sans-serif;font-weight:600;font-size:clamp(2.6rem,10vw,5rem);line-height:1.05;margin:16px 0 10px;color:#f5f0dd}
+.cl-name{background:linear-gradient(100deg,#8a6f1e,#f2d675 40%,#c9a227 65%,#f7ecc8);-webkit-background-clip:text;background-clip:text;color:transparent}
+
+/* llave girando */
+.cl-keyring{width:120px;height:120px;margin:0 auto;color:var(--accent);animation:clTurn 7s ease-in-out infinite;transform-origin:50% 43%}
+.cl-keyring svg{width:100%;height:100%;filter:drop-shadow(0 10px 22px rgba(201,162,39,.35))}
+@keyframes clTurn{0%,100%{transform:rotate(-14deg)}50%{transform:rotate(14deg)}}
+
+/* llaves de fondo flotando */
+.cl-keys-bg{position:absolute;inset:0;pointer-events:none;overflow:hidden;font-size:2.2rem}
+.cl-keys-bg span{position:absolute;opacity:.14;animation:clFloat 8s ease-in-out infinite}
+.cl-keys-bg span:nth-child(1){top:14%;left:8%;transform:rotate(-20deg)}
+.cl-keys-bg span:nth-child(2){top:30%;right:10%;animation-delay:2s;transform:rotate(15deg)}
+.cl-keys-bg span:nth-child(3){bottom:24%;left:14%;animation-delay:4s;transform:rotate(30deg)}
+.cl-keys-bg span:nth-child(4){bottom:14%;right:16%;animation-delay:6s;transform:rotate(-30deg)}
+@keyframes clFloat{0%,100%{translate:0 0}50%{translate:0 -18px}}
+
+.cl-frame{max-width:600px;margin:36px auto 0}
+.cl-frame img{width:100%;height:min(58vw,400px);object-fit:cover;border-radius:16px;border:1px solid #3a3f47;box-shadow:0 24px 70px rgba(0,0,0,.6),inset 0 0 0 6px #14161a}
+
+.theme-cerrajeria-lopez-pr{--bg:#14161a;--bg2:#1d2126;--card:#22262d;--ink:#f5f0dd;--muted:#a09a86;--line:#333a43;--accent:#c9a227}
+.theme-cerrajeria-lopez-pr .header{background:rgba(20,22,26,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.theme-cerrajeria-lopez-pr .hero-sub{color:var(--muted)}
+.theme-cerrajeria-lopez-pr .btn-accent{background:linear-gradient(120deg,#a8842a,#e3c565);color:#241c05}
+.theme-cerrajeria-lopez-pr .btn-ghost{border:2px solid var(--accent);color:var(--accent);background:transparent}
+.theme-cerrajeria-lopez-pr .kicker{color:var(--accent)}
+
+@media(max-width:640px){.cl-hero{padding:110px 0 64px}.cl-keyring{width:96px;height:96px}}
