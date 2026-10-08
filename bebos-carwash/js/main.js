@@ -117,7 +117,7 @@
       var msg = document.getElementById('fMsg').value.trim();
       var waLink = form.closest('body').querySelector('[data-track="wa_float"]');
       var waNum = '17872987767';
-      var text = 'Hola Bebo's CarWash, soy ' + nombre + '. Me interesa: ' + servicio + '.'
+      var text = 'Hola Bebo\'s CarWash, soy ' + nombre + '. Me interesa: ' + servicio + '.'
         + (msg ? ' ' + msg : '');
       window.open('https://wa.me/' + waNum + '?text=' + encodeURIComponent(text), '_blank');
     });
