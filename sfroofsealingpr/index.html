@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>S&amp;F RoofsealingPR · Sellado de techos en Guayama</title>
+<meta name="description" content="S&F RoofsealingPR: sellado de techos con elastomérico, lavado de techo, corrección de grietas, primer y mantenimiento. Garantía de 3 a 12 años. Guayama. Tel 939-401-4682.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script type="importmap">{"imports":{"three":"https://unpkg.com/three@0.160.0/build/three.module.js"}}</script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --bg:#14100a; --bg2:#1a140b; --card:#1d160c; --ink:#faf3e3; --muted:#c4ab7d;
+  --gd:#e8b73a; --gd2:#f7dd8e; --line:rgba(232,183,58,.18);
+  --wa:#25d366;
+}
+html{scroll-behavior:smooth}
+body{font-family:'Manrope',system-ui,sans-serif;background:var(--bg);color:var(--ink);overflow-x:hidden;line-height:1.6}
+img{max-width:100%}
+a{color:inherit}
+.wrap{max-width:1100px;margin:0 auto;padding:0 20px}
+header{position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(20,16,10,.82);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.hd-in{display:flex;align-items:center;gap:14px;padding:10px 20px;max-width:1100px;margin:0 auto}
+.logo-ring{width:58px;height:58px;border-radius:50%;padding:3px;background:conic-gradient(from 20deg,var(--gd),#6b4d10,var(--gd2),#6b4d10,var(--gd));box-shadow:0 0 22px rgba(232,183,58,.45)}
+.logo-ring img{width:100%;height:100%;border-radius:50%;object-fit:cover;display:block;background:#000}
+.brand{font-family:'Playfair Display',serif;font-size:1.3rem;font-weight:700}
+.brand small{display:block;font-family:'Manrope';font-size:.62rem;letter-spacing:.3em;color:var(--muted);font-weight:700}
+nav{margin-left:auto;display:flex;gap:18px;font-size:.85rem;font-weight:600}
+nav a{text-decoration:none;opacity:.85}
+nav a:hover{color:var(--gd)}
+@media(max-width:720px){nav{display:none}}
+.hero{position:relative;min-height:100svh;display:flex;align-items:flex-end;overflow:hidden;
+  background:radial-gradient(1100px 620px at 50% 115%,#2e2310 0%,var(--bg) 62%)}
+#gl{position:absolute;inset:0;width:100%;height:100%;display:block;touch-action:pan-y}
+.hero-fallback{position:absolute;inset:0;display:none;overflow:hidden}
+.hero-fallback img{width:100%;height:100%;object-fit:cover;animation:kenburns 18s ease-in-out infinite alternate;opacity:.55}
+@keyframes kenburns{from{transform:scale(1)}to{transform:scale(1.12)}}
+.no-webgl #gl{display:none}
+.no-webgl .hero-fallback{display:block}
+.hero-inner{position:relative;z-index:3;width:100%;padding:120px 20px 90px;text-align:center}
+.kicker{display:inline-block;font-size:.72rem;font-weight:800;letter-spacing:.3em;text-transform:uppercase;color:var(--gd2);
+  border:1px solid var(--line);padding:9px 20px;border-radius:999px;background:rgba(20,16,10,.55);margin-bottom:18px}
+h1{font-family:'Playfair Display',serif;font-size:clamp(2.6rem,9vw,5.4rem);line-height:1.05;
+  background:linear-gradient(180deg,#fff8e1 15%,var(--gd2) 50%,var(--gd) 85%);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+  filter:drop-shadow(0 6px 26px rgba(232,183,58,.35));margin-bottom:12px}
+.hero-sub{max-width:34rem;margin:0 auto 26px;color:var(--muted);font-size:1.02rem}
+.hero-sub strong{color:var(--ink)}
+.cta-row{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:15px 30px;border-radius:999px;font-weight:800;text-decoration:none;
+  transition:transform .18s ease,box-shadow .18s ease;will-change:transform}
+.btn-gd{background:linear-gradient(180deg,var(--gd2),var(--gd));color:#2e2004;box-shadow:0 12px 32px rgba(232,183,58,.35)}
+.btn-ghost{border:1px solid var(--line);color:var(--ink);background:rgba(20,16,10,.5)}
+.scroll-cue{position:absolute;left:50%;bottom:22px;transform:translateX(-50%);z-index:3;width:26px;height:44px;border:2px solid var(--muted);
+  border-radius:14px;opacity:.8}
+.scroll-cue::after{content:"";position:absolute;left:50%;top:8px;width:5px;height:9px;margin-left:-2.5px;border-radius:3px;background:var(--gd);animation:cue 1.8s ease-in-out infinite}
+@keyframes cue{0%{transform:translateY(0);opacity:1}70%{transform:translateY(14px);opacity:0}100%{opacity:0}}
+section{padding:84px 0;position:relative}
+.sec-head{text-align:center;margin-bottom:44px}
+.sec-kick{font-size:.72rem;font-weight:800;letter-spacing:.3em;text-transform:uppercase;color:var(--gd);margin-bottom:12px}
+h2{font-family:'Playfair Display',serif;font-size:clamp(1.9rem,5.5vw,3rem);line-height:1.1;font-weight:700}
+.sec-sub{color:var(--muted);max-width:36rem;margin:12px auto 0}
+.rv{opacity:0;transform:translateY(36px) scale(.985);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.7,.2,1)}
+.rv.in{opacity:1;transform:none}
+.svc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:22px}
+.svc{background:linear-gradient(180deg,var(--card),#150f07);border:1px solid var(--line);border-radius:20px;overflow:hidden;
+  transition:transform .25s ease,box-shadow .25s ease;will-change:transform}
+.svc:hover{box-shadow:0 24px 60px rgba(0,0,0,.5)}
+.svc .ph{height:210px;overflow:hidden;position:relative}
+.svc .ph img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .8s ease}
+.svc:hover .ph img{transform:scale(1.07)}
+.svc .n{position:absolute;top:14px;left:14px;background:rgba(20,16,10,.8);border:1px solid var(--line);color:var(--gd2);
+  font-weight:800;font-size:.8rem;padding:6px 14px;border-radius:999px;letter-spacing:.12em}
+.svc .tx{padding:22px 22px 26px}
+.svc h3{font-size:1.25rem;margin-bottom:8px}
+.svc p{color:var(--muted);font-size:.94rem}
+.gal{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px}
+.gal a{display:block;border-radius:14px;overflow:hidden;border:1px solid var(--line);aspect-ratio:1}
+.gal img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .6s ease}
+.gal a:hover img{transform:scale(1.08)}
+.faq{max-width:720px;margin:0 auto}
+.faq details{background:var(--card);border:1px solid var(--line);border-radius:14px;margin-bottom:12px;overflow:hidden}
+.faq summary{cursor:pointer;padding:18px 22px;font-weight:700;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:12px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";font-size:1.5rem;color:var(--gd);flex:none;transition:transform .25s}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq .a{padding:0 22px 20px;color:var(--muted);font-size:.95rem}
+.faq .a a{color:var(--gd2)}
+.contact{background:radial-gradient(800px 420px at 50% 0%,#2b2110 0%,var(--bg) 65%)}
+.cta-card{max-width:760px;margin:0 auto;text-align:center;background:linear-gradient(180deg,#221a0d,#161006);
+  border:1px solid var(--line);border-radius:28px;padding:56px 30px;position:relative;overflow:hidden}
+.cta-card::before{content:"";position:absolute;inset:-40%;background:conic-gradient(from 0deg,transparent 70%,rgba(232,183,58,.12) 85%,transparent 100%);animation:spinSlow 9s linear infinite;pointer-events:none}
+@keyframes spinSlow{to{transform:rotate(360deg)}}
+.cta-card>*{position:relative}
+.shield-emoji{font-size:3rem;filter:drop-shadow(0 0 18px rgba(232,183,58,.8));animation:shieldBob 2.6s ease-in-out infinite}
+@keyframes shieldBob{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+.tel-big{display:inline-block;font-family:'Playfair Display',serif;font-size:clamp(1.8rem,7vw,3rem);font-weight:700;color:var(--gd2);text-decoration:none;margin:14px 0 6px;
+  text-shadow:0 0 30px rgba(232,183,58,.5)}
+.tel-big:hover{color:#fff}
+.chips{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin:20px 0 26px}
+.chip{font-size:.82rem;font-weight:700;border:1px solid var(--line);border-radius:999px;padding:9px 18px;color:var(--muted);text-decoration:none;background:rgba(20,16,10,.5)}
+.chip:hover{color:var(--gd2);border-color:var(--gd)}
+.map{border-radius:18px;overflow:hidden;border:1px solid var(--line);margin-top:8px}
+.map iframe{width:100%;height:300px;border:0;display:block;filter:sepia(.5) saturate(1.1)}
+footer{border-top:1px solid var(--line);padding:44px 0 110px;background:#0d0904}
+.ft{display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.ft .logo-ring{width:52px;height:52px}
+.ft small{color:var(--muted);display:block;font-size:.8rem}
+.soc{margin-left:auto;display:flex;gap:12px}
+.soc a{width:52px;height:52px;border-radius:16px;display:grid;place-items:center;background:linear-gradient(145deg,#2a2113,#161006);
+  border:1px solid var(--line);box-shadow:0 8px 20px rgba(0,0,0,.4),inset 0 1px 0 rgba(255,255,255,.08);
+  transform:perspective(400px) rotateX(8deg);transition:transform .2s}
+.soc a:hover{transform:perspective(400px) rotateX(0) translateY(-3px)}
+.soc svg{width:24px;height:24px;fill:var(--gd2)}
+.copy{text-align:center;color:#7d6b45;font-size:.78rem;margin-top:30px}
+.wa-float{position:fixed;right:18px;bottom:18px;z-index:60;width:62px;height:62px;border-radius:50%;
+  background:radial-gradient(circle at 30% 30%,#3ddc74,var(--wa));display:grid;place-items:center;
+  box-shadow:0 10px 30px rgba(37,211,102,.45);animation:waPulse 2.4s ease-in-out infinite}
+.wa-float svg{width:32px;height:32px;fill:#fff}
+@keyframes waPulse{0%,100%{transform:scale(1)}50%{transform:scale(1.07)}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<header>
+  <div class="hd-in">
+    <span class="logo-ring"><img src="img/logo.jpg" alt="S&amp;F RoofsealingPR"></span>
+    <span class="brand">S&amp;F Roofsealing<small>GUAYAMA · PR</small></span>
+    <nav>
+      <a href="#servicios">Servicios</a><a href="#galeria">Antes y después</a><a href="#faq">Preguntas</a><a href="#contacto">Contacto</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero" id="inicio">
+  <canvas id="gl"></canvas>
+  <div class="hero-fallback"><img src="img/10.jpg" alt="Techo sellado por S&amp;F RoofsealingPR"></div>
+  <div class="hero-inner">
+    <span class="kicker">Guayama · Garantía 3 a 12 años</span>
+    <h1>S&amp;F<br>Roofsealing</h1>
+    <p class="hero-sub">Sellado de techos con <strong>elastomérico</strong> y garantía escrita de <strong>3 a 12 años</strong>. Tu casa, bajo un escudo que no falla.</p>
+    <div class="cta-row">
+      <a class="btn btn-gd mg" href="#servicios">Ver servicios</a>
+      <a class="btn btn-ghost mg" href="tel:+19394014682">939-401-4682</a>
+    </div>
+  </div>
+  <div class="scroll-cue" aria-hidden="true"></div>
+</section>
+
+<section id="servicios">
+  <div class="wrap">
+    <div class="sec-head rv"><p class="sec-kick">Con garantía</p><h2>Servicios</h2>
+    <p class="sec-sub">Proceso completo: lavado, primer, sellado y mantenimiento.</p></div>
+    <div class="svc-grid">
+      <article class="svc rv"><div class="ph"><span class="n">01</span><img src="img/10.jpg" alt="Sellado con elastomérico" loading="lazy"></div><div class="tx"><h3>Sellado elastomérico</h3><p>Sellado de techos con elastomérico de alta elasticidad y duración.</p></div></article>
+      <article class="svc rv"><div class="ph"><span class="n">02</span><img src="img/03.jpg" alt="Lavado de techo" loading="lazy"></div><div class="tx"><h3>Lavado de techo</h3><p>Lavado a presión que deja la superficie lista para el sellado.</p></div></article>
+      <article class="svc rv"><div class="ph"><span class="n">03</span><img src="img/04.jpg" alt="Corrección de grietas" loading="lazy"></div><div class="tx"><h3>Corrección de grietas</h3><p>Reparación de grietas y puntos débiles antes de sellar.</p></div></article>
+      <article class="svc rv"><div class="ph"><span class="n">04</span><img src="img/08.jpg" alt="Primer y mantenimiento" loading="lazy"></div><div class="tx"><h3>Primer y mantenimiento</h3><p>Primer de adherencia y mantenimiento para alargar la vida del sellado.</p></div></article>
+      <article class="svc rv"><div class="ph"><span class="n">05</span><img src="img/05.jpg" alt="Garantía de 3 a 12 años" loading="lazy"></div><div class="tx"><h3>Garantía 3-12 años</h3><p>Respaldo escrito de 3 a 12 años según el sistema aplicado.</p></div></article>
+    </div>
+  </div>
+</section>
+
+<section id="galeria">
+  <div class="wrap">
+    <div class="sec-head rv"><p class="sec-kick">Fotos reales</p><h2>Antes y después</h2>
+    <p class="sec-sub">Trabajos documentados de S&amp;F RoofsealingPR.</p></div>
+    <div class="gal">
+      <a class="rv" href="img/01.jpg"><img src="img/01.jpg" alt="Trabajo real de S&amp;F" loading="lazy"></a>
+      <a class="rv" href="img/02.jpg"><img src="img/02.jpg" alt="Trabajo real de S&amp;F" loading="lazy"></a>
+      <a class="rv" href="img/03.jpg"><img src="img/03.jpg" alt="Trabajo real de S&amp;F" loading="lazy"></a>
+      <a class="rv" href="img/04.jpg"><img src="img/04.jpg" alt="Trabajo real de S&amp;F" loading="lazy"></a>
+      <a class="rv" href="img/05.jpg"><img src="img/05.jpg" alt="Trabajo real de S&amp;F" loading="lazy"></a>
+      <a class="rv" href="img/06.jpg"><img src="img/06.jpg" alt="Trabajo real de S&amp;F" loading="lazy"></a>
+      <a class="rv" href="img/07.jpg"><img src="img/07.jpg" alt="Trabajo real de S&amp;F" loading="lazy"></a>
+      <a class="rv" href="img/08.jpg"><img src="img/08.jpg" alt="Trabajo real de S&amp;F" loading="lazy"></a>
+      <a class="rv" href="img/09.jpg"><img src="img/09.jpg" alt="Trabajo real de S&amp;F" loading="lazy"></a>
+      <a class="rv" href="img/10.jpg"><img src="img/10.jpg" alt="Trabajo real de S&amp;F" loading="lazy"></a>
+    </div>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="wrap">
+    <div class="sec-head rv"><p class="sec-kick">Dudas</p><h2>Preguntas frecuentes</h2></div>
+    <div class="faq">
+      <details class="rv"><summary>¿Qué servicios ofrecen?</summary><div class="a">Sellado de techos con elastomérico, lavado de techo, corrección de grietas, aplicación de primer y mantenimiento.</div></details>
+      <details class="rv"><summary>¿Dan garantía?</summary><div class="a">Sí: garantía de 3 a 12 años según el sistema de sellado aplicado.</div></details>
+      <details class="rv"><summary>¿Lavan el techo antes de sellar?</summary><div class="a">Sí, el lavado de techo es parte del proceso para que el sellador adhiera bien.</div></details>
+      <details class="rv"><summary>¿Cómo los contacto?</summary><div class="a">Llama al <a href="tel:+19394014682">939-401-4682</a> o síguelos en Instagram <a href="https://www.instagram.com/sfroofsealingpr">@sfroofsealingpr</a>.</div></details>
+    </div>
+  </div>
+</section>
+
+<section id="contacto" class="contact">
+  <div class="wrap">
+    <div class="sec-head rv"><p class="sec-kick">Cotiza hoy</p><h2>Tu techo, bajo escudo</h2>
+    <p class="sec-sub">Llama y pide tu cotización con garantía escrita.</p></div>
+    <div class="cta-card rv">
+      <div class="shield-emoji">🛡️</div>
+      <h2>Llama ahora</h2>
+      <a class="tel-big mg" href="tel:+19394014682">939-401-4682</a>
+      <div class="chips">
+        <span class="chip">Guayama, PR</span>
+        <span class="chip">Garantía 3-12 años</span>
+        <a class="chip" href="https://www.instagram.com/sfroofsealingpr">Instagram @sfroofsealingpr</a>
+      </div>
+      <div class="map"><iframe title="Mapa - Guayama, Puerto Rico" src="https://www.google.com/maps?q=Guayama,Puerto+Rico&output=embed" loading="lazy"></iframe></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="ft">
+      <span class="logo-ring"><img src="img/logo.jpg" alt="S&amp;F RoofsealingPR"></span>
+      <div><strong>S&amp;F RoofsealingPR</strong><small>Sellado de techos · Guayama, Puerto Rico</small></div>
+      <div class="soc">
+        <a href="https://www.instagram.com/sfroofsealingpr" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 3.3.1 4.8 1.7 4.9 4.9.1 1.3.1 1.6.1 4.8s0 3.6-.1 4.8c-.1 3.2-1.7 4.8-4.9 4.9-1.3.1-1.6.1-4.9.1s-3.6 0-4.9-.1c-3.3-.1-4.8-1.7-4.9-4.9C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.8C2.4 4 4 2.4 7.2 2.3 8.4 2.2 8.8 2.2 12 2.2zm0 3.6a6.2 6.2 0 1 0 0 12.4 6.2 6.2 0 0 0 0-12.4zm0 10.2a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.4-10.5a1.4 1.4 0 1 0 0 2.9 1.4 1.4 0 0 0 0-2.9z"/></svg></a>
+        <a href="tel:+19394014682" aria-label="Llamar"><svg viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z"/></svg></a>
+      </div>
+    </div>
+    <p class="copy">S&amp;F RoofsealingPR · Guayama, Puerto Rico · Web por Manupro</p>
+  </div>
+</footer>
+
+<a class="wa-float" href="https://wa.me/19394014682?text=Hola%20S%26F%20Roofsealing%2C%20quiero%20cotizar%20el%20sellado%20de%20mi%20techo." aria-label="WhatsApp"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.6-6.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.3-.6.8-.8 1-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4 0-.5.1-.7l.4-.5c.1-.2.1-.3 0-.5L9.4 8c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.2-.7.5-.2.3-.9.9-.9 2.2s.9 2.5 1.1 2.7c.1.2 1.8 2.8 4.4 3.9 1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2 0-.1-.2-.1-.4-.2z"/></svg></a>
+
+<script type="module">
+import * as THREE from 'three';
+const isMobile = matchMedia('(max-width:720px)').matches;
+const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+let started = false;
+function fallback(){ document.body.classList.add('no-webgl'); }
+setTimeout(()=>{ if(!started) fallback(); }, 5000);
+try{
+  if(!window.WebGLRenderingContext) throw 0;
+  const canvas = document.getElementById('gl');
+  const renderer = new THREE.WebGLRenderer({canvas, alpha:true, antialias:!isMobile});
+  renderer.setPixelRatio(Math.min(devicePixelRatio, isMobile?1.5:2));
+  const scene = new THREE.Scene();
+  scene.fog = new THREE.FogExp2(0x14100a, 0.032);
+  const camera = new THREE.PerspectiveCamera(40, 1, 0.1, 80);
+  camera.position.set(0, 1.4, 9.2);
+  scene.add(new THREE.AmbientLight(0x8a6f4a, 0.55));
+  const key = new THREE.DirectionalLight(0xffe9b8, 1.5); key.position.set(4, 7, 5); scene.add(key);
+  const goldGlow = new THREE.PointLight(0xe8b73a, 50, 20); goldGlow.position.set(0, 1.5, 2); scene.add(goldGlow);
+
+  // --- la casa ---
+  const house = new THREE.Group();
+  const wallMat = new THREE.MeshStandardMaterial({color:0x3a2c17, roughness:.8});
+  const walls = new THREE.Mesh(new THREE.BoxGeometry(3.2, 1.9, 3.2), wallMat);
+  walls.position.y = -1.05; house.add(walls);
+  const roofMat = new THREE.MeshStandardMaterial({color:0x6b4d1c, roughness:.45, metalness:.3,
+    emissive:0xe8b73a, emissiveIntensity:.12});
+  const roof = new THREE.Mesh(new THREE.ConeGeometry(2.75, 1.5, 4), roofMat);
+  roof.position.y = 0.65; roof.rotation.y = Math.PI/4; house.add(roof);
+  const winMat = new THREE.MeshBasicMaterial({color:0xffe9a8});
+  for(const [x, z, ry] of [[-0.8, 1.61, 0],[0.8, 1.61, 0]]){
+    const w = new THREE.Mesh(new THREE.PlaneGeometry(0.55, 0.7), winMat);
+    w.position.set(x, -0.9, z); w.rotation.y = ry; house.add(w);
+  }
+  const door = new THREE.Mesh(new THREE.PlaneGeometry(0.7, 1.1), new THREE.MeshStandardMaterial({color:0x241a0c, roughness:.9}));
+  door.position.set(0, -1.35, 1.61); house.add(door);
+  scene.add(house);
+
+  // --- el escudo dorado ---
+  const sh = new THREE.Shape();
+  sh.moveTo(0, 1.15);
+  sh.bezierCurveTo(0.75, 1.05, 1.05, 0.95, 1.05, 0.7);
+  sh.bezierCurveTo(1.05, -0.25, 0.55, -0.75, 0, -1.2);
+  sh.bezierCurveTo(-0.55, -0.75, -1.05, -0.25, -1.05, 0.7);
+  sh.bezierCurveTo(-1.05, 0.95, -0.75, 1.05, 0, 1.15);
+  const shieldGeo = new THREE.ExtrudeGeometry(sh, {depth:0.28, bevelEnabled:true, bevelThickness:0.08, bevelSize:0.08, bevelSegments:3});
+  shieldGeo.center();
+  const shieldMat = new THREE.MeshStandardMaterial({color:0xd9a521, metalness:.95, roughness:.28,
+    emissive:0xe8b73a, emissiveIntensity:.35});
+  const shield = new THREE.Mesh(shieldGeo, shieldMat);
+  shield.scale.setScalar(1.7);
+  const shieldGroup = new THREE.Group();
+  shieldGroup.add(shield);
+  // checkmark dorado brillante
+  const checkMat = new THREE.MeshBasicMaterial({color:0xfff3c4});
+  const c1 = new THREE.Mesh(new THREE.BoxGeometry(0.16, 0.62, 0.1), checkMat);
+  c1.position.set(-0.3, -0.05, 0.28); c1.rotation.z = 0.7;
+  const c2 = new THREE.Mesh(new THREE.BoxGeometry(0.16, 1.05, 0.1), checkMat);
+  c2.position.set(0.22, 0.12, 0.28); c2.rotation.z = -0.75;
+  shieldGroup.add(c1, c2);
+  scene.add(shieldGroup);
+
+  // anillo de impacto dorado
+  const ring = new THREE.Mesh(new THREE.RingGeometry(2.2, 2.45, 64),
+    new THREE.MeshBasicMaterial({color:0xe8b73a, transparent:true, opacity:0, side:THREE.DoubleSide,
+      blending:THREE.AdditiveBlending, depthWrite:false}));
+  ring.rotation.x = -Math.PI/2; ring.position.y = -2.0;
+  scene.add(ring);
+  let ringLife = 0;
+
+  // chispas doradas
+  const pn = isMobile?50:110;
+  const ppos = new Float32Array(pn*3), pspd = new Float32Array(pn);
+  for(let i=0;i<pn;i++){ ppos[i*3]=(Math.random()-.5)*12; ppos[i*3+1]=-2+Math.random()*7; ppos[i*3+2]=-2-Math.random()*4; pspd[i]=.2+Math.random()*.5; }
+  const pgeo = new THREE.BufferGeometry(); pgeo.setAttribute('position', new THREE.BufferAttribute(ppos,3));
+  const sparks = new THREE.Points(pgeo, new THREE.PointsMaterial({color:0xf7dd8e, size:.06, transparent:true, opacity:.8,
+    blending:THREE.AdditiveBlending, depthWrite:false}));
+  scene.add(sparks);
+
+  // ciclo: el escudo desciende y se posa
+  let cyc = 0;
+  const CYC_LEN = 7;
+  function shieldPose(k){
+    // k 0..1 : 0 arriba, 1 posado
+    const e = 1-Math.pow(1-k, 3);
+    shieldGroup.position.y = 5.2 - e*4.6;
+    shieldGroup.position.z = 2.2 - e*0.4;
+    shieldGroup.rotation.y = Math.sin(k*Math.PI*2)*0.12;
+    shieldMat.emissiveIntensity = .35 + e*.5;
+  }
+
+  // parallax mouse / gyro
+  let tx=0, ty=0;
+  addEventListener('pointermove', e=>{ tx=(e.clientX/innerWidth-.5); ty=(e.clientY/innerHeight-.5); }, {passive:true});
+  addEventListener('deviceorientation', e=>{
+    if(e.gamma==null) return;
+    tx = Math.max(-.5, Math.min(.5, e.gamma/45)); ty = Math.max(-.5, Math.min(.5, (e.beta-45)/45));
+  });
+  function size(){
+    const w = canvas.clientWidth, h = canvas.clientHeight;
+    renderer.setSize(w, h, false); camera.aspect = w/h; camera.updateProjectionMatrix();
+  }
+  size(); addEventListener('resize', size);
+  const hero = document.querySelector('.hero');
+  const heroInner = document.querySelector('.hero-inner');
+  let visible = true;
+  new IntersectionObserver(en=>{ visible = en[0].isIntersecting; }).observe(hero);
+  document.body.classList.remove('no-webgl');
+  const clock = new THREE.Clock();
+  started = true;
+  (function loop(){
+    requestAnimationFrame(loop);
+    if(!visible || reduced){ renderer.render(scene, camera); return; }
+    const t = clock.getElapsedTime(), dt = Math.min(0.05, clock.getDelta()+0.016);
+    cyc = (cyc + dt) % CYC_LEN;
+    const k = Math.min(1, cyc/2.6);
+    shieldPose(k);
+    if(k >= 1){
+      shieldGroup.position.y = 0.6 + Math.sin(t*1.4)*0.09;
+      if(ringLife <= 0 && cyc > 2.7 && cyc < 3.1) ringLife = 1;
+      goldGlow.intensity = 50 + Math.sin(t*3)*14;
+      roofMat.emissiveIntensity = .12 + Math.sin(t*3)*.06 + .12;
+    } else {
+      goldGlow.intensity = 40;
+      roofMat.emissiveIntensity = .12;
+    }
+    if(ringLife > 0){
+      ringLife -= dt*0.9;
+      ring.scale.setScalar(ring.scale.x + dt*2.2);
+      ring.material.opacity = Math.max(0, ringLife)*0.8;
+      if(ringLife <= 0) ring.scale.setScalar(1);
+    }
+    const pa = pgeo.attributes.position;
+    for(let i=0;i<pn;i++){ pa.array[i*3+1] += pspd[i]*dt; pa.array[i*3] += Math.sin(t+i)*0.0015; if(pa.array[i*3+1]>5.5) pa.array[i*3+1]=-2; }
+    pa.needsUpdate = true;
+    house.rotation.y = Math.sin(t*0.25)*0.06;
+    camera.position.x += ((tx*1.5) - camera.position.x)*0.03;
+    camera.position.y += ((1.4 - ty*0.9) - camera.position.y)*0.03;
+    camera.lookAt(0, 0.2, 0);
+    const sy = scrollY;
+    heroInner.style.transform = `translateY(${sy*0.22}px)`;
+    heroInner.style.opacity = Math.max(0, 1 - sy/(innerHeight*0.75));
+    renderer.render(scene, camera);
+  })();
+}catch(e){ fallback(); }
+</script>
+<script>
+const io = new IntersectionObserver(es=>es.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} }),{threshold:.12});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+if(matchMedia('(pointer:fine)').matches){
+  document.querySelectorAll('.mg').forEach(b=>{
+    b.addEventListener('pointermove',e=>{
+      const r=b.getBoundingClientRect();
+      b.style.transform=`translate(${(e.clientX-r.left-r.width/2)*.18}px,${(e.clientY-r.top-r.height/2)*.28}px)`;
+    });
+    b.addEventListener('pointerleave',()=>{ b.style.transform=''; });
+  });
+  document.querySelectorAll('.svc').forEach(c=>{
+    c.addEventListener('pointermove',e=>{
+      const r=c.getBoundingClientRect(), x=(e.clientX-r.left)/r.width-.5, y=(e.clientY-r.top)/r.height-.5;
+      c.style.transform=`perspective(800px) rotateY(${x*7}deg) rotateX(${-y*7}deg) translateY(-4px)`;
+    });
+    c.addEventListener('pointerleave',()=>{ c.style.transform=''; });
+  });
+}
+</script>
+</body>
+</html>
