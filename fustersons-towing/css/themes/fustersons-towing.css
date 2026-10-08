@@ -37,3 +37,16 @@ body{font-family:'Inter',sans-serif}
 .theme-fustersons-towing .kicker{color:var(--accent)}
 
 @media(max-width:640px){.ft-hero{padding:110px 0 64px}.ft-badge247{width:80px;height:80px;font-size:1.2rem}}
+
+/* ---- contacto único ---- */
+.theme-fustersons-towing .ct-beacon{background:#0c0e12}
+.theme-fustersons-towing .ct-beacon-light{display:flex;justify-content:center;gap:18px;margin-bottom:6px}
+.theme-fustersons-towing .ct-beacon-light span{width:46px;height:30px;border-radius:8px 8px 4px 4px;animation:beacon 1s steps(2) infinite}
+.theme-fustersons-towing .ct-beacon-light span:first-child{background:#ff2d2d;box-shadow:0 0 26px 8px rgba(255,45,45,.7)}
+.theme-fustersons-towing .ct-beacon-light span:last-child{background:#2d7bff;box-shadow:0 0 26px 8px rgba(45,123,255,.7);animation-delay:.5s}
+@keyframes beacon{0%,100%{opacity:1}50%{opacity:.25}}
+.theme-fustersons-towing .ct-beacon-phone{display:inline-block;font-size:clamp(2.1rem,9vw,3.6rem);font-weight:900;color:#ffd23f;text-decoration:none;letter-spacing:.03em;margin:12px 0;text-shadow:0 0 30px rgba(255,210,63,.4)}
+.theme-fustersons-towing .ct-beacon-sub{color:#9aa7b2}
+.theme-fustersons-towing .ct-beacon-sub a{color:#ffd23f;font-weight:700}
+.theme-fustersons-towing .ct-beacon-map{max-width:600px;margin:24px auto 0;border:3px solid #232a33;border-radius:14px;overflow:hidden}
+.theme-fustersons-towing .ct-beacon-map iframe{width:100%;height:220px;border:0;display:block}

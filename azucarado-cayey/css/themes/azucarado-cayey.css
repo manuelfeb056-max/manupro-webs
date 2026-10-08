@@ -37,3 +37,13 @@ body{font-family:'Nunito',sans-serif}
   .prod{transform:rotateY(calc(var(--i)*90deg)) translateZ(125px)}
   .prod img{width:160px;height:160px}
 }
+
+/* ---- contacto único ---- */
+.theme-azucarado-cayey .ct-recipe-card{background:#fff8f0;color:#5a3a22;max-width:600px;margin:0 auto;padding:36px 34px;border-radius:6px;box-shadow:0 24px 60px rgba(120,60,20,.25);background-image:repeating-linear-gradient(#fff8f0 0 30px,#f3e4cf 30px 31px);line-height:31px}
+.theme-azucarado-cayey .ct-recipe-kick{font-size:.72rem;letter-spacing:.3em;text-transform:uppercase;color:#c07f3e;font-weight:700}
+.theme-azucarado-cayey .ct-recipe-card h2{font-size:2rem;margin:6px 0 4px;line-height:1.2}
+.theme-azucarado-cayey .ct-recipe-steps{margin:16px 0 8px 22px;padding:0}
+.theme-azucarado-cayey .ct-recipe-steps li{margin:8px 0;font-size:1.02rem;line-height:1.6}
+.theme-azucarado-cayey .ct-recipe-steps a{color:#b35a1e;font-weight:700}
+.theme-azucarado-cayey .ct-recipe-note{font-style:italic;color:#8a6a45}
+.theme-azucarado-cayey .ct-recipe-map iframe{width:100%;height:210px;border:0;border-radius:10px;margin-top:14px}

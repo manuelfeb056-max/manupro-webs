@@ -12,3 +12,14 @@ body{font-family:'Saira',sans-serif}
 .r1{top:9px;left:9px}.r2{top:9px;right:9px}.r3{bottom:9px;left:9px}.r4{bottom:9px;right:9px}
 @media(max-width:860px){.hero-ind-grid{grid-template-columns:1fr}}
 /* logo: cuadrado industrial */
+
+/* ---- contacto único ---- */
+.theme-cob-mufflers .ct-pipe-run{display:flex;align-items:stretch;gap:0;margin:26px 0;flex-wrap:wrap}
+.theme-cob-mufflers .ct-pipe-seg{flex:1 1 200px;background:linear-gradient(180deg,#3a3f45,#22262b);border:2px solid #4a5058;padding:22px 18px;text-align:center}
+.theme-cob-mufflers .ct-pipe-seg:first-child{border-radius:40px 0 0 40px}
+.theme-cob-mufflers .ct-pipe-seg:last-child{border-radius:0 40px 40px 0}
+.theme-cob-mufflers .ct-pipe-seg span{display:block;font-size:.72rem;letter-spacing:.26em;text-transform:uppercase;color:#8a9199;margin-bottom:8px}
+.theme-cob-mufflers .ct-pipe-seg a{color:#ffb400;font-weight:800;font-size:1.15rem;text-decoration:none}
+.theme-cob-mufflers .ct-pipe-seg em{font-style:normal;color:#cfd6dc;font-weight:600}
+.theme-cob-mufflers .ct-pipe-joint{width:26px;background:repeating-linear-gradient(180deg,#565d66 0 10px,#33373d 10px 20px);align-self:stretch}
+.theme-cob-mufflers .ct-pipe-map iframe{width:100%;height:220px;border:0;border-radius:14px}

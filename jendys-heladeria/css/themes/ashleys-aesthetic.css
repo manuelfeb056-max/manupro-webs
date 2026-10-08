@@ -36,3 +36,16 @@ body{font-family:'Jost',sans-serif}
 .theme-ashleys-aesthetic .btn-ghost{border:2px solid var(--accent);color:var(--accent);background:transparent}
 
 @media(max-width:640px){.aa-hero{padding:110px 0 64px}}
+
+/* ---- contacto único ---- */
+.theme-ashleys-aesthetic .ct-mirror-frame{position:relative;max-width:520px;margin:26px auto 0;background:linear-gradient(160deg,#f7dfe9,#f3c9da);border-radius:50%/46%;padding:64px 40px;text-align:center;box-shadow:0 30px 70px rgba(190,90,130,.35),inset 0 0 0 10px #fff,inset 0 0 0 14px #e8a8c2}
+.theme-ashleys-aesthetic .ct-bulb{position:absolute;width:14px;height:14px;border-radius:50%;background:#fff8d6;box-shadow:0 0 12px 4px rgba(255,240,180,.9);animation:bulbGlow 2.4s ease-in-out infinite}
+@keyframes bulbGlow{0%,100%{opacity:1}50%{opacity:.45}}
+.theme-ashleys-aesthetic .ct-mirror-in{position:relative}
+.theme-ashleys-aesthetic .ct-mirror-label{font-size:.75rem;letter-spacing:.3em;text-transform:uppercase;color:#a35a7d}
+.theme-ashleys-aesthetic .ct-mirror-phone{font-size:clamp(1.6rem,6vw,2.2rem);font-weight:800;color:#5c2b41;text-decoration:none}
+.theme-ashleys-aesthetic .ct-mirror-ig{margin-top:10px}
+.theme-ashleys-aesthetic .ct-mirror-ig a{color:#b04a78;font-weight:700}
+.theme-ashleys-aesthetic .ct-mirror-town{color:#8a5a6e;font-size:.9rem;margin-top:6px}
+.theme-ashleys-aesthetic .ct-mirror-map{max-width:520px;margin:26px auto 0}
+.theme-ashleys-aesthetic .ct-mirror-map iframe{width:100%;height:210px;border:0;border-radius:18px}

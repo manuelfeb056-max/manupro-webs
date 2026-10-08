@@ -28,3 +28,13 @@ body{font-family:'Raleway',sans-serif}
   .ta-frame img{height:300px}
   .ta-hero{padding:130px 0 70px}
 }
+
+/* ---- contacto único ---- */
+.theme-tattoo-studio-1711 .ct-flash-wall{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;margin:28px 0}
+.theme-tattoo-studio-1711 .ct-flash-card{background:#111;border:2px solid #2a2a2e;padding:28px 20px;text-decoration:none;color:#f2ede4;position:relative;transition:transform .25s,border-color .25s}
+.theme-tattoo-studio-1711 .ct-flash-card:hover{transform:translateY(-6px) rotate(-1deg);border-color:var(--accent)}
+.theme-tattoo-studio-1711 .ct-flash-n{position:absolute;top:10px;right:14px;font-size:.75rem;color:#555;letter-spacing:.2em}
+.theme-tattoo-studio-1711 .ct-flash-card strong{display:block;margin:8px 0;font-size:1.05rem}
+.theme-tattoo-studio-1711 .ct-flash-card em{font-style:normal;color:var(--accent);font-weight:600;word-break:break-word}
+.theme-tattoo-studio-1711 .ct-flash-map{max-width:600px;margin:0 auto}
+.theme-tattoo-studio-1711 .ct-flash-map iframe{width:100%;height:220px;border:2px solid #2a2a2e;filter:grayscale(1)}

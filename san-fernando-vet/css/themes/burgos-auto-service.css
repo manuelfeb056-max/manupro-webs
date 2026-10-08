@@ -30,3 +30,15 @@ body{font-family:'Barlow',sans-serif}
 
 @media(max-width:900px){.bu-grid{grid-template-columns:1fr;padding:84px 0 110px;gap:44px}}
 @media(max-width:560px){.bu-seal{width:108px;height:108px;top:-46px;right:-10px}}
+
+/* ---- contacto único ---- */
+.theme-burgos-auto-service .ct-dash-panel{background:#101418;color:#e8eef2;border-radius:22px;padding:36px 28px;text-align:center;max-width:560px;margin:24px auto 0;box-shadow:0 30px 70px rgba(0,0,0,.5);border:1px solid #232c34}
+.theme-burgos-auto-service .ct-gauge{width:150px;height:78px;margin:0 auto 8px;background:conic-gradient(from 180deg,#e33 0 12%,#fa0 12% 30%,#2c5 30% 50%,#1c2a33 50% 100%);border-radius:150px 150px 0 0;position:relative;overflow:hidden}
+.theme-burgos-auto-service .ct-needle{position:absolute;bottom:0;left:50%;width:4px;height:66px;background:#fff;transform-origin:bottom;transform:translateX(-50%) rotate(-32deg);animation:needle 3.4s ease-in-out infinite}
+@keyframes needle{0%,100%{transform:translateX(-50%) rotate(-38deg)}50%{transform:translateX(-50%) rotate(38deg)}}
+.theme-burgos-auto-service .ct-gauge-c{position:absolute;bottom:6px;left:50%;transform:translateX(-50%);font-size:.7rem;letter-spacing:.2em;color:#9fb2bd}
+.theme-burgos-auto-service .ct-dash-phone{display:block;font-size:clamp(1.7rem,6.5vw,2.3rem);font-weight:800;color:#ffd23f;text-decoration:none;letter-spacing:.04em;margin:10px 0}
+.theme-burgos-auto-service .ct-dash-row{display:flex;justify-content:center;gap:22px;color:#9fb2bd;font-size:.95rem}
+.theme-burgos-auto-service .ct-dash-row a{color:#ffd23f;font-weight:700}
+.theme-burgos-auto-service .ct-dash-map{max-width:560px;margin:22px auto 0}
+.theme-burgos-auto-service .ct-dash-map iframe{width:100%;height:210px;border:0;border-radius:14px}

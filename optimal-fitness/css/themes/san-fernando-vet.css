@@ -49,3 +49,15 @@ body{font-family:'Nunito',sans-serif}
   .sfv-seal{width:96px;height:96px;right:2%}
   .hero-sfv{padding:120px 0 80px}
 }
+
+/* ---- contacto único ---- */
+.theme-san-fernando-vet .ct-record-card{background:#fff;color:#23402c;max-width:600px;margin:0 auto;padding:0 0 28px;border-radius:14px;box-shadow:0 26px 60px rgba(20,60,35,.25);overflow:hidden}
+.theme-san-fernando-vet .ct-record-head{background:#1e5c34;color:#fff;display:flex;justify-content:space-between;align-items:center;padding:14px 24px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;font-size:.82rem}
+.theme-san-fernando-vet .ct-record-card h2{padding:22px 26px 0;font-size:1.5rem}
+.theme-san-fernando-vet .ct-record-card dl{margin:0;padding:6px 26px}
+.theme-san-fernando-vet .ct-record-card dl div{display:flex;justify-content:space-between;gap:10px;padding:12px 0;border-bottom:1px solid #dce8dd;font-size:.98rem}
+.theme-san-fernando-vet .ct-record-card dt{color:#6a8a72;font-size:.8rem;text-transform:uppercase;letter-spacing:.1em}
+.theme-san-fernando-vet .ct-record-card a{color:#1e5c34;font-weight:700}
+.theme-san-fernando-vet .ct-record-map{margin:16px 26px 0}
+.theme-san-fernando-vet .ct-record-map iframe{width:100%;height:200px;border:0;border-radius:10px}
+.theme-san-fernando-vet .ct-record-stamp{display:inline-block;margin:18px 26px 0;border:2px solid #1e5c34;color:#1e5c34;border-radius:50%;width:92px;height:92px;line-height:88px;text-align:center;font-weight:800;font-size:.8rem;transform:rotate(-8deg)}

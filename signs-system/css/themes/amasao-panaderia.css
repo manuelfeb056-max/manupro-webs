@@ -36,3 +36,17 @@ body{font-family:'Nunito',sans-serif}
   .hero-am{padding:114px 0 82px}
   .am-steam.st3{display:none}
 }
+
+/* ---- contacto único ---- */
+.theme-amasao-panaderia .ct-ticket-paper{background:#fffdf6;color:#4a3220;max-width:560px;margin:0 auto;padding:34px 30px;position:relative;box-shadow:0 24px 60px rgba(0,0,0,.35);-webkit-mask:linear-gradient(#000 0 0) center/100% calc(100% - 18px) no-repeat,radial-gradient(9px,#000 98%,transparent) space;padding:34px 30px 44px}
+.theme-amasao-panaderia .ct-ticket-head{text-align:center;font-size:.75rem;letter-spacing:.28em;text-transform:uppercase;color:#a07c4f}
+.theme-amasao-panaderia .ct-ticket-num{text-align:center;font-size:clamp(1.9rem,7vw,2.8rem);margin:10px 0 4px}
+.theme-amasao-panaderia .ct-ticket-num a{color:#7a4a1e;text-decoration:none}
+.theme-amasao-panaderia .ct-ticket-sub{text-align:center;color:#8a6a45;font-size:.95rem}
+.theme-amasao-panaderia .ct-ticket-rows{margin:22px 0;border-top:2px dashed #d9c49a;border-bottom:2px dashed #d9c49a}
+.theme-amasao-panaderia .ct-ticket-rows div{display:flex;justify-content:space-between;gap:12px;padding:12px 4px;font-size:.95rem}
+.theme-amasao-panaderia .ct-ticket-rows span{color:#a07c4f}
+.theme-amasao-panaderia .ct-ticket-rows a{color:#7a4a1e;font-weight:700}
+.theme-amasao-panaderia .ct-ticket-rows em{font-style:normal;font-weight:600}
+.theme-amasao-panaderia .ct-ticket-map iframe{width:100%;height:220px;border:0;border-radius:10px;margin-top:18px}
+.theme-amasao-panaderia .ct-ticket-foot{text-align:center;margin-top:16px;font-size:.8rem;color:#a07c4f;letter-spacing:.08em}

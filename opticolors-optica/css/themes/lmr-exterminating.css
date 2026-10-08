@@ -31,3 +31,13 @@ body{font-family:'Inter',sans-serif}
 .theme-lmr-exterminating .btn-ghost{border:2px solid var(--accent);color:var(--accent);background:transparent}
 
 @media(max-width:640px){.lm-hero{padding:110px 0 64px}.lm-radar{width:190px;height:190px;right:-50px}}
+
+/* ---- contacto único ---- */
+.theme-lmr-exterminating .ct-shield-badge{max-width:520px;margin:0 auto;background:linear-gradient(165deg,#12351f,#0a1f12);color:#eaf5ea;padding:44px 30px;clip-path:polygon(50% 0,100% 14%,100% 62%,50% 100%,0 62%,0 14%);padding-bottom:70px}
+.theme-lmr-exterminating .ct-shield-kick{font-size:.72rem;letter-spacing:.3em;text-transform:uppercase;color:#7de08a;font-weight:800}
+.theme-lmr-exterminating .ct-shield-badge h2{font-size:1.8rem;margin:8px 0}
+.theme-lmr-exterminating .ct-shield-phone{font-size:clamp(1.6rem,6vw,2.2rem);font-weight:800;color:#fff;text-decoration:none}
+.theme-lmr-exterminating .ct-shield-sub{margin-top:10px;color:#9dc4a3}
+.theme-lmr-exterminating .ct-shield-sub a{color:#7de08a;font-weight:700}
+.theme-lmr-exterminating .ct-shield-map{max-width:520px;margin:-30px auto 0;position:relative}
+.theme-lmr-exterminating .ct-shield-map iframe{width:100%;height:210px;border:0;border-radius:14px}

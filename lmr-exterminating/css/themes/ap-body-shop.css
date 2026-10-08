@@ -40,3 +40,16 @@ body{font-family:'Inter',sans-serif}
 .theme-ap-body-shop .kicker{color:var(--accent)}
 
 @media(max-width:640px){.ap-hero{padding:110px 0 64px}.ap-stamp{font-size:.7rem}}
+
+/* ---- contacto único ---- */
+.theme-ap-body-shop .ct-clip{background:#f4f1ea;color:#222;max-width:600px;margin:0 auto;padding:58px 30px 30px;position:relative;box-shadow:0 24px 60px rgba(0,0,0,.4);transform:rotate(-.6deg)}
+.theme-ap-body-shop .ct-clip-top{position:absolute;top:-18px;left:50%;transform:translateX(-50%);width:120px;height:38px;background:linear-gradient(180deg,#9aa2ad,#6e7681);border-radius:8px;box-shadow:0 4px 8px rgba(0,0,0,.3)}
+.theme-ap-body-shop .ct-clip-title{font-size:1.6rem;text-transform:uppercase;letter-spacing:.06em}
+.theme-ap-body-shop .ct-clip-sub{color:#777;margin:4px 0 14px}
+.theme-ap-body-shop .ct-clip-phone{display:inline-block;font-size:clamp(1.7rem,6.5vw,2.4rem);font-weight:800;color:#b3202c;text-decoration:none;letter-spacing:.02em}
+.theme-ap-body-shop .ct-clip-lines{list-style:none;padding:0;margin:20px 0;border-top:2px solid #222}
+.theme-ap-body-shop .ct-clip-lines li{display:flex;justify-content:space-between;gap:10px;padding:11px 2px;border-bottom:1px dashed #999;font-size:.95rem}
+.theme-ap-body-shop .ct-clip-lines span{color:#777;text-transform:uppercase;font-size:.78rem;letter-spacing:.1em}
+.theme-ap-body-shop .ct-clip-lines a{color:#b3202c;font-weight:700}
+.theme-ap-body-shop .ct-clip-map iframe{width:100%;height:200px;border:2px solid #222;margin-top:16px}
+.theme-ap-body-shop .ct-clip-stamp{display:inline-block;margin-top:18px;border:3px solid #b3202c;color:#b3202c;font-weight:800;text-transform:uppercase;letter-spacing:.14em;padding:8px 18px;transform:rotate(-4deg);border-radius:6px}

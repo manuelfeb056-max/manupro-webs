@@ -47,3 +47,12 @@ body{font-family:'Mulish',sans-serif}
   .fl-hills{height:120px}
   .fl-arch img{width:min(300px,82vw)}
 }
+
+/* ---- contacto único ---- */
+.theme-fine-lawn-landscaping .ct-stone-row{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin:28px 0}
+.theme-fine-lawn-landscaping .ct-stone{background:linear-gradient(160deg,#8a8f96,#5f646b);color:#fff;border-radius:48% 52% 55% 45%/60% 58% 42% 40%;padding:34px 26px;min-width:180px;max-width:230px;text-decoration:none;box-shadow:0 16px 34px rgba(0,0,0,.3);transition:transform .25s}
+.theme-fine-lawn-landscaping .ct-stone:hover{transform:translateY(-8px) rotate(-1.5deg)}
+.theme-fine-lawn-landscaping .ct-stone strong{display:block;font-size:.78rem;letter-spacing:.22em;text-transform:uppercase;color:#d7f0d0;margin-bottom:8px}
+.theme-fine-lawn-landscaping .ct-stone span{font-weight:700;font-size:1.02rem;word-break:break-word}
+.theme-fine-lawn-landscaping .ct-stone-map{max-width:560px;margin:0 auto}
+.theme-fine-lawn-landscaping .ct-stone-map iframe{width:100%;height:220px;border:0;border-radius:60px}

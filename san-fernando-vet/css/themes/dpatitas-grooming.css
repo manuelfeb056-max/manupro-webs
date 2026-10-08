@@ -46,3 +46,17 @@ body{font-family:'Nunito',sans-serif}
 .theme-dpatitas-grooming .btn-ghost{border:2px solid var(--accent);color:var(--accent);background:transparent}
 
 @media(max-width:640px){.dp-hero{padding:100px 0 64px}.dp-a{left:-2%}.dp-b{right:-2%}}
+
+/* ---- contacto único ---- */
+.theme-dpatitas-grooming .ct-paw-trail{display:flex;justify-content:center;gap:26px;font-size:1.7rem;margin:18px 0 6px}
+.theme-dpatitas-grooming .ct-paw-trail span{display:inline-block;animation:pawStep 1.6s ease-in-out infinite}
+.theme-dpatitas-grooming .ct-paw-trail span:nth-child(2){animation-delay:.2s}
+.theme-dpatitas-grooming .ct-paw-trail span:nth-child(3){animation-delay:.4s}
+.theme-dpatitas-grooming .ct-paw-trail span:nth-child(4){animation-delay:.6s}
+@keyframes pawStep{0%,100%{transform:translateY(0) rotate(-8deg);opacity:.55}50%{transform:translateY(-10px) rotate(8deg);opacity:1}}
+.theme-dpatitas-grooming .ct-paw-card{background:var(--card);border:2px dashed var(--accent);border-radius:26px;max-width:480px;margin:14px auto;padding:30px 24px}
+.theme-dpatitas-grooming .ct-paw-phone{font-size:clamp(1.6rem,6vw,2.1rem);font-weight:800;color:var(--accent);text-decoration:none}
+.theme-dpatitas-grooming .ct-paw-card p{margin-top:10px;color:var(--muted)}
+.theme-dpatitas-grooming .ct-paw-card p a{color:var(--accent);font-weight:700}
+.theme-dpatitas-grooming .ct-paw-map{max-width:480px;margin:22px auto 0}
+.theme-dpatitas-grooming .ct-paw-map iframe{width:100%;height:210px;border:0;border-radius:20px}

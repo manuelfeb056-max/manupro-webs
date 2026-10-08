@@ -40,3 +40,12 @@ body{font-family:'Jost',sans-serif}
   .ml-spark{display:none}
   .ml-photo{transform:rotate(0)}
 }
+
+/* ---- contacto único ---- */
+.theme-mimilola-makeup .ct-palette-case{display:inline-flex;gap:16px;background:#211d1a;padding:26px;border-radius:22px;margin:26px 0;flex-wrap:wrap;justify-content:center;box-shadow:0 26px 60px rgba(0,0,0,.4)}
+.theme-mimilola-makeup .ct-pan{width:150px;height:150px;border-radius:50%;background:radial-gradient(circle at 35% 30%,var(--pan),#00000055 130%);display:flex;flex-direction:column;align-items:center;justify-content:center;text-decoration:none;color:#fff;box-shadow:inset 0 -8px 18px rgba(0,0,0,.45);padding:16px;transition:transform .25s}
+.theme-mimilola-makeup .ct-pan:hover{transform:scale(1.07)}
+.theme-mimilola-makeup .ct-pan strong{font-size:.68rem;letter-spacing:.22em;text-transform:uppercase;text-shadow:0 1px 3px rgba(0,0,0,.6)}
+.theme-mimilola-makeup .ct-pan span{font-size:.82rem;font-weight:700;margin-top:6px;word-break:break-word;text-shadow:0 1px 3px rgba(0,0,0,.6)}
+.theme-mimilola-makeup .ct-palette-map{max-width:520px;margin:0 auto}
+.theme-mimilola-makeup .ct-palette-map iframe{width:100%;height:210px;border:0;border-radius:50%}

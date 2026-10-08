@@ -117,7 +117,7 @@
       var msg = document.getElementById('fMsg').value.trim();
       var waLink = form.closest('body').querySelector('[data-track="wa_float"]');
       var waNum = '17875004837';
-      var text = 'Hola Puerto Rico Roofing &amp; Construction, soy ' + nombre + '. Me interesa: ' + servicio + '.'
+      var text = 'Hola Puerto Rico Roofing & Construction, soy ' + nombre + '. Me interesa: ' + servicio + '.'
         + (msg ? ' ' + msg : '');
       window.open('https://wa.me/' + waNum + '?text=' + encodeURIComponent(text), '_blank');
     });

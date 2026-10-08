@@ -211,5 +211,3 @@ a.info-card:hover{transform:translateX(6px);border-color:var(--accent)}
 /* bloque de llamada (reemplaza formulario en sitios sin WhatsApp duplicado) */
 .cform-call{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:44px 34px;display:flex;flex-direction:column;gap:18px;align-items:center;text-align:center}
 .cform-note{color:var(--muted);font-size:.95rem;margin:0}
-
-.contact-solo{grid-template-columns:1fr;max-width:640px;margin:0 auto}

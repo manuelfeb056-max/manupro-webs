@@ -49,3 +49,15 @@ body{font-family:'Inter',sans-serif}
   .oc-diopter{font-size:.62rem;gap:8px}
   .oc-diopter i{width:26px}
 }
+
+/* ---- contacto único ---- */
+.theme-opticolors-optica .ct-glasses-frame{display:flex;align-items:center;justify-content:center;margin:10px 0 4px}
+.theme-opticolors-optica .ct-lens{width:110px;height:86px;border:9px solid #222;border-radius:48%;background:linear-gradient(140deg,rgba(120,200,255,.35),rgba(120,200,255,.05))}
+.theme-opticolors-optica .ct-bridge{width:44px;height:10px;background:#222;border-radius:6px;margin:0 -6px;align-self:flex-start;margin-top:18px}
+.theme-opticolors-optica .ct-glasses-row{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin:22px 0}
+.theme-opticolors-optica .ct-glass-card{background:var(--card);border:1px solid var(--line);border-radius:60px;padding:18px 30px;text-decoration:none;color:var(--ink);box-shadow:0 14px 30px rgba(0,0,0,.12)}
+.theme-opticolors-optica .ct-glass-card strong{display:block;font-size:.7rem;letter-spacing:.26em;text-transform:uppercase;color:var(--accent);margin-bottom:6px}
+.theme-opticolors-optica .ct-glass-card span{font-weight:700;word-break:break-word}
+.theme-opticolors-optica .ct-glasses-town{color:var(--muted);font-size:.92rem}
+.theme-opticolors-optica .ct-glasses-map{max-width:520px;margin:22px auto 0}
+.theme-opticolors-optica .ct-glasses-map iframe{width:100%;height:200px;border:0;border-radius:80px}

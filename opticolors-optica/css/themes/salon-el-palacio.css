@@ -49,3 +49,16 @@ body{font-family:'Jost',sans-serif}
 .theme-salon-el-palacio .kicker{color:var(--accent);letter-spacing:.3em}
 
 @media(max-width:640px){.sp-hero{padding:110px 0 64px}.sp-frame .sp-f2{right:0}}
+
+/* ---- contacto único ---- */
+.theme-salon-el-palacio .ct-invite-card{max-width:600px;margin:0 auto;background:#fbf7ee;color:#3a2f22;padding:48px 40px;text-align:center;border:1px solid #d8c9a3;box-shadow:0 30px 70px rgba(90,70,30,.25);position:relative}
+.theme-salon-el-palacio .ct-invite-card::before{content:"";position:absolute;inset:12px;border:2px solid #c9a86a;pointer-events:none}
+.theme-salon-el-palacio .ct-invite-kick{font-style:italic;color:#8a744a;letter-spacing:.06em}
+.theme-salon-el-palacio .ct-invite-card h2{font-family:serif;font-size:2.4rem;margin:10px 0;letter-spacing:.04em}
+.theme-salon-el-palacio .ct-invite-div{color:#c9a86a;font-size:1.4rem;margin:6px 0}
+.theme-salon-el-palacio .ct-invite-phone{font-family:serif;font-size:clamp(1.5rem,5.5vw,2rem);color:#6a5320;text-decoration:none;letter-spacing:.06em}
+.theme-salon-el-palacio .ct-invite-lines{margin-top:14px;line-height:2;color:#6a5a3a}
+.theme-salon-el-palacio .ct-invite-lines a{color:#6a5320;font-weight:700}
+.theme-salon-el-palacio .ct-invite-map{margin-top:20px}
+.theme-salon-el-palacio .ct-invite-map iframe{width:100%;height:200px;border:1px solid #d8c9a3}
+.theme-salon-el-palacio .ct-invite-rsvp{margin-top:18px;font-style:italic;color:#8a744a;letter-spacing:.14em;text-transform:uppercase;font-size:.78rem}
