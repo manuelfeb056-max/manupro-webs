@@ -1,49 +1,7 @@
 /* Louis Auto Detailing — CERAMIC LAB engine
-   before/after slider, gallery carousel, FAQ, reveals, counters, form->WA */
+   gallery carousel, FAQ, reveals, counters, form->WA */
 (function(){
   "use strict";
-
-  /* ---------- before / after drag slider ---------- */
-  var ba = document.getElementById('baSlider');
-  if (ba) {
-    var dragging = false;
-    function setPos(clientX){
-      var r = ba.getBoundingClientRect();
-      var p = ((clientX - r.left) / r.width) * 100;
-      p = Math.max(4, Math.min(96, p));
-      ba.style.setProperty('--pos', p + '%');
-    }
-    ba.addEventListener('pointerdown', function(e){
-      dragging = true;
-      try{ ba.setPointerCapture(e.pointerId); }catch(_){}
-      setPos(e.clientX);
-    });
-    ba.addEventListener('pointermove', function(e){
-      if (dragging) setPos(e.clientX);
-    });
-    ['pointerup','pointercancel','pointerleave'].forEach(function(ev){
-      ba.addEventListener(ev, function(){ dragging = false; });
-    });
-    /* gentle intro animation on first scroll into view */
-    var played = false;
-    var bio = new IntersectionObserver(function(es){
-      es.forEach(function(e){
-        if (e.isIntersecting && !played) {
-          played = true;
-          var p = 50, dir = 1;
-          var t = setInterval(function(){
-            p += dir * 2.5;
-            if (p >= 82) dir = -1;
-            if (p <= 18) dir = 1;
-            ba.style.setProperty('--pos', p + '%');
-          }, 50);
-          setTimeout(function(){ clearInterval(t); ba.style.setProperty('--pos','50%'); }, 3200);
-          bio.disconnect();
-        }
-      });
-    }, {threshold:.4});
-    bio.observe(ba);
-  }
 
   /* ---------- gallery carousel: buttons + swipe + auto ---------- */
   var vp = document.getElementById('galViewport');

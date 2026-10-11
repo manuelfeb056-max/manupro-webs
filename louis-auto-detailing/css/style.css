@@ -60,19 +60,10 @@ a{color:inherit;text-decoration:none}
 .btn-accent:hover{box-shadow:0 12px 34px rgba(0,229,255,.45)}
 .btn-lg{padding:16px 34px;font-size:1rem}
 
-/* ---------- hero: before/after ---------- */
+/* ---------- hero ---------- */
 .hero{position:relative;min-height:94vh;display:flex;align-items:flex-end;overflow:hidden}
-.ba{position:absolute;inset:0;cursor:ew-resize;--pos:50%;touch-action:none}
-.ba img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-.ba-before{position:absolute;inset:0;width:var(--pos);overflow:hidden;border-right:2px solid var(--accent)}
-.ba-before img{width:100vw;max-width:none}
-.ba-before img{filter:saturate(.12) brightness(.5) contrast(.92)}
-.ba-tag{position:absolute;top:96px;z-index:3;font-family:'Russo One',sans-serif;font-size:.8rem;letter-spacing:.2em;text-transform:uppercase;padding:8px 16px;border-radius:999px;backdrop-filter:blur(8px);pointer-events:none}
-.tag-before{left:24px;background:rgba(0,0,0,.6);border:1px solid rgba(255,255,255,.25);color:#ddd}
-.tag-after{right:24px;background:rgba(0,229,255,.15);border:1px solid var(--accent);color:var(--accent)}
-.ba-handle{position:absolute;top:0;bottom:0;left:var(--pos);width:0;z-index:4;pointer-events:none}
-.ba-knob{position:absolute;top:50%;left:0;transform:translate(-50%,-50%);width:64px;height:64px;border-radius:50%;background:rgba(8,8,11,.85);border:2px solid var(--accent);display:flex;align-items:center;justify-content:center;color:var(--accent);box-shadow:0 0 30px rgba(0,229,255,.55),0 8px 24px rgba(0,0,0,.5)}
-.ba-knob svg{width:30px;height:30px}
+.hero-bg{position:absolute;inset:0}
+.hero-bg img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 .hero-scrim{position:absolute;inset:0;background:linear-gradient(180deg,rgba(4,4,8,.5) 0%,rgba(4,4,8,.12) 35%,rgba(4,4,8,.9) 100%);pointer-events:none}
 .hero-content{position:relative;z-index:2;max-width:1140px;margin:0 auto;padding:0 22px 64px;width:100%;pointer-events:none}
 .hero-content .btn{pointer-events:auto}
@@ -81,9 +72,7 @@ a{color:inherit;text-decoration:none}
 .hero-title .hl{color:var(--accent)}
 .hero-sub{font-size:clamp(1.02rem,2.2vw,1.28rem);color:#e9eaf0;max-width:54ch;margin:20px 0 30px;text-shadow:0 2px 14px rgba(0,0,0,.7);font-weight:500}
 .hero-ctas{display:flex;gap:16px;flex-wrap:wrap}
-.ba-hint{margin-top:22px;color:var(--muted);font-size:.92rem;letter-spacing:.12em;text-transform:uppercase;font-weight:600}
 
-/* ---------- ticker ---------- */
 .ticker{background:var(--accent);overflow:hidden;white-space:nowrap;padding:12px 0;transform:rotate(-1deg) scale(1.02)}
 .ticker-track{display:inline-block;font-family:'Russo One',sans-serif;font-size:1.05rem;letter-spacing:.06em;color:#061317;text-transform:uppercase;animation:tick 26s linear infinite;padding-right:40px}
 @keyframes tick{to{transform:translateX(-50%)}}
@@ -106,9 +95,9 @@ a{color:inherit;text-decoration:none}
 .gal-viewport{flex:1;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;-webkit-overflow-scrolling:touch}
 .gal-viewport::-webkit-scrollbar{display:none}
 .gal-track{display:flex;gap:16px;padding:6px 2px}
-.gal-card{flex:0 0 min(78vw,380px);scroll-snap-align:center;background:var(--card);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;transition:border-color .3s}
+.gal-card{flex:0 0 min(92vw,560px);scroll-snap-align:center;background:#0a0a0e;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;transition:border-color .3s}
 .gal-card:hover{border-color:rgba(0,229,255,.5)}
-.gal-card img{width:100%;aspect-ratio:1/1;object-fit:cover}
+.gal-card img{width:100%;height:min(62vh,480px);object-fit:contain;background:#0a0a0e}
 .gal-card figcaption{padding:14px 18px;color:var(--silver);font-weight:600;font-size:.98rem}
 .gal-btn{flex:none;width:52px;height:52px;border-radius:50%;border:1px solid rgba(0,229,255,.4);background:rgba(0,229,255,.08);color:var(--accent);font-size:1.8rem;line-height:1;cursor:pointer;transition:background .25s,transform .2s;z-index:2}
 .gal-btn:hover{background:rgba(0,229,255,.2);transform:scale(1.06)}
