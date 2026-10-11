@@ -1,0 +1,5 @@
+/* Higatoma Detailing — theme overrides (fonts + foam accents are in style.css) */
+body{
+  --accent:#46e8ce;
+}
+::selection{background:#46e8ce;color:#03322f}

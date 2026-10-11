@@ -1,0 +1,195 @@
+/* ============ PIT LANE theme · RG Auto Detailing ============
+   Industrial black + XPEL racing yellow. Diagonal slash cuts,
+   speed lines, checkered accents. Saira Condensed display. */
+.theme-rg-auto-detailing{
+  --accent:#ffc400;
+  --bg:#0a0a0c; --bg2:#101014; --card:#141419;
+  --ink:#f7f5ef; --muted:#b9b5ac; --line:rgba(255,196,0,.16);
+  font-family:'Saira',system-ui,sans-serif;
+}
+.theme-rg-auto-detailing .h2,
+.theme-rg-auto-detailing .logo,
+.theme-rg-auto-detailing .card-num,
+.theme-rg-auto-detailing .stat-num,
+.theme-rg-auto-detailing .ticker-track,
+.theme-rg-auto-detailing .hero-title{
+  font-family:'Saira Condensed','Saira',sans-serif;
+  font-weight:800;
+}
+.theme-rg-auto-detailing .kicker{color:var(--accent);letter-spacing:.34em}
+
+/* ---------- tilted sticker logo with yellow tape corners ---------- */
+.theme-rg-auto-detailing .sticker-logo{align-items:center}
+.theme-rg-auto-detailing .sticker{
+  position:relative;display:inline-block;transform:rotate(-6deg);
+  border:2px solid #fff;border-radius:10px;background:#0a0a0c;
+  box-shadow:0 8px 22px rgba(0,0,0,.55),0 0 18px rgba(255,196,0,.35);
+}
+.theme-rg-auto-detailing .sticker img{
+  width:64px;height:64px;border-radius:8px;animation:none;border:0;box-shadow:none;
+}
+.theme-rg-auto-detailing .sticker::before,
+.theme-rg-auto-detailing .sticker::after{
+  content:"";position:absolute;width:34px;height:14px;z-index:2;
+  background:rgba(255,196,0,.85);box-shadow:0 2px 6px rgba(0,0,0,.4);
+}
+.theme-rg-auto-detailing .sticker::before{top:-9px;left:-9px;transform:rotate(-38deg)}
+.theme-rg-auto-detailing .sticker::after{bottom:-9px;right:-9px;transform:rotate(-38deg)}
+.theme-rg-auto-detailing .brand-word{font-family:'Saira Condensed';font-weight:800;font-size:1.35rem;text-transform:uppercase;letter-spacing:.04em}
+.theme-rg-auto-detailing .brand-word em{font-style:normal;color:var(--accent)}
+
+/* ---------- hero: angled panel + slanted type + speed lines ---------- */
+.theme-rg-auto-detailing .pit-hero{
+  clip-path:polygon(0 0,100% 0,100% calc(100% - 46px),0 100%);
+}
+.theme-rg-auto-detailing .pit-hero .hero-scrim{
+  background:linear-gradient(180deg,rgba(6,6,8,.62) 0%,rgba(6,6,8,.30) 42%,rgba(6,6,8,.92) 100%);
+}
+.theme-rg-auto-detailing .speedlines{
+  position:absolute;inset:0;z-index:1;pointer-events:none;opacity:.5;
+  background:repeating-linear-gradient(100deg,transparent 0 46px,rgba(255,196,0,.10) 46px 48px,transparent 48px 120px);
+}
+.theme-rg-auto-detailing .pit-title{
+  font-size:clamp(3.4rem,10vw,7.6rem);
+  transform:skewX(-7deg);
+  text-shadow:0 8px 40px rgba(0,0,0,.75);
+  line-height:.92;
+}
+.theme-rg-auto-detailing .pit-title .hl{
+  color:var(--accent);
+  text-shadow:4px 4px 0 #0a0a0c,0 0 34px rgba(255,196,0,.45);
+}
+.theme-rg-auto-detailing .pit-title .lap{
+  display:block;font-size:.34em;letter-spacing:.5em;color:#fff;
+  margin-top:14px;text-transform:uppercase;font-weight:700;
+  text-shadow:0 4px 18px rgba(0,0,0,.8);
+}
+.theme-rg-auto-detailing .hero-kicker{
+  background:var(--accent);color:#0a0a0c;border:0;
+  transform:skewX(-12deg);border-radius:4px;font-weight:800;
+  box-shadow:4px 4px 0 rgba(255,255,255,.25);
+}
+.theme-rg-auto-detailing .hero-sub{max-width:56ch}
+
+/* checkered strip under hero */
+.theme-rg-auto-detailing .checkers{
+  height:26px;margin-top:-1px;
+  background:conic-gradient(#0a0a0c 25%,#f7f5ef 0 50%,#0a0a0c 0 75%,#f7f5ef 0);
+  background-size:26px 26px;
+  clip-path:polygon(0 0,100% 0,100% 100%,0 calc(100% - 10px));
+}
+
+/* ---------- pit crew stats strip ---------- */
+.theme-rg-auto-detailing .pit-strip{
+  display:flex;gap:0;margin-top:36px;flex-wrap:wrap;
+  transform:skewX(-8deg);max-width:720px;
+  border:1px solid rgba(255,196,0,.4);background:rgba(10,10,12,.72);
+  backdrop-filter:blur(8px);box-shadow:6px 6px 0 rgba(255,196,0,.35);
+}
+.theme-rg-auto-detailing .pit-cell{
+  flex:1 1 120px;padding:14px 18px;text-align:center;
+  border-right:1px dashed rgba(255,196,0,.35);
+}
+.theme-rg-auto-detailing .pit-cell:last-child{border-right:0}
+.theme-rg-auto-detailing .pit-num{
+  display:block;font-family:'Saira Condensed';font-weight:800;font-size:1.6rem;color:var(--accent);
+  transform:skewX(8deg);line-height:1.1;
+}
+.theme-rg-auto-detailing .pit-lab{
+  display:block;font-size:.72rem;text-transform:uppercase;letter-spacing:.22em;color:var(--muted);
+  transform:skewX(8deg);
+}
+
+/* ---------- buttons: pit yellow ---------- */
+.theme-rg-auto-detailing .btn-pit{
+  background:var(--accent);color:#0a0a0c;font-weight:800;
+  transform:skewX(-8deg);border-radius:6px;
+  box-shadow:5px 5px 0 rgba(255,255,255,.22);
+  text-transform:uppercase;letter-spacing:.06em;
+}
+.theme-rg-auto-detailing .btn-pit .ic{width:22px;height:22px;fill:#0a0a0c;transform:skewX(8deg)}
+.theme-rg-auto-detailing .btn-pit:hover{box-shadow:8px 8px 0 rgba(255,196,0,.5)}
+.theme-rg-auto-detailing .btn-ghost{transform:skewX(-8deg);border-radius:6px}
+.theme-rg-auto-detailing .center{text-align:center;margin-top:40px}
+
+/* ---------- ticker ---------- */
+.theme-rg-auto-detailing .ticker{background:var(--accent);transform:rotate(-1.2deg) scale(1.03);box-shadow:0 10px 30px rgba(255,196,0,.25)}
+.theme-rg-auto-detailing .ticker-track{color:#0a0a0c;font-weight:800}
+
+/* ---------- pit lane service cards ---------- */
+.theme-rg-auto-detailing .pit-h2{transform:skewX(-5deg)}
+.theme-rg-auto-detailing .pit-h2 .hl{color:var(--accent)}
+.theme-rg-auto-detailing .pit-card{
+  border:1px solid rgba(255,196,0,.22);
+  border-radius:8px;
+  transform:skewX(-2deg);
+  background:linear-gradient(135deg,#141419 0%,#17171c 70%,#141419 100%);
+  position:relative;
+}
+.theme-rg-auto-detailing .pit-card::before{
+  content:"";position:absolute;top:0;bottom:0;left:0;width:6px;height:auto;
+  background:repeating-linear-gradient(180deg,var(--accent) 0 14px,#0a0a0c 14px 28px);
+  transform:none;transform-origin:initial;
+}
+.theme-rg-auto-detailing .pit-card:hover{border-color:var(--accent);transform:skewX(-2deg) translateY(-6px)}
+.theme-rg-auto-detailing .pit-card h3{font-family:'Saira Condensed';font-weight:700;font-size:1.4rem;text-transform:uppercase;letter-spacing:.02em}
+.theme-rg-auto-detailing .pit-card .card-num{font-size:3rem}
+
+/* ---------- gallery cards ---------- */
+.theme-rg-auto-detailing .gal-card{border:2px solid rgba(255,196,0,.25);border-radius:10px}
+.theme-rg-auto-detailing .gal-btn:hover{background:var(--accent);color:#0a0a0c}
+
+/* ---------- about ---------- */
+.theme-rg-auto-detailing .pit-about-img{
+  border-radius:10px;border:2px solid rgba(255,196,0,.35);
+  transform:rotate(-1.5deg);box-shadow:10px 10px 0 rgba(255,196,0,.22);
+}
+.theme-rg-auto-detailing .about-btns{display:flex;gap:14px;flex-wrap:wrap}
+
+/* ---------- faq ---------- */
+.theme-rg-auto-detailing .faq-item{border-radius:10px}
+.theme-rg-auto-detailing .faq-item summary{font-family:'Saira Condensed';font-size:1.25rem;font-weight:700;text-transform:uppercase;letter-spacing:.02em}
+
+/* ---------- contact ---------- */
+.theme-rg-auto-detailing .pit-info{border-radius:10px}
+.theme-rg-auto-detailing .pit-info .info-ic{
+  background:var(--accent);color:#0a0a0c;border-radius:8px;transform:skewX(-8deg);
+  font-style:normal;font-weight:800;
+}
+.theme-rg-auto-detailing .pit-call{
+  border-radius:10px;border:2px dashed rgba(255,196,0,.5);
+  background:linear-gradient(160deg,#141419,#0e0e12);
+}
+.theme-rg-auto-detailing .soc-tt{background:linear-gradient(145deg,#1c1c22,#000)}
+.theme-rg-auto-detailing .pit-social{justify-content:center;margin:6px 0}
+
+/* ---------- offer band (Manupro green identity) ---------- */
+.theme-rg-auto-detailing .offer-band{
+  background:#0d0d10;border-top:3px solid #168730;border-bottom:3px solid #168730;
+  padding:54px 0;margin-top:0;
+}
+.theme-rg-auto-detailing .offer-grid{display:flex;gap:34px;align-items:center;justify-content:space-between;flex-wrap:wrap}
+.theme-rg-auto-detailing .offer-kicker{color:#168730;font-weight:700;text-transform:uppercase;letter-spacing:.24em;font-size:.75rem;margin-bottom:8px}
+.theme-rg-auto-detailing .offer-grid h3{font-family:'Saira Condensed';font-size:clamp(1.6rem,4vw,2.4rem);font-weight:800;text-transform:uppercase;max-width:20ch}
+.theme-rg-auto-detailing .offer-prices{display:flex;gap:16px;flex-wrap:wrap}
+.theme-rg-auto-detailing .offer-price{
+  background:#101014;border:1px solid rgba(22,135,48,.5);border-radius:12px;
+  padding:18px 24px;text-align:center;min-width:170px;
+}
+.theme-rg-auto-detailing .offer-price.hot{background:#168730;border-color:#168730;box-shadow:0 12px 34px rgba(22,135,48,.35)}
+.theme-rg-auto-detailing .op-num{display:block;font-family:'Saira Condensed';font-weight:800;font-size:2.4rem;line-height:1}
+.theme-rg-auto-detailing .op-lab{display:block;font-size:.78rem;color:var(--muted);margin-top:6px;line-height:1.4}
+.theme-rg-auto-detailing .offer-price.hot .op-num{color:#fff}
+.theme-rg-auto-detailing .offer-price.hot .op-lab{color:rgba(255,255,255,.85)}
+
+/* ---------- footer ---------- */
+.theme-rg-auto-detailing .footer{margin-top:0}
+.theme-rg-auto-detailing .foot-logo{border-radius:12px;border-color:var(--accent)}
+.theme-rg-auto-detailing .foot-legal a{color:#168730;font-weight:700}
+
+@media(max-width:860px){
+  .theme-rg-auto-detailing .pit-title{font-size:clamp(3rem,14vw,4.6rem)}
+  .theme-rg-auto-detailing .pit-strip{transform:skewX(-4deg)}
+  .theme-rg-auto-detailing .pit-card{transform:none}
+  .theme-rg-auto-detailing .pit-card:hover{transform:translateY(-6px)}
+}

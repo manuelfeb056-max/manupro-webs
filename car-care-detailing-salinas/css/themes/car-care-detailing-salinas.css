@@ -1,0 +1,164 @@
+/* ============ SOUTHSIDE SUN — Car Care Detailing Service (Salinas) ============
+   Bold southern heat: deep crimson-to-orange sunset on dark.
+   Display: Chakra Petch · Body: Inter. Manupro green ONLY in offer/footer. */
+:root{
+  --accent:#ff6b1a;
+  --sun-crimson:#d21f3c;
+  --sun-orange:#ff6b1a;
+  --sun-amber:#ffb347;
+  --sun-glow:#ffd166;
+  --bg:#150806;
+  --bg2:#1d0c07;
+  --card:#241009;
+  --ink:#fff6ec;
+  --muted:#d9b696;
+  --line:rgba(255,150,80,.16);
+  --manu-green:#168730;
+  --radius:18px;
+}
+body{background:
+  radial-gradient(1200px 600px at 50% -120px, rgba(210,31,60,.28), transparent 60%),
+  radial-gradient(900px 500px at 85% 30%, rgba(255,107,26,.10), transparent 60%),
+  var(--bg);
+  color:var(--ink);
+}
+h1,h2,h3,.h2,.logo,.ticker-track,.stat-num,.card-num,.hero-title{font-family:'Chakra Petch','Inter',sans-serif}
+
+/* ---------- header ---------- */
+.header{background:rgba(21,8,6,.78);border-bottom:1px solid var(--line)}
+.header .logo{color:var(--ink)}
+.nav a{color:var(--muted)}
+.nav a:hover{color:var(--sun-amber)}
+.brand-emblem{width:46px;height:46px;flex:none;filter:drop-shadow(0 4px 14px rgba(255,107,26,.55))}
+
+/* ---------- HERO: sun arc rising ---------- */
+.sun-hero{min-height:96vh;display:flex;align-items:center;position:relative;overflow:hidden;
+  background:linear-gradient(180deg,#1a0906 0%,#241009 55%,#150806 100%)}
+.sun{position:absolute;left:50%;top:82%;width:118vmin;height:118vmin;transform:translate(-50%,-50%);
+  border-radius:50%;pointer-events:none;
+  background:radial-gradient(circle,#ffe9a8 0%,var(--sun-glow) 14%,var(--sun-amber) 26%,var(--sun-orange) 46%,var(--sun-crimson) 64%,rgba(210,31,60,.28) 76%,transparent 78%);
+  filter:saturate(1.15);animation:sunPulse 7s ease-in-out infinite}
+@keyframes sunPulse{0%,100%{filter:saturate(1.15) brightness(1)}50%{filter:saturate(1.3) brightness(1.12)}}
+.heat-lines{position:absolute;left:0;right:0;top:82%;height:44vmin;transform:translateY(-50%);pointer-events:none;
+  background:repeating-linear-gradient(180deg,transparent 0 46px,rgba(255,140,60,.10) 46px 48px);
+  -webkit-mask-image:radial-gradient(60vmin 26vmin at 50% 50%,#000 30%,transparent 75%);
+  mask-image:radial-gradient(60vmin 26vmin at 50% 50%,#000 30%,transparent 75%)}
+.hero-scrim-sun{position:absolute;inset:0;background:linear-gradient(180deg,rgba(21,8,6,.62) 0%,rgba(21,8,6,.10) 45%,rgba(21,8,6,.9) 100%)}
+.hero-content{position:relative;z-index:2}
+.hero-panel{max-width:760px;background:rgba(18,8,5,.66);border:1px solid rgba(255,150,80,.35);
+  border-radius:26px;padding:clamp(28px,5vw,54px);backdrop-filter:blur(10px);
+  box-shadow:0 40px 120px rgba(0,0,0,.55), inset 0 1px 0 rgba(255,255,255,.08)}
+.pin-row{display:inline-flex;align-items:center;gap:9px;font-weight:700;font-size:.82rem;
+  letter-spacing:.18em;text-transform:uppercase;color:var(--sun-amber);
+  border:1px solid rgba(255,180,71,.4);background:rgba(255,107,26,.12);
+  padding:9px 18px;border-radius:999px;margin-bottom:22px}
+.pin-row svg{width:16px;height:16px;fill:var(--sun-amber)}
+.hero-eyebrow{display:block;font-size:clamp(.95rem,2vw,1.15rem);font-weight:600;letter-spacing:.06em;
+  color:var(--sun-glow);margin-bottom:10px;text-transform:uppercase}
+.hero-title{font-size:clamp(2.6rem,7.5vw,5.4rem);line-height:1;text-transform:uppercase;
+  letter-spacing:.01em;margin:0 0 18px;text-shadow:0 8px 44px rgba(210,31,60,.5)}
+.hero-title .hl{background:linear-gradient(100deg,var(--sun-crimson) 0%,var(--sun-orange) 55%,var(--sun-amber) 100%);
+  -webkit-background-clip:text;background-clip:text;color:transparent}
+.hero-sub{color:#f3e2cf;font-size:clamp(1rem,2vw,1.2rem);max-width:52ch;margin-bottom:26px}
+.rating-badge{display:inline-flex;align-items:center;gap:10px;margin-bottom:28px;
+  background:rgba(255,209,102,.1);border:1px solid rgba(255,209,102,.45);border-radius:999px;
+  padding:10px 20px;font-weight:700;font-size:.95rem;color:#ffe9a8}
+.rating-badge .stars{color:var(--sun-amber);letter-spacing:2px}
+.hero-ctas{display:flex;gap:14px;flex-wrap:wrap}
+.btn-sun{background:linear-gradient(100deg,var(--sun-crimson),var(--sun-orange));color:#fff;
+  box-shadow:0 10px 34px rgba(210,31,60,.5);border:0}
+.btn-sun:hover{box-shadow:0 14px 44px rgba(255,107,26,.6);transform:translateY(-2px)}
+.scroll-hint{border-color:rgba(255,180,71,.5)}
+.scroll-hint span{background:var(--sun-orange)}
+
+/* ---------- ticker ---------- */
+.ticker{background:linear-gradient(90deg,var(--sun-crimson) 0%,var(--sun-orange) 60%,var(--sun-amber) 100%)}
+.ticker-track{color:#1c0a04;font-weight:700}
+
+/* ---------- services: heat-gradient cards ---------- */
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:22px}
+.card{background:linear-gradient(160deg,#2a120a 0%,#1d0c07 70%);border:1px solid var(--line)}
+.card:hover{border-color:rgba(255,150,80,.55);box-shadow:0 24px 60px rgba(210,31,60,.28)}
+.card::before{background:linear-gradient(90deg,var(--sun-crimson),var(--sun-orange),var(--sun-amber))}
+.card h3{font-size:1.3rem}
+.heat-ic{width:58px;height:58px;border-radius:16px;display:grid;place-items:center;margin-bottom:6px;
+  background:linear-gradient(135deg,var(--sun-crimson),var(--sun-orange));
+  box-shadow:0 10px 26px rgba(210,31,60,.45), inset 0 1px 0 rgba(255,255,255,.25)}
+.heat-ic svg{width:30px;height:30px;fill:#fff}
+.card-num{-webkit-text-stroke:1.5px var(--sun-orange)}
+
+/* ---------- Especialidades del sur strip ---------- */
+.spec-strip{display:flex;gap:18px;overflow-x:auto;padding:10px 4px 22px;scroll-snap-type:x mandatory;
+  scrollbar-width:none;-ms-overflow-style:none}
+.spec-strip::-webkit-scrollbar{display:none}
+.spec-tile{flex:0 0 240px;scroll-snap-align:start;border-radius:var(--radius);padding:28px 22px;
+  background:linear-gradient(150deg,#31140b 0%,#1e0c07 65%);border:1px solid var(--line);
+  position:relative;overflow:hidden;transition:transform .3s,border-color .3s}
+.spec-tile::after{content:"";position:absolute;left:0;right:0;bottom:0;height:4px;
+  background:linear-gradient(90deg,var(--sun-crimson),var(--sun-amber))}
+.spec-tile:hover{transform:translateY(-6px);border-color:rgba(255,150,80,.5)}
+.spec-tile .heat-ic{width:50px;height:50px}
+.spec-tile h3{font-size:1.08rem;margin:14px 0 8px}
+.spec-tile p{color:var(--muted);font-size:.9rem}
+.spec-note{color:var(--muted);font-size:.85rem;margin-top:6px;letter-spacing:.04em}
+
+/* ---------- stats ---------- */
+.stats{background:linear-gradient(180deg,#1d0c07,#150806)}
+.stat-num{background:linear-gradient(100deg,var(--sun-amber),var(--sun-orange));
+  -webkit-background-clip:text;background-clip:text;color:transparent}
+
+/* ---------- about / review quote ---------- */
+.about{background:#1d0c07}
+.about-text p{color:#ecd9c4}
+.review-quote{border-left:4px solid;border-image:linear-gradient(180deg,var(--sun-crimson),var(--sun-amber)) 1;
+  padding:6px 0 6px 20px;margin:24px 0;font-size:1.25rem;font-weight:600;color:#fff;line-height:1.5}
+.review-quote cite{display:block;margin-top:10px;font-size:.85rem;font-style:normal;color:var(--muted);font-weight:500}
+.addr-line{display:flex;align-items:flex-start;gap:12px;margin:18px 0;color:#f3e2cf;font-weight:600}
+.addr-line svg{width:22px;height:22px;fill:var(--sun-amber);flex:none;margin-top:2px}
+
+/* ---------- FAQ ---------- */
+.faq-item[open]{border-color:var(--sun-orange)}
+.faq-item summary .fx{background:linear-gradient(135deg,var(--sun-crimson),var(--sun-orange));color:#fff}
+.faq-item .fa a{color:var(--sun-amber)}
+
+/* ---------- contact ---------- */
+.info-card{background:linear-gradient(160deg,#2a120a,#1d0c07)}
+.info-ic{background:linear-gradient(135deg,var(--sun-crimson),var(--sun-orange));color:#fff}
+a.info-card:hover{border-color:var(--sun-orange)}
+.map{border:1px solid var(--line);box-shadow:0 24px 70px rgba(0,0,0,.5)}
+.cform-call{background:linear-gradient(160deg,#2a120a,#1d0c07)}
+.btn-accent{background:linear-gradient(100deg,var(--sun-crimson),var(--sun-orange));color:#fff}
+
+/* ---------- offer card: Manupro green ONLY here ---------- */
+.offer{background:linear-gradient(180deg,#0d0d0f,#101014);border-top:1px solid var(--line)}
+.offer-card{max-width:760px;margin:0 auto;background:#101014;border:2px solid var(--manu-green);
+  border-radius:24px;padding:clamp(30px,5vw,52px);text-align:center;
+  box-shadow:0 30px 80px rgba(0,0,0,.6),0 0 60px rgba(22,135,48,.18)}
+.offer-kicker{color:var(--manu-green);font-weight:800;letter-spacing:.24em;text-transform:uppercase;font-size:.78rem}
+.offer-card h2{font-size:clamp(1.8rem,4.5vw,2.8rem);margin:12px 0;text-transform:uppercase;color:#fff}
+.offer-prices{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin:24px 0}
+.offer-price{background:#0b0b0d;border:1px solid rgba(22,135,48,.5);border-radius:16px;padding:18px 26px;min-width:220px}
+.offer-price .p{font-size:2.2rem;font-weight:800;color:#fff}
+.offer-price .d{color:#bdbdc7;font-size:.9rem;margin-top:6px}
+.offer-note{color:#9a9aa5;font-size:.85rem;margin-top:14px}
+.btn-manu{background:var(--manu-green);color:#fff;box-shadow:0 10px 30px rgba(22,135,48,.4)}
+.btn-manu:hover{box-shadow:0 14px 40px rgba(22,135,48,.55);transform:translateY(-2px)}
+
+/* ---------- footer ---------- */
+.footer{background:#0a0503}
+.foot-legal a{color:var(--manu-green)}
+.foot-social-title{color:var(--muted)}
+.soc-fb{background:linear-gradient(145deg,#4a9eff,#166fe5)}
+.soc-wa{background:linear-gradient(145deg,#35e883,#1da851)}
+.soc-tel{background:linear-gradient(145deg,var(--sun-orange),#7a1f10)}
+
+/* ---------- misc ---------- */
+.kicker{color:var(--sun-amber)}
+.h2::after{background:linear-gradient(90deg,var(--sun-crimson),var(--sun-amber))}
+::selection{background:var(--sun-crimson);color:#fff}
+.wa-float{box-shadow:0 10px 30px rgba(37,211,102,.45)}
+@media(max-width:640px){
+  .sun{top:70%}
+  .hero-panel{padding:26px 20px}
+  .spec-tile{flex-basis:210px}
+}

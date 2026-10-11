@@ -1,0 +1,194 @@
+/* Executive Car Care — "BLACK TIE EXECUTIVE" theme
+   Black + champagne gold + ivory. Playfair Display + Jost. Photo-less luxury. */
+:root{
+  --black:#0a0908;
+  --black-2:#12100d;
+  --gold:#c9a86a;
+  --gold-deep:#8a6f3e;
+  --ivory:#f5f0e6;
+  --ivory-dim:rgba(245,240,230,.72);
+  --ivory-faint:rgba(245,240,230,.42);
+  --hairline:rgba(201,168,106,.28);
+  --serif:'Playfair Display',Georgia,serif;
+  --sans:'Jost',-apple-system,'Segoe UI',sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--black);color:var(--ivory);font-family:var(--sans);font-weight:300;line-height:1.65;letter-spacing:.015em;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+img{max-width:100%}
+.ecc-wrap{max-width:1120px;margin:0 auto;padding:0 28px}
+.ecc-section{padding:96px 0}
+.ecc-section-alt{background:var(--black-2);border-top:1px solid var(--hairline);border-bottom:1px solid var(--hairline)}
+::selection{background:var(--gold);color:var(--black)}
+
+/* ---------- reveal ---------- */
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .9s ease,transform .9s ease}
+.reveal.visible{opacity:1;transform:none}
+
+/* ---------- header ---------- */
+.ecc-header{position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(10,9,8,.82);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--hairline)}
+.ecc-header-inner{max-width:1240px;margin:0 auto;padding:14px 28px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.ecc-brand{display:flex;align-items:center;gap:14px}
+.ecc-mono{display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border:1.5px solid var(--gold);border-radius:50%;font-family:var(--serif);font-size:1.05rem;color:var(--gold);letter-spacing:.05em;flex:none}
+.ecc-mono-lg{width:120px;height:120px;font-size:2.6rem;border-width:2px}
+.ecc-mono-sm{width:40px;height:40px;font-size:.95rem}
+.ecc-brand-text{font-family:var(--serif);font-size:1.05rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ivory)}
+.ecc-nav{display:flex;gap:34px}
+.ecc-nav a{font-size:.78rem;letter-spacing:.22em;text-transform:uppercase;color:var(--ivory-dim);transition:color .3s}
+.ecc-nav a:hover{color:var(--gold)}
+.ecc-menu-btn{display:none;background:none;border:1px solid var(--hairline);width:44px;height:44px;cursor:pointer;flex:none;flex-direction:column;align-items:center;justify-content:center;gap:5px}
+.ecc-menu-btn span{display:block;width:20px;height:1.5px;background:var(--gold)}
+
+/* ---------- hero ---------- */
+.ecc-hero{min-height:100svh;display:flex;align-items:center;justify-content:center;padding:120px 20px 60px;background:radial-gradient(1200px 600px at 50% -10%,rgba(201,168,106,.10),transparent 60%),var(--black)}
+.ecc-hero-frame{position:relative;width:100%;max-width:1280px;border:1px solid var(--hairline);outline:1px solid rgba(201,168,106,.10);outline-offset:10px;padding:96px 32px;text-align:center;overflow:hidden}
+.ecc-hero-glow{position:absolute;top:-160px;left:50%;transform:translateX(-50%);width:640px;height:340px;background:radial-gradient(ellipse,rgba(201,168,106,.16),transparent 70%);pointer-events:none}
+.ecc-hero-inner{position:relative;max-width:820px;margin:0 auto}
+.ecc-eyebrow{font-size:.72rem;letter-spacing:.42em;text-transform:uppercase;color:var(--gold);margin-bottom:26px}
+.ecc-rule{display:flex;justify-content:center;margin-bottom:30px}
+.ecc-rule span{display:block;width:64px;height:1px;background:var(--gold)}
+.ecc-h1{font-family:var(--serif);font-weight:500;font-size:clamp(2.1rem,5.4vw,3.9rem);line-height:1.22;color:var(--ivory);letter-spacing:.02em}
+.ecc-h1-brand{font-size:clamp(1.15rem,2.6vw,1.6rem);letter-spacing:.34em;text-transform:uppercase;color:var(--gold);font-weight:600}
+.ecc-h1 em{font-style:italic;color:var(--ivory)}
+.ecc-sub{margin:30px auto 0;max-width:620px;font-size:1.06rem;font-weight:300;color:var(--ivory-dim)}
+.ecc-badge{display:inline-flex;align-items:center;gap:12px;margin-top:34px;padding:12px 26px;border:1px solid var(--hairline);border-radius:999px;background:rgba(201,168,106,.06)}
+.ecc-stars{color:var(--gold);letter-spacing:.25em;font-size:1rem}
+.ecc-badge-text{font-size:.86rem;letter-spacing:.1em;color:var(--ivory-dim)}
+.ecc-badge-text strong{color:var(--ivory);font-weight:500}
+.ecc-cta-row{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-top:40px}
+.ecc-btn{display:inline-block;padding:16px 38px;font-size:.8rem;letter-spacing:.24em;text-transform:uppercase;font-weight:500;transition:all .35s;border:1px solid var(--gold)}
+.ecc-btn-gold{background:var(--gold);color:var(--black)}
+.ecc-btn-gold:hover{background:#dbbd85;box-shadow:0 8px 34px rgba(201,168,106,.35)}
+.ecc-btn-line{background:transparent;color:var(--gold)}
+.ecc-btn-line:hover{background:rgba(201,168,106,.10)}
+.ecc-scroll{position:absolute;bottom:26px;left:50%;transform:translateX(-50%);width:22px;height:38px;border:1px solid var(--hairline);border-radius:12px;display:flex;justify-content:center;padding-top:8px}
+.ecc-scroll span{width:3px;height:8px;border-radius:2px;background:var(--gold);animation:eccScroll 2s infinite}
+@keyframes eccScroll{0%{opacity:0;transform:translateY(0)}40%{opacity:1}100%{opacity:0;transform:translateY(12px)}}
+
+/* ---------- ticker ---------- */
+.ecc-ticker{overflow:hidden;border-top:1px solid var(--hairline);border-bottom:1px solid var(--hairline);background:#0d0b09;padding:15px 0}
+.ecc-ticker-track{display:flex;gap:44px;width:max-content;animation:eccTick 30s linear infinite}
+.ecc-ticker-track span{font-size:.75rem;letter-spacing:.32em;text-transform:uppercase;color:var(--ivory-dim);white-space:nowrap}
+.ecc-ticker-track i{color:var(--gold);font-style:normal;font-size:.6rem;align-self:center}
+@keyframes eccTick{to{transform:translateX(-50%)}}
+
+/* ---------- sections ---------- */
+.ecc-kicker{font-size:.72rem;letter-spacing:.42em;text-transform:uppercase;color:var(--gold);margin-bottom:18px}
+.ecc-h2{font-family:var(--serif);font-weight:600;font-size:clamp(1.9rem,4vw,2.9rem);line-height:1.2;margin-bottom:16px}
+.ecc-lead{max-width:640px;color:var(--ivory-dim);font-size:1.05rem;margin-bottom:52px}
+
+/* ---------- concierge menu ---------- */
+.ecc-menu{border-top:1px solid var(--hairline)}
+.ecc-menu-item{display:flex;align-items:center;gap:28px;padding:34px 12px;border-bottom:1px solid var(--hairline);transition:background .35s,padding .35s}
+.ecc-menu-item:hover{background:rgba(201,168,106,.05);padding-left:26px}
+.ecc-menu-num{font-family:var(--serif);font-size:1rem;color:var(--gold-deep);letter-spacing:.1em;flex:none;width:44px}
+.ecc-menu-body{display:flex;flex-direction:column;gap:8px;flex:1}
+.ecc-menu-title{font-family:var(--serif);font-size:clamp(1.35rem,3vw,1.9rem);font-weight:600;color:var(--ivory)}
+.ecc-menu-desc{font-size:.98rem;color:var(--ivory-dim);max-width:560px}
+.ecc-menu-arrow{color:var(--gold);font-size:1.6rem;flex:none;transition:transform .35s}
+.ecc-menu-item:hover .ecc-menu-arrow{transform:translateX(8px)}
+.ecc-menu-note{margin-top:30px;color:var(--ivory-dim);font-size:.98rem}
+.ecc-menu-note a{color:var(--gold);border-bottom:1px solid var(--hairline)}
+.ecc-menu-note a:hover{border-color:var(--gold)}
+
+/* ---------- pillars ---------- */
+.ecc-pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:var(--hairline);border:1px solid var(--hairline)}
+.ecc-pillar{background:var(--black);padding:52px 36px;text-align:center}
+.ecc-pillar-num{font-family:var(--serif);font-size:2rem;color:var(--gold);display:block;margin-bottom:20px}
+.ecc-pillar h3{font-family:var(--serif);font-size:1.45rem;font-weight:600;margin-bottom:16px;color:var(--ivory)}
+.ecc-pillar p{font-size:.96rem;color:var(--ivory-dim)}
+
+/* ---------- about ---------- */
+.ecc-about{display:grid;grid-template-columns:280px 1fr;gap:70px;align-items:center}
+.ecc-about-mark{text-align:center}
+.ecc-about-seal{margin-top:22px;font-size:.72rem;letter-spacing:.32em;text-transform:uppercase;color:var(--gold)}
+.ecc-about-text p{margin-bottom:18px;color:var(--ivory-dim);font-size:1.04rem}
+.ecc-about-text strong{color:var(--ivory);font-weight:500}
+.ecc-inline-link{color:var(--gold);border-bottom:1px solid var(--hairline)}
+.ecc-about-text .ecc-cta-row{justify-content:flex-start;margin-top:32px}
+
+/* ---------- faq ---------- */
+.ecc-faq{max-width:820px}
+.ecc-faq-list{margin-top:44px;border-top:1px solid var(--hairline)}
+.ecc-faq-item{border-bottom:1px solid var(--hairline)}
+.ecc-faq-item summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:20px;padding:26px 8px;font-family:var(--serif);font-size:1.18rem;color:var(--ivory);transition:color .3s}
+.ecc-faq-item summary::-webkit-details-marker{display:none}
+.ecc-faq-item summary::after{content:'+';color:var(--gold);font-size:1.5rem;flex:none;transition:transform .3s}
+.ecc-faq-item[open] summary::after{transform:rotate(45deg)}
+.ecc-faq-item summary:hover{color:var(--gold)}
+.ecc-faq-item p{padding:0 8px 28px;color:var(--ivory-dim);font-size:1rem}
+.ecc-faq-item p strong{color:var(--ivory);font-weight:500}
+
+/* ---------- contact ---------- */
+.ecc-contact-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:var(--hairline);border:1px solid var(--hairline);margin-bottom:56px}
+.ecc-contact-card{background:var(--black);padding:40px 32px}
+.ecc-contact-label{font-size:.7rem;letter-spacing:.36em;text-transform:uppercase;color:var(--gold);margin-bottom:16px}
+.ecc-contact-big{font-family:var(--serif);font-size:clamp(1.25rem,2.6vw,1.7rem);color:var(--ivory);font-weight:600;transition:color .3s}
+a.ecc-contact-big:hover{color:var(--gold)}
+.ecc-contact-addr{font-size:1.02rem;color:var(--ivory-dim);line-height:1.8}
+.ecc-contact-addr span{color:var(--gold);font-size:.9rem;letter-spacing:.06em}
+
+/* ---------- form ---------- */
+.ecc-form{border:1px solid var(--hairline);padding:48px;max-width:720px;background:rgba(201,168,106,.03)}
+.ecc-form-title{font-family:var(--serif);font-size:1.4rem;margin-bottom:26px;color:var(--ivory)}
+.ecc-form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px}
+.ecc-form input,.ecc-form select,.ecc-form textarea{width:100%;background:#14110d;border:1px solid var(--hairline);color:var(--ivory);padding:15px 18px;font-family:var(--sans);font-size:.95rem;font-weight:300;letter-spacing:.03em;outline:none;transition:border-color .3s}
+.ecc-form input:focus,.ecc-form select:focus,.ecc-form textarea:focus{border-color:var(--gold)}
+.ecc-form textarea{resize:vertical;margin-bottom:24px}
+.ecc-form select{appearance:none;-webkit-appearance:none}
+.ecc-form button{cursor:pointer;font-family:var(--sans)}
+
+/* ---------- offer ---------- */
+.ecc-offer{background:linear-gradient(135deg,#0f1f13,#0a0908 70%);border-top:1px solid var(--hairline);padding:96px 0}
+.ecc-offer-card{border:1px solid rgba(22,135,48,.55);background:rgba(22,135,48,.06);padding:60px 48px;text-align:center;max-width:800px;margin:0 auto}
+.ecc-offer-kicker{font-size:.72rem;letter-spacing:.38em;text-transform:uppercase;color:#3fd068;margin-bottom:18px}
+.ecc-offer-title{font-family:var(--serif);font-size:clamp(1.7rem,3.6vw,2.4rem);margin-bottom:14px}
+.ecc-offer-text{color:var(--ivory-dim);margin-bottom:34px}
+.ecc-offer-prices{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-bottom:38px}
+.ecc-offer-price{border:1px solid rgba(22,135,48,.55);padding:26px 40px;display:flex;flex-direction:column;gap:6px;min-width:230px}
+.ecc-offer-price strong{font-family:var(--serif);font-size:2.4rem;color:#3fd068}
+.ecc-offer-price span{font-size:.85rem;color:var(--ivory-dim)}
+.ecc-offer-btn{display:inline-block;background:#168730;color:#fff;padding:17px 44px;font-size:.82rem;letter-spacing:.22em;text-transform:uppercase;font-weight:500;transition:background .3s,box-shadow .3s}
+.ecc-offer-btn:hover{background:#1aa53a;box-shadow:0 8px 30px rgba(22,135,48,.45)}
+
+/* ---------- footer ---------- */
+.ecc-footer{border-top:1px solid var(--hairline);padding:64px 0 30px;background:#070605}
+.ecc-footer-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start;margin-bottom:48px}
+.ecc-foot-name{font-family:var(--serif);letter-spacing:.16em;text-transform:uppercase;margin:18px 0 10px;color:var(--ivory)}
+.ecc-foot-sub{font-size:.92rem;color:var(--ivory-faint);line-height:1.8}
+.ecc-foot-nav{display:flex;gap:26px;flex-wrap:wrap;justify-content:flex-end}
+.ecc-foot-nav a{font-size:.78rem;letter-spacing:.2em;text-transform:uppercase;color:var(--ivory-dim)}
+.ecc-foot-nav a:hover{color:var(--gold)}
+.ecc-foot-legal{text-align:center;font-size:.82rem;color:var(--ivory-faint);letter-spacing:.04em}
+.ecc-foot-legal a{color:#3fd068}
+.ecc-foot-legal a:hover{text-decoration:underline}
+
+/* ---------- whatsapp float ---------- */
+.ecc-wa-float{position:fixed;right:26px;bottom:26px;z-index:60;width:62px;height:62px;border-radius:50%;background:#25d366;display:flex;align-items:center;justify-content:center;box-shadow:0 10px 32px rgba(37,211,102,.4);transition:transform .3s}
+.ecc-wa-float:hover{transform:scale(1.08)}
+.ecc-wa-float svg{width:32px;height:32px;fill:#fff}
+
+/* ---------- responsive ---------- */
+@media(max-width:900px){
+  .ecc-nav{position:fixed;top:73px;right:0;left:0;background:rgba(10,9,8,.97);border-bottom:1px solid var(--hairline);flex-direction:column;padding:10px 28px 26px;gap:0;display:none}
+  .ecc-nav.open{display:flex}
+  .ecc-nav a{padding:14px 0;border-bottom:1px solid rgba(201,168,106,.12)}
+  .ecc-menu-btn{display:flex}
+  .ecc-pillars,.ecc-contact-grid{grid-template-columns:1fr}
+  .ecc-about{grid-template-columns:1fr;gap:44px}
+  .ecc-about-mark{order:-1}
+  .ecc-footer-grid{grid-template-columns:1fr}
+  .ecc-foot-nav{justify-content:flex-start}
+  .ecc-hero-frame{padding:70px 22px}
+  .ecc-form{padding:32px 22px}
+  .ecc-form-row{grid-template-columns:1fr}
+  .ecc-offer-card{padding:44px 26px}
+  .ecc-section{padding:72px 0}
+}
+@media(max-width:480px){
+  .ecc-brand-text{display:none}
+  .ecc-cta-row .ecc-btn{width:100%;text-align:center}
+  .ecc-menu-item{gap:16px}
+  .ecc-menu-num{width:32px}
+}
