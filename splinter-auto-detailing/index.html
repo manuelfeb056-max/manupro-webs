@@ -75,13 +75,18 @@
 
 <header class="sh-header" id="header">
   <div class="sh-header-inner">
+    <!-- SLOT DE LOGO REAL: para montar el logo oficial del negocio, guarda el archivo como img/logo-real.png (fondo transparente).
+         El tratamiento tipográfico de abajo es una PROPUESTA de identidad de Manupro, no el logo oficial. -->
     <a href="#inicio" class="sh-logo" aria-label="Splinter Auto Detailing">
-      <span class="sh-logo-sticker"><span class="sh-logo-word">SPLINTER</span><span class="sh-logo-sub">AUTO DETAILING</span></span>
+      <img class="sh-logo-real" src="img/logo-real.png" alt="Logo oficial de Splinter Auto Detailing" onload="this.closest('.sh-logo').classList.add('has-real')" onerror="this.remove()">
+      <span class="sh-logo-type"><span class="sh-logo-word">SPLINTER</span><span class="sh-logo-sub">AUTO&nbsp;DETAILING</span></span>
+      <span class="sh-logo-tag">propuesta de marca</span>
     </a>
     <nav class="sh-nav" id="nav">
       <a href="#inicio">Inicio</a>
       <a href="#servicios">Servicios</a>
       <a href="#zona">La Zona</a>
+      <a href="#muro">El Muro</a>
       <a href="#nosotros">Nosotros</a>
       <a href="#preguntas">Preguntas</a>
       <a href="#contacto">Contacto</a>
@@ -98,6 +103,7 @@
       <span class="sh-badge">Guaynabo · PR</span>
       <span class="sh-badge">Lun–Sáb · 8–5</span>
       <span class="sh-badge sh-badge-lime">5.0 ★ rating</span>
+      <span class="sh-badge sh-badge-tag">Identidad propuesta · Manupro</span>
     </div>
     <h1 class="sh-mega reveal">
       <span class="sh-mega-line">SPLINTER</span>
@@ -193,6 +199,52 @@
   </div>
 </section>
 
+<section class="sh-muro" id="muro">
+  <div class="sh-wrap">
+    <p class="sh-kicker reveal">Sin fotos falsas, pura capacidad</p>
+    <h2 class="sh-h2 reveal">EL MURO <span class="sh-h2-lime">SPLINTER</span></h2>
+    <p class="sh-muro-intro reveal">Todavía no tenemos fotos reales del trabajo aquí — y preferimos no inventarlas. Esto es lo que dominamos, zona por zona:</p>
+    <div class="sh-wall">
+      <div class="sh-wall-row reveal"><span class="sh-wall-big">Pintura</span><span class="sh-wall-sub">Lavado y acabado que revive el brillo de la carrocería.</span></div>
+      <div class="sh-wall-row reveal"><span class="sh-wall-big sh-wall-outline">Interior</span><span class="sh-wall-sub">Asientos, alfombras, tablero y consola, a fondo.</span></div>
+      <div class="sh-wall-row reveal"><span class="sh-wall-big">Aros <span class="sh-h2-lime">&amp;</span> gomas</span><span class="sh-wall-sub">Acabado que se nota de lejos.</span></div>
+      <div class="sh-wall-row reveal"><span class="sh-wall-big sh-wall-outline">Cristales</span><span class="sh-wall-sub">Claridad total, sin manchas ni marcas.</span></div>
+      <div class="sh-wall-row reveal"><span class="sh-wall-big">Motor</span><span class="sh-wall-sub">Limpieza y detallado del área del motor.</span></div>
+      <div class="sh-wall-row reveal"><span class="sh-wall-big sh-wall-outline">Detalle fino</span><span class="sh-wall-sub">Cada rincón, sin prisa, sin atajos.</span></div>
+    </div>
+    <a class="sh-btn sh-btn-lime sh-muro-cta reveal" data-track="muro_wa" href="https://wa.me/19392625333?text=Hola%20Splinter%20Auto%20Detailing%2C%20quiero%20cotizar%20el%20detallado%20de%20mi%20carro." target="_blank" rel="noopener">Cotiza tu carro</a>
+  </div>
+</section>
+
+<section class="sh-section sh-proceso" id="proceso">
+  <div class="sh-wrap">
+    <p class="sh-kicker reveal">Cómo funciona</p>
+    <h2 class="sh-h2 reveal">DEL DRIVEWAY <span class="sh-h2-lime">AL SHOWROOM</span></h2>
+    <div class="sh-proc-strip">
+      <div class="sh-proc reveal">
+        <span class="sh-proc-num">01</span>
+        <h3>Coordina</h3>
+        <p>Escríbenos por WhatsApp o llama al 939-262-5333 y cuadramos tu visita.</p>
+      </div>
+      <div class="sh-proc reveal">
+        <span class="sh-proc-num">02</span>
+        <h3>Revisamos</h3>
+        <p>Miramos tu carro zona por zona y te decimos claro lo que necesita.</p>
+      </div>
+      <div class="sh-proc reveal">
+        <span class="sh-proc-num">03</span>
+        <h3>Detallamos</h3>
+        <p>Manos a la obra: interior, exterior, aros y cristales. Sin atajos.</p>
+      </div>
+      <div class="sh-proc reveal">
+        <span class="sh-proc-num">04</span>
+        <h3>Rueda</h3>
+        <p>Recoge tu carro con otro nivel. Así de directo.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section class="sh-rating">
   <div class="sh-wrap sh-rating-inner reveal">
     <span class="sh-rating-stars" aria-hidden="true">★★★★★</span>
@@ -216,11 +268,13 @@
         <a class="sh-btn sh-btn-ghost" data-track="about_map" href="https://www.google.com/maps/search/?api=1&query=Av.+F.+D.+Roosevelt+1500,+Guaynabo,+PR+00968" target="_blank" rel="noopener">Cómo llegar</a>
       </div>
     </div>
-    <div class="sh-about-card reveal" aria-hidden="true">
-      <div class="sh-sticker-lg">
-        <span class="sh-sticker-word">SPLINTER</span>
-        <span class="sh-sticker-sub">EST. GUAYNABO</span>
-        <span class="sh-sticker-hrs">LUN–SÁB · 8–5</span>
+    <div class="sh-about-card reveal">
+      <div class="sh-concept">
+        <span class="sh-concept-tag">Concepto de marca · propuesta</span>
+        <span class="sh-concept-word">SPLINTER</span>
+        <span class="sh-concept-sub">AUTO DETAILING</span>
+        <span class="sh-concept-line">Guaynabo · Puerto Rico</span>
+        <p class="sh-concept-note">¿Tienes logo oficial? Lo montamos aquí al momento, tal cual es.</p>
       </div>
     </div>
   </div>
@@ -295,6 +349,7 @@
         <p class="sh-offer-kicker">OFERTA POR TIEMPO LIMITADO · MANUPRO</p>
         <h3>¿Te gusta esta página? La hacemos para tu negocio.</h3>
         <p>Web completa con tu marca, tus fotos reales y tus datos: <strong>$99 solo web</strong> · <strong>$149 web + hosting + mantenimiento + dominio .com por 1 año</strong>.</p>
+        <p class="sh-offer-brand">Incluye propuesta de identidad de marca — y si ya tienes logo oficial, lo montamos tal cual.</p>
       </div>
       <a class="sh-offer-btn" data-track="offer_wa" href="https://wa.me/17873128042?text=Hola%20Manupro%2C%20me%20interesa%20la%20oferta%20web%20para%20mi%20negocio." target="_blank" rel="noopener">La quiero por WhatsApp</a>
     </div>
@@ -304,12 +359,13 @@
 <footer class="sh-footer">
   <div class="sh-wrap sh-footer-grid">
     <div>
-      <p class="sh-logo sh-logo-foot"><span class="sh-logo-sticker"><span class="sh-logo-word">SPLINTER</span><span class="sh-logo-sub">AUTO DETAILING</span></span></p>
+      <p class="sh-logo sh-logo-foot"><span class="sh-logo-type"><span class="sh-logo-word">SPLINTER</span><span class="sh-logo-sub">AUTO&nbsp;DETAILING</span></span><span class="sh-logo-tag">propuesta de marca</span></p>
       <p class="sh-foot-sub">Lavado y detallado de autos en Guaynabo, Puerto Rico.</p>
     </div>
     <nav class="sh-foot-nav">
       <a href="#servicios">Servicios</a>
       <a href="#zona">La Zona</a>
+      <a href="#muro">El Muro</a>
       <a href="#preguntas">Preguntas</a>
       <a href="#contacto">Contacto</a>
     </nav>

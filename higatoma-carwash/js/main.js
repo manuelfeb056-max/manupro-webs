@@ -1,15 +1,15 @@
-/* Higatoma Detailing — FRESH FOAM: bubbles, reveals, gallery carousel (buttons + touch/swipe), counters, mobile menu */
+/* Higatoma Detailing — TEAL & GOLD: floating gold dust, reveals, gallery carousel (buttons + touch/swipe), counters, mobile menu */
 (function(){
   "use strict";
 
-  /* ---------- animated floating soap bubbles ---------- */
+  /* ---------- floating gold dust ---------- */
   var layer = document.getElementById('bubblesLayer');
   if (layer && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
     var N = 22;
     for (var i = 0; i < N; i++) {
       var b = document.createElement('span');
       b.className = 'bubble';
-      var size = 8 + Math.random() * 44;
+      var size = 4 + Math.random() * 14;
       b.style.width = size + 'px';
       b.style.height = size + 'px';
       b.style.left = (Math.random() * 100) + 'vw';

@@ -88,8 +88,8 @@
     <nav class="nav" id="nav">
       <a href="#inicio">Inicio</a>
       <a href="#servicios">Servicios</a>
-      <a href="#especialidades">Especialidades</a>
-      <a href="#nosotros">Nosotros</a>
+      <a href="#proceso">Proceso</a>
+      <a href="#orgullo">Orgullo</a>
       <a href="#preguntas">Preguntas</a>
       <a href="#contacto">Contacto</a>
     </nav>
@@ -210,54 +210,92 @@
   </div>
 </section>
 
-<section class="stats">
-  <div class="wrap stats-grid">
-    <div class="stat reveal"><span class="stat-num">5.0★</span><span class="stat-label">calificación real</span></div>
-    <div class="stat reveal"><span class="stat-num" data-count="7">0</span><span class="stat-label">reseñas de clientes</span></div>
-    <div class="stat reveal"><span class="stat-num" data-count="6">0</span><span class="stat-label">servicios especializados</span></div>
+<section class="section proceso" id="proceso">
+  <div class="wrap">
+    <p class="kicker reveal">De principio a fin</p>
+    <h2 class="h2 reveal">El proceso del atardecer</h2>
+    <p class="proceso-sub reveal">Cada trabajo recorre el mismo camino que el sol del sur: arranca abajo, sube al punto más exigente y baja bañado en brillo. Toca cada fase para ver qué pasa en tu carro.</p>
+    <div class="sunarc reveal">
+      <svg class="sunarc-svg" viewBox="0 0 1200 400" role="group" aria-label="Línea de tiempo del proceso de detailing, de amanecer a atardecer">
+        <defs>
+          <linearGradient id="arcGrad" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0%" stop-color="#d21f3c"/><stop offset="38%" stop-color="#ff6b1a"/>
+            <stop offset="50%" stop-color="#ffb347"/><stop offset="62%" stop-color="#ff6b1a"/>
+            <stop offset="100%" stop-color="#d21f3c"/>
+          </linearGradient>
+          <radialGradient id="nodeSun" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stop-color="#ffe9a8"/><stop offset="55%" stop-color="#ffd166"/><stop offset="100%" stop-color="#ff6b1a"/>
+          </radialGradient>
+          <filter id="sunGlow" x="-80%" y="-80%" width="260%" height="260%">
+            <feGaussianBlur stdDeviation="22" result="b"/>
+            <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+          </filter>
+        </defs>
+        <line x1="24" y1="342" x2="1176" y2="342" stroke="rgba(255,180,71,.35)" stroke-width="2" stroke-dasharray="8 10"/>
+        <text x="24" y="368" fill="#d9b696" font-size="17" letter-spacing="4" font-family="Chakra Petch, sans-serif">HORIZONTE DEL SUR</text>
+        <path id="arcPath" d="M60,340 Q600,-90 1140,340" fill="none" stroke="url(#arcGrad)" stroke-width="7" stroke-linecap="round"/>
+        <g id="sunDot" filter="url(#sunGlow)" opacity="1">
+          <g class="sun-rays">
+            <g stroke="#ffd166" stroke-width="5" stroke-linecap="round" opacity=".9">
+              <line x1="0" y1="-64" x2="0" y2="-44"/><line x1="0" y1="64" x2="0" y2="44"/>
+              <line x1="-64" y1="0" x2="-44" y2="0"/><line x1="64" y1="0" x2="44" y2="0"/>
+              <line x1="-45" y1="-45" x2="-31" y2="-31"/><line x1="45" y1="-45" x2="31" y2="-31"/>
+              <line x1="-45" y1="45" x2="-31" y2="31"/><line x1="45" y1="45" x2="31" y2="31"/>
+            </g>
+          </g>
+          <circle r="34" fill="url(#nodeSun)"/>
+        </g>
+        <g class="stage-node" data-stage="0" tabindex="0" role="button" aria-label="Fase 1: Amanecer, lavado y descontaminación">
+          <circle class="node-halo" r="30" cx="127" cy="289"/><circle class="node-dot" r="16" cx="127" cy="289"/>
+          <text class="node-num" x="127" y="296">01</text>
+          <text class="node-name" x="127" y="248">AMANECER</text>
+        </g>
+        <g class="stage-node" data-stage="1" tabindex="0" role="button" aria-label="Fase 2: Media mañana, pulido y corrección">
+          <circle class="node-halo" r="30" cx="465" cy="140"/><circle class="node-dot" r="16" cx="465" cy="140"/>
+          <text class="node-num" x="465" y="147">02</text>
+          <text class="node-name" x="465" y="99">MEDIODÍA</text>
+        </g>
+        <g class="stage-node" data-stage="2" tabindex="0" role="button" aria-label="Fase 3: Tarde, color y detalle">
+          <circle class="node-halo" r="30" cx="735" cy="140"/><circle class="node-dot" r="16" cx="735" cy="140"/>
+          <text class="node-num" x="735" y="147">03</text>
+          <text class="node-name" x="735" y="99">LA TARDE</text>
+        </g>
+        <g class="stage-node" data-stage="3" tabindex="0" role="button" aria-label="Fase 4: Atardecer, protección y entrega">
+          <circle class="node-halo" r="30" cx="1073" cy="289"/><circle class="node-dot" r="16" cx="1073" cy="289"/>
+          <text class="node-num" x="1073" y="296">04</text>
+          <text class="node-name" x="1073" y="248">ATARDECER</text>
+        </g>
+      </svg>
+      <div class="stage-detail" id="stageDetail" aria-live="polite">
+        <div class="sd-chip" id="sdChip">Fase 01 · Amanecer</div>
+        <h3 class="sd-title" id="sdTitle">Lavado y descontaminación</h3>
+        <p class="sd-desc" id="sdDesc"></p>
+        <ul class="sd-points" id="sdPoints"></ul>
+      </div>
+    </div>
   </div>
 </section>
 
-<section class="section about" id="nosotros">
-  <div class="wrap about-grid">
-    <div class="about-text">
-      <p class="kicker reveal">Quiénes somos</p>
-      <h2 class="h2 reveal">Car Care Detailing Service</h2>
-      <p class="reveal">Especialistas en revestimientos cerámicos, powder coating de piezas y aros, y pintura de calipers y accesorios. Desde Salinas, le damos a cada vehículo un acabado de exhibición.</p>
-      <blockquote class="review-quote reveal">
-        "Best Detailer on South side of PR"
-        <cite>— reseña real de un cliente</cite>
-      </blockquote>
-      <div class="addr-line reveal">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C8.1 2 5 5.1 5 9c0 5.2 7 13 7 13s7-7.8 7-13c0-3.9-3.1-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5z"/></svg>
-        <span>Cll Diosdada Dones, Coco, Salinas, Puerto Rico</span>
-      </div>
-      <a class="btn btn-accent reveal" data-track="tel_about" href="tel:+17873181059">Llamar +1 787-318-1059</a>
+<section class="pride" id="orgullo">
+  <div class="pride-sunbg" aria-hidden="true">
+    <div class="pride-rays"></div>
+    <div class="pride-disc"></div>
+  </div>
+  <div class="wrap pride-inner">
+    <p class="kicker reveal">Orgullo del sur</p>
+    <h2 class="pride-headline reveal">EL SUR TIENE<br><span>SU DETAILER</span></h2>
+    <blockquote class="pride-quote reveal">
+      <span class="q-mark" aria-hidden="true">&ldquo;</span>
+      Best Detailer on South side of PR
+      <cite>&mdash; reseña real de un cliente</cite>
+    </blockquote>
+    <div class="pride-stats reveal">
+      <div class="ps"><span class="ps-num">5.0★</span><span class="ps-label">calificación real</span></div>
+      <div class="ps"><span class="ps-num" data-count="7">0</span><span class="ps-label">reseñas de clientes</span></div>
+      <div class="ps"><span class="ps-num">Coco</span><span class="ps-label">Salinas, PR · Cll Diosdada Dones</span></div>
     </div>
-    <div class="about-img reveal">
-      <svg viewBox="0 0 800 1000" role="img" aria-label="Sol del sur sobre Salinas" style="width:100%;height:100%;display:block">
-        <defs>
-          <linearGradient id="abSky" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0" stop-color="#1a0906"/><stop offset="45%" stop-color="#d21f3c"/><stop offset="75%" stop-color="#ff6b1a"/><stop offset="100%" stop-color="#ffb347"/>
-          </linearGradient>
-          <radialGradient id="abSun" cx="50%" cy="50%" r="50%">
-            <stop offset="0%" stop-color="#ffe9a8"/><stop offset="55%" stop-color="#ffd166"/><stop offset="100%" stop-color="#ff6b1a"/>
-          </radialGradient>
-        </defs>
-        <rect width="800" height="1000" fill="url(#abSky)"/>
-        <circle cx="400" cy="620" r="230" fill="url(#abSun)"/>
-        <g fill="#1c0a04" opacity="0.85">
-          <rect x="0" y="700" width="800" height="300"/>
-          <path d="M120 700l40-120h30l-40 120zM300 700l40-90h26l-40 90zM520 700l-40-90h26l40 90zM660 700l-40-120h30l40 120z"/>
-        </g>
-        <g fill="#1c0a04">
-          <path d="M400 300c-46 0-76 33-76 74 0 66 76 150 76 150s76-84 76-150c0-41-30-74-76-74z"/>
-          <circle cx="400" cy="376" r="30" fill="#ffd166"/>
-        </g>
-        <text x="400" y="880" text-anchor="middle" font-family="Chakra Petch, sans-serif" font-size="52" font-weight="700" fill="#fff6ec">EL SUR TIENE</text>
-        <text x="400" y="940" text-anchor="middle" font-family="Chakra Petch, sans-serif" font-size="52" font-weight="700" fill="#ffd166">SU DETAILER</text>
-      </svg>
-    </div>
+    <p class="pride-copy reveal">Desde el sector Coco en Salinas le damos a cada vehículo un acabado de exhibición &mdash; pintura de calipers, powder coating de aros y piezas, y revestimientos cerámicos hechos con calma, con detalle y con el sol del sur de testigo.</p>
+    <a class="btn btn-sun btn-lg reveal" data-track="tel_pride" href="tel:+17873181059">Llamar +1 787-318-1059</a>
   </div>
 </section>
 
@@ -381,6 +419,7 @@
 </a>
 
 <script src="js/main.js"></script>
+<script src="js/proceso.js"></script>
 <script src="js/metrics.js"></script>
 </body>
 </html>

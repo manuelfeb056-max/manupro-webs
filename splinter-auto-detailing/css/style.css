@@ -32,13 +32,19 @@ img{max-width:100%;display:block}
 /* ---------- header ---------- */
 .sh-header{position:fixed;top:0;left:0;right:0;z-index:60;background:rgba(16,16,16,.88);backdrop-filter:blur(10px);border-bottom:2px solid var(--lime)}
 .sh-header-inner{width:min(1140px,94%);margin:0 auto;display:flex;align-items:center;gap:26px;padding:12px 0}
-/* jagged stencil wordmark sticker with peeled-corner effect */
-.sh-logo-sticker{position:relative;display:inline-block;background:var(--lime);color:var(--ink);padding:10px 18px 8px;transform:rotate(-2deg);
-  clip-path:polygon(0 8%,4% 0,12% 6%,20% 1%,30% 6%,38% 0,48% 6%,56% 1%,66% 6%,74% 0,84% 6%,92% 1%,100% 7%,97% 22%,100% 40%,96% 58%,100% 76%,96% 100%,88% 94%,78% 100%,68% 94%,58% 100%,48% 94%,38% 100%,28% 94%,18% 100%,8% 94%,2% 100%,5% 80%,1% 62%,5% 44%,2% 26%);
-  box-shadow:3px 3px 0 rgba(0,0,0,.6)}
-.sh-logo-sticker::after{content:"";position:absolute;right:-1px;bottom:-1px;width:26px;height:26px;background:linear-gradient(315deg,var(--ink) 0 48%,#8fae00 48% 58%,#e9ff9e 58%);filter:drop-shadow(-2px -2px 2px rgba(0,0,0,.45))}
-.sh-logo-word{font-family:var(--font-d);font-size:1.25rem;letter-spacing:.06em;display:block;line-height:1}
-.sh-logo-sub{font-size:.56rem;font-weight:800;letter-spacing:.34em;display:block;margin-top:2px}
+/* ---------- header brand slot ----------
+   Brand honesty: the typographic lockup is a DESIGN PROPOSAL by Manupro,
+   NOT the official logo. Drop the owner's real logo as img/logo-real.png
+   (transparent PNG) and it takes over the slot automatically. */
+.sh-logo{position:relative;display:flex;flex-direction:column;align-items:flex-start;line-height:1}
+.sh-logo-real{height:46px;width:auto;display:block}
+.sh-logo.has-real .sh-logo-type,.sh-logo.has-real .sh-logo-tag{display:none}
+.sh-logo-type{display:block;transform:rotate(-2deg)}
+.sh-logo-word{font-family:var(--font-d);font-size:1.35rem;letter-spacing:.05em;color:var(--paper);display:block;line-height:1;border-bottom:4px solid var(--lime);padding-bottom:4px}
+.sh-logo-sub{font-size:.55rem;font-weight:800;letter-spacing:.32em;color:var(--lime);display:block;margin-top:6px}
+.sh-logo-tag{font-size:.58rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--ink);background:var(--lime);padding:3px 9px;margin-top:8px;transform:rotate(-2deg)}
+.sh-logo-foot{align-items:flex-start}
+.sh-logo-foot .sh-logo-word{font-size:1.5rem}
 .sh-nav{display:flex;gap:26px;margin-left:auto}
 .sh-nav a{font-size:.82rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--grey);transition:color .2s}
 .sh-nav a:hover{color:var(--lime)}
@@ -56,6 +62,7 @@ img{max-width:100%;display:block}
 .sh-badge{font-size:.72rem;font-weight:800;letter-spacing:.18em;text-transform:uppercase;border:2px solid var(--line);padding:8px 14px;transform:rotate(-1.5deg);background:var(--ink-2);color:var(--paper)}
 .sh-badge:nth-child(2){transform:rotate(1.2deg)}
 .sh-badge-lime{background:var(--lime);color:var(--ink);border-color:var(--lime);transform:rotate(-1deg)}
+.sh-badge-tag{border-style:dashed;color:var(--grey);transform:rotate(1deg)}
 .sh-mega{font-family:var(--font-d);line-height:.92;letter-spacing:.01em;text-transform:uppercase;margin-bottom:10px}
 .sh-mega-line{display:block;font-size:clamp(4.2rem,15vw,11.5rem);transform:rotate(-2deg);transform-origin:left center}
 .sh-mega-line:nth-child(2){transform:rotate(1.4deg);margin-left:.4em}
@@ -120,12 +127,38 @@ img{max-width:100%;display:block}
 .sh-about-facts li{background:var(--ink-2);border:2px solid var(--line);padding:12px 16px;font-weight:600}
 .sh-fact-tag{display:inline-block;background:var(--lime);color:var(--ink);font-size:.68rem;font-weight:800;letter-spacing:.2em;padding:4px 10px;margin-right:12px;transform:rotate(-1.5deg)}
 .sh-about-ctas{display:flex;flex-wrap:wrap;gap:16px}
-.sh-sticker-lg{background:var(--lime);color:var(--ink);padding:56px 40px;text-align:center;transform:rotate(2.5deg);
-  clip-path:polygon(0 10%,5% 0,15% 7%,25% 1%,35% 7%,45% 0,55% 7%,65% 1%,75% 7%,85% 0,95% 7%,100% 5%,97% 25%,100% 45%,96% 65%,100% 85%,96% 100%,86% 93%,76% 100%,66% 93%,56% 100%,46% 93%,36% 100%,26% 93%,16% 100%,6% 93%,3% 100%,5% 80%,1% 60%,5% 40%,2% 20%);
-  box-shadow:8px 8px 0 rgba(0,0,0,.55);position:relative}
-.sh-sticker-word{font-family:var(--font-d);font-size:3.4rem;letter-spacing:.04em;display:block;line-height:1}
-.sh-sticker-sub{font-size:.8rem;font-weight:800;letter-spacing:.4em;display:block;margin:10px 0}
-.sh-sticker-hrs{display:inline-block;border:3px solid var(--ink);font-weight:900;font-size:.85rem;letter-spacing:.14em;padding:8px 16px;margin-top:6px;transform:rotate(-1.5deg)}
+/* ---------- brand concept card (about) ----------
+   The typographic lockup is a design proposal, not the official logo. */
+.sh-concept{background:var(--ink-2);border:2px solid var(--lime);padding:48px 36px;text-align:center;transform:rotate(1.5deg);position:relative}
+.sh-concept-tag{display:inline-block;font-size:.62rem;font-weight:800;letter-spacing:.26em;text-transform:uppercase;color:var(--ink);background:var(--lime);padding:6px 14px;margin-bottom:22px;transform:rotate(-2deg)}
+.sh-concept-word{font-family:var(--font-d);font-size:clamp(2.6rem,6vw,4rem);letter-spacing:.03em;display:block;line-height:1;color:var(--paper)}
+.sh-concept-sub{font-size:.8rem;font-weight:800;letter-spacing:.42em;color:var(--lime);display:block;margin:12px 0 6px}
+.sh-concept-line{color:var(--grey);font-size:.9rem;letter-spacing:.12em;text-transform:uppercase;display:block;margin-bottom:18px}
+.sh-concept-note{color:var(--paper);font-size:.92rem;border-top:1px dashed var(--line);padding-top:18px;max-width:330px;margin:0 auto}
+
+/* ---------- el muro: photo-less capability wall ----------
+   No real photos exist, so no stock and no fake boxes: a bold
+   typographic wall of real capabilities with street-poster energy. */
+.sh-muro{background:var(--ink);border-top:2px solid var(--line);border-bottom:2px solid var(--line);padding:96px 0}
+.sh-muro-intro{color:var(--grey);max-width:660px;margin:-20px 0 40px;font-size:1rem}
+.sh-wall{border-top:2px solid var(--line);margin-bottom:40px}
+.sh-wall-row{display:flex;align-items:baseline;gap:26px;flex-wrap:wrap;border-bottom:2px solid var(--line);padding:20px 6px;position:relative;overflow:hidden;transition:background .2s}
+.sh-wall-row:hover{background:rgba(198,255,0,.05)}
+.sh-wall-row::after{content:"";position:absolute;left:0;top:0;bottom:0;width:8px;background:var(--lime);transform:scaleY(0);transform-origin:top;transition:transform .25s}
+.sh-wall-row:hover::after{transform:scaleY(1)}
+.sh-wall-big{font-family:var(--font-d);font-size:clamp(2.6rem,8vw,5.2rem);letter-spacing:.01em;line-height:1;text-transform:uppercase;color:var(--paper)}
+.sh-wall-outline{color:transparent;-webkit-text-stroke:2px var(--lime)}
+.sh-wall-sub{color:var(--grey);font-size:.95rem;max-width:300px}
+.sh-muro-cta{margin-top:6px}
+
+/* ---------- proceso: street-poster process strip ---------- */
+.sh-proc-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.sh-proc{background:var(--ink-2);border:2px solid var(--line);padding:28px 22px;position:relative;transform:rotate(-.8deg);transition:transform .25s,border-color .25s}
+.sh-proc:nth-child(even){transform:rotate(.8deg)}
+.sh-proc:hover{transform:rotate(0) translateY(-6px);border-color:var(--lime)}
+.sh-proc-num{font-family:var(--font-d);font-size:2.4rem;color:transparent;-webkit-text-stroke:1.5px var(--lime);display:block;margin-bottom:10px}
+.sh-proc h3{font-family:var(--font-d);font-size:1.5rem;letter-spacing:.04em;margin-bottom:8px;color:var(--lime);text-transform:uppercase}
+.sh-proc p{color:var(--grey);font-size:.92rem}
 
 /* ---------- faq ---------- */
 .sh-faq{background:var(--ink-2);border-top:2px solid var(--line);border-bottom:2px solid var(--line)}
@@ -162,6 +195,7 @@ img{max-width:100%;display:block}
 .sh-offer-card p{color:#444;max-width:560px}
 .sh-offer-btn{background:var(--mp-green);color:#fff;font-weight:800;text-transform:uppercase;letter-spacing:.06em;padding:16px 30px;transition:transform .2s;white-space:nowrap}
 .sh-offer-btn:hover{transform:scale(1.05)}
+.sh-offer-brand{font-size:.85rem;color:#6a6a6a;margin-top:10px;max-width:560px}
 
 /* ---------- footer ---------- */
 .sh-footer{background:#0a0a0a;border-top:3px solid var(--lime);padding:60px 0 26px}
@@ -181,6 +215,7 @@ img{max-width:100%;display:block}
 /* ---------- responsive ---------- */
 @media (max-width:960px){
   .sh-zone-grid{grid-template-columns:repeat(2,1fr)}
+  .sh-proc-strip{grid-template-columns:repeat(2,1fr)}
   .sh-about-grid{grid-template-columns:1fr}
   .sh-contact-grid{grid-template-columns:1fr}
 }
@@ -192,5 +227,7 @@ img{max-width:100%;display:block}
   .sh-section{padding:64px 0}
   .sh-hero{padding:130px 0 100px}
   .sh-mega-line{font-size:clamp(3.4rem,19vw,5.5rem)}
+  .sh-proc-strip{grid-template-columns:1fr}
+  .sh-wall-big{font-size:clamp(2.2rem,13vw,3.2rem)}
   .sh-offer-card{padding:28px}
 }

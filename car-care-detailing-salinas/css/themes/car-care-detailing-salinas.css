@@ -162,3 +162,78 @@ a.info-card:hover{border-color:var(--sun-orange)}
   .hero-panel{padding:26px 20px}
   .spec-tile{flex-basis:210px}
 }
+
+/* ============================================================
+   EL PROCESO DEL ATARDECER — sun-arc timeline interactivo
+   ============================================================ */
+.proceso{background:linear-gradient(180deg,#150806 0%,#241009 55%,#150806 100%)}
+.proceso-sub{color:var(--muted);max-width:62ch;margin:-24px 0 32px}
+.sunarc{background:rgba(18,8,5,.62);border:1px solid var(--line);border-radius:26px;
+  padding:clamp(18px,4vw,44px);
+  box-shadow:0 30px 90px rgba(0,0,0,.5), inset 0 1px 0 rgba(255,255,255,.06)}
+.sunarc-svg{width:100%;height:auto;display:block;overflow:visible}
+.sunarc-svg text{font-family:'Chakra Petch','Inter',sans-serif}
+#sunDot{will-change:transform}
+.sun-rays{transform-box:fill-box;transform-origin:center;animation:raysSpin 26s linear infinite}
+@keyframes raysSpin{to{transform:rotate(360deg)}}
+.stage-node{cursor:pointer;outline:none}
+.stage-node .node-halo{fill:rgba(255,140,60,.10);stroke:rgba(255,180,71,.55);stroke-width:2;transition:fill .3s,stroke .3s}
+.stage-node .node-dot{fill:#241009;stroke:#ffb347;stroke-width:3;transition:fill .3s,stroke .3s}
+.stage-node .node-num{fill:#ffb347;font-weight:700;font-size:17px;text-anchor:middle}
+.stage-node .node-name{fill:#f3e2cf;font-weight:700;font-size:20px;letter-spacing:3px;text-anchor:middle}
+.stage-node:hover .node-halo{fill:rgba(255,140,60,.24)}
+.stage-node.on .node-halo{fill:rgba(255,107,26,.28);stroke:#ffd166;animation:haloPulse 2.2s ease-in-out infinite}
+.stage-node.on .node-dot{fill:#ff6b1a;stroke:#ffd166}
+.stage-node.on .node-num{fill:#fff}
+.stage-node.on .node-name{fill:#ffd166}
+.stage-node:focus-visible .node-halo{stroke:#fff;stroke-width:3}
+@keyframes haloPulse{0%,100%{stroke-opacity:.95}50%{stroke-opacity:.3}}
+.stage-detail{margin-top:26px;background:linear-gradient(150deg,#31140b 0%,#1e0c07 70%);
+  border:1px solid rgba(255,150,80,.3);border-radius:20px;padding:clamp(22px,4vw,40px)}
+.stage-detail.swap{animation:sdSwap .45s ease}
+@keyframes sdSwap{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+.sd-chip{display:inline-block;background:linear-gradient(100deg,var(--sun-crimson),var(--sun-orange));
+  color:#fff;font-size:.78rem;font-weight:800;letter-spacing:.22em;text-transform:uppercase;
+  padding:8px 18px;border-radius:999px;margin-bottom:14px}
+.sd-title{font-size:clamp(1.7rem,4vw,2.6rem);text-transform:uppercase;margin:0 0 12px;line-height:1.1}
+.sd-desc{color:#ecd9c4;max-width:70ch;margin-bottom:18px}
+.sd-points{list-style:none;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px}
+.sd-points li{background:rgba(255,150,80,.08);border:1px solid rgba(255,150,80,.22);
+  border-radius:12px;padding:12px 16px;font-size:.95rem;font-weight:600;color:#f3e2cf}
+.sd-points li::before{content:"✦ ";color:var(--sun-amber)}
+
+/* ============================================================
+   SOUTHSIDE PRIDE — panel de credibilidad tipográfico
+   ============================================================ */
+.pride{position:relative;overflow:hidden;padding:110px 0;
+  background:linear-gradient(180deg,#150806 0%,#3a130a 48%,#150806 100%)}
+.pride-sunbg{position:absolute;inset:0;pointer-events:none}
+.pride-disc{position:absolute;left:50%;bottom:-42vmin;transform:translateX(-50%);
+  width:120vmin;height:120vmin;border-radius:50%;
+  background:radial-gradient(circle,#ffe9a8 0%,#ffd166 18%,#ff6b1a 45%,#d21f3c 68%,transparent 72%);
+  opacity:.45}
+.pride-rays{position:absolute;left:50%;bottom:-42vmin;transform:translateX(-50%);
+  width:170vmin;height:170vmin;border-radius:50%;
+  background:repeating-conic-gradient(from 0deg, rgba(255,180,71,.12) 0deg 6deg, transparent 6deg 12deg);
+  -webkit-mask-image:radial-gradient(circle,#000 0%,transparent 62%);
+  mask-image:radial-gradient(circle,#000 0%,transparent 62%);
+  animation:raysSpin 70s linear infinite}
+.pride-inner{position:relative;z-index:2;text-align:center;max-width:920px}
+.pride-headline{font-size:clamp(2.6rem,8vw,5.6rem);line-height:1;text-transform:uppercase;
+  margin:0 0 28px;text-shadow:0 8px 44px rgba(210,31,60,.55);letter-spacing:.01em}
+.pride-headline span{background:linear-gradient(100deg,var(--sun-crimson) 0%,var(--sun-orange) 55%,var(--sun-amber) 100%);
+  -webkit-background-clip:text;background-clip:text;color:transparent}
+.pride-quote{font-size:clamp(1.5rem,3.6vw,2.4rem);font-weight:600;font-style:italic;color:#fff;
+  max-width:26ch;margin:0 auto 36px;line-height:1.4}
+.pride-quote .q-mark{display:block;font-size:3.4rem;color:var(--sun-amber);font-style:normal;line-height:.4;margin-bottom:14px}
+.pride-quote cite{display:block;margin-top:14px;font-size:.85rem;font-style:normal;color:var(--muted);font-weight:500}
+.pride-stats{display:flex;gap:18px;justify-content:center;flex-wrap:wrap;margin-bottom:32px}
+.ps{background:rgba(18,8,5,.55);border:1px solid rgba(255,150,80,.3);border-radius:18px;
+  padding:20px 30px;min-width:180px;backdrop-filter:blur(6px)}
+.ps-num{display:block;font-family:'Chakra Petch','Inter',sans-serif;font-size:2rem;font-weight:700;color:var(--sun-amber)}
+.ps-label{color:var(--muted);font-size:.78rem;text-transform:uppercase;letter-spacing:.08em}
+.pride-copy{color:#ecd9c4;max-width:62ch;margin:0 auto 32px}
+@media(max-width:640px){
+  .pride{padding:72px 0}
+  .ps{min-width:140px;padding:16px 18px}
+}

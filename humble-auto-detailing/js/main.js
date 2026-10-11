@@ -1,4 +1,4 @@
-/* Humble Auto Detailing — HERITAGE CRAFTSMAN: gallery carousel (buttons + swipe), FAQ, reveals, counters */
+/* Humble Auto Detailing — PRECISION DETAILING LAB: scan-stage hero slideshow, gallery carousel (buttons + swipe), FAQ, reveals, counters */
 (function () {
   "use strict";
 
@@ -54,8 +54,8 @@
   var tick = document.getElementById('tickTrack');
   if (tick) tick.innerHTML += tick.innerHTML;
 
-  /* ---------- hero arch slideshow ---------- */
-  var heroSlides = Array.prototype.slice.call(document.querySelectorAll('.arch-slide'));
+  /* ---------- hero scan-stage slideshow ---------- */
+  var heroSlides = Array.prototype.slice.call(document.querySelectorAll('.scan-slide'));
   if (heroSlides.length > 1) {
     var h = 0;
     setInterval(function () {

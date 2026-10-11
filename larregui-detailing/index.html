@@ -60,12 +60,13 @@
 <header class="header">
   <div class="wrap header-inner">
     <a href="#inicio" class="brand" aria-label="Larregui Detailing - inicio">
-      <span class="brand-badge"><svg viewBox="0 0 24 24"><path d="M12 2C8.1 2 5 5.1 5 9c0 5.2 7 13 7 13s7-7.8 7-13c0-3.9-3.1-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg></span>
-      <span class="brand-name">LARREGUI<small>DETAILING</small></span>
+      <span class="brand-badge"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C8.1 2 5 5.1 5 9c0 5.2 7 13 7 13s7-7.8 7-13c0-3.9-3.1-7-7-7z" fill="#1a120a"/><path d="M9.4 5.6 14.6 13" stroke="#ff7a1a" stroke-width="1.9" stroke-linecap="round" stroke-dasharray="2.2 1.9" fill="none"/><circle cx="12" cy="9" r="1.4" fill="#ff7a1a"/></svg></span>
+      <span class="brand-name">LARREGUI<small>DETAILING</small><span class="brand-dash" aria-hidden="true"></span></span>
     </a>
     <nav class="nav" id="nav">
       <a href="#inicio">Inicio</a>
       <a href="#servicios">Servicios</a>
+      <a href="#cobertura">Cobertura</a>
       <a href="#proceso">Proceso</a>
       <a href="#nosotros">Nosotros</a>
       <a href="#preguntas">Preguntas</a>
@@ -90,7 +91,7 @@
       </div>
       <div class="hero-meta">
         <span><svg viewBox="0 0 24 24"><path d="M12 2C8.1 2 5 5.1 5 9c0 5.2 7 13 7 13s7-7.8 7-13c0-3.9-3.1-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>Trabajos a domicilio</span>
-        <span><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm1 5h-2v6h6v-2h-4z"/></svg>Trabajos por cita</span>
+        <span><svg viewBox="0 0 24 24"><path d="M19 4h-1V2h-2v2H8V2H6v2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 16H5V10h14v10zM9 14H7v-2h2v2zm4 0h-2v-2h2v2zm4 0h-2v-2h2v2z"/></svg>Trabajos por cita</span>
         <span><svg viewBox="0 0 24 24"><path d="M12 2 4 6v6c0 5 3.4 9.4 8 10 4.6-.6 8-5 8-10V6l-8-4zm-1.2 14.6-4-4 1.4-1.4 2.6 2.6 5.6-5.6 1.4 1.4-6.8 6.8z"/></svg>Ceramic coating</span>
       </div>
     </div>
@@ -187,47 +188,128 @@
   </div>
 </section>
 
+<section class="section coverage" id="cobertura">
+  <div class="wrap">
+    <p class="kicker reveal">Zona de cobertura</p>
+    <h2 class="h2 reveal">Toca una parada de la ruta</h2>
+    <p class="sec-sub reveal">Operamos desde Ciales y rodamos por el área central. Toca cada parada para ver lo que llevamos hasta tu puerta.</p>
+    <div class="cobertura-panel">
+      <div class="route-map reveal">
+        <svg viewBox="0 0 600 480" role="img" aria-label="Mapa de cobertura de Larregui Detailing: Ciales, Morovis, Orocovis y Manatí">
+          <defs>
+            <radialGradient id="covGlow" cx="50%" cy="42%" r="72%">
+              <stop offset="0%" stop-color="#33220f"/><stop offset="100%" stop-color="#191008"/>
+            </radialGradient>
+          </defs>
+          <rect width="600" height="480" fill="url(#covGlow)" rx="20"/>
+          <g stroke="#3a2b1c" stroke-width="1" opacity=".5" fill="none">
+            <path d="M0 120 C140 100 300 150 600 110"/>
+            <path d="M0 250 C160 230 340 290 600 240"/>
+            <path d="M0 370 C180 350 360 410 600 360"/>
+            <path d="M150 0 C170 160 130 320 170 480"/>
+            <path d="M330 0 C350 160 310 330 350 480"/>
+            <path d="M480 0 C500 170 460 330 500 480"/>
+          </g>
+          <path id="rutaCov" d="M 70 400 C 150 380 170 300 250 285 C 330 270 300 200 400 180 C 480 162 500 110 540 90" fill="none" stroke="#ff7a1a" stroke-width="6" stroke-linecap="round" stroke-dasharray="2 20">
+            <animate attributeName="stroke-dashoffset" from="0" to="-440" dur="4.5s" repeatCount="indefinite"/>
+          </path>
+          <g>
+            <circle r="16" fill="#ff7a1a" opacity=".35"/>
+            <circle r="10" fill="#ff7a1a" stroke="#14100b" stroke-width="3"/>
+            <animateMotion dur="11s" repeatCount="indefinite" rotate="auto"><mpath href="#rutaCov"/></animateMotion>
+          </g>
+          <text x="30" y="52" font-family="Archivo Black, sans-serif" font-size="17" fill="#ff7a1a" letter-spacing="2">ZONA DE COBERTURA</text>
+          <text x="30" y="72" font-family="Work Sans, sans-serif" font-size="12" fill="#d9c8b2">Toca una parada</text>
+        </svg>
+        <button class="stop is-base active" style="left:11.67%;top:83.33%" data-stop="ciales" aria-label="Ciales, base de operaciones"><span class="stop-num">1</span><span class="stop-lbl">Ciales · base</span></button>
+        <button class="stop" style="left:41.67%;top:59.38%" data-stop="morovis" aria-label="Morovis"><span class="stop-num">2</span><span class="stop-lbl">Morovis</span></button>
+        <button class="stop" style="left:66.67%;top:37.5%" data-stop="orocovis" aria-label="Orocovis"><span class="stop-num">3</span><span class="stop-lbl">Orocovis</span></button>
+        <button class="stop" style="left:90%;top:18.75%" data-stop="manati" aria-label="Manatí"><span class="stop-num">4</span><span class="stop-lbl">Manatí</span></button>
+      </div>
+      <aside class="stop-card reveal" aria-live="polite">
+        <div class="stop-inner" id="stopInner">
+          <span class="stop-badge" id="stopBadge">Base</span>
+          <h3 id="stopName">Ciales</h3>
+          <p id="stopPromise">Nuestra base de operaciones. Servicio a domicilio en Ciales: pulido, corrección de pintura, ceramic coating, shampoo y desinfección, sin que salgas de tu casa.</p>
+          <div class="stop-chips" aria-label="Servicios disponibles a domicilio">
+            <span>Pulido</span><span>Corrección de pintura</span><span>Ceramic coating</span><span>Shampoo</span><span>Desinfección</span>
+          </div>
+          <a class="btn btn-wa" id="stopCta" data-track="wa_cobertura" href="https://wa.me/17874287135?text=Hola%20Larregui%20Detailing%2C%20quiero%20un%20servicio%20a%20domicilio%20en%20Ciales." target="_blank" rel="noopener">Pedir servicio en Ciales</a>
+        </div>
+      </aside>
+    </div>
+    <div class="town-ask reveal">
+      <div>
+        <h3>¿Tu pueblo?</h3>
+        <p>Atendemos pueblos del área central, por cita. Escríbenos por WhatsApp y confirmamos si llegamos al tuyo.</p>
+      </div>
+      <a class="btn btn-call" data-track="wa_cobertura_otro" href="https://wa.me/17874287135?text=Hola%20Larregui%20Detailing%2C%20%C2%BFllegan%20a%20mi%20pueblo%3F" target="_blank" rel="noopener">Preguntar por WhatsApp</a>
+    </div>
+  </div>
+</section>
+
 <section class="section process" id="proceso">
   <div class="wrap">
-    <p class="kicker reveal">Cómo funciona</p>
-    <h2 class="h2 reveal">Tan fácil como pedirlo</h2>
-    <div class="steps">
-      <div class="step reveal">
-        <div class="step-num">1</div>
-        <h3>Escríbenos</h3>
-        <p>Mándanos un WhatsApp al <a href="tel:+17874287135" style="color:var(--amber);font-weight:700">787-428-7135</a> y cuéntanos qué servicio quieres.</p>
-      </div>
-      <div class="step reveal">
-        <div class="step-num">2</div>
-        <h3>Agendamos</h3>
-        <p>Coordinamos tu cita: fecha, hora y dirección donde vamos a trabajar.</p>
-      </div>
-      <div class="step reveal">
-        <div class="step-num">3</div>
-        <h3>Llegamos a tu casa</h3>
-        <p>Vamos con el equipo completo y dejamos tu carro impecable sin que te muevas.</p>
+    <p class="kicker reveal">La ruta móvil</p>
+    <h2 class="h2 reveal">Paso a paso</h2>
+    <p class="sec-sub reveal">Del mensaje a la entrega: así corre nuestra ruta de servicio a domicilio.</p>
+    <div class="ribbon reveal">
+      <div class="ribbon-line" aria-hidden="true"></div>
+      <div class="ribbon-traveler" aria-hidden="true"><span></span></div>
+      <div class="miles">
+        <div class="mile">
+          <div class="mile-pin">1</div>
+          <h3>Reservas por WhatsApp</h3>
+          <p>Escríbenos al <a href="tel:+17874287135" style="color:var(--amber);font-weight:700">787-428-7135</a> y cuéntanos qué servicio quieres.</p>
+        </div>
+        <div class="mile">
+          <div class="mile-pin">2</div>
+          <h3>Vamos a tu casa</h3>
+          <p>Agendamos tu cita: fecha, hora y dirección donde vamos a trabajar.</p>
+        </div>
+        <div class="mile">
+          <div class="mile-pin">3</div>
+          <h3>Detailing completo</h3>
+          <p>Pulido, coating, shampoo o desinfección: todo se hace en tu marquesina.</p>
+        </div>
+        <div class="mile">
+          <div class="mile-pin">4</div>
+          <h3>Entrega brillando</h3>
+          <p>Revisamos el trabajo contigo y tu carro queda nuevo, sin moverte.</p>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<section class="section" id="nosotros">
-  <div class="wrap about-grid">
-    <div>
-      <p class="kicker reveal">Quiénes somos</p>
-      <h2 class="h2 reveal">Larregui Detailing</h2>
-      <p class="reveal" style="color:var(--cream-dim)">Desde Ciales, Puerto Rico: trabajos a domicilio y por cita. Nos especializamos en pulido de autos, corrección de pintura y ceramic coating, además de shampoo, desinfección y limpieza de muebles y autos.</p>
-      <ul class="about-facts">
-        <li class="reveal"><svg viewBox="0 0 24 24"><path d="M12 2C8.1 2 5 5.1 5 9c0 5.2 7 13 7 13s7-7.8 7-13c0-3.9-3.1-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg><span><strong>Base en Ciales</strong> — operamos desde HC 01 Box 4540, Ciales, PR.</span></li>
-        <li class="reveal"><svg viewBox="0 0 24 24"><path d="M20 8h-3V4H3v12h2a3 3 0 0 0 6 0h3a3 3 0 0 0 6 0h1v-5l-3-3zM6 18.5A1.5 1.5 0 1 1 7.5 17 1.5 1.5 0 0 1 6 18.5zm13.5-9 1.96 2.5H17V9.5h2.5zm-3 9A1.5 1.5 0 1 1 18 17a1.5 1.5 0 0 1-1.5 1.5z"/></svg><span><strong>Especialistas a domicilio</strong> — el servicio va a tu casa, no al revés.</span></li>
-        <li class="reveal"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm1 5h-2v6h6v-2h-4z"/></svg><span><strong>Trabajos por cita</strong> — agenda por WhatsApp y coordinamos todo contigo.</span></li>
-      </ul>
-      <a class="btn btn-wa reveal" data-track="wa_about" href="https://wa.me/17874287135?text=Hola%20Larregui%20Detailing%2C%20quiero%20agendar%20una%20cita." target="_blank" rel="noopener">Agendar por WhatsApp</a>
+<section class="section base" id="nosotros">
+  <div class="wrap">
+    <p class="kicker reveal">Quiénes somos</p>
+    <h2 class="h2 reveal">La ruta sale de <span class="hl">Ciales</span></h2>
+    <p class="sec-sub reveal">Larregui Detailing es un negocio de Ciales, Puerto Rico, especializado en trabajos a domicilio y por cita: pulido de autos, corrección de pintura, ceramic coating, shampoo, desinfección y limpieza de muebles y tapizados del hogar.</p>
+    <div class="base-band reveal">
+      <div class="base-word" aria-hidden="true">CIALES</div>
+      <div class="base-cards">
+        <div class="base-card">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C8.1 2 5 5.1 5 9c0 5.2 7 13 7 13s7-7.8 7-13c0-3.9-3.1-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>
+          <h3>Base en Ciales</h3>
+          <p>Operamos desde HC 01 Box 4540, Ciales, PR.</p>
+        </div>
+        <div class="base-card">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 8h-3V4H3v12h2a3 3 0 0 0 6 0h3a3 3 0 0 0 6 0h1v-5l-3-3zM6 18.5A1.5 1.5 0 1 1 7.5 17 1.5 1.5 0 0 1 6 18.5zm13.5-9 1.96 2.5H17V9.5h2.5zm-3 9A1.5 1.5 0 1 1 18 17a1.5 1.5 0 0 1-1.5 1.5z"/></svg>
+          <h3>Especialistas a domicilio</h3>
+          <p>El servicio va a tu casa, no al revés.</p>
+        </div>
+        <div class="base-card">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 4h-1V2h-2v2H8V2H6v2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 16H5V10h14v10zM9 14H7v-2h2v2zm4 0h-2v-2h2v2zm4 0h-2v-2h2v2z"/></svg>
+          <h3>Trabajos por cita</h3>
+          <p>Agenda por WhatsApp y coordinamos todo contigo.</p>
+        </div>
+      </div>
     </div>
-    <div class="about-card reveal">
-      <h3>Nuestra especialidad</h3>
-      <p>Pulido y corrección de pintura a domicilio. Ese acabado espejo que buscas, sin salir de tu marquesina: llegamos, trabajamos y tu carro queda nuevo.</p>
-      <a class="btn" data-track="tel_about" href="tel:+17874287135">Llamar 787-428-7135</a>
+    <div class="base-cta reveal">
+      <a class="btn btn-wa" data-track="wa_nosotros" href="https://wa.me/17874287135?text=Hola%20Larregui%20Detailing%2C%20quiero%20agendar%20una%20cita." target="_blank" rel="noopener">Agendar por WhatsApp</a>
+      <a class="btn btn-call" data-track="tel_nosotros" href="tel:+17874287135">Llamar 787-428-7135</a>
     </div>
   </div>
 </section>
@@ -290,7 +372,7 @@
           <div><div class="lbl">Servicio</div><div class="val">A domicilio, por cita</div></div>
         </div>
         <div class="info-row">
-          <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm1 5h-2v6h6v-2h-4z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M20 2H4a2 2 0 0 0-2 2v18l4-4h14a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2z"/></svg>
           <div><div class="lbl">Redes sociales</div><div class="val">WhatsApp es nuestro canal directo</div></div>
         </div>
       </div>
@@ -320,8 +402,8 @@
   <div class="wrap">
     <div class="foot-grid">
       <div class="foot-brand">
-        <span class="brand-badge"><svg viewBox="0 0 24 24"><path d="M12 2C8.1 2 5 5.1 5 9c0 5.2 7 13 7 13s7-7.8 7-13c0-3.9-3.1-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg></span>
-        <span class="brand-name">LARREGUI<small>DETAILING</small></span>
+        <span class="brand-badge"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C8.1 2 5 5.1 5 9c0 5.2 7 13 7 13s7-7.8 7-13c0-3.9-3.1-7-7-7z" fill="#1a120a"/><path d="M9.4 5.6 14.6 13" stroke="#ff7a1a" stroke-width="1.9" stroke-linecap="round" stroke-dasharray="2.2 1.9" fill="none"/><circle cx="12" cy="9" r="1.4" fill="#ff7a1a"/></svg></span>
+        <span class="brand-name">LARREGUI<small>DETAILING</small><span class="brand-dash" aria-hidden="true"></span></span>
       </div>
       <div style="color:var(--cream-dim);font-size:.9rem">Ciales, Puerto Rico · Servicio a domicilio</div>
     </div>

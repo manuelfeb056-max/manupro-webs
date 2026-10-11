@@ -1,5 +1,5 @@
-/* Higatoma Detailing — theme overrides (fonts + foam accents are in style.css) */
+/* Higatoma Detailing — theme overrides (teal & gold identity lives in style.css) */
 body{
-  --accent:#46e8ce;
+  --accent:#d1a244;
 }
-::selection{background:#46e8ce;color:#03322f}
+::selection{background:#d1a244;color:#3a2a08}
