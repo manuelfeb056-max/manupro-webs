@@ -31,19 +31,36 @@ h1,h2,h3,.h2,.logo,.ticker-track,.stat-num,.card-num,.hero-title{font-family:'Ch
 .nav a:hover{color:var(--sun-amber)}
 .brand-emblem{width:46px;height:46px;flex:none;filter:drop-shadow(0 4px 14px rgba(255,107,26,.55))}
 
-/* ---------- HERO: sun arc rising ---------- */
-.sun-hero{min-height:96vh;display:flex;align-items:center;position:relative;overflow:hidden;
-  background:linear-gradient(180deg,#1a0906 0%,#241009 55%,#150806 100%)}
-.sun{position:absolute;left:50%;top:82%;width:118vmin;height:118vmin;transform:translate(-50%,-50%);
-  border-radius:50%;pointer-events:none;
-  background:radial-gradient(circle,#ffe9a8 0%,var(--sun-glow) 14%,var(--sun-amber) 26%,var(--sun-orange) 46%,var(--sun-crimson) 64%,rgba(210,31,60,.28) 76%,transparent 78%);
-  filter:saturate(1.15);animation:sunPulse 7s ease-in-out infinite}
-@keyframes sunPulse{0%,100%{filter:saturate(1.15) brightness(1)}50%{filter:saturate(1.3) brightness(1.12)}}
-.heat-lines{position:absolute;left:0;right:0;top:82%;height:44vmin;transform:translateY(-50%);pointer-events:none;
-  background:repeating-linear-gradient(180deg,transparent 0 46px,rgba(255,140,60,.10) 46px 48px);
-  -webkit-mask-image:radial-gradient(60vmin 26vmin at 50% 50%,#000 30%,transparent 75%);
-  mask-image:radial-gradient(60vmin 26vmin at 50% 50%,#000 30%,transparent 75%)}
-.hero-scrim-sun{position:absolute;inset:0;background:linear-gradient(180deg,rgba(21,8,6,.62) 0%,rgba(21,8,6,.10) 45%,rgba(21,8,6,.9) 100%)}
+/* ---------- header: logo real ---------- */
+.logo-img .brand-logo{width:58px;height:58px;border-radius:16px;object-fit:cover;flex:none;
+  border:0;box-shadow:0 6px 22px rgba(0,0,0,.6),0 0 0 2px rgba(255,180,71,.55);animation:none}
+.foot-logo-real{width:72px;height:72px;border-radius:18px;object-fit:cover;display:block;
+  box-shadow:0 10px 30px rgba(0,0,0,.6),0 0 0 2px rgba(255,180,71,.5)}
+
+/* ---------- HERO: foto real + ken burns + entrada escalonada ---------- */
+.photo-hero{min-height:96vh;display:flex;align-items:center;position:relative;overflow:hidden;background:#150806}
+.hero-photos{position:absolute;inset:0;will-change:transform}
+.hp-slide{position:absolute;inset:0;opacity:0;transition:opacity 1.8s ease}
+.hp-slide.on{opacity:1;z-index:1}
+.hp-slide img{width:100%;height:100%;object-fit:cover}
+.hp-slide.on img{animation:heroKB 18s ease-in-out infinite alternate}
+@keyframes heroKB{from{transform:scale(1.03)}to{transform:scale(1.16)}}
+.hero-scrim-sun{position:absolute;inset:0;z-index:2;
+  background:linear-gradient(180deg,rgba(21,8,6,.68) 0%,rgba(21,8,6,.14) 42%,rgba(21,8,6,.94) 100%),
+             linear-gradient(100deg,rgba(210,31,60,.28) 0%,rgba(255,107,26,.12) 45%,transparent 75%)}
+.hero-content{position:relative;z-index:3}
+.hero-enter .stagger{opacity:0;transform:translateY(30px);animation:heroIn 1.05s cubic-bezier(.16,.7,.24,1) forwards}
+.hero-enter .stagger:nth-child(1){animation-delay:.12s}
+.hero-enter .stagger:nth-child(2){animation-delay:.24s}
+.hero-enter .stagger:nth-child(3){animation-delay:.36s}
+.hero-enter .stagger:nth-child(4){animation-delay:.5s}
+.hero-enter .stagger:nth-child(5){animation-delay:.64s}
+.hero-enter .stagger:nth-child(6){animation-delay:.78s}
+@keyframes heroIn{to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){
+  .hp-slide.on img{animation:none}
+  .hero-enter .stagger{animation-duration:.01s;animation-delay:0s}
+}
 .hero-content{position:relative;z-index:2}
 .hero-panel{max-width:760px;background:rgba(18,8,5,.66);border:1px solid rgba(255,150,80,.35);
   border-radius:26px;padding:clamp(28px,5vw,54px);backdrop-filter:blur(10px);
@@ -158,7 +175,6 @@ a.info-card:hover{border-color:var(--sun-orange)}
 ::selection{background:var(--sun-crimson);color:#fff}
 .wa-float{box-shadow:0 10px 30px rgba(37,211,102,.45)}
 @media(max-width:640px){
-  .sun{top:70%}
   .hero-panel{padding:26px 20px}
   .spec-tile{flex-basis:210px}
 }
@@ -236,4 +252,46 @@ a.info-card:hover{border-color:var(--sun-orange)}
 @media(max-width:640px){
   .pride{padding:72px 0}
   .ps{min-width:140px;padding:16px 18px}
+}
+
+/* ============================================================
+   NUESTROS TRABAJOS — galería de fotos reales + lightbox
+   ============================================================ */
+.works-sub{color:var(--muted);margin:-24px 0 10px;max-width:62ch}
+.work-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px 18px;margin-top:30px}
+.work-frame{margin:0;background:#1d0c07;border:4px solid var(--sun-amber);
+  outline:2px solid rgba(255,180,71,.32);outline-offset:6px;
+  box-shadow:0 18px 44px rgba(0,0,0,.55);cursor:zoom-in;overflow:hidden;
+  transition:transform .35s cubic-bezier(.16,.7,.24,1),box-shadow .35s}
+.work-frame:hover{transform:translateY(-5px) scale(1.01);box-shadow:0 26px 60px rgba(210,31,60,.35)}
+.work-frame.lead{grid-column:1/-1}
+.work-frame.lead img{height:430px}
+.work-frame img{width:100%;height:300px;object-fit:cover;display:block}
+.work-frame figcaption{padding:12px 14px;font-size:.85rem;font-weight:700;background:#1d0c07;
+  border-top:3px solid var(--sun-amber);text-transform:uppercase;letter-spacing:.06em;color:#f3e2cf}
+
+/* lightbox */
+.lb{position:fixed;inset:0;z-index:200;background:rgba(10,5,3,.96);display:none;
+  align-items:center;justify-content:center;padding:22px;opacity:0;transition:opacity .35s ease}
+.lb.open{display:flex}
+.lb.shown{opacity:1}
+.lb-frame{margin:0;max-width:min(94vw,900px);border:5px solid var(--sun-amber);
+  box-shadow:0 0 70px rgba(255,107,26,.35);transform:scale(.95);
+  transition:transform .4s cubic-bezier(.16,.7,.24,1)}
+.lb.shown .lb-frame{transform:scale(1)}
+.lb-frame img{width:100%;max-height:74vh;object-fit:contain;display:block;background:#000}
+.lb-frame figcaption{padding:12px 16px;font-weight:700;text-align:center;background:#1d0c07;
+  color:var(--ink);border-top:3px solid var(--sun-amber)}
+.lb-x{position:absolute;top:16px;right:16px;width:54px;height:54px;border-radius:50%;
+  border:3px solid var(--sun-amber);background:#150806;color:var(--sun-amber);
+  font-size:1.5rem;font-weight:900;cursor:pointer;z-index:2;line-height:1}
+.lb-arrow{position:absolute;top:50%;transform:translateY(-50%);width:52px;height:52px;border-radius:50%;
+  border:3px solid var(--sun-amber);background:#150806;color:var(--sun-amber);
+  font-size:1.8rem;cursor:pointer;z-index:2;line-height:1}
+.lb-arrow.prev{left:12px}
+.lb-arrow.next{right:12px}
+@media(max-width:640px){
+  .work-frame.lead img{height:320px}
+  .work-frame img{height:230px}
+  .work-grid{gap:18px 12px}
 }

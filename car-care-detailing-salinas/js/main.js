@@ -264,3 +264,77 @@ document.querySelectorAll('.card-imgs').forEach(function(box){
   box.addEventListener('mouseenter', function(){ held = true; });
   box.addEventListener('mouseleave', function(){ held = false; });
 });
+
+/* ---------- hero fotos: crossfade suave ---------- */
+(function(){
+  var slides = Array.prototype.slice.call(document.querySelectorAll('.hp-slide'));
+  if (slides.length < 2) return;
+  var i = 0, timer = null;
+  function next(){
+    slides[i].classList.remove('on');
+    i = (i + 1) % slides.length;
+    slides[i].classList.add('on');
+  }
+  function start(){ stop(); timer = setInterval(next, 7000); }
+  function stop(){ if (timer) clearInterval(timer); timer = null; }
+  start();
+  document.addEventListener('visibilitychange', function(){
+    if (document.hidden) stop(); else start();
+  });
+})();
+
+/* ---------- hero parallax suave ---------- */
+(function(){
+  var photos = document.getElementById('heroPhotos');
+  var hero = document.getElementById('inicio');
+  if (!photos || !hero) return;
+  var ticking = false;
+  function update(){
+    var r = hero.getBoundingClientRect();
+    if (r.bottom > 0 && r.top < window.innerHeight) {
+      var off = Math.min(Math.max(-r.top, 0), r.height);
+      photos.style.transform = 'translate3d(0,' + (off * 0.22) + 'px,0)';
+    }
+    ticking = false;
+  }
+  window.addEventListener('scroll', function(){
+    if (!ticking) { ticking = true; requestAnimationFrame(update); }
+  }, {passive:true});
+  update();
+})();
+
+/* ---------- galería: lightbox con X ---------- */
+(function(){
+  var frames = Array.prototype.slice.call(document.querySelectorAll('.work-frame'));
+  var lb = document.getElementById('lb');
+  if (!frames.length || !lb) return;
+  var lbImg = document.getElementById('lbImg'), lbCap = document.getElementById('lbCap');
+  var cur = 0;
+  function show(n){
+    cur = (n + frames.length) % frames.length;
+    var img = frames[cur].querySelector('img');
+    lbImg.src = img.src; lbImg.alt = img.alt;
+    lbCap.textContent = frames[cur].querySelector('figcaption').textContent;
+  }
+  function openLb(n){
+    show(n);
+    lb.classList.add('open');
+    requestAnimationFrame(function(){ requestAnimationFrame(function(){ lb.classList.add('shown'); }); });
+    lb.setAttribute('aria-hidden','false');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeLb(){
+    lb.classList.remove('shown');
+    setTimeout(function(){
+      lb.classList.remove('open');
+      lb.setAttribute('aria-hidden','true');
+      document.body.style.overflow = '';
+    }, 350);
+  }
+  frames.forEach(function(f, n){ f.addEventListener('click', function(){ openLb(n); }); });
+  document.getElementById('lbX').addEventListener('click', closeLb);
+  document.getElementById('lbPrev').addEventListener('click', function(e){ e.stopPropagation(); show(cur - 1); });
+  document.getElementById('lbNext').addEventListener('click', function(e){ e.stopPropagation(); show(cur + 1); });
+  lb.addEventListener('click', function(e){ if (e.target === lb) closeLb(); });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape' && lb.classList.contains('open')) closeLb(); });
+})();
