@@ -184,21 +184,26 @@ a.info-card:hover{transform:translateX(6px);border-color:var(--accent)}
 @keyframes wiggle{0%,100%{transform:rotate(-4deg)}50%{transform:rotate(4deg)}}
 @keyframes glowPulse{0%,100%{box-shadow:0 0 16px var(--accent)}50%{box-shadow:0 0 36px var(--accent)}}
 
-/* ---------- galería carrusel: botones + toque + auto ---------- */
-.gal-wrap{position:relative;display:flex;align-items:center;gap:10px;margin-top:26px}
-.gal-viewport{overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;-ms-overflow-style:none;flex:1;cursor:grab;border-radius:var(--radius)}
-.gal-viewport::-webkit-scrollbar{display:none}
-.gal-track{display:flex;gap:16px;padding:6px 4px 18px}
-.gal-card{flex:0 0 76%;scroll-snap-align:center;margin:0;border-radius:var(--radius);overflow:hidden;position:relative;border:1px solid var(--line)}
-.gal-card img{width:100%;height:340px;object-fit:cover;display:block;pointer-events:none;user-select:none;-webkit-user-drag:none}
-.gal-card figcaption{position:absolute;left:0;right:0;bottom:0;padding:34px 16px 14px;background:linear-gradient(transparent,rgba(0,0,0,.82));font-size:.9rem;font-weight:600}
-.gal-btn{flex:none;width:52px;height:52px;border-radius:50%;border:1px solid var(--line);background:var(--card);color:var(--ink);font-size:1.7rem;line-height:1;cursor:pointer;display:grid;place-items:center;transition:transform .2s,background .2s;z-index:2}
-.gal-btn:hover{background:var(--accent);color:#0b0b10;transform:scale(1.08)}
-.gal-dots{display:flex;gap:8px;justify-content:center;margin-top:8px;flex-wrap:wrap}
-.gal-dots button{width:8px;height:8px;border-radius:50%;border:0;background:var(--line);cursor:pointer;padding:0;transition:transform .2s,background .2s}
-.gal-dots button.on{background:var(--accent);transform:scale(1.35)}
-@media(min-width:900px){.gal-card{flex-basis:38%}}
-@media(max-width:640px){.gal-btn{width:44px;height:44px;font-size:1.4rem}.gal-card img{height:300px}}
+/* ---------- trabajos: mural de recuadros amarillos + lightbox ---------- */
+.work-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px 18px;margin-top:30px}
+.work-frame{margin:0;background:#0d0d13;border:5px solid var(--accent);outline:2px solid rgba(255,196,0,.35);outline-offset:7px;box-shadow:0 18px 44px rgba(0,0,0,.55);cursor:zoom-in;overflow:hidden;transition:transform .25s}
+.work-frame:nth-child(odd){transform:rotate(-1.2deg)}
+.work-frame:nth-child(even){transform:rotate(1.2deg)}
+.work-frame:hover{transform:rotate(0) scale(1.02)}
+.work-frame.hero{grid-column:1/-1}
+.work-frame.hero img{height:430px}
+.work-frame img{width:100%;height:300px;object-fit:cover;display:block;pointer-events:none}
+.work-frame figcaption{padding:12px 14px;font-size:.85rem;font-weight:700;background:#0d0d13;border-top:3px solid var(--accent);text-transform:uppercase;letter-spacing:.06em}
+.lb{position:fixed;inset:0;z-index:200;background:rgba(5,5,8,.95);display:none;align-items:center;justify-content:center;padding:22px}
+.lb.open{display:flex}
+.lb-frame{margin:0;max-width:min(94vw,900px);border:6px solid var(--accent);box-shadow:0 0 60px rgba(255,196,0,.25)}
+.lb-frame img{width:100%;max-height:74vh;object-fit:contain;display:block;background:#000}
+.lb-frame figcaption{padding:12px 16px;font-weight:700;text-align:center;background:#0d0d13;color:var(--ink);border-top:3px solid var(--accent)}
+.lb-x{position:absolute;top:16px;right:16px;width:54px;height:54px;border-radius:50%;border:3px solid var(--accent);background:#0b0b10;color:var(--accent);font-size:1.5rem;font-weight:900;cursor:pointer;z-index:2;line-height:1}
+.lb-arrow{position:absolute;top:50%;transform:translateY(-50%);width:52px;height:52px;border-radius:50%;border:3px solid var(--accent);background:#0b0b10;color:var(--accent);font-size:1.8rem;cursor:pointer;z-index:2;line-height:1}
+.lb-arrow.prev{left:12px}
+.lb-arrow.next{right:12px}
+@media(max-width:640px){.work-frame.hero img{height:320px}.work-frame img{height:230px}.work-grid{gap:18px 12px}}
 
 /* ---------- mini carrusel en tarjetas de servicio ---------- */
 .card-imgs{position:relative;height:170px;border-radius:14px;overflow:hidden;margin:20px 0 4px;touch-action:pan-y;cursor:grab;background:var(--bg2)}

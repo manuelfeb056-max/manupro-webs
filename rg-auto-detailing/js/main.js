@@ -124,65 +124,27 @@
   }
 })();
 
-/* ---------- galería carrusel: botones + toque + auto ---------- */
+/* ---------- trabajos: lightbox con X ---------- */
 (function(){
-  var vp = document.getElementById('galViewport');
-  if (!vp) return;
-  var track = vp.firstElementChild;
-  var cards = track.children;
-  if (!cards.length) return;
-  var prev = document.getElementById('galPrev'), next = document.getElementById('galNext');
-  var dotsBox = document.getElementById('galDots');
-  var dots = [];
-  if (dotsBox && cards.length <= 12) {
-    for (var i = 0; i < cards.length; i++) {
-      (function(i){
-        var b = document.createElement('button');
-        b.setAttribute('aria-label', 'Foto ' + (i+1));
-        b.addEventListener('click', function(){ go(i); restart(); });
-        dotsBox.appendChild(b); dots.push(b);
-      })(i);
-    }
+  var frames = Array.prototype.slice.call(document.querySelectorAll('.work-frame'));
+  var lb = document.getElementById('lb');
+  if (!frames.length || !lb) return;
+  var lbImg = document.getElementById('lbImg'), lbCap = document.getElementById('lbCap');
+  var cur = 0;
+  function show(n){
+    cur = (n + frames.length) % frames.length;
+    var img = frames[cur].querySelector('img');
+    lbImg.src = img.src; lbImg.alt = img.alt;
+    lbCap.textContent = frames[cur].querySelector('figcaption').textContent;
   }
-  function cardStep(){
-    var c = cards[0];
-    return c ? c.getBoundingClientRect().width + 16 : 320;
-  }
-  function current(){
-    return Math.round(vp.scrollLeft / cardStep());
-  }
-  function go(i){
-    i = (i + cards.length) % cards.length;
-    vp.scrollTo({left: i * cardStep(), behavior: 'smooth'});
-    setTimeout(mark, 400);
-  }
-  function mark(){
-    if (!dots.length) return;
-    var c = Math.min(Math.max(current(), 0), dots.length - 1);
-    dots.forEach(function(d, j){ d.classList.toggle('on', j === c); });
-  }
-  var timer = null, idle = null;
-  function restart(){
-    clearInterval(timer);
-    timer = setInterval(function(){
-      var c = current();
-      go(c + 1 >= cards.length ? 0 : c + 1);
-    }, 3500);
-  }
-  function pauseTemp(){
-    clearInterval(timer);
-    clearTimeout(idle);
-    idle = setTimeout(restart, 6000);
-  }
-  if (prev) prev.addEventListener('click', function(){ go(current() - 1); restart(); });
-  if (next) next.addEventListener('click', function(){ go(current() + 1); restart(); });
-  vp.addEventListener('scroll', mark, {passive: true});
-  vp.addEventListener('pointerdown', pauseTemp);
-  vp.addEventListener('touchstart', pauseTemp, {passive: true});
-  document.addEventListener('visibilitychange', function(){
-    if (document.hidden) clearInterval(timer); else restart();
-  });
-  mark(); restart();
+  function openLb(n){ show(n); lb.classList.add('open'); lb.setAttribute('aria-hidden','false'); document.body.style.overflow = 'hidden'; }
+  function closeLb(){ lb.classList.remove('open'); lb.setAttribute('aria-hidden','true'); document.body.style.overflow = ''; }
+  frames.forEach(function(f, n){ f.addEventListener('click', function(){ openLb(n); }); });
+  document.getElementById('lbX').addEventListener('click', closeLb);
+  document.getElementById('lbPrev').addEventListener('click', function(e){ e.stopPropagation(); show(cur - 1); });
+  document.getElementById('lbNext').addEventListener('click', function(e){ e.stopPropagation(); show(cur + 1); });
+  lb.addEventListener('click', function(e){ if (e.target === lb) closeLb(); });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape') closeLb(); });
 })();
 
 /* ---------- zona 3D: anillo que gira solo 360° + botones + toque ---------- */
@@ -221,23 +183,6 @@
   ['pointerup','pointercancel','pointerleave'].forEach(function(ev){ stage.addEventListener(ev, function(){ dragging = false; }); });
   document.addEventListener('visibilitychange', function(){ auto = !document.hidden && auto; });
   render(); tick();
-})();
-
-/* ---------- lookbook: filtros por estilo ---------- */
-(function(){
-  var fbox = document.getElementById('galFilters');
-  if (!fbox) return;
-  var cards = document.querySelectorAll('#galViewport .gal-card');
-  var vp = document.getElementById('galViewport');
-  fbox.addEventListener('click', function(e){
-    var b = e.target.closest('button'); if (!b) return;
-    fbox.querySelectorAll('button').forEach(function(x){ x.classList.toggle('on', x === b); });
-    var f = b.getAttribute('data-f');
-    cards.forEach(function(c){
-      c.style.display = (f === 'todos' || c.getAttribute('data-cat') === f) ? '' : 'none';
-    });
-    if (vp) vp.scrollTo({left: 0, behavior: 'smooth'});
-  });
 })();
 
 /* ---------- mini carruseles en tarjetas de servicio: auto 2s + táctil ---------- */
