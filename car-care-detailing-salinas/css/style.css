@@ -63,8 +63,6 @@ a{color:inherit;text-decoration:none}
 .hero-dots{position:absolute;bottom:26px;left:50%;transform:translateX(-50%);display:flex;gap:10px;z-index:3}
 .hero-dots button{width:34px;height:4px;border:0;border-radius:3px;background:rgba(255,255,255,.3);cursor:pointer;transition:background .3s;padding:0}
 .hero-dots button.on{background:var(--accent)}
-.scroll-hint{position:absolute;bottom:22px;right:28px;z-index:3;width:26px;height:44px;border:2px solid rgba(255,255,255,.5);border-radius:14px;display:flex;justify-content:center;padding-top:8px}
-.scroll-hint span{width:4px;height:9px;background:var(--accent);border-radius:3px;animation:sh 1.6s infinite}
 @keyframes sh{0%{transform:translateY(0);opacity:1}70%{transform:translateY(12px);opacity:0}100%{opacity:0}}
 
 /* ---------- ticker ---------- */
