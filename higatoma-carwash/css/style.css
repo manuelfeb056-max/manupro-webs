@@ -121,7 +121,6 @@ a{color:inherit;text-decoration:none}
 .btn-ghost{background:rgba(209,162,68,.08);color:var(--gold-light);border:2px solid var(--gold)}
 .btn-ghost:hover{background:rgba(209,162,68,.18)}
 .btn-sm{padding:10px 22px;font-size:.9rem}
-.btn-offer{background:linear-gradient(135deg,#1fb14a,var(--green));color:#fff;box-shadow:0 10px 26px rgba(22,135,48,.45)}
 
 /* ---------- hero ---------- */
 .hero{position:relative;z-index:2;padding:56px 0 0;overflow:hidden}
@@ -314,24 +313,54 @@ a.contact-item:hover{transform:translateY(-4px);background:rgba(209,162,68,.1);b
 .ci-label{font-family:'Cinzel',serif;font-weight:700;color:var(--cream);font-size:1.02rem;letter-spacing:.03em}
 .ci-value{color:var(--ink-dim);font-weight:600}
 
-/* ---------- offer (Manupro green + black + white only) ---------- */
+/* ---------- offer (teal + gold frame, Manupro green prices/CTAs) ---------- */
 .offer{padding-top:0}
 .offer-card{
-  background:#0a0a0a;border:2px solid var(--green);border-radius:32px;padding:clamp(30px,5vw,56px);
-  text-align:center;box-shadow:0 18px 50px rgba(22,135,48,.25);color:#fff;position:relative;overflow:hidden;
+  background:linear-gradient(180deg,#042a2f,#021417);
+  border:2px solid var(--gold);border-radius:32px;padding:clamp(30px,5vw,56px);
+  text-align:center;box-shadow:0 18px 50px rgba(209,162,68,.18);color:#fff;position:relative;overflow:hidden;
 }
-.offer-card::before{content:"";position:absolute;top:-70px;right:-70px;width:200px;height:200px;border-radius:50%;
-  background:radial-gradient(circle, rgba(22,135,48,.4), transparent 70%)}
+.offer-card::before{content:"";position:absolute;top:-80px;right:-80px;width:220px;height:220px;border-radius:50%;
+  background:radial-gradient(circle, rgba(209,162,68,.28), transparent 70%)}
 .offer-kicker{color:#7de2a0;font-weight:800;letter-spacing:.22em;font-size:.8rem;margin-bottom:10px}
-.offer-title{font-family:'Cinzel',serif;font-weight:800;font-size:clamp(1.8rem,4vw,2.6rem);color:#fff;margin-bottom:24px}
+.offer-title{font-family:'Cinzel',serif;font-weight:800;font-size:clamp(1.8rem,4vw,2.6rem);color:#fff;margin-bottom:18px}
 .offer-title span{color:#7de2a0}
-.offer-plans{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-bottom:28px}
-.offer-plan{background:#111;border:1px solid #2a2a2a;border-radius:20px;padding:22px 34px;min-width:220px}
-.offer-plan.best{border-color:var(--green);box-shadow:0 0 0 4px rgba(22,135,48,.2)}
-.offer-price{font-family:'Cinzel',serif;font-weight:800;font-size:2.6rem;color:var(--green)}
-.offer-desc{color:#cfcfcf;font-size:.95rem}
+.offer .gold-rule{margin-bottom:22px}
+.offer-plans{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-bottom:26px;padding-top:26px}
+.offer-plan{
+  background:rgba(10,48,52,.72);border:1px solid var(--card-line);border-radius:22px;
+  padding:30px 22px 26px;display:flex;flex-direction:column;position:relative;text-align:center;
+  transition:transform .25s ease, box-shadow .25s ease;
+}
+.offer-plan:hover{transform:translateY(-4px)}
+.offer-plan.hero{
+  border:2px solid var(--gold);box-shadow:0 18px 50px rgba(209,162,68,.28);
+  transform:scale(1.05);background:rgba(4,38,42,.9);
+}
+.offer-plan.hero:hover{transform:scale(1.05) translateY(-4px)}
+.offer-plan.hero .plan-name{margin-top:34px}
+.plan-badge{
+  position:absolute;top:12px;left:50%;transform:translateX(-50%);
+  background:var(--gold-foil);color:#3a2a08;font-family:'Cinzel',serif;font-weight:800;
+  font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;
+  padding:7px 18px;border-radius:999px;white-space:nowrap;box-shadow:0 8px 20px rgba(209,162,68,.4);
+}
+.plan-name{font-family:'Cinzel',serif;font-weight:800;color:var(--cream);font-size:1.3rem;letter-spacing:.04em}
+.plan-price{font-family:'Cinzel',serif;font-weight:800;font-size:2.7rem;color:#1fb14a;margin:10px 0 4px}
+.offer-plan.hero .plan-price{font-size:3.2rem}
+.plan-reg{font-family:'Mulish',system-ui,sans-serif;font-size:1.25rem;color:#9a9a9a;text-decoration:line-through;font-weight:400;margin-left:8px}
+.plan-list{list-style:none;margin:14px 0 20px;color:var(--ink-dim);font-size:.95rem;display:grid;gap:9px;flex:1}
+.plan-list b{color:var(--cream)}
+.plan-sub{color:var(--gold-light);font-weight:700;font-style:italic;margin:-8px 0 18px}
+.btn-plan{background:linear-gradient(135deg,#1fb14a,var(--green));color:#fff;box-shadow:0 10px 26px rgba(22,135,48,.45)}
+.btn-plan:hover{filter:brightness(1.1)}
 .offer-note{color:#8f8f8f;margin-top:18px;font-size:.9rem}
 .offer-note strong{color:#fff}
+@media (max-width:900px){
+  .offer-plans{grid-template-columns:1fr;max-width:420px;margin:0 auto 26px}
+  .offer-plan.hero{transform:none}
+  .offer-plan.hero:hover{transform:translateY(-4px)}
+}
 
 /* ---------- footer ---------- */
 .footer{background:#020f11;border-top:2px solid var(--gold);padding:48px 0 26px;position:relative;z-index:2}
