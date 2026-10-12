@@ -1,0 +1,41 @@
+FUENTES — The Perfect Tint (the-perfect-tint)
+Negocio: The Perfect Tint · Moca, PR · 787-243-1558
+Instagram real: https://www.instagram.com/theperfecttint (175 seguidores, 73 publicaciones)
+Método: instagram-cli posts --username theperfecttint (account-id 17841477365827904) para descubrir
+shortcodes → página embed /p/<shortcode>/embed/ → URLs CDN scontent (ig_cache_key, variantes full-res 1080/1440).
+
+TODAS las fotos son del Instagram REAL del negocio. Cero stock. Cero imágenes generadas.
+
+img/logo.jpg — foto de perfil oficial de Instagram (@theperfecttint, "The PERFECT TINT" en oro sobre negro).
+Paleta derivada del logo real + rotulación del taller: oro #ffc400, negro carbón #0e0e10, cromo/plata #b9bec7.
+
+img/real/foto-1.jpg (1080x1350, 313KB) — https://www.instagram.com/p/DdIGUVrDXrI/ (2026-09-10, carrusel)
+  Rav 4 2026: tintes cerámica + doors edge guard + 4 chapaletas + tratamiento cerámico total (proceso con espuma).
+img/real/foto-2.jpg (1440x1080, 261KB) — https://www.instagram.com/p/CuVw92XsCa1/ (2023-07-05, carrusel)
+  Ford F-150: remoción y montura en cerámica legal + lavado básico. Frente al local (rótulo "THE PERFECT TINT 787.243.1558" visible).
+img/real/foto-3.jpg (1440x1080, 264KB) — https://www.instagram.com/p/Cv08xpNuucE/ (2023-08-11)
+  Honda Odyssey: tinte 35/43.
+img/real/foto-4.jpg (1440x1080, 265KB) — https://www.instagram.com/p/Cv08dH8OWGn/ (2023-08-11)
+  Yamaha YZ: montura de gráficas.
+img/real/foto-5.jpg (1440x1080, 215KB) — https://www.instagram.com/p/Cv08OtxujJ2/ (2023-08-11, carrusel)
+  Porsche Panamera: remoción y montura 5/20 + wrap de capó. Dentro del taller (banner "Tintes: CARROS, GUAGUAS, EQUIPO PESADO, BOTES, LOCAL, WRAPING" visible). HERO.
+img/real/foto-6.jpg (1440x1080, 245KB) — https://www.instagram.com/p/CvsdrNyO6fn/ (2023-08-08)
+  Toyota 4Runner: remoción y montura.
+img/real/foto-7.jpg (1440x1800, 431KB) — https://www.instagram.com/p/CvqoyzVLvLz/ (2023-08-07, carrusel)
+  Mini excavadora: tinte 20% cerámica (equipo pesado).
+img/real/foto-8.jpg (1440x1080, 235KB) — https://www.instagram.com/p/CviCi_WOcJI/ (2023-08-04)
+  Honda Civic HB: 45% cerámica.
+img/real/foto-9.jpg (1080x810, 180KB) — https://www.instagram.com/p/Cvd1dZBOrhu/ (2023-08-02, carrusel)
+  Rav4 2020: antes y después + wrap black gloss capota y spoiler.
+img/real/foto-10.jpg (1440x1080, 171KB) — https://www.instagram.com/p/Cvd1QqsuzUk/ (2023-08-02)
+  Proceso: "Así protegemos tu vehículo antes de empezar a trabajarlo".
+
+Reel candidato a video hero (no descargable desde este entorno, reportado para bajar después):
+  https://www.instagram.com/reel/Cvd0nHfsPF2/ — Mustang 2023: tintes cerámica 45% + tratamiento cerámico (reel de trabajo).
+  Alternos: https://www.instagram.com/reel/CvdzlUtAp7t/ (Corolla GR 2023), https://www.instagram.com/reel/Cvxw23PLpSR/ (Outlander).
+
+Datos de negocio (reales, del Instagram y bio del negocio):
+- Bio: "Remoción y Montura de tintes para autos residencias locales equipo pesado al mejor precio con la mas alta calidad en servicio y materiales!!!"
+- Servicios del banner del taller: CARROS, GUAGUAS, EQUIPO PESADO, BOTES, LOCAL, WRAPING.
+- Posts verificados: monturas legales (35/43, 45%, 20%, 5/20), "Life Time Warranty" en cerámica, wrap 3M black gloss/black satin, gráficas en gel 2 tonos, pulido de focos, tratamiento cerámico a la unidad, doors edge guard, chapaletas.
+- Teléfono 787-243-1558 aparece en sus publicaciones y en la rotulación del local.
