@@ -220,21 +220,48 @@ body::before{
 .ct-map iframe{width:100%;height:100%;min-height:340px;border:0;border-radius:14px;filter:saturate(.9)}
 .ct-map{border:3px solid var(--teal);border-radius:var(--radius);overflow:hidden;min-height:340px}
 
-/* ---------- offer (Manupro green only) ---------- */
-.offer .wrap{max-width:720px}
-.offer-card{background:#0d0d0d;border:5px solid var(--green);border-radius:24px;padding:44px 36px;text-align:center;color:#fff;
+/* ---------- offer: 3 planes (marquee retro + Manupro green) ---------- */
+.offer .wrap{max-width:1160px}
+.offer-card{background:#0d0d0d;border:5px solid var(--green);border-radius:24px;padding:56px 40px 52px;text-align:center;color:#fff;
   box-shadow:0 20px 60px rgba(22,135,48,.25);position:relative;overflow:hidden}
 .offer-card::before{content:"OFERTA";position:absolute;top:18px;right:-44px;background:var(--green);color:#fff;font-weight:900;
   letter-spacing:3px;padding:8px 50px;transform:rotate(38deg);font-size:.85rem}
+.offer-card::after{content:"";position:absolute;left:0;right:0;bottom:0;height:22px;pointer-events:none;
+  background-image:radial-gradient(circle at 50% 50%,var(--bulb) 4.5px,rgba(0,0,0,0) 5.5px);
+  background-size:30px 22px;background-position:center}
 .offer-card h2{font-family:'Lilita One',cursive;font-size:clamp(1.8rem,5vw,2.5rem);margin-bottom:10px;color:#fff}
 .offer-card h2 span{color:#37d15e}
-.offer-card p{color:#d7d7d7;font-weight:600;margin-bottom:24px}
-.offer-prices{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-bottom:26px}
-.price{background:#161616;border:2px solid #2c2c2c;border-radius:16px;padding:20px 30px;flex:1;min-width:220px}
-.price .p-num{font-family:'Lilita One',cursive;font-size:3rem;color:#37d15e}
-.price .p-lbl{font-weight:800;color:#fff;margin-top:4px}
-.price .p-sub{color:#999;font-size:.88rem;font-weight:600;margin-top:6px}
-.offer-note{margin-top:14px;color:#bbb;font-size:.9rem;font-weight:600}
+.offer-card > p{color:#d7d7d7;font-weight:600;margin-bottom:6px}
+.plans{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin:34px 0 26px;align-items:stretch;text-align:center}
+.plan{background:#fff;color:#141414;border:3px solid #141414;border-radius:18px;padding:32px 24px 28px;
+  display:flex;flex-direction:column;position:relative;box-shadow:8px 8px 0 rgba(22,135,48,.4)}
+.plan .pname{font-family:'Lilita One',cursive;font-size:1.55rem;letter-spacing:.5px;color:#141414}
+.p-price{display:flex;align-items:center;justify-content:center;gap:12px;margin:10px 0 2px}
+.p-was{font-weight:900;font-size:1.3rem;color:#b03a3a;text-decoration:line-through;text-decoration-thickness:3px}
+.p-now{font-family:'Lilita One',cursive;font-size:3.4rem;color:var(--green);line-height:1}
+.p-feats{list-style:none;margin:16px 0 22px;flex:1;text-align:left}
+.p-feats li{font-weight:700;font-size:.94rem;padding:9px 0 9px 32px;border-bottom:2px dashed #e4e4e4;position:relative}
+.p-feats li:last-child{border-bottom:0}
+.p-feats li::before{content:"✓";position:absolute;left:8px;color:var(--green);font-weight:900}
+.p-feats li.no{color:#9a9a9a}
+.p-feats li.no::before{content:"✕";color:#c0392b}
+.plan-hero{background:var(--green);border-color:#0b4d1c;color:#fff;transform:scale(1.06);z-index:1;
+  box-shadow:8px 8px 0 rgba(0,0,0,.45),0 0 44px rgba(55,209,94,.45)}
+.plan-hero .pname{color:#fff}
+.plan-hero .p-was{color:#ffdada}
+.plan-hero .p-now{color:#fff}
+.plan-sub{font-weight:800;font-size:1rem;color:#fff;margin:2px 0 0}
+.plan-hero .p-feats li{border-bottom-color:rgba(255,255,255,.28);color:#fff}
+.plan-hero .p-feats li::before{color:#fff}
+.plan-hero .p-feats li.no{color:#e9f7ec}
+.plan-hero .p-feats li.no::before{color:var(--bulb)}
+.plan-badge{position:absolute;top:-20px;left:50%;transform:translateX(-50%);background:#0d0d0d;color:#fff;font-weight:900;
+  letter-spacing:1.5px;font-size:.82rem;padding:9px 20px;border-radius:999px;border:3px solid #fff;
+  box-shadow:0 6px 16px rgba(0,0,0,.4);white-space:nowrap}
+.plan-cta{margin-top:auto;justify-content:center}
+.plan-cta-hero{background:#0d0d0d;color:#fff;box-shadow:0 8px 0 #000}
+.plan-cta-hero:hover{transform:translateY(-2px)}
+.offer-note{margin-top:14px;color:#bbb;font-size:.9rem;font-weight:600;margin-bottom:0}
 
 /* ---------- footer ---------- */
 .footer{background:#0a0a0a;color:#cfcfcf;border-top:4px solid var(--green)}
@@ -269,6 +296,8 @@ body::before{
 /* ---------- responsive ---------- */
 @media(max-width:900px){
   .cards{grid-template-columns:repeat(2,1fr)}
+  .plans{grid-template-columns:1fr;max-width:440px;margin-left:auto;margin-right:auto}
+  .plan-hero{transform:none}
   .about-grid,.contact-grid,.footer-grid{grid-template-columns:1fr}
   .stats-grid{grid-template-columns:repeat(2,1fr)}
   .nav{position:fixed;top:64px;right:0;left:0;background:var(--ink);flex-direction:column;align-items:stretch;
