@@ -1,0 +1,63 @@
+FUENTES — Zambrana Auto Detailing (zambrana-auto-detailing)
+Sitio: https://manuelfeb056-max.github.io/manupro-webs/zambrana-auto-detailing/
+Construido: 2026-10-12 · Concepto: "Quartz Lab"
+
+1. FOTOS (12 reales del negocio, verificadas):
+   - Origen: página pública de reservas book.heygoldie.com/Zambrana-auto-Detailing
+     (fotos que el propio negocio subió a sus servicios). Descargadas vía S3
+     público (goldie-photos-live.s3.amazonaws.com/.../services/<uuid>), sin firmas.
+   - img/g01.jpg — Lavado detallado interior & exterior (1705×1200)
+   - img/g02.jpg — Vehiculo con ceramica SiO2 (1705×1200) — usada en "Sobre nosotros"
+   - img/g03.jpg — Shampo + Limpieza exterior (1705×1200)
+   - img/g04.jpg — Lavado y acondicionamiento de motor (1704×1200)
+   - img/g05.jpg — Q2M WET COAT (1200×846)
+   - img/g06.jpg — One step polish (1705×1200)
+   - img/g07.jpg — One step + Q2 CAN COAT PRO (1705×1200)
+   - img/g08.jpg — One step + Q2 MOSH EVO (1705×1200)
+   - img/g09.jpg — Gyeon Q2 INFINITE (1705×1200) — hero.jpg es copia de esta
+   - img/g10.jpg — Gel Coat (marine) (1705×1200)
+   - img/g11.jpg — Restauración de focos (1705×1200)
+   - img/g12.jpg — Shampoo de muebles a domicilio (1704×1200)
+   - img/hero.jpg — copia de g09 (fondo del hero)
+   - NOTA: la tarjeta de "Tratamiento de ozono" no tiene foto real del servicio
+     (la página de reserva tampoco publica una); usa un icono de cuarzo propio
+     en vez de asociarle una foto ajena. Cero fotos stock/falsas en el sitio.
+
+2. DATOS DEL NEGOCIO (todo verificado, nada inventado):
+   - Nombre: Zambrana Auto Detailing — Factor, Arecibo, PR
+   - Dirección: 1 Calle 2, Arecibo, PR (fuente: ficha Facebook + heygoldie)
+   - Teléfono/WhatsApp: 787-878-1351 → wa.me/17878781351 (fuente: ficha Facebook)
+   - Facebook: https://m.facebook.com/joelzambrana25/ (2,229 seguidores, cuenta profesional)
+   - Reserva: https://book.heygoldie.com/Zambrana-auto-Detailing (plataforma de
+     reservas, no website propia — se enlaza como "Reservar cita")
+   - Horario: Lun–Sáb 9:00 AM – 5:00 PM (fuente: ficha Facebook + heygoldie)
+   - Bio FB: "#gyeoncertifieddetailer / CERAMIC COATING ESPECIALITY"
+   - Lealtad: 10% off tras 5 visitas (fuente: heygoldie, sección Loyalty Program)
+   - Servicios + precios (fuente: heygoldie, página de servicios):
+     · Lavado detallado interior & exterior — desde $99 (3h)
+     · Vehiculo con ceramica SiO2 — desde $69 (5h)
+     · Shampo + Limpieza exterior — desde $255 (8h)
+     · Lavado y acondicionamiento de motor — desde $49 (45min)
+     · Q2M WET COAT — desde $165 (5h, sellado hasta 4 meses)
+     · One step polish — desde $249 (8h)
+     · One step + Q2 CAN COAT PRO — desde $499 (8h, 1 año)
+     · One step + Q2 MOSH EVO — desde $799 (8h, 4 años)
+     · Gyeon Q2 INFINITE — desde $1,395 (8h, garantía 5/10 años y de por vida)
+     · Gel Coat (marine) — desde $399 (8h, GYEON Q2R GEL COAT)
+     · Restauración de focos — desde $95 (2h30: tren de lijado, pulido, cerámica o PPF)
+     · Shampoo de muebles a domicilio — desde $79 (4h)
+     · Tratamiento de ozono — $55 (30min: elimina malos olores, bacterias y hongos)
+     · Otros servicios — precios varían
+   - Reseña real (heygoldie, 28 oct 2025, Ivette Rosa): "Agradecida con el
+     servicio, muy profesional, serio en lo que hace, recomendado 100%."
+
+3. DECISIONES DE DISEÑO:
+   - "Gyeon Certified Detailer" se menciona solo en texto; NUNCA se copió el
+     logo de Gyeon. El hexágono de cuarzo del header/favicon/sello es diseño
+     propio (SVG inline).
+   - Cero uva/violeta. Oferta Manupro en verde/negro/blanco con los 3 planes
+     ($99/$150/$200, tachados $300/$600/$1,000, "La más elegida" en $200).
+   - metrics.js con data-site="zambrana-auto-detailing". Solo WhatsApp flotante.
+   - Estructura: hero → trabajos (justo después del hero) → proceso →
+     servicios → sobre nosotros → FAQ → oferta → contacto → footer.
+   - Texto corto por sección; cada tarjeta de servicio lleva su foto real.
