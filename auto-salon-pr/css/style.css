@@ -65,10 +65,11 @@ body::before{
 .hero-shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(38,32,26,.55) 0%,rgba(38,32,26,.25) 40%,rgba(38,32,26,.78) 100%)}
 
 .marquee{
-  position:relative;z-index:2;width:min(680px,94vw);text-align:center;
-  background:linear-gradient(180deg,#FBF3DE,#F3E3BC);
+  position:relative;z-index:2;width:min(520px,92vw);text-align:center;
+  background:linear-gradient(180deg,rgba(251,243,222,.88),rgba(243,227,188,.88));
+  backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);
   border:6px solid var(--red);border-radius:26px;
-  padding:70px 26px 42px;
+  padding:56px 22px 34px;
   box-shadow:0 24px 70px rgba(0,0,0,.55), inset 0 0 0 4px var(--cream), inset 0 0 0 8px var(--teal);
 }
 .marquee-bulbs{position:absolute;left:14px;right:14px;height:18px;display:flex;justify-content:space-between}
