@@ -102,3 +102,15 @@
     });
   });
 })();
+
+/* ---------- hero: slideshow de fotos reales de fondo ---------- */
+(function(){
+  var slides = Array.prototype.slice.call(document.querySelectorAll('#heroBg .hb-slide'));
+  if (slides.length < 2) return;
+  var i = 0;
+  setInterval(function(){
+    slides[i].classList.remove('on');
+    i = (i + 1) % slides.length;
+    slides[i].classList.add('on');
+  }, 4000);
+})();
