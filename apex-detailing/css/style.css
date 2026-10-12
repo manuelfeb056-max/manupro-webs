@@ -206,3 +206,9 @@ footer.footer{border-top:2px solid var(--yellow);padding:2.6rem 0 6.5rem;backgro
 /* reveal */
 .reveal{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s ease}
 .reveal.in{opacity:1;transform:none}
+
+/* ---------- HERO: carrusel de fondo del Tesla ---------- */
+.hero-bg{background:none}
+.hero-bg img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;
+  transition:opacity 1.8s ease;animation:kenburns 24s ease-in-out infinite alternate;filter:saturate(1.1)}
+.hero-bg img.active{opacity:1}
