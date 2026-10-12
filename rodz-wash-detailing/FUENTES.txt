@@ -1,0 +1,43 @@
+FUENTES — Rodz Wash and Detailing (Barceloneta, PR)
+=====================================================
+Sitio: https://manuelfeb056-max.github.io/manupro-webs/rodz-wash-detailing/
+Fecha de construcción: 2026-10-12
+
+DATOS DEL NEGOCIO (todo verificado, nada inventado)
+--------------------------------------------------
+- Nombre: Rodz Wash and Detailing
+- Pueblo: Barceloneta, Puerto Rico
+- Teléfono / WhatsApp: 787-451-7236 → wa.me/17874517236
+- Instagram: @rodzwashdetailing — https://www.instagram.com/rodzwashdetailing
+  3,954 seguidores, 66 posts, cuenta pública (cosechado 2026-10-12)
+- Servicios reales (de su signage en el local + captions de IG):
+  limpieza detallada interior y exterior de vehículos, corrección de pintura,
+  tratamiento cerámico (instaladores Titan Coatings), limpieza de chasis,
+  servicio residencial, servicio Omega (brillo+suavidad+protección),
+  mantenimiento de coating, protección de 3 meses. "¡Servicios garantizados!"
+
+FOTOS (15 reales, cosechadas de @rodzwashdetailing vía instagram-cli + og:image)
+--------------------------------------------------------------------------------
+hero1.jpg = Ram Rebel 1500 con tratamiento cerámico (post DR LTjNTEYma)
+hero2.jpg = AMG G63 / Volvo XC 90 (post DXk3PmulVTu)
+hero3.jpg = Dodge Challenger Scat Pack, tratamiento cerámico (post DRqK_SEEWBT)
+hero4.jpg = efecto hidrofóbico del coating (post DIXHidqS8ix)
+g1-g13 = fotos reales de trabajos con caption de su IG + link al post original
+nosotros.jpg = signage real del local (RODZ WASH & DETAILING, 787-451-7236)
+logo.jpg = logo real del negocio (foto de perfil de su Instagram)
+No se usó ni una sola foto de otro negocio ni de stock.
+
+COLORES DEL LOGO (regla standing 2026-10-12: branding del logo es para siempre)
+-------------------------------------------------------------------------------
+- Rojo logo: #e02020 (acento principal, botones, ticker, titular)
+- Negro/gunmetal: #101215 / #16181c (fondos, estética "titanio")
+- Plateado/blanco: #c9ced4 / #ffffff (texto, detalles de metal cepillado)
+El cyan eléctrico del brief se sustituyó por el ROJO del logo real.
+
+OFERTA MANUPRO (bloque 3 planes, verde/negro/blanco de Manupro)
+----------------------------------------------------------------
+$99 Solo Web (tachado $300) / $150 Web + Arranque (tachado $600) /
+$200 Tranquilidad Total "La más elegida" (tachado $1,000).
+Botones de los planes → wa.me/17873128042 (WhatsApp de Manupro, venta).
+
+MÉTRICAS: js/metrics.js con data-site="rodz-wash-detailing"
