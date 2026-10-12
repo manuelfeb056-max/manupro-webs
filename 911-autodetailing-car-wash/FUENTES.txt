@@ -1,0 +1,64 @@
+FUENTES — 911 AutoDetailing & Car Wash (sites/911-autodetailing-car-wash/)
+================================================================
+
+Fotos (9/10, 100% reales, cero stock):
+- img/real/foto-1.jpg — Toyota Corolla GR, close-up del emblema GR
+  tras cambio de emblemas. Reel: https://www.facebook.com/reel/1121529940383731/
+- img/real/foto-2.jpg — Jeep Rubicon rojo, "¿CUAL ES EL TRUCO?" (corrección
+  de pintura). Reel "AMA LO QUE HACES": https://www.facebook.com/reel/1139312032091131/
+- img/real/foto-3.jpg — Lavado de motor a presión con hidrolavadora.
+  Reel: https://www.facebook.com/reel/1369991742854436/
+- img/real/foto-4.jpg — Detallador aspirando el interior de un BMW M.
+  Reel "911 AUTO DETAILING & CARWASH": https://www.facebook.com/reel/1394607356074017/
+- img/real/foto-5.jpg — Swirls y marcas de lavado en pintura negra bajo la
+  luz (antes de corrección). Reel: https://www.facebook.com/reel/1708626580393789/
+- img/real/foto-6.jpg — Interior de Jeep detallado (tarjeta 9-1-1 de regalo
+  visible). Reel "DETAILS": https://www.facebook.com/reel/1727594468298819/
+- img/real/foto-7.jpg — Limpieza profunda de consola central con brocha y
+  espuma. Reel: https://www.facebook.com/reel/2611270805995995/
+- img/real/foto-8.jpg — Pulido con máquina orbital en corrección de pintura.
+  Reel "BENEFICIOS DE LA CORRECCIÓN DE PINTURA": https://www.facebook.com/reel/3235099216690991/
+- img/real/foto-9.jpg — Interior de Toyota entregado (volante forrado,
+  tapete de cortesía). Reel: https://www.facebook.com/reel/4581384672181335/
+
+Origen de las fotos: portadas (og:image) de los reels públicos de la página
+oficial de Facebook "911 Car Wash & Detailing" (Juana Díaz, PR),
+https://www.facebook.com/100403055188775/ — extraídas vía los meta tags
+públicos de cada reel. Descargadas el 2026-10-12 y guardadas en local.
+Todas verificadas visualmente: muestran trabajo real del negocio.
+NO se usó ninguna imagen de stock ni generada.
+
+BRECHA HONESTA: se lograron 9 de 10 fotos. La décima (foto del post
+"DETAILS - Jeep Gladiator Rubicon" del 25/09/2026, espejo autoyas.com)
+dio 404 en el CDN del espejo al momento de descargar y el perfil de
+Facebook no expone sus fotos de posts por API pública sin login. La
+galería se construyó con las 9 reales; cero relleno con stock.
+
+Logo:
+- img/logo.jpg — foto de perfil OFICIAL de la página de Facebook del
+  negocio (obtenida vía Graph API pública, 2048×2048).
+  Paleta derivada directamente del logo (muestreo de píxeles):
+  negro #0b0908, blanco #f5f2ec, naranja señal #d2711e,
+  teal #3a7060. Nada inventado.
+
+Video hero:
+- NO hay mp4 descargable: los reels de Facebook no exponen og:video en
+  su versión pública. El hero quedó fotográfico con foto-8.
+  VIDEO CANDIDATO para cuando el mp4 llegue:
+  https://www.facebook.com/reel/1727594468298819/ ("DETAILS", 1.7K views,
+  30 reactions — el reel con más tracción de la página).
+
+Datos del negocio (verificados):
+- Nombre: 911 AutoDetailing & Car Wash / 911 Car Wash & Detailing
+- Teléfono: 787-324-6677 (tel:+17873246677)
+- WhatsApp: https://wa.me/17873246677
+- Facebook: https://www.facebook.com/100403055188775/ (página oficial,
+  sin handle personalizado confirmado; no se encontró Instagram oficial)
+- Ubicación: Juana Díaz, Puerto Rico
+- Horario (publicado por el negocio): Lun–Jue 8:30am–5:00pm,
+  Vie 8:30am–2:30pm, Sáb 9:00am–5:00pm
+- Servicios (de sus publicaciones): corrección de pintura, revestimiento
+  cerámico (Covalent Graphene, hasta 5 años, registro CARFAX), detallado
+  interior, shampoo de interiores, lavado de motor, remoción de manchas de
+  agua, restauración de focos, cambio de emblemas
+- Lema: "Protegiendo tu inversión."
