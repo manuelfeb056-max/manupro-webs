@@ -1,30 +1,16 @@
-/* Wilos Detailing — GLASS SHIELD engine: hero slider, reveals, counters, gallery, FAQ, menu */
+/* Wilos Detailing — GLASS SHIELD engine: hero video, reveals, counters, gallery, FAQ, menu */
 (function(){
   "use strict";
 
-  /* ---------- hero slider ---------- */
-  var slides = Array.prototype.slice.call(document.querySelectorAll('.hero-slide'));
-  var dotsBox = document.getElementById('heroDots');
-  var hi = 0, timer = null;
-  if (slides.length && dotsBox) {
-    slides.forEach(function(_, i){
-      var b = document.createElement('button');
-      b.setAttribute('aria-label', 'Foto ' + (i+1));
-      if (i === 0) b.classList.add('on');
-      b.addEventListener('click', function(){ go(i); restart(); });
-      dotsBox.appendChild(b);
-    });
-    var dots = dotsBox.querySelectorAll('button');
-    function go(n){
-      slides[hi].classList.remove('active'); dots[hi].classList.remove('on');
-      hi = (n + slides.length) % slides.length;
-      slides[hi].classList.add('active'); dots[hi].classList.add('on');
-    }
-    function restart(){ clearInterval(timer); timer = setInterval(function(){ go(hi+1); }, 4000); }
-    restart();
-    document.addEventListener('visibilitychange', function(){
-      if (document.hidden) clearInterval(timer); else restart();
-    });
+  /* ---------- hero video: fade in cuando corre ---------- */
+  var hv = document.getElementById('heroVideo');
+  if (hv) {
+    var play = function(){ hv.classList.add('playing'); };
+    if (hv.readyState >= 3) play();
+    hv.addEventListener('canplay', play);
+    hv.addEventListener('playing', play);
+    var tryPlay = hv.play();
+    if (tryPlay && tryPlay.catch) tryPlay.catch(function(){});
   }
 
   /* ---------- reveal on scroll ---------- */
