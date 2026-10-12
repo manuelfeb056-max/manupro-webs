@@ -66,6 +66,22 @@
 </section>
 
 <!-- PLANES -->
+
+
+<!-- FAQ -->
+<section class="faq">
+  <div class="wrap">
+    <p class="kicker">Dudas comunes</p>
+    <h2>Preguntas <span>frecuentes</span></h2>
+    <details open><summary>¿Dónde están ubicados?</summary><p>Carr. 686, en la Gasolinera Gulf, Playa Vega Baja.</p></details>
+    <details><summary>¿Cómo agendo una cita?</summary><p>Escríbenos por WhatsApp al 787-445-1000.</p></details>
+    <details><summary>¿Qué es el lavado de chasis?</summary><p>Limpiamos por debajo del carro: chasis, guardalodos y áreas que el lavado normal no toca.</p></details>
+    <details><summary>¿Qué incluye el Combito Asicalao?</summary><p>Nuestro combo: lavado completo + lavado de chasis + detalle. Pregunta por WhatsApp.</p></details>
+    <details><summary>¿Atienden todo tipo de vehículos?</summary><p>Sí: autos, jeeps, guaguas y camionetas.</p></details>
+  </div>
+</section>
+
+<!-- CONTACTO -->
 <section class="plans" id="planes">
   <div class="wrap">
     <p class="kicker">Activa tu website</p>
@@ -93,21 +109,6 @@
     </div>
   </div>
 </section>
-
-<!-- FAQ -->
-<section class="faq">
-  <div class="wrap">
-    <p class="kicker">Dudas comunes</p>
-    <h2>Preguntas <span>frecuentes</span></h2>
-    <details open><summary>¿Dónde están ubicados?</summary><p>Carr. 686, en la Gasolinera Gulf, Playa Vega Baja.</p></details>
-    <details><summary>¿Cómo agendo una cita?</summary><p>Escríbenos por WhatsApp al 787-445-1000.</p></details>
-    <details><summary>¿Qué es el lavado de chasis?</summary><p>Limpiamos por debajo del carro: chasis, guardalodos y áreas que el lavado normal no toca.</p></details>
-    <details><summary>¿Qué incluye el Combito Asicalao?</summary><p>Nuestro combo: lavado completo + lavado de chasis + detalle. Pregunta por WhatsApp.</p></details>
-    <details><summary>¿Atienden todo tipo de vehículos?</summary><p>Sí: autos, jeeps, guaguas y camionetas.</p></details>
-  </div>
-</section>
-
-<!-- CONTACTO -->
 <footer class="contact" id="contacto">
   <div class="wrap">
     <h2>Llégale a <span>Vega Baja</span></h2>
@@ -128,5 +129,11 @@
 </a>
 
 <script src="js/main.js"></script>
+<button class="mp-menu-btn" id="mpMenuBtn" aria-label="Abrir menú"><span></span><span></span><span></span></button>
+<nav class="mp-nav" id="mpNav">
+  <a href="#trabajos">Trabajos</a>
+  <a href="#planes">Planes</a>
+</nav>
+<script>(function(){var b=document.getElementById('mpMenuBtn'),n=document.getElementById('mpNav');if(!b||!n)return;b.addEventListener('click',function(){n.classList.toggle('open')});n.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){n.classList.remove('open')})});})();</script>
 </body>
 </html>

@@ -98,7 +98,7 @@ h2{font-family:'Fredoka';font-weight:700;font-size:clamp(2rem,6vw,3.2rem)}
 .faq details{background:var(--card);border:2px solid var(--line);border-radius:18px;margin-bottom:12px;overflow:hidden}
 .faq summary{cursor:pointer;padding:18px 22px;font-family:'Fredoka';font-size:1.15rem;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:12px}
 .faq summary::-webkit-details-marker{display:none}
-.faq summary::after{content:"🍩";font-size:1.3rem;transition:transform .3s;flex:none}
+.faq summary::after{content:"";font-size:1.3rem;transition:transform .3s;flex:none}
 .faq details[open] summary::after{transform:rotate(180deg) scale(1.2)}
 .faq .a{padding:0 22px 20px;color:var(--muted)}
 .faq .a a{color:var(--yellow)}
@@ -134,6 +134,16 @@ footer{border-top:3px solid var(--pink);padding:44px 0 112px;background:#1e0a21}
 .wa-float svg{width:32px;height:32px;fill:#fff}
 @keyframes waB{0%,100%{transform:scale(1) rotate(-4deg)}50%{transform:scale(1.1) rotate(4deg)}}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}}
+</style>
+<style>
+/* ===== menú flotante 3 rayas SIEMPRE (Manupro standing 2026-10-12) ===== */
+.mp-menu-btn{position:fixed;top:16px;right:16px;z-index:90;width:54px;height:54px;border-radius:50%;background:rgba(10,10,12,.88);border:1px solid var(--gold,var(--accent,#c9a24b));display:flex;flex-direction:column;gap:5px;cursor:pointer;align-items:center;justify-content:center;box-shadow:0 6px 22px rgba(0,0,0,.45);padding:0;animation:mpMenuFloat 4s ease-in-out infinite}
+.mp-menu-btn span{width:24px;height:2px;background:var(--gold,var(--accent,#c9a24b));display:block;border-radius:2px}
+@keyframes mpMenuFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+.mp-nav{position:fixed;top:0;right:0;width:min(78vw,320px);height:100vh;background:#0d0d10;border-left:1px solid var(--gold,var(--accent,#c9a24b));display:flex;flex-direction:column;padding:90px 30px;gap:20px;transition:transform .3s;z-index:80;transform:translateX(105%)}
+.mp-nav.open{transform:none}
+.mp-nav a{color:#f5f5f5;text-decoration:none;font-size:1rem;font-weight:600;text-transform:uppercase;letter-spacing:.1em}
+.mp-nav a:hover{color:var(--gold,var(--accent,#c9a24b))}
 </style>
 </head>
 <body>
@@ -357,5 +367,14 @@ if(matchMedia('(pointer:fine)').matches){
   });
 }
 </script>
+<button class="mp-menu-btn" id="mpMenuBtn" aria-label="Abrir menú"><span></span><span></span><span></span></button>
+<nav class="mp-nav" id="mpNav">
+  <a href="#inicio">Inicio</a>
+  <a href="#servicios">Servicios</a>
+  <a href="#galeria">Galería</a>
+  <a href="#faq">Preguntas</a>
+  <a href="#contacto">Contacto</a>
+</nav>
+<script>(function(){var b=document.getElementById('mpMenuBtn'),n=document.getElementById('mpNav');if(!b||!n)return;b.addEventListener('click',function(){n.classList.toggle('open')});n.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){n.classList.remove('open')})});})();</script>
 </body>
 </html>

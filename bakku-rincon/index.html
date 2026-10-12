@@ -96,6 +96,16 @@ footer a{color:var(--accent);text-decoration:none}
 .float svg{width:30px;height:30px;fill:#fff}
 @media(max-width:760px){section{padding:60px 0}.contact-card{padding:36px 22px}}
 </style>
+<style>
+/* ===== menú flotante 3 rayas SIEMPRE (Manupro standing 2026-10-12) ===== */
+.mp-menu-btn{position:fixed;top:16px;right:16px;z-index:90;width:54px;height:54px;border-radius:50%;background:rgba(10,10,12,.88);border:1px solid var(--gold,var(--accent,#c9a24b));display:flex;flex-direction:column;gap:5px;cursor:pointer;align-items:center;justify-content:center;box-shadow:0 6px 22px rgba(0,0,0,.45);padding:0;animation:mpMenuFloat 4s ease-in-out infinite}
+.mp-menu-btn span{width:24px;height:2px;background:var(--gold,var(--accent,#c9a24b));display:block;border-radius:2px}
+@keyframes mpMenuFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+.mp-nav{position:fixed;top:0;right:0;width:min(78vw,320px);height:100vh;background:#0d0d10;border-left:1px solid var(--gold,var(--accent,#c9a24b));display:flex;flex-direction:column;padding:90px 30px;gap:20px;transition:transform .3s;z-index:80;transform:translateX(105%)}
+.mp-nav.open{transform:none}
+.mp-nav a{color:#f5f5f5;text-decoration:none;font-size:1rem;font-weight:600;text-transform:uppercase;letter-spacing:.1em}
+.mp-nav a:hover{color:var(--gold,var(--accent,#c9a24b))}
+</style>
 </head>
 <body>
 <header>
@@ -393,5 +403,14 @@ function makeParticles(THREE,scene,cfg,isMobile){
 })();
 
 </script>
+<button class="mp-menu-btn" id="mpMenuBtn" aria-label="Abrir menú"><span></span><span></span><span></span></button>
+<nav class="mp-nav" id="mpNav">
+  <a href="#inicio">Inicio</a>
+  <a href="#especialidades">Especialidades</a>
+  <a href="#galeria">Galería</a>
+  <a href="#faq">Preguntas</a>
+  <a href="#contacto">Contacto</a>
+</nav>
+<script>(function(){var b=document.getElementById('mpMenuBtn'),n=document.getElementById('mpNav');if(!b||!n)return;b.addEventListener('click',function(){n.classList.toggle('open')});n.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){n.classList.remove('open')})});})();</script>
 </body>
 </html>
