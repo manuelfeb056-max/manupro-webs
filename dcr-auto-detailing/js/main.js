@@ -60,4 +60,15 @@
     entries.forEach(function(en){ if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); } });
   }, {threshold: 0.12});
   els.forEach(function(el){ io.observe(el); });
+
+  // Hero carousel: rota las 10 fotos del carrusel de Instagram
+  var hcImgs = document.querySelectorAll('.hero-carousel img');
+  if (hcImgs.length > 1) {
+    var hcIdx = 0;
+    setInterval(function(){
+      hcImgs[hcIdx].classList.remove('hc-active');
+      hcIdx = (hcIdx + 1) % hcImgs.length;
+      hcImgs[hcIdx].classList.add('hc-active');
+    }, 4500);
+  }
 })();
