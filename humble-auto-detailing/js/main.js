@@ -1,4 +1,4 @@
-/* Humble Auto Detailing — PRECISION DETAILING LAB: scan-stage hero slideshow, gallery carousel (buttons + swipe), FAQ, reveals, counters */
+/* Humble Auto Detailing — PRECISION DETAILING LAB: gallery carousel (buttons + swipe), FAQ, reveals, counters */
 (function () {
   "use strict";
 
@@ -53,17 +53,6 @@
   /* ---------- ticker: duplicate for seamless loop ---------- */
   var tick = document.getElementById('tickTrack');
   if (tick) tick.innerHTML += tick.innerHTML;
-
-  /* ---------- hero scan-stage slideshow ---------- */
-  var heroSlides = Array.prototype.slice.call(document.querySelectorAll('.scan-slide'));
-  if (heroSlides.length > 1) {
-    var h = 0;
-    setInterval(function () {
-      heroSlides[h].classList.remove('on');
-      h = (h + 1) % heroSlides.length;
-      heroSlides[h].classList.add('on');
-    }, 4000);
-  }
 
   /* ---------- FAQ accordion ---------- */
   document.querySelectorAll('.faq-q').forEach(function (btn) {
