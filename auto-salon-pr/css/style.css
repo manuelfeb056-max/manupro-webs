@@ -1,5 +1,5 @@
 /* RETRO NEON CAR WASH - Auto Salon Hand Car Wash & Detailing PR */
-/* Vintage Americana car-wash signage: cream + cherry red + teal. */
+/* Vintage Americana car-wash signage: cream + cherry red (logo-derived). Teal removed per logo-colors rule 2026-10-12. */
 @import url('https://fonts.googleapis.com/css2?family=Lilita+One&family=Nunito:ital,wght@0,400;0,600;0,700;0,800;0,900;1,400&display=swap');
 
 :root{
@@ -7,8 +7,8 @@
   --cream-2:#EFDFB8;
   --red:#D1202F;
   --red-dark:#A11420;
-  --teal:#147A72;
-  --teal-dark:#0C4F4A;
+  --wine:#8E1420;
+  --wine-dark:#5F0C13;
   --ink:#26201A;
   --ink-2:#3A322A;
   --bulb:#FFD166;
@@ -70,7 +70,7 @@ body::before{
   backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);
   border:6px solid var(--red);border-radius:26px;
   padding:56px 22px 34px;
-  box-shadow:0 24px 70px rgba(0,0,0,.55), inset 0 0 0 4px var(--cream), inset 0 0 0 8px var(--teal);
+  box-shadow:0 24px 70px rgba(0,0,0,.55), inset 0 0 0 4px var(--cream), inset 0 0 0 8px var(--wine);
 }
 .marquee-bulbs{position:absolute;left:14px;right:14px;height:18px;display:flex;justify-content:space-between}
 .marquee-bulbs.top{top:10px}.marquee-bulbs.bottom{bottom:10px}
@@ -81,7 +81,7 @@ body::before{
 .oval-sign{
   position:absolute;top:-58px;left:50%;transform:translateX(-50%) rotate(-4deg);
   width:132px;height:132px;border-radius:50%;background:#fff;
-  border:6px solid var(--teal);box-shadow:0 10px 26px rgba(0,0,0,.4);
+  border:6px solid var(--wine);box-shadow:0 10px 26px rgba(0,0,0,.4);
   display:flex;align-items:center;justify-content:center;overflow:hidden;
 }
 .oval-sign img{width:112px;height:112px;object-fit:cover;border-radius:50%}
@@ -96,7 +96,7 @@ body::before{
 
 .marquee h1{font-size:clamp(3rem,9vw,4.6rem);line-height:.95;color:var(--red);text-transform:uppercase;
   text-shadow:0 2px 0 #fff, 0 0 22px rgba(209,32,47,.45);animation:neon 3s ease-in-out infinite}
-.marquee h1 span{color:var(--teal);text-shadow:0 2px 0 #fff, 0 0 22px rgba(20,122,114,.4)}
+.marquee h1 span{color:var(--wine);text-shadow:0 2px 0 #fff, 0 0 22px rgba(142,20,32,.45)}
 @keyframes neon{0%,100%{filter:brightness(1)}50%{filter:brightness(1.14)}}
 .marquee .tagline{font-weight:900;font-size:clamp(1rem,2.6vw,1.25rem);color:var(--ink);margin-top:10px;letter-spacing:1px}
 .marquee .sub{margin:12px auto 0;max-width:46ch;color:var(--ink-2);font-weight:600}
@@ -107,8 +107,8 @@ body::before{
 .btn:active{transform:scale(.96)}
 .btn-red{background:var(--red);color:#fff;box-shadow:0 8px 0 var(--red-dark),0 14px 26px rgba(0,0,0,.25)}
 .btn-red:hover{transform:translateY(-2px);box-shadow:0 10px 0 var(--red-dark),0 18px 30px rgba(0,0,0,.3)}
-.btn-teal{background:var(--teal);color:#fff;box-shadow:0 8px 0 var(--teal-dark),0 14px 26px rgba(0,0,0,.25)}
-.btn-teal:hover{transform:translateY(-2px)}
+.btn-wine{background:var(--wine);color:#fff;box-shadow:0 8px 0 var(--wine-dark),0 14px 26px rgba(0,0,0,.25)}
+.btn-wine:hover{transform:translateY(-2px)}
 .btn-wa{background:#1faa55;color:#fff;box-shadow:0 8px 0 #137a3c}
 .btn svg{width:20px;height:20px;fill:currentColor}
 #heroDots{margin-top:22px;display:flex;gap:8px;justify-content:center;position:relative;z-index:2}
@@ -122,7 +122,7 @@ body::before{
 
 /* ---------- sections ---------- */
 .section{padding:74px 0;position:relative;z-index:1}
-.kicker{display:inline-block;font-family:'Lilita One',cursive;color:var(--cream);background:var(--teal);
+.kicker{display:inline-block;font-family:'Lilita One',cursive;color:var(--cream);background:var(--wine);
   padding:6px 20px;border-radius:999px;letter-spacing:2px;font-size:.95rem;margin-bottom:14px}
 .h2{font-size:clamp(2rem,5vw,2.9rem);color:var(--ink);margin-bottom:8px}
 .h2 .hl{color:var(--red)}
@@ -133,7 +133,7 @@ body::before{
 .card{background:#FFFDF4;border:4px solid var(--ink);border-radius:var(--radius);overflow:hidden;
   box-shadow:7px 7px 0 var(--ink);transition:transform .25s, box-shadow .25s;position:relative}
 .card:hover{transform:translateY(-6px) rotate(-.4deg);box-shadow:10px 12px 0 var(--ink)}
-.card-num{position:absolute;top:12px;left:12px;z-index:3;background:var(--teal);color:#fff;
+.card-num{position:absolute;top:12px;left:12px;z-index:3;background:var(--wine);color:#fff;
   font-family:'Lilita One',cursive;font-size:1.1rem;width:44px;height:44px;border-radius:50%;
   display:flex;align-items:center;justify-content:center;border:3px solid #fff;box-shadow:0 4px 10px rgba(0,0,0,.3)}
 .card-imgs{position:relative;height:190px;overflow:hidden;border-bottom:4px solid var(--ink)}
@@ -180,7 +180,7 @@ body::before{
 .about-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:44px;align-items:center}
 .about-img{position:relative;transform:rotate(-2deg)}
 .about-img img{border:6px solid var(--ink);border-radius:var(--radius);box-shadow:10px 10px 0 var(--red);width:100%}
-.est-stamp{position:absolute;bottom:-24px;right:-14px;background:var(--teal);color:#fff;font-family:'Lilita One',cursive;
+.est-stamp{position:absolute;bottom:-24px;right:-14px;background:var(--wine);color:#fff;font-family:'Lilita One',cursive;
   font-size:1.4rem;letter-spacing:2px;padding:12px 24px;border-radius:14px;border:4px solid #fff;
   box-shadow:0 8px 20px rgba(0,0,0,.35);transform:rotate(4deg)}
 .about-text p{color:var(--ink-2);font-weight:600;margin:12px 0;font-size:1.02rem;line-height:1.7}
@@ -201,15 +201,15 @@ body::before{
 .faq-item summary::-webkit-details-marker{display:none}
 .faq-item summary .fx{background:var(--red);color:#fff;font-family:'Lilita One',cursive;width:32px;height:32px;border-radius:50%;
   display:flex;align-items:center;justify-content:center;font-size:1.3rem;flex:0 0 auto;transition:transform .25s}
-.faq-item[open] summary .fx{transform:rotate(45deg);background:var(--teal)}
+.faq-item[open] summary .fx{transform:rotate(45deg);background:var(--wine)}
 .faq-item .fa{padding:0 22px 20px;color:var(--ink-2);font-weight:600;line-height:1.65}
-.faq-item .fa a{color:var(--teal);font-weight:800;text-decoration:underline}
+.faq-item .fa a{color:var(--wine);font-weight:800;text-decoration:underline}
 
 /* ---------- contact ---------- */
 .contact{background:var(--ink);color:var(--cream);border-top:6px solid var(--red);position:relative;z-index:1}
 .contact .h2{color:var(--cream)}.contact .h2 .hl{color:var(--bulb)}
 .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:30px;margin-top:30px}
-.ct-card{background:rgba(255,255,255,.05);border:3px solid var(--teal);border-radius:var(--radius);padding:28px}
+.ct-card{background:rgba(255,255,255,.05);border:3px solid var(--wine);border-radius:var(--radius);padding:28px}
 .ct-card h3{color:var(--bulb);font-size:1.3rem;margin-bottom:16px;letter-spacing:1px}
 .ct-row{display:flex;align-items:center;gap:14px;padding:11px 0;border-bottom:1px dashed rgba(255,255,255,.15);font-weight:700}
 .ct-row:last-child{border-bottom:0}
@@ -218,7 +218,7 @@ body::before{
 .ct-row a{color:#fff}.ct-row a:hover{color:var(--bulb)}
 .ct-row small{display:block;color:#cbbfa8;font-weight:600}
 .ct-map iframe{width:100%;height:100%;min-height:340px;border:0;border-radius:14px;filter:saturate(.9)}
-.ct-map{border:3px solid var(--teal);border-radius:var(--radius);overflow:hidden;min-height:340px}
+.ct-map{border:3px solid var(--wine);border-radius:var(--radius);overflow:hidden;min-height:340px}
 
 /* ---------- offer: 3 planes (marquee retro + Manupro green) ---------- */
 .offer .wrap{max-width:1160px}
@@ -312,4 +312,17 @@ body::before{
   .hero-ctas .btn{width:100%;justify-content:center}
   .gal-btn{width:44px;height:44px}
   .est-stamp{right:6px;bottom:-18px;font-size:1.15rem}
+}
+
+/* RETROFIT 2026-10-12: FAQ flanqueado con marcos de fotos reales (visibilidad completa) */
+.faq-grid{display:grid;grid-template-columns:minmax(0,1fr) 240px;gap:40px;align-items:start}
+.faq-frames{display:flex;flex-direction:column;gap:24px;position:sticky;top:96px}
+.pframe{background:#FFFDF4;border:4px solid var(--ink);border-radius:var(--radius);overflow:hidden;box-shadow:8px 8px 0 var(--red)}
+.pframe:nth-child(2){transform:rotate(-2deg)}
+.pframe img{width:100%;height:auto;display:block;object-fit:contain}
+.pframe figcaption{padding:10px 14px;font-weight:800;font-size:.85rem;color:var(--ink-2);border-top:3px solid var(--ink)}
+@media(max-width:900px){
+  .faq-grid{grid-template-columns:1fr}
+  .faq-frames{flex-direction:row;position:static}
+  .faq-frames .pframe{flex:1;min-width:0}
 }
