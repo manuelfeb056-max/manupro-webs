@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aura Car Wash — Lavados 100% a mano | Santa Isabel · Salinas · Ceiba</title>
+<meta name="description" content="Aura Car Wash: lavados 100% a mano desde $25, detailing certificado, lavado de motor, restauración de plásticos y hydro ceramic sealant. 3 locales: Santa Isabel, Salinas y Ceiba. Abiertos los 7 días, 8AM-4PM.">
+<link rel="icon" href="img/logo.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-site="aura-car-wash">
+
+<!-- ============ HEADER ============ -->
+<header class="header">
+  <a class="brand" href="#inicio" aria-label="Aura Car Wash inicio">
+    <span class="brand-badge"><img src="img/logo.jpg" alt="Logo de Aura Car Wash"></span>
+    <span class="brand-text">AURA <em>CAR WASH</em></span>
+  </a>
+  <button class="menu-btn" id="menuBtn" aria-label="Abrir menú" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<nav class="drawer" id="drawer" aria-label="Menú principal">
+  <button class="drawer-close" id="drawerClose" aria-label="Cerrar menú">✕</button>
+  <a href="#trabajos">Nuestros trabajos</a>
+  <a href="#servicios">Servicios</a>
+  <a href="#locales">Locales</a>
+  <a href="#nosotros">Nosotros</a>
+  <a href="#faq">Preguntas</a>
+  <a href="#oferta">Oferta web</a>
+  <a href="#contacto">Contacto</a>
+</nav>
+<div class="scrim" id="scrim"></div>
+
+<!-- ============ HERO VIDEO ============ -->
+<section class="hero" id="inicio">
+  <div class="hero-media">
+    <video class="hero-video" autoplay muted loop playsinline poster="img/real/foto-2.jpg">
+      <source src="img/hero-video.mp4" type="video/mp4">
+    </video>
+    <div class="hero-shade"></div>
+  </div>
+  <div class="hero-inner">
+    <div class="seal" aria-hidden="true">
+      <img src="img/logo.jpg" alt="">
+      <svg viewBox="0 0 200 200" class="seal-ring">
+        <defs><path id="circ" d="M100,100 m-78,0 a78,78 0 1,1 156,0 a78,78 0 1,1 -156,0"/></defs>
+        <text><textPath href="#circ">LAVADOS 100% A MANO ★ DESDE $25 ★ DETAILING CERTIFIED ★ </textPath></text>
+      </svg>
+    </div>
+    <p class="hero-kicker">Detailing Certified · Puerto Rico</p>
+    <h1 class="hero-title">AURA<br><span>CAR WASH</span></h1>
+    <p class="hero-sub">Lavados <strong>100% a mano</strong> desde <strong>$25</strong>.<br>
+    Santa Isabel · Salinas · Ceiba — 7 días, 8AM-4PM.</p>
+    <div class="hero-ctas">
+      <a class="btn btn-wa" data-track="wa_hero" href="https://wa.me/17872021573?text=Hola%20Aura%20Car%20Wash%2C%20quiero%20una%20cotizaci%C3%B3n%20para%20mi%20veh%C3%ADculo" target="_blank" rel="noopener">
+        <svg viewBox="0 0 32 32"><path d="M16 .8C7.6.8.8 7.6.8 16c0 2.7.7 5.3 2 7.6L.8 31.2l7.8-2c2.2 1.2 4.7 1.9 7.4 1.9 8.4 0 15.2-6.8 15.2-15.2S24.4.8 16 .8zm0 27.6c-2.3 0-4.6-.6-6.5-1.8l-.5-.3-4.6 1.2 1.2-4.5-.3-.5c-1.3-2-2-4.4-2-6.9C3.3 9 9 3.3 16 3.3S28.7 9 28.7 16 22.9 28.4 16 28.4zm7-9.3c-.4-.2-2.2-1.1-2.6-1.2-.4-.1-.6-.2-.9.2-.3.4-1 1.2-1.2 1.5-.2.2-.5.3-.9.1-.4-.2-1.6-.6-3-1.9-1.1-1-1.9-2.2-2.1-2.6-.2-.4 0-.6.2-.8l.6-.7c.2-.2.2-.4.4-.6.1-.2 0-.4 0-.6-.1-.2-.9-2.1-1.2-2.9-.3-.8-.6-.6-.9-.6h-.7c-.2 0-.6.1-.9.4-.3.3-1.2 1.2-1.2 2.9s1.2 3.4 1.4 3.6c.2.2 2.4 3.6 5.7 5.1 3.4 1.5 3.4 1 4 1 .6-.1 2.2-.9 2.5-1.8.3-.9.3-1.6.2-1.8-.1-.1-.4-.2-.8-.4z"/></svg>
+        WhatsApp
+      </a>
+      <a class="btn btn-call" data-track="call_hero" href="tel:+17872021573">Llamar 787-202-1573</a>
+    </div>
+  </div>
+  <a class="hero-scroll" href="#trabajos" aria-label="Ver trabajos">▼</a>
+</section>
+
+<!-- ============ CINTA MARQUEE ============ -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track">
+    <span>Lavados 100% a mano</span><i>★</i><span>Desde $25</span><i>★</i><span>3 locales</span><i>★</i><span>Abiertos 7 días 8AM-4PM</span><i>★</i><span>Por orden de llegada</span><i>★</i>
+    <span>Lavados 100% a mano</span><i>★</i><span>Desde $25</span><i>★</i><span>3 locales</span><i>★</i><span>Abiertos 7 días 8AM-4PM</span><i>★</i><span>Por orden de llegada</span><i>★</i>
+  </div>
+</div>
+
+<!-- ============ NUESTROS TRABAJOS ============ -->
+<section class="works" id="trabajos">
+  <div class="wrap">
+    <p class="kicker">Nuestro material</p>
+    <h2>Nuestros <span>trabajos</span></h2>
+    <p class="section-lead">Desliza para ver el trabajo de Aura Car Wash.</p>
+  </div>
+  <div class="ribbon">
+    <figure class="shot"><img src="img/real/foto-1.jpg" alt="Reserva tu turno: lavado snow foam, lavado de motor, brillo de focos, cera líquida y restauración de plásticos" loading="lazy"></figure>
+    <figure class="shot"><img src="img/real/foto-2.jpg" alt="Vehículo lavado a mano en Aura Car Wash" loading="lazy"></figure>
+    <figure class="shot"><img src="img/real/foto-3.jpg" alt="Aura Car Wash Santa Isabel" loading="lazy"></figure>
+    <figure class="shot"><img src="img/real/foto-4.jpg" alt="Especial de lavado: completo, motor, hydro ceramic sealant y fragancia" loading="lazy"></figure>
+    <figure class="shot"><img src="img/real/foto-5.jpg" alt="Especial de fin de semana: lavados 100% a mano" loading="lazy"></figure>
+    <figure class="shot"><img src="img/real/foto-6.jpg" alt="Nuestras localizaciones: Santa Isabel, Salinas y Ceiba" loading="lazy"></figure>
+    <figure class="shot"><img src="img/real/foto-7.jpg" alt="Profesionales en detailing: lavados completos, shampoo de asientos, pulidos y protección cerámica" loading="lazy"></figure>
+    <figure class="shot"><img src="img/real/foto-8.jpg" alt="Lavados desde $25: todo lavado completo incluye interior, exterior con cera líquida y fragancia" loading="lazy"></figure>
+    <figure class="shot"><img src="img/real/foto-9.jpg" alt="Direcciones de las 3 localizaciones y horario 8AM-4PM" loading="lazy"></figure>
+    <figure class="shot"><img src="img/real/foto-10.jpg" alt="Aura Car Wash en Google Maps" loading="lazy"></figure>
+  </div>
+</section>
+
+<!-- lightbox -->
+<div class="lightbox" id="lightbox" aria-hidden="true">
+  <button class="lb-close" id="lbClose" aria-label="Cerrar">✕</button>
+  <img class="lb-img" id="lbImg" src="" alt="">
+</div>
+
+<!-- ============ SERVICIOS / PROCESO ============ -->
+<section class="services" id="servicios">
+  <div class="wrap">
+    <p class="kicker">Servicios</p>
+    <h2>Todo para tu <span>carro</span></h2>
+    <div class="svc-grid">
+      <div class="svc reveal"><svg viewBox="0 0 24 24"><path d="M12 2C8 7 5 10.5 5 14a7 7 0 0 0 14 0c0-3.5-3-7-7-12z"/></svg><p>Lavado Snow Foam</p></div>
+      <div class="svc reveal"><svg viewBox="0 0 24 24"><path d="M5 11l1.5-4.5A2 2 0 0 1 8.4 5h7.2a2 2 0 0 1 1.9 1.5L19 11m-14 0h14a2 2 0 0 1 2 2v5h-2.2M5 11a2 2 0 0 0-2 2v5h2.2m0 0a2 2 0 1 0 4 0m-4 0h6a2 2 0 1 0 4 0m-4 0h2"/></svg><p>Lavado completo</p></div>
+      <div class="svc reveal"><svg viewBox="0 0 24 24"><path d="M4 9h16v6H4zM7 9V6h10v3M7 15v3h10v-3M12 12h.01"/></svg><p>Lavado de motor</p></div>
+      <div class="svc reveal"><svg viewBox="0 0 24 24"><path d="M9 21h6v-1a3 3 0 0 0-3-3 3 3 0 0 0-3 3v1zm3-19a7 7 0 0 0-4 12.7V16a4 4 0 0 1 8 0v-1.3A7 7 0 0 0 12 2z"/></svg><p>Brillo de focos</p></div>
+      <div class="svc reveal"><svg viewBox="0 0 24 24"><path d="M12 3l7 4v5c0 5-3.5 8-7 9-3.5-1-7-4-7-9V7z"/></svg><p>Cera líquida</p></div>
+      <div class="svc reveal"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5M5 12l-1 7 7-1"/></svg><p>Restauración de plásticos</p></div>
+      <div class="svc reveal"><svg viewBox="0 0 24 24"><path d="M12 2l2.4 7.6H22l-6.2 4.5 2.4 7.4-6.2-4.6-6.2 4.6 2.4-7.4L2 9.6h7.6z"/></svg><p>Hydro Ceramic Sealant</p></div>
+      <div class="svc reveal"><svg viewBox="0 0 24 24"><path d="M3 12h4l2-7 4 14 2-7h6"/></svg><p>Fragancia incluida</p></div>
+    </div>
+    <div class="steps">
+      <div class="step reveal"><span class="step-n">1</span><p><strong>Llegas.</strong> Servicio por orden de llegada.</p></div>
+      <div class="step reveal"><span class="step-n">2</span><p><strong>Lavamos 100% a mano.</strong> Exterior, interior, motor y detailing.</p></div>
+      <div class="step reveal"><span class="step-n">3</span><p><strong>Te llamamos.</strong> Sigue con tu día; te avisamos cuando esté listo.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ LOCALES ============ -->
+<section class="locales" id="locales">
+  <div class="wrap">
+    <p class="kicker">3 locales</p>
+    <h2>Dónde <span>encontrarnos</span></h2>
+    <div class="loc-grid">
+      <article class="loc reveal">
+        <h3>Santa Isabel</h3>
+        <p class="loc-addr">PR-153, Sector Paso Seco, 00757</p>
+        <p class="loc-note">Frente a Viktor Pollo, en la curva de Ana G. Méndez de camino a Paso Seco.</p>
+      </article>
+      <article class="loc reveal">
+        <h3>Salinas</h3>
+        <p class="loc-addr">Carretera 3, Aguirre, Salinas 00751</p>
+        <p class="loc-note">Frente a BBQ Extra Inning, de camino hacia Salinas Speedway.</p>
+      </article>
+      <article class="loc reveal">
+        <h3>Ceiba</h3>
+        <p class="loc-addr">185 Av. Lauro Piñero, Ceiba PR, 00735</p>
+        <p class="loc-note">Atrás de Perez Tire and Car Center.</p>
+      </article>
+    </div>
+    <p class="loc-hours"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> Abiertos los 7 días · 8:00AM - 4:00PM · Búscanos en Google Maps</p>
+  </div>
+</section>
+
+<!-- ============ NOSOTROS ============ -->
+<section class="about" id="nosotros">
+  <div class="wrap about-grid">
+    <div class="about-text reveal">
+      <p class="kicker">Sobre nosotros</p>
+      <h2>El <span>brillo</span> es lo nuestro</h2>
+      <p>Somos Aura Car Wash: lavados <strong>100% a mano</strong> y detailing certificado. Abiertos los 7 días con 3 locales en Santa Isabel, Salinas y Ceiba. Deja tu vehículo con nosotros y te llamamos cuando esté listo.</p>
+    </div>
+    <figure class="about-photo reveal">
+      <img src="img/real/foto-2.jpg" alt="Vehículo detallado por Aura Car Wash" loading="lazy">
+    </figure>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="faq" id="faq">
+  <div class="wrap">
+    <p class="kicker">Preguntas</p>
+    <h2>Preguntas <span>frecuentes</span></h2>
+    <div class="faq-list">
+      <details class="faq-item" open>
+        <summary>¿Atienden por cita o por orden de llegada?</summary>
+        <p>Los lavados tradicionales son <strong>por orden de llegada</strong>. El detailing y shampoo de asientos son <strong>por cita</strong>; escríbenos por WhatsApp y te reservamos.</p>
+      </details>
+      <details class="faq-item">
+        <summary>¿Cuál es el horario?</summary>
+        <p>Abrimos los <strong>7 días</strong>, de <strong>8:00AM a 4:00PM</strong>, en Santa Isabel, Salinas y Ceiba.</p>
+      </details>
+      <details class="faq-item">
+        <summary>¿Cuánto cuesta un lavado?</summary>
+        <p>Los lavados arrancan <strong>desde $25</strong>. Escríbenos por WhatsApp con el modelo de tu vehículo y te cotizamos al momento.</p>
+      </details>
+      <details class="faq-item">
+        <summary>¿Qué incluye el lavado completo?</summary>
+        <p>Interior (vacuum y dash), exterior con <strong>cera líquida</strong>, plásticos negros int/ext, brillo de goma, entre puertas, flushing en guardafangos y <strong>fragancia incluida</strong>.</p>
+      </details>
+      <details class="faq-item">
+        <summary>¿Hacen detailing y lavado de motor?</summary>
+        <p>Sí. Somos <strong>detailing certified</strong>: lavado de motor, restauración de plásticos, brillo de focos, hydro ceramic sealant, pulidos y shampoo de interiores.</p>
+      </details>
+      <details class="faq-item">
+        <summary>¿Puedo dejar el vehículo y seguir con mi día?</summary>
+        <p>Claro. Dejas tu vehículo con nosotros y <strong>te llamamos cuando esté listo</strong> para recoger.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ============ OFERTA MANUPRO ============ -->
+<section class="offer" id="oferta">
+  <div class="wrap offer-card reveal">
+    <p class="offer-kicker">Oferta por tiempo limitado</p>
+    <h3>¿Te gusta esta página? La tuya puede ser igual de elite.</h3>
+    <div class="offer-plans">
+      <div class="plan">
+        <p class="plan-name">Solo Web</p>
+        <p class="plan-regular">$300</p>
+        <p class="plan-price">$99</p>
+        <ul class="plan-list">
+          <li>Website profesional</li>
+          <li class="no">No incluye hosting</li>
+          <li class="no">No incluye dominio</li>
+          <li class="no">No incluye mantenimiento</li>
+        </ul>
+        <a class="btn btn-wa" data-track="wa_offer_plan1" href="https://wa.me/17873128042?text=Hola%20Manupro%2C%20me%20interesa%20el%20plan%20Solo%20Web%20de%20%2499." target="_blank" rel="noopener">La quiero</a>
+      </div>
+      <div class="plan">
+        <p class="plan-name">Web + Arranque</p>
+        <p class="plan-regular">$600</p>
+        <p class="plan-price">$150</p>
+        <ul class="plan-list">
+          <li>Website profesional</li>
+          <li>Hosting por 2 meses</li>
+          <li>Dominio .com por 1 año</li>
+        </ul>
+        <a class="btn btn-wa" data-track="wa_offer_plan2" href="https://wa.me/17873128042?text=Hola%20Manupro%2C%20me%20interesa%20el%20plan%20Web%20%2B%20Arranque%20de%20%24150." target="_blank" rel="noopener">La quiero</a>
+      </div>
+      <div class="plan hero">
+        <span class="plan-badge">La más elegida</span>
+        <p class="plan-name">Tranquilidad Total</p>
+        <p class="plan-regular">$1,000</p>
+        <p class="plan-price">$200</p>
+        <ul class="plan-list">
+          <li>Website profesional</li>
+          <li>Hosting por 1 año</li>
+          <li>Mantenimiento</li>
+          <li>Dominio .com por 1 año</li>
+        </ul>
+        <p class="plan-sub">Un año de tranquilidad.</p>
+        <a class="btn btn-wa" data-track="wa_offer_plan3" href="https://wa.me/17873128042?text=Hola%20Manupro%2C%20me%20interesa%20el%20plan%20Tranquilidad%20Total%20de%20%24200." target="_blank" rel="noopener">La quiero para mi negocio</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACTO ============ -->
+<section class="contact" id="contacto">
+  <div class="wrap">
+    <p class="kicker">Contacto</p>
+    <h2>Hablemos de tu <span>carro</span></h2>
+    <div class="contact-grid">
+      <a class="c-card" href="https://wa.me/17872021573?text=Hola%20Aura%20Car%20Wash%2C%20quiero%20una%20cotizaci%C3%B3n%20para%20mi%20veh%C3%ADculo" target="_blank" rel="noopener">
+        <strong>WhatsApp</strong><span>Cotización al momento</span>
+      </a>
+      <a class="c-card" href="tel:+17872021573">
+        <strong>Llamar</strong><span>787-202-1573</span>
+      </a>
+      <a class="c-card" href="https://www.instagram.com/auracarwashpr" target="_blank" rel="noopener">
+        <strong>Instagram</strong><span>@auracarwashpr</span>
+      </a>
+      <a class="c-card" href="mailto:auracarwashpr@gmail.com">
+        <strong>Email</strong><span>auracarwashpr@gmail.com</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="wrap footer-grid">
+    <div class="foot-brand">
+      <span class="brand-badge small"><img src="img/logo.jpg" alt="Logo de Aura Car Wash"></span>
+      <p class="foot-name">Aura Car Wash</p>
+      <p class="foot-tag">Lavados 100% a mano · Detailing Certified</p>
+    </div>
+    <div class="foot-locs">
+      <p><strong>Santa Isabel</strong> · PR-153, Sector Paso Seco, 00757</p>
+      <p><strong>Salinas</strong> · Carretera 3, Aguirre, 00751</p>
+      <p><strong>Ceiba</strong> · 185 Av. Lauro Piñero, 00735</p>
+    </div>
+    <div class="foot-meta">
+      <p>7 días · 8:00AM - 4:00PM</p>
+      <p><a href="tel:+17872021573">787-202-1573</a></p>
+      <p><a href="https://www.instagram.com/auracarwashpr" target="_blank" rel="noopener">Instagram</a></p>
+    </div>
+  </div>
+  <p class="foot-copy">© 2026 Aura Car Wash. Todos los derechos reservados.</p>
+</footer>
+
+<!-- flotantes -->
+<a class="wa-float" data-track="wa_float" href="https://wa.me/17872021573?text=Hola%20Aura%20Car%20Wash%2C%20quiero%20una%20cotizaci%C3%B3n%20para%20mi%20veh%C3%ADculo" target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp">
+  <svg viewBox="0 0 32 32"><path d="M16 .8C7.6.8.8 7.6.8 16c0 2.7.7 5.3 2 7.6L.8 31.2l7.8-2c2.2 1.2 4.7 1.9 7.4 1.9 8.4 0 15.2-6.8 15.2-15.2S24.4.8 16 .8zm0 27.6c-2.3 0-4.6-.6-6.5-1.8l-.5-.3-4.6 1.2 1.2-4.5-.3-.5c-1.3-2-2-4.4-2-6.9C3.3 9 9 3.3 16 3.3S28.7 9 28.7 16 22.9 28.4 16 28.4zm7-9.3c-.4-.2-2.2-1.1-2.6-1.2-.4-.1-.6-.2-.9.2-.3.4-1 1.2-1.2 1.5-.2.2-.5.3-.9.1-.4-.2-1.6-.6-3-1.9-1.1-1-1.9-2.2-2.1-2.6-.2-.4 0-.6.2-.8l.6-.7c.2-.2.2-.4.4-.6.1-.2 0-.4 0-.6-.1-.2-.9-2.1-1.2-2.9-.3-.8-.6-.6-.9-.6h-.7c-.2 0-.6.1-.9.4-.3.3-1.2 1.2-1.2 2.9s1.2 3.4 1.4 3.6c.2.2 2.4 3.6 5.7 5.1 3.4 1.5 3.4 1 4 1 .6-.1 2.2-.9 2.5-1.8.3-.9.3-1.6.2-1.8-.1-.1-.4-.2-.8-.4z"/></svg>
+</a>
+<a class="call-float" data-track="call_float" href="tel:+17872021573" aria-label="Llamar ahora">
+  <svg viewBox="0 0 24 24"><path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.02-.24 11.36 11.36 0 0 0 3.56.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1 11.36 11.36 0 0 0 .57 3.56 1 1 0 0 1-.25 1.02z"/></svg>
+</a>
+
+<script src="js/main.js" defer></script>
+<script src="js/metrics.js" defer></script>
+</body>
+</html>

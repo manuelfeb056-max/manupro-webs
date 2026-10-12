@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://darkgreen-heron-675477.hostingersite.com/innovative-auto-tints/sitemap.xml

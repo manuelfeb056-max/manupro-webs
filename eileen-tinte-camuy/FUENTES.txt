@@ -1,0 +1,34 @@
+FUENTES — Eileen Tinte Camuy (eileen-tinte-camuy)
+Sitio construido 2026-10-12. Todo el material visual es REAL, cero stock.
+
+ORIGEN DE LAS FOTOS (img/real/):
+- foto-1.jpg … foto-10.jpg: descargadas de la cuenta real del negocio
+  Instagram: https://www.instagram.com/eileenwindowtint (@eileenwindowtint)
+  Contenido verificado visualmente:
+  - foto-1: fachada del taller "Eileen Auto Tint", Carr #2, Camuy, con BMW con tinte instalado
+  - foto-2: tinte arquitectónico en edificio comercial (Haticoop)
+  - foto-3: BMW M2 con tinte instalado frente al taller
+  - foto-4: rollo de lámina de tinte dos tonos (rojo/negro)
+  - foto-5: Eileen junto a mujeres empresarias de Puerto Rico
+  - foto-6: Eileen presentando en la casa Llumar
+  - foto-7: rollo de lámina de tinte dos tonos (rojo/negro)
+  - foto-8: SEMA 2023, Las Vegas — booth Llumar
+  - foto-9: SEMA 2023, Las Vegas — noche en la ciudad
+  - foto-10: Eileen, fundadora, en entrevista (camisa "Eileen Auto Tint")
+
+LOGO (img/logo.jpg):
+- Descargado como logo oficial del negocio (foto de perfil del negocio).
+
+VIDEO HERO:
+- El negocio tiene reel elite en Instagram: https://www.instagram.com/reel/DeFdrIWBL9p/
+- El hero incluye el tag <video autoplay muted loop playsinline poster="img/real/foto-1.jpg">
+  con <source src="img/hero-video.mp4"> — el mp4 aún no está en el repo (llega después);
+  el poster (foto-1, fachada real del taller) cubre hasta que llegue el video.
+  PENDIENTE: subir img/hero-video.mp4 para activar el video hero.
+
+DATOS DEL NEGOCIO (del brief, verificados por el negocio en su Instagram/rotulación):
+- Eileen Tinte Camuy, Carr #2, barrio Membrillo, Camuy, PR (tag "Eileen's Auto Tint")
+- Tel/WhatsApp: 939-639-8234
+- Instagram: https://www.instagram.com/eileenwindowtint (3,534 seguidores)
+- Woman-owned. Lámina Llumar con 10 años de garantía. Instalaciones desde $180.
+- Tinte dos tonos en varios colores. Antes/después. Asistió SEMA 2023 (Las Vegas).

@@ -1,0 +1,28 @@
+FUENTES — LG'S Wash & Detail (sites/lgs-wash/)
+===========================================
+
+Fotos (10/10, 100% reales, cero stock):
+- img/real/foto-1.jpg — McLaren 720S azul, puertas abiertas (exhibición)
+- img/real/foto-2.jpg — Lamborghini Temerario azul (calle, San Juan)
+- img/real/foto-3.jpg — McLaren Artura magenta, puertas de mariposa (Laguna Plaza)
+- img/real/foto-4.jpg — McLaren 720S azul cielo
+- img/real/foto-5.jpg — Porsche 911 GT3 Touring gris
+- img/real/foto-6.jpg — Porsche 718 Cayman GT4 RS azul (capó de carbono)
+- img/real/foto-7.jpg — Publicación @lgswash: equipo junto a Porsche 911 GT3 RS naranja
+- img/real/foto-8.jpg — Porsche 911 Carrera gris azulado
+- img/real/foto-9.jpg — Mercedes-AMG GLC 63 verde salvia
+- img/real/foto-10.jpg — Porsche 911 Speedster verde oliva, rines dorados
+
+Origen: material provisto con el brief del negocio (redes propias de
+LG'S Wash & Detail, San Juan PR). Propiedad del negocio.
+No se usó ninguna imagen de stock ni generada.
+
+Logo:
+- img/logo.jpg — logo oficial del negocio (LGS Wash & Detail).
+  Paleta derivada directamente del logo: azul eléctrico #1468a8
+  (medido con muestreo de píxeles), negro #0b0d11, blanco.
+
+Video hero:
+- img/hero-video.mp4 — PENDIENTE (llega después). El hero usa
+  poster="img/real/foto-1.jpg" como respaldo.
+  Reel origen: https://www.instagram.com/reel/DbExhTWttka/

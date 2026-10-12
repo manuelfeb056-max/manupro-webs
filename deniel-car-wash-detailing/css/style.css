@@ -1,0 +1,244 @@
+/* Deniel Car Wash & Detailing — "EL DE LOS VIDEOS"
+   Concepto: estética de rodaje móvil. Azul cielo del logo + navy profundo.
+   Paleta derivada del logo oficial: navy #081426, sky #7fa1ce, ice #eaf3ff. */
+:root{
+  --navy:#081426; --navy2:#0c1c33; --navy3:#10253f;
+  --sky:#7fa1ce; --sky2:#5eb2ff; --ice:#eaf3ff;
+  --ink:#0b1526; --gray:#9fb0c2; --wa:#25d366;
+  --font-d:'Anton',Impact,sans-serif; --font-b:'Manrope',system-ui,sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{overflow-x:hidden;scroll-behavior:smooth}
+body{background:var(--navy);color:var(--ice);font-family:var(--font-b);line-height:1.6;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit}
+.wrap{max-width:1100px;margin:0 auto;padding:0 20px}
+.section{padding:76px 0}
+.kicker{color:var(--sky2);text-transform:uppercase;letter-spacing:3px;font-size:12px;font-weight:800;margin-bottom:10px}
+.h2{font-family:var(--font-d);font-size:clamp(34px,7vw,54px);letter-spacing:1px;text-transform:uppercase;line-height:1.05;margin-bottom:8px}
+.h2 .hl,.hero-title .hl{color:var(--sky2)}
+.h2.small{font-size:clamp(26px,5vw,36px)}
+.sec-sub{color:var(--gray);max-width:560px}
+
+/* ---------- botones ---------- */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:14px 26px;border-radius:999px;
+  font-weight:800;font-size:16px;text-decoration:none;border:0;cursor:pointer;transition:transform .15s,box-shadow .15s}
+.btn:active{transform:scale(.96)}
+.btn .ic{width:22px;height:22px;fill:currentColor;flex:none}
+.btn-lg{padding:17px 32px;font-size:17px}
+.btn-wa{background:var(--wa);color:#062b16;box-shadow:0 10px 28px rgba(37,211,102,.35)}
+.btn-wa:hover{box-shadow:0 14px 34px rgba(37,211,102,.5)}
+.btn-call{background:linear-gradient(145deg,#8fc2ff,#2f8cff 60%,#0b5fd1);color:#fff;box-shadow:0 10px 28px rgba(46,140,255,.4),inset 0 2px 2px rgba(255,255,255,.35)}
+.btn-ghost{background:transparent;color:var(--ice);border:2px solid var(--sky);box-shadow:none}
+
+/* ---------- header / menú off-canvas ---------- */
+.header{position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(8,20,38,.88);backdrop-filter:blur(10px)}
+.header-inner{max-width:1100px;margin:0 auto;padding:12px 20px;display:flex;align-items:center;justify-content:space-between}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none}
+.brand-badge{width:52px;height:52px;border-radius:14px;overflow:hidden;flex:none;border:2px solid var(--sky);box-shadow:0 4px 14px rgba(127,161,206,.4)}
+.brand-badge.small{width:44px;height:44px}
+.brand-badge img{width:100%;height:100%;object-fit:cover}
+.brand-name{font-family:var(--font-d);font-size:20px;letter-spacing:1px;line-height:1.1;text-transform:uppercase}
+.brand-name .hl{color:var(--sky2)}
+.brand-sub{display:block;font-family:var(--font-b);font-size:10px;letter-spacing:4px;color:var(--gray);font-weight:700}
+.nav{display:flex;gap:26px}
+.nav a{color:var(--ice);text-decoration:none;font-weight:700;font-size:15px;opacity:.85}
+.nav a:hover{opacity:1;color:var(--sky2)}
+.menu-btn{display:none;background:none;border:0;cursor:pointer;flex-direction:column;gap:6px;padding:8px}
+.menu-btn span{width:28px;height:3px;background:var(--ice);border-radius:2px;transition:.25s}
+@media(max-width:820px){
+  .menu-btn{display:flex}
+  .nav{position:fixed;top:0;right:0;bottom:0;width:min(78vw,320px);background:var(--navy2);
+    flex-direction:column;padding:90px 34px;gap:8px;transform:translateX(100%);transition:transform .32s ease;
+    box-shadow:-20px 0 60px rgba(0,0,0,.5);border-left:1px solid var(--navy3)}
+  .nav.open{transform:translateX(0)}
+  .nav a{font-size:20px;padding:12px 0;border-bottom:1px solid var(--navy3)}
+  .section{padding:60px 0}
+}
+
+/* ---------- HERO ---------- */
+.hero{position:relative;min-height:100svh;display:flex;align-items:center;justify-content:center;overflow:hidden;background:var(--ink)}
+.hero-video{position:absolute;inset:0}
+.hero-video video{width:100%;height:100%;object-fit:cover}
+.hero-scrim{position:absolute;inset:0;background:linear-gradient(180deg,rgba(8,20,38,.55) 0%,rgba(8,20,38,.35) 40%,rgba(8,20,38,.88) 100%)}
+.hero-corner{position:absolute;width:44px;height:44px;border:4px solid var(--sky2);opacity:.85;z-index:2}
+.tl{top:96px;left:20px;border-right:0;border-bottom:0}
+.tr{top:96px;right:20px;border-left:0;border-bottom:0}
+.bl{bottom:26px;left:20px;border-right:0;border-top:0}
+.br{bottom:26px;right:20px;border-left:0;border-top:0}
+.hero-content{position:relative;z-index:3;text-align:center;padding:120px 20px 60px;max-width:760px}
+.hero-kicker{display:inline-flex;align-items:center;gap:10px;background:rgba(8,20,38,.7);border:1px solid var(--sky);
+  padding:8px 18px;border-radius:999px;font-size:13px;font-weight:800;letter-spacing:1px;text-transform:uppercase;color:var(--ice)}
+.rec-dot{width:10px;height:10px;border-radius:50%;background:#ff3b3b;animation:blink 1.4s infinite}
+@keyframes blink{50%{opacity:.25}}
+.hero-title{font-family:var(--font-d);font-size:clamp(52px,13vw,110px);line-height:.98;text-transform:uppercase;
+  letter-spacing:1px;margin:22px 0 16px;text-shadow:0 6px 40px rgba(0,0,0,.6)}
+.hero-sub{color:#d7e4f5;font-size:clamp(16px,3.5vw,19px);max-width:600px;margin:0 auto 30px}
+.hero-ctas{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.hero-reel{display:inline-block;margin-top:22px;color:var(--sky2);font-weight:800;font-size:15px;text-decoration:none;border-bottom:2px solid var(--sky2);padding-bottom:2px}
+.hero-scroll{position:absolute;bottom:70px;left:50%;transform:translateX(-50%);z-index:3;width:26px;height:44px;border:2px solid var(--sky);border-radius:14px;opacity:.7}
+.hero-scroll span{display:block;width:6px;height:10px;background:var(--sky2);border-radius:3px;margin:7px auto;animation:wheel 1.8s infinite}
+@keyframes wheel{0%{transform:translateY(0);opacity:1}70%{transform:translateY(14px);opacity:0}100%{opacity:0}}
+
+/* ---------- GALERÍA: cinta de película ---------- */
+.gal-sec{padding-bottom:40px}
+.film{background:#050b14;padding:14px 0;overflow:hidden}
+.sprockets{height:22px;background-image:radial-gradient(circle,#2b3f5c 7px,transparent 8px);background-size:34px 22px;background-repeat:repeat-x;opacity:.9}
+.reel-wrap{overflow:hidden;padding:34px 0}
+.reel{display:flex;gap:22px;width:max-content;animation:roll 60s linear infinite;padding:0 20px}
+.reel-wrap:hover .reel{animation-play-state:paused}
+@keyframes roll{to{transform:translateX(calc(-50% - 11px))}}
+.polaroid{flex:none;width:250px;background:#f4f1e8;padding:12px 12px 14px;border-radius:4px;color:#1a1a1a;cursor:pointer;
+  box-shadow:0 14px 30px rgba(0,0,0,.5);position:relative;transition:transform .2s}
+.polaroid::before{content:"";position:absolute;top:-12px;left:50%;transform:translateX(-50%) rotate(-3deg);
+  width:86px;height:26px;background:rgba(127,161,206,.75);box-shadow:0 2px 4px rgba(0,0,0,.25)}
+.polaroid:nth-child(odd){transform:rotate(-1.6deg)}
+.polaroid:nth-child(even){transform:rotate(1.6deg)}
+.polaroid:hover{transform:rotate(0) scale(1.04);z-index:2}
+.polaroid img{width:100%;height:250px;object-fit:cover;border-radius:2px}
+.polaroid figcaption{font-weight:800;font-size:14px;padding-top:10px;text-align:center;font-style:italic}
+
+/* ---------- lightbox ---------- */
+.lightbox{position:fixed;inset:0;z-index:100;background:rgba(3,7,14,.94);display:none;align-items:center;justify-content:center;padding:24px}
+.lightbox.open{display:flex}
+.lightbox figure{max-width:min(92vw,720px);text-align:center}
+.lightbox img{max-height:78vh;width:auto;max-width:100%;border-radius:8px;margin:0 auto}
+.lightbox figcaption{color:var(--ice);font-weight:700;margin-top:14px}
+.lb-close{position:absolute;top:18px;right:22px;background:none;border:0;color:#fff;font-size:44px;cursor:pointer;line-height:1}
+
+/* ---------- pasos ---------- */
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:34px}
+.step{background:var(--navy2);border:1px solid var(--navy3);border-radius:18px;padding:26px 22px;position:relative;overflow:hidden}
+.step::after{content:"";position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--sky2),transparent)}
+.step-num{font-family:var(--font-d);font-size:44px;color:var(--sky2);opacity:.9}
+.step h3{font-size:19px;margin:6px 0 8px;text-transform:uppercase;letter-spacing:.5px}
+.step p{color:var(--gray);font-size:15px}
+@media(max-width:700px){.steps{grid-template-columns:1fr}}
+
+/* ---------- servicios ---------- */
+.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:28px}
+.svc{background:linear-gradient(160deg,var(--navy2),var(--navy));border:1px solid var(--navy3);border-radius:16px;padding:24px 20px;transition:transform .2s,border-color .2s}
+.svc:hover{transform:translateY(-4px);border-color:var(--sky)}
+.svc h3{font-size:17px;text-transform:uppercase;letter-spacing:.5px;margin-bottom:8px;color:var(--sky2)}
+.svc p{color:var(--gray);font-size:14.5px}
+@media(max-width:700px){.svc-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:420px){.svc-grid{grid-template-columns:1fr}}
+
+/* ---------- curso ---------- */
+.course{display:grid;grid-template-columns:280px 1fr;gap:30px;align-items:center;margin-top:56px;background:var(--navy2);
+  border:1px solid var(--navy3);border-radius:20px;padding:28px;overflow:hidden}
+.course img{border-radius:12px;height:300px;width:100%;object-fit:cover}
+.course h3{font-family:var(--font-d);font-size:30px;text-transform:uppercase;letter-spacing:1px;margin:6px 0 10px}
+.course p{color:var(--gray);margin-bottom:18px;max-width:480px}
+@media(max-width:700px){.course{grid-template-columns:1fr}.course img{height:240px}}
+
+/* ---------- nosotros ---------- */
+.about{background:var(--navy2)}
+.about-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:44px;align-items:center}
+.about-img{position:relative}
+.about-img img{border-radius:18px;box-shadow:0 24px 60px rgba(0,0,0,.55);border:3px solid var(--navy3)}
+.about-img::after{content:"";position:absolute;inset:-14px;border:2px dashed var(--sky);border-radius:26px;opacity:.4;pointer-events:none}
+.about-text p{color:#c9d8ec;margin-bottom:14px}
+.about-ctas{display:flex;gap:12px;flex-wrap:wrap;margin-top:20px}
+@media(max-width:820px){.about-grid{grid-template-columns:1fr}}
+
+/* ---------- stats ---------- */
+.stats{background:#050b14;padding:54px 0;border-top:1px solid var(--navy3);border-bottom:1px solid var(--navy3)}
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;text-align:center}
+.stat-num{display:block;font-family:var(--font-d);font-size:clamp(34px,6vw,52px);color:var(--sky2);letter-spacing:1px}
+.stat-label{display:block;color:var(--gray);font-size:14px;margin-top:4px}
+@media(max-width:700px){.stats-grid{grid-template-columns:1fr 1fr}}
+
+/* ---------- FAQ ---------- */
+.faq-inner{max-width:780px}
+.faq-list{margin-top:28px;display:flex;flex-direction:column;gap:12px}
+.faq-item{background:var(--navy2);border:1px solid var(--navy3);border-radius:14px;overflow:hidden}
+.faq-q{width:100%;background:none;border:0;color:var(--ice);font-family:var(--font-b);font-weight:800;font-size:16.5px;
+  padding:18px 20px;display:flex;justify-content:space-between;align-items:center;gap:14px;cursor:pointer;text-align:left}
+.faq-x{flex:none;width:34px;height:34px;border-radius:50%;background:var(--navy3);display:flex;align-items:center;justify-content:center;
+  font-size:22px;color:var(--sky2);transition:transform .25s}
+.faq-item.open .faq-x{transform:rotate(45deg)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .3s ease}
+.faq-a p{padding:0 20px 20px;color:var(--gray);font-size:15.5px}
+
+/* ---------- contacto ---------- */
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;margin-top:30px;align-items:start}
+.ci-row{display:flex;gap:16px;align-items:center;margin-bottom:22px}
+.ci-ic{flex:none;width:52px;height:52px;border-radius:16px;background:linear-gradient(145deg,var(--navy3),var(--navy2));
+  display:flex;align-items:center;justify-content:center;border:1px solid var(--sky)}
+.ci-ic svg{width:26px;height:26px;fill:var(--sky2)}
+.ci-label{font-size:12px;text-transform:uppercase;letter-spacing:2px;color:var(--gray);font-weight:800}
+.ci-val{font-size:19px;font-weight:800;text-decoration:none;color:var(--ice)}
+a.ci-val:hover{color:var(--sky2)}
+.contact .btn-wa{margin-top:8px}
+.contact-form{background:var(--navy2);border:1px solid var(--navy3);border-radius:20px;padding:30px}
+.contact-form h3{font-family:var(--font-d);font-size:26px;text-transform:uppercase;letter-spacing:1px;margin-bottom:6px}
+.form-sub{color:var(--gray);font-size:14.5px;margin-bottom:20px}
+.contact-form label{display:block;font-weight:800;font-size:14px;margin-bottom:16px}
+.contact-form input,.contact-form select,.contact-form textarea{width:100%;margin-top:8px;padding:14px;border-radius:12px;
+  border:1px solid var(--navy3);background:var(--navy);color:var(--ice);font-family:var(--font-b);font-size:15px}
+.contact-form .btn-call{width:100%}
+@media(max-width:820px){.contact-grid{grid-template-columns:1fr}}
+
+/* ---------- oferta Manupro ---------- */
+.offer{background:linear-gradient(180deg,var(--navy) 0%,#050b14 100%);padding:80px 0}
+.offer-card{background:var(--navy2);border:2px solid var(--sky);border-radius:24px;padding:44px 30px;text-align:center;
+  box-shadow:0 30px 80px rgba(127,161,206,.15)}
+.offer-kicker{color:var(--sky2);text-transform:uppercase;letter-spacing:3px;font-weight:800;font-size:13px;margin-bottom:10px}
+.offer-card h3{font-family:var(--font-d);font-size:clamp(26px,5vw,40px);text-transform:uppercase;letter-spacing:1px;margin-bottom:30px}
+.offer-plans{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;text-align:left}
+.plan{background:var(--navy);border:1px solid var(--navy3);border-radius:18px;padding:28px 24px;position:relative;display:flex;flex-direction:column}
+.plan.hero{border:2px solid var(--sky2);transform:scale(1.03);box-shadow:0 20px 50px rgba(94,178,255,.25)}
+.plan-badge{position:absolute;top:-16px;left:50%;transform:translateX(-50%);background:var(--sky2);color:var(--ink);
+  font-weight:800;font-size:13px;padding:6px 18px;border-radius:999px;white-space:nowrap}
+.plan-name{font-weight:800;font-size:18px;text-transform:uppercase;letter-spacing:.5px}
+.plan-regular{color:var(--gray);text-decoration:line-through;font-size:16px;margin-top:8px}
+.plan-price{font-family:var(--font-d);font-size:44px;color:var(--sky2);margin:2px 0 14px}
+.plan-list{list-style:none;margin-bottom:22px;flex:1}
+.plan-list li{padding:7px 0;border-bottom:1px solid var(--navy3);font-size:14.5px;color:#c9d8ec}
+.plan-list li.no{color:var(--gray);opacity:.6}
+.plan-sub{color:var(--gray);font-size:14px;margin:-12px 0 16px}
+.plan .btn{width:100%}
+@media(max-width:820px){.offer-plans{grid-template-columns:1fr}.plan.hero{transform:none}}
+
+/* ---------- footer ---------- */
+.footer{background:#04080f;padding:54px 0 30px;border-top:1px solid var(--navy3)}
+.footer-grid{display:grid;grid-template-columns:1fr auto;gap:30px;align-items:center;margin-bottom:30px}
+.foot-name{font-family:var(--font-d);font-size:22px;letter-spacing:1px;margin:12px 0 4px;text-transform:uppercase}
+.foot-sub{color:var(--gray);font-size:14px;max-width:340px}
+.foot-social-title{font-size:13px;text-transform:uppercase;letter-spacing:2px;color:var(--gray);font-weight:800;margin-bottom:14px;text-align:center}
+.social-3d{display:flex;gap:14px;justify-content:center}
+.social-3d a{width:56px;height:56px;border-radius:16px;display:flex;align-items:center;justify-content:center;text-decoration:none;
+  transform:perspective(400px) rotateX(12deg);transition:transform .2s}
+.social-3d a:hover{transform:perspective(400px) rotateX(0) translateY(-4px)}
+.social-3d svg{width:28px;height:28px;fill:#fff}
+.soc-ig{background:linear-gradient(45deg,#f09433,#dc2743,#bc1888)}
+.soc-tel{background:linear-gradient(145deg,#5eb2ff,#1a7dff 50%,#0052cc)}
+.foot-legal{text-align:center;color:var(--gray);font-size:13px;border-top:1px solid var(--navy3);padding-top:24px}
+.foot-legal a{color:var(--sky2);font-weight:700}
+@media(max-width:700px){.footer-grid{grid-template-columns:1fr;text-align:center}.foot-sub{margin:0 auto}}
+
+/* ---------- reveal ---------- */
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .6s ease,transform .6s ease}
+.reveal.visible{opacity:1;transform:none}
+
+/* ---------- botón flotante de llamada 3D ---------- */
+.call-float{position:fixed;right:20px;bottom:96px;z-index:60;width:62px;height:62px;border-radius:50%;
+  background:linear-gradient(145deg,#5eb2ff 0%,#1a7dff 45%,#0052cc 100%);
+  display:flex;align-items:center;justify-content:center;text-decoration:none;
+  box-shadow:0 6px 0 #003d99,0 14px 28px rgba(0,102,255,.5),inset 0 2px 3px rgba(255,255,255,.55),inset 0 -4px 6px rgba(0,40,120,.4);
+  animation:callFloat 3s ease-in-out infinite}
+.call-float svg{width:30px;height:30px;fill:#fff;filter:drop-shadow(0 2px 2px rgba(0,40,120,.5))}
+.call-float::before{content:"";position:absolute;inset:-6px;border-radius:50%;border:3px solid rgba(26,125,255,.55);animation:callRing 2.2s ease-out infinite;pointer-events:none}
+.call-float::after{content:"";position:absolute;top:7px;left:13px;width:20px;height:9px;border-radius:50%;background:rgba(255,255,255,.5);filter:blur(2px);transform:rotate(-18deg);pointer-events:none}
+.call-float:active{transform:translateY(4px);box-shadow:0 2px 0 #003d99,0 8px 18px rgba(0,102,255,.45),inset 0 2px 3px rgba(255,255,255,.55)}
+@keyframes callFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+@keyframes callRing{0%{transform:scale(.82);opacity:1}100%{transform:scale(1.45);opacity:0}}
+@media(prefers-reduced-motion:reduce){.call-float,.call-float::before,.reel{animation:none}}
+
+/* ---------- botón flotante WhatsApp ---------- */
+.wa-float{position:fixed;right:20px;bottom:20px;z-index:60;width:62px;height:62px;border-radius:50%;background:var(--wa);
+  display:flex;align-items:center;justify-content:center;box-shadow:0 10px 30px rgba(37,211,102,.45);animation:waPulse 2.4s infinite}
+.wa-float svg{width:34px;height:34px;fill:#062b16}
+@keyframes waPulse{0%{box-shadow:0 0 0 0 rgba(37,211,102,.5)}70%{box-shadow:0 0 0 18px rgba(37,211,102,0)}100%{box-shadow:0 0 0 0 rgba(37,211,102,0)}}
+@media(prefers-reduced-motion:reduce){.wa-float{animation:none}}
