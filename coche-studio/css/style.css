@@ -196,3 +196,36 @@ a{color:inherit}
   .sec{padding:76px 0}
   .lb-prev{left:8px}.lb-next{right:8px}
 }
+
+/* ---------- retrofit: gallery first + photo frames ---------- */
+/* framed real photos — shown complete (object-fit:contain), never cropped */
+.ph-frame{border:1px solid var(--hair);background:var(--ink2);padding:16px;margin:0;align-self:start}
+.ph-frame img{width:100%;height:auto;object-fit:contain;display:block;background:radial-gradient(80% 80% at 50% 50%,#18181c 0%,#0b0b0d 100%)}
+.ph-frame figcaption{margin-top:12px;font-size:.72rem;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);text-align:center}
+/* section head with side photo frame */
+.split-head{display:grid;grid-template-columns:1fr 380px;gap:60px;align-items:center}
+/* process steps beside framed photo */
+.proc-split{margin-top:60px;display:grid;grid-template-columns:1fr 380px;gap:56px;align-items:center}
+.proc-split .steps{margin-top:0;grid-template-columns:repeat(2,1fr)}
+.proc-split .step:nth-child(2){border-right:0}
+.proc-split .step:nth-child(1),.proc-split .step:nth-child(2){border-bottom:1px solid var(--hair)}
+/* about: photo frame + text + facts in three columns */
+.sobre-3col{grid-template-columns:.95fr 1.05fr .9fr;gap:50px}
+
+@media(max-width:980px){
+  .split-head{grid-template-columns:1fr}
+  .proc-split{grid-template-columns:1fr}
+  .proc-split .steps{grid-template-columns:repeat(2,1fr)}
+  .sobre-3col{grid-template-columns:1fr;gap:40px}
+  .ph-frame{max-width:520px}
+}
+
+/* ---------- retrofit v2: moving photo ribbons ---------- */
+.ribbon{overflow:hidden;border-top:1px solid var(--hair);border-bottom:1px solid var(--hair);background:var(--ink2);padding:16px 0}
+.ribbon-track{display:flex;width:max-content;animation:ribbon 36s linear infinite}
+.ribbon:hover .ribbon-track{animation-play-state:paused}
+.ribbon-half{display:flex;gap:16px;padding-right:16px}
+.ribbon-half img{height:170px;width:auto;object-fit:contain;display:block;background:#000;border:1px solid var(--hair)}
+@keyframes ribbon{to{transform:translateX(-50%)}}
+@media(max-width:640px){.ribbon-half img{height:120px}}
+@media(prefers-reduced-motion:reduce){.ribbon-track{animation:none}}

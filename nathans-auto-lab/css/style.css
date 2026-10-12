@@ -254,3 +254,37 @@ a.info-card:hover{border-color:var(--neon);transform:translateX(4px)}
   .reveal{opacity:1;transform:none}
   .stagger{opacity:1;transform:none}
 }
+
+/* ---------- retrofit: gallery first + photo frames ---------- */
+/* framed real photos — shown complete (object-fit:contain), never cropped */
+.photo-frame{position:relative;border:1px solid var(--line);border-radius:16px;background:#02040a;padding:14px;margin:0}
+.photo-frame img{width:100%;height:auto;object-fit:contain;display:block;border-radius:10px}
+.photo-frame figcaption{margin-top:10px;font-family:var(--mono);font-size:.72rem;letter-spacing:.22em;color:var(--neon);text-align:center}
+.photo-frame .cf{position:absolute;width:26px;height:26px;border:2px solid var(--neon);z-index:2}
+.photo-frame .cf.tl{top:-2px;left:-2px;border-right:0;border-bottom:0}
+.photo-frame .cf.tr{top:-2px;right:-2px;border-left:0;border-bottom:0}
+.photo-frame .cf.bl{bottom:-2px;left:-2px;border-right:0;border-top:0}
+.photo-frame .cf.br{bottom:-2px;right:-2px;border-left:0;border-top:0}
+/* servicios header with side photo frame */
+.svc-head{display:grid;grid-template-columns:1fr 360px;gap:50px;align-items:center;margin-bottom:44px}
+.svc-head .sec-sub{margin-bottom:0}
+/* protocol rail beside framed photo */
+.proto-split{display:grid;grid-template-columns:1fr 340px;gap:50px;align-items:center}
+.proto-split .proto-grid{max-width:none;width:100%}
+
+@media(max-width:960px){
+  .svc-head{grid-template-columns:1fr;margin-bottom:0}
+  .svc-head .photo-frame{max-width:440px}
+  .proto-split{grid-template-columns:1fr}
+  .proto-split .photo-frame{max-width:440px}
+}
+
+/* ---------- retrofit v2: moving photo ribbons ---------- */
+.ribbon{overflow:hidden;border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:rgba(0,229,255,.03);padding:16px 0}
+.ribbon-track{display:flex;width:max-content;animation:ribbon 36s linear infinite}
+.ribbon:hover .ribbon-track{animation-play-state:paused}
+.ribbon-half{display:flex;gap:14px;padding-right:14px}
+.ribbon-half img{height:170px;width:auto;object-fit:contain;display:block;background:#02040a;border:1px solid var(--line);border-radius:12px}
+@keyframes ribbon{to{transform:translateX(-50%)}}
+@media(max-width:640px){.ribbon-half img{height:120px}}
+@media(prefers-reduced-motion:reduce){.ribbon-track{animation:none}}
