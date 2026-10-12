@@ -45,12 +45,17 @@
   var lbImg = document.getElementById('lbImg');
   var lbClose = document.getElementById('lbClose');
   if (woPhoto && lightbox) {
-    woPhoto.addEventListener('click', function(){
-      var img = woPhoto.querySelector('img');
-      lbImg.src = img.src;
+    function openLb(img){
+      lbImg.src = img.getAttribute('data-full') || img.src;
       lbImg.alt = img.alt;
       lightbox.classList.add('open');
       document.body.style.overflow = 'hidden';
+    }
+    woPhoto.addEventListener('click', function(){
+      openLb(woPhoto.querySelector('img'));
+    });
+    document.querySelectorAll('.kcard img').forEach(function(im){
+      im.addEventListener('click', function(){ openLb(im); });
     });
     function closeLb(){
       lightbox.classList.remove('open');
