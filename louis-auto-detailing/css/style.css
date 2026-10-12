@@ -154,14 +154,25 @@ a{color:inherit;text-decoration:none}
 .offer{padding:0 22px 96px}
 .offer-card{background:linear-gradient(150deg,#0f1a10,#0a0f0b);border:1px solid rgba(22,135,48,.55);border-radius:22px;padding:48px 36px;text-align:center;box-shadow:0 20px 60px rgba(22,135,48,.18)}
 .offer-kicker{color:var(--manu-green);text-transform:uppercase;letter-spacing:.28em;font-size:.78rem;font-weight:700;margin-bottom:12px}
-.offer-card h3{font-family:'Russo One',sans-serif;font-size:clamp(1.4rem,3.4vw,2.1rem);text-transform:uppercase;margin-bottom:28px}
-.offer-prices{display:flex;gap:18px;justify-content:center;flex-wrap:wrap;margin-bottom:32px}
-.offer-price{background:rgba(255,255,255,.04);border:1px solid var(--line);border-radius:16px;padding:22px 30px;min-width:220px}
-.offer-price.best{border-color:var(--manu-green);background:rgba(22,135,48,.12)}
-.op-num{display:block;font-family:'Russo One',sans-serif;font-size:2.6rem;color:var(--manu-green)}
-.op-desc{display:block;color:var(--muted);font-size:.95rem;margin-top:6px}
-.offer-card .btn-wa{background:var(--manu-green);color:#fff;box-shadow:0 8px 28px rgba(22,135,48,.4)}
-.offer-card .btn-wa:hover{box-shadow:0 12px 34px rgba(22,135,48,.55)}
+.offer-card h3{font-family:'Russo One',sans-serif;font-size:clamp(1.4rem,3.4vw,2.1rem);text-transform:uppercase;margin-bottom:32px}
+.offer-plans{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;max-width:980px;margin:0 auto;align-items:stretch}
+.plan{position:relative;background:rgba(255,255,255,.04);border:1px solid var(--line);border-radius:18px;padding:34px 26px 30px;display:flex;flex-direction:column}
+.plan-name{font-family:'Russo One',sans-serif;font-size:1.25rem;text-transform:uppercase;letter-spacing:.04em}
+.plan-regular{margin-top:10px;color:#ff8a8a;font-size:1.35rem;font-weight:700;text-decoration:line-through;text-decoration-thickness:2px}
+.plan-price{font-family:'Russo One',sans-serif;font-size:3rem;color:var(--manu-green);line-height:1.1}
+.plan-list{list-style:none;margin:18px 0 24px;text-align:left;color:var(--silver);font-size:1rem;flex:1}
+.plan-list li{padding:6px 0 6px 26px;position:relative}
+.plan-list li::before{content:"\2713";position:absolute;left:0;color:var(--manu-green);font-weight:700}
+.plan-list li.no{color:var(--muted)}
+.plan-list li.no::before{content:"\2715";color:#ff8a8a}
+.plan .btn-wa{background:var(--manu-green);color:#fff;box-shadow:0 8px 28px rgba(22,135,48,.4);justify-content:center}
+.plan .btn-wa:hover{box-shadow:0 12px 34px rgba(22,135,48,.55)}
+.plan.hero{background:linear-gradient(160deg,#14441f,#0b1f10);border:2px solid var(--manu-green);transform:scale(1.06);box-shadow:0 24px 70px rgba(22,135,48,.35);z-index:1}
+.plan.hero .plan-price{color:#fff;font-size:3.6rem}
+.plan.hero .plan-regular{color:#ffd0d0}
+.plan-badge{position:absolute;top:-15px;left:50%;transform:translateX(-50%);background:var(--manu-green);color:#fff;font-weight:700;font-size:.8rem;text-transform:uppercase;letter-spacing:.12em;padding:7px 20px;border-radius:999px;white-space:nowrap;box-shadow:0 6px 20px rgba(22,135,48,.5)}
+.plan-sub{color:#d7e8db;font-style:italic;margin-bottom:20px}
+@media(max-width:880px){.offer-plans{grid-template-columns:1fr;max-width:440px}.plan.hero{transform:none}}
 
 /* ---------- footer ---------- */
 .footer{border-top:1px solid var(--line);padding:56px 0 30px;background:#060608}
