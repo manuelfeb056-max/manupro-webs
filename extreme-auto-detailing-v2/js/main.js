@@ -10,7 +10,7 @@
 })();
 // Lightbox para la galería
 (function(){
-  var g = document.getElementById('galleryGrid');
+  var g = document.getElementById('photoGrid');
   if(!g) return;
   var overlay = document.createElement('div');
   overlay.className = 'lightbox';
