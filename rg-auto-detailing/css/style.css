@@ -190,8 +190,6 @@ a.info-card:hover{transform:translateX(6px);border-color:var(--accent)}
 .work-frame:nth-child(odd){transform:rotate(-1.2deg)}
 .work-frame:nth-child(even){transform:rotate(1.2deg)}
 .work-frame:hover{transform:rotate(0) scale(1.02)}
-.work-frame.hero{grid-column:1/-1}
-.work-frame.hero img{height:430px}
 .work-frame img{width:100%;height:300px;object-fit:cover;display:block;pointer-events:none}
 .work-frame figcaption{padding:12px 14px;font-size:.85rem;font-weight:700;background:#0d0d13;border-top:3px solid var(--accent);text-transform:uppercase;letter-spacing:.06em}
 .lb{position:fixed;inset:0;z-index:200;background:rgba(5,5,8,.95);display:none;align-items:center;justify-content:center;padding:22px}
@@ -203,7 +201,7 @@ a.info-card:hover{transform:translateX(6px);border-color:var(--accent)}
 .lb-arrow{position:absolute;top:50%;transform:translateY(-50%);width:52px;height:52px;border-radius:50%;border:3px solid var(--accent);background:#0b0b10;color:var(--accent);font-size:1.8rem;cursor:pointer;z-index:2;line-height:1}
 .lb-arrow.prev{left:12px}
 .lb-arrow.next{right:12px}
-@media(max-width:640px){.work-frame.hero img{height:320px}.work-frame img{height:230px}.work-grid{gap:18px 12px}}
+@media(max-width:640px){.work-frame img{height:230px}.work-grid{gap:18px 12px}}
 
 /* ---------- mini carrusel en tarjetas de servicio ---------- */
 .card-imgs{position:relative;height:170px;border-radius:14px;overflow:hidden;margin:20px 0 4px;touch-action:pan-y;cursor:grab;background:var(--bg2)}
