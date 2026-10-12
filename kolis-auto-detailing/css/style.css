@@ -253,3 +253,4 @@ a.ci-val:hover{color:var(--red)}
 .kcard:hover img{transform:scale(1.06)}
 .kcard figcaption{position:absolute;left:0;right:0;bottom:0;padding:10px 12px;font-size:.82rem;font-weight:600;background:linear-gradient(transparent,rgba(0,0,0,.85));color:#fff}
 @media(max-width:640px){.kgrid{grid-template-columns:repeat(2,1fr);gap:10px}}
+.hero-bg video.hero-video{width:100%;height:100%;object-fit:cover;object-position:center 60%}
