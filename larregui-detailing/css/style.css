@@ -230,3 +230,23 @@ a{color:inherit}
 @media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none}.ticker-track{animation:none}}
 @media(max-width:960px){.hero-grid{grid-template-columns:1fr}}
 @media(max-width:560px){.section{padding:64px 0}.cta-row .btn{width:100%;justify-content:center}}
+
+/* ===== RETROFIT: compact step strip + slim about band ===== */
+.process-slim{padding:64px 0}
+.steps-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:36px}
+.step{display:flex;gap:14px;align-items:flex-start;background:linear-gradient(180deg,var(--asphalt2),#181109);border:1px solid var(--line);border-radius:16px;padding:20px 18px}
+.step-n{flex:none;width:42px;height:42px;border-radius:50%;background:var(--orange);color:#1a0e04;font-family:'Archivo Black';display:grid;place-items:center;font-size:1.15rem;box-shadow:0 4px 14px rgba(255,122,26,.4)}
+.step h3{font-size:.92rem;text-transform:uppercase;margin-bottom:4px;letter-spacing:.4px}
+.step p{color:var(--cream-dim);font-size:.9rem}
+.base-slim{padding:64px 0}
+.base-slim-box{display:flex;align-items:center;justify-content:space-between;gap:32px;flex-wrap:wrap;background:linear-gradient(160deg,#221609,#150e07);border:1px solid var(--line);border-radius:22px;padding:42px 40px;position:relative;overflow:hidden}
+.base-slim-box::before{content:"";position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--orange),var(--amber))}
+.base-slim-copy{flex:1 1 420px}
+.base-slim-box .h2{margin-bottom:10px}
+.base-slim-box .hl{color:var(--orange)}
+.base-slim-sub{color:var(--cream-dim);max-width:58ch}
+.base-slim-tags{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
+.base-slim-tags span{font-size:.72rem;font-weight:800;letter-spacing:1.8px;text-transform:uppercase;color:var(--amber);background:rgba(255,122,26,.1);border:1px solid rgba(255,122,26,.35);padding:7px 15px;border-radius:999px}
+.base-slim-ctas{display:flex;gap:12px;flex-wrap:wrap}
+@media(max-width:960px){.steps-strip{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.steps-strip{grid-template-columns:1fr}.base-slim-box{padding:34px 26px}.base-slim-ctas .btn{width:100%;justify-content:center}}

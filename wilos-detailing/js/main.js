@@ -21,6 +21,23 @@
   }, {threshold: .12});
   document.querySelectorAll('.reveal:not(.in)').forEach(function(el){ io.observe(el); });
 
+  if (/[?&]shots=1/.test(location.search)) {
+    // QA mode: reveal everything + finalize counters + show hero poster for screenshots
+    document.querySelectorAll('.reveal').forEach(function(el){ el.classList.add('visible'); });
+    document.querySelectorAll('[data-count]').forEach(function(el){
+      el.textContent = parseInt(el.dataset.count || '0', 10).toLocaleString('es-PR') + (el.dataset.suffix || '');
+    });
+    var hvq = document.getElementById('heroVideo');
+    if (hvq) {
+      try { hvq.pause(); } catch (e) {}
+      // strip media sources in QA: headless video decode wedges the renderer;
+      // the poster stays visible as the hero backdrop
+      hvq.querySelectorAll('source').forEach(function(s){ s.remove(); });
+      try { hvq.load(); } catch (e) {}
+      hvq.classList.add('playing');
+    }
+  }
+
   /* ---------- counters ---------- */
   var cio = new IntersectionObserver(function(entries){
     entries.forEach(function(e){
