@@ -6,7 +6,7 @@
   --silver:#e9eef4;
   --silver-dim:#9fabb8;
   --sheen:#35e0c8;          /* teal del logo oficial */
-  --sheen-blue:#4fa8ff;      /* brillo azul del tinte */
+  --sheen-blue:#00a8a8;      /* teal profundo del logo oficial */
   --line:rgba(233,238,244,.14);
   --green:#168730;          /* Manupro */
   --radius:14px;
@@ -92,7 +92,7 @@ h1,h2,h3,.brand-name,.plan h3{font-family:'Rajdhani','Inter',sans-serif}
 .hero-meta span{font-size:13px;color:var(--silver-dim)}
 .tint-strip{
   position:absolute;left:-10%;right:-10%;bottom:-40px;height:120px;z-index:1;pointer-events:none;
-  background:linear-gradient(105deg,transparent 20%,rgba(53,224,200,.10) 42%,rgba(79,168,255,.16) 55%,rgba(53,224,200,.10) 68%,transparent 90%);
+  background:linear-gradient(105deg,transparent 20%,rgba(53,224,200,.10) 42%,rgba(0,168,168,.16) 55%,rgba(53,224,200,.10) 68%,transparent 90%);
   transform:skewY(-3deg);
 }
 
