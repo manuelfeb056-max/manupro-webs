@@ -1,0 +1,51 @@
+FUENTES — Extreme Auto Detailing (extreme-auto-detailing)
+================================================
+Sitio construido: ~/workspace/manupro-prospectos/sites/extreme-auto-detailing/
+Fecha: 2026-10-12
+
+ORIGEN DE LAS FOTOS
+-------------------
+Las 10 fotos son REALES del trabajo del negocio, extraídas de su Instagram
+oficial https://www.instagram.com/extreme_autodetailing/ (~1,858 seguidores)
+el 2026-10-12 vía instagram-cli + páginas embed públicas de Instagram
+(/p/[shortcode]/embed/), descargadas en alta resolución desde el CDN oficial
+de Instagram. Cero fotos de stock.
+
+foto-1.jpg  — Post https://www.instagram.com/p/DeX-lWvkeLV/ ("Bentley Bentayga vs Bentley Continental GT"). Bentley Continental GT negro con brillo extremo.
+foto-2.jpg  — Post https://www.instagram.com/p/DeMLOt4kdkS/ ("El corazón del carro también merece brillar. Reserva tu lavado de motor"). Bahía de motor.
+foto-3.jpg  — Post https://www.instagram.com/p/DeK2otmkcca/ ("¿Cómo estás conduciendo tu auto… sucio o limpio?"). Mitsubishi Eclipse Cross con la unidad móvil al fondo.
+foto-4.jpg  — Post https://www.instagram.com/p/DeKz9SMkWVR/ ("Limpieza de motor y bonete interior"). Motor y bonete interior limpios.
+foto-5.jpg  — Post https://www.instagram.com/p/Dd_Y_DMkZmU/ ("Mira ese cambio" - shampoo interior). Asientos tras servicio de shampoo.
+foto-6.jpg  — Post https://www.instagram.com/p/DdAM-5mD5hO/ ("Honda Civic Type R - Servicio De Lavado De Mantenimiento"). Civic Type R rojo.
+foto-7.jpg  — Post https://www.instagram.com/p/DcpfwFeEXmP/ ("Honda Civic Type R Extreme Detail Service. SERVICIO A DOMICILIO"). Civic Type R blanco + tráiler.
+foto-8.jpg  — Post https://www.instagram.com/p/DcHfWgojyXn/ ("Toyota Tacoma - Maintance Detail. Servicio A Domicilio"). Tacoma roja.
+foto-9.jpg  — Post https://www.instagram.com/p/DbLur2mkXiB/ ("Audi RS6 Detailed. Servicio a domicilio"). Audi RS6 azul + tráiler de la unidad móvil con servicios impresos.
+foto-10.jpg — Post https://www.instagram.com/p/DbHKlSrjyE2/ ("BENTLEY detailed. Servicio A Domicilio"). Bentley negro + tráiler.
+
+logo.jpg — Foto de perfil oficial de https://www.instagram.com/extreme_autodetailing/ (única resolución disponible del avatar, 100x100). Logo original del negocio: X estilizada verde neón/amarilla con texto "EXTREME AUTO DETAILING".
+
+DATOS REALES USADOS (verificados de los posts)
+---------------------------------------------
+- Negocio: Extreme Auto Detailing, Caguas, PR.
+- Teléfono/WhatsApp: 787-399-4554 (aparece en múltiples posts).
+- Servicio a domicilio / unidad móvil (posts: "SERVICIO A DOMICILIO", foto del tráiler).
+- Área: "Área Metropolitana & Este" (post DcpfwFeEXmP).
+- Disponibles los 7 días de la semana (post DbUZsliEZTj).
+- Servicios (impresos en su tráiler, foto-9): Wash & Wax, Shampoo, Pulido & Brillo, Ceramic Coating, Restauración de focos, Descontaminación de pintura.
+- Lavado de motor (post DeMLOt4kdkS).
+- Eslogan: "Más que detailing, es pasión" (impreso en el tráiler).
+- Instagram: https://www.instagram.com/extreme_autodetailing/ (~1,858 seguidores).
+- NO se encontró Facebook oficial del negocio: no se incluye link de Facebook.
+
+REEL CANDIDATO PARA HERO VIDEO
+------------------------------
+Reel recomendado: https://www.instagram.com/reel/DXCQEK-EdJH/ — "Elegancia protegida en cada detalle — 4Runner Limited 2021 refinada con pulido" (trabajo de pulido, 100% on-brand). El mp4 se agrega después en img/hero-video.mp4. El hero ya lleva el tag <video> con ese source + fallback fotográfico automático.
+
+PALETA DE COLORES (derivada del logo oficial)
+--------------------------------------------
+- Negro asfalto #0b0d0a (fondo del logo)
+- Verde neón lima #9dff00 (X del logo)
+- Amarillo #ffd400 (detalles del logo)
+- Blanco #f4f7ef
+
+SIN DEPLOY: el sitio solo existe en sites/extreme-auto-detailing/. No se hizo git push ni deploy.
