@@ -2,6 +2,17 @@
 (function(){
   "use strict";
 
+  /* carrusel de fondo del hero */
+  var slides = Array.prototype.slice.call(document.querySelectorAll('.hero-bg .hs'));
+  if (slides.length > 1){
+    var cur = 0;
+    setInterval(function(){
+      slides[cur].classList.remove('active');
+      cur = (cur + 1) % slides.length;
+      slides[cur].classList.add('active');
+    }, 5200);
+  }
+
   /* menú móvil */
   var burger = document.getElementById('burger');
   var nav = document.getElementById('nav');
