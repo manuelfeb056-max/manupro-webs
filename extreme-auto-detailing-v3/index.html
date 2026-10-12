@@ -11,14 +11,16 @@
 <meta property="og:image" content="https://manuelfeb056-max.github.io/manupro-webs/extreme-auto-detailing-v3/img/real/foto-2.jpg">
 <meta property="og:url" content="https://manuelfeb056-max.github.io/manupro-webs/extreme-auto-detailing-v3/">
 <meta property="og:locale" content="es_PR">
-<meta name="theme-color" content="#050b1a">
+<meta name="theme-color" content="#030014">
 <link rel="icon" href="img/logo.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;800;900&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+
+<div class="grid-bg" aria-hidden="true"></div>
 
 <!-- menú flotante de 3 rayas -->
 <button class="menu-float" id="menuFloat" aria-label="Abrir menú"><span></span><span></span><span></span></button>
@@ -33,28 +35,32 @@
 
 <!-- HERO -->
 <header class="hero" id="inicio">
-  <div class="hero-photo" style="background-image:url('img/real/foto-2.jpg')"></div>
-  <div class="hero-veil"></div>
-  <div class="hero-lines" aria-hidden="true"></div>
+  <div class="hero-media" aria-hidden="true">
+    <video class="hero-video" autoplay muted loop playsinline preload="auto">
+      <source src="img/hero-video.mp4" type="video/mp4">
+    </video>
+    <div class="hero-tint"></div>
+  </div>
+  <div class="hero-hud" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
   <div class="hero-inner">
     <img class="brand-mark" src="img/logo.jpg" alt="Extreme Auto Detailing">
-    <p class="tag">Detailing a domicilio · Caguas PR</p>
-    <h1>MÁS QUE DETAILING,<br><span>ES PASIÓN</span></h1>
-    <p class="lede">Wash &amp; Wax, shampoo, pulido &amp; brillo y ceramic coating. Vamos a donde estés: servicio a domicilio en el área metropolitana y el este.</p>
+    <p class="tag">SYS.READY // CAGUAS · PR</p>
+    <h1>DETAILING<br><span>DEL FUTURO</span></h1>
+    <p class="lede">Wash &amp; Wax, shampoo, pulido &amp; brillo y ceramic coating. La unidad móvil llega a tu puerta: área metropolitana y este.</p>
     <div class="hero-ctas">
-      <a class="btn btn-primary" href="https://wa.me/17873994554?text=Hola%20Extreme%20Auto%20Detailing%2C%20quiero%20cotizar%20un%20detailing%20a%20domicilio" target="_blank" rel="noopener">Cotizar por WhatsApp</a>
-      <a class="btn btn-ghost" href="#trabajos">Ver trabajos</a>
+      <a class="btn btn-neon" href="https://wa.me/17873994554?text=Hola%20Extreme%20Auto%20Detailing%2C%20quiero%20cotizar%20un%20detailing%20a%20domicilio" target="_blank" rel="noopener">Cotizar por WhatsApp</a>
+      <a class="btn btn-glass" href="#trabajos">Ver trabajos</a>
     </div>
   </div>
-  <div class="hero-scroll" aria-hidden="true"><span></span></div>
+  <div class="scanline" aria-hidden="true"></div>
 </header>
 
 <!-- GALERÍA -->
 <section class="gallery" id="trabajos">
   <div class="wrap">
-    <p class="tag">Nuestro trabajo</p>
-    <h2>BRILLO <span>REAL</span></h2>
-    <div class="strip" id="strip">
+    <p class="tag">ARCHIVO VISUAL</p>
+    <h2>RESULTADOS <span>VERIFICADOS</span></h2>
+    <div class="holo-grid" id="holoGrid">
       <figure><img src="img/real/foto-1.jpg" alt="Detailing profesional Extreme Auto Detailing" loading="lazy"><figcaption>Wash &amp; Wax</figcaption></figure>
       <figure><img src="img/real/foto-2.jpg" alt="Detailing profesional Extreme Auto Detailing" loading="lazy"><figcaption>Brillo profundo</figcaption></figure>
       <figure><img src="img/real/foto-3.jpg" alt="Detailing profesional Extreme Auto Detailing" loading="lazy"><figcaption>Detalle exterior</figcaption></figure>
@@ -72,29 +78,33 @@
 <!-- SERVICIOS -->
 <section class="services" id="servicios">
   <div class="wrap">
-    <p class="tag">Servicios</p>
-    <h2>ARSENAL <span>COMPLETO</span></h2>
-    <div class="cards">
-      <article>
-        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3c3.5 4.5 6 7.6 6 11a6 6 0 1 1-12 0c0-3.4 2.5-6.5 6-11z"/></svg></div>
-        <h3>Wash &amp; Wax</h3><p>Lavado completo con cera protectora.</p>
+    <p class="tag">MÓDULOS DE SERVICIO</p>
+    <h2>SISTEMAS <span>ACTIVOS</span></h2>
+    <div class="glass-cards">
+      <article class="glass">
+        <div class="g-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3c3.5 4.5 6 7.6 6 11a6 6 0 1 1-12 0c0-3.4 2.5-6.5 6-11z"/></svg></div>
+        <h3>Wash &amp; Wax</h3><p>Lavado completo con cera protectora de alto brillo.</p>
+        <span class="g-code">MOD.01</span>
       </article>
-      <article>
-        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12h16M4 12l4-4m-4 4l4 4m12-4l-4-4m4 4l-4 4"/></svg></div>
-        <h3>Shampoo Interior</h3><p>Extracción profunda de asientos y alfombras.</p>
+      <article class="glass">
+        <div class="g-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="8"/><path d="M12 8v4l3 2"/></svg></div>
+        <h3>Shampoo Interior</h3><p>Extracción profunda de asientos, alfombras y tapicería.</p>
+        <span class="g-code">MOD.02</span>
       </article>
-      <article>
-        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3l1.9 5.8L20 10l-6.1 1.2L12 17l-1.9-5.8L4 10l6.1-1.2z"/></svg></div>
+      <article class="glass">
+        <div class="g-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3l1.9 5.8L20 10l-6.1 1.2L12 17l-1.9-5.8L4 10l6.1-1.2z"/></svg></div>
         <h3>Pulido &amp; Brillo</h3><p>Corrección de pintura nivel espejo.</p>
+        <span class="g-code">MOD.03</span>
       </article>
-      <article>
-        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 3h12l4 6-10 13L2 9z"/></svg></div>
+      <article class="glass">
+        <div class="g-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 3h12l4 6-10 13L2 9z"/></svg></div>
         <h3>Ceramic Coating</h3><p>Blindaje cerámico de larga duración.</p>
+        <span class="g-code">MOD.04</span>
       </article>
     </div>
-    <div class="coverage">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-5.6-7-11a7 7 0 1 1 14 0c0 5.4-7 11-7 11z"/><circle cx="12" cy="10" r="2.6"/></svg>
-      <p>Vamos a tu casa: Caguas, área metropolitana y este.</p>
+    <div class="coverage glass">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s-7-5.6-7-11a7 7 0 1 1 14 0c0 5.4-7 11-7 11z"/><circle cx="12" cy="10" r="2.6"/></svg>
+      <p>Zona de cobertura: Caguas, área metropolitana y este. La unidad móvil va a ti.</p>
     </div>
   </div>
 </section>
@@ -102,9 +112,9 @@
 <!-- FAQ -->
 <section class="faq" id="preguntas">
   <div class="wrap">
-    <p class="tag">Dudas comunes</p>
-    <h2>PREGUNTAS <span>FRECUENTES</span></h2>
-    <details open><summary>¿Atienden a domicilio?</summary><p>Sí. Llevamos todo el equipo a tu casa u oficina en Caguas, el área metropolitana y el este.</p></details>
+    <p class="tag">BASE DE DATOS</p>
+    <h2>CONSULTAS <span>FRECUENTES</span></h2>
+    <details open><summary>¿Atienden a domicilio?</summary><p>Sí. La unidad móvil lleva todo el equipo a tu casa u oficina en Caguas, el área metropolitana y el este.</p></details>
     <details><summary>¿Qué incluye el Wash &amp; Wax?</summary><p>Lavado exterior completo, limpieza de aros y gomas, y aplicación de cera protectora.</p></details>
     <details><summary>¿Cuánto dura el ceramic coating?</summary><p>Depende del paquete y del cuidado; escríbenos por WhatsApp y te orientamos según tu vehículo.</p></details>
     <details><summary>¿Cómo reservo mi cita?</summary><p>Por WhatsApp al 787-399-4554. Te confirmamos día y hora al momento.</p></details>
@@ -117,19 +127,19 @@
     <p class="tag">Activa tu website</p>
     <h2>ELIGE TU <span>PLAN</span></h2>
     <div class="plan-grid">
-      <article class="plan">
+      <article class="plan glass">
         <h3>Solo Web</h3>
         <p class="price"><s>$300</s> $99</p>
         <ul><li>Website profesional</li><li>Diseño a tu medida</li><li>Botón de contacto</li></ul>
         <a class="btn btn-plan" href="https://wa.me/17873128042?text=Quiero%20el%20plan%20Solo%20Web%20%2499" target="_blank" rel="noopener">La quiero</a>
       </article>
-      <article class="plan">
+      <article class="plan glass">
         <h3>Web + Arranque</h3>
         <p class="price"><s>$600</s> $150</p>
         <ul><li>Todo lo del plan Solo Web</li><li>Hosting por 2 meses</li><li>Dominio .com por 1 año</li></ul>
         <a class="btn btn-plan" href="https://wa.me/17873128042?text=Quiero%20el%20plan%20Web%20%2B%20Arranque%20%24150" target="_blank" rel="noopener">La quiero</a>
       </article>
-      <article class="plan featured">
+      <article class="plan glass featured">
         <div class="badge">La más elegida</div>
         <h3>Tranquilidad Total</h3>
         <p class="price"><s>$1,000</s> $200</p>
@@ -144,10 +154,11 @@
 <footer class="contact" id="contacto">
   <div class="wrap">
     <img class="footer-mark" src="img/logo.jpg" alt="Extreme Auto Detailing">
-    <h2>RESERVA <span>AHORA</span></h2>
+    <p class="tag">ENLACE DIRECTO</p>
+    <h2>INICIA <span>TRANSMISIÓN</span></h2>
     <p class="town">Caguas, Puerto Rico · Servicio a domicilio</p>
     <p class="phone"><a href="tel:+17873994554">787-399-4554</a></p>
-    <a class="btn btn-primary btn-big" href="https://wa.me/17873994554?text=Hola%20Extreme%20Auto%20Detailing%2C%20quiero%20cotizar" target="_blank" rel="noopener">Cotizar por WhatsApp</a>
+    <a class="btn btn-neon btn-big" href="https://wa.me/17873994554?text=Hola%20Extreme%20Auto%20Detailing%2C%20quiero%20cotizar" target="_blank" rel="noopener">Cotizar por WhatsApp</a>
     <p class="fine">© 2026 Extreme Auto Detailing · Caguas, PR</p>
   </div>
 </footer>
