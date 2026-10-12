@@ -143,13 +143,35 @@ a.info-card:hover{border-color:var(--sun-orange)}
   box-shadow:0 30px 80px rgba(0,0,0,.6),0 0 60px rgba(22,135,48,.18)}
 .offer-kicker{color:var(--manu-green);font-weight:800;letter-spacing:.24em;text-transform:uppercase;font-size:.78rem}
 .offer-card h2{font-size:clamp(1.8rem,4.5vw,2.8rem);margin:12px 0;text-transform:uppercase;color:#fff}
-.offer-prices{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin:24px 0}
-.offer-price{background:#0b0b0d;border:1px solid rgba(22,135,48,.5);border-radius:16px;padding:18px 26px;min-width:220px}
-.offer-price .p{font-size:2.2rem;font-weight:800;color:#fff}
-.offer-price .d{color:#bdbdc7;font-size:.9rem;margin-top:6px}
-.offer-note{color:#9a9aa5;font-size:.85rem;margin-top:14px}
+.offer-card{max-width:1080px}
+.plans-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin:30px 0 8px;align-items:stretch}
+.plan-card{background:#0b0b0d;border:1px solid rgba(22,135,48,.45);border-radius:18px;padding:28px 22px;
+  display:flex;flex-direction:column;gap:10px;position:relative;transition:transform .25s,box-shadow .25s}
+.plan-card:hover{transform:translateY(-4px);box-shadow:0 18px 44px rgba(0,0,0,.55),0 0 34px rgba(22,135,48,.25)}
+.plan-name{color:#fff;font-weight:800;font-size:1.12rem;letter-spacing:.02em;margin:0}
+.plan-regular{margin:0;color:#9a9aa5;font-size:1.05rem}
+.plan-regular s{text-decoration-color:var(--manu-green);text-decoration-thickness:2px}
+.plan-price{margin:0;font-size:3rem;font-weight:800;color:#168730;line-height:1}
+.plan-list{list-style:none;margin:8px 0 0;padding:0;color:#d8d8e0;font-size:.94rem;display:flex;flex-direction:column;gap:7px}
+.plan-list li{padding-left:22px;position:relative}
+.plan-list li::before{content:"✓";position:absolute;left:2px;color:#168730;font-weight:800}
+.plan-card .btn-manu{margin-top:auto;width:100%}
+.plan-hero{border:2px solid #168730;background:linear-gradient(165deg,#0d1510,#0b0b0d 70%);
+  box-shadow:0 24px 60px rgba(0,0,0,.6),0 0 50px rgba(22,135,48,.35);transform:scale(1.045)}
+.plan-hero:hover{transform:scale(1.045) translateY(-4px)}
+.plan-hero .plan-price{font-size:3.4rem}
+.plan-badge{position:absolute;top:-15px;left:50%;transform:translateX(-50%);background:#168730;color:#fff;
+  font-size:.78rem;font-weight:800;letter-spacing:.08em;padding:7px 18px;border-radius:999px;
+  white-space:nowrap;box-shadow:0 8px 22px rgba(22,135,48,.5);margin:0}
+.plan-sub{color:#ffd166;font-weight:700;font-size:.95rem;margin:2px 0 0}
+.offer-note{color:#9a9aa5;font-size:.85rem;margin-top:18px}
 .btn-manu{background:var(--manu-green);color:#fff;box-shadow:0 10px 30px rgba(22,135,48,.4)}
 .btn-manu:hover{box-shadow:0 14px 40px rgba(22,135,48,.55);transform:translateY(-2px)}
+@media(max-width:820px){
+  .plans-grid{grid-template-columns:1fr;max-width:460px;margin-left:auto;margin-right:auto}
+  .plan-hero{transform:none}
+  .plan-hero:hover{transform:translateY(-4px)}
+}
 
 /* ---------- footer ---------- */
 .footer{background:#0a0503}
