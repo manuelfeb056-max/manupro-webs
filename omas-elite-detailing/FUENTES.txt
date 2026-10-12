@@ -1,0 +1,34 @@
+FUENTES DE DATOS — Oma's Elite Detailing (verificado 2026-10-12)
+============================================================
+
+Negocio: Oma's Elite Detailing
+Pueblo: San Juan, PR
+Teléfono / WhatsApp: 787-454-2079 (wa.me/17874542079)
+Facebook: https://www.facebook.com/108105458931717/ (página activa con fotos de trabajos)
+Servicios: servicio a domicilio, lavado interior, lavado exterior,
+           cera cerámica, lavado de motor, cerámica de pintura
+Sitio web propio: NO tiene.
+
+Fuentes consultadas (solo datos, sin fotos cosechables):
+1. Página oficial de Facebook: https://www.facebook.com/108105458931717/
+   - Estado: pública y activa; bio confirma teléfono 787-454-2079 y servicio a domicilio.
+   - Fotos: NO cosechables sin sesión (login). No se copiaron fotos.
+2. findglocal.com (mirror público):
+   "Llama o escribe al DM para agendar tu cita al 787-454-2079. Servicio a domicilio."
+3. autos1000.org/PR/San-Juan/108105458931717/Oma's-Elite-Detailing
+   - Posts históricos (2023): oferta 3x100 (lavado interior, lavado exterior,
+     cera cerámica, protección de plásticos); "nuevo servicio cerámica para su
+     vehículo"; "cerámica a la pintura y lavado de motor"; horarios sábados.
+4. cleaners10.com y autoyas.com — fichas confirman teléfono +17874542079.
+
+NOTA HONESTA (2026-10-12):
+No se cosechó ninguna foto real (Facebook requiere login; los mirrors no
+exponen imágenes descargables; image-search solo devolvió fotos ajenas/stock,
+descartadas por la regla "cero stock, cero inventos"). Por eso el sitio usa:
+- Héroe tipográfico elite (sin foto de fondo).
+- Sección "Nuestros trabajos" con tarjeta honesta que enlaza a la página real
+  de Facebook ("Mira nuestros trabajos en Facebook"), sin galería inventada.
+- Logo: wordmark propuesto en código (no hay logo oficial cosechable).
+
+Nada inventado: sin horarios, sin años de experiencia, sin pueblos de
+cobertura no verificados, sin testimonios.
