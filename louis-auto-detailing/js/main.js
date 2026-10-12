@@ -131,3 +131,15 @@
     });
   }
 })();
+
+/* ---------- hero slideshow: fotos reales cada 1.3s ---------- */
+(function(){
+  var slides = Array.prototype.slice.call(document.querySelectorAll('#heroBg .hs-slide'));
+  if (slides.length < 2) return;
+  var i = 0;
+  setInterval(function(){
+    slides[i].classList.remove('on');
+    i = (i + 1) % slides.length;
+    slides[i].classList.add('on');
+  }, 1300);
+})();
