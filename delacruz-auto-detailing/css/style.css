@@ -93,3 +93,14 @@ h2 span{color:var(--red)}
 .lb-close{position:absolute;top:18px;right:24px;color:var(--red);font-size:2rem;cursor:pointer}
 
 @media(max-width:760px){.contact-grid{grid-template-columns:1fr}}
+
+/* menú flotante de 3 rayas */
+.menu-float{position:fixed;top:16px;right:16px;z-index:80;width:52px;height:52px;border-radius:50%;background:rgba(5,5,8,.85);border:1px solid #2e9bff;display:flex;flex-direction:column;gap:5px;align-items:center;justify-content:center;cursor:pointer;box-shadow:0 6px 22px rgba(0,0,0,.5);animation:menuFloat 4s ease-in-out infinite}
+.menu-float span{width:22px;height:2px;background:#2e9bff;border-radius:2px;display:block}
+@keyframes menuFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-5px)}}
+.menu-nav{position:fixed;top:0;right:0;width:min(78vw,300px);height:100vh;background:rgba(5,5,8,.97);border-left:1px solid #2e9bff;z-index:79;display:flex;flex-direction:column;gap:6px;padding:84px 28px;transform:translateX(105%);transition:transform .3s}
+.menu-nav.open{transform:none}
+.menu-nav a{color:#fff;text-decoration:none;text-transform:uppercase;letter-spacing:.12em;font-size:.95rem;font-weight:600;padding:12px 4px;border-bottom:1px solid rgba(255,255,255,.08)}
+.menu-nav a:hover{color:#2e9bff}
+/* iconos pro */
+.drop svg,.paw svg,.ico svg{width:2.2rem;height:2.2rem}

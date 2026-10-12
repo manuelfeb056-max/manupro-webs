@@ -54,19 +54,34 @@
 </section>
 
 <!-- SERVICIOS -->
-<section class="services">
+<section class="services" id="servicios">
   <div class="wrap">
     <p class="kicker">Servicios</p>
     <h2>Lo que <span>hacemos</span></h2>
     <div class="splash-cards">
-      <article><div class="drop">💧</div><h3>Car Wash</h3><p>Lavado completo interior y exterior.</p></article>
-      <article><div class="drop">✨</div><h3>Auto Detailing</h3><p>Detalle profundo que devuelve el brillo.</p></article>
-      <article><div class="drop">🛡️</div><h3>Cuidado Total</h3><p>Tu carro protegido y siempre nítido.</p></article>
+      <article><div class="drop"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2.7c3.6 4.1 6.3 7.6 6.3 11.3a6.3 6.3 0 1 1-12.6 0C5.7 10.3 8.4 6.8 12 2.7z"/></svg></div><h3>Car Wash</h3><p>Lavado completo interior y exterior.</p></article>
+      <article><div class="drop"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3l1.9 5.8L20 10l-6.1 1.2L12 17l-1.9-5.8L4 10l6.1-1.2z"/></svg></div><h3>Auto Detailing</h3><p>Detalle profundo que devuelve el brillo.</p></article>
+      <article><div class="drop"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l8 3v6c0 5-3.5 8.5-8 11-4.5-2.5-8-6-8-11V5z"/></svg></div><h3>Cuidado Total</h3><p>Tu carro protegido y siempre nítido.</p></article>
     </div>
   </div>
 </section>
 
 <!-- PLANES -->
+
+
+<!-- FAQ -->
+<section class="faq" id="preguntas">
+  <div class="wrap">
+    <p class="kicker">Dudas comunes</p>
+    <h2>Preguntas <span>frecuentes</span></h2>
+    <details open><summary>¿Dónde están ubicados?</summary><p>Av. Paz Granela, San Juan, Puerto Rico.</p></details>
+    <details><summary>¿Cómo agendo una cita?</summary><p>Escríbenos por WhatsApp al 787-472-1391.</p></details>
+    <details><summary>¿Qué diferencia el detailing del lavado?</summary><p>El detailing es una limpieza profunda y detallada: interior, pintura, rines y cada rincón.</p></details>
+    <details><summary>¿Atienden por orden de llegada?</summary><p>Escríbenos por WhatsApp y coordinamos tu espacio.</p></details>
+  </div>
+</section>
+
+<!-- CONTACTO -->
 <section class="plans" id="planes">
   <div class="wrap">
     <p class="kicker">Activa tu website</p>
@@ -94,20 +109,6 @@
     </div>
   </div>
 </section>
-
-<!-- FAQ -->
-<section class="faq">
-  <div class="wrap">
-    <p class="kicker">Dudas comunes</p>
-    <h2>Preguntas <span>frecuentes</span></h2>
-    <details open><summary>¿Dónde están ubicados?</summary><p>Av. Paz Granela, San Juan, Puerto Rico.</p></details>
-    <details><summary>¿Cómo agendo una cita?</summary><p>Escríbenos por WhatsApp al 787-472-1391.</p></details>
-    <details><summary>¿Qué diferencia el detailing del lavado?</summary><p>El detailing es una limpieza profunda y detallada: interior, pintura, rines y cada rincón.</p></details>
-    <details><summary>¿Atienden por orden de llegada?</summary><p>Escríbenos por WhatsApp y coordinamos tu espacio.</p></details>
-  </div>
-</section>
-
-<!-- CONTACTO -->
 <footer class="contact" id="contacto">
   <div class="wrap contact-grid">
     <div>
@@ -124,6 +125,18 @@
   </div>
   <p class="fine">© 2026 Delacruz Auto Detailing and Car Wash · San Juan, PR</p>
 </footer>
+
+
+<!-- menú flotante de 3 rayas -->
+<button class="menu-float" id="menuFloat" aria-label="Abrir menú"><span></span><span></span><span></span></button>
+<nav class="menu-nav" id="menuNav">
+  <a href="#inicio">Inicio</a>
+  <a href="#trabajos">Trabajos</a>
+  <a href="#servicios">Servicios</a>
+  <a href="#planes">Planes</a>
+  <a href="#preguntas">Preguntas</a>
+  <a href="#contacto">Contacto</a>
+</nav>
 
 <!-- FLOTANTE: solo WhatsApp -->
 <a class="wa-float" href="https://wa.me/17874721391?text=Hola%20Delacruz" target="_blank" rel="noopener" aria-label="WhatsApp">
