@@ -163,24 +163,63 @@
 .theme-rg-auto-detailing .soc-tt{background:linear-gradient(145deg,#1c1c22,#000)}
 .theme-rg-auto-detailing .pit-social{justify-content:center;margin:6px 0}
 
-/* ---------- offer band (Manupro green identity) ---------- */
+/* ---------- offer band: 3 planes, pit-lane style ---------- */
 .theme-rg-auto-detailing .offer-band{
   background:#0d0d10;border-top:3px solid #168730;border-bottom:3px solid #168730;
-  padding:54px 0;margin-top:0;
+  padding:66px 0 72px;margin-top:0;position:relative;overflow:hidden;
 }
-.theme-rg-auto-detailing .offer-grid{display:flex;gap:34px;align-items:center;justify-content:space-between;flex-wrap:wrap}
+.theme-rg-auto-detailing .offer-band::before{
+  content:"";position:absolute;top:0;left:0;right:0;height:12px;
+  background:repeating-conic-gradient(#ffc400 0 25%,#0d0d10 0 50%);
+  background-size:24px 24px;
+}
+.theme-rg-auto-detailing .offer-band .speedlines{
+  position:absolute;inset:0;pointer-events:none;opacity:.5;
+  background:repeating-linear-gradient(100deg,transparent 0 46px,rgba(255,196,0,.10) 46px 48px,transparent 48px 120px);
+}
 .theme-rg-auto-detailing .offer-kicker{color:#168730;font-weight:700;text-transform:uppercase;letter-spacing:.24em;font-size:.75rem;margin-bottom:8px}
-.theme-rg-auto-detailing .offer-grid h3{font-family:'Saira Condensed';font-size:clamp(1.6rem,4vw,2.4rem);font-weight:800;text-transform:uppercase;max-width:20ch}
-.theme-rg-auto-detailing .offer-prices{display:flex;gap:16px;flex-wrap:wrap}
-.theme-rg-auto-detailing .offer-price{
-  background:#101014;border:1px solid rgba(22,135,48,.5);border-radius:12px;
-  padding:18px 24px;text-align:center;min-width:170px;
+.theme-rg-auto-detailing .offer-band h3{font-family:'Saira Condensed';font-size:clamp(1.6rem,4vw,2.4rem);font-weight:800;text-transform:uppercase;max-width:26ch;margin-bottom:38px}
+.theme-rg-auto-detailing .offer-band h3 .flag{
+  display:inline-block;background:#ffc400;color:#0d0d10;font-size:.42em;letter-spacing:.14em;
+  padding:6px 14px;border-radius:6px;transform:skewX(-8deg);vertical-align:middle;margin-left:12px;
 }
-.theme-rg-auto-detailing .offer-price.hot{background:#168730;border-color:#168730;box-shadow:0 12px 34px rgba(22,135,48,.35)}
-.theme-rg-auto-detailing .op-num{display:block;font-family:'Saira Condensed';font-weight:800;font-size:2.4rem;line-height:1}
-.theme-rg-auto-detailing .op-lab{display:block;font-size:.78rem;color:var(--muted);margin-top:6px;line-height:1.4}
-.theme-rg-auto-detailing .offer-price.hot .op-num{color:#fff}
-.theme-rg-auto-detailing .offer-price.hot .op-lab{color:rgba(255,255,255,.85)}
+.theme-rg-auto-detailing .plans{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;align-items:stretch;text-align:left}
+.theme-rg-auto-detailing .plan{
+  background:#101014;border:1px solid rgba(255,196,0,.32);border-radius:14px;
+  padding:30px 26px;color:#f7f5ef;display:flex;flex-direction:column;position:relative;
+  clip-path:polygon(0 0,calc(100% - 20px) 0,100% 20px,100% 100%,0 100%);
+}
+.theme-rg-auto-detailing .plan .pname{font-family:'Saira Condensed';font-size:.85rem;letter-spacing:.22em;text-transform:uppercase;color:#ffc400;font-weight:800}
+.theme-rg-auto-detailing .plan .price{font-family:'Saira Condensed';font-size:3.2rem;font-weight:800;line-height:1.1;color:#fff;margin-top:6px}
+.theme-rg-auto-detailing .plan .regular{font-size:1.05rem;color:#c96a5a;text-decoration:line-through;font-weight:700}
+.theme-rg-auto-detailing .plan .sub{font-size:.88rem;color:#b9b5ac;margin:8px 0 0}
+.theme-rg-auto-detailing .plan ul{list-style:none;margin:16px 0 22px;font-size:.9rem;color:#d9d5cb;display:grid;gap:8px;padding:0}
+.theme-rg-auto-detailing .plan ul li::before{content:"✓ ";color:#168730;font-weight:800}
+.theme-rg-auto-detailing .plan ul li.no::before{content:"✕ ";color:#7a7a7a}
+.theme-rg-auto-detailing .plan ul li.no{color:#8a8a8a}
+.theme-rg-auto-detailing .plan .btn{
+  display:block;margin-top:auto;background:#168730;color:#fff;padding:14px 22px;
+  font-weight:700;text-decoration:none;border-radius:999px;text-align:center;
+  font-family:'Saira Condensed';text-transform:uppercase;letter-spacing:.08em;font-size:1.05rem;
+}
+.theme-rg-auto-detailing .plan .btn:hover{filter:brightness(1.15)}
+.theme-rg-auto-detailing .plan.hot{
+  background:linear-gradient(160deg,#0c130d,#10351b 60%,#0c130d);
+  border:2px solid #ffc400;transform:scale(1.05);
+  box-shadow:0 0 44px rgba(255,196,0,.25),0 20px 50px rgba(0,0,0,.5);
+  clip-path:none;
+}
+.theme-rg-auto-detailing .plan.hot::before{
+  content:"";position:absolute;top:0;left:0;right:0;height:12px;border-radius:12px 12px 0 0;
+  background:repeating-conic-gradient(#ffc400 0 25%,#0d0d10 0 50%);
+  background-size:24px 24px;
+}
+.theme-rg-auto-detailing .plan .badge{
+  position:absolute;top:-16px;left:50%;transform:translateX(-50%);
+  background:#ffc400;color:#0d0d10;font-weight:800;font-size:.68rem;letter-spacing:.16em;
+  text-transform:uppercase;padding:8px 22px;border-radius:999px;white-space:nowrap;
+  box-shadow:0 6px 18px rgba(255,196,0,.5);
+}
 
 /* ---------- footer ---------- */
 .theme-rg-auto-detailing .footer{margin-top:0}
