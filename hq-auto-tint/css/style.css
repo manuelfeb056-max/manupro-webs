@@ -1,12 +1,12 @@
-/* HQ AUTO TINT — "Maestro Instalador": carbon fiber + amber on deep black, spec-sheet typography */
+/* HQ AUTO TINT — "Maestro Instalador": carbon fiber + logo blue on deep black, spec-sheet typography */
 :root{
   --black:#0b0b0c;
   --ink:#111214;
   --carbon:#151619;
   --steel:#9aa0a6;
   --white:#f5f3ee;
-  --amber:#f2a413;
-  --amber-deep:#c77f04;
+  --amber:#2f8fe0;
+  --amber-deep:#1a6cb8;
   --hair:#2a2c30;
   --green:#168730;
 }
@@ -170,6 +170,15 @@ a{color:inherit}
 .socials svg{width:24px;height:24px}
 .foot-note{font-size:11px;letter-spacing:.2em;color:var(--steel);text-align:center;border-top:1px solid var(--hair);padding-top:28px}
 
+/* photo frames: real photos, full visibility (contain) */
+.svc-head{display:grid;grid-template-columns:1fr 300px;gap:48px;align-items:center;margin-bottom:44px}
+.svc-head .sec-lede{margin-bottom:0}
+.ph-frame{border:1px solid var(--hair);background:#0e0f10;padding:14px;margin:0}
+.ph-frame img{width:100%;height:auto;object-fit:contain;display:block;background:#0e0f10}
+.ph-frame figcaption{margin-top:10px;font-size:11px;letter-spacing:.18em;color:var(--steel)}
+.proc-layout{display:grid;grid-template-columns:1fr 330px;gap:56px;align-items:start}
+.proc-frame{position:sticky;top:100px}
+
 /* ---------- lightbox ---------- */
 .lightbox{position:fixed;inset:0;z-index:100;background:rgba(5,5,6,.94);display:none;align-items:center;justify-content:center;flex-direction:column;padding:24px}
 .lightbox.show{display:flex}
@@ -199,6 +208,8 @@ a{color:inherit}
   .g-item img{height:230px}
   .about{grid-template-columns:1fr}
   .contact-grid{grid-template-columns:1fr}
+  .svc-head,.proc-layout{grid-template-columns:1fr}
+  .proc-frame{position:static;max-width:420px}
   .section{padding:64px 0}
 }
 @media(max-width:480px){

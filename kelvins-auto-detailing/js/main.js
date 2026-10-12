@@ -36,4 +36,24 @@
 
   /* la primera pregunta abierta por defecto */
   if (items.length) { items[0].querySelector('.acc-q').click(); }
+
+  /* Lightbox recuadros */
+  var lb = document.getElementById('lightbox');
+  var lbImg = lb ? lb.querySelector('img') : null;
+  if (lb && lbImg){
+    document.querySelectorAll('.frame img').forEach(function(im){
+      im.addEventListener('click', function(){
+        lbImg.src = im.src; lbImg.alt = im.alt;
+        lb.classList.add('open'); lb.setAttribute('aria-hidden','false');
+        document.body.style.overflow = 'hidden';
+      });
+    });
+    lb.addEventListener('click', function(){
+      lb.classList.remove('open'); lb.setAttribute('aria-hidden','true');
+      lbImg.src = ''; document.body.style.overflow = '';
+    });
+    document.addEventListener('keydown', function(e){
+      if (e.key === 'Escape' && lb.classList.contains('open')) lb.click();
+    });
+  }
 })();

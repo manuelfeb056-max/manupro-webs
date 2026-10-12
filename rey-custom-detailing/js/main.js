@@ -44,4 +44,23 @@
   } else {
     revealAll();
   }
+  // Lightbox galería
+  var lb = document.getElementById('lightbox');
+  var lbImg = lb ? lb.querySelector('img') : null;
+  if (lb && lbImg){
+    document.querySelectorAll('.foto img').forEach(function(im){
+      im.addEventListener('click', function(){
+        lbImg.src = im.src; lbImg.alt = im.alt;
+        lb.classList.add('open'); lb.setAttribute('aria-hidden','false');
+        document.body.style.overflow = 'hidden';
+      });
+    });
+    lb.addEventListener('click', function(){
+      lb.classList.remove('open'); lb.setAttribute('aria-hidden','true');
+      lbImg.src = ''; document.body.style.overflow = '';
+    });
+    document.addEventListener('keydown', function(e){
+      if (e.key === 'Escape' && lb.classList.contains('open')) lb.click();
+    });
+  }
 })();
