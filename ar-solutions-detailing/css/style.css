@@ -79,8 +79,8 @@ section{padding:80px 0;position:relative}
 /* ---------- galería ---------- */
 .work-grid{display:flex;gap:1rem;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:14px;-webkit-overflow-scrolling:touch;scrollbar-width:none}
 .work-grid::-webkit-scrollbar{display:none}
-.work-grid .work-frame{flex:0 0 280px;scroll-snap-align:start}
-@media(max-width:640px){.work-grid .work-frame{flex:0 0 230px}}
+.work-grid .work-frame{flex:0 0 280px!important;width:280px!important;min-width:280px!important;max-width:280px!important;scroll-snap-align:start}
+@media(max-width:640px){.work-grid .work-frame{flex:0 0 230px!important;width:230px!important;min-width:230px!important;max-width:230px!important}}
 .work-frame{position:relative;border-radius:12px;overflow:hidden;cursor:pointer;border:1px solid var(--line);background:var(--card);aspect-ratio:1/1}
 .work-frame img{width:100%;height:100%;object-fit:cover;transition:transform .35s}
 .work-frame:hover img{transform:scale(1.05)}
