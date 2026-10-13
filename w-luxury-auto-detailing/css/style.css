@@ -177,7 +177,7 @@ section{padding:96px 0}
 .foot-legal a{color:var(--blue)}
 
 /* ---------- floating whatsapp (only) ---------- */
-.wa-float{position:fixed;right:22px;bottom:22px;z-index:100;width:62px;height:62px;border-radius:50%;background:var(--wa);display:flex;align-items:center;justify-content:center;box-shadow:0 12px 32px rgba(37,211,102,.45);transition:transform .2s}
+.wa-float{position:fixed;right:22px;bottom:22px;z-index:100;width:62px;height:62px;border-radius:50%;background:var(--blue);display:flex;align-items:center;justify-content:center;box-shadow:0 12px 32px rgba(64,140,255,.45);transition:transform .2s}
 .wa-float:hover{transform:scale(1.08)}
 .wa-float svg{width:34px;height:34px;fill:#fff}
 
@@ -204,8 +204,8 @@ section{padding:96px 0}
 
 
 /* ===== menú flotante 3 rayas SIEMPRE (Manupro standing 2026-10-12) ===== */
-.mp-menu-btn{position:fixed;top:16px;right:16px;z-index:90;width:54px;height:54px;border-radius:50%;background:rgba(10,10,12,.88);border:1px solid var(--gold,var(--accent,#c9a24b));display:flex;flex-direction:column;gap:5px;cursor:pointer;align-items:center;justify-content:center;box-shadow:0 6px 22px rgba(0,0,0,.45);padding:0;animation:mpMenuFloat 4s ease-in-out infinite}
-.mp-menu-btn span{width:24px;height:2px;background:var(--gold,var(--accent,#c9a24b));display:block;border-radius:2px}
+.mp-menu-btn{position:fixed;top:16px;right:16px;z-index:90;width:54px;height:54px;border-radius:50%;background:rgba(10,10,12,.88);border:1px solid var(--blue);display:flex;flex-direction:column;gap:5px;cursor:pointer;align-items:center;justify-content:center;box-shadow:0 6px 22px rgba(0,0,0,.45);padding:0;animation:mpMenuFloat 4s ease-in-out infinite}
+.mp-menu-btn span{width:24px;height:2px;background:var(--blue);display:block;border-radius:2px}
 @keyframes mpMenuFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
 .mp-nav{position:fixed;top:0;right:0;width:min(78vw,320px);height:100vh;background:#0d0d10;border-left:1px solid var(--gold,var(--accent,#c9a24b));display:flex;flex-direction:column;padding:90px 30px;gap:20px;transition:transform .3s;z-index:80;transform:translateX(105%)}
 .mp-nav.open{transform:none}
