@@ -108,7 +108,10 @@ section{padding:80px 0;position:relative}
 .photo-box figcaption{background:#06121a;color:var(--azul-soft);font-weight:800;font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;text-align:center;padding:.7rem}
 
 /* ---------- servicios: foto + texto corto ---------- */
-.svc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.2rem}
+.svc-grid{display:flex;gap:1.2rem;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:14px;-webkit-overflow-scrolling:touch;scrollbar-width:thin}
+.svc-grid::-webkit-scrollbar{height:8px}
+.svc-grid::-webkit-scrollbar-thumb{background:var(--azul);border-radius:4px}
+.svc-grid .svc{flex:0 0 290px;scroll-snap-align:start}
 .svc{background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden;transition:transform .2s;display:flex;flex-direction:column}
 .svc:hover{transform:translateY(-6px)}
 .svc .svc-photo{aspect-ratio:1/1;overflow:hidden;border-bottom:3px solid var(--azul)}
