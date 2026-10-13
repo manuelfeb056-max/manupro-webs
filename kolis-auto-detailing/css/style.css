@@ -247,18 +247,21 @@ a.ci-val:hover{color:var(--red)}
 }
 
 /* Galería Koly: fotos enviadas por el dueño */
-.kgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:16px;margin-top:40px}
+.kgrid{display:flex;gap:16px;margin-top:40px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:12px;-webkit-overflow-scrolling:touch;scrollbar-width:thin}
+.kgrid::-webkit-scrollbar{height:8px}
+.kgrid::-webkit-scrollbar-thumb{background:#e8232a;border-radius:4px}
+.kcard{flex:0 0 300px;scroll-snap-align:start}
 .kcard{position:relative;border-radius:14px;overflow:hidden;border:1px solid rgba(255,255,255,.1);cursor:zoom-in;background:#111;aspect-ratio:4/3}
 .kcard img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s ease}
 .kcard:hover img{transform:scale(1.06)}
 .kcard figcaption{position:absolute;left:0;right:0;bottom:0;padding:10px 12px;font-size:.82rem;font-weight:600;background:linear-gradient(transparent,rgba(0,0,0,.85));color:#fff}
-@media(max-width:640px){.kgrid{grid-template-columns:repeat(2,1fr);gap:10px}}
+@media(max-width:640px){.kcard{flex:0 0 240px}}
 .hero-bg video.hero-video{width:100%;height:100%;object-fit:cover;object-position:center 60%}
 
 
 /* ===== menú flotante 3 rayas SIEMPRE (Manupro standing 2026-10-12) ===== */
-.menu-btn{display:flex!important;position:fixed!important;top:16px;right:16px;z-index:90;width:54px;height:54px;border-radius:50%;background:rgba(10,10,12,.88);border:1px solid var(--gold,var(--accent,#c9a24b));flex-direction:column;gap:5px;cursor:pointer;align-items:center;justify-content:center;box-shadow:0 6px 22px rgba(0,0,0,.45);margin:0!important;padding:0!important;animation:mpMenuFloat 4s ease-in-out infinite}
-.menu-btn span{width:24px;height:2px;background:var(--gold,var(--accent,#c9a24b));display:block;border-radius:2px}
+.menu-btn{display:flex!important;position:fixed!important;top:16px;right:16px;z-index:90;width:54px;height:54px;border-radius:50%;background:rgba(10,10,12,.88);border:1px solid #e8232a;flex-direction:column;gap:5px;cursor:pointer;align-items:center;justify-content:center;box-shadow:0 6px 22px rgba(0,0,0,.45);margin:0!important;padding:0!important;animation:mpMenuFloat 4s ease-in-out infinite}
+.menu-btn span{width:24px;height:2px;background:#e8232a;display:block;border-radius:2px}
 @keyframes mpMenuFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
 .nav{position:fixed!important;top:0;right:0;width:min(78vw,320px);height:100vh;background:#0d0d10;border-left:1px solid var(--gold,var(--accent,#c9a24b));flex-direction:column!important;padding:90px 30px!important;gap:20px!important;transition:transform .3s;z-index:80;transform:translateX(105%);display:flex!important;margin:0!important}
 .nav.open{transform:none!important}
