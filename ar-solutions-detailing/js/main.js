@@ -70,3 +70,10 @@
     rev.forEach(function (el) { el.classList.add("in"); });
   }
 })();
+
+/* carrusel automático: trabajos corren a la derecha cada 1.3s */
+(function(){var g=document.querySelector('.work-grid');if(!g)return;
+function step(){var card=g.querySelector('.work-frame');var w=card?card.offsetWidth+16:300;
+if(g.scrollLeft+g.clientWidth>=g.scrollWidth-10){g.scrollTo({left:0,behavior:'smooth'});}
+else{g.scrollBy({left:w,behavior:'smooth'});}}
+setInterval(step,1300);})();
