@@ -183,6 +183,7 @@ section{padding:96px 0}
 
 /* ---------- responsive ---------- */
 @media(max-width:960px){
+  .nav .btn{display:none}
   .work-grid{grid-template-columns:repeat(2,1fr)}
   .steps{grid-template-columns:repeat(2,1fr)}
   .svc-row,.svc-row.flip .svc-photo{grid-template-columns:1fr}
