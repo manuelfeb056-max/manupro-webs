@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+  <circle cx="60" cy="60" r="56" fill="#26211C"/>
+  <circle cx="60" cy="60" r="56" fill="none" stroke="#D95D1E" stroke-width="4"/>
+  <circle cx="60" cy="48" r="18" fill="#F2A33C"/>
+  <path d="M24 78 L46 56 L68 78 L88 60 L96 70 L96 96 L24 96 Z" fill="#D95D1E"/>
+  <path d="M24 88 L96 88" stroke="#26211C" stroke-width="4"/>
+  <text x="60" y="112" text-anchor="middle" font-family="Arial, sans-serif" font-weight="900" font-size="14" fill="#F7EFE3">CC</text>
+</svg>

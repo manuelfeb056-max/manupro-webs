@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://manuelfeb056-max.github.io/manupro-webs/am-roofing-bayamon/sitemap.xml
