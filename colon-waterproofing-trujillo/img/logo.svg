@@ -1,7 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
-  <circle cx="60" cy="60" r="57" fill="#4A2C14"/>
-  <circle cx="60" cy="60" r="51" fill="none" stroke="#B8860B" stroke-width="3"/>
-  <circle cx="60" cy="60" r="43" fill="none" stroke="#B8860B" stroke-width="1.5" stroke-dasharray="7 6"/>
-  <text x="60" y="80" text-anchor="middle" font-family="Georgia, 'Playfair Display', serif" font-size="54" fill="#FAF6EE" font-weight="700">C</text>
-  <path d="M60 3 m-54 0 a54 54 0 1 1 108 0 a54 54 0 1 1 -108 0" fill="none"/>
-</svg>

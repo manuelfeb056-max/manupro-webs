@@ -1,3 +1,0 @@
-User-agent: *
-Allow: /
-Sitemap: https://darkgreen-heron-675477.hostingersite.com/castillos-roofing-pr/sitemap.xml

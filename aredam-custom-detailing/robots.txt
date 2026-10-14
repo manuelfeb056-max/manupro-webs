@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://manuelfeb056-max.github.io/manupro-webs/aredam-custom-detailing/sitemap.xml

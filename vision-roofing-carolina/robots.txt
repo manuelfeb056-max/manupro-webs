@@ -1,3 +1,0 @@
-User-agent: *
-Allow: /
-Sitemap: https://manuelfeb056-max.github.io/manupro-webs/vision-roofing-carolina//sitemap.xml

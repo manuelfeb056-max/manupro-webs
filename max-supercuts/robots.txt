@@ -1,3 +1,0 @@
-User-agent: *
-Allow: /
-Sitemap: https://darkgreen-heron-675477.hostingersite.com/max-supercuts/sitemap.xml

@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://manuelfeb056-max.github.io/manupro-webs/freddy-towing-vega-baja/sitemap.xml

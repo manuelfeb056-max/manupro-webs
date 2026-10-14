@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+  <polygon points="60,8 104,34 104,86 60,112 16,86 16,34" fill="#0b1620" stroke="#22d3ee" stroke-width="5"/>
+  <polygon points="60,22 92,40 92,80 60,98 28,80 28,40" fill="none" stroke="#22d3ee" stroke-width="1.5" stroke-dasharray="4 3"/>
+  <rect x="42" y="62" width="36" height="7" fill="#0E7490"/>
+  <rect x="42" y="53" width="36" height="7" fill="#22d3ee" opacity=".8"/>
+  <rect x="42" y="44" width="36" height="7" fill="#a5f3fc" opacity=".55"/>
+  <text x="60" y="100" text-anchor="middle" font-family="monospace" font-size="12" font-weight="bold" fill="#22d3ee" letter-spacing="3">MI</text>
+</svg>
