@@ -1,0 +1,221 @@
+/* Nuñez Transport and Towing — azul noche #0F2B5B · Oswald + Inter */
+:root{
+  --brand:#0F2B5B; --brand-lt:#2E6BD8; --sky:#3FA7FF; --amber:#FFC21A;
+  --bg:#060D1F; --bg2:#0A1730; --ink:#eef4ff; --muted:#9db4d8; --line:rgba(255,255,255,.1);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',system-ui,sans-serif;background:var(--bg);color:var(--ink);line-height:1.6;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit}
+.wrap{max-width:1140px;margin:0 auto;padding:0 20px}
+.section{padding:84px 0}
+.kicker{color:var(--sky);font-weight:800;letter-spacing:.22em;text-transform:uppercase;font-size:.78rem;margin-bottom:10px}
+.h2{font-family:'Oswald',sans-serif;font-weight:700;font-size:clamp(2rem,4.5vw,3.1rem);line-height:1.08;margin-bottom:14px;text-transform:uppercase}
+.h2 .hl{color:var(--sky)}
+.sec-sub{color:var(--muted);max-width:620px;margin-bottom:36px}
+
+/* ---------- botones ---------- */
+.btn{display:inline-flex;align-items:center;gap:10px;padding:14px 26px;border-radius:12px;font-weight:800;text-decoration:none;border:0;cursor:pointer;font-size:1rem;transition:transform .2s,box-shadow .2s;font-family:'Oswald';letter-spacing:.04em;text-transform:uppercase}
+.btn:hover{transform:translateY(-2px)}
+.btn .ic{width:22px;height:22px;fill:currentColor}
+.btn-xl{padding:18px 32px;font-size:1.12rem}
+.btn-call{background:linear-gradient(135deg,var(--amber),#e89b00);color:#1a1206;box-shadow:0 10px 30px rgba(255,194,26,.35)}
+.btn-wa{background:#25D366;color:#06281a;box-shadow:0 10px 30px rgba(37,211,102,.3)}
+.btn-ghost{background:transparent;border:2px solid var(--line);color:var(--ink)}
+
+/* ---------- menú flotante circular ---------- */
+.float-menu{position:fixed;top:20px;right:18px;z-index:90;width:58px;height:58px;border-radius:50%;background:var(--brand);border:3px solid rgba(63,167,255,.5);cursor:pointer;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;box-shadow:0 12px 32px rgba(15,43,91,.8);transition:transform .2s}
+.float-menu:hover{transform:scale(1.07)}
+.float-menu span{display:block;width:24px;height:3px;background:#fff;border-radius:2px}
+.drawer{position:fixed;top:0;right:-320px;width:300px;max-width:86vw;height:100dvh;background:#0a1730;z-index:95;padding:70px 26px 26px;transition:right .32s cubic-bezier(.2,.8,.25,1);display:flex;flex-direction:column;gap:6px;border-left:1px solid var(--line)}
+.drawer.open{right:0}
+.drawer-x{position:absolute;top:16px;right:18px;background:none;border:0;color:#fff;font-size:2rem;cursor:pointer}
+.drawer-title{font-family:'Oswald';color:var(--sky);margin-bottom:12px;font-size:1.05rem;text-transform:uppercase}
+.drawer a:not(.btn){color:var(--ink);text-decoration:none;padding:11px 4px;border-bottom:1px solid var(--line);font-weight:600}
+.drawer a:not(.btn):hover{color:var(--sky)}
+.drawer-ctas{margin-top:auto;display:flex;flex-direction:column;gap:10px}
+.drawer-ctas .btn{justify-content:center}
+.drawer-scrim{position:fixed;inset:0;background:rgba(0,0,0,.55);z-index:94;opacity:0;pointer-events:none;transition:opacity .3s}
+.drawer-scrim.on{opacity:1;pointer-events:auto}
+
+/* ---------- HERO: velocidad nocturna ---------- */
+.hero{position:relative;min-height:100svh;overflow:hidden;background:radial-gradient(900px 500px at 75% 20%,#10295c 0%,var(--bg) 60%);padding:110px 20px 80px;display:flex;align-items:center}
+.speedlines{position:absolute;inset:-60%;background:repeating-linear-gradient(115deg,transparent 0 90px,rgba(63,167,255,.07) 90px 94px,transparent 94px 220px,rgba(255,194,26,.05) 220px 223px);animation:rush 1.6s linear infinite}
+@keyframes rush{to{transform:translate(190px,120px)}}
+.road{position:absolute;left:0;right:0;bottom:0;height:120px;background:linear-gradient(180deg,transparent,#02060f);overflow:hidden}
+.road-dash{position:absolute;top:44px;left:-20%;width:140%;height:8px;background:repeating-linear-gradient(90deg,var(--amber) 0 70px,transparent 70px 140px);transform:skewX(-24deg);animation:road 0.7s linear infinite;opacity:.8}
+@keyframes road{to{transform:skewX(-24deg) translateX(140px)}}
+.hero-grid{position:relative;z-index:5;display:grid;grid-template-columns:1.15fr .85fr;gap:44px;align-items:center;max-width:1140px;margin:0 auto;width:100%}
+@media(max-width:920px){.hero-grid{grid-template-columns:1fr}}
+.hero-kicker{color:var(--sky);font-weight:800;letter-spacing:.24em;text-transform:uppercase;font-size:.8rem;margin-bottom:16px}
+.hero-title{font-family:'Oswald';font-weight:700;font-size:clamp(2.8rem,7.5vw,5.2rem);line-height:1;text-transform:uppercase;margin-bottom:18px;text-shadow:0 6px 40px rgba(0,0,0,.6)}
+.hero-title .hl{color:var(--amber)}
+.hero-sub{color:#c9daf5;font-size:clamp(1rem,2.4vw,1.2rem);max-width:520px;margin-bottom:32px}
+.hero-ctas{display:flex;gap:14px;flex-wrap:wrap}
+
+/* tarjeta glassmorphism */
+.hero-card{position:relative;background:rgba(16,34,74,.42);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border:1px solid rgba(63,167,255,.3);border-radius:24px;padding:44px 34px;text-align:center;box-shadow:0 30px 80px rgba(0,0,0,.5)}
+.exp-badge{position:absolute;top:-34px;right:-14px;width:104px;height:104px;border-radius:50%;background:linear-gradient(135deg,var(--amber),#e89b00);display:flex;flex-direction:column;align-items:center;justify-content:center;color:#1a1206;box-shadow:0 14px 36px rgba(255,194,26,.45);animation:floaty 3.4s ease-in-out infinite}
+.exp-badge span{font-family:'Oswald';font-weight:700;font-size:1.9rem;line-height:1}
+.exp-badge em{font-style:normal;font-weight:800;font-size:.72rem;letter-spacing:.14em}
+@keyframes floaty{0%,100%{transform:translateY(0) rotate(-4deg)}50%{transform:translateY(-12px) rotate(4deg)}}
+.card-logo{width:86px;height:86px;margin:0 auto 16px}
+.card-label{color:var(--muted);font-weight:700;letter-spacing:.18em;text-transform:uppercase;font-size:.78rem;margin-bottom:6px}
+.card-phone{font-family:'Oswald';font-weight:700;font-size:clamp(2.2rem,5vw,3rem);color:#fff;text-decoration:none;letter-spacing:.02em;display:block;margin-bottom:8px}
+.card-phone:hover{color:var(--amber)}
+.card-note{color:var(--muted);font-size:.92rem;margin-bottom:22px}
+.card-row{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+
+/* ---------- galería ---------- */
+.gal-sec{background:var(--bg)}
+.gal-wrap{position:relative;display:flex;align-items:center;gap:10px}
+.gal-viewport{overflow:hidden;flex:1;scroll-behavior:smooth}
+.gal-track{display:flex;gap:16px}
+.gal-card{flex:0 0 min(72vw,380px);border-radius:16px;overflow:hidden;background:var(--bg2);border:1px solid var(--line);cursor:zoom-in}
+.gal-card img{height:260px;width:100%;object-fit:cover}
+.gal-card figcaption{padding:12px 16px;font-weight:600;font-size:.95rem}
+.gal-btn{flex:0 0 auto;width:48px;height:48px;border-radius:12px;border:1px solid var(--line);background:var(--bg2);color:#fff;font-size:1.6rem;cursor:pointer}
+.gal-btn:hover{background:var(--brand-lt)}
+.gal-dots{display:flex;gap:8px;justify-content:center;margin-top:18px}
+.gal-dots button{width:26px;height:8px;border-radius:99px;border:0;background:rgba(255,255,255,.2);cursor:pointer;transition:background .25s}
+.gal-dots button.on{background:var(--sky)}
+
+/* ---------- servicios ---------- */
+#servicios{background:linear-gradient(180deg,var(--bg),var(--bg2))}
+.svc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px}
+.svc{background:rgba(63,167,255,.05);border:1px solid var(--line);border-radius:16px;padding:30px 26px;transition:transform .25s,border-color .25s;position:relative}
+.svc:hover{transform:translateY(-6px);border-color:var(--sky)}
+.svc-ic{width:58px;height:58px;border-radius:14px;background:linear-gradient(135deg,var(--brand-lt),var(--brand));display:flex;align-items:center;justify-content:center;margin-bottom:16px}
+.svc-ic svg{width:30px;height:30px;fill:#fff}
+.svc-tag{position:absolute;top:20px;right:20px;background:var(--amber);color:#1a1206;font-weight:800;font-size:.72rem;padding:4px 12px;border-radius:999px;letter-spacing:.08em}
+.svc h3{font-family:'Oswald';font-size:1.2rem;margin-bottom:10px;text-transform:uppercase}
+.svc p{color:var(--muted);font-size:.95rem}
+
+/* ---------- pasos ---------- */
+.steps{background:var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.steps-line{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:0;margin-top:10px}
+.step{padding:34px 30px;border-left:1px solid var(--line);position:relative}
+.step:first-child{border-left:0}
+@media(max-width:860px){.step{border-left:0;border-top:1px solid var(--line)}.step:first-child{border-top:0}}
+.step-n{font-family:'Oswald';font-weight:700;font-size:3.2rem;color:transparent;-webkit-text-stroke:2px var(--sky);display:block;margin-bottom:10px}
+.step h3{font-family:'Oswald';font-size:1.25rem;margin-bottom:10px;text-transform:uppercase;color:var(--amber)}
+.step p{color:var(--muted);font-size:.95rem}
+
+/* ---------- zona ---------- */
+.zone-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;margin-top:8px}
+@media(max-width:860px){.zone-grid{grid-template-columns:1fr}}
+.zone-text p{color:var(--muted);margin-bottom:18px}
+.zone-text strong{color:var(--ink)}
+.zone-list{list-style:none;margin-bottom:24px;display:flex;flex-direction:column;gap:10px}
+.zone-list li{display:flex;gap:10px;align-items:center;color:var(--ink);font-weight:600}
+.zone-list li::before{content:"";width:10px;height:10px;background:var(--sky);transform:rotate(45deg);flex:0 0 auto}
+.zone-map iframe{width:100%;height:340px;border:0;border-radius:16px}
+
+/* ---------- nosotros ---------- */
+.about{background:var(--bg2);border-top:1px solid var(--line)}
+.about-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:44px;align-items:center}
+@media(max-width:860px){.about-grid{grid-template-columns:1fr}}
+.about-text .lead{font-size:1.12rem;color:var(--ink);margin-bottom:14px}
+.about-text p{color:var(--muted);margin-bottom:14px}
+.stats-row{display:flex;gap:26px;margin:24px 0;flex-wrap:wrap}
+.stat{display:flex;flex-direction:column}
+.stat-num{font-family:'Oswald';font-weight:700;font-size:2.4rem;color:var(--amber)}
+.stat-label{color:var(--muted);font-size:.85rem}
+.about-ctas{display:flex;gap:12px;flex-wrap:wrap}
+.about-img{position:relative}
+.about-img img{border-radius:20px;height:420px;width:100%;object-fit:cover}
+.about-glow{position:absolute;inset:0;border-radius:20px;box-shadow:inset 0 0 0 3px rgba(63,167,255,.35);pointer-events:none}
+
+/* ---------- FAQ ---------- */
+.faq-inner{max-width:820px;margin:0 auto}
+.faq-list{display:flex;flex-direction:column;gap:12px}
+.faq-item{background:rgba(63,167,255,.05);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.faq-q{width:100%;background:none;border:0;color:var(--ink);font-family:'Inter';font-weight:700;font-size:1.02rem;text-align:left;padding:18px 20px;display:flex;justify-content:space-between;align-items:center;gap:12px;cursor:pointer}
+.faq-x{font-size:1.5rem;color:var(--sky);flex:0 0 auto;transition:transform .25s}
+.faq-item.open .faq-x{transform:rotate(45deg)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .35s ease}
+.faq-a p{padding:0 20px 18px;color:var(--muted)}
+
+/* ---------- contacto ---------- */
+#contacto{background:var(--bg2);border-top:1px solid var(--line)}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+@media(max-width:860px){.contact-grid{grid-template-columns:1fr}}
+.contact-form{background:rgba(63,167,255,.05);border:1px solid var(--line);border-radius:20px;padding:30px}
+.contact-form h3{font-family:'Oswald';font-size:1.5rem;margin-bottom:6px;text-transform:uppercase}
+.form-sub{color:var(--muted);margin-bottom:20px;font-size:.95rem}
+.contact-form label{display:block;font-weight:600;font-size:.9rem;margin-bottom:14px}
+.contact-form input,.contact-form select,.contact-form textarea{width:100%;margin-top:6px;padding:13px 14px;border-radius:12px;border:1px solid var(--line);background:#0a1730;color:var(--ink);font-family:'Inter';font-size:1rem}
+.contact-form button{width:100%;justify-content:center}
+.ci-card{display:flex;gap:16px;align-items:center;background:rgba(63,167,255,.05);border:1px solid var(--line);border-radius:16px;padding:20px;text-decoration:none;margin-bottom:14px;transition:border-color .25s}
+a.ci-card:hover{border-color:var(--sky)}
+.ci-ic{width:52px;height:52px;flex:0 0 auto;border-radius:14px;background:linear-gradient(135deg,var(--brand-lt),var(--brand));display:flex;align-items:center;justify-content:center}
+.ci-ic.wa{background:#25D366}
+.ci-ic svg{width:26px;height:26px;fill:#fff}
+.ci-label{font-size:.8rem;color:var(--muted);text-transform:uppercase;letter-spacing:.12em;font-weight:700}
+.ci-val{font-size:1.3rem;font-weight:800;color:var(--ink)}
+
+/* ---------- oferta / planes ---------- */
+.offer{padding:84px 0;background:radial-gradient(600px 300px at 50% 0%,rgba(15,43,91,.6),transparent),var(--bg)}
+.offer-card{background:#0a1730;border:1px solid var(--line);border-radius:24px;padding:48px 36px;text-align:center}
+.offer-kicker{color:var(--sky);font-weight:800;letter-spacing:.2em;text-transform:uppercase;font-size:.8rem;margin-bottom:12px}
+.offer-card h3{font-family:'Oswald';font-size:clamp(1.6rem,3.6vw,2.4rem);margin-bottom:34px;text-transform:uppercase}
+.offer-plans{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px;text-align:left}
+.plan{background:rgba(255,255,255,.03);border:1px solid var(--line);border-radius:16px;padding:30px 26px;position:relative;display:flex;flex-direction:column}
+.plan.hero{border:2px solid var(--amber);background:rgba(255,194,26,.06);transform:scale(1.03)}
+.plan-badge{position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:var(--amber);color:#1a1206;font-weight:800;font-size:.8rem;padding:6px 16px;border-radius:999px;white-space:nowrap}
+.plan-name{font-family:'Oswald';font-size:1.2rem;margin-bottom:8px;text-transform:uppercase}
+.plan-regular{color:var(--muted);text-decoration:line-through;font-size:1rem}
+.plan-price{font-family:'Oswald';font-weight:700;font-size:2.6rem;color:var(--sky);margin-bottom:16px}
+.plan.hero .plan-price{color:var(--amber)}
+.plan-list{list-style:none;margin-bottom:22px;display:flex;flex-direction:column;gap:9px;flex:1}
+.plan-list li{font-size:.95rem;display:flex;gap:9px;align-items:center}
+.plan-list li::before{content:"✓";color:var(--sky);font-weight:800}
+.plan-list li.no{color:var(--muted);text-decoration:line-through}
+.plan-list li.no::before{content:"✕";color:#e05555}
+.plan-sub{color:var(--muted);font-size:.9rem;margin-bottom:14px}
+.plan .btn{justify-content:center}
+
+/* ---------- footer ---------- */
+.footer{background:#040912;border-top:1px solid var(--line);padding:54px 0 0}
+.footer-grid{display:grid;grid-template-columns:1fr auto;gap:30px;align-items:center;margin-bottom:34px}
+@media(max-width:700px){.footer-grid{grid-template-columns:1fr}}
+.foot-logo{width:64px;height:64px;margin-bottom:12px}
+.foot-name{font-family:'Oswald';font-size:1.35rem;text-transform:uppercase}
+.foot-name .hl{color:var(--sky)}
+.foot-sub{color:var(--muted);font-size:.95rem}
+.foot-social-title{font-weight:800;font-size:.85rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:12px}
+.social-3d{display:flex;gap:12px}
+.social-3d a{width:52px;height:52px;border-radius:14px;background:var(--bg2);border:1px solid var(--line);display:flex;align-items:center;justify-content:center;transition:transform .25s;transform:perspective(400px) rotateY(-8deg)}
+.social-3d a:hover{transform:perspective(400px) rotateY(8deg) translateY(-3px);background:var(--brand-lt)}
+.social-3d svg{width:26px;height:26px;fill:#fff}
+.foot-legal{text-align:center;color:var(--muted);font-size:.88rem;padding:20px;border-top:1px solid var(--line)}
+.foot-legal a{color:var(--sky);font-weight:700}
+
+/* ---------- flotantes ---------- */
+.wa-float{position:fixed;right:18px;bottom:18px;z-index:80;width:62px;height:62px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;box-shadow:0 12px 32px rgba(37,211,102,.45);animation:pulse 2.4s infinite}
+.wa-float svg{width:32px;height:32px;fill:#fff}
+@keyframes pulse{0%,100%{box-shadow:0 12px 32px rgba(37,211,102,.45)}50%{box-shadow:0 12px 44px rgba(37,211,102,.75)}}
+.call-float{position:fixed;left:18px;bottom:18px;z-index:80;display:flex;align-items:center;gap:10px;background:linear-gradient(135deg,var(--amber),#e89b00);color:#1a1206;font-family:'Oswald';font-weight:700;letter-spacing:.05em;text-transform:uppercase;text-decoration:none;padding:14px 22px;border-radius:12px;box-shadow:0 12px 32px rgba(255,194,26,.4)}
+.call-float svg{width:22px;height:22px;fill:#1a1206}
+
+/* ---------- lightbox ---------- */
+.lightbox{position:fixed;inset:0;background:rgba(0,0,0,.92);z-index:120;display:none;align-items:center;justify-content:center;flex-direction:column;gap:12px}
+.lightbox.on{display:flex}
+.lightbox img{max-width:92vw;max-height:78vh;border-radius:12px}
+.lb-x{position:absolute;top:16px;right:20px;background:none;border:0;color:#fff;font-size:2.4rem;cursor:pointer}
+.lb-nav{position:absolute;top:50%;transform:translateY(-50%);background:rgba(255,255,255,.12);border:0;color:#fff;font-size:2rem;width:52px;height:52px;border-radius:12px;cursor:pointer}
+.lb-prev{left:14px}.lb-next{right:14px}
+.lb-cap{color:#fff;font-weight:600}
+
+/* ---------- reveal ---------- */
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s ease}
+.reveal.visible{opacity:1;transform:none}
+
+@media(max-width:640px){
+  .float-menu{top:14px;right:14px;width:52px;height:52px}
+  .hero{padding-top:96px}
+  .exp-badge{width:88px;height:88px;top:-26px;right:-8px}
+  .call-float span{display:none}
+  .call-float{padding:14px;border-radius:50%}
+}
