@@ -1,0 +1,32 @@
+/* HOMO PLAX ROOFING - industrial pesado: gris acero + amarillo seguridad */
+.theme-homoplax-roofing{--font-h:'Racing Sans One',sans-serif;--font-b:'Inter',sans-serif;background:#23262b;color:#eef1f4}
+.theme-homoplax-roofing h1,.theme-homoplax-roofing h2,.theme-homoplax-roofing .h2{font-family:'Racing Sans One',sans-serif;color:#fff;letter-spacing:.02em}
+.theme-homoplax-roofing .hero-title{font-family:'Racing Sans One',sans-serif}
+.theme-homoplax-roofing .hl{color:#ffd21f}
+.theme-homoplax-roofing .btn-accent{background:#ffd21f;border:2px solid #ffd21f;color:#141414;font-weight:800}
+.theme-homoplax-roofing .btn-ghost{border:2px solid #ffd21f;color:#ffd21f}
+.theme-homoplax-roofing .kicker{color:#ffd21f;font-weight:700;letter-spacing:.2em}
+/* heroe: acero y franjas de seguridad */
+.theme-homoplax-roofing .hx-hero{background:#23262b;min-height:96vh}
+.theme-homoplax-roofing .hx-hazard{position:absolute;top:0;left:0;right:0;height:26px;background:repeating-linear-gradient(-45deg,#ffd21f 0 22px,#141414 22px 44px);z-index:3}
+.theme-homoplax-roofing .hero-slides .hero-slide img{filter:grayscale(.35) contrast(1.08)}
+.theme-homoplax-roofing .hero-slides::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,20,20,.55),rgba(20,20,20,.25) 50%,rgba(35,38,43,.95))}
+.theme-homoplax-roofing .hx-inner{text-align:left;padding:130px 6vw 110px;max-width:900px}
+.theme-homoplax-roofing .hx-inner .hero-sub{color:#c9d0d8;max-width:640px}
+.theme-homoplax-roofing .hx-plate{display:inline-block;margin-top:22px;background:#141414;color:#ffd21f;font-weight:800;letter-spacing:.24em;font-size:.8rem;padding:10px 18px;border:1px solid #ffd21f}
+.theme-homoplax-roofing .hero-title{font-size:clamp(2.4rem,7vw,4.4rem);text-transform:uppercase}
+.theme-homoplax-roofing .card{background:#2b2f35;border:1px solid #3c424a;border-bottom:8px solid #ffd21f}
+.theme-homoplax-roofing .card h3{color:#fff}
+.theme-homoplax-roofing .card p{color:#b9c0c9}
+.theme-homoplax-roofing .card-num{color:#ffd21f}
+.theme-homoplax-roofing .section{background:#23262b}
+/* contacto: placa industrial */
+.theme-homoplax-roofing .ct-steel{background:linear-gradient(180deg,#2b2f35,#1a1d21);position:relative;overflow:hidden}
+.theme-homoplax-roofing .ct-steel::before{content:"";position:absolute;top:0;left:0;right:0;height:20px;background:repeating-linear-gradient(-45deg,#ffd21f 0 20px,#141414 20px 40px)}
+.theme-homoplax-roofing .ct-steel .kicker{color:#ffd21f}
+.theme-homoplax-roofing .ct-steel .h2{color:#fff}
+.theme-homoplax-roofing .ct-steel-phone{display:inline-block;font-family:'Racing Sans One',sans-serif;font-size:clamp(2rem,9vw,3.6rem);color:#ffd21f;text-decoration:none;border:3px solid #ffd21f;padding:8px 30px;margin:14px 0;background:#141414}
+.theme-homoplax-roofing .ct-steel-sub{color:#c9d0d8}
+.theme-homoplax-roofing .ct-steel-sub a{color:#ffd21f;font-weight:700}
+.theme-homoplax-roofing .ct-steel-map{max-width:640px;margin:24px auto 0;border:4px solid #3c424a}
+.theme-homoplax-roofing .ct-steel-map iframe{width:100%;height:240px;border:0;display:block}

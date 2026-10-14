@@ -1,0 +1,43 @@
+/* MUDANZAS CAGUAS — en ruta, camión en movimiento */
+body{font-family:'Nunito',sans-serif}
+.logo,.sec-title{font-family:'Bree Serif',serif}
+
+.mc-hero{position:relative;overflow:hidden;padding:130px 0 70px;text-align:center;
+  background:linear-gradient(180deg,#fff9f0 0%,#ffeed9 70%,#ffe3c2 100%)}
+.mc-hero-inner{position:relative;z-index:2}
+.mc-hero h1{font-family:'Bree Serif',serif;font-size:clamp(2.6rem,10vw,5.2rem);line-height:1.05;margin:0 0 12px;color:var(--ink)}
+.mc-name{position:relative;display:inline-block}
+.mc-name::after{content:"";position:absolute;left:0;right:0;bottom:.06em;height:.18em;background:var(--accent);opacity:.35;border-radius:4px;z-index:-1}
+
+/* ruta con camión en movimiento */
+.mc-route{position:relative;height:90px;margin:26px 0 0;color:var(--accent)}
+.mc-route svg{position:absolute;inset:0;width:100%;height:100%}
+.mc-truck{position:absolute;top:6px;left:0;font-size:2.6rem;animation:mcDrive 7s ease-in-out infinite;filter:drop-shadow(0 8px 12px rgba(232,89,12,.3))}
+@keyframes mcDrive{0%{left:-8%}50%{left:88%}100%{left:-8%}}
+.mc-box{position:absolute;font-size:1.5rem;animation:mcBounce 1.6s ease-in-out infinite}
+.mc-box.b1{left:18%;top:44px}.mc-box.b2{left:72%;top:48px;animation-delay:.8s}
+@keyframes mcBounce{0%,100%{transform:translateY(0) rotate(-6deg)}50%{transform:translateY(-10px) rotate(6deg)}}
+
+.mc-frame{max-width:600px;margin:10px auto 0}
+.mc-frame img{width:100%;height:min(58vw,400px);object-fit:cover;border-radius:22px;border:6px solid #fff;box-shadow:0 24px 60px rgba(232,89,12,.22)}
+
+.theme-mudanzas-caguas{--bg:#fff9f0;--bg2:#ffeed9;--card:#ffffff;--ink:#2b2118;--muted:#8a6f52;--line:#f0d9b8;--accent:#e8590c}
+.theme-mudanzas-caguas .header{background:rgba(255,249,240,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.theme-mudanzas-caguas .hero-sub{color:var(--muted)}
+.theme-mudanzas-caguas .btn-accent{background:var(--accent);color:#fff}
+.theme-mudanzas-caguas .btn-ghost{border:2px solid var(--accent);color:var(--accent);background:transparent}
+
+@media(max-width:640px){.mc-hero{padding:110px 0 60px}.mc-truck{font-size:2.1rem}}
+
+/* ---- contacto único ---- */
+.theme-mudanzas-caguas .ct-cardboard-box{background:#c89b62;color:#3a2a12;max-width:600px;margin:0 auto;padding:0 0 28px;box-shadow:0 26px 60px rgba(0,0,0,.35);position:relative}
+.theme-mudanzas-caguas .ct-cardboard-tape{background:rgba(255,255,255,.55);text-align:center;font-size:.72rem;letter-spacing:.3em;text-transform:uppercase;font-weight:800;padding:10px;color:#6a4a1e}
+.theme-mudanzas-caguas .ct-cardboard-box h2{text-align:center;margin:18px 0 6px;font-size:1.9rem}
+.theme-mudanzas-caguas .ct-cardboard-phone{display:block;text-align:center;font-size:clamp(1.7rem,6.5vw,2.3rem);font-weight:900;color:#2e1f08;text-decoration:none}
+.theme-mudanzas-caguas .ct-cardboard-rows{margin:18px 26px;border-top:2px solid #6a4a1e}
+.theme-mudanzas-caguas .ct-cardboard-rows div{display:flex;justify-content:space-between;gap:10px;padding:11px 2px;border-bottom:1px dashed #6a4a1e;font-size:.95rem}
+.theme-mudanzas-caguas .ct-cardboard-rows span{text-transform:uppercase;font-size:.75rem;letter-spacing:.12em;font-weight:800}
+.theme-mudanzas-caguas .ct-cardboard-rows a{color:#2e1f08;font-weight:700}
+.theme-mudanzas-caguas .ct-cardboard-rows em{font-style:normal;font-weight:600}
+.theme-mudanzas-caguas .ct-cardboard-map{margin:16px 26px 0}
+.theme-mudanzas-caguas .ct-cardboard-map iframe{width:100%;height:200px;border:0}

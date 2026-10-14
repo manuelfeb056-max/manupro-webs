@@ -1,0 +1,33 @@
+/* CAPITOL ROOFING - clasico institucional: gris pizarra + dorado */
+.theme-capitol-roofing-pr{--bg:#26292e;--ink:#f5f2ea;--muted:#b0aca0;--accent:#c9a227}
+.theme-capitol-roofing-pr .hero-slide img{filter:brightness(.72) contrast(1.02)}
+.theme-capitol-roofing-pr .hero-scrim{background:linear-gradient(180deg,rgba(24,26,30,.78),rgba(24,26,30,.4) 52%,rgba(24,26,30,.94))}
+.theme-capitol-roofing-pr .inst-columns{position:absolute;inset:0;z-index:2;pointer-events:none;display:flex;justify-content:space-around;opacity:.16}
+.theme-capitol-roofing-pr .inst-columns i{width:56px;background:repeating-linear-gradient(180deg,#f5f2ea 0 14px,transparent 14px 22px);-webkit-mask:linear-gradient(180deg,#000 70%,transparent);mask:linear-gradient(180deg,#000 70%,transparent)}
+.theme-capitol-roofing-pr .hero-content{z-index:5}
+.theme-capitol-roofing-pr .inst-seal{width:64px;margin:0 auto .6rem}
+.theme-capitol-roofing-pr .inst-seal svg{width:100%;height:auto}
+.theme-capitol-roofing-pr .inst-seal circle{stroke:var(--accent)}
+.theme-capitol-roofing-pr .inst-seal text{fill:var(--accent);font-weight:700}
+.theme-capitol-roofing-pr .hero-kicker{color:#d9d2bf;letter-spacing:.3em;text-transform:uppercase;font-size:.76rem}
+.theme-capitol-roofing-pr .hero-title{font-family:"Libre Baskerville",serif;font-weight:700;font-size:clamp(1.9rem,7.4vw,3.9rem);line-height:1.25}
+.theme-capitol-roofing-pr .hero-title .hl{color:var(--accent);font-style:italic}
+.theme-capitol-roofing-pr .inst-rule{display:flex;align-items:center;justify-content:center;gap:.9rem;margin:1.1rem auto;max-width:26rem}
+.theme-capitol-roofing-pr .inst-rule i{flex:1;height:1px;background:linear-gradient(90deg,transparent,var(--accent),transparent)}
+.theme-capitol-roofing-pr .inst-rule span{color:var(--accent);font-size:.8rem}
+.theme-capitol-roofing-pr .hero-sub{color:#e9e4d6;max-width:33rem}
+.theme-capitol-roofing-pr .inst-note{color:var(--muted);font-size:.9rem;margin-top:1rem;letter-spacing:.06em}
+.theme-capitol-roofing-pr .btn-accent{background:var(--accent);color:#1d1f24;font-weight:800}
+.theme-capitol-roofing-pr .btn-ghost{border:1px solid rgba(201,162,39,.6);color:var(--ink)}
+.theme-capitol-roofing-pr .section{background:var(--bg)}
+.theme-capitol-roofing-pr .h2{font-family:"Libre Baskerville",serif}
+.theme-capitol-roofing-pr .card{background:#2e3238;border:1px solid #454a52;border-top:3px double var(--accent)}
+.theme-capitol-roofing-pr .card-num{color:var(--accent);font-family:"Libre Baskerville",serif}
+.theme-capitol-roofing-pr .ticker{background:#1a1c20;color:var(--accent);border-top:1px solid var(--accent);border-bottom:1px solid var(--accent);letter-spacing:.16em;font-family:"Libre Baskerville",serif}
+.theme-capitol-roofing-pr .ct-inst{background:#22252a;border-top:4px double var(--accent)}
+.theme-capitol-roofing-pr .ct-inst-phone{display:inline-block;font-family:"Libre Baskerville",serif;font-size:clamp(1.8rem,7.6vw,3rem);color:var(--accent);text-decoration:none;margin:.7rem 0;letter-spacing:.02em}
+.theme-capitol-roofing-pr .ct-inst-sub{color:var(--muted)}
+.theme-capitol-roofing-pr .ct-inst-sub a{color:var(--accent);font-weight:700}
+.theme-capitol-roofing-pr .ct-inst-map{max-width:620px;margin:24px auto 0;border:1px solid var(--accent);outline:3px double var(--accent);outline-offset:5px}
+.theme-capitol-roofing-pr .ct-inst-map iframe{width:100%;height:230px;border:0;display:block}
+.theme-capitol-roofing-pr .kicker{color:var(--accent)}

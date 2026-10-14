@@ -1,0 +1,37 @@
+/* CHRIS SERVICE'S — silicona líquida, efecto glossy plateado + azul eléctrico */
+.theme-chris-services{--bg:#eef1f6;--bg2:#dde4ec;--card:#ffffff;--ink:#0e1a2b;--muted:#4c5f78;--line:rgba(14,26,43,.12)}
+.hero-glossy{position:relative;min-height:100vh;min-height:100svh;display:flex;flex-direction:column;justify-content:center;overflow:hidden}
+.hero-glossy .hero-scrim{background:linear-gradient(180deg,rgba(14,26,43,.55),rgba(14,26,43,.78))}
+.gl-blob{position:absolute;border-radius:50%;filter:blur(70px);opacity:.5;z-index:2;pointer-events:none}
+.gl-blob-a{width:520px;height:520px;left:-140px;top:-120px;background:radial-gradient(circle,#7cc4ff,#1e9bff 60%,transparent 70%);animation:glFloat 11s ease-in-out infinite alternate}
+.gl-blob-b{width:420px;height:420px;right:-120px;bottom:-100px;background:radial-gradient(circle,#e8f2ff,#9fc8f5 60%,transparent 70%);animation:glFloat 13s ease-in-out infinite alternate-reverse}
+@keyframes glFloat{to{transform:translate(60px,50px) scale(1.15)}}
+.gl-sheen{position:absolute;top:-20%;bottom:-20%;left:-30%;width:34%;background:linear-gradient(105deg,transparent,rgba(255,255,255,.35),transparent);transform:skewX(-18deg);z-index:3;pointer-events:none;animation:glSheen 7s ease-in-out infinite}
+@keyframes glSheen{0%{left:-40%}55%,100%{left:130%}}
+.hero-glossy .hero-content{z-index:4}
+.gl-title{font-family:'Rubik',sans-serif;font-weight:900;letter-spacing:-.01em;color:#fff!important}
+.gl-title .hl{background:linear-gradient(110deg,#9fd2ff 20%,#ffffff 40%,#1e9bff 60%,#9fd2ff 80%);background-size:220% auto;-webkit-background-clip:text;background-clip:text;color:transparent;animation:glShine 5s linear infinite}
+@keyframes glShine{to{background-position:220% center}}
+.hero-glossy .hero-sub{color:#dbe7f5;max-width:48ch}
+.hero-glossy .hero-kicker{color:#9fd2ff}
+.gl-btn{background:linear-gradient(180deg,#4db2ff,#1e7cf5)!important;border:1px solid rgba(255,255,255,.5)!important;box-shadow:0 10px 30px rgba(30,156,255,.45),inset 0 1px 0 rgba(255,255,255,.6)!important;color:#fff!important;border-radius:99px!important}
+.gl-btn-ghost{border:1px solid rgba(255,255,255,.5)!important;border-radius:99px!important;color:#fff!important;background:rgba(255,255,255,.08)!important;backdrop-filter:blur(6px)}
+.gl-drips{display:flex;gap:14px;margin-top:30px}
+.gl-drips span{width:14px;height:26px;border-radius:0 0 14px 14px;background:linear-gradient(180deg,#7cc4ff,#1e9bff);opacity:.8;animation:glDrip 3.2s ease-in-out infinite}
+.gl-drips span:nth-child(2){animation-delay:.5s;height:34px}
+.gl-drips span:nth-child(3){animation-delay:1.1s}
+@keyframes glDrip{0%,100%{transform:translateY(0) scaleY(1)}50%{transform:translateY(10px) scaleY(1.35)}}
+.hero-glossy .hero-dots button{background:rgba(255,255,255,.4)}
+.hero-glossy .hero-dots button.on{background:#7cc4ff}
+/* logo: píldora plateada glossy */
+.logo-img img{width:46px;height:34px;border-radius:12px;object-fit:cover;border:1px solid rgba(255,255,255,.7);box-shadow:0 4px 14px rgba(30,156,255,.35),inset 0 1px 0 #fff}
+.logo-img{font-family:'Rubik',sans-serif;font-weight:800;color:var(--ink)}
+/* ---- contacto único ---- */
+.theme-chris-services .ct-drip{position:relative;overflow:hidden;background:linear-gradient(180deg,#e9eff6,#d5dee9);color:#0e1a2b}
+.theme-chris-services .ct-drip::before{content:"";position:absolute;top:0;left:0;right:0;height:60px;background:radial-gradient(60px 26px at 8% 0,#1e9bff 98%,transparent),radial-gradient(80px 34px at 30% 0,#1e9bff 98%,transparent),radial-gradient(56px 24px at 55% 0,#1e9bff 98%,transparent),radial-gradient(90px 40px at 78% 0,#1e9bff 98%,transparent),radial-gradient(64px 28px at 95% 0,#1e9bff 98%,transparent)}
+.theme-chris-services .ct-drip .kicker{color:#1e7cf5}
+.theme-chris-services .ct-drip-phone{display:inline-block;font-family:'Rubik',sans-serif;font-weight:900;font-size:clamp(2rem,8.5vw,3.4rem);color:#0e1a2b;text-decoration:none;margin:8px 0;background:linear-gradient(180deg,#fff,#cfe4fb);padding:10px 30px;border-radius:99px;border:1px solid rgba(30,156,255,.4);box-shadow:0 14px 40px rgba(30,156,255,.25),inset 0 2px 0 #fff}
+.theme-chris-services .ct-drip-sub{color:#4c5f78}
+.theme-chris-services .ct-drip-sub a{color:#1e7cf5;font-weight:700}
+.theme-chris-services .ct-drip-map{max-width:620px;margin:24px auto 0}
+.theme-chris-services .ct-drip-map iframe{width:100%;height:230px;border:0;border-radius:26px;box-shadow:0 20px 50px rgba(30,156,255,.2)}

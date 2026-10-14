@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://manuelfeb056-max.github.io/manupro-webs/gemelos-auto-detailing/sitemap.xml

@@ -1,0 +1,51 @@
+/* ASHLEY'S AESTHETIC — elegancia delicada, pétalos y brillo de mirada */
+body{font-family:'Jost',sans-serif}
+.logo,.sec-title{font-family:'Bodoni Moda',serif}
+
+.aa-hero{position:relative;overflow:hidden;padding:130px 0 80px;text-align:center;
+  background:linear-gradient(180deg,#fdf2f5 0%,#fbe4ec 55%,#f6d3e0 100%)}
+.aa-hero-inner{position:relative;z-index:2}
+.aa-lash{width:min(300px,70vw);color:var(--accent);margin:0 auto 6px;filter:drop-shadow(0 2px 6px rgba(214,51,108,.35));animation:aaBlink 5s ease-in-out infinite;transform-origin:center}
+@keyframes aaBlink{0%,93%,100%{transform:scaleY(1)}95%{transform:scaleY(.12)}}
+.aa-hero h1{margin:0 0 10px;color:var(--ink)}
+.aa-script{font-family:'Bodoni Moda',serif;font-style:italic;font-size:clamp(2.8rem,10vw,5.4rem);line-height:1;
+  background:linear-gradient(120deg,#a11c4e,#e35d8f 50%,#a11c4e);-webkit-background-clip:text;background-clip:text;color:transparent}
+.aa-sub{display:block;font-family:'Jost',sans-serif;font-size:.85rem;letter-spacing:.55em;color:var(--muted);margin-top:10px;font-weight:600}
+.aa-proof{margin:16px 0 4px}
+.aa-pill{background:#fff;border:1px solid #f0b9cd;border-radius:999px;padding:8px 20px;font-size:.9rem;color:var(--ink);box-shadow:0 6px 18px rgba(214,51,108,.12)}
+.aa-pill strong{color:var(--accent)}
+
+/* pétalos flotando */
+.aa-petals{position:absolute;inset:0;pointer-events:none;overflow:hidden}
+.aa-petals span{position:absolute;top:-5%;width:14px;height:18px;border-radius:60% 40% 60% 40%;
+  background:linear-gradient(135deg,#f7a8c4,#e35d8f);opacity:.7;animation:aaFall 8s linear infinite}
+.aa-petals span:nth-child(1){left:8%;animation-delay:0s}.aa-petals span:nth-child(2){left:20%;animation-delay:2s}
+.aa-petals span:nth-child(3){left:35%;animation-delay:4s}.aa-petals span:nth-child(4){left:50%;animation-delay:1s}
+.aa-petals span:nth-child(5){left:65%;animation-delay:3s}.aa-petals span:nth-child(6){left:78%;animation-delay:5s}
+.aa-petals span:nth-child(7){left:90%;animation-delay:2.5s}.aa-petals span:nth-child(8){left:44%;animation-delay:6s}
+@keyframes aaFall{to{transform:translateY(112vh) rotate(540deg)}}
+
+.aa-frame{max-width:520px;margin:36px auto 0;position:relative}
+.aa-frame::before{content:"";position:absolute;inset:-14px;border:2px solid var(--accent);border-radius:34px;opacity:.5;pointer-events:none}
+.aa-frame img{width:100%;height:min(72vw,480px);object-fit:cover;border-radius:26px;box-shadow:0 26px 60px rgba(161,28,78,.22)}
+
+.theme-ashleys-aesthetic{--bg:#fdf2f5;--bg2:#fbe4ec;--card:#ffffff;--ink:#3d2330;--muted:#9a6b7f;--line:#f3cfdd;--accent:#d6336c}
+.theme-ashleys-aesthetic .header{background:rgba(253,242,245,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.theme-ashleys-aesthetic .hero-sub{color:var(--muted)}
+.theme-ashleys-aesthetic .btn-accent{background:var(--accent);color:#fff}
+.theme-ashleys-aesthetic .btn-ghost{border:2px solid var(--accent);color:var(--accent);background:transparent}
+
+@media(max-width:640px){.aa-hero{padding:110px 0 64px}}
+
+/* ---- contacto único ---- */
+.theme-ashleys-aesthetic .ct-mirror-frame{position:relative;max-width:520px;margin:26px auto 0;background:linear-gradient(160deg,#f7dfe9,#f3c9da);border-radius:50%/46%;padding:64px 40px;text-align:center;box-shadow:0 30px 70px rgba(190,90,130,.35),inset 0 0 0 10px #fff,inset 0 0 0 14px #e8a8c2}
+.theme-ashleys-aesthetic .ct-bulb{position:absolute;width:14px;height:14px;border-radius:50%;background:#fff8d6;box-shadow:0 0 12px 4px rgba(255,240,180,.9);animation:bulbGlow 2.4s ease-in-out infinite}
+@keyframes bulbGlow{0%,100%{opacity:1}50%{opacity:.45}}
+.theme-ashleys-aesthetic .ct-mirror-in{position:relative}
+.theme-ashleys-aesthetic .ct-mirror-label{font-size:.75rem;letter-spacing:.3em;text-transform:uppercase;color:#a35a7d}
+.theme-ashleys-aesthetic .ct-mirror-phone{font-size:clamp(1.6rem,6vw,2.2rem);font-weight:800;color:#5c2b41;text-decoration:none}
+.theme-ashleys-aesthetic .ct-mirror-ig{margin-top:10px}
+.theme-ashleys-aesthetic .ct-mirror-ig a{color:#b04a78;font-weight:700}
+.theme-ashleys-aesthetic .ct-mirror-town{color:#8a5a6e;font-size:.9rem;margin-top:6px}
+.theme-ashleys-aesthetic .ct-mirror-map{max-width:520px;margin:26px auto 0}
+.theme-ashleys-aesthetic .ct-mirror-map iframe{width:100%;height:210px;border:0;border-radius:18px}

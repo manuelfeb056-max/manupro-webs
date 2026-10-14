@@ -1,0 +1,65 @@
+FUENTES — Koli's Auto Detailing (kolis-auto-detailing)
+================================================
+Negocio: Koli's Auto Detailing, Aguadilla PR — facebook.com/364570696728958/
+Fecha de construcción: 2026-10-12
+
+FOTOS REALES (1 de 10 — ver NOTA al final)
+------------------------------------------
+img/real/foto-1.jpg
+  Origen: foto publicada por el negocio en su página de Facebook.
+  Extraída vía el mirror público findglocal.com de la página
+  https://www.findglocal.com/PR/Aguadilla/364570696728958/Koli's-Auto-Detailing
+  (post: "Buenas tardes mi gente — trabajo de tratamiento cerámico para este
+  Jeep Wrangler 2026", junio 2026).
+  URL CDN de descarga: https://img4.findglocal.com/233/160/122216060402331604.jpg
+  Verificada: abre correctamente, 1024x683, 143 KB (convertida de WebP a JPG).
+  Contenido: Jeep Wrangler verde oliva tras tratamiento cerámico. 100% real.
+
+img/logo.jpg
+  Origen: foto de perfil OFICIAL de la página de Facebook del negocio.
+  URL: https://graph.facebook.com/364570696728958/picture?type=large
+  Verificada: 200x200, abre correctamente.
+  Contenido: insignia circular roja/negra "Koli's AUTO DETAILING EST. 2016"
+  con teléfono 787.943.4530. Paleta derivada del logo: rojo #c8102e,
+  negro #0b0b0d, blanco hueso. Nada inventado.
+
+NOTA HONESTA SOBRE LAS FOTOS 2–10
+----------------------------------
+Se intentó extraer 10 fotos reales de los posts de Facebook del negocio por
+todas las vías disponibles sin navegador en vivo:
+  - Página directa de Facebook (bloqueada: requiere login).
+  - facebook-cli (comando profile info deshabilitado por el servidor, 403).
+  - m.facebook.com vía curl (muro de login).
+  - Mirrors públicos: findglocal.com (HTML bloqueado 403), cleaners10.com
+    (HTML accesible: solo 3 fotos embebidas de posts recientes), autoyas.com
+    y autos1000.org (página vieja del negocio, fotos 404 o challenge).
+  - image-search CLI, social.search, Wayback Machine, jina.ai reader.
+Resultado: solo 1 foto de trabajo descargable (la de arriba). Las otras 2
+fotos embebidas en el mirror cleaners10 (IDs 122218470992331604 y
+122213365838331604) devuelven 404 en todos los shards del CDN (caché vieja).
+Por eso la sección "Nuestros trabajos" usa la foto real verificada en un
+marco de "orden de trabajo" + un bloque honesto que enlaza al Facebook real
+del negocio (https://www.facebook.com/364570696728958/) donde están TODOS
+los trabajos publicados (RAM 1500, Mustang, Tacoma, Wrangler, etc.).
+CERO fotos de stock. CERO fotos inventadas.
+
+DATOS DEL NEGOCIO (todos verificados en fuentes públicas)
+----------------------------------------------------------
+  Teléfono: 787-943-4530 (Facebook + mirrors)
+  Dirección: Carr. 463, Sector La Palma, Bo. Corrales, Aguadilla, PR (mirrors)
+  Horario: mar–sáb 9:00 AM – 5:00 PM (mirrors)
+  Servicios (textos de sus propios posts): tratamiento cerámico GYEON Syncro
+  (hasta 5 años), pulidos, corrección de pintura, shampoo/extracción interior,
+  lavado detallado exterior e interior, descontaminación química y manual,
+  sellador de 6 meses, lavado de motor, pulido de focos, venta de luces LED,
+  lavado de botes, servicio a domicilio nivel isla.
+  Lema del negocio (de su post, usado en la web): "Siempre fotos crudas,
+  ninguna editada."
+
+VIDEO HERO
+----------
+No se encontró ningún video descargable del negocio en fuentes públicas
+accesibles. Hero fotográfico con foto-1.jpg. Sin URL candidata que reportar.
+
+SIN DEPLOY: sitio construido solo en sites/kolis-auto-detailing/. No se hizo
+git push ni deploy, según lo ordenado.

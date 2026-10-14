@@ -1,0 +1,67 @@
+/* THE PINK LAB PR — laboratorio rosa juguetón, plato de petri */
+body{font-family:'Nunito',sans-serif}
+.theme-thepinklabpr{--bg:#fff5f9;--bg2:#ffe4ef;--card:#ffffff;--ink:#5b2340;--muted:#b07e99;--line:#f8cfe0;--accent:#ec4899}
+.theme-thepinklabpr .logo,.theme-thepinklabpr .sec-title,.hero-pl h1{font-family:'Comfortaa',sans-serif}
+.theme-thepinklabpr .header{background:rgba(255,245,249,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.theme-thepinklabpr .btn-accent{color:#fff;box-shadow:0 14px 30px rgba(236,72,153,.42)}
+.theme-thepinklabpr .btn-ghost{background:#fff;border:2px solid var(--line);color:var(--ink)}
+
+.hero-pl{position:relative;padding:140px 0 100px;overflow:hidden;text-align:center;
+  background:radial-gradient(700px 380px at 50% -60px,#ffd0e4,transparent),linear-gradient(180deg,var(--bg),var(--bg2))}
+.hero-pl-inner{position:relative;z-index:2}
+.pl-tube{display:inline-flex;align-items:center;gap:12px;background:#fff;border:2px solid var(--line);border-radius:999px;padding:8px 22px 8px 10px;margin-bottom:16px;box-shadow:0 10px 24px rgba(236,72,153,.14)}
+.pl-tube i{display:block;width:14px;height:34px;border-radius:7px;border:2px solid var(--accent);position:relative;overflow:hidden}
+.pl-tube i::after{content:"";position:absolute;bottom:0;left:0;right:0;height:60%;background:var(--accent);animation:plFill 3.4s ease-in-out infinite}
+.pl-tube i+i::after{animation-delay:1.2s}
+.pl-tube em{font-style:normal;font-weight:800;font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;color:var(--accent)}
+@keyframes plFill{0%,100%{height:34%}50%{height:82%}}
+.hero-pl h1{font-size:clamp(2.8rem,9vw,5rem);font-weight:700;margin:0;color:var(--ink);animation:plWiggle 6s ease-in-out infinite}
+@keyframes plWiggle{0%,100%{transform:rotate(-.8deg)}50%{transform:rotate(.8deg)}}
+.pl-tit{font-size:clamp(1.3rem,3.4vw,1.9rem);font-weight:800;color:var(--ink);margin:8px 0 0}
+.pl-tit .hl{color:var(--accent)}
+.hero-pl .hero-sub{color:var(--muted);text-shadow:none;margin:16px auto 28px}
+.hero-pl .hero-ctas{justify-content:center}
+
+/* burbujas de laboratorio subiendo */
+.pl-bubbles{position:absolute;inset:0;pointer-events:none;z-index:1}
+.pl-bubbles span{position:absolute;bottom:-70px;border-radius:50%;background:radial-gradient(circle at 32% 30%,#fff,#ffc4dd 55%,rgba(236,72,153,.35));box-shadow:0 0 14px rgba(236,72,153,.35);animation:plRise 8s ease-in infinite}
+.pl-bubbles span:nth-child(1){left:5%;width:40px;height:40px;animation-delay:0s}
+.pl-bubbles span:nth-child(2){left:16%;width:22px;height:22px;animation-delay:2.4s}
+.pl-bubbles span:nth-child(3){left:30%;width:30px;height:30px;animation-delay:1.2s}
+.pl-bubbles span:nth-child(4){left:44%;width:16px;height:16px;animation-delay:3.8s}
+.pl-bubbles span:nth-child(5){left:58%;width:36px;height:36px;animation-delay:.7s}
+.pl-bubbles span:nth-child(6){left:70%;width:20px;height:20px;animation-delay:5s}
+.pl-bubbles span:nth-child(7){left:82%;width:28px;height:28px;animation-delay:2.9s}
+.pl-bubbles span:nth-child(8){left:92%;width:18px;height:18px;animation-delay:4.4s}
+.pl-bubbles span:nth-child(9){left:38%;width:24px;height:24px;animation-delay:6.2s}
+@keyframes plRise{to{transform:translateY(-115vh)}}
+
+/* plato de petri: foto circular con líquido rosa */
+.pl-dish{position:relative;display:inline-block;margin-top:48px;animation:plFloat 6.5s ease-in-out infinite}
+@keyframes plFloat{0%,100%{transform:translateY(0) rotate(-1deg)}50%{transform:translateY(-12px) rotate(1deg)}}
+.pl-liquid{position:absolute;inset:-14px;border-radius:50%;background:linear-gradient(160deg,#ffb1d2,#ec4899 70%);box-shadow:0 26px 60px rgba(236,72,153,.45)}
+.pl-photo{position:relative;display:block;width:min(320px,72vw);height:min(320px,72vw);border-radius:50%;object-fit:cover;border:9px solid #fff}
+.pl-glass{position:absolute;inset:-14px;border-radius:50%;border:3px solid rgba(255,255,255,.65);pointer-events:none}
+.pl-drop{position:absolute;width:14px;height:14px;border-radius:50%;background:var(--accent);animation:plDrip 3s ease-in infinite}
+.pl-drop.d1{top:4px;left:26%}.pl-drop.d2{top:10px;right:22%;animation-delay:1.5s}
+@keyframes plDrip{0%{transform:translateY(0);opacity:1}100%{transform:translateY(46px);opacity:0}}
+
+.theme-thepinklabpr .footer{background:#471b31;border-top-color:#471b31}
+.theme-thepinklabpr .footer .foot-sub,.theme-thepinklabpr .foot-legal{color:#d49ab6}
+.theme-thepinklabpr .foot-legal{border-top-color:#5b2340}
+
+@media(max-width:640px){
+  .hero-pl{padding:112px 0 80px}
+  .pl-bubbles span:nth-child(n+6){display:none}
+}
+
+/* ---- contacto único ---- */
+.theme-thepinklabpr .ct-lab-row{display:flex;gap:20px;justify-content:center;flex-wrap:wrap;margin:30px 0;align-items:flex-end}
+.theme-thepinklabpr .ct-tube{width:130px;height:230px;border:4px solid var(--accent);border-top:0;border-radius:0 0 60px 60px;position:relative;text-decoration:none;color:var(--ink);display:flex;flex-direction:column;align-items:center;justify-content:flex-end;padding:18px 10px;overflow:hidden;background:rgba(255,255,255,.5)}
+.theme-thepinklabpr .ct-liquid{position:absolute;bottom:0;left:0;right:0;background:linear-gradient(180deg,#ffb3d1,#ff6fa5);animation:liquid 3s ease-in-out infinite;z-index:0}
+@keyframes liquid{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+.theme-thepinklabpr .ct-tube strong,.theme-thepinklabpr .ct-tube em{position:relative;z-index:1}
+.theme-thepinklabpr .ct-tube strong{font-size:.68rem;letter-spacing:.2em;text-transform:uppercase}
+.theme-thepinklabpr .ct-tube em{font-style:normal;font-weight:700;font-size:.82rem;word-break:break-word;margin-top:4px}
+.theme-thepinklabpr .ct-lab-map{max-width:520px;margin:0 auto}
+.theme-thepinklabpr .ct-lab-map iframe{width:100%;height:200px;border:0;border-radius:60px}

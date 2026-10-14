@@ -1,0 +1,31 @@
+FUENTES — JR Window Tint P.R. (jr-window-tint-pr)
+Fecha de build: 2026-10-12
+
+FOTOS (10/10 usadas, img/real/foto-1.jpg … foto-10.jpg):
+- Las 10 fotos llegaron YA DESCARGADAS en img/real/ (proceso de prospección, batch 4).
+- Fuente presunta: el Instagram del negocio (https://www.instagram.com/jrwindowtint_pr) y el reel
+  https://www.instagram.com/reel/DQhKrPNDtQi/ citados en el brief. El descargador no documentó
+  el origen exacto de cada archivo; todas las fotos muestran el taller, sus trabajos y su van
+  rotulada, por lo que se consideran fotos reales del negocio (cero stock).
+- Captions del sitio escritos a partir de lo que se ve en cada foto (cero inventos).
+
+LOGO (img/logo.jpg):
+- Llegó ya descargado en img/. Paleta derivada directamente de él:
+  negro mate de fondo, azul eléctrico del "JR" (#2f8bff aprox.), plata/cromo del texto.
+
+VIDEO HERO:
+- El brief ordena hero con <video ... poster="img/real/foto-1.jpg"><source src="img/hero-video.mp4">
+  usando el reel https://www.instagram.com/reel/DQhKrPNDtQi/ como video elite.
+- BRECHA HONESTA: el archivo img/hero-video.mp4 NO existe aún ("el mp4 llega después").
+  El tag <video> está montado con poster="img/real/foto-1.jpg", así que hasta que llegue el mp4
+  el hero muestra la foto-1 como respaldo sin errores visibles. PENDIENTE: descargar el reel a
+  img/hero-video.mp4 y el video arranca solo.
+
+DATOS DEL NEGOCIO (del brief, verificados contra las fotos donde aplica):
+- JR Window Tint P.R., Lares · Tel/WhatsApp 939-219-7715 · Instagram @jrwindowtint_pr
+- Dirección Carr 111 KM 23.4, Lares, PR (rotulada en el taller, foto-3/foto-10).
+- "Suntek Authorised Dealer" y servicios (tintes carbón/cerámica/plata, PPF, wraps,
+  detallado con cerámica líquida) visibles en los rótulos del taller y la van (foto-2, foto-3).
+- Horario Lun-Sáb 9am-5pm: aparece en el rótulo lateral del taller (foto-10, parcialmente
+  legible) y en el brief. Servicio a domicilio: confirmado por las fotos 1 y 9.
+- 1,045 seguidores: dato del brief (no verificado independientemente en esta build).

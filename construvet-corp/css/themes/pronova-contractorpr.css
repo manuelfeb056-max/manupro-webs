@@ -1,0 +1,38 @@
+/* PRONOVA CONTRACTOR - plano arquitectonico blueprint */
+.theme-pronova-contractorpr{--bg:#0e2a7a;--ink:#f2f6ff;--muted:#a9bde8;--accent:#ffffff}
+.theme-pronova-contractorpr .hero-slide img{filter:grayscale(.25) brightness(.72) sepia(.25) hue-rotate(185deg) saturate(1.6)}
+.theme-pronova-contractorpr .hero-scrim{background:linear-gradient(180deg,rgba(8,24,74,.85),rgba(8,24,74,.45) 55%,rgba(8,24,74,.92))}
+.theme-pronova-contractorpr .bp-grid{position:absolute;inset:0;z-index:3;pointer-events:none;opacity:.5;
+  background-image:linear-gradient(rgba(255,255,255,.10) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.10) 1px,transparent 1px),
+  linear-gradient(rgba(255,255,255,.22) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.22) 1px,transparent 1px);
+  background-size:22px 22px,22px 22px,110px 110px,110px 110px}
+.theme-pronova-contractorpr .bp-dims{position:absolute;inset:0;z-index:4;pointer-events:none}
+.theme-pronova-contractorpr .bp-dim{position:absolute;color:#fff;font-size:.72rem;letter-spacing:.22em;display:flex;align-items:center;gap:.6em;opacity:.85}
+.theme-pronova-contractorpr .bp-dim i{display:block;background:#fff;opacity:.85}
+.theme-pronova-contractorpr .bp-dim-h{top:64px;left:50%;transform:translateX(-50%);width:46%}
+.theme-pronova-contractorpr .bp-dim-h i{height:1px;flex:1;border-top:1px dashed #fff;background:none}
+.theme-pronova-contractorpr .bp-dim-v{left:14px;top:50%;transform:translateY(-50%) rotate(180deg);writing-mode:vertical-rl;height:40%}
+.theme-pronova-contractorpr .bp-dim-v i{width:1px;flex:1;border-left:1px dashed #fff;background:none}
+.theme-pronova-contractorpr .hero-content{z-index:5}
+.theme-pronova-contractorpr .bp-tag{display:inline-block;border:1px solid #fff;color:#fff;font-size:.78rem;letter-spacing:.14em;padding:.2em .7em;margin-right:.7em}
+.theme-pronova-contractorpr .hero-kicker{color:#dbe6ff;letter-spacing:.2em;text-transform:uppercase;font-size:.78rem}
+.theme-pronova-contractorpr .hero-title{font-family:Sora,sans-serif;font-weight:800;font-size:clamp(2.2rem,8.6vw,4.8rem);line-height:1.06;letter-spacing:-.01em;text-transform:uppercase}
+.theme-pronova-contractorpr .hero-title .hl{color:transparent;-webkit-text-stroke:2px #fff}
+.theme-pronova-contractorpr .hero-sub{color:#e4ebfb;max-width:34rem}
+.theme-pronova-contractorpr .bp-note{color:#b9c9ee;font-size:.88rem;margin-top:1rem;font-style:italic;border-left:2px dashed #fff;padding-left:.8rem}
+.theme-pronova-contractorpr .btn-accent{background:#fff;color:#0e2a7a;font-weight:800}
+.theme-pronova-contractorpr .btn-ghost{border:1px solid rgba(255,255,255,.6);color:#fff}
+.theme-pronova-contractorpr .section{background:var(--bg)}
+.theme-pronova-contractorpr .h2{font-family:Sora,sans-serif;font-weight:800;text-transform:uppercase}
+.theme-pronova-contractorpr .card{background:#123494;border:1px dashed rgba(255,255,255,.4);border-top:3px solid #fff}
+.theme-pronova-contractorpr .card-num{color:#fff;font-family:Sora,sans-serif}
+.theme-pronova-contractorpr .ticker{background:#fff;color:#0e2a7a;font-family:Sora,sans-serif;font-weight:700;letter-spacing:.08em}
+.theme-pronova-contractorpr .ct-bp{position:relative;background:#0b2266}
+.theme-pronova-contractorpr .ct-bp::before{content:"";position:absolute;inset:0;opacity:.35;pointer-events:none;
+  background-image:linear-gradient(rgba(255,255,255,.08) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.08) 1px,transparent 1px);background-size:28px 28px}
+.theme-pronova-contractorpr .ct-bp-phone{display:inline-block;font-family:Sora,sans-serif;font-weight:800;font-size:clamp(2rem,8.5vw,3.4rem);color:#fff;text-decoration:none;margin:.6rem 0;border-bottom:4px solid #fff;position:relative}
+.theme-pronova-contractorpr .ct-bp-sub{color:var(--muted);position:relative}
+.theme-pronova-contractorpr .ct-bp-sub a{color:#fff;font-weight:700}
+.theme-pronova-contractorpr .ct-bp-map{max-width:620px;margin:24px auto 0;position:relative;border:1px solid #fff;padding:8px}
+.theme-pronova-contractorpr .ct-bp-map iframe{width:100%;height:230px;border:0;display:block;filter:grayscale(1) sepia(.4) hue-rotate(180deg) saturate(2)}
+.theme-pronova-contractorpr .kicker{color:#fff}

@@ -1,0 +1,5 @@
+/* Higatoma Detailing — theme overrides (teal & gold identity lives in style.css) */
+body{
+  --accent:#d1a244;
+}
+::selection{background:#d1a244;color:#3a2a08}

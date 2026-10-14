@@ -1,0 +1,37 @@
+/* ARTE PROFESSIONAL ROOFING - artesanal premium: negro + cobre */
+.theme-arte-professional-roofing{--font-h:'Fraunces',serif;--font-b:'Inter',sans-serif;background:#12100d;color:#f3ede4}
+.theme-arte-professional-roofing h1,.theme-arte-professional-roofing h2,.theme-arte-professional-roofing .h2{font-family:'Fraunces',serif;font-weight:700;color:#f6efe2;letter-spacing:.005em}
+.theme-arte-professional-roofing .hl{color:#e09a52;font-style:italic}
+.theme-arte-professional-roofing .btn-accent{background:#b06a2c;border:2px solid #b06a2c;color:#fff}
+.theme-arte-professional-roofing .btn-ghost{border:2px solid #e09a52;color:#e09a52}
+.theme-arte-professional-roofing .kicker{color:#e09a52;letter-spacing:.22em}
+/* heroe: pinceladas de cobre sobre lienzo oscuro */
+.theme-arte-professional-roofing .arte-hero{position:relative;background:radial-gradient(1200px 600px at 50% -10%,#2a2218,#12100d);overflow:hidden;padding:110px 0 90px}
+.theme-arte-professional-roofing .arte-canvas{position:absolute;inset:auto 0 0 0;height:46%}
+.theme-arte-professional-roofing .arte-stroke{position:absolute;bottom:0;left:0;width:100%;height:100%;fill:none;stroke-linecap:round;animation:arte-flow 9s ease-in-out infinite alternate}
+.theme-arte-professional-roofing .arte-stroke.s1{stroke:#b06a2c;stroke-width:26;opacity:.5}
+.theme-arte-professional-roofing .arte-stroke.s2{stroke:#e09a52;stroke-width:16;opacity:.65;animation-delay:-3s}
+.theme-arte-professional-roofing .arte-stroke.s3{stroke:#7a4a1d;stroke-width:36;opacity:.35;animation-delay:-6s}
+@keyframes arte-flow{from{transform:translateX(-2%)}to{transform:translateX(2%)}}
+.theme-arte-professional-roofing .arte-inner{display:flex;gap:44px;align-items:center;position:relative;z-index:1}
+.theme-arte-professional-roofing .arte-frame{position:relative;flex:0 0 380px;max-width:42%}
+.theme-arte-professional-roofing .arte-frame img{width:100%;border-radius:14px;box-shadow:0 24px 60px rgba(0,0,0,.6);transform:rotate(-2.5deg)}
+.theme-arte-professional-roofing .arte-seal{position:absolute;top:-26px;right:-18px;background:#b06a2c;color:#fff;font-family:'Fraunces',serif;font-weight:700;font-size:15px;line-height:1.25;text-align:center;width:78px;height:78px;border-radius:50%;display:flex;align-items:center;justify-content:center;transform:rotate(10deg);box-shadow:0 8px 22px rgba(0,0,0,.5);border:2px dashed rgba(255,255,255,.5)}
+.theme-arte-professional-roofing .arte-copy h1{font-size:clamp(2.2rem,6vw,3.8rem);margin:6px 0}
+.theme-arte-professional-roofing .arte-tag{font-family:'Fraunces',serif;font-style:italic;font-size:clamp(1.1rem,2.6vw,1.5rem);color:#e09a52;margin:10px 0}
+.theme-arte-professional-roofing .hero-sub{color:#cfc3b0}
+.theme-arte-professional-roofing .card{background:#1c1813;border:1px solid #3a2f21;border-left:6px solid #b06a2c}
+.theme-arte-professional-roofing .card h3{color:#f6efe2}
+.theme-arte-professional-roofing .card p{color:#b9ac96}
+.theme-arte-professional-roofing .section{background:#12100d}
+/* contacto: el taller del artesano */
+.theme-arte-professional-roofing .ct-arte{position:relative;background:#0d0b09;overflow:hidden}
+.theme-arte-professional-roofing .ct-arte-brush{position:absolute;left:-40px;top:-40px;width:300px;height:300px;border-radius:50%;background:radial-gradient(circle,#b06a2c55,transparent 70%);pointer-events:none}
+.theme-arte-professional-roofing .ct-arte .kicker{color:#e09a52}
+.theme-arte-professional-roofing .ct-arte .h2{color:#f6efe2}
+.theme-arte-professional-roofing .ct-arte-phone{display:inline-block;font-family:'Fraunces',serif;font-weight:700;font-size:clamp(2rem,8.5vw,3.4rem);color:#e09a52;text-decoration:underline;text-decoration-color:#b06a2c;text-underline-offset:10px;text-decoration-thickness:3px;margin:12px 0}
+.theme-arte-professional-roofing .ct-arte-sub{color:#cfc3b0}
+.theme-arte-professional-roofing .ct-arte-sub a{color:#e09a52;font-weight:700}
+.theme-arte-professional-roofing .ct-arte-map{max-width:620px;margin:24px auto 0}
+.theme-arte-professional-roofing .ct-arte-map iframe{width:100%;height:230px;border:0;border-radius:4px;filter:sepia(.35) contrast(1.02)}
+@media(max-width:820px){.theme-arte-professional-roofing .arte-inner{flex-direction:column}.theme-arte-professional-roofing .arte-frame{flex:none;max-width:100%}}

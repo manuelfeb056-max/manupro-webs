@@ -1,0 +1,52 @@
+FUENTES — Sitio: luxenautostudio (Luxen Auto Studio)
+Fecha: 2026-10-12
+Instagram: https://www.instagram.com/luxenautostudio (1,744 seguidores, verificado por API)
+Teléfono: 939-245-9773 | Bio IG: "Los mejores en Detailing en Puerto Rico / Cerámicas · Detailing · PPF · Tintes / Servicios a domicilio en PR / Citas: 939-245-9773 o DM"
+
+Todas las fotos son trabajo REAL del negocio, descargadas de sus posts públicos de Instagram
+(método: página embed /p/[shortcode]/embed/ + URLs CDN directas, primera imagen de cada post).
+CERO stock. Cada archivo verificado: abre bien y pesa >50KB.
+
+foto-1.jpg (1080x1440) — Ferrari 812 V12 amarillo, detallado + resguardo
+  https://www.instagram.com/p/DYzRYpjFs1I/
+
+foto-2.jpg (1080x1440) — Lamborghini Huracán negro mate frente al logo del estudio
+  https://www.instagram.com/p/DZDLgf3FsMp/
+
+foto-3.jpg (1080x1440) — Porsche 911 Turbo S verde, brillo total
+  https://www.instagram.com/p/DZIGsbwlv_l/
+
+foto-4.jpg (3024x3024) — BMW X6 negro, corrección de pintura + cerámica de 3 años
+  https://www.instagram.com/p/DdKqXYUlhkh/
+
+foto-5.jpg (1080x1440) — Toyota RAV4 2026 nueva, cerámica de 7 años
+  https://www.instagram.com/p/DZNdSHwliBJ/
+
+foto-6.jpg (3024x3024) — BMW X1 negro, "Brillo que se nota. Protección que se siente."
+  https://www.instagram.com/p/DePigRXljyO/
+
+foto-7.jpg (1085x814) — Toyota Land Cruiser + Lexus GX550 ("His & His"), frente al estudio
+  (también usada en la sección "Nosotros")
+  https://www.instagram.com/p/DcExwFFljg0/
+
+foto-8.jpg (1080x1345) — Dodge Durango negro, gráfica propia del negocio
+  "LA DIFERENCIA SE VE CUANDO LE CAE AGUA." (slide 1 de carousel)
+  https://www.instagram.com/p/DdmitFmFsou/
+
+foto-9.jpg (3024x3024) — BMW 330i blanco, detallado a domicilio (Trujillo Alto)
+  https://www.instagram.com/p/DdkHkLuljup/
+
+foto-10.jpg (1080x1440) — Kia Sorento blanca, "Maintenance done right"
+  https://www.instagram.com/p/DWPdzJvFmem/
+
+img/logo.jpg — Logo OFICIAL del negocio (corona dorada + "LUXEN" blanco + "AUTO STUDIO" oro),
+  recortado de la foto real foto-2.jpg (pared del estudio). Nada inventado.
+  Paleta derivada: negro carbón #0b0b0d, oro champán #c9a24b, blanco cálido #f5f2ec.
+
+VIDEO HERO (mp4 pendiente):
+  El hero incluye el tag <video> listo con poster="img/real/foto-1.jpg" y
+  <source src="img/hero-video.mp4">. Cuando llegue el mp4 se coloca en img/hero-video.mp4.
+  Reel candidato principal: https://www.instagram.com/reel/Ddz1ad1zTbp/
+  (BMW X6, cerámica de 3 años, "Repelencia, protección y brillo").
+  Alternativa: https://www.instagram.com/reel/DeHVeukBTvA/
+  (BMW X1, corrección de pintura + cerámica, antes/después).

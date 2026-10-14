@@ -1,0 +1,63 @@
+FUENTES — AR Solutions — Auto Detailing Services (ar-solutions-detailing)
+Sitio: https://manuelfeb056-max.github.io/manupro-webs/ar-solutions-detailing/
+Construido: 2026-10-12 · Concepto: "RUTA OESTE" (mobile-service road concept)
+
+1. FOTOS (15 reales del negocio, cosechadas de su propio Instagram):
+   - Origen: instagram-cli posts --account-id 17841477365827904
+     --username ar_solutions_detailing --limit 20 (29 posts recibidos, 15 con
+     og:image válido descargado de la CDN de Instagram).
+   - Perfil: @ar_solutions_detailing — "AR Solutions | Auto Detailing Services"
+     (145 seguidores, 82 posts, cuenta pública).
+   - Bio (verificada 2026-10-12): AUTO DETAILING SERVICE / (787)530-1871 /
+     AREA SUR Y OESTE / Servicios a Domicilio / Trabajos por cita.
+   - img/hero.jpg — Jeep Wrangler al atardecer (post DQ9kOr8gHcQ, "Este Jeep vino
+     directo del fango en Los Pozos")
+   - img/t01.jpg — Toyota RAV4 protegida (post DSaW0SOAP36, "Recién comprada y
+     ya protegida")
+   - img/t02.jpg — Lavado exterior, capó brillante (post DS-VR6CgJvE)
+   - img/t03.jpg — Detalle de llanta/rin (post DWeUWg7gOcL)
+   - img/t04.jpg — Servicio frente a la casa del cliente (post DSII3BVgH9N)
+   - img/t05.jpg — Trabajo en marquesina (post DSX4ztRD_q1)
+   - img/t06.jpg — Frente con acabado brillante (post DTEXUvdj1ch)
+   - img/t07.jpg — Detailing exterior (post DWentHmj_SD)
+   - img/t08.jpg — Interior antes del full detail (post DSIlyF4jw2o)
+   - img/t09.jpg — Lavado exterior (post DRsxpP9jLUW)
+   - img/t10.jpg — Detailing completo (post DSNBIUzAKvk, Chevrolet Silverado Z71)
+   - img/fleet.jpg — Ford Transit de flota, de noche (post DSII3BVgH9N,
+     "Flota limpia, negocio que inspira confianza")
+   - img/nosotros.jpg — copia de t01 (sobre nosotros)
+   - img/cobertura.jpg — copia de t04 (sección cobertura)
+   - img/proceso.jpg — copia de t05 (sección proceso)
+   - img/logo.jpg — LOGO OFICIAL del negocio, foto de perfil de su Instagram
+     (150x150, fondo negro, auto cian + "AR SOLUTIONS / AUTO DETAILING SERVICES
+     / (787)530-1871"). Usado tal cual en header y footer, sin marco de fondo.
+   - Cero fotos stock/falsas. Ninguna foto de otro negocio.
+
+2. DATOS DEL NEGOCIO (todo verificado 2026-10-12, nada inventado):
+   - Nombre: AR Solutions — Auto Detailing Services
+   - Pueblo: Cabo Rojo, Puerto Rico (tags de ubicación en sus posts)
+   - Teléfono/WhatsApp: +1 787-530-1871 → wa.me/17875301871 (fuente: bio IG)
+   - Instagram: https://www.instagram.com/ar_solutions_detailing
+   - Servicios: auto detailing a domicilio, trabajos por cita, mobile service
+     área sur y oeste. "Protección & Brillo Esencial" es su nuevo servicio
+     anunciado en su IG (post DSTEu4rj6Lg).
+   - Cobertura: Área Sur y Oeste (fuente: bio IG). NO se inventaron pueblos.
+   - No tienen website propia.
+
+3. DECISIONES DE DISEÑO:
+   - Colores del LOGO oficial (regla standing 2026-10-12: branding para siempre
+     sale del logo): asfalto negro #0a0c0e + azul cian del logo #2fb3dd +
+     blanco. Cero paletas inventadas, cero uva/violeta.
+   - Tipografía condensada audaz (Oswald) + motivo de líneas punteadas de
+     carretera + ticker de ruta + mapa de cobertura construido en código.
+   - Logo oficial REAL en header y footer (directo, sin cuadro de fondo).
+   - Doctrina de estructura (2026-10-12): galería justo después del hero;
+     texto corto por sección, cada bloque de texto acompañado de recuadro con
+     foto real completa al lado; lightbox muestra la foto COMPLETA.
+   - Oferta Manupro en verde/negro/blanco con los 3 planes ($99/$150/$200,
+     tachados $300/$600/$1,000, "La más elegida" en $200).
+   - metrics.js con data-site="ar-solutions-detailing". Solo WhatsApp flotante
+     (botón del negocio 17875301871); el footer no lleva icono de WhatsApp.
+   - Estructura: hero → trabajos (justo después del hero) → proceso →
+     servicios → cobertura (mapa Sur y Oeste) → sobre nosotros → FAQ →
+     oferta → contacto → footer.

@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <circle cx="100" cy="100" r="97" fill="#0E6BA8"/>
+  <circle cx="100" cy="100" r="90" fill="none" stroke="#F5EFE0" stroke-width="4"/>
+  <path d="M14,128 q21,-20 43,0 t43,0 t43,0 t43,0 V200 H14 Z" fill="#F5EFE0" opacity="0.92"/>
+  <path d="M14,146 q21,-20 43,0 t43,0 t43,0 t43,0 V200 H14 Z" fill="#0E6BA8" opacity="0.28"/>
+  <text x="100" y="108" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-weight="800" font-size="58" fill="#F5EFE0">SL</text>
+</svg>

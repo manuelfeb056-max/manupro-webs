@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://manuelfeb056-max.github.io/manupro-webs/flex-seal-roof-coating/sitemap.xml

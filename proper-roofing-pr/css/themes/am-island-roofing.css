@@ -1,0 +1,35 @@
+/* A&M ISLAND ROOFING - isla protegida bajo escudo: teal + arena */
+.theme-am-island-roofing{--bg:#0c2e2c;--sand:#f0e2c8;--ink:#f7f4ec;--muted:#9db8ae;--accent:#12c2ae}
+.theme-am-island-roofing .hero-slide img{filter:saturate(1.05) brightness(.82)}
+.theme-am-island-roofing .hero-scrim{background:linear-gradient(180deg,rgba(6,32,30,.7),rgba(6,32,30,.3) 50%,rgba(6,32,30,.92))}
+.theme-am-island-roofing .shield-dome{position:absolute;left:50%;bottom:0;transform:translateX(-50%);width:min(120%,900px);z-index:3;pointer-events:none;opacity:.9}
+.theme-am-island-roofing .sd-arc{stroke:var(--accent);stroke-width:2;opacity:.35;stroke-dasharray:6 8;animation:shieldpulse 5s ease-in-out infinite}
+.theme-am-island-roofing .sd-2{animation-delay:1.2s;stroke-width:1.5}
+.theme-am-island-roofing .sd-3{animation-delay:2.4s;stroke-width:1}
+@keyframes shieldpulse{0%,100%{opacity:.18}50%{opacity:.55}}
+.theme-am-island-roofing .island-waves{position:absolute;left:0;right:0;bottom:0;z-index:3;pointer-events:none;display:flex;flex-direction:column;gap:6px;opacity:.5}
+.theme-am-island-roofing .island-waves i{display:block;height:2px;background:repeating-linear-gradient(90deg,var(--sand) 0 26px,transparent 26px 46px);animation:wave 9s linear infinite}
+.theme-am-island-roofing .island-waves i:nth-child(2){animation-duration:13s;opacity:.6}
+.theme-am-island-roofing .island-waves i:nth-child(3){animation-duration:17s;opacity:.35}
+@keyframes wave{to{transform:translateX(-92px)}}
+.theme-am-island-roofing .hero-content{z-index:5}
+.theme-am-island-roofing .hero-kicker{color:var(--sand);letter-spacing:.24em;text-transform:uppercase;font-size:.78rem}
+.theme-am-island-roofing .hero-title{font-family:"Bricolage Grotesque",sans-serif;font-weight:800;font-size:clamp(2.3rem,9.4vw,5.2rem);line-height:1.02}
+.theme-am-island-roofing .hero-title .hl{color:var(--accent);text-shadow:0 0 30px rgba(18,194,174,.5)}
+.theme-am-island-roofing .hero-sub{color:#eef6f2;max-width:34rem}
+.theme-am-island-roofing .shield-note{color:var(--sand);font-size:.92rem;margin-top:1.1rem;display:flex;align-items:center;gap:.7em;flex-wrap:wrap}
+.theme-am-island-roofing .shield-chip{background:var(--accent);color:#062826;font-weight:800;font-size:.8rem;letter-spacing:.1em;padding:.3em .8em;border-radius:999px}
+.theme-am-island-roofing .btn-accent{background:var(--accent);color:#062826;font-weight:800}
+.theme-am-island-roofing .section{background:var(--bg)}
+.theme-am-island-roofing .h2{font-family:"Bricolage Grotesque",sans-serif;font-weight:800}
+.theme-am-island-roofing .card{background:#103b38;border:1px solid #1e544f;border-radius:18px 18px 18px 4px}
+.theme-am-island-roofing .card-num{color:var(--accent)}
+.theme-am-island-roofing .ticker{background:var(--sand);color:#0c2e2c;font-weight:800;letter-spacing:.06em}
+.theme-am-island-roofing .ct-shield{background:radial-gradient(ellipse 80% 60% at 50% 0%,#14514d 0%,var(--bg) 70%)}
+.theme-am-island-roofing .ct-shield-phone{display:inline-block;font-family:"Bricolage Grotesque",sans-serif;font-weight:800;font-size:clamp(2rem,8.5vw,3.4rem);color:var(--sand);text-decoration:none;margin:.6rem 0}
+.theme-am-island-roofing .ct-shield-phone:hover{color:var(--accent)}
+.theme-am-island-roofing .ct-shield-sub{color:var(--muted)}
+.theme-am-island-roofing .ct-shield-sub a{color:var(--accent);font-weight:700}
+.theme-am-island-roofing .ct-shield-map{max-width:620px;margin:24px auto 0;border:2px solid var(--accent);border-radius:20px;overflow:hidden}
+.theme-am-island-roofing .ct-shield-map iframe{width:100%;height:230px;border:0;display:block}
+.theme-am-island-roofing .kicker{color:var(--accent)}

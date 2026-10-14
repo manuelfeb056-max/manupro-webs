@@ -1,0 +1,37 @@
+/* SELLADO DE TECHOS PR - el rolo en movimiento: verde sello + blanco */
+.theme-sellado-de-techos-pr{--font-h:'IBM Plex Sans',sans-serif;--font-b:'Inter',sans-serif;background:#ffffff;color:#14301f}
+.theme-sellado-de-techos-pr h1,.theme-sellado-de-techos-pr h2,.theme-sellado-de-techos-pr .h2{font-family:'IBM Plex Sans',sans-serif;font-weight:700;color:#123b22;letter-spacing:-.01em}
+.theme-sellado-de-techos-pr .hl{color:#1f9d4d}
+.theme-sellado-de-techos-pr .btn-accent{background:#1f9d4d;border:2px solid #1f9d4d}
+.theme-sellado-de-techos-pr .btn-ghost{border:2px solid #1f9d4d;color:#1f9d4d}
+.theme-sellado-de-techos-pr .kicker{color:#1f9d4d;font-weight:800;letter-spacing:.16em}
+/* heroe: pistas del rolo en movimiento */
+.theme-sellado-de-techos-pr .sd-hero{position:relative;background:linear-gradient(180deg,#f3faf5,#ffffff);overflow:hidden;padding:110px 0 100px}
+.theme-sellado-de-techos-pr .sd-roll-track{position:absolute;inset:0;pointer-events:none;overflow:hidden}
+.theme-sellado-de-techos-pr .sd-roll{position:absolute;left:-120px;width:92px;height:92px;border-radius:50%;background:radial-gradient(circle at 35% 35%,#3fce6f,#1f9d4d 65%);box-shadow:inset -8px -8px 0 rgba(0,0,0,.12);animation:sd-rollx 11s linear infinite}
+.theme-sellado-de-techos-pr .sd-roll::after{content:"";position:absolute;left:88px;top:20px;width:60vw;height:52px;background:linear-gradient(90deg,rgba(31,157,77,.28),rgba(31,157,77,.05));border-radius:0 30px 30px 0}
+.theme-sellado-de-techos-pr .sd-roll.r2{top:30%;animation-duration:15s;animation-delay:-6s}
+.theme-sellado-de-techos-pr .sd-roll.r3{top:66%;animation-duration:19s;animation-delay:-11s;opacity:.75}
+@keyframes sd-rollx{from{left:-140px;transform:rotate(0)}to{left:110%;transform:rotate(1080deg)}}
+.theme-sellado-de-techos-pr .sd-inner{display:flex;gap:40px;align-items:center;position:relative;z-index:1}
+.theme-sellado-de-techos-pr .sd-copy h1{font-size:clamp(2rem,5.6vw,3.4rem);margin:6px 0}
+.theme-sellado-de-techos-pr .sd-tag{font-weight:700;font-size:clamp(1.1rem,2.8vw,1.6rem);color:#1f9d4d;margin:8px 0;text-transform:uppercase}
+.theme-sellado-de-techos-pr .hero-sub{color:#3d5a47}
+.theme-sellado-de-techos-pr .sd-photo{flex:0 0 360px;max-width:40%}
+.theme-sellado-de-techos-pr .sd-photo img{width:100%;border-radius:50% 50% 46% 46%;border:8px solid #1f9d4d;box-shadow:0 18px 44px rgba(31,157,77,.28)}
+.theme-sellado-de-techos-pr .sd-photo figcaption{text-align:center;font-size:.85rem;color:#5a7263;margin-top:8px;font-style:italic}
+.theme-sellado-de-techos-pr .card{background:#f3faf5;border-top:6px solid #1f9d4d}
+.theme-sellado-de-techos-pr .card h3{color:#123b22}
+.theme-sellado-de-techos-pr .card p{color:#3d5a47}
+.theme-sellado-de-techos-pr .section{background:#ffffff}
+/* contacto: la huella del rolo */
+.theme-sellado-de-techos-pr .ct-rollo{position:relative;background:#123b22;color:#fff;overflow:hidden}
+.theme-sellado-de-techos-pr .ct-rollo::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(90deg,transparent 0 46px,rgba(255,255,255,.06) 46px 92px);pointer-events:none}
+.theme-sellado-de-techos-pr .ct-rollo .kicker{color:#7fe3a3}
+.theme-sellado-de-techos-pr .ct-rollo .h2{color:#fff}
+.theme-sellado-de-techos-pr .ct-rollo-phone{display:inline-block;font-family:'IBM Plex Sans',sans-serif;font-weight:700;font-size:clamp(2.1rem,9vw,3.6rem);color:#fff;text-decoration:none;background:#1f9d4d;border-radius:70px;padding:8px 38px;margin:14px 0;box-shadow:0 14px 34px rgba(0,0,0,.3)}
+.theme-sellado-de-techos-pr .ct-rollo-sub{color:#d7ecdf}
+.theme-sellado-de-techos-pr .ct-rollo-sub a{color:#7fe3a3;font-weight:700}
+.theme-sellado-de-techos-pr .ct-rollo-map{max-width:640px;margin:24px auto 0}
+.theme-sellado-de-techos-pr .ct-rollo-map iframe{width:100%;height:240px;border:0;border-radius:24px}
+@media(max-width:820px){.theme-sellado-de-techos-pr .sd-inner{flex-direction:column}.theme-sellado-de-techos-pr .sd-photo{flex:none;max-width:100%}}

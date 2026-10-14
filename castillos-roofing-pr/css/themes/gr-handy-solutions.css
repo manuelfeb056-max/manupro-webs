@@ -1,0 +1,33 @@
+/* GR HANDY SOLUTIONS — split editorial */
+body{font-family:'Work Sans',sans-serif}
+.logo,.sec-title,.hero-split-text h1{font-family:'Archivo Black',sans-serif}
+.hero-split{padding:140px 0 80px;position:relative;overflow:hidden}
+.hero-split-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:44px;align-items:center}
+.hero-split-text h1{font-size:clamp(2.4rem,6vw,4rem);line-height:1.02;text-transform:uppercase;margin:0 0 6px}
+.hero-split .hero-sub{margin:18px 0 30px}
+.hero-split-photos{position:relative;height:480px}
+.hsp{position:absolute;object-fit:cover;border-radius:18px;border:1px solid var(--line);box-shadow:0 24px 60px rgba(0,0,0,.5)}
+.hsp1{width:62%;height:72%;left:0;top:0;transform:rotate(-4deg)}
+.hsp2{width:54%;height:62%;right:0;top:10%;transform:rotate(3deg)}
+.hsp3{width:50%;height:54%;left:14%;bottom:0;transform:rotate(-2deg)}
+.hero-proof{margin-top:20px;color:var(--muted);font-weight:600;font-size:.92rem}
+@media(max-width:860px){.hero-split-grid{grid-template-columns:1fr}.hero-split-photos{height:340px;margin-top:10px}}
+/* logo: cuadrado con sombra dura */
+/* identidad: crema de pintor */
+.theme-gr-handy-solutions{--bg:#faf6ee;--bg2:#f3ecdc;--card:#ffffff;--ink:#262019;--muted:#7c7261;--line:#e7dbc2}
+.theme-gr-handy-solutions .header{background:rgba(250,246,238,.88)}
+.theme-gr-handy-solutions .hero-sub{color:var(--muted);text-shadow:none}
+.theme-gr-handy-solutions .cform input,.theme-gr-handy-solutions .cform select,.theme-gr-handy-solutions .cform textarea{background:#fff}
+.theme-gr-handy-solutions .stat-num{font-family:'Archivo Black',sans-serif}
+.theme-gr-handy-solutions .footer{background:#211c14;border-top-color:#211c14}
+.theme-gr-handy-solutions .footer .foot-sub,.theme-gr-handy-solutions .foot-legal{color:#b7a98f}
+.theme-gr-handy-solutions .foot-legal{border-top-color:#3a3125}
+
+/* ---- contacto único ---- */
+.theme-gr-handy-solutions .ct-toolbox-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-top:24px}
+.theme-gr-handy-solutions .ct-tool{background:linear-gradient(165deg,#2b2f36,#17191d);border:1px solid #3a4048;border-radius:12px;padding:24px 20px;text-decoration:none;color:#eef;box-shadow:inset 0 2px 0 rgba(255,255,255,.06)}
+.theme-gr-handy-solutions .ct-tool-t{display:block;font-size:.7rem;letter-spacing:.28em;text-transform:uppercase;color:var(--accent);margin-bottom:8px}
+.theme-gr-handy-solutions .ct-tool strong{font-size:1.1rem;word-break:break-word}
+.theme-gr-handy-solutions a.ct-tool strong{color:#fff}
+.theme-gr-handy-solutions .ct-tool-map{padding:0;overflow:hidden;min-height:180px}
+.theme-gr-handy-solutions .ct-tool-map iframe{width:100%;height:100%;min-height:180px;border:0;display:block}

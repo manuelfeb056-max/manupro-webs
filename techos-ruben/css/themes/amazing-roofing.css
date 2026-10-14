@@ -1,0 +1,33 @@
+/* AMAZING ROOFING - sello certificado Danosa: azul + blanco */
+.theme-amazing-roofing{--font-h:'Black Ops One',sans-serif;--font-b:'Inter',sans-serif;background:#f2f6fc;color:#0d1b2a}
+.theme-amazing-roofing h1,.theme-amazing-roofing h2,.theme-amazing-roofing .h2{font-family:'Black Ops One',sans-serif;color:#0d2a6e;letter-spacing:.01em}
+.theme-amazing-roofing .hero-title{font-family:'Black Ops One',sans-serif}
+.theme-amazing-roofing .hl{color:#1b5fd6}
+.theme-amazing-roofing .btn-accent{background:#1b5fd6;border:2px solid #1b5fd6}
+.theme-amazing-roofing .btn-ghost{border:2px solid #0d2a6e;color:#0d2a6e}
+.theme-amazing-roofing .kicker{color:#1b5fd6;font-weight:800;letter-spacing:.18em}
+/* heroe: badge de certificacion girando sobre blueprint */
+.theme-amazing-roofing .am-hero{background:#eaf1fb;min-height:96vh}
+.theme-amazing-roofing .hero-slides .hero-slide img{filter:saturate(1.1)}
+.theme-amazing-roofing .am-blueprint{position:absolute;inset:0;background-image:linear-gradient(rgba(27,95,214,.08) 1px,transparent 1px),linear-gradient(90deg,rgba(27,95,214,.08) 1px,transparent 1px);background-size:42px 42px;pointer-events:none}
+.theme-amazing-roofing .am-inner{text-align:center;padding:120px 20px 90px}
+.theme-amazing-roofing .am-badge{display:inline-block;width:150px;height:150px;position:relative;margin-bottom:18px}
+.theme-amazing-roofing .am-badge-ring{width:100%;height:100%;animation:am-spin 22s linear infinite}
+.theme-amazing-roofing .am-badge-outer{fill:#1b5fd6}
+.theme-amazing-roofing .am-badge-inner{fill:#fff}
+.theme-amazing-roofing .am-badge-text{font-family:'Inter',sans-serif;font-size:12.5px;font-weight:800;letter-spacing:2.5px;fill:#fff}
+.theme-amazing-roofing .am-badge-star{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:#1b5fd6;font-size:34px}
+@keyframes am-spin{to{transform:rotate(360deg)}}
+.theme-amazing-roofing .hero-title{color:#0d2a6e}
+.theme-amazing-roofing .hero-sub{color:#33465e;max-width:620px;margin:0 auto}
+.theme-amazing-roofing .card{border-top:6px solid #1b5fd6;background:#fff;box-shadow:0 10px 30px rgba(27,95,214,.12)}
+/* contacto: la medalla del sellado */
+.theme-amazing-roofing .ct-badge{position:relative;background:linear-gradient(180deg,#0d2a6e,#1b5fd6);overflow:hidden;color:#fff}
+.theme-amazing-roofing .ct-badge-ribbon{position:absolute;top:0;left:50%;transform:translateX(-50%);width:180px;height:56px;background:repeating-linear-gradient(45deg,#fff 0 14px,#eaf1fb 14px 28px);clip-path:polygon(0 0,100% 0,88% 100%,12% 100%);opacity:.95}
+.theme-amazing-roofing .ct-badge .kicker{color:#bcd3f5}
+.theme-amazing-roofing .ct-badge .h2{color:#fff}
+.theme-amazing-roofing .ct-badge-phone{display:inline-block;font-family:'Black Ops One',sans-serif;font-size:clamp(2rem,9vw,3.6rem);color:#fff;text-decoration:none;background:#fff;color:#0d2a6e;padding:10px 34px;border-radius:999px;margin:14px 0;box-shadow:0 12px 30px rgba(0,0,0,.35)}
+.theme-amazing-roofing .ct-badge-sub{color:#dbe7fa}
+.theme-amazing-roofing .ct-badge-sub a{color:#fff;font-weight:700}
+.theme-amazing-roofing .ct-badge-map{max-width:640px;margin:26px auto 0}
+.theme-amazing-roofing .ct-badge-map iframe{width:100%;height:240px;border:6px solid #fff;border-radius:18px}

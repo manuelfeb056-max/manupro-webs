@@ -1,0 +1,31 @@
+/* OSCAR ROOFING PR — sello de garantía circular giratorio; azul marino + oro */
+.hero-seal{background:#0b1530}
+.sl-scrim{background:linear-gradient(180deg,rgba(8,13,32,.7),rgba(8,13,32,.92))}
+.hero-seal .hero-content{text-align:center;margin:0 auto;max-width:860px}
+.sl-badge{position:relative;width:min(230px,52vw);aspect-ratio:1;margin:0 auto 26px}
+.sl-ring{position:absolute;inset:0;width:100%;height:100%;animation:slSpin 22s linear infinite}
+@keyframes slSpin{to{transform:rotate(360deg)}}
+.sl-ring text{fill:#c9a227;font-size:16.5px;letter-spacing:2.6px;font-weight:800;font-family:'Arvo',serif;text-transform:uppercase}
+.sl-logo{position:absolute;inset:24%;width:52%;height:52%;object-fit:cover;border-radius:50%;border:4px solid #c9a227;box-shadow:0 0 40px rgba(201,162,39,.5)}
+.sl-star{position:absolute;left:50%;bottom:-4px;transform:translateX(-50%);background:#c9a227;color:#0b1530;font-family:'Arvo',serif;font-weight:700;font-size:.8rem;letter-spacing:.18em;padding:6px 18px;border-radius:99px;white-space:nowrap;box-shadow:0 8px 24px rgba(201,162,39,.45)}
+.sl-title{font-family:'Arvo',serif;font-weight:700;color:#fff;font-size:clamp(2rem,4.6vw,3.4rem);line-height:1.1}
+.sl-title .hl{color:#c9a227}
+.hero-seal .hero-kicker{color:#c9a227}
+.hero-seal .hero-sub{color:#c3cbe0;max-width:52ch;margin-left:auto;margin-right:auto}
+.hero-seal .hero-ctas{justify-content:center}
+.hero-seal .btn-accent{background:linear-gradient(180deg,#d9b545,#a8831f)!important;border:0!important;color:#0b1530!important;font-weight:800}
+.hero-seal .btn-ghost{border-color:#c9a227!important;color:#c9a227!important}
+/* logo: círculo dorado */
+.logo-img img{width:46px;height:46px;border-radius:50%;object-fit:cover;border:3px solid #c9a227;box-shadow:0 0 14px rgba(201,162,39,.55)}
+.logo-img{font-family:'Arvo',serif;font-weight:700}
+/* ---- contacto único ---- */
+.theme-oscar-roofing-pr .ct-seal{background:radial-gradient(700px 380px at 50% 0,rgba(201,162,39,.12),transparent 70%),#0b1530;position:relative;overflow:hidden}
+.theme-oscar-roofing-pr .ct-seal-ring{width:120px;height:120px;margin:0 auto 6px;border-radius:50%;border:3px solid #c9a227;display:flex;align-items:center;justify-content:center;flex-direction:column;color:#c9a227;font-family:'Arvo',serif;animation:slSpin 30s linear infinite}
+.theme-oscar-roofing-pr .ct-seal-ring b{font-size:1.6rem;animation:slSpin 30s linear infinite reverse}
+.theme-oscar-roofing-pr .ct-seal-ring small{font-size:.6rem;letter-spacing:.2em;animation:slSpin 30s linear infinite reverse}
+.theme-oscar-roofing-pr .ct-seal-phone{display:inline-block;font-family:'Arvo',serif;font-weight:700;font-size:clamp(2rem,8.5vw,3.4rem);color:#fff;text-decoration:none;margin:8px 0}
+.theme-oscar-roofing-pr .ct-seal-phone:hover{color:#c9a227}
+.theme-oscar-roofing-pr .ct-seal-sub{color:#c3cbe0}
+.theme-oscar-roofing-pr .ct-seal-sub a{color:#c9a227;font-weight:700}
+.theme-oscar-roofing-pr .ct-seal-map{max-width:620px;margin:24px auto 0}
+.theme-oscar-roofing-pr .ct-seal-map iframe{width:100%;height:230px;border:2px solid #c9a227;border-radius:50%;filter:saturate(.9)}

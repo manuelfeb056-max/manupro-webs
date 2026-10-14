@@ -1,0 +1,74 @@
+/* ISLA IMAGEN ESTUDIO — viewfinder de cámara, tema oscuro elegante */
+body{font-family:'Jost',sans-serif}
+.logo,.sec-title{font-family:'Cormorant Garamond',serif;font-weight:700;letter-spacing:.02em}
+
+.ii-hero{padding:110px 0 80px;background:var(--bg)}
+.ii-frame{position:relative;border-radius:20px;overflow:hidden;min-height:min(72vw,560px);
+  box-shadow:0 34px 90px rgba(0,0,0,.6)}
+.ii-photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+
+/* overlay de gradiente para el texto */
+.ii-frame::before{content:"";position:absolute;inset:0;z-index:1;
+  background:linear-gradient(to top,rgba(8,8,12,.88) 0%,rgba(8,8,12,.35) 45%,rgba(8,8,12,.15) 100%)}
+
+/* esquinas del visor */
+.ii-corner{position:absolute;width:34px;height:34px;z-index:3;animation:pulse 3s ease-in-out infinite}
+.ii-c1{top:20px;left:20px;border-top:3px solid #fff;border-left:3px solid #fff;border-top-left-radius:6px}
+.ii-c2{top:20px;right:20px;border-top:3px solid #fff;border-right:3px solid #fff;border-top-right-radius:6px}
+.ii-c3{bottom:20px;left:20px;border-bottom:3px solid #fff;border-left:3px solid #fff;border-bottom-left-radius:6px}
+.ii-c4{bottom:20px;right:20px;border-bottom:3px solid #fff;border-right:3px solid #fff;border-bottom-right-radius:6px}
+
+/* punto central de enfoque */
+.ii-focus{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:44px;height:44px;z-index:3;animation:pulse 3s ease-in-out infinite}
+.ii-focus::before,.ii-focus::after{content:"";position:absolute;width:12px;height:12px;border-color:#fff;border-style:solid}
+.ii-focus::before{top:0;left:0;border-width:3px 0 0 3px}
+.ii-focus::after{bottom:0;right:0;border-width:0 3px 3px 0}
+
+/* diafragma girando lento */
+.ii-aperture{position:absolute;top:24px;right:24px;width:120px;height:120px;z-index:3;opacity:.5;
+  animation:spin 40s linear infinite}
+
+/* flash sutil */
+.ii-flash{position:absolute;inset:0;background:#fff;opacity:0;z-index:2;pointer-events:none;animation:iiFlash 8s infinite}
+@keyframes iiFlash{0%,92%,100%{opacity:0}95%{opacity:.25}}
+
+/* texto superpuesto */
+.ii-meta{position:absolute;left:0;right:0;bottom:0;z-index:4;padding:40px 44px;text-align:left}
+.ii-kicker{color:var(--accent);text-transform:uppercase;letter-spacing:.3em;font-size:.78rem;font-weight:600;margin-bottom:14px}
+.ii-meta h1{font-family:'Cormorant Garamond',serif;font-weight:700;font-size:clamp(2.8rem,9vw,5.4rem);
+  line-height:1;margin:0 0 12px;color:#fff}
+.ii-meta .hero-sub{color:rgba(244,242,250,.85);margin:0 0 26px;max-width:52ch}
+
+/* tira de datos de cámara */
+.ii-data{display:flex;align-items:center;gap:14px;margin-top:20px;font-family:'Jost',sans-serif;
+  letter-spacing:.32em;font-size:.82rem;color:var(--muted);text-transform:uppercase}
+.ii-rec{width:11px;height:11px;border-radius:50%;background:#e5484d;animation:pulse 1.4s ease-in-out infinite}
+
+/* tema oscuro */
+.theme-islaimagen-estudio{--bg:#101014;--bg2:#17171d;--card:#1c1c23;--ink:#f4f2fa;--muted:#a098b8;--line:rgba(255,255,255,.09);--accent:#d4a24e}
+.theme-islaimagen-estudio .header{background:rgba(16,16,20,.9);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.theme-islaimagen-estudio .btn-accent{background:var(--accent);color:#fff}
+.theme-islaimagen-estudio .btn-ghost{border:2px solid rgba(255,255,255,.5);color:#fff;background:transparent}
+
+/* logo: marco grueso offset */
+  border-radius:10px;box-shadow:7px 7px 0 var(--accent);transform:rotate(3deg);display:block}
+
+@media(max-width:640px){
+  .ii-hero{padding:96px 0 60px}
+  .ii-frame{min-height:120vw}
+  .ii-meta{padding:28px 24px}
+  .ii-aperture{width:84px;height:84px;top:16px;right:16px}
+  .ii-corner{width:26px;height:26px}
+  .ii-c1,.ii-c3{left:14px}
+  .ii-c2,.ii-c4{right:14px}
+  .ii-c1,.ii-c2{top:14px}
+  .ii-c3,.ii-c4{bottom:14px}
+}
+
+/* ---- contacto único ---- */
+.theme-islaimagen-estudio .ct-film-strip{display:flex;gap:0;justify-content:center;margin:26px auto;max-width:900px;background:#0d0d0f;padding:18px 14px;border-radius:6px;overflow-x:auto}
+.theme-islaimagen-estudio .ct-frame{flex:0 0 240px;background:#161618;color:#f2ede4;text-decoration:none;padding:26px 18px;margin:0 8px;position:relative;border-top:12px dotted #0d0d0f;border-bottom:12px dotted #0d0d0f;text-align:center}
+.theme-islaimagen-estudio .ct-frame span{display:block;font-size:.68rem;letter-spacing:.3em;text-transform:uppercase;color:var(--accent);margin-bottom:10px}
+.theme-islaimagen-estudio .ct-frame strong{font-size:1.05rem;word-break:break-word}
+.theme-islaimagen-estudio .ct-film-map{max-width:700px;margin:0 auto}
+.theme-islaimagen-estudio .ct-film-map iframe{width:100%;height:220px;border:0;border-radius:8px}

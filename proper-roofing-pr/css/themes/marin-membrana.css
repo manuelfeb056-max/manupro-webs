@@ -1,0 +1,47 @@
+/* MARÍN MEMBRANA — diagrama del sistema por capas; azul + blanco */
+.theme-marin-membrana{--bg:#f2f7fd;--bg2:#e6eef9;--card:#ffffff;--ink:#0d1e33;--muted:#4e647f;--line:rgba(13,30,51,.12)}
+.hero-layers{position:relative;min-height:100vh;min-height:100svh;display:flex;flex-direction:column;justify-content:center;overflow:hidden}
+.hero-layers .ly-bgslides{position:absolute;inset:0;z-index:0;opacity:.28}
+.ly-scrim{background:linear-gradient(100deg,rgba(242,247,253,.97) 30%,rgba(242,247,253,.75) 60%,rgba(242,247,253,.45))!important;z-index:1}
+.ly-grid{position:relative;z-index:2;display:grid;grid-template-columns:1.05fr .95fr;gap:50px;align-items:center;min-height:100vh;min-height:100svh;padding:120px 0 90px}
+.ly-title{font-family:'Josefin Sans',sans-serif;font-weight:700;color:#0d1e33;font-size:clamp(2.2rem,4.8vw,3.6rem);line-height:1.05}
+.ly-title .hl{color:#1f6fd6;position:relative}
+.hero-layers .hero-kicker{color:#1f6fd6}
+.hero-layers .hero-sub{color:#4e647f;max-width:46ch}
+.hero-layers .btn-ghost{border-color:#1f6fd6!important;color:#1f6fd6!important}
+.ly-stack{max-width:420px;margin-left:auto;width:100%}
+.ly-layer{position:relative;border-radius:16px;padding:16px 22px;margin-bottom:14px;color:#fff;font-size:.95rem;box-shadow:0 16px 36px rgba(31,111,214,.22);animation:lyFloat 6s ease-in-out infinite;transition:transform .3s}
+.ly-layer b{display:block;font-size:.72rem;letter-spacing:.24em;text-transform:uppercase;opacity:.85;font-weight:700}
+.ly-layer span{font-weight:600}
+.ly-layer:hover{transform:translateX(-10px)!important}
+.ly-l1{background:linear-gradient(120deg,#5b8bd6,#1f6fd6);animation-delay:0s;margin-right:12%}
+.ly-l2{background:linear-gradient(120deg,#3f7cd4,#1a5cb8);animation-delay:.8s;margin-right:8%}
+.ly-l3{background:linear-gradient(120deg,#2f6fd0,#154e9e);animation-delay:1.6s;margin-right:4%}
+.ly-l4{background:linear-gradient(120deg,#1f6fd6,#0f3f82);animation-delay:2.4s;margin-right:0}
+@keyframes lyFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-9px)}}
+.ly-note{margin-top:18px;color:#4e647f;font-size:.9rem;font-style:italic}
+.ly-bgslides .hero-slide{position:absolute;inset:0;opacity:0;transition:opacity 1.2s}
+.ly-bgslides .hero-slide.active{opacity:1}
+.ly-bgslides .hero-slide img{width:100%;height:100%;object-fit:cover}
+.hero-layers .hero-dots{position:absolute;bottom:26px;left:50%;transform:translateX(-50%);z-index:5;display:flex;gap:8px}
+.hero-layers .hero-dots button{width:10px;height:10px;border-radius:50%;border:0;background:rgba(31,111,214,.3);cursor:pointer}
+.hero-layers .hero-dots button.on{background:#1f6fd6}
+.hero-layers .scroll-hint{border-color:#1f6fd6}
+.hero-layers .scroll-hint span{background:#1f6fd6}
+@media(max-width:920px){.ly-grid{grid-template-columns:1fr;gap:30px}.ly-stack{margin:0 auto}}
+/* logo: hexágono */
+.logo-img img{width:48px;height:48px;object-fit:cover;clip-path:polygon(25% 0,75% 0,100% 50%,75% 100%,25% 100%,0 50%);border:0}
+.logo-img{font-family:'Josefin Sans',sans-serif;font-weight:700;color:#0d1e33}
+/* ---- contacto único ---- */
+.theme-marin-membrana .ct-layers{background:linear-gradient(180deg,#f2f7fd,#e6eef9);color:#0d1e33;position:relative;overflow:hidden}
+.theme-marin-membrana .ct-stack-mini{max-width:520px;margin:0 auto 8px}
+.theme-marin-membrana .ct-stack-mini div{border-radius:12px;padding:10px 18px;margin-bottom:8px;color:#fff;font-weight:600;font-size:.9rem}
+.theme-marin-membrana .ct-stack-mini div:nth-child(1){background:#5b8bd6;margin-right:14%}
+.theme-marin-membrana .ct-stack-mini div:nth-child(2){background:#3f7cd4;margin-right:7%}
+.theme-marin-membrana .ct-stack-mini div:nth-child(3){background:#1f6fd6}
+.theme-marin-membrana .ct-layers-phone{display:inline-block;font-family:'Josefin Sans',sans-serif;font-weight:700;font-size:clamp(2rem,8.5vw,3.4rem);color:#0d1e33;text-decoration:none;margin:6px 0}
+.theme-marin-membrana .ct-layers-phone:hover{color:#1f6fd6}
+.theme-marin-membrana .ct-layers-sub{color:#4e647f}
+.theme-marin-membrana .ct-layers-sub a{color:#1f6fd6;font-weight:700}
+.theme-marin-membrana .ct-layers-map{max-width:620px;margin:24px auto 0}
+.theme-marin-membrana .ct-layers-map iframe{width:100%;height:230px;border:0;border-radius:20px;box-shadow:0 20px 50px rgba(31,111,214,.18)}

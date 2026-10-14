@@ -1,0 +1,25 @@
+FUENTES — The Detailing Corner (the-detailing-corner)
+Negocio: The Detailing Corner, Caguas, PR · IG @detailingcornerpr (595 seguidores)
+Descarga: 2026-10-12 via instagram-cli (oembed endpoint, thumbnail p640x640).
+Todas las fotos son REALES del Instagram del negocio. Cero stock.
+
+foto-1.jpg  (70 KB) — https://www.instagram.com/p/DQzBVllgF5e/ — Proa de bote azul en trailer
+foto-2.jpg  (48 KB) — https://www.instagram.com/p/DZTgtSvCes6/ — Jeep Scrambler naranja, detail wash
+foto-3.jpg  (119 KB) — https://www.instagram.com/p/DUl2MtDiWjI/ — Bote en trailer, detailing exterior
+foto-4.jpg  (101 KB) — https://www.instagram.com/p/DRNvS3UieMk/ — Pick-up plateada, brillo espejo
+foto-5.jpg  (108 KB) — https://www.instagram.com/p/DR2DNfvjUCT/ — Motora Suzuki Cruiser restaurada (arte del negocio)
+foto-6.jpg  (63 KB) — https://www.instagram.com/p/DeIdrcHFp5N/ — Casco de motor fuera de borda negro, corrección
+foto-7.jpg  (60 KB) — https://www.instagram.com/p/DRc3FTciRLO/ — Pieza mecánica cromada restaurada
+foto-8.jpg  (42 KB) — https://www.instagram.com/p/DRPtQe1iWCX/ — Hardware marino pulido
+foto-9.jpg  (38 KB) — https://www.instagram.com/p/DRPlE2Skasf/ — Motor fuera de borda, detailing
+foto-10.jpg (105 KB) — https://www.instagram.com/p/DRc3Y16Cbgc/ — Flyer oficial "Boat Detailing and Repairs"
+
+logo.jpg — foto de perfil oficial de Instagram del negocio (@detailingcornerpr)
+Paleta derivada del logo: negro profundo (#0a0a0a), oro antiguo (#d4a24e), texto crema.
+
+REEL CANDIDATO para hero-video.mp4:
+- Principal: https://www.instagram.com/reel/DVHBS8CibrI/ — "Limpieza y restauracion de fondos, antes y despues"
+- Alterno: https://www.instagram.com/reel/DbVnEtTujsJ/ — "corrigiendo imperfecciones" (paint correction)
+El mp4 llega después; el hero ya tiene <video> con poster="img/real/foto-1.jpg".
+
+Contacto verificado en su flyer/IG: tel 787-674-4680, email thedetailingcornerpr@gmail.com, Caguas PR.
