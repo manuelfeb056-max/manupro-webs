@@ -39,3 +39,11 @@ MEJORA APLICADA (2026-10-15, batch 2 grupo C, mejora ligera):
 - Menú flotante: overlay (fab-nav) por encima del botón en z-index (nav z-1201,
   botón z-1200), con botón propio de cerrar "×"; botón compacto (56px).
 - Hover premium en galería; reveal on scroll ya existía.
+
+RONDA 2 (2026-10-15) — mejora elite:
+
+- Logo real: no se encontró logo público del negocio (reportado honesto).
+- Redes/email: sin redes verificables encontradas.
+- Notas: Teléfono 787-903-6604 verificado vía Infopáginas (6134 Calle Jazmín, Dorado; servicio a toda la isla; 20+ años, certificados DACO/Danosa). Sin sitio web propio localizado. No se encontró página de Facebook, Instagram, YouTube ni TikTok verificable del negocio. Sin logo público.
+- Formulario reconstruido con estructura elite (3 pasos + chips de servicios) → WhatsApp del negocio.
+- Botón flotante de WhatsApp convertido a 3D.

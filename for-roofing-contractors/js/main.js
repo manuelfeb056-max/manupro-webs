@@ -66,21 +66,42 @@
     topbar.style.boxShadow=window.scrollY>10?'0 8px 30px rgba(14,124,91,.16)':'none';
   },{passive:true});
 
-  /* Formulario de cotización -> WhatsApp del negocio */
-  var qf=document.getElementById('qform');
-  if(qf) qf.addEventListener('submit',function(e){
-    e.preventDefault();
-    var n=document.getElementById('qNombre').value.trim(),
-        t=document.getElementById('qTel').value.trim(),
-        s=document.getElementById('qServicio').value,
-        m=document.getElementById('qMsg').value.trim();
-    if(!n||!t||!s){
-      if(!n)document.getElementById('qNombre').focus();
-      else if(!t)document.getElementById('qTel').focus();
-      else document.getElementById('qServicio').focus();
+})();
+
+
+/* NQ formulario elite -> WhatsApp (ronda 2) */
+(function(){
+  var f=document.getElementById('nqForm'); if(!f) return;
+  var chips=f.querySelectorAll('.nq-chip');
+  chips.forEach(function(c){
+    c.addEventListener('click',function(){
+      chips.forEach(function(x){x.classList.remove('sel');});
+      c.classList.add('sel');
+      var e=document.getElementById('nqErrServ'); if(e) e.hidden=true;
+    });
+  });
+  f.addEventListener('submit',function(ev){
+    ev.preventDefault();
+    var n=document.getElementById('nqNombre').value.trim(),
+        t=document.getElementById('nqTel').value.trim(),
+        p=document.getElementById('nqPueblo').value.trim(),
+        m=document.getElementById('nqMsg').value.trim(),
+        s=f.querySelector('input[name="nqServicio"]:checked'),
+        ok=true;
+    [document.getElementById('nqNombre'),document.getElementById('nqTel')].forEach(function(el){
+      el.classList.remove('nq-shake'); void el.offsetWidth;
+      if(!el.value.trim()){ el.classList.add('nq-shake'); el.style.borderColor='#ff8a8a'; ok=false; }
+      else { el.style.borderColor=''; }
+    });
+    var es=document.getElementById('nqErrServ');
+    if(!s){ if(es) es.hidden=false; ok=false; }
+    if(!ok){
+      var bad=f.querySelector('.nq-shake')||(!s?f.querySelector('.nq-chips'):null);
+      if(bad) bad.scrollIntoView({behavior:'smooth',block:'center'});
       return;
     }
-    var txt='Hola For Roofing Contractors, soy '+n+'. Mi telefono es '+t+'. Necesito: '+s+'.'+(m?' '+m:'');
+    var digits=t.replace(/\D/g,'');
+    var txt='Hola For Roofing Contractors Inc, soy '+n+'. Mi tel\u00e9fono es '+t+'.'+(p?' Soy de '+p+'.':'')+' Necesito: '+s.value+'.'+(m?' '+m:'');
     window.open('https://wa.me/17877588709?text='+encodeURIComponent(txt),'_blank');
   });
 })();

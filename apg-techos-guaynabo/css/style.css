@@ -178,3 +178,36 @@ footer a{color:#9DBBDD}
 /* ===== hover premium en imágenes de galería (mejora ligera) ===== */
 .gal-grid figure img,.galeria figure img,.gallery figure img,.mosaic figure img{transition:transform .5s cubic-bezier(.2,.7,.2,1)}
 .gal-grid figure:hover img,.galeria figure:hover img,.gallery figure:hover img,.mosaic figure:hover img{transform:scale(1.045)}
+
+/* ===== formulario elite por pasos ===== */
+.q-step{margin-bottom:26px}
+.q-step-head{display:flex;align-items:center;gap:12px;margin-bottom:14px}
+.q-badge{width:36px;height:36px;flex:none;border-radius:50%;background:var(--accent,var(--brand,var(--org,var(--cyan,var(--teal,var(--g,var(--c,#168730))))));color:#fff;font-weight:800;font-size:1.05rem;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 14px rgba(0,0,0,.25)}
+.q-step-head h3{font-size:1.05rem;font-weight:800;letter-spacing:.02em}
+.q-chips{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:10px}
+.q-chips.err .q-chip label{border-color:#ff6b6b;box-shadow:0 0 0 2px rgba(255,107,107,.35)}
+.q-chip{position:relative}
+.q-chip input{position:absolute;opacity:0;pointer-events:none;width:1px;height:1px}
+.q-chip label{display:flex;align-items:center;gap:10px;border:1.5px solid rgba(255,255,255,.22);border-radius:14px;padding:12px 14px;cursor:pointer;font-size:.92rem;font-weight:700;transition:border-color .2s,box-shadow .2s,background .2s,transform .15s;margin:0;background:rgba(0,0,0,.18)}
+.q-chip label:hover{border-color:rgba(255,255,255,.55)}
+.q-chip label svg{width:26px;height:26px;flex:none;fill:currentColor;opacity:.85}
+.q-chip input:checked + label{border-color:var(--accent,var(--brand,var(--org,var(--cyan,var(--teal,var(--g,var(--c,#168730))))));box-shadow:0 0 0 2px var(--accent,var(--brand,var(--org,var(--cyan,var(--teal,var(--g,var(--c,#168730)))))),0 6px 18px rgba(0,0,0,.3);background:rgba(255,255,255,.10);transform:translateY(-1px)}
+.q-chip input:checked + label svg{opacity:1}
+.q-chip input:focus-visible + label{outline:2px solid var(--accent,var(--brand,var(--org,var(--cyan,var(--teal,var(--g,var(--c,#168730))))));outline-offset:2px}
+.q-opt{font-weight:400;font-size:.8em;opacity:.7;text-transform:none;letter-spacing:0}
+.q-submit{display:inline-flex;align-items:center;justify-content:center;gap:10px}
+.q-submit svg{width:22px;height:22px;fill:currentColor}
+@media(max-width:560px){.q-chips{grid-template-columns:repeat(2,1fr)}}
+
+/* ===== boton flotante WhatsApp 3D ===== */
+.wa-float{position:fixed;right:18px;bottom:18px;width:62px;height:62px;border-radius:50%;z-index:999;display:flex;align-items:center;justify-content:center;background:radial-gradient(circle at 30% 25%,#5cf08a 0%,#25d366 35%,#1da851 70%,#128c4b 100%);box-shadow:0 10px 24px rgba(18,140,75,.45),0 2px 6px rgba(0,0,0,.35),inset 0 2px 4px rgba(255,255,255,.35),inset 0 -3px 6px rgba(0,0,0,.25);animation:waFloat 3s ease-in-out infinite}
+.wa-float svg{width:32px;height:32px;fill:#fff;filter:drop-shadow(0 2px 3px rgba(0,0,0,.4))}
+.wa-float::before{content:"";position:absolute;inset:-4px;border-radius:50%;border:2px solid rgba(37,211,102,.6);animation:waPulse 2s ease-out infinite}
+@keyframes waFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+@keyframes waPulse{0%{transform:scale(.9);opacity:1}100%{transform:scale(1.25);opacity:0}}
+
+.hero-logo{width:64px;height:64px;border-radius:16px;object-fit:cover;box-shadow:0 6px 18px rgba(0,0,0,.35)}
+.social-link{display:inline-flex;align-items:center;gap:8px;font-weight:700}
+.social-link svg{width:22px;height:22px;fill:#fff}
+.social-link:hover{color:#9DBBDD}
+@media(max-width:640px){.foot-grid{grid-template-columns:1fr}}

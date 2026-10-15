@@ -52,18 +52,24 @@
   });
 })();
 
-/* Cotizador → WhatsApp (APG Techos: 1787-225-2625) */
+/* Cotizador elite por pasos -> WhatsApp (APG Techos: 1787-225-2625) */
 (function(){
   var f=document.getElementById('quoteForm');
   if(!f) return;
   f.addEventListener('submit',function(e){
     e.preventDefault();
     var n=document.getElementById('qNombre'),t=document.getElementById('qTel'),
-        s=document.getElementById('qServicio'),m=document.getElementById('qMsg');
+        m=document.getElementById('qMsg'),p=document.getElementById('qPueblo'),
+        s=f.querySelector('input[name="qServ"]:checked'),
+        chips=f.querySelector('.q-chips');
     var ok=true;
-    [n,t,s].forEach(function(el){var bad=!el.value.trim();el.classList.toggle('err',bad);if(bad)ok=false;});
+    [n,t].forEach(function(el){var bad=!el.value.trim();el.classList.toggle('err',bad);if(bad)ok=false;});
+    var badS=!s; if(chips)chips.classList.toggle('err',badS); if(badS)ok=false;
     if(!ok) return;
-    var txt='Hola APG Techos, soy '+n.value.trim()+' ('+t.value.trim()+'). Necesito: '+s.value+'.'+(m.value.trim()?' Detalle: '+m.value.trim():'');
-    window.open('https://wa.me/17872252625?text='+encodeURIComponent(txt),'_blank');
+    var parts=['Hola APG Techos, soy '+n.value.trim()+' ('+t.value.trim()+').',
+               'Servicio: '+s.value+'.'];
+    if(p&&p.value.trim())parts.push('Pueblo: '+p.value.trim()+'.');
+    if(m.value.trim())parts.push('Detalle: '+m.value.trim());
+    window.open('https://wa.me/17872252625?text='+encodeURIComponent(parts.join(' ')),'_blank');
   });
 })();

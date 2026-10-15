@@ -34,3 +34,9 @@ DATOS DEL NEGOCIO (verificados):
   de Jayuya, Colegio Marista, etc.
 - Facebook: https://www.facebook.com/195252343978097/
   (Velez Roofing General Contractors, Arecibo)
+
+RONDA 2 (2026-10-15, mejora ELITE):
+- PLANES: 2 planes (eliminado "Solo Web" $99). "Web + Arranque" $199 (regular $499) y "Tranquilidad Total" $299 (regular $799, sello "La más elegida"), mismos items y botones a wa.me/17873128042 que en va-roofing-sj.
+- FORMULARIO: estructura qelite de 3 pasos con los 5 servicios REALES de su página (sellado residencial, sellado comercial, conservación de techos, reparación filtraciones, estimado gratis) + "Otro". Envía a wa.me/17873561797 con validación nombre/teléfono/servicio. Acento dorado de marca #D9A13B (ya estaba bien).
+- LOGO REAL: sin cambios — img/logo.jpg (foto de perfil oficial de su Facebook) sigue en header, favicon, og:image y JSON-LD.
+- REDES: agregadas al footer con etiqueta e ícono original cada una — Facebook https://www.facebook.com/195252343978097/ (página oficial verificada) y Email velezroofinggc@gmail.com (publicado en su página). Sin Instagram/YouTube/TikTok verificados.

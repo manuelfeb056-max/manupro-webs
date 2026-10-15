@@ -51,3 +51,8 @@ Se EXCLUYERON 3 imágenes generadas por IA ("ChatGPT Image May 31, 2026...") y
 Nota: las fotos vienen de su sitio oficial (teléfono verificado). La página de
 Facebook existe y es oficial, pero su contenido público no fue accesible sin login;
 el material fotográfico verificado se tomó del sitio oficial del negocio.
+
+REDES — actualización 2026-10-15:
+- Footer: agregado enlace verificado a Facebook oficial https://www.facebook.com/prroofingsolutions
+  con etiqueta de texto "Facebook" + ícono SVG. Teléfono del negocio (787-767-2525) verificado
+  en prroofingsolutions.com y rótulos de fotos. Material existente NO tocado.

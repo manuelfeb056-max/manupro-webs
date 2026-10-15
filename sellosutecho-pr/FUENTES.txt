@@ -49,3 +49,9 @@ NOTA DE MEJORA LIGERA (2026-10-15, corrección del cliente):
   (3) NUEVA sección "Cotización rápida" justo antes de los planes con formulario
   que envía a WhatsApp del NEGOCIO (wa.me/<teléfono real>) con Nombre (requerido),
   Teléfono, Servicio (select con servicios reales del negocio) y Mensaje.
+
+RONDA 2 (2026-10-15) — mejora ELITE:
+- Precios: 2 planes — "Web + Arranque" oferta $199 (regular $499) y "Tranquilidad Total" oferta $299 (regular $799, badge "La más elegida"). Tarjeta "Solo Web" eliminada. Botones a wa.me/17873128042 con texto pre-llenado del plan.
+- Formulario reconstruido con estructura de pasos (qelite): kicker "Cotización gratis" + PASO 1 datos (2 columnas) + PASO 2 chips seleccionables con ícono SVG por servicio + PASO 3 detalles (textarea + pueblo opcional). Validación de nombre/teléfono/servicio antes de abrir WhatsApp.
+- Logo: NO se encontró logo público real del negocio (verificado: sin sitio oficial, sin galería en places, redes bloqueadas/privadas). Logos inventados retirados; la marca se presenta tipográfica con ícono genérico.
+- Redes: solo las verificadas se agregan al footer (ver detalle por sitio arriba).

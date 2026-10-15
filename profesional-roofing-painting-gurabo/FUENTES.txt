@@ -1,0 +1,26 @@
+FUENTES — profesional-roofing-painting-gurabo
+Negocio: Profesional Roofing and Painting Puerto Rico
+Pueblo: Gurabo (Hc 04 box 18460 barrio mamey 2, 00778)
+Teléfono dado: 939-208-7102
+
+INVESTIGACIÓN (2026-10-15):
+- Teléfono VERIFICADO: sí. Google Place "Profesional Roofing and Painting Puerto Rico"
+  (place_id 865041445638763) publica +1 939-208-7102, dirección Hc 04 box 18460
+  barrio mamey 2, Gurabo PR 00778, categoría Roofing Service. (coincide nombre +
+  teléfono + pueblo; el place además listaba el website oficial)
+- Website oficial: https://profesional-roofing-painting-puerto-rico.business.site/
+  — MUERTO (devuelve 404; Google discontinuó los business.site). No se pudo
+  extraer logo del header ni favicon.
+- Logo real: NO ENCONTRADO. El Google Place no tiene galería de fotos ni logo.
+  No se encontró página de Facebook/Instagram/YouTube/TikTok verificable
+  (búsquedas: nombre exacto, teléfono, nombre+pueblo+facebook, variaciones).
+- Redes sociales: NO ENCONTRADAS.
+- NOTA SOBRE img/logo.png EXISTENTE: el badge "PRP / ROOFING + PAINTING" que hoy
+  usa el sitio es INVENTADO (gráfico genérico, no proviene de ninguna fuente
+  pública del negocio). NO se pudo verificar como logo real porque el negocio no
+  publica ningún logo. RECOMENDACIÓN: reemplazarlo por wordmark de texto o
+  eliminarlo; no presentarlo como marca oficial del negocio.
+
+RESULTADO: SIN MATERIAL REAL — negocio verificado con teléfono coincidente, pero
+sin logo público ni redes verificables. No se inventó material nuevo ni se usó
+material de terceros. No se tocó index.html.

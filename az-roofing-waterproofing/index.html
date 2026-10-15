@@ -205,26 +205,41 @@
     <h2 class="reveal">Cotiza tu techo<br>ahora mismo.</h2>
     <p class="quote-sub reveal">Llena el formulario y te abrimos WhatsApp con tu solicitud lista para enviar.</p>
     <form id="quoteForm" class="quote-form reveal" novalidate>
-      <div class="qf-grid">
-        <label>Tu nombre<input type="text" id="qNombre" name="nombre" placeholder="Nombre y apellido" autocomplete="name" required></label>
-        <label>Tu teléfono<input type="tel" id="qTel" name="telefono" placeholder="787-000-0000" autocomplete="tel" required></label>
+      <div class="qstep">
+        <span class="qstep-badge">1</span>
+        <div class="qstep-body">
+          <h3>Tus datos</h3>
+          <div class="qf-grid">
+            <label>Tu nombre<input type="text" id="qNombre" name="nombre" placeholder="Nombre y apellido" autocomplete="name" required></label>
+            <label>Tu teléfono<input type="tel" id="qTel" name="telefono" placeholder="787-000-0000" autocomplete="tel" required></label>
+          </div>
+        </div>
       </div>
-      <label>¿Qué servicio necesitas?
-        <select id="qServicio" name="servicio" required>
-          <option value="" disabled selected>Selecciona un servicio</option>
-          <option>Sellado de techo residencial</option>
-          <option>Sellado de techo comercial</option>
-          <option>Sellado de techo industrial</option>
-          <option>Sellado de cisterna</option>
-          <option>Lavado a presión</option>
-          <option>Membrana impermeable</option>
-          <option>Reparación de filtraciones</option>
-          <option>Trabajo de emergencia</option>
-          <option>Otro</option>
-        </select>
-      </label>
-      <label>Detalles<textarea id="qMsg" name="mensaje" rows="3" placeholder="Ej: filtración en el techo de mi casa en Dorado..."></textarea></label>
-      <button type="submit" class="btn btn-primary qf-submit">Enviar por WhatsApp</button>
+      <div class="qstep">
+        <span class="qstep-badge">2</span>
+        <div class="qstep-body">
+          <h3>Elige tu servicio</h3>
+          <div class="chips">
+            <input type="radio" name="servicio" id="svc1" value="Sellado de techo residencial"><label for="svc1"><svg viewBox="0 0 24 24"><path d="M12 3l9 8h-3v9h-4v-6h-4v6H6v-9H3l9-8z"/></svg>Sellado residencial</label>
+            <input type="radio" name="servicio" id="svc2" value="Sellado de techo comercial"><label for="svc2"><svg viewBox="0 0 24 24"><path d="M4 22V4c0-.6.4-1 1-1h10c.6 0 1 .4 1 1v18M2 22h20v-2H2v2zm4.5-4h2v-3h-2v3zm0-5h2V8h-2v5z"/></svg>Sellado comercial</label>
+            <input type="radio" name="servicio" id="svc3" value="Sellado de techo industrial"><label for="svc3"><svg viewBox="0 0 24 24"><path d="M12 2 3 8v13h18V8l-9-6zm0 2.3 6.5 4.4V19H5.5V8.7L12 4.3zM8 12h2v2H8v-2zm4 0h2v2h-2v-2zm4 0h2v2h-2v-2z"/></svg>Sellado industrial</label>
+            <input type="radio" name="servicio" id="svc4" value="Sellado de cisterna"><label for="svc4"><svg viewBox="0 0 24 24"><path d="M12 2C8 2 4 4 4 7v10c0 3 4 5 8 5s8-2 8-5V7c0-3-4-5-8-5zm0 2c3.6 0 6 1.5 6 3s-2.4 3-6 3-6-1.5-6-3 2.4-3 6-3z"/></svg>Sellado de cisterna</label>
+            <input type="radio" name="servicio" id="svc5" value="Lavado a presión"><label for="svc5"><svg viewBox="0 0 24 24"><path d="M12 2l2.2 6.6L21 11l-6.8 2.4L12 20l-2.2-6.6L3 11l6.8-2.4L12 2z"/></svg>Lavado a presión</label>
+            <input type="radio" name="servicio" id="svc6" value="Membrana impermeable"><label for="svc6"><svg viewBox="0 0 24 24"><path d="M12 2 2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>Membrana impermeable</label>
+            <input type="radio" name="servicio" id="svc7" value="Reparación de filtraciones"><label for="svc7"><svg viewBox="0 0 24 24"><path d="M21 6.5a5.5 5.5 0 0 1-7.6 5.1L7 18l-3-3 6.4-6.4A5.5 5.5 0 0 1 17.5 3l-3 3 2 2.5 2.5 2 3-3A5.5 5.5 0 0 1 21 6.5z"/></svg>Reparación de filtraciones</label>
+            <input type="radio" name="servicio" id="svc8" value="Trabajo de emergencia"><label for="svc8"><svg viewBox="0 0 24 24"><path d="M12 2 1 21h22L12 2zm-1.2 7h2.4v6h-2.4V9zm0 8h2.4v2.4h-2.4V17z"/></svg>Trabajo de emergencia</label>
+          </div>
+        </div>
+      </div>
+      <div class="qstep">
+        <span class="qstep-badge">3</span>
+        <div class="qstep-body">
+          <h3>Detalles</h3>
+          <label>Pueblo (opcional)<input type="text" id="qPueblo" name="pueblo" placeholder="Ej: Dorado" autocomplete="address-level2"></label>
+          <label>Detalles<textarea id="qMsg" name="mensaje" rows="3" placeholder="Ej: filtración en el techo de mi casa en Dorado..."></textarea></label>
+        </div>
+      </div>
+      <button type="submit" class="btn btn-primary qf-submit"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 2a8 8 0 1 1-4.1 14.9l-.3-.2-2.9.8.8-2.8-.2-.3A8 8 0 0 1 12 4zm-3.2 3.5c-.2 0-.5 0-.7.3-.2.3-.9.9-.9 2.2s.9 2.5 1.1 2.7c.1.2 1.9 3 4.7 4.1 2.3.9 2.8.7 3.3.7.5-.1 1.6-.7 1.9-1.3.2-.6.2-1.2.2-1.3-.1-.1-.3-.2-.6-.3l-2-1c-.3-.1-.5-.2-.7.1l-.9 1.1c-.2.2-.3.2-.6.1-.9-.4-1.7-.8-2.4-1.5-.6-.6-1-1.4-1.2-1.6-.1-.3 0-.4.1-.6l.5-.6c.2-.2.2-.4.3-.6.1-.2 0-.4 0-.6L8.6 7.7c-.2-.4-.4-.2-.8-.2z"/></svg>Enviar por WhatsApp</button>
       <p class="qf-note">Al enviar se abre WhatsApp con tu mensaje listo. Sin compromiso.</p>
     </form>
   </div>
@@ -237,22 +252,17 @@
     <h2 class="reveal">¿Tu negocio también<br>merece verse elite?</h2>
     <p class="plans-sub reveal">Creamos páginas profesionales como esta para negocios en Puerto Rico.</p>
     <div class="plan-grid">
-      <article class="plan reveal">
-        <h3>Solo Web</h3>
-        <p class="price"><s>$300</s> $99</p>
-        <ul><li>Sitio web profesional</li><li>Diseño a tu medida</li><li>Botón de WhatsApp</li></ul>
-        <a class="btn btn-plan" href="https://wa.me/17873128042">La quiero</a>
-      </article>
+      
       <article class="plan reveal">
         <h3>Web + Arranque</h3>
-        <p class="price"><s>$600</s> $150</p>
-        <ul><li>Todo lo de Solo Web</li><li>Hosting 2 meses</li><li>Dominio .com por 1 año</li></ul>
+        <p class="price"><s>$499</s> $199</p>
+        <ul><li>Website profesional como esta</li><li>Hosting 2 meses</li><li>Dominio .com por 1 año</li></ul>
         <a class="btn btn-plan" href="https://wa.me/17873128042">La quiero</a>
       </article>
       <article class="plan plan-hot reveal">
         <span class="hot-tag">La más elegida</span>
         <h3>Tranquilidad Total</h3>
-        <p class="price"><s>$1,000</s> $200</p>
+        <p class="price"><s>$799</s> $299</p>
         <ul><li>Todo lo de Web + Arranque</li><li>Hosting por 1 año</li><li>Mantenimiento incluido</li><li>Tranquilidad por un año</li></ul>
         <a class="btn btn-primary shine" href="https://wa.me/17873128042">La quiero</a>
       </article>

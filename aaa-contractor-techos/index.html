@@ -11,7 +11,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css?v=1">
+<link rel="stylesheet" href="css/style.css?v=2">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -94,10 +94,14 @@
     <p class="sec-kicker">En el terreno</p>
     <h2>Inspección <em>real</em>, resultados reales</h2>
     <div class="gal-grid">
-      <figure class="gal-item reveal"><img src="img/media-generation-aaa-termica-filtracion-0-60950994-9429-45f3-a7c9-1be44de41e23.webp" alt="Cámara térmica detectando filtración en techo" loading="lazy"><figcaption>Detección con cámara térmica</figcaption></figure>
-      <figure class="gal-item reveal"><img src="img/media-generation-aaa-inspeccion-techo-0-5ac17e91-4a19-415f-9be1-5e262a50b610.webp" alt="Inspección nocturna de techo con cámara y linterna" loading="lazy"><figcaption>Inspección del techo</figcaption></figure>
-      <figure class="gal-item reveal"><img src="img/media-generation-aaa-sellado-grieta-0-aba75cca-782f-4b6e-b821-272c65967a65.webp" alt="Sellado de grieta en concreto con masilla impermeable" loading="lazy"><figcaption>Sellado de grietas</figcaption></figure>
-      <figure class="gal-item reveal"><img src="img/media-generation-aaa-reparacion-estructural-0-07215a53-67a8-4e5b-b985-03f5f24e8d5a.webp" alt="Reparación estructural de viga de techo" loading="lazy"><figcaption>Reparación estructural</figcaption></figure>
+      <figure class="gal-item reveal"><img src="img/real/foto-1.jpg" alt="Trabajo en techo — AAA Contractor" loading="lazy"><figcaption>En el techo, manos a la obra</figcaption></figure>
+      <figure class="gal-item reveal"><img src="img/real/foto-2.jpg" alt="Inspección de daño en concreto" loading="lazy"><figcaption>Daño estructural documentado</figcaption></figure>
+      <figure class="gal-item reveal"><img src="img/real/foto-3.jpg" alt="Sellado en proceso" loading="lazy"><figcaption>Trabajo de sellado en proceso</figcaption></figure>
+      <figure class="gal-item reveal"><img src="img/real/foto-4.jpg" alt="Trabajo en techo" loading="lazy"><figcaption>En el terreno</figcaption></figure>
+      <figure class="gal-item reveal"><img src="img/real/foto-5.jpg" alt="Inspección de techo" loading="lazy"><figcaption>Inspección del techo</figcaption></figure>
+      <figure class="gal-item reveal"><img src="img/real/foto-6.jpg" alt="Trabajo nocturno con equipo" loading="lazy"><figcaption>Instalación nocturna</figcaption></figure>
+      <figure class="gal-item reveal"><img src="img/real/foto-7.jpg" alt="Reparación en techo" loading="lazy"><figcaption>Reparación en proceso</figcaption></figure>
+      <figure class="gal-item reveal"><img src="img/real/foto-8.jpg" alt="Equipo trabajando" loading="lazy"><figcaption>Equipo en acción</figcaption></figure>
     </div>
   </div>
 </section>
@@ -195,29 +199,43 @@
 <!-- COTIZADOR -->
 <section class="quote" id="cotizar">
   <div class="wrap">
-    <p class="q-kicker">Cotización inmediata</p>
+    <p class="q-kicker">Cotización gratis</p>
     <h2 class="q-title">Cotiza tu proyecto <span>hoy mismo</span></h2>
     <p class="q-sub">Completa el formulario y te abrimos WhatsApp con tu solicitud lista para enviar.</p>
     <form id="quoteForm" class="q-form" novalidate>
-      <div class="q-grid">
-        <label>Tu nombre<input type="text" id="qNombre" placeholder="Nombre y apellido" autocomplete="name" required></label>
-        <label>Tu teléfono<input type="tel" id="qTel" placeholder="787-000-0000" autocomplete="tel" required></label>
+<div class="qe-step">
+      <div class="qe-head"><span class="qe-badge">1</span><h3>Tus datos</h3></div>
+      <div class="qe-row2">
+        <label>Nombre completo<input type="text" id="qNombre" placeholder="Tu nombre" autocomplete="name" required></label>
+        <label>Teléfono<input type="tel" id="qTel" placeholder="787-000-0000" autocomplete="tel" required></label>
       </div>
-      <label>¿Qué servicio necesitas?
-        <select id="qServicio" required>
-          <option value="" disabled selected>Selecciona un servicio</option>
-          <option>Sellado de techos</option>
-          <option>Filtraciones</option>
-          <option>Sellado de grietas</option>
-          <option>Inspección con cámara</option>
-          <option>Reparación estructural</option>
-          <option>Diagnóstico</option>
-          <option>Otro</option>
-        </select>
-      </label>
-      <label>Detalles<textarea id="qMsg" rows="3" placeholder="Cuéntanos sobre tu techo..."></textarea></label>
-      <button type="submit" class="q-submit">Enviar por WhatsApp</button>
-      <p class="q-note">Al enviar se abre WhatsApp con tu mensaje listo. Sin compromiso.</p>
+    </div>
+    <div class="qe-step">
+      <div class="qe-head"><span class="qe-badge">2</span><h3>Elige tu servicio</h3></div>
+      <div class="qe-chips">
+        <input class="qe-radio" type="radio" name="qServicio" id="qS0" value="Sellado de techos">
+        <label class="qe-chip" for="qS0"><svg viewBox="0 0 24 24"><path d="M12 3 2.5 12h5V21h9v-9h5L12 3z"/></svg><span>Sellado de techos</span></label>
+        <input class="qe-radio" type="radio" name="qServicio" id="qS1" value="Filtraciones">
+        <label class="qe-chip" for="qS1"><svg viewBox="0 0 24 24"><path d="M12 3s6 6.5 6 11a6 6 0 0 1-12 0c0-4.5 6-11 6-11z"/></svg><span>Filtraciones</span></label>
+        <input class="qe-radio" type="radio" name="qServicio" id="qS2" value="Sellado de grietas">
+        <label class="qe-chip" for="qS2"><svg viewBox="0 0 24 24"><path d="M13 2 4.5 13.5H11L9.5 22 19 9.5h-6.5L13 2z"/></svg><span>Sellado de grietas</span></label>
+        <input class="qe-radio" type="radio" name="qServicio" id="qS3" value="Inspección con cámara">
+        <label class="qe-chip" for="qS3"><svg viewBox="0 0 24 24"><path d="M4 7h3l2-2h6l2 2h3a1 1 0 0 1 1 1v11a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V8a1 1 0 0 1 1-1zm8 9a4 4 0 1 0 0-8 4 4 0 0 0 0 8z"/></svg><span>Inspección con cámara</span></label>
+        <input class="qe-radio" type="radio" name="qServicio" id="qS4" value="Reparación estructural">
+        <label class="qe-chip" for="qS4"><svg viewBox="0 0 24 24"><path d="M14.7 6.3a4.5 4.5 0 0 0-6 6L3 18l3 3 5.7-5.7a4.5 4.5 0 0 0 6-6L14 13l-3-3 3.7-3.7z"/></svg><span>Reparación estructural</span></label>
+        <input class="qe-radio" type="radio" name="qServicio" id="qS5" value="Diagnóstico">
+        <label class="qe-chip" for="qS5"><svg viewBox="0 0 24 24"><path d="M10 2a8 8 0 1 0 4.9 14.3l5 5 1.4-1.4-5-5A8 8 0 0 0 10 2zm0 2a6 6 0 1 1 0 12 6 6 0 0 1 0-12z"/></svg><span>Diagnóstico</span></label>
+        <input class="qe-radio" type="radio" name="qServicio" id="qS6" value="Otro">
+        <label class="qe-chip" for="qS6"><svg viewBox="0 0 24 24"><path d="M4 3h16a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H8l-5 4V4a1 1 0 0 1 1-1z"/></svg><span>Otro</span></label>
+      </div>
+    </div>
+    <div class="qe-step">
+      <div class="qe-head"><span class="qe-badge">3</span><h3>Detalles</h3></div>
+      <label>Pueblo <span class="qe-opt">(opcional)</span><input type="text" id="qPueblo" placeholder="¿En qué pueblo está el techo?" autocomplete="address-level2"></label>
+      <label>Cuéntanos más<textarea id="qMsg" rows="3" placeholder="Detalles del trabajo que necesitas..."></textarea></label>
+    </div>
+    <button type="submit" class="qe-submit"><svg viewBox="0 0 32 32"><path d="M16 3C9.4 3 4 8.4 4 15c0 2.4.7 4.6 2 6.5L4 29l7.7-2c1.8 1 3.9 1.5 6 1.5h.3c6.6 0 12-5.4 12-12S22.6 3 16 3zm0 22.4c-1.9 0-3.8-.5-5.4-1.5l-.4-.2-4.6 1.2 1.2-4.5-.3-.4c-1-1.6-1.6-3.5-1.6-5.5C5 9.6 9.6 5 16 5s11 4.6 11 10.5-4.6 9.9-11 9.9zm6-7.4c-.3-.2-2-1-2.3-1.1-.3-.1-.5-.2-.8.2-.2.3-.9 1.1-1.1 1.3-.2.2-.4.3-.8.1-.3-.2-1.4-.5-2.7-1.7-1-.9-1.7-2-1.9-2.3-.2-.3 0-.5.2-.7l.5-.6c.2-.2.2-.4.3-.6.1-.2 0-.4 0-.6-.1-.2-.8-1.9-1.1-2.6-.3-.7-.6-.6-.8-.6h-.7c-.2 0-.6.2-.9.5-.3.3-1.2 1.2-1.2 2.9s1.2 3.4 1.4 3.6c.2.2 2.4 3.7 5.8 5.2.8.4 1.5.6 2 .7.8.3 1.6.2 2.2.1.7-.1 2-1 2.3-2 .3-.9.3-1.7.2-1.9-.1-.1-.3-.2-.7-.4z"/></svg>Enviar por WhatsApp</button>
+    <p class="qe-note">Al enviar se abre WhatsApp con tu mensaje listo. Sin compromiso.</p>
     </form>
   </div>
 </section>
@@ -228,24 +246,19 @@
     <h2>Tu negocio también puede <em>verse así</em></h2>
     <p class="plans-sub">Esta web la hizo ManuPro. Elige tu plan:</p>
     <div class="plan-grid">
-      <article class="plan reveal">
-        <h3>Solo Web</h3>
-        <p class="price"><span class="reg">$300</span> $99</p>
-        <p>Tu web profesional para que te encuentren y te llamen.</p>
-        <a class="btn btn-plan" href="https://wa.me/17873128042?text=Hola%20ManuPro%2C%20me%20interesa%20el%20plan%20Solo%20Web%20%2499." target="_blank" rel="noopener">Quiero este plan</a>
-      </article>
+      
       <article class="plan reveal">
         <h3>Web + Arranque</h3>
-        <p class="price"><span class="reg">$600</span> $150</p>
+        <p class="price"><span class="reg">$499</span> $199</p>
         <p>Web + todo listo para empezar a vender.</p>
-        <a class="btn btn-plan" href="https://wa.me/17873128042?text=Hola%20ManuPro%2C%20me%20interesa%20el%20plan%20Web%20%2B%20Arranque%20%24150." target="_blank" rel="noopener">Quiero este plan</a>
+        <a class="btn btn-plan" href="https://wa.me/17873128042?text=Hola%20ManuPro%2C%20me%20interesa%20el%20plan%20Web%20%2B%20Arranque%20%24199." target="_blank" rel="noopener">Quiero este plan</a>
       </article>
       <article class="plan plan-featured reveal">
         <span class="tag">La más elegida</span>
         <h3>Tranquilidad Total</h3>
-        <p class="price"><span class="reg">$1,000</span> $200</p>
+        <p class="price"><span class="reg">$799</span> $299</p>
         <p>Web + arranque + tranquilidad por un año.</p>
-        <a class="btn btn-plan" href="https://wa.me/17873128042?text=Hola%20ManuPro%2C%20me%20interesa%20el%20plan%20Tranquilidad%20Total%20%24200." target="_blank" rel="noopener">Quiero este plan</a>
+        <a class="btn btn-plan" href="https://wa.me/17873128042?text=Hola%20ManuPro%2C%20me%20interesa%20el%20plan%20Tranquilidad%20Total%20%24299." target="_blank" rel="noopener">Quiero este plan</a>
       </article>
     </div>
   </div>
@@ -257,6 +270,10 @@
     <p class="f-name">AAA Contractor</p>
     <p class="f-line">Puerto Rico</p>
     <p class="f-line"><a href="tel:+17873350003">787-335-0003</a></p>
+    <div class="f-social">
+      <a href="https://www.youtube.com/@aaacontractor" target="_blank" rel="noopener" aria-label="YouTube de AAA Contractor"><svg viewBox="0 0 24 24"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2 31.3 31.3 0 0 0 0 12a31.3 31.3 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1A31.3 31.3 0 0 0 24 12a31.3 31.3 0 0 0-.5-5.8zM9.6 15.6V8.4L15.8 12l-6.2 3.6z"/></svg><span>YouTube</span></a>
+      <a href="https://www.facebook.com/7873350003" target="_blank" rel="noopener" aria-label="Facebook de AAA Contractor"><svg viewBox="0 0 24 24"><path d="M24 12a12 12 0 1 0-13.9 11.9v-8.4h-3v-3.5h3V9.4c0-3 1.8-4.7 4.5-4.7 1.3 0 2.7.2 2.7.2v3h-1.5c-1.5 0-2 1-2 1.9V12h3.3l-.5 3.5h-2.8v8.4A12 12 0 0 0 24 12z"/></svg><span>Facebook</span></a>
+    </div>
     <p class="f-credit">Web por ManuPro</p>
   </div>
 </footer>

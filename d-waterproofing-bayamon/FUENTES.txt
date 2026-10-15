@@ -30,3 +30,11 @@ MEJORA LIGERA APLICADA 2026-10-15:
   propio; botón hamburguesa compacto (52px).
 - Animaciones: reveal on scroll + hero con slowzoom (ya existían) +
   hovers premium suaves agregados.
+
+RONDA 2 (2026-10-15) — mejora elite:
+
+- Logo real: no se encontró logo público del negocio (reportado honesto).
+- Red verificada: Facebook: https://www.facebook.com/476870275495425
+- Notas: Pagina de Facebook oficial 'D Waterproofing Corporation' (place_id 476870275495425, Rd 864 Km 1.4 Bayamon). Infopaginas/Manta confirman 787-787-9055 en #291 Carr 864 Km 1.6 Int, Bo Hato Tejas, Bayamon; la pagina de FB lista +1 787-635-1676 como segundo telefono. Sin sitio web oficial ni logo publico
+- Formulario reconstruido con estructura elite (3 pasos + chips de servicios) → WhatsApp del negocio.
+- Botón flotante de WhatsApp convertido a 3D.

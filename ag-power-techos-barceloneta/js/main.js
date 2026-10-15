@@ -34,18 +34,22 @@ document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});
   });
 })();
 
-/* Cotizador → WhatsApp (AG Power: 1787-310-8848) */
+/* Cotizador elite → WhatsApp (AG Power: 17873108848) */
 (function(){
   var f=document.getElementById('quoteForm');
   if(!f) return;
   f.addEventListener('submit',function(e){
     e.preventDefault();
     var n=document.getElementById('qNombre'),t=document.getElementById('qTel'),
-        s=document.getElementById('qServicio'),m=document.getElementById('qMsg');
-    var ok=true;
-    [n,t,s].forEach(function(el){var bad=!el.value.trim();el.classList.toggle('err',bad);if(bad)ok=false;});
+        p=document.getElementById('qPueblo'),m=document.getElementById('qMsg'),
+        s=f.querySelector('input[name="qServicio"]:checked'),
+        chips=f.querySelector('.qe-chips'),ok=true;
+    [n,t].forEach(function(el){var bad=!el.value.trim();el.classList.toggle('err',bad);if(bad)ok=false;});
+    var sb=!s;chips.classList.toggle('err',sb);if(sb)ok=false;
     if(!ok) return;
-    var txt='Hola AG Power, soy '+n.value.trim()+' ('+t.value.trim()+'). Necesito: '+s.value+'.'+(m.value.trim()?' Detalle: '+m.value.trim():'');
+    var txt='Hola AG Power, soy '+n.value.trim()+' ('+t.value.trim()+').\nServicio: '+s.value+'.'
+      +(p.value.trim()?'\nPueblo: '+p.value.trim()+'.':'')
+      +(m.value.trim()?'\nDetalles: '+m.value.trim():'');
     window.open('https://wa.me/17873108848?text='+encodeURIComponent(txt),'_blank');
   });
 })();

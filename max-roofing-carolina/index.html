@@ -264,43 +264,93 @@
 <!-- ============ CONTACTO ============ -->
 <section class="section contacto" id="contacto">
   <div class="wrap split">
-    <form class="contact-form reveal" id="waForm" novalidate>
-      <h3>Pide tu cotización</h3>
-      <label>Nombre
-        <input type="text" id="fNombre" placeholder="Tu nombre" required>
-      </label>
-      <label>Teléfono
-        <input type="tel" id="fTel" placeholder="787-000-0000" required>
-      </label>
-      <label>Servicio que necesitas
-        <select id="fServicio">
-          <option>Sellado de techos</option>
-          <option>Remodelaciones</option>
-          <option>Sellado para residencias</option>
-          <option>Sellado para comercios</option>
-          <option>Sellado para condominios</option>
-          <option>Sellado para industrias</option>
-          <option>Otro / Necesito orientación</option>
-        </select>
-      </label>
-      <label>Tipo de propiedad
-        <select id="fTipo">
-          <option>Residencia</option>
-          <option>Comercio</option>
-          <option>Condominio</option>
-          <option>Industria</option>
-          <option>Otro</option>
-        </select>
-      </label>
-      <label>Mensaje
-        <textarea id="fMsg" rows="4" placeholder="Describe qué necesita tu techo..."></textarea>
-      </label>
-      <button type="submit" class="btn btn-fire shine full">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.2 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.4 0 .6l-.4.6-.5.5c-.2.2-.3.4-.1.7.2.3.9 1.5 2 2.4 1.4 1.2 2.5 1.6 2.9 1.8.3.2.5.1.7-.1l1-1.2c.2-.3.4-.2.7-.1l2 1c.3.1.5.2.6.4 0 .1 0 .6-.2 1.2z"/></svg>
-        Enviar por WhatsApp
-      </button>
-      <p class="form-note">Al enviar, se abre WhatsApp con tu mensaje listo.</p>
-    </form>
+    
+<style>
+.eqf-card{background:linear-gradient(165deg,#121722,#0c1017);border:1px solid #f2622a55;border-radius:22px;padding:34px 30px;box-shadow:0 26px 70px rgba(0,0,0,.5);color:#eef2f8}
+.eqf-step{margin-bottom:26px}
+.eqf-shead{display:flex;align-items:center;gap:12px;margin-bottom:14px}
+.eqf-num{width:34px;height:34px;flex:0 0 34px;border-radius:50%;background:#f2622a;color:#0c0e12;font-weight:800;display:flex;align-items:center;justify-content:center;font-size:1rem;box-shadow:0 4px 14px #f2622a66}
+.eqf-shead h4{margin:0;font-size:1.02rem;letter-spacing:.02em;color:#fff}
+.eqf-grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media(max-width:560px){.eqf-grid2{grid-template-columns:1fr}}
+.eqf-f{display:block;font-size:.85rem;font-weight:600;color:#c6cfdd;margin-bottom:12px}
+.eqf-f input,.eqf-f textarea{width:100%;margin-top:7px;padding:13px 15px;border-radius:12px;border:1px solid rgba(255,255,255,.16);background:rgba(0,0,0,.4);color:#fff;font-size:1rem;font-family:inherit;transition:border-color .25s,box-shadow .25s}
+.eqf-f textarea{resize:vertical;min-height:84px}
+.eqf-f input:focus,.eqf-f textarea:focus{outline:none;border-color:#f2622a;box-shadow:0 0 0 3px #f2622a33}
+.eqf-f input::placeholder,.eqf-f textarea::placeholder{color:#7c8798}
+.eqf-chips{display:flex;flex-wrap:wrap;gap:10px}
+.eqf-chip{position:relative;cursor:pointer}
+.eqf-chip input{position:absolute;opacity:0;pointer-events:none}
+.eqf-chip .eqf-pill{display:inline-flex;align-items:center;gap:8px;padding:11px 16px;border-radius:999px;border:1.5px solid rgba(255,255,255,.18);background:rgba(255,255,255,.05);color:#dbe3f0;font-size:.88rem;font-weight:600;transition:all .22s}
+.eqf-chip .eqf-pill svg{width:17px;height:17px;flex:0 0 17px}
+.eqf-chip input:checked + .eqf-pill{background:#f2622a;border-color:#f2622a;color:#0c0e12;box-shadow:0 6px 18px #f2622a55;transform:translateY(-1px)}
+.eqf-chip:hover .eqf-pill{border-color:#f2622aaa}
+.eqf-submit{width:100%;padding:17px;border:none;border-radius:15px;background:linear-gradient(135deg,#2be36f,#12914b);color:#fff;font-size:1.08rem;font-weight:800;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:11px;transition:transform .25s,box-shadow .25s;margin-top:8px;font-family:inherit}
+.eqf-submit:hover{transform:translateY(-2px);box-shadow:0 16px 38px rgba(37,211,102,.45)}
+.eqf-submit svg{width:23px;height:23px;fill:#fff}
+.eqf-note{text-align:center;color:#8b95a5;font-size:.82rem;margin:14px 0 0}
+.eqf-err{color:#ff8a8a;font-size:.85rem;margin-top:10px;display:none;text-align:center}
+</style>
+<form id="waForm" class="contact-form reveal eqf-card"  novalidate>
+  <div class="eqf-step">
+    <div class="eqf-shead"><span class="eqf-num">1</span><h4>PASO 1 &mdash; Tus datos</h4></div>
+    <div class="eqf-grid2">
+      <label class="eqf-f">Nombre*<input type="text" id="fNombre" placeholder="Tu nombre" autocomplete="name" required></label>
+      <label class="eqf-f">Tel&eacute;fono*<input type="tel" id="fTel" placeholder="787-000-0000" autocomplete="tel" required></label>
+    </div>
+  </div>
+  <div class="eqf-step">
+    <div class="eqf-shead"><span class="eqf-num">2</span><h4>PASO 2 &mdash; Elige tu servicio</h4></div>
+    <div class="eqf-chips" id="waForm_chips">
+      <label class="eqf-chip"><input type="radio" name="waForm_svc" value="Sellado de techos" checked><span class="eqf-pill"><svg viewBox="0 0 24 24"><path d="M12 2l8 3v6c0 5-3.4 8.7-8 11-4.6-2.3-8-6-8-11V5l8-3zm-1.2 14.5l6-6-1.4-1.4-4.6 4.6-2.2-2.2-1.4 1.4 3.6 3.6z" fill="currentColor"/></svg><span>Sellado de techos</span></span></label>
+      <label class="eqf-chip"><input type="radio" name="waForm_svc" value="Remodelaciones"><span class="eqf-pill"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm-1.2 14.5l-4-4 1.4-1.4 2.6 2.6 6.6-6.6 1.4 1.4-8 8z" fill="currentColor"/></svg><span>Remodelaciones</span></span></label>
+      <label class="eqf-chip"><input type="radio" name="waForm_svc" value="Sellado para residencias"><span class="eqf-pill"><svg viewBox="0 0 24 24"><path d="M12 2l8 3v6c0 5-3.4 8.7-8 11-4.6-2.3-8-6-8-11V5l8-3zm-1.2 14.5l6-6-1.4-1.4-4.6 4.6-2.2-2.2-1.4 1.4 3.6 3.6z" fill="currentColor"/></svg><span>Sellado para residencias</span></span></label>
+      <label class="eqf-chip"><input type="radio" name="waForm_svc" value="Sellado para comercios"><span class="eqf-pill"><svg viewBox="0 0 24 24"><path d="M12 2l8 3v6c0 5-3.4 8.7-8 11-4.6-2.3-8-6-8-11V5l8-3zm-1.2 14.5l6-6-1.4-1.4-4.6 4.6-2.2-2.2-1.4 1.4 3.6 3.6z" fill="currentColor"/></svg><span>Sellado para comercios</span></span></label>
+      <label class="eqf-chip"><input type="radio" name="waForm_svc" value="Sellado para condominios"><span class="eqf-pill"><svg viewBox="0 0 24 24"><path d="M12 2l8 3v6c0 5-3.4 8.7-8 11-4.6-2.3-8-6-8-11V5l8-3zm-1.2 14.5l6-6-1.4-1.4-4.6 4.6-2.2-2.2-1.4 1.4 3.6 3.6z" fill="currentColor"/></svg><span>Sellado para condominios</span></span></label>
+      <label class="eqf-chip"><input type="radio" name="waForm_svc" value="Sellado para industrias"><span class="eqf-pill"><svg viewBox="0 0 24 24"><path d="M12 2l8 3v6c0 5-3.4 8.7-8 11-4.6-2.3-8-6-8-11V5l8-3zm-1.2 14.5l6-6-1.4-1.4-4.6 4.6-2.2-2.2-1.4 1.4 3.6 3.6z" fill="currentColor"/></svg><span>Sellado para industrias</span></span></label>
+      <label class="eqf-chip"><input type="radio" name="waForm_svc" value="Otro / Necesito orientación"><span class="eqf-pill"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm-1.2 14.5l-4-4 1.4-1.4 2.6 2.6 6.6-6.6 1.4 1.4-8 8z" fill="currentColor"/></svg><span>Otro / Necesito orientación</span></span></label>
+      <label class="eqf-chip"><input type="radio" name="waForm_svc" value="Residencia"><span class="eqf-pill"><svg viewBox="0 0 24 24"><path d="M12 2l10 8h-3v10h-5v-6h-4v6H5V10H2l10-8z" fill="currentColor"/></svg><span>Residencia</span></span></label>
+      <label class="eqf-chip"><input type="radio" name="waForm_svc" value="Comercio"><span class="eqf-pill"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm-1.2 14.5l-4-4 1.4-1.4 2.6 2.6 6.6-6.6 1.4 1.4-8 8z" fill="currentColor"/></svg><span>Comercio</span></span></label>
+      <label class="eqf-chip"><input type="radio" name="waForm_svc" value="Condominio"><span class="eqf-pill"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm-1.2 14.5l-4-4 1.4-1.4 2.6 2.6 6.6-6.6 1.4 1.4-8 8z" fill="currentColor"/></svg><span>Condominio</span></span></label>
+    </div>
+    <input type="hidden" id="fServicio" value="Sellado de techos">
+  </div>
+    <div class="eqf-step">
+      <div class="eqf-shead"><span class="eqf-num">3</span><h4>Tipo de propiedad</h4></div>
+      <div class="eqf-chips" id="waForm_tipochips">
+      <label class="eqf-chip"><input type="radio" name="waForm_tipo" value="Residencia" checked><span class="eqf-pill"><svg viewBox="0 0 24 24"><path d="M12 2l10 8h-3v10h-5v-6h-4v6H5V10H2l10-8z" fill="currentColor"/></svg><span>Residencia</span></span></label>
+<label class="eqf-chip"><input type="radio" name="waForm_tipo" value="Comercio"><span class="eqf-pill"><svg viewBox="0 0 24 24"><path d="M12 2l10 8h-3v10h-5v-6h-4v6H5V10H2l10-8z" fill="currentColor"/></svg><span>Comercio</span></span></label>
+<label class="eqf-chip"><input type="radio" name="waForm_tipo" value="Condominio"><span class="eqf-pill"><svg viewBox="0 0 24 24"><path d="M12 2l10 8h-3v10h-5v-6h-4v6H5V10H2l10-8z" fill="currentColor"/></svg><span>Condominio</span></span></label>
+<label class="eqf-chip"><input type="radio" name="waForm_tipo" value="Industria"><span class="eqf-pill"><svg viewBox="0 0 24 24"><path d="M12 2l10 8h-3v10h-5v-6h-4v6H5V10H2l10-8z" fill="currentColor"/></svg><span>Industria</span></span></label>
+<label class="eqf-chip"><input type="radio" name="waForm_tipo" value="Otro"><span class="eqf-pill"><svg viewBox="0 0 24 24"><path d="M12 2l10 8h-3v10h-5v-6h-4v6H5V10H2l10-8z" fill="currentColor"/></svg><span>Otro</span></span></label>
+      </div>
+      <input type="hidden" id="fTipo" value="Residencia">
+    </div>
+  <div class="eqf-step">
+    <div class="eqf-shead"><span class="eqf-num">4</span><h4>PASO 4 &mdash; Detalles</h4></div>
+    <div class="eqf-grid2">
+      <label class="eqf-f">Pueblo<input type="text" id="fPueblo" placeholder="Ej. Caguas (opcional)" autocomplete="address-level2"></label>
+      <label class="eqf-f">Cu&eacute;ntanos m&aacute;s<textarea id="fMsg" placeholder="Tama&ntilde;o del techo, filtraciones, urgencia..."></textarea></label>
+    </div>
+  </div>
+  <button type="submit" class="eqf-submit"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.6-6.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.3-.6.8-.8 1-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4 0-.5.1-.7l.4-.5c.1-.2.1-.3 0-.5L9.4 8c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.2-.7.5-.2.3-.9.9-.9 2.2s.9 2.5 1.1 2.7c.1.2 1.8 2.8 4.4 3.9 1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2 0-.1-.2-.1-.4-.2z"/></svg>Enviar por WhatsApp</button>
+  <p class="eqf-err" id="waForm_err">Escribe tu nombre y tu tel&eacute;fono para continuar.</p>
+  <p class="eqf-note">Sin compromiso &middot; Te responden directo al WhatsApp del negocio</p>
+</form>
+<script>
+(function(){
+  var form=document.getElementById('waForm');if(!form)return;
+  var svcHidden=document.getElementById('fServicio');
+  form.querySelectorAll('input[name="waForm_svc"]').forEach(function(r){
+    r.addEventListener('change',function(){ if(svcHidden) svcHidden.value=r.value; });
+  });
+  var tipoHidden=document.getElementById("fTipo");
+  if(tipoHidden){ form.querySelectorAll('input[name="waForm_tipo"]').forEach(function(r){
+    r.addEventListener('change',function(){ tipoHidden.value=r.value; });
+  });}
+  /* submit manejado por js/main.js existente */
+})();
+</script>
     <div class="contact-info">
       <p class="kicker reveal">Contacto</p>
       <h2 class="reveal">Habla directo <span class="fire">con el techero</span></h2>
@@ -326,37 +376,28 @@
     <h2 class="center reveal">Planes <span class="fire">Manupro</span></h2>
     <p class="center sub reveal">Una web profesional como esta para tu negocio. Escoge tu plan:</p>
     <div class="plan-cards">
-      <article class="plan reveal">
-        <h3>Solo Web</h3>
-        <p class="plan-price"><s>$300</s> <strong>$99</strong></p>
-        <ul>
-          <li>Website profesional completa</li>
-          <li>Diseño a medida de tu marca</li>
-          <li>Formulario a WhatsApp</li>
-        </ul>
-        <a class="btn btn-ghost" href="https://wa.me/17873128042?text=Hola%20Manupro%2C%20me%20interesa%20el%20plan%20Solo%20Web%20%2499." target="_blank" rel="noopener">Elegir plan</a>
-      </article>
+      
       <article class="plan reveal">
         <h3>Web + Arranque</h3>
-        <p class="plan-price"><s>$600</s> <strong>$150</strong></p>
+        <p class="plan-price"><s>$499</s> <strong>$199</strong></p>
         <ul>
-          <li>Todo lo del plan Solo Web</li>
+          <li>Website profesional a la medida</li>
           <li>Hosting 2 meses</li>
           <li>Dominio .com por 1 año</li>
         </ul>
-        <a class="btn btn-ghost" href="https://wa.me/17873128042?text=Hola%20Manupro%2C%20me%20interesa%20el%20plan%20Web%20%2B%20Arranque%20%24150." target="_blank" rel="noopener">Elegir plan</a>
+        <a class="btn btn-ghost" href="https://wa.me/17873128042?text=Hola%20Manupro%2C%20me%20interesa%20el%20plan%20Web%20%2B%20Arranque%20%24199." target="_blank" rel="noopener">Elegir plan</a>
       </article>
       <article class="plan featured reveal">
         <span class="plan-tag">La más elegida</span>
         <h3>Tranquilidad Total</h3>
-        <p class="plan-price"><s>$1,000</s> <strong>$200</strong></p>
+        <p class="plan-price"><s>$799</s> <strong>$299</strong></p>
         <ul>
           <li>Todo lo del plan Web + Arranque</li>
           <li>Hosting por 1 año</li>
           <li>Mantenimiento incluido</li>
           <li>Dominio .com por 1 año</li>
         </ul>
-        <a class="btn btn-fire shine" href="https://wa.me/17873128042?text=Hola%20Manupro%2C%20me%20interesa%20el%20plan%20Tranquilidad%20Total%20%24200." target="_blank" rel="noopener">Elegir plan</a>
+        <a class="btn btn-fire shine" href="https://wa.me/17873128042?text=Hola%20Manupro%2C%20me%20interesa%20el%20plan%20Tranquilidad%20Total%20%24299." target="_blank" rel="noopener">Elegir plan</a>
       </article>
     </div>
   </div>

@@ -37,3 +37,22 @@ Cambios de mejora ligera (2026-10-15, sin rediseño):
   del delay al terminar para no afectar hovers.
 - Menú hamburguesa: verificado — botón circular z-index 100, panel z-99,
   botón visible como X para cerrar; no tapa información. Sin cambios.
+
+MEJORA ELITE RONDA 2 (2026-10-15):
+- PRECIOS: 2 planes (misma estructura que techos-y-mas). "Web + Arranque"
+  $499/$199, "Tranquilidad Total" $799/$299 con badge "La más elegida".
+  Botones a https://wa.me/17873128042 con texto pre-llenado.
+- FORMULARIO: reconstruido con sistema "qelite" (worker paralelo): kicker
+  "Cotización gratis", 3 pasos, radio-chips con ícono SVG (instalación,
+  remoción, sellado, sellado de cumbreras, mantenimiento y lavado de tejas +
+  Otro), pueblo opcional + textarea, botón WA grande a wa.me/17874037661,
+  validación inline. Handler inline con guard __qeliteInit.
+- LOGO REAL: no existe logo público descargable. NUEVO HALLAZGO: website
+  oficial REAL encontrado y verificado (tejasyselladodetechos.com — el teléfono
+  787-403-7661 coincide con el negocio). Revisado: su hero es una foto de
+  techo (no logo) y su favicon está en blanco. Su sitio menciona página de
+  Facebook "Tejas y Sellado de Techos" pero sin URL verificable en buscadores
+  públicos. No se inventó logo.
+- REDES: link a su sitio oficial verificado agregado al footer con etiqueta
+  "Sitio oficial" y como "url" en el JSON-LD. No se encontró Facebook/
+  Instagram/YouTube/TikTok verificable (no se inventó ninguno).

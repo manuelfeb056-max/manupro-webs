@@ -40,3 +40,11 @@ fotos, sin redes). Solo el teléfono y el nombre vienen del brief. Si el
 negocio no tiene redes verificables, la regla standing pide reportarlo:
 ESTE es el caso — el sitio queda como demo ilustrativa hasta que el negocio
 provea material real.
+
+RONDA 2 (2026-10-15) — mejora elite:
+
+- Logo real: no se encontró logo público del negocio (reportado honesto).
+- Redes/email: sin redes verificables encontradas.
+- Notas: ALERTA DE DATOS: el teléfono 787-324-3022 aparece públicamente como el número de contrataciones de la orquesta de salsa 'Grupo La Fiebre' ('La Orquesta más afinada', Guayama, desde 1997) — NO de un negocio de sellado de techos. No se encontró ninguna presencia verificable de un negocio de techos con
+- Formulario reconstruido con estructura elite (3 pasos + chips de servicios) → WhatsApp del negocio.
+- Botón flotante de WhatsApp convertido a 3D.

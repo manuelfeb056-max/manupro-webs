@@ -227,3 +227,45 @@ a{transition:color .25s ease}
 .qf-submit svg{width:22px;height:22px;fill:currentColor}
 .qf-note{grid-column:1/-1;text-align:center;font-size:.85rem;opacity:.6;margin-top:4px}
 @media(max-width:640px){.qf-grid{grid-template-columns:1fr}.qf-card{padding:28px 20px}}
+
+/* ===== ELITE FORM (ef-) ===== */
+.ef-form{--ef-accent:#C65D21;--ef-wa1:#2fe673;--ef-wa2:#12a94b;display:flex;flex-direction:column;gap:22px}
+.ef-step{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.09);border-radius:16px;padding:18px}
+.ef-stephead{display:flex;align-items:center;gap:12px;margin-bottom:14px}
+.ef-num{width:32px;height:32px;border-radius:50%;background:var(--ef-accent);color:#fff;font-weight:800;font-size:15px;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 14px rgba(0,0,0,.35);flex:none}
+.ef-steptitle{font-weight:800;font-size:17px;letter-spacing:.02em}
+.ef-row2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media(max-width:560px){.ef-row2{grid-template-columns:1fr}}
+.ef-field{display:flex;flex-direction:column;gap:7px;font-size:14px;font-weight:600}
+.ef-field>span{opacity:.85}
+.ef-field em{font-style:normal;opacity:.6;font-weight:400}
+.ef-field input,.ef-field textarea{background:rgba(0,0,0,.28);border:1px solid rgba(255,255,255,.14);border-radius:12px;padding:13px 14px;color:inherit;font-size:15px;width:100%;outline:none;transition:border-color .2s,box-shadow .2s}
+.ef-field input:focus,.ef-field textarea:focus{border-color:var(--ef-accent);box-shadow:0 0 0 3px color-mix(in srgb,var(--ef-accent) 30%,transparent)}
+.ef-field textarea{resize:vertical;min-height:84px}
+.ef-chips{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px}
+.ef-chip{position:relative;display:flex;align-items:center;gap:10px;padding:12px 13px;border:1.5px solid rgba(255,255,255,.14);border-radius:14px;cursor:pointer;font-size:14px;font-weight:600;transition:transform .18s,border-color .18s,background .18s,box-shadow .18s;background:rgba(0,0,0,.22)}
+.ef-chip:hover{transform:translateY(-2px);border-color:var(--ef-accent)}
+.ef-chip input{position:absolute;opacity:0;pointer-events:none}
+.ef-chip svg{width:24px;height:24px;flex:none;color:var(--ef-accent);transition:color .18s}
+.ef-chip span{line-height:1.25}
+.ef-chip:has(input:checked){background:linear-gradient(135deg,color-mix(in srgb,var(--ef-accent) 88%,#000 12%),color-mix(in srgb,var(--ef-accent) 62%,#000 38%));border-color:var(--ef-accent);color:#fff;box-shadow:0 8px 22px rgba(0,0,0,.35)}
+.ef-chip:has(input:checked) svg{color:#fff}
+.ef-error{color:#ff8a8a;font-size:14px;font-weight:600;margin:0}
+.ef-submit{display:flex;align-items:center;justify-content:center;gap:12px;padding:17px 20px;border:none;border-radius:16px;cursor:pointer;font-size:17px;font-weight:800;color:#062b16;background:radial-gradient(circle at 30% 25%,var(--ef-wa1),var(--ef-wa2) 70%);box-shadow:0 10px 28px rgba(18,169,75,.45),inset 0 2px 3px rgba(255,255,255,.5),inset 0 -3px 6px rgba(0,0,0,.18);transition:transform .18s,box-shadow .18s;color:#fff;text-shadow:0 1px 2px rgba(0,0,0,.3)}
+.ef-submit svg{width:26px;height:26px;filter:drop-shadow(0 1px 2px rgba(0,0,0,.35))}
+.ef-submit:hover{transform:translateY(-2px) scale(1.01);box-shadow:0 14px 34px rgba(18,169,75,.55),inset 0 2px 3px rgba(255,255,255,.5),inset 0 -3px 6px rgba(0,0,0,.18)}
+.ef-submit:active{transform:scale(.98)}
+.ef-note{text-align:center;font-size:13.5px;opacity:.65;margin:0}
+
+/* ===== WA FLOAT 3D UPGRADE ===== */
+.wa-float{position:fixed!important;bottom:24px!important;right:24px!important;z-index:900!important;
+width:66px!important;height:66px!important;border-radius:50%!important;
+background:radial-gradient(circle at 32% 28%,#5cf096 0%,#25d366 38%,#0e9e47 74%,#076b34 100%)!important;
+display:flex!important;align-items:center!important;justify-content:center!important;
+box-shadow:0 14px 32px rgba(14,158,71,.5),0 5px 12px rgba(0,0,0,.35),inset 0 3px 7px rgba(255,255,255,.55),inset 0 -6px 12px rgba(0,0,0,.28)!important;
+animation:waFloat3d 3.4s ease-in-out infinite!important}
+.wa-float svg{width:35px!important;height:35px!important;color:#fff!important;filter:drop-shadow(0 2px 3px rgba(0,0,0,.45))!important}
+.wa-float::after{content:"";position:absolute;inset:-5px;border-radius:50%;border:2px solid rgba(37,211,102,.6);animation:waPulse 2.6s ease-out infinite;pointer-events:none}
+@keyframes waFloat3d{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+@keyframes waPulse{0%{transform:scale(.88);opacity:.9}70%{transform:scale(1.28);opacity:0}100%{transform:scale(1.28);opacity:0}}
+@media(prefers-reduced-motion:reduce){.wa-float{animation:none!important}.wa-float::after{display:none}}

@@ -194,26 +194,40 @@
 <!-- COTIZADOR -->
 <section class="quote" id="cotizar">
   <div class="wrap">
-    <p class="sec-kicker">Estimado gratis</p>
-    <h2>Pide tu <em>estimado gratis</em></h2>
-    <p class="quote-sub">Llena el formulario y te abrimos WhatsApp con tu mensaje listo para Vazquez Construction Group.</p>
-    <form class="qform" id="qform" novalidate>
-      <div class="qf-grid">
-        <label>Nombre*<input id="qNombre" name="nombre" type="text" placeholder="Tu nombre" required autocomplete="name"></label>
-        <label>Teléfono<input id="qTel" name="telefono" type="tel" placeholder="787-000-0000" autocomplete="tel"></label>
-        <label>Servicio que necesita<select id="qServicio" name="servicio">
-          <option>Reparación de varilla expuesta</option>
-          <option>Demolición de concreto dañado</option>
-          <option>Limpieza profunda de corrosión de varilla</option>
-          <option>Refuerzo de varilla</option>
-          <option>Concreto nuevo</option>
-          <option>Sellado de techos</option>
-        </select></label>
-        <label class="qf-full">Mensaje<textarea id="qMsg" name="mensaje" rows="3" placeholder="Cuéntanos del daño: ¿varilla expuesta? ¿filtraciones? ¿en qué pueblo?"></textarea></label>
+   <form class="qelite" data-wa="17873645335" data-biz="Vazquez Construction Group LLC" novalidate>
+    <p class="qelite-kicker">Cotización gratis</p>
+    <h2 class="qelite-title">Cotiza tu sellado <span>por WhatsApp</span></h2>
+    <p class="qelite-sub">Elige tu servicio y te abrimos WhatsApp con todo listo para enviar.</p>
+    <div class="qelite-err"></div>
+    <div class="qelite-step">
+      <div class="qelite-step-head"><span class="qelite-num">1</span><h3>Tus datos</h3></div>
+      <div class="qelite-grid2">
+        <label class="qelite-field"><span>Nombre</span><input type="text" name="nombre" placeholder="Tu nombre" autocomplete="name" required></label>
+        <label class="qelite-field"><span>Teléfono</span><input type="tel" name="telefono" placeholder="787-000-0000" autocomplete="tel" required></label>
       </div>
-      <button class="btn btn-wa qf-submit" type="submit">Enviar por WhatsApp</button>
-      <p class="qf-note">Al enviar, se abre WhatsApp con tu mensaje dirigido a Vazquez Construction Group (787-364-5335).</p>
-    </form>
+    </div>
+    <div class="qelite-step">
+      <div class="qelite-step-head"><span class="qelite-num">2</span><h3>¿Qué servicio necesitas?</h3></div>
+      <div class="qelite-chips">
+        <label class="qelite-chip"><input type="radio" name="servicio" value="Reparación de varilla expuesta" checked><span class="qelite-chip-box"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M4 5h16v2.4H4zM4 10.8h16v2.4H4zM4 16.6h16V19H4z"/></svg><em>Reparación de varilla expuesta</em></span></label>
+        <label class="qelite-chip"><input type="radio" name="servicio" value="Demolición de concreto dañado"><span class="qelite-chip-box"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M13.8 2.6l7.6 7.4-2.8 2.8-1.4-1.4-8 8-4.2-4.2 8-8-1.4-1.4zM7 13.6l2.4 2.4-3.8 3.8-2.4-2.4z"/></svg><em>Demolición de concreto dañado</em></span></label>
+        <label class="qelite-chip"><input type="radio" name="servicio" value="Limpieza profunda de corrosión de varilla"><span class="qelite-chip-box"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M11 4l1.7 4.8 4.8 1.7-4.8 1.7L11 17l-1.7-4.8-4.8-1.7 4.8-1.7zM18.5 3.5l.9 2.4 2.4.9-2.4.9-.9 2.4-.9-2.4-2.4-.9 2.4-.9z"/></svg><em>Limpieza profunda de corrosión de varilla</em></span></label>
+        <label class="qelite-chip"><input type="radio" name="servicio" value="Refuerzo de varilla"><span class="qelite-chip-box"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M10 4h4v6h6v4h-6v6h-4v-6H4v-4h6z"/></svg><em>Refuerzo de varilla</em></span></label>
+        <label class="qelite-chip"><input type="radio" name="servicio" value="Concreto nuevo"><span class="qelite-chip-box"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M13.8 2.6l7.6 7.4-2.8 2.8-1.4-1.4-8 8-4.2-4.2 8-8-1.4-1.4zM7 13.6l2.4 2.4-3.8 3.8-2.4-2.4z"/></svg><em>Concreto nuevo</em></span></label>
+        <label class="qelite-chip"><input type="radio" name="servicio" value="Sellado de techos"><span class="qelite-chip-box"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M12 2s6 6.6 6 11a6 6 0 0 1-12 0c0-4.4 6-11 6-11z"/></svg><em>Sellado de techos</em></span></label>
+        <label class="qelite-chip"><input type="radio" name="servicio" value="Otro"><span class="qelite-chip-box"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M6 11a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm6 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm6 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4z"/></svg><em>Otro</em></span></label>
+      </div>
+    </div>
+    <div class="qelite-step">
+      <div class="qelite-step-head"><span class="qelite-num">3</span><h3>Detalles</h3></div>
+      <div class="qelite-grid2">
+        <label class="qelite-field"><span>Pueblo (opcional)</span><input type="text" name="pueblo" placeholder="Ej. Bayamón"></label>
+      </div>
+      <label class="qelite-field" style="margin-top:14px"><span>Cuéntanos más</span><textarea name="mensaje" rows="3" placeholder="Tamaño del techo, filtraciones, urgencia..."></textarea></label>
+    </div>
+    <button type="submit" class="qelite-submit"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 2a8 8 0 1 1-4.1 14.9l-.3-.2-2.9.8.8-2.8-.2-.3A8 8 0 0 1 12 4zm-3.2 4.2c-.2 0-.5 0-.7.3-.2.3-.9.9-.9 2.1s.9 2.4 1 2.6c.1.2 1.8 2.9 4.5 3.9 2.2.9 2.7.7 3.2.7.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.2-.2-.5-.3l-2-1c-.2-.1-.4-.1-.6.1l-.9 1.1c-.2.2-.3.2-.6.1-.7-.3-1.4-.7-2-1.3-.5-.5-.8-1-1-1.3-.2-.3 0-.4.1-.6l.5-.6c.2-.2.2-.4.1-.6L9.6 7c-.2-.4-.4-.6-.8-.6z"/></svg> Enviar por WhatsApp</button>
+    <p class="qelite-note">Se abre WhatsApp con tu mensaje listo. Sin compromiso.</p>
+   </form>
   </div>
 </section>
 
@@ -225,23 +239,35 @@
     <p class="plans-sub">Esta web la hizo ManuPro. Elige tu plan:</p>
     <div class="plan-grid">
       <article class="plan reveal">
-        <h3>Solo Web</h3>
-        <p class="price"><span class="reg">$300</span> $99</p>
-        <p>Tu web profesional para que te encuentren y te llamen.</p>
-        <a class="btn btn-plan" href="https://wa.me/17873128042?text=Hola%20ManuPro%2C%20me%20interesa%20el%20plan%20Solo%20Web%20%2499." target="_blank" rel="noopener">Quiero este plan</a>
-      </article>
-      <article class="plan reveal">
         <h3>Web + Arranque</h3>
-        <p class="price"><span class="reg">$600</span> $150</p>
-        <p>Web + todo listo para empezar a vender.</p>
-        <a class="btn btn-plan" href="https://wa.me/17873128042?text=Hola%20ManuPro%2C%20me%20interesa%20el%20plan%20Web%20%2B%20Arranque%20%24150." target="_blank" rel="noopener">Quiero este plan</a>
+        <p class="price"><span class="reg">$499</span> $199</p>
+        <ul class="plan-list">
+          <li>Website profesional de 1 página</li>
+          <li>Diseño a la medida de tu negocio</li>
+          <li>Botón de WhatsApp y llamada</li>
+          <li>Formulario de cotización</li>
+          <li>Hosting por 2 meses</li>
+          <li>Dominio .com por 1 año</li>
+          <li>Publicación y configuración inicial</li>
+        </ul>
+        <a class="btn btn-plan" href="https://wa.me/17873128042?text=Hola%20ManuPro%2C%20me%20interesa%20el%20plan%20Web%20%2B%20Arranque%20de%20%24199." target="_blank" rel="noopener">Quiero este plan</a>
       </article>
       <article class="plan plan-featured reveal">
         <span class="tag">La más elegida</span>
         <h3>Tranquilidad Total</h3>
-        <p class="price"><span class="reg">$1,000</span> $200</p>
-        <p>Web + arranque + tranquilidad por un año.</p>
-        <a class="btn btn-plan" href="https://wa.me/17873128042?text=Hola%20ManuPro%2C%20me%20interesa%20el%20plan%20Tranquilidad%20Total%20%24200." target="_blank" rel="noopener">Quiero este plan</a>
+        <p class="price"><span class="reg">$799</span> $299</p>
+        <ul class="plan-list">
+          <li>Website profesional de 1 página</li>
+          <li>Diseño a la medida de tu negocio</li>
+          <li>Botón de WhatsApp y llamada</li>
+          <li>Formulario de cotización</li>
+          <li>Hosting por 1 año</li>
+          <li>Mantenimiento por 1 año</li>
+          <li>Dominio .com por 1 año</li>
+          <li>Publicación y configuración inicial</li>
+          <li>Soporte prioritario</li>
+        </ul>
+        <a class="btn btn-plan" href="https://wa.me/17873128042?text=Hola%20ManuPro%2C%20me%20interesa%20el%20plan%20Tranquilidad%20Total%20de%20%24299." target="_blank" rel="noopener">Quiero este plan</a>
       </article>
     </div>
   </div>
@@ -253,6 +279,7 @@
     <p class="f-name">Vazquez Construction Group LLC</p>
     <p class="f-line">Bayamón · Área metro, Puerto Rico</p>
     <p class="f-line"><a href="tel:+17873645335">787-364-5335</a></p>
+    <p class="f-social"><a href="https://www.tiktok.com/@construcciones.vz3" target="_blank" rel="noopener" aria-label="TikTok de Vazquez Construction"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg><span>TikTok</span></a></p>
     <p class="f-credit">Web por ManuPro</p>
   </div>
 </footer>
@@ -262,5 +289,29 @@
 </a>
 
 <script src="js/main.js"></script>
+
+<script>
+(function(){
+if(window.__qeliteInit)return;window.__qeliteInit=true;
+document.querySelectorAll('.qelite').forEach(function(form){
+  form.addEventListener('submit',function(ev){
+    ev.preventDefault();
+    var err=form.querySelector('.qelite-err');
+    var nombre=form.querySelector('[name=nombre]').value.trim();
+    var tel=form.querySelector('[name=telefono]').value.trim();
+    var servEl=form.querySelector('[name=servicio]:checked');
+    var serv=servEl?servEl.value:'';
+    var pueblo=form.querySelector('[name=pueblo]').value.trim();
+    var msg=form.querySelector('[name=mensaje]').value.trim();
+    if(!nombre||!tel){err.style.display='block';err.textContent='Por favor completa tu nombre y teléfono.';return;}
+    err.style.display='none';
+    var wa=form.dataset.wa, biz=form.dataset.biz||'el negocio';
+    var txt='Hola '+biz+', soy '+nombre+'. Mi teléfono es '+tel+'. Necesito: '+serv+'.'+(pueblo?' Pueblo: '+pueblo+'.':'')+(msg?' '+msg:'');
+    window.open('https://wa.me/'+wa+'?text='+encodeURIComponent(txt),'_blank');
+  });
+});
+})();
+</script>
+
 </body>
 </html>

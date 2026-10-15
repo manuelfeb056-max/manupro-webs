@@ -36,3 +36,11 @@ Mejoras aplicadas 2026-10-15 (toque ligero, sin rediseño):
   flotante + botón propio de cerrar dentro del overlay; enlace "Cotiza"
   agregado al menú.
 - Animaciones elite suaves: shine en botones primarios.
+
+RONDA 2 (2026-10-15) — mejora elite:
+
+- Logo real: no se encontró logo público del negocio (reportado honesto).
+- Red verificada: Facebook: https://www.facebook.com/936999541928720
+- Notas: Pagina de Facebook oficial 'Embelleciendo Techos del Este y Pintura' (place_id 936999541928720, 51 Calle Jesus de Pinero, Las Piedras; tel +1 931-458-0010). Sin logo publico ni otras redes verificables. No hay telefono dado en el brief; la pagina publica el 931-458-0010.
+- Formulario reconstruido con estructura elite (3 pasos + chips de servicios) → WhatsApp del negocio.
+- Botón flotante de WhatsApp convertido a 3D.

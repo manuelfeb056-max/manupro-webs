@@ -33,3 +33,11 @@ Mejoras aplicadas 2026-10-15 (toque ligero, sin rediseño):
   agregado al menú.
 - Animaciones elite suaves: shine en botones principales (el sitio ya
   tenía parallax en hero, reveal y shine en la foto).
+
+RONDA 2 (2026-10-15) — mejora elite:
+
+- Logo real: no se encontró logo público del negocio (reportado honesto).
+- Red verificada: Facebook: https://www.facebook.com/1584309948889189
+- Notas: Pagina de Facebook oficial 'ERC Inc.' (place_id 1584309948889189, PR-814 Naranjito; tel +1 787-869-6268 coincide exacto). Sin logo publico ni otras redes verificables.
+- Formulario reconstruido con estructura elite (3 pasos + chips de servicios) → WhatsApp del negocio.
+- Botón flotante de WhatsApp convertido a 3D.

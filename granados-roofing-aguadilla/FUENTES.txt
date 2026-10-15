@@ -37,3 +37,11 @@ MEJORAS 2026-10-15 (mejora ligera, sin rediseño):
 BRECHAS HONESTAS: sin logo real, sin fotos reales verificadas. Teléfono y
 dirección verificados por ficha Meta; Facebook encontrado por coincidencia
 de nombre (verificación de teléfono pendiente de login).
+
+RONDA 2 (2026-10-15) — mejora elite:
+
+- Logo real: no se encontró logo público del negocio (reportado honesto).
+- Red verificada: Facebook: https://www.facebook.com/GranadosRoofingPaint/
+- Notas: Teléfono 939-224-2416 verificado vía Meta Places (place_id 628625152940400, Aguadilla). Facebook verificado: nombre 'Granados Roofing and Paint' coincide y la ficha del lugar confirma teléfono/pueblo. Su foto de perfil de Facebook es el placeholder genérico de pin de mapa (sin logo del negocio) — no
+- Formulario reconstruido con estructura elite (3 pasos + chips de servicios) → WhatsApp del negocio.
+- Botón flotante de WhatsApp convertido a 3D.

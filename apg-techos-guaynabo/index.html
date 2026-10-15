@@ -14,6 +14,8 @@
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"HomeAndConstructionBusiness","name":"APG Techos","telephone":"+1-787-225-2625","address":{"@type":"PostalAddress","addressLocality":"Guaynabo","addressRegion":"PR","addressCountry":"US"},"areaServed":"Puerto Rico","priceRange":"$$"}
 </script>
+
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"HomeAndConstructionBusiness","name":"APG Techos","telephone":"+17872252625","address":{"@type":"PostalAddress","streetAddress":"32 C. Alborada","addressLocality":"Guaynabo","addressRegion":"PR","addressCountry":"US"},"sameAs":["https://www.facebook.com/1722962981252652"]}</script>
 </head>
 <body data-site="apg-techos-guaynabo">
 
@@ -35,11 +37,7 @@
   <div class="hero-panel" aria-hidden="true"></div>
   <div class="hero-inner wrap">
     <div class="hero-brand">
-      <svg class="hexlogo" viewBox="0 0 100 112" aria-hidden="true">
-        <polygon points="50,4 92,27 92,77 50,100 8,77 8,27" fill="#1F5FA8" stroke="#fff" stroke-width="4"/>
-        <polygon points="50,14 83,33 83,71 50,90 17,71 17,33" fill="none" stroke="rgba(255,255,255,.4)" stroke-width="1.5"/>
-        <text x="50" y="62" text-anchor="middle" font-family="Archivo,sans-serif" font-weight="900" font-size="22" fill="#fff">APG</text>
-      </svg>
+      <span class="hero-brand">APG <em>Techos</em></span>
       <div class="hero-brand-text"><strong>APG TECHOS</strong><span>GUAYNABO · PUERTO RICO</span></div>
     </div>
     <p class="kicker">SELLADO DE TECHOS PROFESIONAL</p>
@@ -143,26 +141,35 @@
 <!-- COTIZADOR -->
 <section class="quote" id="cotizar">
   <div class="wrap">
-    <p class="q-kicker">Cotización inmediata</p>
+    <p class="q-kicker">Cotización gratis</p>
     <h2 class="q-title">Cotiza tu proyecto <span>hoy mismo</span></h2>
     <p class="q-sub">Completa el formulario y te abrimos WhatsApp con tu solicitud lista para enviar.</p>
     <form id="quoteForm" class="q-form" novalidate>
-      <div class="q-grid">
-        <label>Tu nombre<input type="text" id="qNombre" placeholder="Nombre y apellido" autocomplete="name" required></label>
-        <label>Tu teléfono<input type="tel" id="qTel" placeholder="787-000-0000" autocomplete="tel" required></label>
+      <div class="q-step">
+        <div class="q-step-head"><span class="q-badge">1</span><h3>Paso 1 - Tus datos</h3></div>
+        <div class="q-grid">
+          <label>Tu nombre<input type="text" id="qNombre" placeholder="Nombre y apellido" autocomplete="name"></label>
+          <label>Tu tel&eacute;fono<input type="tel" id="qTel" placeholder="787-000-0000" autocomplete="tel"></label>
+        </div>
       </div>
-      <label>¿Qué servicio necesitas?
-        <select id="qServicio" required>
-          <option value="" disabled selected>Selecciona un servicio</option>
-          <option>Sellado residencial</option>
-          <option>Sellado líquido</option>
-          <option>Reparación de filtraciones</option>
-          <option>Garantía de 5 años</option>
-          <option>Otro</option>
-        </select>
-      </label>
-      <label>Detalles<textarea id="qMsg" rows="3" placeholder="Cuéntanos sobre tu techo..."></textarea></label>
-      <button type="submit" class="q-submit">Enviar por WhatsApp</button>
+      <div class="q-step">
+        <div class="q-step-head"><span class="q-badge">2</span><h3>Paso 2 - Elige tu servicio</h3></div>
+        <div class="q-chips">
+          <span class="q-chip"><input type="radio" name="qServ" id="qs0" value="Sellado residencial"><label for="qs0"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 2 12h3v8h5v-6h4v6h5v-8h3L12 3z"/></svg>Sellado residencial</label></span>
+          <span class="q-chip"><input type="radio" name="qServ" id="qs1" value="Sellado líquido"><label for="qs1"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2s6 6.6 6 11a6 6 0 0 1-12 0c0-4.4 6-11 6-11z"/></svg>Sellado líquido</label></span>
+          <span class="q-chip"><input type="radio" name="qServ" id="qs2" value="Reparación de filtraciones"><label for="qs2"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L4 17l3 3 5.3-5.3a4 4 0 0 0 5.4-5.4l-2.6 2.6-2.1-2.1 2.7-2.5z"/></svg>Reparación de filtraciones</label></span>
+          <span class="q-chip"><input type="radio" name="qServ" id="qs3" value="Garantía de 5 años"><label for="qs3"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 1 3 5v6c0 5.5 3.8 10.7 9 12 5.2-1.3 9-6.5 9-12V5l-9-4zm-2 16-4-4 1.4-1.4L10 14.2l6.6-6.6L18 9l-8 8z"/></svg>Garantía de 5 años</label></span>
+          <span class="q-chip"><input type="radio" name="qServ" id="qs4" value="Otro"><label for="qs4"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 2h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H8l-4 4V4a2 2 0 0 1 2-2z"/></svg>Otro</label></span>
+        </div>
+      </div>
+      <div class="q-step">
+        <div class="q-step-head"><span class="q-badge">3</span><h3>Paso 3 - Detalles</h3></div>
+        <div class="q-grid">
+          <label>Pueblo <span class="q-opt">(opcional)</span><input type="text" id="qPueblo" placeholder="Tu pueblo" autocomplete="address-level2"></label>
+          <label>Mensaje<textarea id="qMsg" rows="3" placeholder="Cu&eacute;ntanos sobre tu techo..."></textarea></label>
+        </div>
+      </div>
+      <button type="submit" class="q-submit"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16 3C9.4 3 4 8.4 4 15c0 2.4.7 4.6 2 6.5L4 29l7.7-2c1.8 1 3.9 1.5 6.1 1.5h.2c6.6 0 12-5.4 12-12S22.6 3 16 3zm0 21.8c-1.9 0-3.7-.5-5.3-1.5l-.4-.2-4.6 1.2 1.2-4.4-.3-.4c-1-1.6-1.6-3.5-1.6-5.5 0-5.6 4.6-10.2 10.2-10.2 5.6 0 10.2 4.6 10.2 10.2 0 5.6-4.6 10.8-9.4 10.8z"/></svg>Enviar por WhatsApp</button>
       <p class="q-note">Al enviar se abre WhatsApp con tu mensaje listo. Sin compromiso.</p>
     </form>
   </div>
@@ -174,24 +181,19 @@
     <h2>Tu negocio también merece verse elite</h2>
     <p class="plans-sub">Creamos la página web de tu negocio. Escoge tu plan:</p>
     <div class="plan-grid">
-      <article class="plan">
-        <h3>Solo Web</h3>
-        <p class="price"><span class="now">$99</span> <span class="was">$300</span></p>
-        <ul><li>Página web profesional</li><li>Botón de WhatsApp</li><li>Galería de trabajos</li></ul>
-        <a class="btn btn-outline-dark" href="https://wa.me/17873128042?text=Quiero%20el%20plan%20Solo%20Web%20%2499." target="_blank" rel="noopener">Elegir plan</a>
-      </article>
+      
       <article class="plan">
         <h3>Web + Arranque</h3>
-        <p class="price"><span class="now">$150</span> <span class="was">$600</span></p>
-        <ul><li>Todo lo del plan Solo Web</li><li>Dominio .com por 1 año</li><li>2 meses de hosting</li></ul>
-        <a class="btn btn-outline-dark" href="https://wa.me/17873128042?text=Quiero%20el%20plan%20Web%2BArranque%20%24150." target="_blank" rel="noopener">Elegir plan</a>
+        <p class="price"><span class="now">$199</span> <span class="was">$499</span></p>
+        <ul><li>Website profesional como esta</li><li>Dominio .com por 1 año</li><li>2 meses de hosting</li></ul>
+        <a class="btn btn-outline-dark" href="https://wa.me/17873128042?text=Quiero%20el%20plan%20Web%2BArranque%20%24199." target="_blank" rel="noopener">Elegir plan</a>
       </article>
       <article class="plan featured">
         <span class="badge">La más elegida</span>
         <h3>Tranquilidad Total</h3>
-        <p class="price"><span class="now">$200</span> <span class="was">$1,000</span></p>
+        <p class="price"><span class="now">$299</span> <span class="was">$799</span></p>
         <ul><li>Todo lo del plan Web + Arranque</li><li>Hosting por 1 año</li><li>Mantenimiento incluido</li><li>Dominio .com por 1 año</li></ul>
-        <a class="btn btn-primary" href="https://wa.me/17873128042?text=Quiero%20el%20plan%20Tranquilidad%20Total%20%24200." target="_blank" rel="noopener">Elegir plan</a>
+        <a class="btn btn-primary" href="https://wa.me/17873128042?text=Quiero%20el%20plan%20Tranquilidad%20Total%20%24299." target="_blank" rel="noopener">Elegir plan</a>
       </article>
     </div>
   </div>
@@ -201,7 +203,8 @@
 <footer>
   <div class="wrap foot-grid">
     <div><strong>APG TECHOS</strong><p>Sellado de techos · Guaynabo, PR<br>Garantía de 5 años</p></div>
-    <div><strong>Contacto</strong><p><a href="tel:+17872252625">787-225-2625</a><br><a href="https://wa.me/17872252625" target="_blank" rel="noopener">WhatsApp</a></p></div>
+    <div><strong>S&iacute;guenos</strong><p><a class="social-link" href="https://www.facebook.com/1722962981252652" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.5 22v-8h2.7l.4-3.1h-3.1V8.9c0-.9.25-1.5 1.55-1.5h1.65V4.6c-.3-.04-1.3-.1-2.4-.1-2.4 0-4 1.45-4 4.1v2.3H7.6V14h2.7v8h3.2z"/></svg>Facebook</a></p></div>
+     <div><strong>Contacto</strong><p><a href="tel:+17872252625">787-225-2625</a><br><a href="https://wa.me/17872252625" target="_blank" rel="noopener">WhatsApp</a></p></div>
   </div>
   <p class="copy">© 2026 APG Techos · Guaynabo, Puerto Rico</p>
 </footer>

@@ -39,3 +39,16 @@ Cambios de mejora ligera (2026-10-15, sin rediseño):
   formulario nuevo entra con reveal, con limpieza del delay al terminar.
 - Menú hamburguesa: verificado — botón circular z-index 100, overlay z-90,
   botón visible como X para cerrar; no tapa información. Sin cambios.
+
+MEJORA ELITE RONDA 2 (2026-10-15):
+- PRECIOS: 2 planes. "Web + Arranque" $499/$199, "Tranquilidad Total" $799/$299
+  con badge "LA MÁS ELEGIDA". Botones a https://wa.me/17873128042 con texto
+  pre-llenado.
+- FORMULARIO: reconstruido con sistema "qelite" (worker paralelo): kicker
+  "Cotización gratis", 3 pasos, radio-chips con ícono SVG (sellado de techos,
+  reparación de grietas y filtraciones, mantenimiento de sellado, inspección
+  de techos + Otro), pueblo opcional + textarea, botón WA grande a
+  wa.me/17877869850, validación inline. Handler inline con guard __qeliteInit.
+- LOGO REAL: no existe logo público descargable (sin website oficial, sin
+  redes verificables, Infopáginas sin logo). No se inventó ninguno.
+- REDES: ninguna red social verificada encontrada. Nada agregado.

@@ -49,21 +49,6 @@
       if (!open){ item.classList.add('open'); ans.style.maxHeight = ans.scrollHeight + 'px'; }
     });
   });
-
-  /* ---------- formulario a WhatsApp ---------- */
-  var form = document.getElementById('cform');
-  if (form){
-    form.addEventListener('submit', function(ev){
-      ev.preventDefault();
-      var biz = form.dataset.biz || 'el negocio',
-          wa = form.dataset.wa || '17875472190',
-          nombre = document.getElementById('fNombre').value.trim(),
-          servicio = document.getElementById('fServicio').value,
-          msg = document.getElementById('fMsg').value.trim();
-      var text = 'Hola ' + biz + ', soy ' + nombre + '. Me interesa: ' + servicio + '.' + (msg ? ' ' + msg : '');
-      window.open('https://wa.me/' + wa + '?text=' + encodeURIComponent(text), '_blank');
-    });
-  }
 })();
 
 /* ---------- galería carrusel ---------- */
@@ -121,5 +106,25 @@
       b.classList.remove('open','active');
     });
     document.body.style.overflow = '';
+  });
+})();
+
+/* Cotizador elite → WhatsApp (Alers Construction Corp: 19392259859) */
+(function(){
+  var f=document.getElementById('cform');
+  if(!f) return;
+  f.addEventListener('submit',function(e){
+    e.preventDefault();
+    var n=document.getElementById('fNombre'),t=document.getElementById('fTel'),
+        p=document.getElementById('fPueblo'),m=document.getElementById('fMsg'),
+        s=f.querySelector('input[name="fServicio"]:checked'),
+        chips=f.querySelector('.qe-chips'),ok=true;
+    [n,t].forEach(function(el){var bad=!el.value.trim();el.classList.toggle('err',bad);if(bad)ok=false;});
+    var sb=!s;chips.classList.toggle('err',sb);if(sb)ok=false;
+    if(!ok) return;
+    var txt='Hola Alers Construction Corp, soy '+n.value.trim()+' ('+t.value.trim()+').\nServicio: '+s.value+'.'
+      +(p.value.trim()?'\nPueblo: '+p.value.trim()+'.':'')
+      +(m.value.trim()?'\nDetalles: '+m.value.trim():'');
+    window.open('https://wa.me/19392259859?text='+encodeURIComponent(txt),'_blank');
   });
 })();

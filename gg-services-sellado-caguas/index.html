@@ -115,33 +115,45 @@
 </div></section>
 
 <!-- ============ COTIZACIÓN ============ -->
-<section class="sec quote-sec" id="cotizar">
-<div class="wrap">
-<div class="quote-card reveal">
-<div class="quote-head">
-<span class="kicker">Cotización gratis</span>
-<h2>Pide tu cotización por WhatsApp</h2>
-<p class="lede">Llena el formulario y te abrimos WhatsApp con tu mensaje listo para enviar.</p>
-</div>
-<form id="qform" class="qform">
-<label>Nombre<input type="text" id="qNombre" placeholder="Tu nombre" required autocomplete="name"></label>
-<label>Teléfono<input type="tel" id="qTel" placeholder="787-000-0000" required autocomplete="tel"></label>
-<label>Servicio que necesita
-<select id="qServicio">
-<option>Sellado de techos residencial</option>
-<option>Sellado de techos comercial</option>
-<option>Reparación de filtraciones</option>
-<option>Lavado a presión de techo</option>
-<option>Pintura de techo</option>
-<option>Instalación de aires acondicionados</option>
-<option>Handyman general</option>
-</select></label>
-<label>Mensaje<textarea id="qMsg" rows="3" placeholder="Cuéntanos de tu techo (tamaño, goteras, pueblo)..."></textarea></label>
-<button class="btn btn-solid qbtn" type="submit">Enviar por WhatsApp</button>
-<p class="q-note">Te respondemos al 787-469-0017.</p>
-</form>
-</div>
-</div>
+<section class="sec quote-sec nq-sec" id="cotizar">
+<div class="wrap nq">
+    <p class="nq-kicker">Cotizaci&oacute;n gratis</p>
+    <h2 class="nq-title">Cotiza tu proyecto <span>hoy mismo</span></h2>
+    <p class="nq-sub">Completa los 3 pasos y te abrimos WhatsApp con tu solicitud lista para enviar.</p>
+    <form id="nqForm" class="nq-form" novalidate>
+      <div class="nq-card">
+        <div class="nq-step">
+          <p class="nq-stephead"><span class="nq-num">1</span><span><strong>Paso 1</strong> &mdash; Tus datos</span></p>
+          <div class="nq-grid">
+            <label class="nq-field"><span>Nombre</span><input id="nqNombre" type="text" placeholder="Tu nombre" autocomplete="name"></label>
+            <label class="nq-field"><span>Tel&eacute;fono</span><input id="nqTel" type="tel" placeholder="787-000-0000" autocomplete="tel" inputmode="tel"></label>
+          </div>
+        </div>
+        <div class="nq-step">
+          <p class="nq-stephead"><span class="nq-num">2</span><span><strong>Paso 2</strong> &mdash; Elige tu servicio</span></p>
+          <div class="nq-chips" role="radiogroup" aria-label="Servicios">
+          <label class="nq-chip"><input type="radio" name="nqServicio" value="Sellado de techos residencial"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3c3.5 4.2 6 7.6 6 11a6 6 0 1 1-12 0c0-3.4 2.5-6.8 6-11z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg><span>Sellado de techos residencial</span></label>
+          <label class="nq-chip"><input type="radio" name="nqServicio" value="Sellado de techos comercial"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3c3.5 4.2 6 7.6 6 11a6 6 0 1 1-12 0c0-3.4 2.5-6.8 6-11z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg><span>Sellado de techos comercial</span></label>
+          <label class="nq-chip"><input type="radio" name="nqServicio" value="Reparación de filtraciones"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 10c2-2 4-2 6 0s4 2 6 0 4-2 6 0M3 15c2-2 4-2 6 0s4 2 6 0 4-2 6 0" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg><span>Reparación de filtraciones</span></label>
+          <label class="nq-chip"><input type="radio" name="nqServicio" value="Lavado a presión de techo"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v4M12 17v4M3 12h4M17 12h4M6 6l2.5 2.5M15.5 15.5L18 18M18 6l-2.5 2.5M8.5 15.5L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><span>Lavado a presión de techo</span></label>
+          <label class="nq-chip"><input type="radio" name="nqServicio" value="Pintura de techo"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20c2 0 3-1 3-3l8-8 3 3-8 8c-2 2-4 2-6 0z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M14 6l2-2 4 4-2 2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg><span>Pintura de techo</span></label>
+          <label class="nq-chip"><input type="radio" name="nqServicio" value="Instalación de aires acondicionados"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path d="M8 12.5l2.5 2.5L16 9.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Instalación de aires acondicionados</span></label>
+          <label class="nq-chip"><input type="radio" name="nqServicio" value="Handyman general"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path d="M8 12.5l2.5 2.5L16 9.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Handyman general</span></label>
+          </div>
+          <p class="nq-err" id="nqErrServ" hidden>Elige un servicio para continuar.</p>
+        </div>
+        <div class="nq-step">
+          <p class="nq-stephead"><span class="nq-num">3</span><span><strong>Paso 3</strong> &mdash; Detalles <em>(opcional)</em></span></p>
+          <div class="nq-grid">
+            <label class="nq-field"><span>Pueblo</span><input id="nqPueblo" type="text" placeholder="&iquest;D&oacute;nde es el trabajo?"></label>
+            <label class="nq-field"><span>Cu&eacute;ntanos m&aacute;s</span><textarea id="nqMsg" rows="2" placeholder="Goteras, manchas, tama&ntilde;o aproximado del techo..."></textarea></label>
+          </div>
+        </div>
+        <button class="nq-submit" type="submit"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.4 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.4 0 .6l-.4.6-.5.5c-.2.2-.3.4-.1.7.2.3.9 1.5 2 2.4 1.4 1.2 2.5 1.6 2.9 1.8.3.2.5.1.7-.1l1-1.2c.2-.3.4-.2.7-.1l2 1c.3.1.5.2.6.4 0 .1 0 .7-.2 1.3z"/></svg><span>Enviar por WhatsApp</span></button>
+        <p class="nq-note">Al enviar se abre WhatsApp al 787-469-0017 con tu mensaje listo. Sin compromiso.</p>
+      </div>
+    </form>
+  </div>
 </section>
 
 <section class="plans sec" id="planes"><div class="wrap">
@@ -149,15 +161,13 @@
 <h2>Tu negocio también merece verse así</h2>
 <p class="p-sub">Esta página es una muestra de lo que hacemos en ManuPro. Llevamos tu negocio a internet con oferta de lanzamiento por tiempo limitado.</p></div>
 <div class="p-grid">
-<div class="p-card reveal"><h3>Solo Web</h3><div class="p-price">$99</div><div class="p-reg">Regular <s>$300</s></div>
-<ul class="p-list"><li>Website profesional de tu negocio</li><li>Diseño para celular y computadora</li><li>Botón de WhatsApp integrado</li></ul>
-<a class="btn btn-plan" href="https://wa.me/17873128042?text=Hola%20ManuPro%2C%20quiero%20el%20plan%20Solo%20Web%20de%20%2499." target="_blank" rel="noopener">Quiero este plan</a></div>
-<div class="p-card reveal"><h3>Web + Arranque</h3><div class="p-price">$150</div><div class="p-reg">Regular <s>$600</s></div>
-<ul class="p-list"><li>Todo lo del plan Solo Web</li><li>Hosting por 2 meses</li><li>Dominio .com por 1 año</li></ul>
-<a class="btn btn-plan" href="https://wa.me/17873128042?text=Hola%20ManuPro%2C%20quiero%20el%20plan%20Web%20%2B%20Arranque%20de%20%24150." target="_blank" rel="noopener">Quiero este plan</a></div>
-<div class="p-card feat reveal"><div class="p-seal">La más elegida</div><h3>Tranquilidad Total</h3><div class="p-price">$200</div><div class="p-reg">Regular <s>$1,000</s></div>
+
+<div class="p-card reveal"><h3>Web + Arranque</h3><div class="p-price">$199</div><div class="p-reg">Regular <s>$499</s></div>
+<ul class="p-list"><li>Website profesional completa</li><li>Hosting por 2 meses</li><li>Dominio .com por 1 año</li></ul>
+<a class="btn btn-plan" href="https://wa.me/17873128042?text=Hola%20ManuPro%2C%20quiero%20el%20plan%20Web%20%2B%20Arranque%20de%20%24199." target="_blank" rel="noopener">Quiero este plan</a></div>
+<div class="p-card feat reveal"><div class="p-seal">La más elegida</div><h3>Tranquilidad Total</h3><div class="p-price">$299</div><div class="p-reg">Regular <s>$799</s></div>
 <ul class="p-list"><li>Todo lo del plan Web + Arranque</li><li>Hosting por 1 año</li><li>Mantenimiento incluido</li><li>Dominio .com por 1 año</li></ul>
-<a class="btn btn-plan" href="https://wa.me/17873128042?text=Hola%20ManuPro%2C%20quiero%20el%20plan%20Tranquilidad%20Total%20de%20%24200." target="_blank" rel="noopener">Quiero este plan</a></div>
+<a class="btn btn-plan" href="https://wa.me/17873128042?text=Hola%20ManuPro%2C%20quiero%20el%20plan%20Tranquilidad%20Total%20de%20%24299." target="_blank" rel="noopener">Quiero este plan</a></div>
 </div>
 </div></section>
 

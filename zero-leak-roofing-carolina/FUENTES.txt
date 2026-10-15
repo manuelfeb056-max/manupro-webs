@@ -23,3 +23,10 @@ DATOS DEL NEGOCIO (verificados):
 - Servicios (los que el propio sitio anuncia): sellado de techos,
   reparación de filtraciones, impermeabilización, mantenimiento de
   techos. Carolina y áreas cercanas.
+
+RONDA 2 (2026-10-15, mejora ELITE):
+- PLANES: 2 planes (eliminado "Solo Web" $99). "Web + Arranque" $199 (regular $499) y "Tranquilidad Total" $299 (regular $799, sello "La más elegida"), mismos items y botones a wa.me/17873128042 que en va-roofing-sj.
+- FORMULARIO: estructura qelite de 3 pasos con los 4 servicios REALES que el sitio anuncia (sellado de techos, reparación de filtraciones, impermeabilización, mantenimiento de techos) + "Otro". Envía a wa.me/17879027405 con validación nombre/teléfono/servicio.
+- COLORES: acento del cotizador al sky de marca #2AA6F5 (estaba azul genérico).
+- LOGO: sin logo público real (verificado 2026-10-15: places sin galería, sin web oficial ni redes del negocio). Se conserva el logo "ZL" generado. NO se inventó logo.
+- REDES: ninguna verificada del negocio. No se agregó nada inventado.

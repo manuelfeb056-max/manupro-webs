@@ -57,10 +57,25 @@
       ev.preventDefault();
       var biz = form.dataset.biz || 'el negocio',
           wa = form.dataset.wa || '17875472190',
-          nombre = document.getElementById('fNombre').value.trim(),
-          servicio = document.getElementById('fServicio').value,
-          msg = document.getElementById('fMsg').value.trim();
-      var text = 'Hola ' + biz + ', soy ' + nombre + '. Me interesa: ' + servicio + '.' + (msg ? ' ' + msg : '');
+          nombre = document.getElementById('fNombre'),
+          tel = document.getElementById('fTel'),
+          pueblo = document.getElementById('fPueblo'),
+          servicio = form.querySelector('input[name="servicio"]:checked'),
+          msg = document.getElementById('fMsg').value.trim(),
+          chips = form.querySelector('.chips');
+      var ok = true;
+      [nombre, tel].forEach(function(el){
+        var bad = !el.value.trim();
+        el.classList.toggle('err', bad);
+        if(bad) ok = false;
+      });
+      var badS = !servicio;
+      if(chips) chips.classList.toggle('err', badS);
+      if(badS) ok = false;
+      if(!ok) return;
+      var text = 'Hola ' + biz + ', soy ' + nombre.value.trim() + ' (' + tel.value.trim() + '). Servicio: ' + servicio.value + '.' +
+        (pueblo.value.trim() ? ' Pueblo: ' + pueblo.value.trim() + '.' : '') +
+        (msg ? ' Detalle: ' + msg : '');
       window.open('https://wa.me/' + wa + '?text=' + encodeURIComponent(text), '_blank');
     });
   }

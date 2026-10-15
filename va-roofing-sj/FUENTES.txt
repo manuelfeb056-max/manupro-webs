@@ -29,3 +29,12 @@ DATOS DEL NEGOCIO (verificados):
 - Referencias:
   https://infopaginas.com/b/san-juan/v-and-a-roofing-contractors-sellado-de-techos
   https://pr.eldirectorio.co/empresas/san-juan/productos-o-servicios/v-andamp-a-roofing-contractors-sellado-de-techos-88110
+
+RONDA 2 (2026-10-15, mejora ELITE):
+- PLANES: 2 planes. Eliminado "Solo Web" $99. "Web + Arranque" $199 (regular $499): website 1 página, diseño a medida, botón WhatsApp y llamada, formulario de cotización, hosting 2 meses, dominio .com 1 año, publicación y configuración inicial. "Tranquilidad Total" $299 (regular $799, badge "La más elegida"): todo lo anterior expandido + hosting 1 año, mantenimiento 1 año, dominio .com 1 año, soporte prioritario. Botones a wa.me/17873128042 (ManuPro) con texto del plan.
+- FORMULARIO: reconstruido a estructura qelite de 3 pasos (kicker "Cotización gratis" + título + subtítulo; PASO 1 nombre+teléfono 2 col; PASO 2 radio-chips con ícono SVG con los 5 servicios REALES verificados: Membrana asfáltica, Sellado líquido, Pintura de techos, Reparación de filtraciones, Estimado gratis; PASO 3 textarea + pueblo opcional; botón grande WhatsApp). Envía a wa.me/17875976536 con nombre, teléfono, servicio, pueblo y detalles. Validación JS: nombre (2+), teléfono (7+ dígitos), servicio requerido; errores en .qelite-err.
+- COLORES: acento del cotizador cambiado al sky de marca #7DD3FC (estaba un azul genérico).
+- LOGO: sin logo público real (verificado 2026-10-15: solo directorios Infopáginas/eldirectorio; sin web oficial ni redes del negocio). Se conserva el escudo V&A generado. NO se inventó logo.
+- REDES: ninguna verificada del negocio. No se agregó nada inventado.
+
+INCIDENTE LOGO (2026-10-15 ~13:06 UTC): otro worker del batch creó img/logo-real.png (logo "V&A ROOFING" genérico con techo rojo, FABRICADO — este negocio no tiene logo público) y lo cableó en el hero + favicon. REVERTIDO 13:13 UTC: archivo movido a trash (id 20261015-131333-550fda32cb0247238166c18f06768bd8), hero restaurado al escudo SVG generado original, favicon removido. NO existe logo real público de V & A Roofing Contractors — reportado honesto.

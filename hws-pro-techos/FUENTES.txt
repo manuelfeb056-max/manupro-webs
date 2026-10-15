@@ -39,3 +39,11 @@ MEJORAS 2026-10-15 (mejora ligera, sin rediseño):
 
 BRECHAS HONESTAS: sin logo real, sin fotos reales, sin redes sociales.
 Teléfono, dirección y servicios verificados en ClasificadosOnline.
+
+RONDA 2 (2026-10-15) — mejora elite:
+
+- Logo real: no se encontró logo público del negocio (reportado honesto).
+- Redes/email: sin redes verificables encontradas.
+- Notas: Teléfono 787-210-5404 verificado vía su página de socio de ClasificadosOnline (Magnolia Gardens, calle 9 f-1, San Juan - Río Piedras; 15 anuncios incluyendo sellado de techos). Sin sitio web propio ni página de Facebook, Instagram, YouTube o TikTok verificable. Sin logo público.
+- Formulario reconstruido con estructura elite (3 pasos + chips de servicios) → WhatsApp del negocio.
+- Botón flotante de WhatsApp convertido a 3D.

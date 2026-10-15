@@ -91,6 +91,7 @@ footer a{color:#fff;text-decoration:none;font-weight:600}
 @keyframes beam{from{transform:translateX(-62%) rotate(18deg)}to{transform:translateX(-38%) rotate(18deg)}}
 .hero-inner{position:relative;z-index:2;text-align:center;margin:0 auto;max-width:900px}
 .hero-logo svg{width:96px;height:auto;filter:drop-shadow(0 0 22px rgba(212,162,78,.55));animation:logoPulse 4s ease-in-out infinite}
+.hero-logo img{width:200px;max-width:60vw;height:auto;filter:drop-shadow(0 0 22px rgba(212,162,78,.55));animation:logoPulse 4s ease-in-out infinite}
 @keyframes logoPulse{0%,100%{transform:scale(1)}50%{transform:scale(1.06)}}
 .kicker{letter-spacing:.34em;font-size:.72rem;color:#D4A24E;margin:24px 0 16px;text-transform:uppercase}
 .hero-title{font-family:'Cinzel',serif;font-weight:900;font-size:clamp(3rem,10vw,7rem);line-height:1.02;letter-spacing:.04em;text-transform:uppercase}
@@ -128,3 +129,11 @@ img{animation:mpFadeIn .8s ease both}
 @keyframes mpFadeIn{from{opacity:0}to{opacity:1}}
 html{scroll-behavior:smooth}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}}
+
+/* === Boton WhatsApp 3D (mejora elite) === */
+.wa-float{background:radial-gradient(circle at 32% 28%,#63f59a 0%,#25d366 38%,#0e9e4f 72%,#087a3c 100%)!important;box-shadow:0 16px 38px rgba(8,140,70,.55),inset 0 2px 7px rgba(255,255,255,.5),inset 0 -7px 14px rgba(0,0,0,.38)!important;border:1px solid rgba(255,255,255,.3)!important;animation:waFloat3D 3.4s ease-in-out infinite!important;overflow:visible!important}
+.wa-float svg,.wa-float .ic{filter:drop-shadow(0 2px 3px rgba(0,0,0,.5))!important;position:relative;z-index:2}
+.wa-float::after{content:"";position:absolute;inset:-5px;border-radius:50%;border:2px solid rgba(37,211,102,.6);animation:waRing3D 2.4s ease-out infinite;pointer-events:none}
+@keyframes waFloat3D{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
+@keyframes waRing3D{0%{transform:scale(.82);opacity:.9}100%{transform:scale(1.4);opacity:0}}
+@media (prefers-reduced-motion:reduce){.wa-float{animation:none!important}.wa-float::after{display:none}}

@@ -81,54 +81,59 @@
 <p class="lede">Lo que todo dueño de casa pregunta antes de empezar un proyecto.</p>
 <div class="faq-item reveal"><button class="faq-q">¿Son solo selladores de techo o hacen otros trabajos?<span class="pl">+</span></button><div class="faq-a"><p>Somos contratistas generales: construcción, remodelación y también sellado de techos. Un solo equipo para todo tu proyecto.</p></div></div><div class="faq-item reveal"><button class="faq-q">¿Trabajan fuera de Naranjito?<span class="pl">+</span></button><div class="faq-a"><p>Sí, servimos el área central de Puerto Rico. Escríbenos por WhatsApp y confirmamos tu pueblo.</p></div></div><div class="faq-item reveal"><button class="faq-q">¿Cómo pido una cotización?<span class="pl">+</span></button><div class="faq-a"><p>Por WhatsApp al 787-869-6268: envíanos fotos del techo o del proyecto y te respondemos con un estimado gratis.</p></div></div><div class="faq-item reveal"><button class="faq-q">¿Cada cuánto se debe sellar el techo?<span class="pl">+</span></button><div class="faq-a"><p>Cada 4 a 5 años, según el sistema aplicado y la exposición al sol y la lluvia.</p></div></div><div class="faq-item reveal"><button class="faq-q">¿Sellan sobre el sellado viejo?<span class="pl">+</span></button><div class="faq-a"><p>Sí, si está bien adherido. Si está levantado o cuarteado, se remueve primero para que el nuevo sistema pegue bien.</p></div></div>
 </div></section>
-<section class="quote sec" id="cotizar"><div class="wrap">
-<div class="quote-card reveal">
-<div class="quote-copy">
-<span class="kicker">Cotiza por WhatsApp</span>
-<h2>Pide tu cotización</h2>
-<p class="q-sub">Completa esto y te abrimos WhatsApp con tu mensaje listo para ERC Inc. Estimados gratis, sin compromiso.</p>
-<ul class="q-points">
-<li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 7"/></svg>Un solo contratista responsable</li>
-<li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 7"/></svg>Estimados gratis por WhatsApp</li>
-<li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 7"/></svg>Trato directo, sin intermediarios</li>
-</ul>
-</div>
-<form class="q-form" id="quoteForm">
-<label>Nombre<input type="text" id="qNombre" placeholder="Tu nombre" required></label>
-<label>Teléfono<input type="tel" id="qTel" placeholder="787-000-0000" required></label>
-<label>Servicio que necesitas<select id="qServicio">
-<option>Construcción general</option>
-<option>Remodelación</option>
-<option>Sellado de techos</option>
-<option>Reparación de filtraciones</option>
-<option>Mantenimiento de techos (limpieza y resane)</option>
-<option>Otro proyecto</option>
-</select></label>
-<label>Mensaje<textarea id="qMsg" rows="3" placeholder="Cuéntanos de tu proyecto"></textarea></label>
-<button class="btn btn-solid" type="submit">Enviar cotización por WhatsApp</button>
-</form>
-</div>
-</div></section>
+<section class="quote sec nq-sec" id="cotizar">
+<div class="wrap nq">
+    <p class="nq-kicker">Cotizaci&oacute;n gratis</p>
+    <h2 class="nq-title">Cotiza tu proyecto <span>hoy mismo</span></h2>
+    <p class="nq-sub">Completa los 3 pasos y te abrimos WhatsApp con tu solicitud lista para enviar.</p>
+    <form id="nqForm" class="nq-form" novalidate>
+      <div class="nq-card">
+        <div class="nq-step">
+          <p class="nq-stephead"><span class="nq-num">1</span><span><strong>Paso 1</strong> &mdash; Tus datos</span></p>
+          <div class="nq-grid">
+            <label class="nq-field"><span>Nombre</span><input id="nqNombre" type="text" placeholder="Tu nombre" autocomplete="name"></label>
+            <label class="nq-field"><span>Tel&eacute;fono</span><input id="nqTel" type="tel" placeholder="787-000-0000" autocomplete="tel" inputmode="tel"></label>
+          </div>
+        </div>
+        <div class="nq-step">
+          <p class="nq-stephead"><span class="nq-num">2</span><span><strong>Paso 2</strong> &mdash; Elige tu servicio</span></p>
+          <div class="nq-chips" role="radiogroup" aria-label="Servicios">
+          <label class="nq-chip"><input type="radio" name="nqServicio" value="Construcción general"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M11 7l4-4 6 6-4 4zM11 7L4 20l3 1 7-7" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg><span>Construcción general</span></label>
+          <label class="nq-chip"><input type="radio" name="nqServicio" value="Remodelación"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M11 7l4-4 6 6-4 4zM11 7L4 20l3 1 7-7" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg><span>Remodelación</span></label>
+          <label class="nq-chip"><input type="radio" name="nqServicio" value="Sellado de techos"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3c3.5 4.2 6 7.6 6 11a6 6 0 1 1-12 0c0-3.4 2.5-6.8 6-11z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg><span>Sellado de techos</span></label>
+          <label class="nq-chip"><input type="radio" name="nqServicio" value="Reparación de filtraciones"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 10c2-2 4-2 6 0s4 2 6 0 4-2 6 0M3 15c2-2 4-2 6 0s4 2 6 0 4-2 6 0" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg><span>Reparación de filtraciones</span></label>
+          <label class="nq-chip"><input type="radio" name="nqServicio" value="Mantenimiento de techos (limpieza y resane)"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v4M12 17v4M3 12h4M17 12h4M6 6l2.5 2.5M15.5 15.5L18 18M18 6l-2.5 2.5M8.5 15.5L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><span>Mantenimiento de techos (limpieza y resane)</span></label>
+          <label class="nq-chip"><input type="radio" name="nqServicio" value="Otro proyecto"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path d="M8 12.5l2.5 2.5L16 9.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Otro proyecto</span></label>
+          </div>
+          <p class="nq-err" id="nqErrServ" hidden>Elige un servicio para continuar.</p>
+        </div>
+        <div class="nq-step">
+          <p class="nq-stephead"><span class="nq-num">3</span><span><strong>Paso 3</strong> &mdash; Detalles <em>(opcional)</em></span></p>
+          <div class="nq-grid">
+            <label class="nq-field"><span>Pueblo</span><input id="nqPueblo" type="text" placeholder="&iquest;D&oacute;nde es el trabajo?"></label>
+            <label class="nq-field"><span>Cu&eacute;ntanos m&aacute;s</span><textarea id="nqMsg" rows="2" placeholder="Goteras, manchas, tama&ntilde;o aproximado del techo..."></textarea></label>
+          </div>
+        </div>
+        <button class="nq-submit" type="submit"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.4 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.4 0 .6l-.4.6-.5.5c-.2.2-.3.4-.1.7.2.3.9 1.5 2 2.4 1.4 1.2 2.5 1.6 2.9 1.8.3.2.5.1.7-.1l1-1.2c.2-.3.4-.2.7-.1l2 1c.3.1.5.2.6.4 0 .1 0 .7-.2 1.3z"/></svg><span>Enviar por WhatsApp</span></button>
+        <p class="nq-note">Al enviar se abre WhatsApp al 787-869-6268 con tu mensaje listo. Sin compromiso.</p>
+      </div>
+    </form>
+  </div>
+</section>
 <section class="plans sec" id="planes"><div class="wrap">
 <div style="text-align:center"><span class="kicker">Oferta de lanzamiento</span>
 <h2>Tu negocio también merece verse así</h2>
 <p class="p-sub">Esta página es una muestra de lo que hacemos. Llevamos tu negocio a internet con oferta de lanzamiento por tiempo limitado.</p></div>
 <div class="p-grid">
-<div class="p-card reveal"><h3>Solo Web</h3><div class="p-price">$99</div><div class="p-reg">Regular $300</div>
+
+<div class="p-card reveal"><h3>Web + Arranque</h3><div class="p-price">$199</div><div class="p-reg">Regular $499</div>
 <ul class="p-list">
-<li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 7"/></svg> Website profesional como esta</li>
-<li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 7"/></svg> Lista en días, no semanas</li>
-<li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 7"/></svg> Textos y fotos de tu negocio</li>
-<li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 7"/></svg> Botón de WhatsApp integrado</li></ul>
-<a class="btn btn-ghost" href="https://wa.me/17873128042" target="_blank" rel="noopener">La quiero</a></div>
-<div class="p-card reveal"><h3>Web + Arranque</h3><div class="p-price">$150</div><div class="p-reg">Regular $600</div>
-<ul class="p-list">
-<li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 7"/></svg> Todo lo del plan Solo Web</li>
+<li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 7"/></svg> Website profesional completa</li>
 <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 7"/></svg> Hosting por 2 meses</li>
 <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 7"/></svg> Dominio .com por 1 año</li>
 <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 7"/></svg> Correo profesional</li></ul>
 <a class="btn btn-ghost" href="https://wa.me/17873128042" target="_blank" rel="noopener">La quiero</a></div>
-<div class="p-card hot reveal"><div class="p-flag">La más elegida</div><h3>Tranquilidad Total</h3><div class="p-price">$200</div><div class="p-reg">Regular $1,000</div>
+<div class="p-card hot reveal"><div class="p-flag">La más elegida</div><h3>Tranquilidad Total</h3><div class="p-price">$299</div><div class="p-reg">Regular $799</div>
 <ul class="p-list">
 <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 7"/></svg> Todo lo del plan Web + Arranque</li>
 <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 7"/></svg> Hosting por 1 AÑO</li>
@@ -145,7 +150,13 @@
 <a class="fphone" href="tel:+17878696268">787-869-6268</a>
 <p><a href="https://wa.me/17878696268?text=Hola%2C%20quiero%20una%20cotizaci%C3%B3n%20para%20mi%20proyecto." target="_blank" rel="noopener" style="text-decoration:underline">Escríbenos por WhatsApp</a></p>
 <p class="fine">© 2026 ERC Inc. Sitio de muestra por Manupro — manupro.space</p>
-</div></footer>
+</div><div class="nq-social">
+  <p class="nq-social-title">S&iacute;guenos</p>
+  <div class="nq-social-row">
+    <a class="nq-soc" href="https://www.facebook.com/1584309948889189" target="_blank" rel="noopener" aria-label="Facebook de ERC Inc"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.5 21v-7h2.4l.4-2.8h-2.8V9.4c0-.8.3-1.4 1.5-1.4h1.4V5.5c-.3 0-1.1-.1-2-.1-2 0-3.4 1.2-3.4 3.5v2.3H8.5V14H11v7z" fill="currentColor"/></svg><span>Facebook</span></a>
+  </div>
+</div>
+</footer>
 <a class="wa-float" href="https://wa.me/17878696268?text=Hola%2C%20quiero%20una%20cotizaci%C3%B3n%20para%20mi%20proyecto." target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><path d="M16 3C9.4 3 4 8.4 4 15c0 2.4.7 4.6 2 6.5L4 29l7.7-2c1.8 1 3.9 1.6 6 1.6h.3c6.6 0 12-5.4 12-12S22.6 3 16 3zm0 21.8c-1.9 0-3.7-.5-5.3-1.5l-.4-.2-4.6 1.2 1.2-4.5-.3-.4c-1-1.6-1.6-3.5-1.6-5.4C5 9.9 10 5 16 5s11 4.9 11 11-4.9 8.8-11 8.8zm6.1-6.6c-.3-.2-2-1-2.3-1.1-.3-.1-.5-.2-.7.2-.2.3-.8 1-1 1.2-.2.2-.4.2-.7.1-.3-.2-1.4-.5-2.6-1.6-1-.9-1.6-1.9-1.8-2.3-.2-.3 0-.5.1-.7l.5-.6c.2-.2.2-.4.3-.6.1-.2 0-.4 0-.6-.1-.2-.7-1.8-1-2.4-.3-.6-.5-.6-.7-.6h-.6c-.2 0-.6.2-.9.4-.3.3-1.1 1.1-1.1 2.7s1.2 3.1 1.3 3.4c.2.2 2.2 3.4 5.4 4.7.8.3 1.4.5 1.8.7.8.2 1.5.2 2 .1.6-.1 2-.8 2.2-1.6.3-.8.3-1.4.2-1.6-.1-.1-.3-.2-.6-.3z"/></svg></a>
 <script src="js/main.js"></script>
 </body>

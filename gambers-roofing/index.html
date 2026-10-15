@@ -178,31 +178,43 @@
   </div>
 </section>
 
-<section class="section contact" id="contacto">
-  <div class="wrap contact-grid">
-    <div class="contact-info">
-      <p class="kicker reveal">Contacto</p>
-      <h2 class="h2 reveal">Pide tu <span class="hl">cotización</span></h2>
-      <p class="reveal">Completa el formulario y te respondemos por WhatsApp.</p>
-      <div class="contact-lines reveal">
-        <a href="tel:+17879036604" class="contact-line"><svg viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z"/></svg><span>787-903-6604</span></a>
-        <a href="https://wa.me/17879036604?text=Hola%20Gambers%20Roofing%2C%20quiero%20una%20cotizaci%C3%B3n%20gratis." target="_blank" rel="noopener" class="contact-line"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.6-6.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.3-.6.8-.8 1-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4 0-.5.1-.7l.4-.5c.1-.2.1-.3 0-.5L9.4 8c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.2-.7.5-.2.3-.9.9-.9 2.2s.9 2.5 1.1 2.7c.1.2 1.8 2.8 4.4 3.9 1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2 0-.1-.2-.1-.4-.2z"/></svg><span>WhatsApp directo</span></a>
+<section class="section contact nq-sec" id="contacto">
+<div class="wrap nq">
+    <p class="nq-kicker">Cotizaci&oacute;n gratis</p>
+    <h2 class="nq-title">Cotiza tu proyecto <span>hoy mismo</span></h2>
+    <p class="nq-sub">Completa los 3 pasos y te abrimos WhatsApp con tu solicitud lista para enviar.</p>
+    <form id="nqForm" class="nq-form" novalidate>
+      <div class="nq-card">
+        <div class="nq-step">
+          <p class="nq-stephead"><span class="nq-num">1</span><span><strong>Paso 1</strong> &mdash; Tus datos</span></p>
+          <div class="nq-grid">
+            <label class="nq-field"><span>Nombre</span><input id="nqNombre" type="text" placeholder="Tu nombre" autocomplete="name"></label>
+            <label class="nq-field"><span>Tel&eacute;fono</span><input id="nqTel" type="tel" placeholder="787-000-0000" autocomplete="tel" inputmode="tel"></label>
+          </div>
+        </div>
+        <div class="nq-step">
+          <p class="nq-stephead"><span class="nq-num">2</span><span><strong>Paso 2</strong> &mdash; Elige tu servicio</span></p>
+          <div class="nq-chips" role="radiogroup" aria-label="Servicios">
+          <label class="nq-chip"><input type="radio" name="nqServicio" value="Sellado de techo con sistema Danosa"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3c3.5 4.2 6 7.6 6 11a6 6 0 1 1-12 0c0-3.4 2.5-6.8 6-11z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg><span>Sellado de techo con sistema Danosa</span></label>
+          <label class="nq-chip"><input type="radio" name="nqServicio" value="Selladores líquidos Danosa"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3c3.5 4.2 6 7.6 6 11a6 6 0 1 1-12 0c0-3.4 2.5-6.8 6-11z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg><span>Selladores líquidos Danosa</span></label>
+          <label class="nq-chip"><input type="radio" name="nqServicio" value="Uretano"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path d="M8 12.5l2.5 2.5L16 9.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Uretano</span></label>
+          <label class="nq-chip"><input type="radio" name="nqServicio" value="Pintura de casa"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20c2 0 3-1 3-3l8-8 3 3-8 8c-2 2-4 2-6 0z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M14 6l2-2 4 4-2 2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg><span>Pintura de casa</span></label>
+          <label class="nq-chip"><input type="radio" name="nqServicio" value="Lavado a presión"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v4M12 17v4M3 12h4M17 12h4M6 6l2.5 2.5M15.5 15.5L18 18M18 6l-2.5 2.5M8.5 15.5L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><span>Lavado a presión</span></label>
+          <label class="nq-chip"><input type="radio" name="nqServicio" value="Construcción de patio"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M11 7l4-4 6 6-4 4zM11 7L4 20l3 1 7-7" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg><span>Construcción de patio</span></label>
+          <label class="nq-chip"><input type="radio" name="nqServicio" value="Otro"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path d="M8 12.5l2.5 2.5L16 9.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Otro</span></label>
+          </div>
+          <p class="nq-err" id="nqErrServ" hidden>Elige un servicio para continuar.</p>
+        </div>
+        <div class="nq-step">
+          <p class="nq-stephead"><span class="nq-num">3</span><span><strong>Paso 3</strong> &mdash; Detalles <em>(opcional)</em></span></p>
+          <div class="nq-grid">
+            <label class="nq-field"><span>Pueblo</span><input id="nqPueblo" type="text" placeholder="&iquest;D&oacute;nde es el trabajo?"></label>
+            <label class="nq-field"><span>Cu&eacute;ntanos m&aacute;s</span><textarea id="nqMsg" rows="2" placeholder="Goteras, manchas, tama&ntilde;o aproximado del techo..."></textarea></label>
+          </div>
+        </div>
+        <button class="nq-submit" type="submit"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.4 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.4 0 .6l-.4.6-.5.5c-.2.2-.3.4-.1.7.2.3.9 1.5 2 2.4 1.4 1.2 2.5 1.6 2.9 1.8.3.2.5.1.7-.1l1-1.2c.2-.3.4-.2.7-.1l2 1c.3.1.5.2.6.4 0 .1 0 .7-.2 1.3z"/></svg><span>Enviar por WhatsApp</span></button>
+        <p class="nq-note">Al enviar se abre WhatsApp al 787-903-6604 con tu mensaje listo. Sin compromiso.</p>
       </div>
-    </div>
-    <form class="contact-form reveal" id="leadForm">
-      <label>Nombre<input type="text" name="nombre" placeholder="Tu nombre" required></label>
-      <label>Teléfono<input type="tel" name="telefono" placeholder="787-000-0000" required></label>
-      <label>Servicio<select name="servicio">
-        <option>Sellado de techo con sistema Danosa</option>
-        <option>Selladores líquidos Danosa</option>
-        <option>Uretano</option>
-        <option>Pintura de casa</option>
-        <option>Lavado a presión</option>
-        <option>Construcción de patio</option>
-        <option>Otro</option>
-      </select></label>
-      <label>Mensaje<textarea name="mensaje" rows="3" placeholder="Cuéntanos sobre tu techo"></textarea></label>
-      <button class="btn btn-brand btn-shine" type="submit">Enviar por WhatsApp</button>
     </form>
   </div>
 </section>
@@ -213,24 +225,19 @@
     <h2 class="h2 reveal">¿Quieres una web <span class="hl">como esta?</span></h2>
     <p class="plans-sub reveal">Webs reales para negocios reales. Elige tu plan:</p>
     <div class="plans-grid">
-      <div class="plan reveal">
-        <h3>Solo Web</h3>
-        <p class="plan-price"><span class="reg">$300</span> $99</p>
-        <ul><li>Website profesional completa</li><li>Diseño único para tu negocio</li><li>Botón de WhatsApp integrado</li></ul>
-        <a class="btn btn-outline" href="https://wa.me/17873128042?text=Hola%20Manupro%2C%20me%20interesa%20el%20plan%20Solo%20Web%20%2499." target="_blank" rel="noopener">Elegir Solo Web</a>
-      </div>
+      
       <div class="plan reveal">
         <h3>Web + Arranque</h3>
-        <p class="plan-price"><span class="reg">$600</span> $150</p>
-        <ul><li>Todo lo del plan Solo Web</li><li>Hosting por 2 meses</li><li>Dominio .com por 1 año</li></ul>
-        <a class="btn btn-outline" href="https://wa.me/17873128042?text=Hola%20Manupro%2C%20me%20interesa%20el%20plan%20Web%2BArranque%20%24150." target="_blank" rel="noopener">Elegir Web + Arranque</a>
+        <p class="plan-price"><span class="reg">$499</span> $199</p>
+        <ul><li>Website profesional completa</li><li>Hosting por 2 meses</li><li>Dominio .com por 1 año</li></ul>
+        <a class="btn btn-outline" href="https://wa.me/17873128042?text=Hola%20Manupro%2C%20me%20interesa%20el%20plan%20Web%2BArranque%20%24199." target="_blank" rel="noopener">Elegir Web + Arranque</a>
       </div>
       <div class="plan plan-hot reveal">
         <span class="plan-tag">La más elegida</span>
         <h3>Tranquilidad Total</h3>
-        <p class="plan-price"><span class="reg">$1,000</span> $200</p>
+        <p class="plan-price"><span class="reg">$799</span> $299</p>
         <ul><li>Todo lo del plan Web + Arranque</li><li>Hosting por 1 AÑO</li><li>Mantenimiento incluido</li><li>Dominio .com por 1 año</li></ul>
-        <a class="btn btn-brand btn-shine" href="https://wa.me/17873128042?text=Hola%20Manupro%2C%20me%20interesa%20el%20plan%20Tranquilidad%20Total%20%24200." target="_blank" rel="noopener">Elegir Tranquilidad Total</a>
+        <a class="btn btn-brand btn-shine" href="https://wa.me/17873128042?text=Hola%20Manupro%2C%20me%20interesa%20el%20plan%20Tranquilidad%20Total%20%24299." target="_blank" rel="noopener">Elegir Tranquilidad Total</a>
       </div>
     </div>
   </div>

@@ -35,3 +35,11 @@ MEJORA APLICADA (2026-10-15, batch 2 grupo C, mejora ligera):
 - Menú flotante: overlay (nav) por encima del botón en z-index (nav z-95,
   scrim z-90, botón z-80), con botón propio de cerrar "×"; botón compacto (56px).
 - Hover premium en tarjetas de galería y servicios; reveal on scroll ya existía.
+
+RONDA 2 (2026-10-15) — mejora elite:
+
+- Logo real: no se encontró logo público del negocio (reportado honesto).
+- Redes/email: sin redes verificables encontradas.
+- Notas: Teléfono 939-268-3546 verificado vía Google Places (place_id 1250207816078156, Ponce). Sitio oficial filtracion-techos.negocio.site está CAÍDO (HTTP 404). Galería de Google Places vacía. No se encontró página de Facebook ni Instagram verificable del negocio (búsqueda por nombre, pueblo y teléfono). 
+- Formulario reconstruido con estructura elite (3 pasos + chips de servicios) → WhatsApp del negocio.
+- Botón flotante de WhatsApp convertido a 3D.

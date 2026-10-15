@@ -26,3 +26,11 @@ MEJORA LIGERA APLICADA 2026-10-15:
 - Menú: nav por ENCIMA del botón (z-index 210), con botón de cerrar propio;
   botón hamburguesa compacto (52px).
 - Animaciones: reveal on scroll (ya existía) + hovers premium suaves.
+
+RONDA 2 (2026-10-15) — mejora elite:
+
+- Logo real: no se encontró logo público del negocio (reportado honesto).
+- Redes/email: sin redes verificables encontradas.
+- Notas: Telefono 787-637-1547 confirmado en puertoricoindex, infopaginas, superpagespr (1009 Urb Sombras del Real, Ponce). No se encontro sitio web oficial, redes sociales ni logo publico. El logo.svg en img/ es un icono generico del template, no el logo real del negocio.
+- Formulario reconstruido con estructura elite (3 pasos + chips de servicios) → WhatsApp del negocio.
+- Botón flotante de WhatsApp convertido a 3D.

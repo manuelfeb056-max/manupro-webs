@@ -148,11 +148,13 @@ section{padding:5.5rem 0;position:relative}
 .foot-demo{margin-top:.4rem}
 .foot-demo a{color:#fff;font-weight:600;text-decoration:none}
 
-/* ---------- whatsapp flotante ---------- */
-.wa-float{position:fixed;bottom:22px;right:22px;z-index:60;width:62px;height:62px;border-radius:50%;background:linear-gradient(135deg,var(--navy-soft),var(--navy));display:flex;align-items:center;justify-content:center;box-shadow:0 10px 30px rgba(10,42,94,.55);transition:.25s;animation:waPulse 2.6s ease-in-out infinite}
-.wa-float:hover{transform:scale(1.1)}
-.wa-float svg{width:32px;height:32px;color:#fff}
-@keyframes waPulse{0%,100%{box-shadow:0 10px 30px rgba(10,42,94,.55)}50%{box-shadow:0 10px 44px rgba(59,110,220,.7)}}
+/* ---------- whatsapp flotante 3D ---------- */
+.wa-float{position:fixed;right:18px;bottom:18px;width:62px;height:62px;border-radius:50%;z-index:999;display:flex;align-items:center;justify-content:center;background:radial-gradient(circle at 30% 25%,#5cf08a 0%,#25d366 35%,#1da851 70%,#128c4b 100%);box-shadow:0 10px 24px rgba(18,140,75,.45),0 2px 6px rgba(0,0,0,.35),inset 0 2px 4px rgba(255,255,255,.35),inset 0 -3px 6px rgba(0,0,0,.25);animation:waFloat 3s ease-in-out infinite}
+.wa-float:hover{transform:scale(1.08)}
+.wa-float svg{width:32px;height:32px;filter:drop-shadow(0 2px 3px rgba(0,0,0,.4));color:#fff}
+.wa-float::before{content:"";position:absolute;inset:-4px;border-radius:50%;border:2px solid rgba(37,211,102,.6);animation:waPulse 2s ease-out infinite;pointer-events:none}
+@keyframes waFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+@keyframes waPulse{0%{transform:scale(.9);opacity:1}100%{transform:scale(1.25);opacity:0}}
 
 /* ---------- reveal ---------- */
 .reveal{opacity:0;transform:translateY(26px);transition:opacity .6s ease,transform .6s ease}
@@ -187,7 +189,20 @@ section{padding:5.5rem 0;position:relative}
 .quote-form textarea{resize:vertical;min-height:88px}
 .qf-submit{width:100%;justify-content:center;margin-top:8px;font-size:1.02rem}
 .qf-note{text-align:center;color:var(--muted);font-size:.88rem;margin-top:14px}
-@media(max-width:640px){.qf-grid{grid-template-columns:1fr}.quote-form{padding:28px 22px}.quote{padding:64px 0}}
+
+/* ===== Formulario elite: pasos + chips ===== */
+.qstep{display:flex;gap:14px;margin-bottom:24px}
+.qstep-badge{flex:0 0 36px;width:36px;height:36px;border-radius:50%;background:var(--navy);color:#fff;font-family:var(--font-d);font-weight:700;font-size:1rem;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 16px rgba(10,42,94,.35)}
+.qstep-body{flex:1;min-width:0}
+.qstep-body h3{font-family:var(--font-d);font-size:1rem;margin:5px 0 14px;color:var(--ink);letter-spacing:.05em;text-transform:uppercase}
+.quote-form .chips{display:grid;grid-template-columns:repeat(auto-fill,minmax(165px,1fr));gap:10px}
+.quote-form .chips input{position:absolute;opacity:0;pointer-events:none;width:0;height:0;margin:0;padding:0;border:none}
+.quote-form .chips label{margin:0;display:flex;align-items:center;gap:9px;padding:11px 14px;border:1.5px solid var(--silver);border-radius:999px;font-family:var(--font-b);font-size:.88rem;font-weight:600;cursor:pointer;transition:border-color .2s,box-shadow .2s,background .2s;background:var(--paper);text-transform:none;letter-spacing:0}
+.quote-form .chips label svg{width:20px;height:20px;flex:0 0 20px;fill:var(--navy)}
+.quote-form .chips input:checked + label{border-color:var(--navy);background:#e3eaf7;box-shadow:0 0 0 3px rgba(10,42,94,.14)}
+.quote-form .chips input:focus-visible + label{outline:2px solid var(--navy);outline-offset:2px}
+.quote-form .chips.err label{border-color:#c62828}
+@media(max-width:640px){.qf-grid{grid-template-columns:1fr}.quote-form{padding:28px 22px}.quote{padding:64px 0}.qstep{gap:10px}.quote-form .chips{grid-template-columns:1fr 1fr}}
 
 /* ===== entrada elite del hero (mejora ligera) ===== */
 .hero-inner>*,.hero-content>*,.hero .wrap>*{animation:mpHeroIn .9s cubic-bezier(.2,.7,.2,1) both}

@@ -1,0 +1,38 @@
+FUENTES DE MATERIAL REAL — Overall Contractors Group, Inc. (overall-contractors-techos)
+Investigado: 2026-10-15
+
+DATOS VERIFICADOS
+- Nombre: Overall Contractors Group, Inc. — Caguas, PR (Carr 183 Urb. José Mercado V11-2 Km 1.8)
+- Teléfono: 787-703-4900 — VERIFICADO en 3 fuentes independientes:
+  (1) su web oficial overallcontractors.com (footer/contacto de cada página),
+  (2) infopaginas.com (listado "Sellado de techos en Caguas/Cataño/etc."),
+  (3) Meta places (place_id 1626709361386350, +17877034900).
+  NOTA: el brief original no traía teléfono verificado; se halló en la investigación.
+- Website oficial: https://overallcontractors.com/
+
+LOGO REAL: SÍ — img/logo-real.png
+- Fuente: header de su web oficial (WordPress):
+  https://overallcontractors.com/wp-content/uploads/2023/10/Overall-Logo-20-anos_3-eng-color-1024x701.png
+- Es el logo conmemorativo "20+ YEARS OF EXPERIENCE" (azul/rojo) que usan hoy como
+  marca principal en su sitio. Verificado visualmente.
+- Aplicado en: header (reemplazó SVG inventado), footer (reemplazó SVG inventado),
+  favicon (<link rel="icon">), y nuevo bloque JSON-LD con campo "logo".
+
+REDES SOCIALES VERIFICADAS (del footer de su web oficial — name+teléfono coinciden)
+- Facebook: https://www.facebook.com/OverallContractors/
+- Instagram: https://www.instagram.com/overallcontractors/
+- LinkedIn: https://www.linkedin.com/company/overallcontractorspr/
+- Agregadas en el footer con etiqueta de texto clara ("Facebook", "Instagram", "LinkedIn")
+  + ícono SVG original cada una, y en el JSON-LD (sameAs).
+
+EMAIL: no público en su web oficial (formulario de contacto). No se agregó.
+
+REVISIÓN 2026-10-15 (segunda pasada)
+- Redes re-verificadas contra la página de contacto oficial (https://overallcontractors.com/es/contact/):
+  Facebook https://www.facebook.com/OverallContractors/ e Instagram https://www.instagram.com/overallcontractors/
+  confirman teléfono 787-703-4900 + email info@overallcontractors.com. Todo coincide.
+- Logo: se mantuvo el badge "20+ YEARS OF EXPERIENCE" (1024x701, oficial, nítido).
+  NOTA: la marca geométrica real (la "O" azul con segmento rojo) solo existe pública
+  en el favicon https://overallcontractors.com/favicon.ico (34x37, muy pequeño).
+  Se evaluó usarla pero a 34px quedaría borrosa al escalar; el badge conmemorativo
+  es el activo oficial nítido en uso. Sin cambios.

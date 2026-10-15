@@ -21,7 +21,21 @@ FOTOS REALES (4 de 10 — el álbum público solo contiene 4 piezas)
 - img/real/foto-4.jpg — Techo plano con estructura metálica (bases de paneles), vista general del área de trabajo. NOTA: es un frame de video del álbum (trae el icono de play incrustado).
   Fuente: https://lh3.googleusercontent.com/pw/AP1GczMeG5HsW8rwKhC8X9bLyojzBgX8Pdlm1jQclyPF0wBlj4UZAILTzSVe8SIDfK3yQaJTMOZhi_ptQ5hrJQ21Y_qq2e-UwcfKxFKVHZwj7L0C48cgvVE5
 
+REDES SOCIALES
+- Facebook (perfil personal "Pablo Rios" / aparece como "Pablitos Services"): https://www.facebook.com/pablo.rios.961
+  VERIFICADO: publica su trabajo con el teléfono 787-564-9774. Enlace en el footer con etiqueta
+  "Síguenos" + texto claro "Facebook (perfil personal donde publica su trabajo)" + ícono SVG.
+- Instagram / YouTube / TikTok: NO ENCONTRADOS (verificación 2026-10-15).
+
 LOGO REAL: NO ENCONTRADO. No tiene cuenta de negocio en Instagram ni página de Facebook con logo; su perfil personal no publica un logo descargable. No se inventó ninguno.
+
+REDES SOCIALES (agregado 2026-10-15)
+- Facebook: https://www.facebook.com/pablo.rios.961 — AGREGADO al footer con etiqueta
+  "Facebook (perfil personal donde publica su trabajo)" + ícono SVG. URL verificada
+  viva (HTTP 200). Es su perfil personal (Pablo Rios) donde publica el trabajo de
+  Pablito Services con el teléfono 787-564-9774 — name+teléfono coinciden. No es una
+  página de negocio, por eso la etiqueta lo aclara.
+- Instagram: NO ENCONTRADO (sin cuenta verificable). YouTube/TikTok: sin resultados.
 
 NOTAS
 - Todas las fotos son material propio del negocio (su álbum público), redimensionadas a máx 1920px y comprimidas a JPG calidad 82.

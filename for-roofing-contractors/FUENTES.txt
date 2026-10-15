@@ -62,3 +62,12 @@ MEJORA APLICADA (2026-10-15, batch 2 grupo C, mejora ligera):
 - Menú flotante: overlay (nav) por encima del botón en z-index, con botón
   propio de cerrar; botón compacto.
 - Hover premium en galería y botones sin alterar el layout.
+
+RONDA 2 (2026-10-15) — mejora elite:
+
+- Logo real: img/logo-real.png — fuente: https://forroofingpr.com/wp-content/uploads/2024/06/logo.png (logo oficial actual del header de forroofingpr.com; círculo azul con casa, 'F.O.R. ROOFING CONTRACTORS, INC.' e incluye el teléfono 787-758-8709)
+- Red verificada: Facebook: https://www.facebook.com/people/For-Roofing-Contractors-Inc/100064323960291/
+- Email público: forroofing@gmail.com
+- Notas: Logo existente img/logo.png CONFIRMADO como oficial (versión de letras cromadas, fuente for-1.png del mismo sitio). Se descargó además el logo circular actual del header (350x350 PNG) como img/logo-real.png — es la identidad principal vigente del sitio. Facebook enlazado desde su propio sitio web. E
+- Formulario reconstruido con estructura elite (3 pasos + chips de servicios) → WhatsApp del negocio.
+- Botón flotante de WhatsApp convertido a 3D.

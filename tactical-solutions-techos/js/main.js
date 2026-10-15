@@ -13,17 +13,29 @@ if(!open){it.classList.add('open');a.style.maxHeight=a.scrollHeight+'px';}
 });});
 })();
 
-/* ===== ManuPro elite touch: formulario de cotización a WhatsApp (2026-10-15) ===== */
-document.querySelectorAll('.qform').forEach(function(f){
+/* ===== ManuPro elite: formulario de cotización a WhatsApp (ronda 2, 2026-10-15) ===== */
+document.querySelectorAll('.qform, .qelite').forEach(function(f){
   f.addEventListener('submit', function(e){
     e.preventDefault();
-    var g = function(n){ return (f.elements[n].value || '').trim(); };
-    var nombre = g('nombre');
-    if(!nombre){ f.elements['nombre'].focus(); return; }
-    var parts = ['Hola ' + f.dataset.biz + ', soy ' + nombre];
-    if(g('telefono')) parts.push('mi teléfono es ' + g('telefono'));
-    parts.push('Servicio que necesito: ' + g('servicio'));
-    if(g('mensaje')) parts.push('Mensaje: ' + g('mensaje'));
+    var g = function(n){ return (f.elements[n] && f.elements[n].value || '').trim(); };
+    var errBox = f.querySelector('.qelite-err');
+    var nombre = g('nombre'), tel = g('telefono');
+    var svc = f.querySelector('input[name="servicio"]:checked');
+    var svcVal = svc ? svc.value.trim() : g('servicio');
+    var faltan = [];
+    if(!nombre) faltan.push('tu nombre');
+    if(!tel) faltan.push('tu teléfono');
+    if(!svcVal) faltan.push('un servicio');
+    if(faltan.length){
+      if(errBox){ errBox.textContent = 'Falta: ' + faltan.join(', ') + '.'; errBox.style.display = 'block'; errBox.scrollIntoView({behavior:'smooth',block:'center'}); }
+      else if(f.elements['nombre']) f.elements['nombre'].focus();
+      return;
+    }
+    if(errBox) errBox.style.display = 'none';
+    var parts = ['Hola ' + f.dataset.biz + ', soy ' + nombre + ' y mi teléfono es ' + tel];
+    parts.push('Servicio que necesito: ' + svcVal);
+    if(g('mensaje')) parts.push('Detalles: ' + g('mensaje'));
+    if(g('pueblo')) parts.push('Pueblo: ' + g('pueblo'));
     window.open('https://wa.me/' + f.dataset.wa + '?text=' + encodeURIComponent(parts.join('. ') + '.'), '_blank', 'noopener');
   });
 });

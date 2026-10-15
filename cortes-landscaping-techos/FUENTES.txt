@@ -25,3 +25,11 @@ MEJORA LIGERA APLICADA 2026-10-15:
 - Animaciones: reveal on scroll (ya existía) + hovers premium suaves.
 - Nota: el FAQ tiene un div desbalanceado pre-existente (línea ~70); no se
   tocó por la orden de no alterar el diseño.
+
+RONDA 2 (2026-10-15) — mejora elite:
+
+- Logo real: no se encontró logo público del negocio (reportado honesto).
+- Red verificada: Facebook: https://www.facebook.com/109290815002865/
+- Notas: Facebook oficial https://www.facebook.com/109290815002865/ (cleaners10 lo lista como su sitio web y el telefono +17873218753 coincide; direccion Calle Maga, Florida PR). NO hay logo publico: el avatar de la pagina es una imagen motivacional de un leon con texto 'LA PACIENCIA ES EL PRINCIPIO DE TODO 
+- Formulario reconstruido con estructura elite (3 pasos + chips de servicios) → WhatsApp del negocio.
+- Botón flotante de WhatsApp convertido a 3D.

@@ -237,28 +237,39 @@
 <!-- ============ COTIZACIÓN ============ -->
 <section class="section quote-sec" id="cotizacion">
   <div class="wrap">
-    <p class="kicker reveal">Cotización gratis</p>
-    <h2 class="reveal">Pide tu estimado por WhatsApp</h2>
-    <p class="quote-sub reveal">Completa el formulario y se abre WhatsApp con tu mensaje listo para enviarlo directo a Techos Ultraflex.</p>
-    <form class="quote-form reveal" id="quoteForm" novalidate>
-      <div class="q-grid">
-        <label>Nombre<input type="text" id="qName" placeholder="Tu nombre" required autocomplete="name"></label>
-        <label>Teléfono<input type="tel" id="qPhone" placeholder="787-000-0000" autocomplete="tel"></label>
+   <form class="qelite" data-wa="17879445946" data-biz="Techos Ultraflex" novalidate>
+    <p class="qelite-kicker">Cotización gratis</p>
+    <h2 class="qelite-title">Cotiza tu sellado <span>por WhatsApp</span></h2>
+    <p class="qelite-sub">Elige tu servicio y te abrimos WhatsApp con todo listo para enviar.</p>
+    <div class="qelite-err"></div>
+    <div class="qelite-step">
+      <div class="qelite-step-head"><span class="qelite-num">1</span><h3>Tus datos</h3></div>
+      <div class="qelite-grid2">
+        <label class="qelite-field"><span>Nombre</span><input type="text" name="nombre" placeholder="Tu nombre" autocomplete="name" required></label>
+        <label class="qelite-field"><span>Teléfono</span><input type="tel" name="telefono" placeholder="787-000-0000" autocomplete="tel" required></label>
       </div>
-      <label>Servicio que necesita
-        <select id="qService">
-          <option>Sellado residencial</option>
-          <option>Sellado comercial</option>
-          <option>Membrana elastomérica ultraflex</option>
-          <option>Reparación de filtraciones</option>
-          <option>Impermeabilización</option>
-          <option>Otro</option>
-        </select>
-      </label>
-      <label>Mensaje<textarea id="qMsg" rows="4" placeholder="Cuéntanos sobre tu techo: tamaño, filtraciones, pueblo..."></textarea></label>
-      <button type="submit" class="btn btn-aqua btn-q">Enviar por WhatsApp</button>
-      <p class="q-note">Al enviar, se abre WhatsApp con tu mensaje listo para Techos Ultraflex (787-944-5946).</p>
-    </form>
+    </div>
+    <div class="qelite-step">
+      <div class="qelite-step-head"><span class="qelite-num">2</span><h3>¿Qué servicio necesitas?</h3></div>
+      <div class="qelite-chips">
+        <label class="qelite-chip"><input type="radio" name="servicio" value="Sellado residencial" checked><span class="qelite-chip-box"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M12 2s6 6.6 6 11a6 6 0 0 1-12 0c0-4.4 6-11 6-11z"/></svg><em>Sellado residencial</em></span></label>
+        <label class="qelite-chip"><input type="radio" name="servicio" value="Sellado comercial"><span class="qelite-chip-box"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M12 2l8 4v6c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6z"/></svg><em>Sellado comercial</em></span></label>
+        <label class="qelite-chip"><input type="radio" name="servicio" value="Membrana elastomérica ultraflex"><span class="qelite-chip-box"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M12 3l9 8h-3v9h-4v-6h-4v6H6v-9H3z"/></svg><em>Membrana elastomérica ultraflex</em></span></label>
+        <label class="qelite-chip"><input type="radio" name="servicio" value="Reparación de filtraciones"><span class="qelite-chip-box"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M12 2l2.4 7.2H22l-6 4.4 2.3 7.4-6.3-4.6-6.3 4.6L8 13.6 2 9.2h7.6z"/></svg><em>Reparación de filtraciones</em></span></label>
+        <label class="qelite-chip"><input type="radio" name="servicio" value="Impermeabilización"><span class="qelite-chip-box"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M13.8 2.6l7.6 7.4-2.8 2.8-1.4-1.4-8 8-4.2-4.2 8-8-1.4-1.4zM7 13.6l2.4 2.4-3.8 3.8-2.4-2.4z"/></svg><em>Impermeabilización</em></span></label>
+        <label class="qelite-chip"><input type="radio" name="servicio" value="Otro"><span class="qelite-chip-box"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M9 16.2l-3.5-3.5L4 14.2 9 19.2 20 8.2l-1.4-1.4z"/></svg><em>Otro</em></span></label>
+      </div>
+    </div>
+    <div class="qelite-step">
+      <div class="qelite-step-head"><span class="qelite-num">3</span><h3>Detalles</h3></div>
+      <div class="qelite-grid2">
+        <label class="qelite-field"><span>Pueblo (opcional)</span><input type="text" name="pueblo" placeholder="Ej. Bayamón"></label>
+      </div>
+      <label class="qelite-field" style="margin-top:14px"><span>Cuéntanos más</span><textarea name="mensaje" rows="3" placeholder="Tamaño del techo, filtraciones, urgencia..."></textarea></label>
+    </div>
+    <button type="submit" class="qelite-submit"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 2a8 8 0 1 1-4.1 14.9l-.3-.2-2.9.8.8-2.8-.2-.3A8 8 0 0 1 12 4zm-3.2 4.2c-.2 0-.5 0-.7.3-.2.3-.9.9-.9 2.1s.9 2.4 1 2.6c.1.2 1.8 2.9 4.5 3.9 2.2.9 2.7.7 3.2.7.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.2-.2-.5-.3l-2-1c-.2-.1-.4-.1-.6.1l-.9 1.1c-.2.2-.3.2-.6.1-.7-.3-1.4-.7-2-1.3-.5-.5-.8-1-1-1.3-.2-.3 0-.4.1-.6l.5-.6c.2-.2.2-.4.1-.6L9.6 7c-.2-.4-.4-.6-.8-.6z"/></svg> Enviar por WhatsApp</button>
+    <p class="qelite-note">Se abre WhatsApp con tu mensaje listo. Sin compromiso.</p>
+   </form>
   </div>
 </section>
 
@@ -269,34 +280,32 @@
     <h2 class="h2 reveal">Tu web con ManuPro</h2>
     <p class="lede reveal">Una página como esta para tu negocio, lista para recibir clientes por WhatsApp.</p>
     <div class="plans-grid">
+      
+      
       <div class="plan reveal">
-        <h3>Solo Web</h3><p class="reg">$300</p><p class="price">$99</p>
-        <ul>
-          <li><svg viewBox="0 0 24 24"><path d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg>Solo la website</li>
-          <li><svg viewBox="0 0 24 24"><path d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg>Sin hosting</li>
-          <li><svg viewBox="0 0 24 24"><path d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg>Sin dominio</li>
-        </ul>
-        <a class="btn btn-outline" href="https://wa.me/17873128042?text=Hola%20ManuPro%2C%20me%20interesa%20el%20plan%20Solo%20Web%20de%20%2499." target="_blank" rel="noopener">Elegir</a>
-      </div>
-      <div class="plan reveal">
-        <h3>Web + Arranque</h3><p class="reg">$600</p><p class="price">$150</p>
-        <ul>
-          <li><svg viewBox="0 0 24 24"><path d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg>La website completa</li>
+        <h3>Web + Arranque</h3><p class="reg">$499</p><p class="price">$199</p>
+        <ul><li><svg viewBox="0 0 24 24"><path d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg>Website profesional de 1 página</li>
+          <li><svg viewBox="0 0 24 24"><path d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg>Diseño a la medida de tu negocio</li>
+          <li><svg viewBox="0 0 24 24"><path d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg>Botón de WhatsApp y llamada</li>
+          <li><svg viewBox="0 0 24 24"><path d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg>Formulario de cotización</li>
           <li><svg viewBox="0 0 24 24"><path d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg>Hosting por 2 meses</li>
           <li><svg viewBox="0 0 24 24"><path d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg>Dominio .com por 1 año</li>
-        </ul>
-        <a class="btn btn-outline" href="https://wa.me/17873128042?text=Hola%20ManuPro%2C%20me%20interesa%20el%20plan%20Web%20%2B%20Arranque%20de%20%24150." target="_blank" rel="noopener">Elegir</a>
+          <li><svg viewBox="0 0 24 24"><path d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg>Publicación y configuración inicial</li></ul>
+        <a class="btn btn-outline" style="justify-content:center" href="https://wa.me/17873128042?text=Hola%20ManuPro%2C%20quiero%20el%20plan%20Web%20%2B%20Arranque%20para%20mi%20website." target="_blank" rel="noopener">Elegir</a>
       </div>
       <div class="plan hot reveal">
         <span class="seal">La más elegida</span>
-        <h3>Tranquilidad Total</h3><p class="reg">$1,000</p><p class="price">$200</p>
-        <ul>
-          <li><svg viewBox="0 0 24 24"><path d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg>La website completa</li>
-          <li><svg viewBox="0 0 24 24"><path d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg>Hosting por 1 año</li>
-          <li><svg viewBox="0 0 24 24"><path d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg>Mantenimiento incluido</li>
+        <h3>Tranquilidad Total</h3><p class="reg">$799</p><p class="price">$299</p>
+        <ul><li><svg viewBox="0 0 24 24"><path d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg>Website profesional de 1 página</li>
+          <li><svg viewBox="0 0 24 24"><path d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg>Diseño a la medida de tu negocio</li>
+          <li><svg viewBox="0 0 24 24"><path d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg>Botón de WhatsApp y llamada</li>
+          <li><svg viewBox="0 0 24 24"><path d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg>Formulario de cotización</li>
+          <li><svg viewBox="0 0 24 24"><path d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg>Hosting por 1 año completo</li>
+          <li><svg viewBox="0 0 24 24"><path d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg>Mantenimiento por 1 año</li>
           <li><svg viewBox="0 0 24 24"><path d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg>Dominio .com por 1 año</li>
-        </ul>
-        <a class="btn btn-aqua shine" href="https://wa.me/17873128042?text=Hola%20ManuPro%2C%20me%20interesa%20el%20plan%20Tranquilidad%20Total%20de%20%24200." target="_blank" rel="noopener">Elegir</a>
+          <li><svg viewBox="0 0 24 24"><path d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg>Publicación y configuración inicial</li>
+          <li><svg viewBox="0 0 24 24"><path d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg>Soporte prioritario</li></ul>
+        <a class="btn btn-aqua shine" style="justify-content:center" href="https://wa.me/17873128042?text=Hola%20ManuPro%2C%20quiero%20el%20plan%20Tranquilidad%20Total%20para%20mi%20website." target="_blank" rel="noopener">Elegir</a>
       </div>
     </div>
   </div>
@@ -343,5 +352,29 @@
 {"@type":"Question","name":"¿El trabajo tiene garantía?","acceptedAnswer":{"@type":"Answer","text":"Sí. Todo trabajo se entrega con garantía por escrito."}}]}
 </script>
 <script src="js/main.js"></script>
+
+<script>
+(function(){
+if(window.__qeliteInit)return;window.__qeliteInit=true;
+document.querySelectorAll('.qelite').forEach(function(form){
+  form.addEventListener('submit',function(ev){
+    ev.preventDefault();
+    var err=form.querySelector('.qelite-err');
+    var nombre=form.querySelector('[name=nombre]').value.trim();
+    var tel=form.querySelector('[name=telefono]').value.trim();
+    var servEl=form.querySelector('[name=servicio]:checked');
+    var serv=servEl?servEl.value:'';
+    var pueblo=form.querySelector('[name=pueblo]').value.trim();
+    var msg=form.querySelector('[name=mensaje]').value.trim();
+    if(!nombre||!tel){err.style.display='block';err.textContent='Por favor completa tu nombre y teléfono.';return;}
+    err.style.display='none';
+    var wa=form.dataset.wa, biz=form.dataset.biz||'el negocio';
+    var txt='Hola '+biz+', soy '+nombre+'. Mi teléfono es '+tel+'. Necesito: '+serv+'.'+(pueblo?' Pueblo: '+pueblo+'.':'')+(msg?' '+msg:'');
+    window.open('https://wa.me/'+wa+'?text='+encodeURIComponent(txt),'_blank');
+  });
+});
+})();
+</script>
+
 </body>
 </html>

@@ -95,23 +95,58 @@
     <span class="kicker">Cotización gratis</span>
     <h2>Cotiza tu techo por WhatsApp</h2>
     <p class="qf-sub">Elige el servicio, cuéntanos tu caso y te abrimos WhatsApp con tu mensaje listo para Contractor M&amp;T Roofing.</p>
-    <form id="qform" data-biz="Contractor M&amp;T Roofing" data-wa="19392659195">
-      <div class="qf-grid">
-        <label>Nombre<input id="qNombre" type="text" placeholder="Tu nombre" required></label>
-        <label>Teléfono<input id="qTel" type="tel" placeholder="787-000-0000" required></label>
-        <label class="full">Servicio que necesitas<select id="qServicio">
-            <option>Sellado Danosa</option>
-            <option>Sellado elastomérico</option>
-            <option>Sellado en silicón</option>
-            <option>Lavado a presión</option>
-            <option>Corrección de drenajes</option>
-            <option>Garantía por escrito</option>
-          </select></label>
-        <label class="full">Mensaje<textarea id="qMsg" rows="3" placeholder="Ej: el techo filtra cuando llueve fuerte..."></textarea></label>
-        <button class="qf-submit" type="submit"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.6-6.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.3-.6.8-.8 1-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4 0-.5.1-.7l.4-.5c.1-.2.1-.3 0-.5L9.4 8c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.2-.7.5-.2.3-.9.9-.9 2.2s.9 2.5 1.1 2.7c.1.2 1.8 2.8 4.4 3.9 1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2 0-.1-.2-.1-.4-.2z"/></svg>Enviar cotización por WhatsApp</button>
-        <p class="qf-note">Sin compromiso · Respondemos rápido</p>
-      </div>
-    </form>
+    <form class="ef-form" novalidate data-biz="Contractor M&amp;T Roofing" data-wa="19392659195">
+  <div class="ef-step">
+    <div class="ef-stephead"><span class="ef-num">1</span><span class="ef-steptitle">Tus datos</span></div>
+    <div class="ef-row2">
+      <label class="ef-field"><span>Nombre</span><input type="text" name="ef-nombre" placeholder="Tu nombre" autocomplete="name"></label>
+      <label class="ef-field"><span>Teléfono</span><input type="tel" name="ef-tel" placeholder="787-000-0000" autocomplete="tel"></label>
+    </div>
+  </div>
+  <div class="ef-step">
+    <div class="ef-stephead"><span class="ef-num">2</span><span class="ef-steptitle">Elige tu servicio</span></div>
+    <div class="ef-chips">
+      <label class="ef-chip"><input type="radio" name="ef-servicio" value="Sellado Danosa" checked><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l8 4v6c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6z" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 8s3 3.2 3 5.5a3 3 0 0 1-6 0C9 11.2 12 8 12 8z" fill="currentColor"/></svg><span>Sellado Danosa</span></label>
+      <label class="ef-chip"><input type="radio" name="ef-servicio" value="Sellado elastomérico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l8 4v6c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6z" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 8s3 3.2 3 5.5a3 3 0 0 1-6 0C9 11.2 12 8 12 8z" fill="currentColor"/></svg><span>Sellado elastomérico</span></label>
+      <label class="ef-chip"><input type="radio" name="ef-servicio" value="Sellado en silicón"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l8 4v6c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6z" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 8s3 3.2 3 5.5a3 3 0 0 1-6 0C9 11.2 12 8 12 8z" fill="currentColor"/></svg><span>Sellado en silicón</span></label>
+      <label class="ef-chip"><input type="radio" name="ef-servicio" value="Lavado a presión"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l1.8 4.6L18 9l-4.2 1.4L12 15l-1.8-4.6L6 9l4.2-1.4z" fill="currentColor"/><path d="M19 14l.9 2.1L22 17l-2.1.9L19 20l-.9-2.1L16 17l2.1-.9z" fill="currentColor"/></svg><span>Lavado a presión</span></label>
+      <label class="ef-chip"><input type="radio" name="ef-servicio" value="Corrección de drenajes"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 11l3 3 8-8" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/><path d="M20 12v6a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h11" fill="none" stroke-width="2" stroke="currentColor"/></svg><span>Corrección de drenajes</span></label>
+      <label class="ef-chip"><input type="radio" name="ef-servicio" value="Garantía por escrito"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 11l3 3 8-8" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/><path d="M20 12v6a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h11" fill="none" stroke-width="2" stroke="currentColor"/></svg><span>Garantía por escrito</span></label>
+    </div>
+  </div>
+  <div class="ef-step">
+    <div class="ef-stephead"><span class="ef-num">3</span><span class="ef-steptitle">Detalles</span></div>
+    <label class="ef-field"><span>Pueblo <em>(opcional)</em></span><input type="text" name="ef-pueblo" placeholder="¿Dónde es el trabajo?"></label>
+    <label class="ef-field"><span>Cuéntanos tu caso</span><textarea name="ef-msg" rows="3" placeholder="Ej: el techo filtra cuando llueve fuerte..."></textarea></label>
+  </div>
+  <p class="ef-error" hidden>Escribe tu nombre y un teléfono válido para continuar.</p>
+  <button class="ef-submit" type="submit"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.6-6.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.3-.6.8-.8 1-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4 0-.5.1-.7l.4-.5c.1-.2.1-.3 0-.5L9.4 8c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.2-.7.5-.2.3-.9.9-.9 2.2s.9 2.5 1.1 2.7c.1.2 1.8 2.8 4.4 3.9 1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2 0-.1-.2-.1-.4-.2z"/></svg><span>Cotizar por WhatsApp</span></button>
+  <p class="ef-note">Sin compromiso · Respuesta rápida por WhatsApp</p>
+</form>
+
+<script>
+(function(){
+  var f=document.currentScript.previousElementSibling;
+  if(!f||!f.classList||!f.classList.contains('ef-form'))return;
+  var wa=f.getAttribute('data-wa'),biz=f.getAttribute('data-biz')||'';
+  f.addEventListener('submit',function(e){
+    e.preventDefault();
+    var nombre=f.querySelector('[name="ef-nombre"]').value.trim();
+    var tel=f.querySelector('[name="ef-tel"]').value.trim();
+    var err=f.querySelector('.ef-error');
+    var digits=tel.replace(/\D/g,'');
+    if(!nombre||digits.length<7){err.hidden=false;return;}
+    err.hidden=true;
+    var sel=f.querySelector('[name="ef-servicio"]:checked');
+    var servicio=sel?sel.value:'';
+    var pueblo=f.querySelector('[name="ef-pueblo"]').value.trim();
+    var msg=f.querySelector('[name="ef-msg"]').value.trim();
+    var text='Hola '+biz+', soy '+nombre+'. Mi teléfono es '+tel+'. Necesito: '+servicio+'.'
+      +(pueblo?' Pueblo: '+pueblo+'.':'')+(msg?' Detalles: '+msg:'');
+    window.open('https://wa.me/'+wa+'?text='+encodeURIComponent(text),'_blank','noopener');
+  });
+})();
+</script>
   </div>
 </div></section>
 
@@ -120,13 +155,10 @@
       <h2>Tu negocio también merece verse así</h2>
       <p class="p-sub">Esta página es una muestra de lo que hacemos. Llevamos tu negocio a internet con oferta de lanzamiento por tiempo limitado.</p></div>
       <div class="p-grid">
-        <div class="p-card reveal"><h3>Solo Web</h3><div class="p-price">$99</div><div class="p-reg">Regular $300</div>
-          <ul class="p-list"><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 7"/></svg> Website profesional como esta</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 7"/></svg> Lista en días, no semanas</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 7"/></svg> Textos y fotos de tu negocio</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 7"/></svg> Botón de WhatsApp integrado</li></ul>
+        <div class="p-card reveal"><h3>Web + Arranque</h3><div class="p-price">$199</div><div class="p-reg">Regular $499</div>
+          <ul class="p-list"><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 7"/></svg> Website profesional como esta</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 7"/></svg> Hosting por 2 meses</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 7"/></svg> Dominio .com por 1 año</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 7"/></svg> Correo profesional</li></ul>
           <a class="btn btn-ghost" href="https://wa.me/17873128042" target="_blank" rel="noopener">La quiero</a></div>
-        <div class="p-card reveal"><h3>Web + Arranque</h3><div class="p-price">$150</div><div class="p-reg">Regular $600</div>
-          <ul class="p-list"><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 7"/></svg> Todo lo del plan Solo Web</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 7"/></svg> Hosting por 2 meses</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 7"/></svg> Dominio .com por 1 año</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 7"/></svg> Correo profesional</li></ul>
-          <a class="btn btn-ghost" href="https://wa.me/17873128042" target="_blank" rel="noopener">La quiero</a></div>
-        <div class="p-card hot reveal"><div class="p-flag">La más elegida</div><h3>Tranquilidad Total</h3><div class="p-price">$200</div><div class="p-reg">Regular $1,000</div>
+        <div class="p-card hot reveal"><div class="p-flag">La más elegida</div><h3>Tranquilidad Total</h3><div class="p-price">$299</div><div class="p-reg">Regular $799</div>
           <ul class="p-list"><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 7"/></svg> Todo lo del plan Web + Arranque</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 7"/></svg> Hosting por 1 AÑO</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 7"/></svg> Mantenimiento incluido</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 7"/></svg> Dominio .com por 1 año</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 7"/></svg> Soporte prioritario</li></ul>
           <a class="btn btn-solid" href="https://wa.me/17873128042" target="_blank" rel="noopener">La quiero por WhatsApp</a></div>
       </div>
@@ -137,6 +169,11 @@
   <p>Puerto Rico, Puerto Rico</p>
   <a class="fphone" href="tel:+119392659195">939-265-9195</a>
   <p><a href="https://wa.me/19392659195" target="_blank" rel="noopener" style="text-decoration:underline">Escríbenos por WhatsApp</a></p>
+  <div class="siguenos">
+    <span class="sig-t">Síguenos</span>
+    <a class="social-link" href="https://www.facebook.com/MT-Roofing-Services-100315095791846" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.4v7A10 10 0 0 0 22 12z" fill="currentColor"/></svg>Facebook</a>
+    <a class="social-link" href="https://www.instagram.com/mtroofingservicespr/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 3.3.1 4.8 1.7 4.9 4.9.1 1.3.1 1.6.1 4.8s0 3.6-.1 4.8c-.1 3.2-1.7 4.8-4.9 4.9-1.3.1-1.6.1-4.9.1s-3.6 0-4.9-.1c-3.3-.1-4.8-1.7-4.9-4.9-.1-1.3-.1-1.6-.1-4.8s0-3.6.1-4.8C2.4 4 4 2.4 7.2 2.3c1.2-.1 1.6-.1 4.8-.1zM12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm0 8.2a3.2 3.2 0 1 1 0-6.4 3.2 3.2 0 0 1 0 6.4zm5.2-9.6a1.2 1.2 0 1 0 0 2.4 1.2 1.2 0 0 0 0-2.4z" fill="currentColor"/></svg>Instagram</a>
+  </div>
   <p class="fine">© 2026 Contractor M&amp;T Roofing. Sitio de muestra por Manupro — manupro.space</p>
 </div></footer>
 <a class="wa-float" href="https://wa.me/19392659195" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><path d="M16 3C9.4 3 4 8.4 4 15c0 2.4.7 4.6 2 6.5L4 29l7.7-2c1.8 1 3.9 1.6 6 1.6h.3c6.6 0 12-5.4 12-12S22.6 3 16 3zm0 21.8c-1.9 0-3.7-.5-5.3-1.5l-.4-.2-4.6 1.2 1.2-4.5-.3-.4c-1-1.6-1.6-3.5-1.6-5.4C5 9.9 10 5 16 5s11 4.9 11 11-4.9 8.8-11 8.8zm6.1-6.6c-.3-.2-2-1-2.3-1.1-.3-.1-.5-.2-.7.2-.2.3-.8 1-1 1.2-.2.2-.4.2-.7.1-.3-.2-1.4-.5-2.6-1.6-1-.9-1.6-1.9-1.8-2.3-.2-.3 0-.5.1-.7l.5-.6c.2-.2.2-.4.3-.6.1-.2 0-.4 0-.6-.1-.2-.7-1.8-1-2.4-.3-.6-.5-.6-.7-.6h-.6c-.2 0-.6.2-.9.4-.3.3-1.1 1.1-1.1 2.7s1.2 3.1 1.3 3.4c.2.2 2.2 3.4 5.4 4.7.8.3 1.4.5 1.8.7.8.2 1.5.2 2 .1.6-.1 2-0.8 2.2-1.6.3-.8.3-1.4.2-1.6-.1-.1-.3-.2-.6-.3z"/></svg></a>

@@ -1,0 +1,18 @@
+FUENTES — prime-roofing-salinas
+Negocio: PrimeRoofingService
+Pueblo: Salinas (B14 C. 3, 00751)
+Teléfono dado: 939-325-7577
+
+INVESTIGACIÓN (2026-10-15):
+- Teléfono VERIFICADO: sí. Google Place "PrimeRoofingService" (place_id 1668429620523003)
+  publica +1 939-325-7577, dirección B14 C. 3, Salinas PR 00751, categoría Roofing Service.
+  (verificado vía places details — coincide nombre + teléfono + pueblo)
+- Logo real: NO ENCONTRADO. El Google Place no tiene galería de fotos, ni logo,
+  ni website, ni links a redes. No aparece en Infopáginas (categoría "Sealing roofs
+  in Salinas" no lo lista). No se encontró página de Facebook/Instagram/YouTube/TikTok
+  verificable (búsquedas: nombre exacto, teléfono, nombre+pueblo+facebook).
+- Redes sociales: NO ENCONTRADAS.
+
+RESULTADO: SIN MATERIAL REAL — el negocio existe (place de Google verificado con
+teléfono coincidente) pero no publica logo ni fotos ni redes. No se inventó ni se
+usó material de terceros. El sitio queda como está.

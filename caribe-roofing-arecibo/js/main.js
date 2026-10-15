@@ -44,11 +44,21 @@ ba.addEventListener('pointercancel',function(){drag=false;});}
   f.addEventListener('submit',function(e){
     e.preventDefault();
     var n=document.getElementById('qNombre'),t=document.getElementById('qTel'),
-        s=document.getElementById('qServicio'),m=document.getElementById('qMsg');
+        p=document.getElementById('qPueblo'),m=document.getElementById('qMsg'),
+        sel=f.querySelector('input[name="qServicio"]:checked'),
+        chips=document.getElementById('qChips');
     var ok=true;
-    [n,t,s].forEach(function(el){var bad=!el.value.trim();el.classList.toggle('err',bad);if(bad)ok=false;});
+    [n,t].forEach(function(el){
+      var digits=(el.value.match(/\d/g)||[]).length;
+      var bad=el.value.trim().length<2||digits<7;
+      el.classList.toggle('err',bad);if(bad)ok=false;
+    });
+    if(!sel){ok=false;chips.classList.add('err');}else{chips.classList.remove('err');}
     if(!ok) return;
-    var txt='Hola Caribe Roofing, soy '+n.value.trim()+' ('+t.value.trim()+'). Necesito: '+s.value+'.'+(m.value.trim()?' Detalle: '+m.value.trim():'');
-    window.open('https://wa.me/17878151521?text='+encodeURIComponent(txt),'_blank');
+    var parts=['Hola Caribe Roofing, soy '+n.value.trim()+' ('+t.value.trim()+').',
+               'Me interesa: '+sel.value+'.'];
+    if(p.value.trim())parts.push('Pueblo: '+p.value.trim()+'.');
+    if(m.value.trim())parts.push(m.value.trim());
+    window.open('https://wa.me/17878151521?text='+encodeURIComponent(parts.join(' ')),'_blank');
   });
 })();

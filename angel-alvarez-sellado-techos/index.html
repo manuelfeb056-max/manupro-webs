@@ -20,7 +20,7 @@
 <meta name="twitter:description" content="Goteras, filtraciones y humedad: sellado de techos en Luquillo con estimados gratis. Llama al 787-383-5778.">
 <meta name="twitter:image" content="https://manuelfeb056-max.github.io/manupro-webs/angel-alvarez-sellado-techos/img/g1.jpg">
 <meta name="theme-color" content="#0e7c7b">
-<link rel="icon" href="img/g1.jpg">
+<link rel="icon" href="img/logo-real.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
@@ -31,6 +31,7 @@
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"¿El estimado es realmente gratis?","acceptedAnswer":{"@type":"Answer","text":"Sí. Visitamos, evaluamos tu techo y te damos el estimado sin costo ni compromiso."}},{"@type":"Question","name":"Mi techo tiene humedad en las paredes, ¿lo arreglan?","acceptedAnswer":{"@type":"Answer","text":"Sí. La humedad en paredes casi siempre viene del techo: localizamos la entrada de agua y la sellamos."}},{"@type":"Question","name":"¿Cuánto tarda un sellado de techo?","acceptedAnswer":{"@type":"Answer","text":"Una casa promedio se sella en 1 a 3 días, según el tamaño y la preparación que necesite."}},{"@type":"Question","name":"¿Trabajan fuera de Luquillo?","acceptedAnswer":{"@type":"Answer","text":"Sí, servimos Luquillo y el área este. Escríbenos y confirmamos tu pueblo."}},{"@type":"Question","name":"¿Cómo pido mi estimado gratis?","acceptedAnswer":{"@type":"Answer","text":"Llama o escribe por WhatsApp al 787-383-5778 y coordinamos la visita."}}]}
 </script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"HomeAndConstructionBusiness","name":"Angel Alvarez","telephone":"+17873835778","address":{"@type":"PostalAddress","addressLocality":"Luquillo","addressRegion":"PR","addressCountry":"US"},"logo":"img/logo-real.jpg"}</script>
 </head><body>
 <button class="fab-menu" id="menuBtn" aria-label="Abrir menú"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
 <div class="menu-overlay" id="menuOverlay">
@@ -39,7 +40,7 @@
   <a href="#nosotros">Nosotros</a><a href="#preguntas">Preguntas</a><a href="#planes">Planes</a>
   <a class="m-phone" href="tel:+17873835778">787-383-5778</a>
 </div>
-<header class="brand"><div class="logo-medallon">AA</div><div class="bname">Angel Alvarez<small>Luquillo, PR</small></div></header>
+<header class="brand"><img src="img/logo-real.jpg" alt="Angel Alvarez - Cero Filtración, sellado de techos" class="brand-logo"><div class="bname">Angel Alvarez<small>Luquillo, PR</small></div></header>
 <section class="hero-costa" id="inicio"><div class="wrap">
   <div class="hero-grid">
     <div>
@@ -96,27 +97,36 @@
 <!-- COTIZADOR -->
 <section class="quote" id="cotizar">
   <div class="wrap">
-    <p class="q-kicker">Cotización inmediata</p>
+    <p class="q-kicker">Cotización gratis</p>
     <h2 class="q-title">Cotiza tu proyecto <span>hoy mismo</span></h2>
     <p class="q-sub">Completa el formulario y te abrimos WhatsApp con tu solicitud lista para enviar.</p>
     <form id="quoteForm" class="q-form" novalidate>
-      <div class="q-grid">
-        <label>Tu nombre<input type="text" id="qNombre" placeholder="Nombre y apellido" autocomplete="name" required></label>
-        <label>Tu teléfono<input type="tel" id="qTel" placeholder="787-000-0000" autocomplete="tel" required></label>
+      <div class="q-step">
+        <div class="q-step-head"><span class="q-badge">1</span><h3>Paso 1 - Tus datos</h3></div>
+        <div class="q-grid">
+          <label>Tu nombre<input type="text" id="qNombre" placeholder="Nombre y apellido" autocomplete="name"></label>
+          <label>Tu tel&eacute;fono<input type="tel" id="qTel" placeholder="787-000-0000" autocomplete="tel"></label>
+        </div>
       </div>
-      <label>¿Qué servicio necesitas?
-        <select id="qServicio" required>
-          <option value="" disabled selected>Selecciona un servicio</option>
-          <option>Sellado de techos</option>
-          <option>Goteras</option>
-          <option>Filtraciones</option>
-          <option>Humedad</option>
-          <option>Estimados gratis</option>
-          <option>Otro</option>
-        </select>
-      </label>
-      <label>Detalles<textarea id="qMsg" rows="3" placeholder="Cuéntanos sobre tu techo..."></textarea></label>
-      <button type="submit" class="q-submit">Enviar por WhatsApp</button>
+      <div class="q-step">
+        <div class="q-step-head"><span class="q-badge">2</span><h3>Paso 2 - Elige tu servicio</h3></div>
+        <div class="q-chips">
+          <span class="q-chip"><input type="radio" name="qServ" id="qs0" value="Sellado de techos"><label for="qs0"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2s6 6.6 6 11a6 6 0 0 1-12 0c0-4.4 6-11 6-11z"/></svg>Sellado de techos</label></span>
+          <span class="q-chip"><input type="radio" name="qServ" id="qs1" value="Goteras"><label for="qs1"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2s6 6.6 6 11a6 6 0 0 1-12 0c0-4.4 6-11 6-11z"/></svg>Goteras</label></span>
+          <span class="q-chip"><input type="radio" name="qServ" id="qs2" value="Filtraciones"><label for="qs2"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L4 17l3 3 5.3-5.3a4 4 0 0 0 5.4-5.4l-2.6 2.6-2.1-2.1 2.7-2.5z"/></svg>Filtraciones</label></span>
+          <span class="q-chip"><input type="radio" name="qServ" id="qs3" value="Humedad"><label for="qs3"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 18a4 4 0 1 1 .6-7.97A5.5 5.5 0 0 1 18.3 12H19a3 3 0 0 1 0 6H7z"/></svg>Humedad</label></span>
+          <span class="q-chip"><input type="radio" name="qServ" id="qs4" value="Estimados gratis"><label for="qs4"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg>Estimados gratis</label></span>
+          <span class="q-chip"><input type="radio" name="qServ" id="qs5" value="Otro"><label for="qs5"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 2h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H8l-4 4V4a2 2 0 0 1 2-2z"/></svg>Otro</label></span>
+        </div>
+      </div>
+      <div class="q-step">
+        <div class="q-step-head"><span class="q-badge">3</span><h3>Paso 3 - Detalles</h3></div>
+        <div class="q-grid">
+          <label>Pueblo <span class="q-opt">(opcional)</span><input type="text" id="qPueblo" placeholder="Tu pueblo" autocomplete="address-level2"></label>
+          <label>Mensaje<textarea id="qMsg" rows="3" placeholder="Cu&eacute;ntanos sobre tu techo..."></textarea></label>
+        </div>
+      </div>
+      <button type="submit" class="q-submit"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16 3C9.4 3 4 8.4 4 15c0 2.4.7 4.6 2 6.5L4 29l7.7-2c1.8 1 3.9 1.5 6.1 1.5h.2c6.6 0 12-5.4 12-12S22.6 3 16 3zm0 21.8c-1.9 0-3.7-.5-5.3-1.5l-.4-.2-4.6 1.2 1.2-4.4-.3-.4c-1-1.6-1.6-3.5-1.6-5.5 0-5.6 4.6-10.2 10.2-10.2 5.6 0 10.2 4.6 10.2 10.2 0 5.6-4.6 10.8-9.4 10.8z"/></svg>Enviar por WhatsApp</button>
       <p class="q-note">Al enviar se abre WhatsApp con tu mensaje listo. Sin compromiso.</p>
     </form>
   </div>
@@ -127,19 +137,17 @@
   <h2>Tu negocio también merece verse así</h2>
   <p class="p-sub">Esta página es una muestra de lo que hacemos. Llevamos tu negocio a internet con oferta de lanzamiento por tiempo limitado.</p></div>
   <div class="p-grid">
-    <div class="p-card reveal"><h3>Solo Web</h3><div class="p-price">$99</div><div class="p-reg">Regular $300</div>
-      <ul class="p-list"><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 7"/></svg> Website profesional como esta</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 7"/></svg> Lista en días, no semanas</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 7"/></svg> Textos y fotos de tu negocio</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 7"/></svg> Botón de WhatsApp integrado</li></ul>
+    
+    <div class="p-card reveal"><h3>Web + Arranque</h3><div class="p-price">$199</div><div class="p-reg">Regular $499</div>
+      <ul class="p-list"><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 7"/></svg> Website profesional como esta</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 7"/></svg> Hosting por 2 meses</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 7"/></svg> Dominio .com por 1 año</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 7"/></svg> Correo profesional</li></ul>
       <a class="btn btn-ghost" href="https://wa.me/17873128042" target="_blank" rel="noopener">La quiero</a></div>
-    <div class="p-card reveal"><h3>Web + Arranque</h3><div class="p-price">$150</div><div class="p-reg">Regular $600</div>
-      <ul class="p-list"><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 7"/></svg> Todo lo del plan Solo Web</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 7"/></svg> Hosting por 2 meses</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 7"/></svg> Dominio .com por 1 año</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 7"/></svg> Correo profesional</li></ul>
-      <a class="btn btn-ghost" href="https://wa.me/17873128042" target="_blank" rel="noopener">La quiero</a></div>
-    <div class="p-card hot reveal"><div class="p-flag">La más elegida</div><h3>Tranquilidad Total</h3><div class="p-price">$200</div><div class="p-reg">Regular $1,000</div>
+    <div class="p-card hot reveal"><div class="p-flag">La más elegida</div><h3>Tranquilidad Total</h3><div class="p-price">$299</div><div class="p-reg">Regular $799</div>
       <ul class="p-list"><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 7"/></svg> Todo lo del plan Web + Arranque</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 7"/></svg> Hosting por 1 AÑO</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 7"/></svg> Mantenimiento incluido</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 7"/></svg> Dominio .com por 1 año</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 7"/></svg> Soporte prioritario</li></ul>
       <a class="btn btn-solid" href="https://wa.me/17873128042" target="_blank" rel="noopener">La quiero por WhatsApp</a></div>
   </div>
 </div></section>
 <footer><div class="wrap">
-  <div style="display:flex;justify-content:center;margin-bottom:14px"><div class="logo-medallon">AA</div></div>
+  <div style="display:flex;justify-content:center;margin-bottom:14px"><img src="img/logo-real.jpg" alt="Angel Alvarez - Cero Filtración, sellado de techos" class="brand-logo"></div>
   <div class="fname">Angel Alvarez</div>
   <p>Luquillo, Puerto Rico</p>
   <a class="fphone" href="tel:+17873835778">787-383-5778</a>

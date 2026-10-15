@@ -72,22 +72,43 @@
     }, {passive:true});
   }
 
-  /* formulario a WhatsApp */
+
   var form = document.getElementById('cform');
   if (form){
+    var pills = form.querySelectorAll('.qpill');
+    pills.forEach(function(p){
+      p.addEventListener('click', function(){
+        pills.forEach(function(x){ x.classList.remove('sel'); });
+        p.classList.add('sel');
+      });
+    });
+    var qErr = document.getElementById('qErr');
     form.addEventListener('submit', function(ev){
       ev.preventDefault();
       var biz = form.dataset.biz || 'el negocio',
-          wa = form.dataset.wa || '19394286747',
+          wa = form.dataset.wa || '',
           nombre = document.getElementById('fNombre').value.trim(),
           tel = document.getElementById('fTel').value.trim(),
-          servicio = document.getElementById('fServicio').value,
+          sel = form.querySelector('input[name="fServicio"]:checked'),
+          servicio = sel ? sel.value : '',
+          puebloEl = document.getElementById('fPueblo'),
+          pueblo = puebloEl ? puebloEl.value.trim() : '',
           msg = document.getElementById('fMsg').value.trim();
-      var texto = 'Hola ' + biz + ', soy ' + nombre + ' (' + tel + '). Me interesa: ' + servicio + '.' + (msg ? ' ' + msg : '');
-      window.open('https://wa.me/' + wa + '?text=' + encodeURIComponent(texto), '_blank', 'noopener');
+      if (!nombre || !tel || !servicio){
+        if (qErr){
+          qErr.hidden = false;
+          qErr.textContent = 'Falta ' + (!nombre ? 'tu nombre' : (!tel ? 'tu teléfono' : 'elegir un servicio')) + ' para enviar tu cotización.';
+        }
+        return;
+      }
+      if (qErr){ qErr.hidden = true; }
+      var text = 'Hola ' + biz + ', soy ' + nombre + ' (' + tel + '). Servicio: ' + servicio + '.' +
+                 (pueblo ? ' Pueblo: ' + pueblo + '.' : '') + (msg ? ' ' + msg : '');
+      window.open('https://wa.me/' + wa + '?text=' + encodeURIComponent(text), '_blank', 'noopener');
     });
   }
 })();
+
 
 /* stagger elite: reveal escalonado en grupos de tarjetas (los hovers quedan intactos) */
 (function(){

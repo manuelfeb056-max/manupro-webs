@@ -173,17 +173,77 @@
     <p class="kicker reveal">Contacto</p>
     <h2 class="h2 reveal">Cotiza tu techo</h2>
     <div class="contact-grid">
-      <form class="cform reveal" id="cform" data-biz="J&amp;B Roofing" data-wa="17873727436">
-        <label for="fNombre">Nombre</label>
-        <input id="fNombre" type="text" required placeholder="Tu nombre">
-        <label for="fTelefono">Teléfono</label>
-        <input id="fTelefono" type="tel" required placeholder="787-000-0000">
-        <label for="fServicio">Servicio</label>
-        <select id="fServicio"><option>Sellado de techos</option><option>Impermeabilización</option><option>Grietas y empozamientos</option><option>Lavado a presión</option><option>Otro</option></select>
-        <label for="fMsg">Mensaje</label>
-        <textarea id="fMsg" placeholder="Cuéntanos sobre tu techo"></textarea>
-        <button class="btn btn-wa btn-lg" type="submit" style="margin-top:22px;width:100%;justify-content:center"><svg class="ic" viewBox="0 0 24 24"><path d="M17.5 14.4c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.5 0 1.47 1.07 2.89 1.22 3.09.15.2 2.1 3.2 5.1 4.49.71.31 1.27.49 1.7.63.72.23 1.37.2 1.88.12.57-.09 1.76-.72 2-1.42.25-.7.25-1.29.18-1.42-.08-.13-.28-.2-.58-.35M12.05 21.79h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 0 1-1.51-5.26c0-5.45 4.44-9.88 9.9-9.88a9.83 9.83 0 0 1 9.88 9.89c0 5.45-4.44 9.88-9.89 9.88M20.5 3.49A11.8 11.8 0 0 0 12.05 0C5.5 0 .16 5.34.16 11.9c0 2.1.55 4.14 1.59 5.95L.06 24l6.3-1.65a11.9 11.9 0 0 0 5.68 1.45h.01c6.55 0 11.89-5.34 11.89-11.9 0-3.18-1.24-6.16-3.44-8.41"/></svg>Enviar por WhatsApp</button>
-      </form>
+      
+<style>
+.eqf-card{background:linear-gradient(165deg,#121722,#0c1017);border:1px solid #0B6CB455;border-radius:22px;padding:34px 30px;box-shadow:0 26px 70px rgba(0,0,0,.5);color:#eef2f8}
+.eqf-step{margin-bottom:26px}
+.eqf-shead{display:flex;align-items:center;gap:12px;margin-bottom:14px}
+.eqf-num{width:34px;height:34px;flex:0 0 34px;border-radius:50%;background:#0B6CB4;color:#0c0e12;font-weight:800;display:flex;align-items:center;justify-content:center;font-size:1rem;box-shadow:0 4px 14px #0B6CB466}
+.eqf-shead h4{margin:0;font-size:1.02rem;letter-spacing:.02em;color:#fff}
+.eqf-grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media(max-width:560px){.eqf-grid2{grid-template-columns:1fr}}
+.eqf-f{display:block;font-size:.85rem;font-weight:600;color:#c6cfdd;margin-bottom:12px}
+.eqf-f input,.eqf-f textarea{width:100%;margin-top:7px;padding:13px 15px;border-radius:12px;border:1px solid rgba(255,255,255,.16);background:rgba(0,0,0,.4);color:#fff;font-size:1rem;font-family:inherit;transition:border-color .25s,box-shadow .25s}
+.eqf-f textarea{resize:vertical;min-height:84px}
+.eqf-f input:focus,.eqf-f textarea:focus{outline:none;border-color:#0B6CB4;box-shadow:0 0 0 3px #0B6CB433}
+.eqf-f input::placeholder,.eqf-f textarea::placeholder{color:#7c8798}
+.eqf-chips{display:flex;flex-wrap:wrap;gap:10px}
+.eqf-chip{position:relative;cursor:pointer}
+.eqf-chip input{position:absolute;opacity:0;pointer-events:none}
+.eqf-chip .eqf-pill{display:inline-flex;align-items:center;gap:8px;padding:11px 16px;border-radius:999px;border:1.5px solid rgba(255,255,255,.18);background:rgba(255,255,255,.05);color:#dbe3f0;font-size:.88rem;font-weight:600;transition:all .22s}
+.eqf-chip .eqf-pill svg{width:17px;height:17px;flex:0 0 17px}
+.eqf-chip input:checked + .eqf-pill{background:#0B6CB4;border-color:#0B6CB4;color:#0c0e12;box-shadow:0 6px 18px #0B6CB455;transform:translateY(-1px)}
+.eqf-chip:hover .eqf-pill{border-color:#0B6CB4aa}
+.eqf-submit{width:100%;padding:17px;border:none;border-radius:15px;background:linear-gradient(135deg,#2be36f,#12914b);color:#fff;font-size:1.08rem;font-weight:800;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:11px;transition:transform .25s,box-shadow .25s;margin-top:8px;font-family:inherit}
+.eqf-submit:hover{transform:translateY(-2px);box-shadow:0 16px 38px rgba(37,211,102,.45)}
+.eqf-submit svg{width:23px;height:23px;fill:#fff}
+.eqf-note{text-align:center;color:#8b95a5;font-size:.82rem;margin:14px 0 0}
+.eqf-err{color:#ff8a8a;font-size:.85rem;margin-top:10px;display:none;text-align:center}
+</style>
+<form id="cform" class="cform reveal eqf-card" data-biz="J&amp;B Roofing" data-wa="17873727436" novalidate>
+  <div class="eqf-step">
+    <div class="eqf-shead"><span class="eqf-num">1</span><h4>PASO 1 &mdash; Tus datos</h4></div>
+    <div class="eqf-grid2">
+      <label class="eqf-f">Nombre*<input type="text" id="fNombre" placeholder="Tu nombre" autocomplete="name" required></label>
+      <label class="eqf-f">Tel&eacute;fono*<input type="tel" id="fTelefono" placeholder="787-000-0000" autocomplete="tel" required></label>
+    </div>
+  </div>
+  <div class="eqf-step">
+    <div class="eqf-shead"><span class="eqf-num">2</span><h4>PASO 2 &mdash; Elige tu servicio</h4></div>
+    <div class="eqf-chips" id="cform_chips">
+      <label class="eqf-chip"><input type="radio" name="cform_svc" value="Sellado de techos" checked><span class="eqf-pill"><svg viewBox="0 0 24 24"><path d="M12 2l8 3v6c0 5-3.4 8.7-8 11-4.6-2.3-8-6-8-11V5l8-3zm-1.2 14.5l6-6-1.4-1.4-4.6 4.6-2.2-2.2-1.4 1.4 3.6 3.6z" fill="currentColor"/></svg><span>Sellado de techos</span></span></label>
+      <label class="eqf-chip"><input type="radio" name="cform_svc" value="Impermeabilización"><span class="eqf-pill"><svg viewBox="0 0 24 24"><path d="M12 2l8 3v6c0 5-3.4 8.7-8 11-4.6-2.3-8-6-8-11V5l8-3zm-1.2 14.5l6-6-1.4-1.4-4.6 4.6-2.2-2.2-1.4 1.4 3.6 3.6z" fill="currentColor"/></svg><span>Impermeabilización</span></span></label>
+      <label class="eqf-chip"><input type="radio" name="cform_svc" value="Grietas y empozamientos"><span class="eqf-pill"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm-1.2 14.5l-4-4 1.4-1.4 2.6 2.6 6.6-6.6 1.4 1.4-8 8z" fill="currentColor"/></svg><span>Grietas y empozamientos</span></span></label>
+      <label class="eqf-chip"><input type="radio" name="cform_svc" value="Lavado a presión"><span class="eqf-pill"><svg viewBox="0 0 24 24"><path d="M12 2l1.8 6.2L20 10l-6.2 1.8L12 18l-1.8-6.2L4 10l6.2-1.8L12 2zm7 11l.9 3.1L23 17l-3.1.9L19 21l-.9-3.1L15 17l3.1-.9L19 13z" fill="currentColor"/></svg><span>Lavado a presión</span></span></label>
+      <label class="eqf-chip"><input type="radio" name="cform_svc" value="Otro"><span class="eqf-pill"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm-1.2 14.5l-4-4 1.4-1.4 2.6 2.6 6.6-6.6 1.4 1.4-8 8z" fill="currentColor"/></svg><span>Otro</span></span></label>
+    </div>
+    <input type="hidden" id="fServicio" value="Sellado de techos">
+  </div>
+  <div class="eqf-step">
+    <div class="eqf-shead"><span class="eqf-num">3</span><h4>PASO 3 &mdash; Detalles</h4></div>
+    <div class="eqf-grid2">
+      <label class="eqf-f">Pueblo<input type="text" id="fPueblo" placeholder="Ej. Caguas (opcional)" autocomplete="address-level2"></label>
+      <label class="eqf-f">Cu&eacute;ntanos m&aacute;s<textarea id="fMsg" placeholder="Tama&ntilde;o del techo, filtraciones, urgencia..."></textarea></label>
+    </div>
+  </div>
+  <button type="submit" class="eqf-submit"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.6-6.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.3-.6.8-.8 1-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4 0-.5.1-.7l.4-.5c.1-.2.1-.3 0-.5L9.4 8c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.2-.7.5-.2.3-.9.9-.9 2.2s.9 2.5 1.1 2.7c.1.2 1.8 2.8 4.4 3.9 1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2 0-.1-.2-.1-.4-.2z"/></svg>Enviar por WhatsApp</button>
+  <p class="eqf-err" id="cform_err">Escribe tu nombre y tu tel&eacute;fono para continuar.</p>
+  <p class="eqf-note">Sin compromiso &middot; Te responden directo al WhatsApp del negocio</p>
+</form>
+<script>
+(function(){
+  var form=document.getElementById('cform');if(!form)return;
+  var svcHidden=document.getElementById('fServicio');
+  form.querySelectorAll('input[name="cform_svc"]').forEach(function(r){
+    r.addEventListener('change',function(){ if(svcHidden) svcHidden.value=r.value; });
+  });
+  var tipoHidden=null;
+  if(tipoHidden){ form.querySelectorAll('input[name="cform_tipo"]').forEach(function(r){
+    r.addEventListener('change',function(){ tipoHidden.value=r.value; });
+  });}
+  /* submit manejado por js/main.js existente */
+})();
+</script>
       <div class="cinfo reveal">
         <div class="row"><svg class="ic" viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z"/></svg><div><b>WhatsApp / Llamadas</b><span>787-372-7436</span></div></div>
         <div class="row"><svg class="ic" viewBox="0 0 24 24"><path d="M12 2C8.1 2 5 5.1 5 9c0 5.2 7 13 7 13s7-7.8 7-13c0-3.9-3.1-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5z"/></svg><div><b>Zona</b><span>Cabo Rojo · Toda la isla</span></div></div>
@@ -200,34 +260,26 @@
     <p class="kicker reveal">Sitio web profesional</p>
     <h2 class="h2 reveal">Tu web con ManuPro</h2>
     <div class="plans">
+      
       <div class="plan reveal">
-        <h3>Solo Web</h3><p class="reg">$300</p><p class="price">$99</p>
-        <ul>
-          <li><svg class="ic" viewBox="0 0 24 24"><path d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg>Solo la website</li>
-          <li><svg class="ic" viewBox="0 0 24 24"><path d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg>Sin hosting</li>
-          <li><svg class="ic" viewBox="0 0 24 24"><path d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg>Sin dominio</li>
-        </ul>
-        <a class="btn btn-ghost" style="justify-content:center" href="https://wa.me/17873128042?text=Hola%20ManuPro%2C%20me%20interesa%20el%20plan%20Solo%20Web%20de%20%2499." target="_blank" rel="noopener">Elegir</a>
-      </div>
-      <div class="plan reveal">
-        <h3>Web + Arranque</h3><p class="reg">$600</p><p class="price">$150</p>
+        <h3>Web + Arranque</h3><p class="reg">$499</p><p class="price">$199</p>
         <ul>
           <li><svg class="ic" viewBox="0 0 24 24"><path d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg>La website completa</li>
           <li><svg class="ic" viewBox="0 0 24 24"><path d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg>Hosting por 2 meses</li>
           <li><svg class="ic" viewBox="0 0 24 24"><path d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg>Dominio .com por 1 año</li>
         </ul>
-        <a class="btn btn-ghost" style="justify-content:center" href="https://wa.me/17873128042?text=Hola%20ManuPro%2C%20me%20interesa%20el%20plan%20Web%20%2B%20Arranque%20de%20%24150." target="_blank" rel="noopener">Elegir</a>
+        <a class="btn btn-ghost" style="justify-content:center" href="https://wa.me/17873128042?text=Hola%20ManuPro%2C%20me%20interesa%20el%20plan%20Web%20%2B%20Arranque%20de%20%24199." target="_blank" rel="noopener">Elegir</a>
       </div>
       <div class="plan hot reveal">
         <span class="seal">La más elegida</span>
-        <h3>Tranquilidad Total</h3><p class="reg">$1,000</p><p class="price">$200</p>
+        <h3>Tranquilidad Total</h3><p class="reg">$799</p><p class="price">$299</p>
         <ul>
           <li><svg class="ic" viewBox="0 0 24 24"><path d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg>La website completa</li>
           <li><svg class="ic" viewBox="0 0 24 24"><path d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg>Hosting por 1 año</li>
           <li><svg class="ic" viewBox="0 0 24 24"><path d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg>Mantenimiento incluido</li>
           <li><svg class="ic" viewBox="0 0 24 24"><path d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg>Dominio .com por 1 año</li>
         </ul>
-        <a class="btn btn-accent" style="justify-content:center" href="https://wa.me/17873128042?text=Hola%20ManuPro%2C%20me%20interesa%20el%20plan%20Tranquilidad%20Total%20de%20%24200." target="_blank" rel="noopener">Elegir</a>
+        <a class="btn btn-accent" style="justify-content:center" href="https://wa.me/17873128042?text=Hola%20ManuPro%2C%20me%20interesa%20el%20plan%20Tranquilidad%20Total%20de%20%24299." target="_blank" rel="noopener">Elegir</a>
       </div>
     </div>
     <p class="plans-note">Sitios web profesionales creados por ManuPro para negocios de Puerto Rico.</p>

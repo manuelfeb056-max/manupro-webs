@@ -162,46 +162,90 @@
     <p class="mp-quote-kicker">Cotización gratis</p>
     <h2>Pide tu estimado por WhatsApp</h2>
     <p class="mp-quote-sub">Completa esto y abrimos el chat con tu mensaje listo para enviar a MF Home Solutions Inc.</p>
-    <form class="mp-qf" id="mpQuoteForm" novalidate>
-      <label>Nombre*
-        <input type="text" id="mpQNombre" placeholder="Tu nombre" required>
-      </label>
-      <label>Teléfono*
-        <input type="tel" id="mpQTel" placeholder="787-000-0000" required>
-      </label>
-      <label>¿Qué servicio necesitas?*
-        <select id="mpQServicio" required>
-              <option value="Sellado de techos">Sellado de techos</option>
-              <option value="Impermeabilización">Impermeabilización</option>
-              <option value="Reparación de filtraciones y humedad">Reparación de filtraciones y humedad</option>
-              <option value="Otro / Necesito orientación">Otro / Necesito orientación</option>
-        </select>
-      </label>
-      <label>Mensaje
-        <textarea id="mpQMsg" placeholder="Cuéntanos de tu techo: tamaño, filtraciones, pueblo..."></textarea>
-      </label>
-      <button type="submit" class="mp-qf-btn">
-        <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.6-6.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.3-.6.8-.8 1-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4 0-.5.1-.7l.4-.5c.1-.2.1-.3 0-.5L9.4 8c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.2-.7.5-.2.3-.9.9-.9 2.2s.9 2.5 1.1 2.7c.1.2 1.8 2.8 4.4 3.9 1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2 0-.1-.2-.1-.4-.2z"/></svg>
-        Enviar por WhatsApp
-      </button>
-      <p class="mp-qf-note">Sin compromiso · Te responden directo al WhatsApp del negocio</p>
-    </form>
+    
+<style>
+.eqf-card{background:linear-gradient(165deg,#121722,#0c1017);border:1px solid #ff5e1a55;border-radius:22px;padding:34px 30px;box-shadow:0 26px 70px rgba(0,0,0,.5);color:#eef2f8}
+.eqf-step{margin-bottom:26px}
+.eqf-shead{display:flex;align-items:center;gap:12px;margin-bottom:14px}
+.eqf-num{width:34px;height:34px;flex:0 0 34px;border-radius:50%;background:#ff5e1a;color:#0c0e12;font-weight:800;display:flex;align-items:center;justify-content:center;font-size:1rem;box-shadow:0 4px 14px #ff5e1a66}
+.eqf-shead h4{margin:0;font-size:1.02rem;letter-spacing:.02em;color:#fff}
+.eqf-grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media(max-width:560px){.eqf-grid2{grid-template-columns:1fr}}
+.eqf-f{display:block;font-size:.85rem;font-weight:600;color:#c6cfdd;margin-bottom:12px}
+.eqf-f input,.eqf-f textarea{width:100%;margin-top:7px;padding:13px 15px;border-radius:12px;border:1px solid rgba(255,255,255,.16);background:rgba(0,0,0,.4);color:#fff;font-size:1rem;font-family:inherit;transition:border-color .25s,box-shadow .25s}
+.eqf-f textarea{resize:vertical;min-height:84px}
+.eqf-f input:focus,.eqf-f textarea:focus{outline:none;border-color:#ff5e1a;box-shadow:0 0 0 3px #ff5e1a33}
+.eqf-f input::placeholder,.eqf-f textarea::placeholder{color:#7c8798}
+.eqf-chips{display:flex;flex-wrap:wrap;gap:10px}
+.eqf-chip{position:relative;cursor:pointer}
+.eqf-chip input{position:absolute;opacity:0;pointer-events:none}
+.eqf-chip .eqf-pill{display:inline-flex;align-items:center;gap:8px;padding:11px 16px;border-radius:999px;border:1.5px solid rgba(255,255,255,.18);background:rgba(255,255,255,.05);color:#dbe3f0;font-size:.88rem;font-weight:600;transition:all .22s}
+.eqf-chip .eqf-pill svg{width:17px;height:17px;flex:0 0 17px}
+.eqf-chip input:checked + .eqf-pill{background:#ff5e1a;border-color:#ff5e1a;color:#0c0e12;box-shadow:0 6px 18px #ff5e1a55;transform:translateY(-1px)}
+.eqf-chip:hover .eqf-pill{border-color:#ff5e1aaa}
+.eqf-submit{width:100%;padding:17px;border:none;border-radius:15px;background:linear-gradient(135deg,#2be36f,#12914b);color:#fff;font-size:1.08rem;font-weight:800;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:11px;transition:transform .25s,box-shadow .25s;margin-top:8px;font-family:inherit}
+.eqf-submit:hover{transform:translateY(-2px);box-shadow:0 16px 38px rgba(37,211,102,.45)}
+.eqf-submit svg{width:23px;height:23px;fill:#fff}
+.eqf-note{text-align:center;color:#8b95a5;font-size:.82rem;margin:14px 0 0}
+.eqf-err{color:#ff8a8a;font-size:.85rem;margin-top:10px;display:none;text-align:center}
+</style>
+<form id="mpQuoteForm" class="mp-qf eqf-card"  novalidate>
+  <div class="eqf-step">
+    <div class="eqf-shead"><span class="eqf-num">1</span><h4>PASO 1 &mdash; Tus datos</h4></div>
+    <div class="eqf-grid2">
+      <label class="eqf-f">Nombre*<input type="text" id="mpQNombre" placeholder="Tu nombre" autocomplete="name" required></label>
+      <label class="eqf-f">Tel&eacute;fono*<input type="tel" id="mpQTel" placeholder="787-000-0000" autocomplete="tel" required></label>
+    </div>
   </div>
+  <div class="eqf-step">
+    <div class="eqf-shead"><span class="eqf-num">2</span><h4>PASO 2 &mdash; Elige tu servicio</h4></div>
+    <div class="eqf-chips" id="mpQuoteForm_chips">
+      <label class="eqf-chip"><input type="radio" name="mpQuoteForm_svc" value="Sellado de techos" checked><span class="eqf-pill"><svg viewBox="0 0 24 24"><path d="M12 2l8 3v6c0 5-3.4 8.7-8 11-4.6-2.3-8-6-8-11V5l8-3zm-1.2 14.5l6-6-1.4-1.4-4.6 4.6-2.2-2.2-1.4 1.4 3.6 3.6z" fill="currentColor"/></svg><span>Sellado de techos</span></span></label>
+      <label class="eqf-chip"><input type="radio" name="mpQuoteForm_svc" value="Impermeabilización"><span class="eqf-pill"><svg viewBox="0 0 24 24"><path d="M12 2l8 3v6c0 5-3.4 8.7-8 11-4.6-2.3-8-6-8-11V5l8-3zm-1.2 14.5l6-6-1.4-1.4-4.6 4.6-2.2-2.2-1.4 1.4 3.6 3.6z" fill="currentColor"/></svg><span>Impermeabilización</span></span></label>
+      <label class="eqf-chip"><input type="radio" name="mpQuoteForm_svc" value="Reparación de filtraciones y humedad"><span class="eqf-pill"><svg viewBox="0 0 24 24"><path d="M12 2s6 6.6 6 11a6 6 0 0 1-12 0c0-4.4 6-11 6-11z" fill="currentColor"/></svg><span>Reparación de filtraciones y humedad</span></span></label>
+      <label class="eqf-chip"><input type="radio" name="mpQuoteForm_svc" value="Otro / Necesito orientación"><span class="eqf-pill"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm-1.2 14.5l-4-4 1.4-1.4 2.6 2.6 6.6-6.6 1.4 1.4-8 8z" fill="currentColor"/></svg><span>Otro / Necesito orientación</span></span></label>
+    </div>
+    <input type="hidden" id="mpQServicio" value="Sellado de techos">
+  </div>
+  <div class="eqf-step">
+    <div class="eqf-shead"><span class="eqf-num">3</span><h4>PASO 3 &mdash; Detalles</h4></div>
+    <div class="eqf-grid2">
+      <label class="eqf-f">Pueblo<input type="text" id="mpQTown" placeholder="Ej. Caguas (opcional)" autocomplete="address-level2"></label>
+      <label class="eqf-f">Cu&eacute;ntanos m&aacute;s<textarea id="mpQMsg" placeholder="Tama&ntilde;o del techo, filtraciones, urgencia..."></textarea></label>
+    </div>
+  </div>
+  <button type="submit" class="eqf-submit"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.6-6.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.3-.6.8-.8 1-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4 0-.5.1-.7l.4-.5c.1-.2.1-.3 0-.5L9.4 8c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.2-.7.5-.2.3-.9.9-.9 2.2s.9 2.5 1.1 2.7c.1.2 1.8 2.8 4.4 3.9 1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2 0-.1-.2-.1-.4-.2z"/></svg>Enviar por WhatsApp</button>
+  <p class="eqf-err" id="mpQuoteForm_err">Escribe tu nombre y tu tel&eacute;fono para continuar.</p>
+  <p class="eqf-note">Sin compromiso &middot; Te responden directo al WhatsApp del negocio</p>
+</form>
 <script>
 (function(){
-  var f=document.getElementById('mpQuoteForm');if(!f)return;
-  f.addEventListener('submit',function(e){
+  var form=document.getElementById('mpQuoteForm');if(!form)return;
+  var svcHidden=document.getElementById('mpQServicio');
+  form.querySelectorAll('input[name="mpQuoteForm_svc"]').forEach(function(r){
+    r.addEventListener('change',function(){ if(svcHidden) svcHidden.value=r.value; });
+  });
+  var tipoHidden=null;
+  if(tipoHidden){ form.querySelectorAll('input[name="mpQuoteForm_tipo"]').forEach(function(r){
+    r.addEventListener('change',function(){ tipoHidden.value=r.value; });
+  });}
+  form.addEventListener('submit',function(e){
     e.preventDefault();
     var n=document.getElementById('mpQNombre').value.trim();
     var t=document.getElementById('mpQTel').value.trim();
-    var s=document.getElementById('mpQServicio').value;
+    var err=document.getElementById('mpQuoteForm_err');
+    if(!n||!t){ if(err)err.style.display='block'; return; }
+    if(err)err.style.display='none';
+    var s=svcHidden?svcHidden.value:'';
+    var tw=document.getElementById('mpQTown').value.trim();
     var m=document.getElementById('mpQMsg').value.trim();
-    if(!n||!t){alert('Por favor escribe tu nombre y teléfono.');return;}
-    var txt='Hola MF Home Solutions Inc, soy '+n+' ('+t+'). Necesito: '+s+'.'+(m?' '+m:'');
+    var txt='Hola MF Home Solutions Inc, soy '+n+' ('+t+')'+(tw?', de '+tw:'')+'. Necesito: '+s+'.'+(m?' '+m:'');
     window.open('https://wa.me/17879832446?text='+encodeURIComponent(txt),'_blank');
   });
 })();
 </script>
+  </div>
+
 </section>
 
 <section class="plans sec" id="planes"><div class="wrap">
@@ -209,13 +253,11 @@
   <h2>Tu negocio también merece verse así</h2>
   <p class="p-sub">Esta página es una muestra de lo que hacemos. Llevamos tu negocio a internet con oferta de lanzamiento por tiempo limitado.</p></div>
   <div class="p-grid">
-    <div class="p-card tilt reveal"><h3>Solo Web</h3><div class="p-price">$99</div><div class="p-reg">Regular <s>$300</s></div>
-      <ul class="p-list"><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 7"/></svg> Website profesional como esta</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 7"/></svg> Lista en días, no semanas</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 7"/></svg> Textos y fotos de tu negocio</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 7"/></svg> Botón de WhatsApp integrado</li></ul>
+    
+    <div class="p-card tilt reveal"><h3>Web + Arranque</h3><div class="p-price">$199</div><div class="p-reg">Regular <s>$499</s></div>
+      <ul class="p-list"><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 7"/></svg> Website profesional a la medida</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 7"/></svg> Hosting por 2 meses</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 7"/></svg> Dominio .com por 1 año</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 7"/></svg> Correo profesional</li></ul>
       <a class="btn btn-ghost" href="https://wa.me/17873128042" target="_blank" rel="noopener">La quiero</a></div>
-    <div class="p-card tilt reveal"><h3>Web + Arranque</h3><div class="p-price">$150</div><div class="p-reg">Regular <s>$600</s></div>
-      <ul class="p-list"><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 7"/></svg> Todo lo del plan Solo Web</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 7"/></svg> Hosting por 2 meses</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 7"/></svg> Dominio .com por 1 año</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 7"/></svg> Correo profesional</li></ul>
-      <a class="btn btn-ghost" href="https://wa.me/17873128042" target="_blank" rel="noopener">La quiero</a></div>
-    <div class="p-card hot tilt reveal"><div class="p-flag">La más elegida</div><h3>Tranquilidad Total</h3><div class="p-price">$200</div><div class="p-reg">Regular <s>$1,000</s></div>
+    <div class="p-card hot tilt reveal"><div class="p-flag">La más elegida</div><h3>Tranquilidad Total</h3><div class="p-price">$299</div><div class="p-reg">Regular <s>$799</s></div>
       <ul class="p-list"><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 7"/></svg> Todo lo del plan Web + Arranque</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 7"/></svg> Hosting por 1 AÑO</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 7"/></svg> Mantenimiento incluido</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 7"/></svg> Dominio .com por 1 año</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 7"/></svg> Soporte prioritario</li></ul>
       <a class="btn btn-solid" href="https://wa.me/17873128042" target="_blank" rel="noopener">La quiero por WhatsApp</a></div>
   </div>

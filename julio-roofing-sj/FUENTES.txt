@@ -21,3 +21,6 @@ Datos verificados (de julioroofingcorppr.com e Infopáginas):
 - Servicios: sellado con membrana Danosa, mantenimiento preventivo
   (inspección estructural, sellado de grietas), reparación de filtraciones,
   residencial/comercial/industrial. Cobertura San Juan a Ponce.
+
+LOGO REAL (2026-10-15): img/logo-real.png — logo oficial JRC de Julio Roofing Corp (letras JRC + techo azul), de su sitio web oficial.
+MEJORA ELITE (2026-10-15): formulario reconstruido con PASO 1/2/3 (chips de servicios), botón WhatsApp 3D.

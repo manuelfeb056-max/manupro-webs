@@ -58,17 +58,23 @@
     e.preventDefault();
     var n = document.getElementById('qNombre'),
         t = document.getElementById('qTel'),
-        s = document.getElementById('qServicio'),
-        m = document.getElementById('qMsg');
+        p = document.getElementById('qPueblo'),
+        s = f.querySelector('input[name="servicio"]:checked'),
+        m = document.getElementById('qMsg'),
+        chips = f.querySelector('.chips');
     var ok = true;
-    [n,t,s].forEach(function(el){
+    [n,t].forEach(function(el){
       var bad = !el.value.trim();
       el.classList.toggle('err', bad);
       if(bad) ok = false;
     });
+    var badS = !s;
+    if(chips) chips.classList.toggle('err', badS);
+    if(badS) ok = false;
     if(!ok) return;
     var txt = 'Hola ASSA Sellado de Techos, soy ' + n.value.trim() +
-      ' (' + t.value.trim() + '). Necesito: ' + s.value + '.' +
+      ' (' + t.value.trim() + '). Servicio: ' + s.value + '.' +
+      (p.value.trim() ? ' Pueblo: ' + p.value.trim() + '.' : '') +
       (m.value.trim() ? ' Detalle: ' + m.value.trim() : '');
     window.open('https://wa.me/17872872772?text=' + encodeURIComponent(txt), '_blank');
   });

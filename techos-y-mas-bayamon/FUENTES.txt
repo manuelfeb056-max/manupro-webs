@@ -45,3 +45,26 @@ Cambios de mejora ligera (2026-10-15, sin rediseño):
 - Menú hamburguesa: verificado — botón circular z-index 100, panel z-99,
   scrim z-98. El botón queda visible como X para cerrar (mismo patrón del
   modelo 911 que el cliente ama); no tapa información. Sin cambios.
+
+MEJORA ELITE RONDA 2 (2026-10-15):
+- PRECIOS: sección de planes ahora con 2 planes. Eliminada la tarjeta "Solo Web"
+  $99. "Web + Arranque": regular $499 tachado / oferta $199 (7 items: website
+  1 página, diseño a medida, botón WhatsApp y llamada, formulario de
+  cotización, hosting 2 meses, dominio .com 1 año, publicación y
+  configuración inicial). "Tranquilidad Total" con badge "La más elegida":
+  regular $799 / oferta $299 (todo lo del plan Web + Arranque + hosting 1 año,
+  mantenimiento 1 año, dominio .com 1 año, soporte prioritario). Botones a
+  https://wa.me/17873128042 con texto pre-llenado del plan.
+- FORMULARIO: reconstruido con sistema "qelite" (worker paralelo): encabezado
+  kicker "Cotización gratis" + título + subtítulo; PASO 1 Tus datos (Nombre +
+  Teléfono en 2 columnas); PASO 2 radio-chips con ícono SVG por servicio (los
+  6 servicios reales verificados + Otro); PASO 3 Detalles (pueblo opcional +
+  textarea); botón grande de WhatsApp con ícono que abre wa.me/17872006905
+  con mensaje pre-llenado; validación de nombre/teléfono (servicio siempre
+  preseleccionado). Handler inline con guard __qeliteInit.
+- LOGO REAL: no existe logo público descargable. Re-verificado: sitio oficial
+  muerto, Infopáginas sin logo, foto de perfil de Facebook inaccesible (403).
+  No se inventó ninguno.
+- REDES: Facebook oficial verificado (URL publicada en su propia ficha de
+  Infopáginas) agregado al footer con etiqueta "Facebook" e ícono oficial, y
+  como sameAs en el JSON-LD. No se encontraron otras redes verificadas.

@@ -31,3 +31,12 @@ MEJORA LIGERA APLICADA 2026-10-15:
   cerrar propio; botón hamburguesa compacto (52px).
 - Animaciones elite suaves: reveal on scroll (ya existía) + hovers premium en
   tarjetas y botones.
+
+RONDA 2 (2026-10-15) — mejora elite:
+
+- Logo real: img/logo-real.jpg — fuente: https://cimtechpr.com (sitio oficial - el header lleva LOGO-10.jpg; el telefono del sitio +1 (787) 253-1512 coincide exacto con el negocio)
+- Red verificada: Facebook: https://www.facebook.com/cimtechpuertorico
+- Red verificada: Instagram: https://www.instagram.com/cimtech_pr/
+- Notas: Web oficial cimtechpr.com verificada: mismos telefonos 787-253-1512 y 787-791-1254 del anuncio ClasificadosOnline de CIM CARIBBEAN. El logo dice 'Cimtech waterproofing solutions' (posible rebrand de CIM Caribbean). Socials tomados del sitio oficial. IG cimtech_pr verificado (81 seguidores, bio de se
+- Formulario reconstruido con estructura elite (3 pasos + chips de servicios) → WhatsApp del negocio.
+- Botón flotante de WhatsApp convertido a 3D.

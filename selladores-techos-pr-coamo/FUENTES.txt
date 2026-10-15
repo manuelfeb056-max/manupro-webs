@@ -1,0 +1,23 @@
+FUENTES — selladores-techos-pr-coamo
+Negocio: Selladores de Techos PR
+Pueblo: Coamo (20 Mario Braschi St, 00769)
+Teléfono dado: 787-718-9607
+
+INVESTIGACIÓN (2026-10-15):
+- Teléfono VERIFICADO: sí. Google Business place_id 3855762641364231 publica +17877189607
+  para "Selladores de Techos PR" (Coamo); coincide con el dado.
+- Galería de Google Business: VACÍA (0 fotos).
+- Búsqueda de redes sociales (nombre+pueblo+teléfono, site:facebook.com): NINGUNA página
+  oficial verificable. Sin sitio web oficial conocido.
+
+RESULTADO: SIN MATERIAL VERIFICABLE. No se inventó logo ni se agregaron redes.
+
+NOTA ADICIONAL (2026-10-15, verificación cruzada):
+- img/logo.svg ACTUAL = PLACEHOLDER INVENTADO por el constructor del sitio (escudo verde con
+  iniciales "SP"); NO es el logo real del negocio y no se pudo verificar porque el negocio no
+  tiene logo público. Se dejó intacto para no romper el diseño, pero NO presentarlo como logo
+  oficial. Si el negocio provee su logo: reemplazar las 3 referencias en index.html
+  (header .side-logo, hero .hero-shield, footer .foot-logo) y el JSON-LD.
+- OJO: "Selladores de Techos L&M Roofing" (Caguas) tiene Facebook
+  (facebook.com/profile.php?id=100063933857372) pero es OTRO negocio con otro teléfono —
+  NO usar su material.

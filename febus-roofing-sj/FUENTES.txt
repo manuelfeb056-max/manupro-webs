@@ -34,3 +34,11 @@ Mejoras aplicadas 2026-10-15 (toque ligero, sin rediseño):
   (no tapa información); se dejó como está por orden de no tocar el diseño.
 - El sitio ya tenía animaciones elite (lluvia en canvas, nubes, shine,
   reveal, chips flotantes, sello giratorio); no se alteró su identidad.
+
+RONDA 2 (2026-10-15) — mejora elite:
+
+- Logo real: no se encontró logo público del negocio (reportado honesto).
+- Redes/email: sin redes verificables encontradas.
+- Notas: Telefono 787-593-5986 confirmado solo en Infopaginas (San Juan). No se encontro sitio web oficial, redes sociales ni logo publico. Las paginas 'Garaje Febus'/'Febus Iron Works' son otros negocios.
+- Formulario reconstruido con estructura elite (3 pasos + chips de servicios) → WhatsApp del negocio.
+- Botón flotante de WhatsApp convertido a 3D.

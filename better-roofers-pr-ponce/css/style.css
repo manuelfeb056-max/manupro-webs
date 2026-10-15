@@ -80,11 +80,35 @@ a{color:inherit;text-decoration:none}
 .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:44px;margin-top:8px}
 .cform{background:var(--card);border:1px solid var(--line);border-radius:var(--rad);padding:32px 28px}
 .cform label{display:block;font-weight:700;font-size:.85rem;text-transform:uppercase;letter-spacing:.08em;margin:18px 0 8px;color:var(--muted)}
-.cform label:first-child{margin-top:0}
 .cform input,.cform select,.cform textarea{width:100%;background:var(--bg);border:1px solid var(--line);border-radius:12px;color:var(--ink);padding:14px 16px;font-family:var(--fb);font-size:1rem}
 .cform input:focus,.cform select:focus,.cform textarea:focus{outline:2px solid var(--accent);border-color:var(--accent)}
 .cform textarea{min-height:110px;resize:vertical}
 .cform .ic{fill:#062b16}
+.cform input.err,.cform select.err{border-color:#c62828;box-shadow:0 0 0 3px rgba(198,40,40,.15)}
+
+/* ===== Formulario elite: pasos + chips ===== */
+.qf-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.qf-grid label{margin-top:0}
+.qstep{display:flex;gap:14px;margin-bottom:22px}
+.qstep-badge{flex:0 0 36px;width:36px;height:36px;border-radius:50%;background:var(--accent);color:#fff;font-weight:800;font-size:1rem;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 16px rgba(29,78,216,.35)}
+.qstep-body{flex:1;min-width:0}
+.qstep-body h3{font-size:1rem;margin:5px 0 14px;color:var(--ink);text-transform:uppercase;letter-spacing:.06em}
+.cform .chips{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:10px}
+.cform .chips input{position:absolute;opacity:0;pointer-events:none;width:0;height:0;margin:0;padding:0;border:none}
+.cform .chips label{margin:0;display:flex;align-items:center;gap:9px;padding:11px 14px;border:1.5px solid var(--line);border-radius:999px;font-size:.85rem;font-weight:600;cursor:pointer;transition:border-color .2s,box-shadow .2s,background .2s;background:var(--bg);color:var(--ink);text-transform:none;letter-spacing:0}
+.cform .chips label svg{width:20px;height:20px;flex:0 0 20px;fill:var(--accent)}
+.cform .chips input:checked + label{border-color:var(--accent);background:#e3ebfd;box-shadow:0 0 0 3px rgba(29,78,216,.14)}
+.cform .chips input:focus-visible + label{outline:2px solid var(--accent);outline-offset:2px}
+.cform .chips.err label{border-color:#c62828}
+@media(max-width:640px){.qf-grid{grid-template-columns:1fr}.qstep{gap:10px}.cform .chips{grid-template-columns:1fr 1fr}.cform{padding:26px 20px}}
+
+/* ===== WhatsApp flotante 3D ===== */
+.wa-float{position:fixed;right:18px;bottom:18px;width:64px;height:64px;border-radius:50%;z-index:999;display:flex;align-items:center;justify-content:center;background:radial-gradient(circle at 30% 25%,#5cf08a 0%,#25d366 35%,#1da851 70%,#128c4b 100%);box-shadow:0 10px 24px rgba(18,140,75,.45),0 2px 6px rgba(0,0,0,.35),inset 0 2px 4px rgba(255,255,255,.35),inset 0 -3px 6px rgba(0,0,0,.25);animation:waFloat 3s ease-in-out infinite}
+.wa-float:hover{transform:scale(1.08)}
+.wa-float .ic{width:32px;height:32px;fill:#fff;filter:drop-shadow(0 2px 3px rgba(0,0,0,.4))}
+.wa-float::before{content:"";position:absolute;inset:-4px;border-radius:50%;border:2px solid rgba(37,211,102,.6);animation:waPulse 2s ease-out infinite;pointer-events:none}
+@keyframes waFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+@keyframes waPulse{0%{transform:scale(.9);opacity:1}100%{transform:scale(1.25);opacity:0}}
 .cinfo{display:grid;gap:18px;align-content:start}
 .cinfo .row{display:flex;gap:16px;align-items:center;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px}
 .cinfo .row .ic{width:30px;height:30px}
@@ -124,9 +148,6 @@ a{color:inherit;text-decoration:none}
 .sidepanel .sp-cta{margin-top:24px;font-size:1rem}
 .scrim2{position:fixed;inset:0;background:rgba(0,0,0,.55);z-index:98;opacity:0;pointer-events:none;transition:opacity .3s}
 .scrim2.on{opacity:1;pointer-events:auto}
-.wa-float{position:fixed;bottom:22px;right:22px;z-index:100;width:64px;height:64px;border-radius:50%;background:var(--wa);display:flex;align-items:center;justify-content:center;box-shadow:0 12px 34px rgba(37,211,102,.45);transition:transform .25s;animation:floaty 3s ease-in-out infinite}
-.wa-float:hover{transform:scale(1.1)}
-.wa-float .ic{width:32px;height:32px;fill:#fff}
 @keyframes floaty{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
 .reveal{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s ease}
 .reveal.visible{opacity:1;transform:none}

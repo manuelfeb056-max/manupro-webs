@@ -8,6 +8,8 @@
 <meta name="robots" content="index, follow">
 <meta name="author" content="ASSA Sellado de Techos">
 <meta name="theme-color" content="#C62828">
+<link rel="icon" href="img/logo-real.jpg">
+<link rel="apple-touch-icon" href="img/logo-real.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -19,6 +21,8 @@
   "name": "ASSA Sellado de Techos",
   "description": "Sellado de techos residenciales e industriales en Guaynabo, Puerto Rico. Sistemas de membranas asfálticas y sellado líquido. Estimados gratis.",
   "telephone": "+1-787-287-2772",
+  "logo": "img/logo-real.jpg",
+  "sameAs": ["https://www.facebook.com/assa.caribbean", "https://www.youtube.com/user/williamassa", "https://twitter.com/AssaCaribbean"],
   "address": {"@type": "PostalAddress", "addressLocality": "Guaynabo", "addressRegion": "PR", "addressCountry": "US"},
   "areaServed": "Puerto Rico",
   "priceRange": "$$"
@@ -50,11 +54,7 @@
   <div class="tape" aria-hidden="true"><span>ESTIMADOS GRATIS</span><span>ESTIMADOS GRATIS</span><span>ESTIMADOS GRATIS</span></div>
   <div class="hero-inner wrap">
     <div class="hero-brand">
-      <svg class="shield" viewBox="0 0 64 72" aria-hidden="true">
-        <path d="M32 2 L60 12 V34 C60 54 46 64 32 70 C18 64 4 54 4 34 V12 Z" fill="#C62828" stroke="#fff" stroke-width="3"/>
-        <path d="M32 10 L52 17 V34 C52 48 42 56 32 61 C22 56 12 48 12 34 V17 Z" fill="none" stroke="rgba(255,255,255,.45)" stroke-width="1.5"/>
-        <text x="32" y="42" text-anchor="middle" font-family="Montserrat,sans-serif" font-weight="900" font-size="19" fill="#fff">ASSA</text>
-      </svg>
+      <span class="logo-real-badge"><img src="img/logo-real.jpg" alt="ASSA Caribbean Inc — logo oficial"></span>
       <div class="hero-brand-text">
         <strong>ASSA</strong>
         <span>SELLADO DE TECHOS · GUAYNABO</span>
@@ -232,24 +232,39 @@
     <h2 class="sec-title">Pide tu <span class="accent">estimado gratis</span></h2>
     <p class="sec-note">Llena el formulario y te abrimos WhatsApp con tu solicitud lista para enviar. Respondemos el mismo día.</p>
     <form id="quoteForm" class="quote-form" novalidate>
-      <div class="qf-grid">
-        <label>Tu nombre<input type="text" id="qNombre" name="nombre" placeholder="Nombre y apellido" autocomplete="name" required></label>
-        <label>Tu teléfono<input type="tel" id="qTel" name="telefono" placeholder="787-000-0000" autocomplete="tel" required></label>
+      <div class="qstep">
+        <span class="qstep-badge">1</span>
+        <div class="qstep-body">
+          <h3>Tus datos</h3>
+          <div class="qf-grid">
+            <label>Tu nombre<input type="text" id="qNombre" name="nombre" placeholder="Nombre y apellido" autocomplete="name" required></label>
+            <label>Tu teléfono<input type="tel" id="qTel" name="telefono" placeholder="787-000-0000" autocomplete="tel" required></label>
+          </div>
+        </div>
       </div>
-      <label>¿Qué servicio necesitas?
-        <select id="qServicio" name="servicio" required>
-          <option value="" disabled selected>Selecciona un servicio</option>
-          <option>Membrana asfáltica</option>
-          <option>Sellado líquido</option>
-          <option>Techo residencial</option>
-          <option>Techo industrial / comercial</option>
-          <option>Reparación de filtraciones y goteras</option>
-          <option>Estimado gratis / inspección</option>
-          <option>Otro</option>
-        </select>
-      </label>
-      <label>Cuéntanos de tu techo<textarea id="qMsg" name="mensaje" rows="3" placeholder="Ej: techo de mi casa con filtración en el cuarto principal..."></textarea></label>
-      <button type="submit" class="btn btn-primary qf-submit">Enviar por WhatsApp</button>
+      <div class="qstep">
+        <span class="qstep-badge">2</span>
+        <div class="qstep-body">
+          <h3>Elige tu servicio</h3>
+          <div class="chips">
+            <input type="radio" name="servicio" id="svc1" value="Membrana asfáltica"><label for="svc1"><svg viewBox="0 0 24 24"><path d="M12 2 2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>Membrana asfáltica</label>
+            <input type="radio" name="servicio" id="svc2" value="Sellado líquido"><label for="svc2"><svg viewBox="0 0 24 24"><path d="M12 2s6 6.6 6 11a6 6 0 0 1-12 0c0-4.4 6-11 6-11z"/></svg>Sellado líquido</label>
+            <input type="radio" name="servicio" id="svc3" value="Techo residencial"><label for="svc3"><svg viewBox="0 0 24 24"><path d="M12 3l9 8h-3v9h-4v-6h-4v6H6v-9H3l9-8z"/></svg>Techo residencial</label>
+            <input type="radio" name="servicio" id="svc4" value="Techo industrial / comercial"><label for="svc4"><svg viewBox="0 0 24 24"><path d="M4 22V4c0-.6.4-1 1-1h10c.6 0 1 .4 1 1v18M2 22h20v-2H2v2zm4.5-4h2v-3h-2v3zm0-5h2V8h-2v5z"/></svg>Techo industrial / comercial</label>
+            <input type="radio" name="servicio" id="svc5" value="Reparación de filtraciones y goteras"><label for="svc5"><svg viewBox="0 0 24 24"><path d="M21 6.5a5.5 5.5 0 0 1-7.6 5.1L7 18l-3-3 6.4-6.4A5.5 5.5 0 0 1 17.5 3l-3 3 2 2.5 2.5 2 3-3A5.5 5.5 0 0 1 21 6.5z"/></svg>Reparación de filtraciones</label>
+            <input type="radio" name="servicio" id="svc6" value="Estimado gratis / inspección"><label for="svc6"><svg viewBox="0 0 24 24"><path d="M6 1h8l6 6v16H6V1zm7 1.4V8h5.6L13 2.4zM8.5 12h7v1.8h-7V12zm0 3.6h7v1.8h-7v-1.8z"/></svg>Estimado gratis</label>
+          </div>
+        </div>
+      </div>
+      <div class="qstep">
+        <span class="qstep-badge">3</span>
+        <div class="qstep-body">
+          <h3>Detalles</h3>
+          <label>Pueblo (opcional)<input type="text" id="qPueblo" name="pueblo" placeholder="Ej: Guaynabo" autocomplete="address-level2"></label>
+          <label>Cuéntanos de tu techo<textarea id="qMsg" name="mensaje" rows="3" placeholder="Ej: techo de mi casa con filtración en el cuarto principal..."></textarea></label>
+        </div>
+      </div>
+      <button type="submit" class="btn btn-primary qf-submit"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.2 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .6l-.4.6-.5.5c-.2.2-.3.4-.1.7.2.3.9 1.5 2 2.4 1.4 1.2 2.5 1.6 2.9 1.8.3.2.5.1.7-.1l1-1.2c.2-.3.4-.2.7-.1l2 1c.3.1.5.2.6.4 0 .1 0 .6-.2 1.2z"/></svg>Enviar por WhatsApp</button>
       <p class="qf-note">Al enviar se abre WhatsApp con tu mensaje listo. Sin compromiso.</p>
     </form>
   </div>
@@ -262,36 +277,27 @@
     <h2 class="sec-title">Planes <span class="accent">ManuPro</span></h2>
     <p class="plans-sub">Una web profesional como esta para tu negocio. Precios de oferta por tiempo limitado.</p>
     <div class="plan-grid">
-      <article class="plan">
-        <h3>Solo Web</h3>
-        <p class="plan-price"><span class="reg">$300</span> $99</p>
-        <ul>
-          <li>Website profesional</li>
-          <li>Diseño a tu marca</li>
-          <li>Botón de WhatsApp</li>
-        </ul>
-        <a class="btn btn-outline sm" href="https://wa.me/17873128042?text=Hola%20ManuPro%2C%20me%20interesa%20el%20plan%20Solo%20Web%20de%20%2499." target="_blank" rel="noopener" data-track="plan_solo">Lo quiero</a>
-      </article>
+      
       <article class="plan">
         <h3>Web + Arranque</h3>
-        <p class="plan-price"><span class="reg">$600</span> $150</p>
+        <p class="plan-price"><span class="reg">$499</span> $199</p>
         <ul>
-          <li>Todo lo del plan Solo Web</li>
+          <li>Website profesional como esta</li>
           <li>Optimización para Google</li>
           <li>Galería de trabajos</li>
         </ul>
-        <a class="btn btn-outline sm" href="https://wa.me/17873128042?text=Hola%20ManuPro%2C%20me%20interesa%20el%20plan%20Web%20%2B%20Arranque%20de%20%24150." target="_blank" rel="noopener" data-track="plan_arranque">Lo quiero</a>
+        <a class="btn btn-outline sm" href="https://wa.me/17873128042?text=Hola%20ManuPro%2C%20me%20interesa%20el%20plan%20Web%20%2B%20Arranque%20de%20%24199." target="_blank" rel="noopener" data-track="plan_arranque">Lo quiero</a>
       </article>
       <article class="plan plan-star">
         <p class="plan-badge">La más elegida</p>
         <h3>Tranquilidad Total</h3>
-        <p class="plan-price"><span class="reg">$1,000</span> $200</p>
+        <p class="plan-price"><span class="reg">$799</span> $299</p>
         <ul>
           <li>Todo lo del plan Web + Arranque</li>
           <li>Mantenimiento incluido</li>
           <li>Soporte prioritario</li>
         </ul>
-        <a class="btn btn-primary sm" href="https://wa.me/17873128042?text=Hola%20ManuPro%2C%20me%20interesa%20el%20plan%20Tranquilidad%20Total%20de%20%24200." target="_blank" rel="noopener" data-track="plan_total">Lo quiero</a>
+        <a class="btn btn-primary sm" href="https://wa.me/17873128042?text=Hola%20ManuPro%2C%20me%20interesa%20el%20plan%20Tranquilidad%20Total%20de%20%24299." target="_blank" rel="noopener" data-track="plan_total">Lo quiero</a>
       </article>
     </div>
   </div>
@@ -301,13 +307,17 @@
 <footer class="footer">
   <div class="wrap">
     <div class="foot-top">
-      <svg class="shield sm" viewBox="0 0 64 72" aria-hidden="true">
-        <path d="M32 2 L60 12 V34 C60 54 46 64 32 70 C18 64 4 54 4 34 V12 Z" fill="#C62828" stroke="#fff" stroke-width="3"/>
-        <text x="32" y="42" text-anchor="middle" font-family="Montserrat,sans-serif" font-weight="900" font-size="19" fill="#fff">ASSA</text>
-      </svg>
+      <img class="foot-logo" src="img/logo-real.jpg" alt="ASSA Caribbean Inc — logo oficial">
       <div><strong>ASSA SELLADO DE TECHOS</strong><span>Guaynabo, Puerto Rico</span></div>
     </div>
     <p class="foot-contact">WhatsApp / Tel: <a href="https://wa.me/17872872772" target="_blank" rel="noopener">787-287-2772</a> · Estimados gratis</p>
+    <div class="foot-social">
+      <span class="foot-social-t">Síguenos:</span>
+      <a href="https://www.facebook.com/assa.caribbean" target="_blank" rel="noopener" aria-label="Facebook de ASSA"><svg viewBox="0 0 24 24"><path d="M13.5 21v-7h2.4l.4-3h-2.8V9.1c0-.9.3-1.5 1.6-1.5h1.3V4.9c-.6-.1-1.4-.2-2.2-.2-2.2 0-3.7 1.3-3.7 3.8V11H8v3h2.5v7h3z"/></svg><span>Facebook</span></a>
+      <a href="https://www.youtube.com/user/williamassa" target="_blank" rel="noopener" aria-label="YouTube de ASSA"><svg viewBox="0 0 24 24"><path d="M21.6 7.2a2.8 2.8 0 0 0-2-2C17.9 4.8 12 4.8 12 4.8s-5.9 0-7.6.4a2.8 2.8 0 0 0-2 2A29 29 0 0 0 2 12a29 29 0 0 0 .4 4.8 2.8 2.8 0 0 0 2 2c1.7.4 7.6.4 7.6.4s5.9 0 7.6-.4a2.8 2.8 0 0 0 2-2A29 29 0 0 0 22 12a29 29 0 0 0-.4-4.8zM10 15.2V8.8L15.5 12 10 15.2z"/></svg><span>YouTube</span></a>
+      <a href="https://twitter.com/AssaCaribbean" target="_blank" rel="noopener" aria-label="X de ASSA"><svg viewBox="0 0 24 24"><path d="M18.9 2H22l-6.8 7.8L23.3 22h-6.3l-4.9-6.4L6.5 22H3.4l7.3-8.3L1 2h6.5l4.4 5.9L18.9 2zm-1.1 18h1.7L7.6 3.9H5.8L17.8 20z"/></svg><span>X</span></a>
+      <a href="mailto:assa@assapr.com" aria-label="Email de ASSA"><svg viewBox="0 0 24 24"><path d="M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2zm8 7L4 6v12h16V6l-8 5z"/></svg><span>assa@assapr.com</span></a>
+    </div>
     <p class="foot-legal">© 2026 ASSA Sellado de Techos · Guaynabo, Puerto Rico · Demostración creada por <a href="https://wa.me/17873128042" target="_blank" rel="noopener">ManuPro</a></p>
   </div>
 </footer>

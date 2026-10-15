@@ -25,3 +25,24 @@ var m=document.getElementById('qMsg').value.trim();
 var txt='Hola Vision Roofing, soy '+n+'. Me interesa: '+s+'.'+(t?' Mi teléfono: '+t+'.':'')+(m?' '+m:'');
 window.open('https://wa.me/17874782710?text='+encodeURIComponent(txt),'_blank');});
 })();
+
+/* Cotizador elite qelite -> WhatsApp del negocio (ronda 2, 2026-10-15) */
+(function(){
+var f=document.querySelector("form.qelite");if(!f)return;
+var errBox=f.querySelector(".qelite-err");
+function showErr(m){if(errBox){errBox.textContent=m;errBox.style.display="block";}}
+function clearErr(){if(errBox){errBox.textContent="";errBox.style.display="none";}}
+f.addEventListener("submit",function(e){
+e.preventDefault();clearErr();
+var n=f.querySelector("input[name=nombre]"),t=f.querySelector("input[name=telefono]"),
+p=f.querySelector("input[name=pueblo]"),m=f.querySelector("textarea[name=mensaje]");
+var nv=n?n.value.trim():"",tv=t?t.value.trim():"",pv=p?p.value.trim():"",mv=m?m.value.trim():"";
+if(nv.length<2){showErr("Escribe tu nombre para continuar.");if(n)n.focus();return;}
+if(tv.replace(/\D/g,"").length<7){showErr("Escribe un teléfono válido para poder llamarte.");if(t)t.focus();return;}
+var sel=f.querySelector("input[name=servicio]:checked");
+if(!sel){showErr("Elige un servicio para continuar.");return;}
+var wa=f.getAttribute("data-wa")||"",biz=f.getAttribute("data-biz")||"";
+var txt="Hola "+biz+", soy "+nv+". Me interesa: "+sel.value+". Mi teléfono: "+tv+"."+(pv?" Pueblo: "+pv+".":"")+(mv?" Detalles: "+mv:"");
+window.open("https://wa.me/"+wa+"?text="+encodeURIComponent(txt),"_blank");
+});
+})();

@@ -27,3 +27,13 @@ MEJORA LIGERA APLICADA 2026-10-15:
 - Menú: panel por ENCIMA del botón (z-index 130), con botón de cerrar
   propio; botón hamburguesa compacto (52px).
 - Animaciones: reveal on scroll (ya existía, clase .rv) + hovers premium.
+
+RONDA 2 (2026-10-15) — mejora elite:
+
+- Logo real: img/logo-real.jpg — fuente: Avatar de Instagram @colonwaterproofinginc (logo real del negocio: sol/nube + COLON Waterproofing Inc.)
+- Red verificada: Facebook: https://www.facebook.com/553973271421619
+- Red verificada: Instagram: https://www.instagram.com/colonwaterproofinginc
+- Email público: colonwaterproofing@gmail.com
+- Notas: IG verificado via instagram-cli: 306 seguidores, tel +17877686054, email colonwaterproofing@gmail.com, Calle Betania #3 Trujillo Alto. Pagina de Facebook oficial: place_id 518387896710864, tel 787-768-6094/787-698-3484. Su web vieja colonwaterproofing.com esta muerta (sin HTTPS, no responde). Logo s
+- Formulario reconstruido con estructura elite (3 pasos + chips de servicios) → WhatsApp del negocio.
+- Botón flotante de WhatsApp convertido a 3D.

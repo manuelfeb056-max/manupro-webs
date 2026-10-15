@@ -33,18 +33,24 @@ document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});
   });
 })();
 
-/* Cotizador → WhatsApp (Angel Alvarez: 1787-383-5778) */
+/* Cotizador elite por pasos -> WhatsApp (Angel Alvarez: 1787-383-5778) */
 (function(){
   var f=document.getElementById('quoteForm');
   if(!f) return;
   f.addEventListener('submit',function(e){
     e.preventDefault();
     var n=document.getElementById('qNombre'),t=document.getElementById('qTel'),
-        s=document.getElementById('qServicio'),m=document.getElementById('qMsg');
+        m=document.getElementById('qMsg'),p=document.getElementById('qPueblo'),
+        s=f.querySelector('input[name="qServ"]:checked'),
+        chips=f.querySelector('.q-chips');
     var ok=true;
-    [n,t,s].forEach(function(el){var bad=!el.value.trim();el.classList.toggle('err',bad);if(bad)ok=false;});
+    [n,t].forEach(function(el){var bad=!el.value.trim();el.classList.toggle('err',bad);if(bad)ok=false;});
+    var badS=!s; if(chips)chips.classList.toggle('err',badS); if(badS)ok=false;
     if(!ok) return;
-    var txt='Hola Angel Alvarez, soy '+n.value.trim()+' ('+t.value.trim()+'). Necesito: '+s.value+'.'+(m.value.trim()?' Detalle: '+m.value.trim():'');
-    window.open('https://wa.me/17873835778?text='+encodeURIComponent(txt),'_blank');
+    var parts=['Hola Angel Alvarez, soy '+n.value.trim()+' ('+t.value.trim()+').',
+               'Servicio: '+s.value+'.'];
+    if(p&&p.value.trim())parts.push('Pueblo: '+p.value.trim()+'.');
+    if(m.value.trim())parts.push('Detalle: '+m.value.trim());
+    window.open('https://wa.me/17873835778?text='+encodeURIComponent(parts.join(' ')),'_blank');
   });
 })();

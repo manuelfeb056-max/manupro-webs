@@ -14,7 +14,7 @@
 <meta property="og:locale" content="es_PR">
 <meta name="theme-color" content="#B8860B">
 <link rel="canonical" href="https://manuelfeb056-max.github.io/manupro-webs/colon-waterproofing-trujillo/">
-<link rel="icon" href="img/logo.svg" type="image/svg+xml">
+<link rel="icon" href="img/logo-real.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -23,7 +23,7 @@
 {"@context":"https://schema.org","@type":"RoofingContractor","name":"Colon Waterproofing Inc",
 "description":"Sellado de techos en Trujillo Alto, Puerto Rico. 27 años de experiencia. Estimados gratis.",
 "telephone":"+1-787-768-6094","image":"https://manuelfeb056-max.github.io/manupro-webs/colon-waterproofing-trujillo/img/hero.jpg",
-"logo":"https://manuelfeb056-max.github.io/manupro-webs/colon-waterproofing-trujillo/img/logo.svg",
+"logo":"https://manuelfeb056-max.github.io/manupro-webs/colon-waterproofing-trujillo/img/logo-real.jpg",
 "address":{"@type":"PostalAddress","addressLocality":"Trujillo Alto","addressRegion":"PR","addressCountry":"US"},
 "areaServed":["Trujillo Alto","Carolina","San Juan","Área Metro"],"priceRange":"$$"}
 </script>
@@ -51,7 +51,7 @@
 
 <header class="brandbar">
   <div class="wrap">
-    <img src="img/logo.svg" alt="Colon Waterproofing Inc">
+    <img src="img/logo-real.jpg" alt="Colon Waterproofing Inc">
     <div class="brandname">Colon Waterproofing Inc<small>Trujillo Alto, PR</small></div>
   </div>
 </header>
@@ -171,39 +171,41 @@
   </div>
 </section>
 
-<section class="quote" id="cotizar">
-  <div class="wrap">
-    <div class="quote-card">
-      <div class="quote-grid">
-        <div>
-          <p class="rv" style="font-weight:800;letter-spacing:.24em;text-transform:uppercase;font-size:.78rem;color:var(--gold);margin-bottom:10px">Estimado gratis</p>
-          <h2 class="rv serif" style="font-size:clamp(1.9rem,4.5vw,2.8rem);margin-bottom:10px">Pide tu cotización</h2>
-          <p class="rv">Llena esto y se abre WhatsApp con tu mensaje listo. 27 años de experiencia en sellado de techos.</p>
-          <ul class="quote-points rv">
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 7"/></svg> Estimados gratis, sin compromiso</li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 7"/></svg> Respuesta directa por WhatsApp</li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 7"/></svg> Trujillo Alto y toda el área metro</li>
-          </ul>
-        </div>
-        <form class="qform rv" id="quoteForm" novalidate>
-          <div class="qrow">
-            <label>Nombre<input type="text" name="nombre" placeholder="Tu nombre" required></label>
-            <label>Teléfono<input type="tel" name="telefono" placeholder="787-000-0000" required></label>
+<section class="quote nq-sec" id="cotizar">
+<div class="wrap nq">
+    <p class="nq-kicker">Cotizaci&oacute;n gratis</p>
+    <h2 class="nq-title">Cotiza tu proyecto <span>hoy mismo</span></h2>
+    <p class="nq-sub">Completa los 3 pasos y te abrimos WhatsApp con tu solicitud lista para enviar.</p>
+    <form id="nqForm" class="nq-form" novalidate>
+      <div class="nq-card">
+        <div class="nq-step">
+          <p class="nq-stephead"><span class="nq-num">1</span><span><strong>Paso 1</strong> &mdash; Tus datos</span></p>
+          <div class="nq-grid">
+            <label class="nq-field"><span>Nombre</span><input id="nqNombre" type="text" placeholder="Tu nombre" autocomplete="name"></label>
+            <label class="nq-field"><span>Tel&eacute;fono</span><input id="nqTel" type="tel" placeholder="787-000-0000" autocomplete="tel" inputmode="tel"></label>
           </div>
-          <label>Servicio que necesita
-            <select name="servicio">
-              <option>Sellado de techo</option>
-              <option>Reparación de filtraciones</option>
-              <option>Mantenimiento de techo</option>
-              <option>Otro / estimado gratis</option>
-            </select>
-          </label>
-          <label>Mensaje<textarea name="mensaje" placeholder="Cuéntanos qué necesita tu techo..."></textarea></label>
-          <button class="btn btn-gold" type="submit">Enviar por WhatsApp</button>
-          <p class="form-note">Se abre WhatsApp con tu mensaje listo.</p>
-        </form>
+        </div>
+        <div class="nq-step">
+          <p class="nq-stephead"><span class="nq-num">2</span><span><strong>Paso 2</strong> &mdash; Elige tu servicio</span></p>
+          <div class="nq-chips" role="radiogroup" aria-label="Servicios">
+          <label class="nq-chip"><input type="radio" name="nqServicio" value="Sellado de techo"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3c3.5 4.2 6 7.6 6 11a6 6 0 1 1-12 0c0-3.4 2.5-6.8 6-11z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg><span>Sellado de techo</span></label>
+          <label class="nq-chip"><input type="radio" name="nqServicio" value="Reparación de filtraciones"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 10c2-2 4-2 6 0s4 2 6 0 4-2 6 0M3 15c2-2 4-2 6 0s4 2 6 0 4-2 6 0" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg><span>Reparación de filtraciones</span></label>
+          <label class="nq-chip"><input type="radio" name="nqServicio" value="Mantenimiento de techo"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M19.1 4.9L17 7M7 17l-2.1 2.1" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg><span>Mantenimiento de techo</span></label>
+          <label class="nq-chip"><input type="radio" name="nqServicio" value="Otro / estimado gratis"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3h7l5 5v13a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M14 3v5h5M10 13h5M10 17h5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg><span>Otro / estimado gratis</span></label>
+          </div>
+          <p class="nq-err" id="nqErrServ" hidden>Elige un servicio para continuar.</p>
+        </div>
+        <div class="nq-step">
+          <p class="nq-stephead"><span class="nq-num">3</span><span><strong>Paso 3</strong> &mdash; Detalles <em>(opcional)</em></span></p>
+          <div class="nq-grid">
+            <label class="nq-field"><span>Pueblo</span><input id="nqPueblo" type="text" placeholder="&iquest;D&oacute;nde es el trabajo?"></label>
+            <label class="nq-field"><span>Cu&eacute;ntanos m&aacute;s</span><textarea id="nqMsg" rows="2" placeholder="Goteras, manchas, tama&ntilde;o aproximado del techo..."></textarea></label>
+          </div>
+        </div>
+        <button class="nq-submit" type="submit"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.4 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.4 0 .6l-.4.6-.5.5c-.2.2-.3.4-.1.7.2.3.9 1.5 2 2.4 1.4 1.2 2.5 1.6 2.9 1.8.3.2.5.1.7-.1l1-1.2c.2-.3.4-.2.7-.1l2 1c.3.1.5.2.6.4 0 .1 0 .7-.2 1.3z"/></svg><span>Enviar por WhatsApp</span></button>
+        <p class="nq-note">Al enviar se abre WhatsApp al 787-768-6094 con tu mensaje listo. Sin compromiso.</p>
       </div>
-    </div>
+    </form>
   </div>
 </section>
 
@@ -213,15 +215,13 @@
     <h2 class="sec rv">¿Te gusta esta página? Es tuya por esto</h2>
     <p class="sec-sub rv">Precios de lanzamiento para negocios que quieren verse profesionales en internet.</p>
     <div class="p-grid">
-      <div class="p-card rv"><h3>Solo Web</h3><div class="p-price">$99<small> pago único</small></div><div class="p-reg">Regular <s>$300</s></div>
-        <ul class="p-feats"><li><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg>Página profesional como esta</li><li><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg>Botón de WhatsApp</li><li><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg>Se ve bien en el celular</li></ul>
-        <a class="btn btn-ghost" style="justify-content:center" href="https://wa.me/17873128042?text=Quiero%20el%20plan%20Solo%20Web%20%2499" target="_blank" rel="noopener">Lo quiero</a></div>
-      <div class="p-card rv"><h3>Web + Arranque</h3><div class="p-price">$150<small> pago único</small></div><div class="p-reg">Regular <s>$600</s></div>
-        <ul class="p-feats"><li><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg>Todo lo del plan Solo Web</li><li><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg>Dominio .com por 1 año</li><li><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg>Hosting por 2 meses</li></ul>
-        <a class="btn btn-ghost" style="justify-content:center" href="https://wa.me/17873128042?text=Quiero%20el%20plan%20Web%20%2B%20Arranque%20%24150" target="_blank" rel="noopener">Lo quiero</a></div>
-      <div class="p-card hot rv"><span class="p-tag">La más elegida</span><h3>Tranquilidad Total</h3><div class="p-price">$200<small> pago único</small></div><div class="p-reg">Regular <s>$1,000</s></div>
+      
+      <div class="p-card rv"><h3>Web + Arranque</h3><div class="p-price">$199<small> pago único</small></div><div class="p-reg">Regular <s>$499</s></div>
+        <ul class="p-feats"><li><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg>Website profesional completa</li><li><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg>Dominio .com por 1 año</li><li><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg>Hosting por 2 meses</li></ul>
+        <a class="btn btn-ghost" style="justify-content:center" href="https://wa.me/17873128042?text=Quiero%20el%20plan%20Web%20%2B%20Arranque%20%24199" target="_blank" rel="noopener">Lo quiero</a></div>
+      <div class="p-card hot rv"><span class="p-tag">La más elegida</span><h3>Tranquilidad Total</h3><div class="p-price">$299<small> pago único</small></div><div class="p-reg">Regular <s>$799</s></div>
         <ul class="p-feats"><li><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg>Todo lo del plan anterior</li><li><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg>Hosting por 1 año completo</li><li><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg>Mantenimiento incluido</li><li><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg>Tranquilidad por un año</li></ul>
-        <a class="btn btn-gold" style="justify-content:center" href="https://wa.me/17873128042?text=Quiero%20el%20plan%20Tranquilidad%20Total%20%24200" target="_blank" rel="noopener">Lo quiero</a></div>
+        <a class="btn btn-gold" style="justify-content:center" href="https://wa.me/17873128042?text=Quiero%20el%20plan%20Tranquilidad%20Total%20%24299" target="_blank" rel="noopener">Lo quiero</a></div>
     </div>
     <p class="p-note">Página demo creada por ManuPro. Escríbenos para activar la tuya.</p>
   </div>
@@ -229,9 +229,17 @@
 
 <footer>
   <div class="wrap">
-    <div class="fbrand"><img src="img/logo.svg" alt="Colon Waterproofing Inc"><div><b>Colon Waterproofing Inc</b><small>Trujillo Alto, Puerto Rico</small></div></div>
+    <div class="fbrand"><img src="img/logo-real.jpg" alt="Colon Waterproofing Inc"><div><b>Colon Waterproofing Inc</b><small>Trujillo Alto, Puerto Rico</small></div></div>
     <div class="fright">787-768-6094 · 787-698-3484<br><small>Sitio demo por ManuPro · <span id="yr"></span></small></div>
   </div>
+<div class="nq-social">
+  <p class="nq-social-title">S&iacute;guenos</p>
+  <div class="nq-social-row">
+    <a class="nq-soc" href="https://www.facebook.com/553973271421619" target="_blank" rel="noopener" aria-label="Facebook de Colon Waterproofing Inc"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.5 21v-7h2.4l.4-2.8h-2.8V9.4c0-.8.3-1.4 1.5-1.4h1.4V5.5c-.3 0-1.1-.1-2-.1-2 0-3.4 1.2-3.4 3.5v2.3H8.5V14H11v7z" fill="currentColor"/></svg><span>Facebook</span></a>
+    <a class="nq-soc" href="https://www.instagram.com/colonwaterproofinginc" target="_blank" rel="noopener" aria-label="Instagram de Colon Waterproofing Inc"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="4.5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="3.6" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="16.8" cy="7.2" r="1.4" fill="currentColor"/></svg><span>Instagram</span></a>
+    <a class="nq-soc" href="mailto:colonwaterproofing@gmail.com" aria-label="Email de Colon Waterproofing Inc"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="5.5" width="17" height="13" rx="2.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M4.5 7.5l7.5 5.5 7.5-5.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Email</span></a>
+  </div>
+</div>
 </footer>
 
 <a class="wa-float" href="https://wa.me/17877686094?text=Hola%20Colon%20Waterproofing%2C%20quiero%20un%20estimado%20gratis%20para%20el%20sellado%20de%20mi%20techo." target="_blank" rel="noopener" aria-label="WhatsApp">

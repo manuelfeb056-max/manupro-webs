@@ -15,7 +15,7 @@
 <meta property="og:url" content="https://manuelfeb056-max.github.io/manupro-webs/am-roofing-bayamon/">
 <meta property="og:locale" content="es_PR">
 <meta name="theme-color" content="#12181b">
-<link rel="icon" href="img/logo.png">
+<link rel="icon" href="img/logo-real.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -36,6 +36,7 @@
 {"@type":"Question","name":"¿Dónde están ubicados?","acceptedAnswer":{"@type":"Answer","text":"Calle #3 Este Lote 247, Bayamón, Puerto Rico."}},
 {"@type":"Question","name":"¿Cómo los contacto?","acceptedAnswer":{"@type":"Answer","text":"Por WhatsApp al 787-261-3118 o por llamada al 787-261-3118 o al 787-403-7415."}}]}
 </script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"HomeAndConstructionBusiness","name":"A.M. Roofing Inc","telephone":"+17872613118","email":"am_roofing@yahoo.com","address":{"@type":"PostalAddress","streetAddress":"Calle #3 Este Lote 247","addressLocality":"Bayamón","addressRegion":"PR","addressCountry":"US"},"logo":"img/logo-real.png"}</script>
 </head>
 <body data-site="am-roofing-bayamon">
 
@@ -53,7 +54,7 @@
 <div class="nav-scrim" id="navScrim"></div>
 
 <header class="topbar" id="topbar">
-  <a href="#inicio" class="brand"><img src="img/logo.png" alt="A.M. Roofing Inc" class="brand-logo"><span>A.M. <b>Roofing</b></span></a>
+  <a href="#inicio" class="brand"><img src="img/logo-real.png" alt="A.M. Roofing Inc - Sellado de techos" class="brand-logo"><span>A.M. <b>Roofing</b></span></a>
   <a class="btn btn-cotizar" href="https://wa.me/17872613118?text=Hola%20A.M.%20Roofing%2C%20quiero%20una%20cotizaci%C3%B3n%20para%20mi%20techo." target="_blank" rel="noopener">
     <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.4 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.4 0 .6l-.4.6-.5.5c-.2.2-.3.4-.1.7.2.3.9 1.5 2 2.4 1.4 1.2 2.5 1.6 2.9 1.8.3.2.5.1.7-.1l1-1.2c.2-.3.4-.2.7-.1l2 1c.3.1.5.2.6.4 0 .1 0 .7-.2 1.3z"/></svg>
     Cotizar
@@ -172,26 +173,35 @@
 <!-- COTIZADOR -->
 <section class="quote" id="cotizar">
   <div class="wrap">
-    <p class="q-kicker">Cotización inmediata</p>
+    <p class="q-kicker">Cotización gratis</p>
     <h2 class="q-title">Cotiza tu proyecto <span>hoy mismo</span></h2>
     <p class="q-sub">Completa el formulario y te abrimos WhatsApp con tu solicitud lista para enviar.</p>
     <form id="quoteForm" class="q-form" novalidate>
-      <div class="q-grid">
-        <label>Tu nombre<input type="text" id="qNombre" placeholder="Nombre y apellido" autocomplete="name" required></label>
-        <label>Tu teléfono<input type="tel" id="qTel" placeholder="787-000-0000" autocomplete="tel" required></label>
+      <div class="q-step">
+        <div class="q-step-head"><span class="q-badge">1</span><h3>Paso 1 - Tus datos</h3></div>
+        <div class="q-grid">
+          <label>Tu nombre<input type="text" id="qNombre" placeholder="Nombre y apellido" autocomplete="name"></label>
+          <label>Tu tel&eacute;fono<input type="tel" id="qTel" placeholder="787-000-0000" autocomplete="tel"></label>
+        </div>
       </div>
-      <label>¿Qué servicio necesitas?
-        <select id="qServicio" required>
-          <option value="" disabled selected>Selecciona un servicio</option>
-          <option>Sellado de techos</option>
-          <option>Reparación de filtraciones</option>
-          <option>Mantenimiento de techos</option>
-          <option>Estimado gratis</option>
-          <option>Otro</option>
-        </select>
-      </label>
-      <label>Detalles<textarea id="qMsg" rows="3" placeholder="Cuéntanos sobre tu techo..."></textarea></label>
-      <button type="submit" class="q-submit">Enviar por WhatsApp</button>
+      <div class="q-step">
+        <div class="q-step-head"><span class="q-badge">2</span><h3>Paso 2 - Elige tu servicio</h3></div>
+        <div class="q-chips">
+          <span class="q-chip"><input type="radio" name="qServ" id="qs0" value="Sellado de techos"><label for="qs0"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2s6 6.6 6 11a6 6 0 0 1-12 0c0-4.4 6-11 6-11z"/></svg>Sellado de techos</label></span>
+          <span class="q-chip"><input type="radio" name="qServ" id="qs1" value="Reparación de filtraciones"><label for="qs1"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L4 17l3 3 5.3-5.3a4 4 0 0 0 5.4-5.4l-2.6 2.6-2.1-2.1 2.7-2.5z"/></svg>Reparación de filtraciones</label></span>
+          <span class="q-chip"><input type="radio" name="qServ" id="qs2" value="Mantenimiento de techos"><label for="qs2"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19.4 13a7.6 7.6 0 0 0 0-2l2-1.5-2-3.4-2.3 1a7.6 7.6 0 0 0-1.7-1L15 4h-4l-.4 2.6a7.6 7.6 0 0 0-1.7 1l-2.3-1-2 3.4 2 1.5a7.6 7.6 0 0 0 0 2l-2 1.5 2 3.4 2.3-1a7.6 7.6 0 0 0 1.7 1L11 20h4l.4-2.6a7.6 7.6 0 0 0 1.7-1l2.3 1 2-3.4-2-1.4zM12 15.5A3.5 3.5 0 1 1 12 8.5a3.5 3.5 0 0 1 0 7z"/></svg>Mantenimiento de techos</label></span>
+          <span class="q-chip"><input type="radio" name="qServ" id="qs3" value="Estimado gratis"><label for="qs3"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg>Estimado gratis</label></span>
+          <span class="q-chip"><input type="radio" name="qServ" id="qs4" value="Otro"><label for="qs4"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 2h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H8l-4 4V4a2 2 0 0 1 2-2z"/></svg>Otro</label></span>
+        </div>
+      </div>
+      <div class="q-step">
+        <div class="q-step-head"><span class="q-badge">3</span><h3>Paso 3 - Detalles</h3></div>
+        <div class="q-grid">
+          <label>Pueblo <span class="q-opt">(opcional)</span><input type="text" id="qPueblo" placeholder="Tu pueblo" autocomplete="address-level2"></label>
+          <label>Mensaje<textarea id="qMsg" rows="3" placeholder="Cu&eacute;ntanos sobre tu techo..."></textarea></label>
+        </div>
+      </div>
+      <button type="submit" class="q-submit"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16 3C9.4 3 4 8.4 4 15c0 2.4.7 4.6 2 6.5L4 29l7.7-2c1.8 1 3.9 1.5 6.1 1.5h.2c6.6 0 12-5.4 12-12S22.6 3 16 3zm0 21.8c-1.9 0-3.7-.5-5.3-1.5l-.4-.2-4.6 1.2 1.2-4.4-.3-.4c-1-1.6-1.6-3.5-1.6-5.5 0-5.6 4.6-10.2 10.2-10.2 5.6 0 10.2 4.6 10.2 10.2 0 5.6-4.6 10.8-9.4 10.8z"/></svg>Enviar por WhatsApp</button>
       <p class="q-note">Al enviar se abre WhatsApp con tu mensaje listo. Sin compromiso.</p>
     </form>
   </div>
@@ -203,24 +213,19 @@
     <h2 class="h2 reveal">Planes ManuPro</h2>
     <p class="sec-sub reveal">Esta página es una muestra de lo que ManuPro hace por tu negocio. Elige tu plan:</p>
     <div class="plans">
-      <div class="plan reveal">
-        <h3>Solo Web</h3>
-        <p class="plan-price"><span class="reg">$300</span> $99</p>
-        <ul><li>Solo la website</li><li>Sin hosting</li><li>Sin dominio</li></ul>
-        <a class="btn btn-ghost" href="https://wa.me/17873128042?text=Hola%20ManuPro%2C%20me%20interesa%20el%20plan%20Solo%20Web%20de%20%2499." target="_blank" rel="noopener">Elegir</a>
-      </div>
+      
       <div class="plan reveal">
         <h3>Web + Arranque</h3>
-        <p class="plan-price"><span class="reg">$600</span> $150</p>
+        <p class="plan-price"><span class="reg">$499</span> $199</p>
         <ul><li>Website completa</li><li>Hosting 2 meses</li><li>Dominio .com 1 año</li></ul>
-        <a class="btn btn-ghost" href="https://wa.me/17873128042?text=Hola%20ManuPro%2C%20me%20interesa%20el%20plan%20Web%20%2B%20Arranque%20de%20%24150." target="_blank" rel="noopener">Elegir</a>
+        <a class="btn btn-ghost" href="https://wa.me/17873128042?text=Hola%20ManuPro%2C%20me%20interesa%20el%20plan%20Web%20%2B%20Arranque%20de%20%24199." target="_blank" rel="noopener">Elegir</a>
       </div>
       <div class="plan plan-hot reveal">
         <span class="seal">La más elegida</span>
         <h3>Tranquilidad Total</h3>
-        <p class="plan-price"><span class="reg">$1,000</span> $200</p>
+        <p class="plan-price"><span class="reg">$799</span> $299</p>
         <ul><li>Website completa</li><li>Hosting 1 año</li><li>Mantenimiento incluido</li><li>Dominio .com 1 año</li></ul>
-        <a class="btn btn-wa" href="https://wa.me/17873128042?text=Hola%20ManuPro%2C%20me%20interesa%20el%20plan%20Tranquilidad%20Total%20de%20%24200." target="_blank" rel="noopener">Elegir</a>
+        <a class="btn btn-wa" href="https://wa.me/17873128042?text=Hola%20ManuPro%2C%20me%20interesa%20el%20plan%20Tranquilidad%20Total%20de%20%24299." target="_blank" rel="noopener">Elegir</a>
       </div>
     </div>
   </div>
@@ -249,10 +254,10 @@
   <div class="wrap footer-grid">
     <div>
       <div class="foot-brand">
-        <img src="img/logo.png" alt="A.M. Roofing Inc" class="foot-logo">
+        <img src="img/logo-real.png" alt="A.M. Roofing Inc - Sellado de techos" class="foot-logo">
         <p class="foot-name">A.M. Roofing Inc</p>
       </div>
-      <p class="foot-sub">Sellado de techos y reparación de filtraciones. Calle #3 Este Lote 247, Bayamón, Puerto Rico · 787-261-3118</p>
+      <p class="foot-sub">Sellado de techos y reparación de filtraciones. Calle #3 Este Lote 247, Bayamón, Puerto Rico · 787-261-3118 · <a href="mailto:am_roofing@yahoo.com">am_roofing@yahoo.com</a></p>
     </div>
     <div class="foot-links">
       <a href="#inicio">Inicio</a><a href="#trabajos">Trabajos</a><a href="#servicios">Servicios</a><a href="#preguntas">Preguntas</a><a href="#contacto">Contacto</a>

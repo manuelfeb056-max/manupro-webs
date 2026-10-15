@@ -79,11 +79,25 @@
       ev.preventDefault();
       var biz = form.dataset.biz || 'el negocio',
           wa = form.dataset.wa || '19394286747',
-          nombre = document.getElementById('fNombre').value.trim(),
-          servicio = document.getElementById('fServicio').value,
-          msg = document.getElementById('fMsg').value.trim();
-      var texto = 'Hola ' + biz + ', soy ' + nombre + '. Me interesa: ' + servicio + '.' + (msg ? ' ' + msg : '');
-      window.open('https://wa.me/' + wa + '?text=' + encodeURIComponent(texto), '_blank', 'noopener');
+          nombre = document.getElementById('fNombre'),
+          tel = document.getElementById('fTel'),
+          pueblo = document.getElementById('fPueblo'),
+          msg = document.getElementById('fMsg'),
+          sel = form.querySelector('input[name="fServicio"]:checked'),
+          chips = form.querySelector('.cf-chips');
+      var ok = true;
+      [nombre, tel].forEach(function(el){
+        var digits=(el.value.match(/\d/g)||[]).length;
+        var bad=el.value.trim().length<2||digits<7;
+        el.classList.toggle('err',bad);if(bad)ok=false;
+      });
+      if(!sel){ok=false;chips.classList.add('err');}else{chips.classList.remove('err');}
+      if(!ok) return;
+      var parts=['Hola ' + biz + ', soy ' + nombre.value.trim() + ' (' + tel.value.trim() + ').',
+                 'Me interesa: ' + sel.value + '.'];
+      if(pueblo.value.trim())parts.push('Pueblo: ' + pueblo.value.trim() + '.');
+      if(msg.value.trim())parts.push(msg.value.trim());
+      window.open('https://wa.me/' + wa + '?text=' + encodeURIComponent(parts.join(' ')), '_blank', 'noopener');
     });
   }
 })();

@@ -167,21 +167,56 @@
     <span class="kicker">Cotización gratis</span>
     <h2>Cotiza tu techo por WhatsApp</h2>
     <p class="qf-sub">Elige el servicio, cuéntanos tu caso y te abrimos WhatsApp con tu mensaje listo para Rocío.</p>
-    <form id="qform" data-biz="Rocío" data-wa="17872315640">
-      <div class="qf-grid">
-        <label>Nombre<input id="qNombre" type="text" placeholder="Tu nombre" required></label>
-        <label>Teléfono<input id="qTel" type="tel" placeholder="787-000-0000" required></label>
-        <label class="full">Servicio que necesitas<select id="qServicio">
-            <option>Sellado de techo</option>
-            <option>Impermeabilización</option>
-            <option>Reparación de filtraciones</option>
-            <option>Limpieza de techo</option>
-          </select></label>
-        <label class="full">Mensaje<textarea id="qMsg" rows="3" placeholder="Ej: el techo filtra cuando llueve fuerte..."></textarea></label>
-        <button class="qf-submit" type="submit"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.6-6.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.3-.6.8-.8 1-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4 0-.5.1-.7l.4-.5c.1-.2.1-.3 0-.5L9.4 8c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.2-.7.5-.2.3-.9.9-.9 2.2s.9 2.5 1.1 2.7c.1.2 1.8 2.8 4.4 3.9 1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2 0-.1-.2-.1-.4-.2z"/></svg>Enviar cotización por WhatsApp</button>
-        <p class="qf-note">Sin compromiso · Respondemos rápido</p>
-      </div>
-    </form>
+    <form class="ef-form" novalidate data-biz="Rocío" data-wa="17872315640">
+  <div class="ef-step">
+    <div class="ef-stephead"><span class="ef-num">1</span><span class="ef-steptitle">Tus datos</span></div>
+    <div class="ef-row2">
+      <label class="ef-field"><span>Nombre</span><input type="text" name="ef-nombre" placeholder="Tu nombre" autocomplete="name"></label>
+      <label class="ef-field"><span>Teléfono</span><input type="tel" name="ef-tel" placeholder="787-000-0000" autocomplete="tel"></label>
+    </div>
+  </div>
+  <div class="ef-step">
+    <div class="ef-stephead"><span class="ef-num">2</span><span class="ef-steptitle">Elige tu servicio</span></div>
+    <div class="ef-chips">
+      <label class="ef-chip"><input type="radio" name="ef-servicio" value="Sellado de techo" checked><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l8 4v6c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6z" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 8s3 3.2 3 5.5a3 3 0 0 1-6 0C9 11.2 12 8 12 8z" fill="currentColor"/></svg><span>Sellado de techo</span></label>
+      <label class="ef-chip"><input type="radio" name="ef-servicio" value="Impermeabilización"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l8 4v6c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6z" fill="none" stroke="currentColor" stroke-width="2"/><path d="M8.5 12l2.5 2.5 4.5-4.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg><span>Impermeabilización</span></label>
+      <label class="ef-chip"><input type="radio" name="ef-servicio" value="Reparación de filtraciones"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2s6 6.5 6 11a6 6 0 0 1-12 0c0-4.5 6-11 6-11zm0 5.2C10.6 9.9 9 11.9 9 14a3 3 0 0 0 6 0c0-2.1-1.6-4.1-3-5.8z" fill="currentColor"/></svg><span>Reparación de filtraciones</span></label>
+      <label class="ef-chip"><input type="radio" name="ef-servicio" value="Limpieza de techo"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l1.8 4.6L18 9l-4.2 1.4L12 15l-1.8-4.6L6 9l4.2-1.4z" fill="currentColor"/><path d="M19 14l.9 2.1L22 17l-2.1.9L19 20l-.9-2.1L16 17l2.1-.9z" fill="currentColor"/><path d="M5 15l.7 1.8L7.5 17.5l-1.8.7L5 20l-.7-1.8L2.5 17.5l1.8-.7z" fill="currentColor"/></svg><span>Limpieza de techo</span></label>
+    </div>
+  </div>
+  <div class="ef-step">
+    <div class="ef-stephead"><span class="ef-num">3</span><span class="ef-steptitle">Detalles</span></div>
+    <label class="ef-field"><span>Pueblo <em>(opcional)</em></span><input type="text" name="ef-pueblo" placeholder="¿Dónde es el trabajo?"></label>
+    <label class="ef-field"><span>Cuéntanos tu caso</span><textarea name="ef-msg" rows="3" placeholder="Ej: el techo filtra cuando llueve fuerte..."></textarea></label>
+  </div>
+  <p class="ef-error" hidden>Escribe tu nombre y un teléfono válido para continuar.</p>
+  <button class="ef-submit" type="submit"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.6-6.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.3-.6.8-.8 1-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4 0-.5.1-.7l.4-.5c.1-.2.1-.3 0-.5L9.4 8c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.2-.7.5-.2.3-.9.9-.9 2.2s.9 2.5 1.1 2.7c.1.2 1.8 2.8 4.4 3.9 1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2 0-.1-.2-.1-.4-.2z"/></svg><span>Cotizar por WhatsApp</span></button>
+  <p class="ef-note">Sin compromiso · Respuesta rápida por WhatsApp</p>
+</form>
+
+<script>
+(function(){
+  var f=document.currentScript.previousElementSibling;
+  if(!f||!f.classList||!f.classList.contains('ef-form'))return;
+  var wa=f.getAttribute('data-wa'),biz=f.getAttribute('data-biz')||'';
+  f.addEventListener('submit',function(e){
+    e.preventDefault();
+    var nombre=f.querySelector('[name="ef-nombre"]').value.trim();
+    var tel=f.querySelector('[name="ef-tel"]').value.trim();
+    var err=f.querySelector('.ef-error');
+    var digits=tel.replace(/\D/g,'');
+    if(!nombre||digits.length<7){err.hidden=false;return;}
+    err.hidden=true;
+    var sel=f.querySelector('[name="ef-servicio"]:checked');
+    var servicio=sel?sel.value:'';
+    var pueblo=f.querySelector('[name="ef-pueblo"]').value.trim();
+    var msg=f.querySelector('[name="ef-msg"]').value.trim();
+    var text='Hola '+biz+', soy '+nombre+'. Mi teléfono es '+tel+'. Necesito: '+servicio+'.'
+      +(pueblo?' Pueblo: '+pueblo+'.':'')+(msg?' Detalles: '+msg:'');
+    window.open('https://wa.me/'+wa+'?text='+encodeURIComponent(text),'_blank','noopener');
+  });
+})();
+</script>
   </div>
 </div></section>
 
@@ -192,21 +227,15 @@
     <p class="sec-sub reveal">Esta página es una muestra de lo que ManuPro hace por tu negocio. Elige tu plan:</p>
     <div class="plans">
       <div class="plan reveal">
-        <h3>Solo Web</h3>
-        <p class="plan-price"><span class="reg">$300</span> $99</p>
-        <ul><li>Solo la website</li><li>Sin hosting</li><li>Sin dominio</li></ul>
-        <a class="btn btn-ghost" href="https://wa.me/17873128042?text=Hola%20ManuPro%2C%20me%20interesa%20el%20plan%20Solo%20Web%20de%20%2499." target="_blank" rel="noopener">Elegir</a>
-      </div>
-      <div class="plan reveal">
         <h3>Web + Arranque</h3>
-        <p class="plan-price"><span class="reg">$600</span> $150</p>
+        <p class="plan-price"><span class="reg">$499</span> $199</p>
         <ul><li>Website completa</li><li>Hosting 2 meses</li><li>Dominio .com 1 año</li></ul>
         <a class="btn btn-ghost" href="https://wa.me/17873128042?text=Hola%20ManuPro%2C%20me%20interesa%20el%20plan%20Web%20%2B%20Arranque%20de%20%24150." target="_blank" rel="noopener">Elegir</a>
       </div>
       <div class="plan plan-hot reveal">
         <span class="seal">La más elegida</span>
         <h3>Tranquilidad Total</h3>
-        <p class="plan-price"><span class="reg">$1,000</span> $200</p>
+        <p class="plan-price"><span class="reg">$799</span> $299</p>
         <ul><li>Website completa</li><li>Hosting 1 año</li><li>Mantenimiento incluido</li><li>Dominio .com 1 año</li></ul>
         <a class="btn btn-aqua" href="https://wa.me/17873128042?text=Hola%20ManuPro%2C%20me%20interesa%20el%20plan%20Tranquilidad%20Total%20de%20%24200." target="_blank" rel="noopener">Elegir</a>
       </div>
@@ -227,6 +256,7 @@
         WhatsApp: 787-231-5640
       </a>
       <a class="btn btn-ghost-l btn-lg" href="tel:+17872315640">Llamar: 787-231-5640</a>
+      <a class="btn btn-ghost-l btn-lg" href="mailto:JV104164@GMAIL.COM">Email: JV104164@GMAIL.COM</a>
     </div>
   </div>
 </section>
@@ -236,7 +266,7 @@
     <div class="foot-brand">
       <img src="img/logo.png" alt="Rocío Lavado y Sellado" class="foot-logo">
       <div><p class="foot-name">Rocío</p>
-      <p class="foot-sub">Lavado y sellado de estructuras. Aguadilla, Puerto Rico · 787-231-5640</p></div>
+      <p class="foot-sub">Lavado y sellado de estructuras. Aguadilla, Puerto Rico · 787-231-5640<br>Email: <a href="mailto:JV104164@GMAIL.COM">JV104164@GMAIL.COM</a></p></div>
     </div>
     <div class="foot-links">
       <a href="#inicio">Inicio</a><a href="#trabajos">Trabajos</a><a href="#servicios">Servicios</a><a href="#preguntas">Preguntas</a><a href="#contacto">Contacto</a>

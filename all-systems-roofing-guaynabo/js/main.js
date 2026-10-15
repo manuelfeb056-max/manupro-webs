@@ -50,18 +50,28 @@
     });
   });
 
-  /* ---------- formulario a WhatsApp ---------- */
+  /* ---------- formulario elite a WhatsApp (validacion por pasos) ---------- */
   var form = document.getElementById('cform');
   if (form){
     form.addEventListener('submit', function(ev){
       ev.preventDefault();
       var biz = form.dataset.biz || 'el negocio',
-          wa = form.dataset.wa || '17875472190',
-          nombre = document.getElementById('fNombre').value.trim(),
-          servicio = document.getElementById('fServicio').value,
-          msg = document.getElementById('fMsg').value.trim();
-      var text = 'Hola ' + biz + ', soy ' + nombre + '. Me interesa: ' + servicio + '.' + (msg ? ' ' + msg : '');
-      window.open('https://wa.me/' + wa + '?text=' + encodeURIComponent(text), '_blank');
+          wa = form.dataset.wa || '17879460247',
+          nombre = document.getElementById('fNombre'),
+          tel = document.getElementById('fTel'),
+          msg = document.getElementById('fMsg'),
+          pueblo = document.getElementById('fPueblo'),
+          serv = form.querySelector('input[name="fServ"]:checked'),
+          chips = form.querySelector('.f-chips');
+      var ok = true;
+      [nombre, tel].forEach(function(el){ var bad = !el.value.trim(); el.classList.toggle('err', bad); if (bad) ok = false; });
+      var badS = !serv; if (chips) chips.classList.toggle('err', badS); if (badS) ok = false;
+      if (!ok) return;
+      var parts = ['Hola ' + biz + ', soy ' + nombre.value.trim() + ' (' + tel.value.trim() + ').',
+                   'Servicio: ' + serv.value + '.'];
+      if (pueblo && pueblo.value.trim()) parts.push('Pueblo: ' + pueblo.value.trim() + '.');
+      if (msg.value.trim()) parts.push('Detalle: ' + msg.value.trim());
+      window.open('https://wa.me/' + wa + '?text=' + encodeURIComponent(parts.join(' ')), '_blank');
     });
   }
 })();

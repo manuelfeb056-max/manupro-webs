@@ -38,3 +38,13 @@ Mejoras aplicadas 2026-10-15 (toque ligero, sin rediseño):
   agregado al menú.
 - El sitio ya tenía animaciones elite (shine, tilt 3D, reveal, wa pulse);
   no se alteró su identidad.
+
+RONDA 2 (2026-10-15) — mejora elite:
+
+- Logo real: img/logo-real.png — fuente: https://empireroofingsolutionspr.com (sitio oficial - logo transparente del header, PNG 1174x430 redimensionado a 800px)
+- Red verificada: Facebook: https://www.facebook.com/empiresolpr/
+- Red verificada: Instagram: https://www.instagram.com/empiresolpr/
+- Email público: empiresolutionspr@gmail.com
+- Notas: Web oficial empireroofingsolutionspr.com con logo real 'EMPIRE ROOFING SOLUTIONS' (PNG transparente, fondo claro). Socials facebook.com/empiresolpr e instagram.com/empiresolpr enlazados desde el sitio oficial. Telefonos 787-200-2782 y 787-698-1222 en Infopaginas; FB place 1884665435605851 confirma 7
+- Formulario reconstruido con estructura elite (3 pasos + chips de servicios) → WhatsApp del negocio.
+- Botón flotante de WhatsApp convertido a 3D.

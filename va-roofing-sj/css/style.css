@@ -144,6 +144,24 @@ footer{text-align:center;padding:36px 20px;background:#050f22;color:var(--muted)
 .qf-submit{width:100%;justify-content:center}
 .qf-note{text-align:center;font-size:.84rem;color:var(--muted);margin-top:14px}
 @media(max-width:640px){.qf-grid{grid-template-columns:1fr}.qform{padding:24px 20px}}
+
+/* === Cotización elite por pasos (ronda 2, 2026-10-15) === */
+.qf-kicker{text-align:center;font-size:.78rem;font-weight:800;letter-spacing:3px;text-transform:uppercase;color:var(--sky);margin:0 0 10px}
+.qf-step{margin-bottom:22px}
+.qf-stephead{display:flex;align-items:center;gap:12px;font-weight:800;font-size:1rem;color:var(--text);margin:0 0 12px}
+.qf-stepnum{flex:none;width:34px;height:34px;border-radius:50%;background:var(--sky);color:var(--deep);font-weight:800;display:flex;align-items:center;justify-content:center;font-size:1rem}
+.qf-field2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.qf-full2{grid-column:1/-1}
+.qf-pills{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:10px}
+.qf-pill{margin:0}
+.qform .qf-pill input{position:absolute;opacity:0;width:1px;height:1px;margin:0;padding:0;pointer-events:none}
+.qf-pill .pill{display:flex;align-items:center;gap:10px;padding:12px 13px;border-radius:14px;border:1.5px solid rgba(125,211,252,.35);font-size:.9rem;font-weight:600;color:var(--text);cursor:pointer;transition:border-color .2s,background .2s,box-shadow .2s;background:rgba(7,20,45,.4)}
+.qf-pill .pill svg{width:22px;height:22px;flex:none;color:var(--sky)}
+.qf-pill .pill:hover{border-color:var(--sky)}
+.qf-pill input:checked + .pill{border-color:var(--sky);background:rgba(125,211,252,.16);box-shadow:0 0 0 3px rgba(125,211,252,.18)}
+.qf-err{display:none;text-align:center;color:#ff9d9d;font-size:.9rem;font-weight:600;margin:0 0 14px}
+.qf-submit{font-size:1.05rem;padding:16px 26px}
+@media(max-width:640px){.qf-field2{grid-template-columns:1fr}.qf-pills{grid-template-columns:1fr 1fr}.qf-kicker{margin-bottom:8px}}
 /* hovers premium */
 .btn{transition:transform .25s ease,box-shadow .25s ease,filter .25s ease}
 .btn:hover{transform:translateY(-3px);filter:brightness(1.08)}
@@ -154,3 +172,69 @@ footer{text-align:center;padding:36px 20px;background:#050f22;color:var(--muted)
 .service-card,.plan-card{transition:transform .35s ease,box-shadow .35s ease,border-color .35s ease}
 .service-card:hover,.plan-card:hover{transform:translateY(-6px);box-shadow:0 18px 40px rgba(125,211,252,.16)}
 a{transition:color .25s ease}
+
+/* ===== WA 3D premium (override elite) ===== */
+.wa-float{
+  animation:none!important;
+  background:radial-gradient(circle at 30% 26%, #6ff59b 0%, #2fe07a 30%, #1eb85c 55%, #0f7a3d 82%, #0a5a2e 100%) !important;
+  box-shadow:0 20px 42px rgba(5,70,35,.5), 0 5px 12px rgba(5,70,35,.4), inset 0 3px 5px rgba(255,255,255,.5), inset 0 -8px 14px rgba(0,0,0,.3) !important;
+  border:1px solid rgba(255,255,255,.35) !important;
+  animation:waFloat3d 3.4s ease-in-out infinite !important;
+}
+.wa-float::before{
+  content:"";position:absolute;inset:-5px;border-radius:50%;
+  border:2px solid rgba(47,224,122,.6);pointer-events:none;
+  animation:waRing3d 2.4s ease-out infinite;
+}
+.wa-float::after{
+  content:"";position:absolute;top:8%;left:14%;width:44%;height:30%;border-radius:50%;
+  background:radial-gradient(ellipse at center, rgba(255,255,255,.55), transparent 70%);
+  pointer-events:none;
+}
+.wa-float svg{position:relative;z-index:1;filter:drop-shadow(0 3px 4px rgba(0,0,0,.5)) !important;width:34px !important;height:34px !important}
+.wa-float:hover{transform:scale(1.12) !important}
+@keyframes waFloat3d{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+@keyframes waRing3d{0%{transform:scale(.82);opacity:.9}100%{transform:scale(1.4);opacity:0}}
+@media (prefers-reduced-motion:reduce){.wa-float,.wa-float::before{animation:none !important}}
+
+
+/* ===== ELITE QUOTE FORM (q-) ===== */
+.qelite,.qelite *{box-sizing:border-box}
+.qelite{max-width:760px;margin:0 auto;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.12);border-radius:22px;padding:34px 30px;backdrop-filter:blur(6px)}
+.qelite-kicker{display:inline-block;font-size:.75rem;font-weight:800;letter-spacing:.22em;text-transform:uppercase;color:#7DD3FC;margin-bottom:10px}
+.qelite-title{font-size:clamp(1.5rem,3.4vw,2.1rem);font-weight:800;margin:0 0 8px;line-height:1.15}
+.qelite-sub{opacity:.75;margin:0 0 26px;font-size:.98rem}
+.qelite-step{margin-bottom:24px}
+.qelite-step-head{display:flex;align-items:center;gap:12px;margin-bottom:14px}
+.qelite-num{width:30px;height:30px;border-radius:50%;background:#7DD3FC;color:#071c40;font-weight:800;font-size:.85rem;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 12px #7DD3FC55;flex:none}
+.qelite-step-head h3{margin:0;font-size:1.02rem;font-weight:700}
+.qelite-grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:560px){.qelite-grid2{grid-template-columns:1fr}.qelite{padding:26px 18px}}
+.qelite-field{display:flex;flex-direction:column;gap:7px}
+.qelite-field>span{font-size:.82rem;font-weight:600;opacity:.8}
+.qelite-field input,.qelite-field textarea{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.16);border-radius:12px;padding:13px 15px;font-size:1rem;color:inherit;width:100%;font-family:inherit;transition:border-color .2s,box-shadow .2s}
+.qelite-field input:focus,.qelite-field textarea:focus{outline:none;border-color:#7DD3FC;box-shadow:0 0 0 3px #7DD3FC33}
+.qelite-chips{display:flex;flex-wrap:wrap;gap:10px}
+.qelite-chip input{position:absolute;opacity:0;pointer-events:none}
+.qelite-chip-box{display:flex;align-items:center;gap:9px;padding:11px 16px;border-radius:999px;border:1.5px solid rgba(255,255,255,.18);background:rgba(255,255,255,.05);cursor:pointer;font-size:.9rem;font-weight:600;transition:all .22s ease}
+.qelite-chip-box svg{width:18px;height:18px;color:#7DD3FC;flex:none;transition:color .22s}
+.qelite-chip input:checked+.qelite-chip-box{background:#7DD3FC;border-color:#7DD3FC;color:#071c40;box-shadow:0 6px 18px #7DD3FC66;transform:translateY(-1px)}
+.qelite-chip input:checked+.qelite-chip-box svg{color:#071c40}
+.qelite-chip-box:hover{border-color:#7DD3FC;transform:translateY(-1px)}
+.qelite-submit{width:100%;display:flex;align-items:center;justify-content:center;gap:12px;background:linear-gradient(135deg,#2fe07a,#1da851);color:#fff;border:none;border-radius:16px;padding:17px;font-size:1.08rem;font-weight:800;cursor:pointer;box-shadow:0 10px 28px rgba(37,211,102,.4),inset 0 1px 0 rgba(255,255,255,.35);transition:transform .2s,box-shadow .2s;margin-top:6px}
+.qelite-submit:hover{transform:translateY(-2px);box-shadow:0 14px 34px rgba(37,211,102,.5),inset 0 1px 0 rgba(255,255,255,.35)}
+.qelite-submit svg{width:26px;height:26px;filter:drop-shadow(0 2px 3px rgba(0,0,0,.3))}
+.qelite-note{text-align:center;font-size:.82rem;opacity:.6;margin:12px 0 0}
+.qelite-err{display:none;background:#ff5252;color:#fff;border-radius:10px;padding:10px 14px;font-size:.88rem;margin-bottom:14px;font-weight:600}
+
+
+/* ===== WA FLOAT 3D ===== */
+.wa-float{background:radial-gradient(circle at 30% 25%,#5cf08a 0%,#25d366 45%,#0f8a44 100%)!important;box-shadow:0 12px 30px rgba(15,138,68,.55),inset 0 2px 5px rgba(255,255,255,.4),inset 0 -4px 8px rgba(0,0,0,.28)!important;border:1px solid rgba(255,255,255,.25)}
+.wa-float svg{filter:drop-shadow(0 2px 4px rgba(0,0,0,.4))!important}
+.wa-float::after{content:"";position:absolute;inset:-5px;border-radius:50%;border:2px solid rgba(37,211,102,.55);animation:waPulse3d 2.2s ease-out infinite;pointer-events:none}
+@keyframes waPulse3d{0%{transform:scale(.85);opacity:.9}70%{transform:scale(1.25);opacity:0}100%{transform:scale(1.25);opacity:0}}
+
+.hero-logo svg{width:100%;height:auto;display:block}
+.contact-social{margin-top:14px;display:flex;align-items:center;gap:10px;justify-content:center}
+.soc-link{display:inline-flex;align-items:center;gap:6px;font-weight:700;color:#7DD3FC;text-decoration:none}
+.soc-link svg{width:20px;height:20px}

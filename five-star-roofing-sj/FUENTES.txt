@@ -40,3 +40,11 @@ MEJORA APLICADA (2026-10-15, batch 2 grupo C, mejora ligera):
   <servicio>. Tipo de propiedad: <tipo>. <mensaje>".
 - Menú flotante: overlay (overlay-nav) por encima del botón en z-index
   (overlay z-95, botón z-85), con botón propio de cerrar "×"; botón compacto.
+
+RONDA 2 (2026-10-15) — mejora elite:
+
+- Logo real: no se encontró logo público del negocio (reportado honesto).
+- Email público: fivestarroofing@gmail.com
+- Notas: Teléfono 787-942-9627 verificado vía ElDirectorio (Bo. Caimito Alto, Carr. 842 Km. 4.5, San Juan). Email fivestarroofing@gmail.com publicado en el directorio. Sin sitio web propio localizado. No se encontró página de Facebook, Instagram, YouTube ni TikTok verificable del negocio. TikTok @fivestarzco
+- Formulario reconstruido con estructura elite (3 pasos + chips de servicios) → WhatsApp del negocio.
+- Botón flotante de WhatsApp convertido a 3D.

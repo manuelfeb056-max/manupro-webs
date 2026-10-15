@@ -40,3 +40,11 @@ MEJORAS 2026-10-15 (mejora ligera, sin rediseño):
 BRECHAS HONESTAS: sin logo real, sin fotos reales verificadas, sin redes
 sociales verificables del negocio (regla 2026-10-12). Los datos de contacto
 y servicios están verificados por clasificado + ficha Meta.
+
+RONDA 2 (2026-10-15) — mejora elite:
+
+- Logo real: no se encontró logo público del negocio (reportado honesto).
+- Redes/email: sin redes verificables encontradas.
+- Notas: Teléfono 787-469-0017 verificado vía Meta Places (place_id 9247623378594300, San Rafael Calle 3 D34, Caguas). Galería de Places vacía; su web antigua (ggservicespr.googlepages.com) ya no existe. No se encontró página de Facebook, Instagram, YouTube ni TikTok verificable (la única coincidencia '@ggse
+- Formulario reconstruido con estructura elite (3 pasos + chips de servicios) → WhatsApp del negocio.
+- Botón flotante de WhatsApp convertido a 3D.

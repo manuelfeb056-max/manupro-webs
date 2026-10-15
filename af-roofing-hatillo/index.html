@@ -76,29 +76,43 @@
 <!-- COTIZADOR -->
 <section class="quote" id="cotizar">
   <div class="wrap">
-    <p class="q-kicker">Cotización inmediata</p>
+    <p class="q-kicker">Cotización gratis</p>
     <h2 class="q-title">Cotiza tu proyecto <span>hoy mismo</span></h2>
     <p class="q-sub">Completa el formulario y te abrimos WhatsApp con tu solicitud lista para enviar.</p>
     <form id="quoteForm" class="q-form" novalidate>
-      <div class="q-grid">
-        <label>Tu nombre<input type="text" id="qNombre" placeholder="Nombre y apellido" autocomplete="name" required></label>
-        <label>Tu teléfono<input type="tel" id="qTel" placeholder="787-000-0000" autocomplete="tel" required></label>
+<div class="qe-step">
+      <div class="qe-head"><span class="qe-badge">1</span><h3>Tus datos</h3></div>
+      <div class="qe-row2">
+        <label>Nombre completo<input type="text" id="qNombre" placeholder="Tu nombre" autocomplete="name" required></label>
+        <label>Teléfono<input type="tel" id="qTel" placeholder="787-000-0000" autocomplete="tel" required></label>
       </div>
-      <label>¿Qué servicio necesitas?
-        <select id="qServicio" required>
-          <option value="" disabled selected>Selecciona un servicio</option>
-          <option>Sellado de techos</option>
-          <option>Impermeabilización</option>
-          <option>Reparación de filtraciones</option>
-          <option>Mantenimiento preventivo</option>
-          <option>Sellado de juntas</option>
-          <option>Estimados gratis</option>
-          <option>Otro</option>
-        </select>
-      </label>
-      <label>Detalles<textarea id="qMsg" rows="3" placeholder="Cuéntanos sobre tu techo..."></textarea></label>
-      <button type="submit" class="q-submit">Enviar por WhatsApp</button>
-      <p class="q-note">Al enviar se abre WhatsApp con tu mensaje listo. Sin compromiso.</p>
+    </div>
+    <div class="qe-step">
+      <div class="qe-head"><span class="qe-badge">2</span><h3>Elige tu servicio</h3></div>
+      <div class="qe-chips">
+        <input class="qe-radio" type="radio" name="qServicio" id="qS0" value="Sellado de techos">
+        <label class="qe-chip" for="qS0"><svg viewBox="0 0 24 24"><path d="M12 3 2.5 12h5V21h9v-9h5L12 3z"/></svg><span>Sellado de techos</span></label>
+        <input class="qe-radio" type="radio" name="qServicio" id="qS1" value="Impermeabilización">
+        <label class="qe-chip" for="qS1"><svg viewBox="0 0 24 24"><path d="M12 2l8 3v6c0 5-3.5 8.8-8 11-4.5-2.2-8-6-8-11V5l8-3z"/></svg><span>Impermeabilización</span></label>
+        <input class="qe-radio" type="radio" name="qServicio" id="qS2" value="Reparación de filtraciones">
+        <label class="qe-chip" for="qS2"><svg viewBox="0 0 24 24"><path d="M12 3s6 6.5 6 11a6 6 0 0 1-12 0c0-4.5 6-11 6-11z"/></svg><span>Reparación de filtraciones</span></label>
+        <input class="qe-radio" type="radio" name="qServicio" id="qS3" value="Mantenimiento preventivo">
+        <label class="qe-chip" for="qS3"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm-1.2 14.6-4-4 1.4-1.4 2.6 2.6 6.6-6.6 1.4 1.4-8 8z"/></svg><span>Mantenimiento preventivo</span></label>
+        <input class="qe-radio" type="radio" name="qServicio" id="qS4" value="Sellado de juntas">
+        <label class="qe-chip" for="qS4"><svg viewBox="0 0 24 24"><path d="M12 2 2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg><span>Sellado de juntas</span></label>
+        <input class="qe-radio" type="radio" name="qServicio" id="qS5" value="Estimados gratis">
+        <label class="qe-chip" for="qS5"><svg viewBox="0 0 24 24"><path d="M12.6 2.6 21.4 11.4a2 2 0 0 1 0 2.8l-7.2 7.2a2 2 0 0 1-2.8 0L2.6 12.6A2 2 0 0 1 2 11.2V4a2 2 0 0 1 2-2h7.2c.5 0 1 .2 1.4.6zM7.5 7.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"/></svg><span>Estimados gratis</span></label>
+        <input class="qe-radio" type="radio" name="qServicio" id="qS6" value="Otro">
+        <label class="qe-chip" for="qS6"><svg viewBox="0 0 24 24"><path d="M4 3h16a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H8l-5 4V4a1 1 0 0 1 1-1z"/></svg><span>Otro</span></label>
+      </div>
+    </div>
+    <div class="qe-step">
+      <div class="qe-head"><span class="qe-badge">3</span><h3>Detalles</h3></div>
+      <label>Pueblo <span class="qe-opt">(opcional)</span><input type="text" id="qPueblo" placeholder="¿En qué pueblo está el techo?" autocomplete="address-level2"></label>
+      <label>Cuéntanos más<textarea id="qMsg" rows="3" placeholder="Detalles del trabajo que necesitas..."></textarea></label>
+    </div>
+    <button type="submit" class="qe-submit"><svg viewBox="0 0 32 32"><path d="M16 3C9.4 3 4 8.4 4 15c0 2.4.7 4.6 2 6.5L4 29l7.7-2c1.8 1 3.9 1.5 6 1.5h.3c6.6 0 12-5.4 12-12S22.6 3 16 3zm0 22.4c-1.9 0-3.8-.5-5.4-1.5l-.4-.2-4.6 1.2 1.2-4.5-.3-.4c-1-1.6-1.6-3.5-1.6-5.5C5 9.6 9.6 5 16 5s11 4.6 11 10.5-4.6 9.9-11 9.9zm6-7.4c-.3-.2-2-1-2.3-1.1-.3-.1-.5-.2-.8.2-.2.3-.9 1.1-1.1 1.3-.2.2-.4.3-.8.1-.3-.2-1.4-.5-2.7-1.7-1-.9-1.7-2-1.9-2.3-.2-.3 0-.5.2-.7l.5-.6c.2-.2.2-.4.3-.6.1-.2 0-.4 0-.6-.1-.2-.8-1.9-1.1-2.6-.3-.7-.6-.6-.8-.6h-.7c-.2 0-.6.2-.9.5-.3.3-1.2 1.2-1.2 2.9s1.2 3.4 1.4 3.6c.2.2 2.4 3.7 5.8 5.2.8.4 1.5.6 2 .7.8.3 1.6.2 2.2.1.7-.1 2-1 2.3-2 .3-.9.3-1.7.2-1.9-.1-.1-.3-.2-.7-.4z"/></svg>Enviar por WhatsApp</button>
+    <p class="qe-note">Al enviar se abre WhatsApp con tu mensaje listo. Sin compromiso.</p>
     </form>
   </div>
 </section>
@@ -108,21 +122,15 @@
 <h2>Tu negocio también merece verse así</h2>
 <p class="p-sub">Esta página es una muestra de lo que hacemos. Llevamos tu negocio a internet con oferta de lanzamiento por tiempo limitado.</p></div>
 <div class="p-grid">
-<div class="p-card reveal"><h3>Solo Web</h3><div class="p-price">$99</div><div class="p-reg">Regular $300</div>
+
+<div class="p-card reveal"><h3>Web + Arranque</h3><div class="p-price">$199</div><div class="p-reg">Regular $499</div>
 <ul class="p-list">
 <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 7"/></svg> Website profesional como esta</li>
-<li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 7"/></svg> Lista en días, no semanas</li>
-<li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 7"/></svg> Textos y fotos de tu negocio</li>
-<li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 7"/></svg> Botón de WhatsApp integrado</li></ul>
-<a class="btn btn-ghost" href="https://wa.me/17873128042" target="_blank" rel="noopener">La quiero</a></div>
-<div class="p-card reveal"><h3>Web + Arranque</h3><div class="p-price">$150</div><div class="p-reg">Regular $600</div>
-<ul class="p-list">
-<li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 7"/></svg> Todo lo del plan Solo Web</li>
 <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 7"/></svg> Hosting por 2 meses</li>
 <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 7"/></svg> Dominio .com por 1 año</li>
 <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 7"/></svg> Correo profesional</li></ul>
 <a class="btn btn-ghost" href="https://wa.me/17873128042" target="_blank" rel="noopener">La quiero</a></div>
-<div class="p-card hot reveal"><div class="p-flag">La más elegida</div><h3>Tranquilidad Total</h3><div class="p-price">$200</div><div class="p-reg">Regular $1,000</div>
+<div class="p-card hot reveal"><div class="p-flag">La más elegida</div><h3>Tranquilidad Total</h3><div class="p-price">$299</div><div class="p-reg">Regular $799</div>
 <ul class="p-list">
 <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 7"/></svg> Todo lo del plan Web + Arranque</li>
 <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 7"/></svg> Hosting por 1 AÑO</li>

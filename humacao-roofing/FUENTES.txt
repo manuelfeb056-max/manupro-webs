@@ -39,3 +39,11 @@ MEJORAS 2026-10-15 (mejora ligera, sin rediseño):
 BRECHAS HONESTAS: sin logo real, sin fotos reales verificadas. Teléfono y
 dirección verificados por ficha Meta; Facebook encontrado por coincidencia
 de nombre (verificación de teléfono pendiente de login).
+
+RONDA 2 (2026-10-15) — mejora elite:
+
+- Logo real: no se encontró logo público del negocio (reportado honesto).
+- Red verificada: Facebook: https://www.facebook.com/HumacaoRoofing/
+- Notas: Teléfono 787-850-4280 verificado vía Meta Places (place_id 414088050562039, 15 Sector Cuesta Los Jobos, Humacao; categoría Roofing Service). Facebook verificado: 'Humacao Roofing' con 10.6K seguidores; la ficha del lugar confirma teléfono y pueblo. Su foto de perfil es una foto personal (dos persona
+- Formulario reconstruido con estructura elite (3 pasos + chips de servicios) → WhatsApp del negocio.
+- Botón flotante de WhatsApp convertido a 3D.

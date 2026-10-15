@@ -73,22 +73,57 @@
     <span class="kicker">Cotización gratis</span>
     <h2>Cotiza tu techo por WhatsApp</h2>
     <p class="qf-sub">Elige el servicio, cuéntanos tu caso y te abrimos WhatsApp con tu mensaje listo para Rafael Roofing Inc..</p>
-    <form id="qform" data-biz="Rafael Roofing Inc." data-wa="17878328969">
-      <div class="qf-grid">
-        <label>Nombre<input id="qNombre" type="text" placeholder="Tu nombre" required></label>
-        <label>Teléfono<input id="qTel" type="tel" placeholder="787-000-0000" required></label>
-        <label class="full">Servicio que necesitas<select id="qServicio">
-            <option>Sellado de techo</option>
-            <option>Impermeabilización</option>
-            <option>Reparación de filtraciones</option>
-            <option>Limpieza de techo</option>
-          
-            <option>Membrana asfáltica</option></select></label>
-        <label class="full">Mensaje<textarea id="qMsg" rows="3" placeholder="Ej: el techo filtra cuando llueve fuerte..."></textarea></label>
-        <button class="qf-submit" type="submit"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.6-6.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.3-.6.8-.8 1-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4 0-.5.1-.7l.4-.5c.1-.2.1-.3 0-.5L9.4 8c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.2-.7.5-.2.3-.9.9-.9 2.2s.9 2.5 1.1 2.7c.1.2 1.8 2.8 4.4 3.9 1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2 0-.1-.2-.1-.4-.2z"/></svg>Enviar cotización por WhatsApp</button>
-        <p class="qf-note">Sin compromiso · Respondemos rápido</p>
-      </div>
-    </form>
+    <form class="ef-form" novalidate data-biz="Rafael Roofing Inc." data-wa="17878328969">
+  <div class="ef-step">
+    <div class="ef-stephead"><span class="ef-num">1</span><span class="ef-steptitle">Tus datos</span></div>
+    <div class="ef-row2">
+      <label class="ef-field"><span>Nombre</span><input type="text" name="ef-nombre" placeholder="Tu nombre" autocomplete="name"></label>
+      <label class="ef-field"><span>Teléfono</span><input type="tel" name="ef-tel" placeholder="787-000-0000" autocomplete="tel"></label>
+    </div>
+  </div>
+  <div class="ef-step">
+    <div class="ef-stephead"><span class="ef-num">2</span><span class="ef-steptitle">Elige tu servicio</span></div>
+    <div class="ef-chips">
+      <label class="ef-chip"><input type="radio" name="ef-servicio" value="Sellado de techo" checked><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l8 4v6c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6z" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 8s3 3.2 3 5.5a3 3 0 0 1-6 0C9 11.2 12 8 12 8z" fill="currentColor"/></svg><span>Sellado de techo</span></label>
+      <label class="ef-chip"><input type="radio" name="ef-servicio" value="Impermeabilización"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l8 4v6c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6z" fill="none" stroke="currentColor" stroke-width="2"/><path d="M8.5 12l2.5 2.5 4.5-4.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg><span>Impermeabilización</span></label>
+      <label class="ef-chip"><input type="radio" name="ef-servicio" value="Reparación de filtraciones"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2s6 6.5 6 11a6 6 0 0 1-12 0c0-4.5 6-11 6-11zm0 5.2C10.6 9.9 9 11.9 9 14a3 3 0 0 0 6 0c0-2.1-1.6-4.1-3-5.8z" fill="currentColor"/></svg><span>Reparación de filtraciones</span></label>
+      <label class="ef-chip"><input type="radio" name="ef-servicio" value="Limpieza de techo"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l1.8 4.6L18 9l-4.2 1.4L12 15l-1.8-4.6L6 9l4.2-1.4z" fill="currentColor"/><path d="M19 14l.9 2.1L22 17l-2.1.9L19 20l-.9-2.1L16 17l2.1-.9z" fill="currentColor"/><path d="M5 15l.7 1.8L7.5 17.5l-1.8.7L5 20l-.7-1.8L2.5 17.5l1.8-.7z" fill="currentColor"/></svg><span>Limpieza de techo</span></label>
+      <label class="ef-chip"><input type="radio" name="ef-servicio" value="Membrana asfáltica"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l9 5-9 5-9-5z" fill="none" stroke="currentColor" stroke-width="2"/><path d="M3 13l9 5 9-5" fill="none" stroke="currentColor" stroke-width="2"/></svg><span>Membrana asfáltica</span></label>
+    </div>
+  </div>
+  <div class="ef-step">
+    <div class="ef-stephead"><span class="ef-num">3</span><span class="ef-steptitle">Detalles</span></div>
+    <label class="ef-field"><span>Pueblo <em>(opcional)</em></span><input type="text" name="ef-pueblo" placeholder="¿Dónde es el trabajo?"></label>
+    <label class="ef-field"><span>Cuéntanos tu caso</span><textarea name="ef-msg" rows="3" placeholder="Ej: el techo filtra cuando llueve fuerte..."></textarea></label>
+  </div>
+  <p class="ef-error" hidden>Escribe tu nombre y un teléfono válido para continuar.</p>
+  <button class="ef-submit" type="submit"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.6-6.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.3-.6.8-.8 1-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4 0-.5.1-.7l.4-.5c.1-.2.1-.3 0-.5L9.4 8c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.2-.7.5-.2.3-.9.9-.9 2.2s.9 2.5 1.1 2.7c.1.2 1.8 2.8 4.4 3.9 1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2 0-.1-.2-.1-.4-.2z"/></svg><span>Cotizar por WhatsApp</span></button>
+  <p class="ef-note">Sin compromiso · Respuesta rápida por WhatsApp</p>
+</form>
+
+<script>
+(function(){
+  var f=document.currentScript.previousElementSibling;
+  if(!f||!f.classList||!f.classList.contains('ef-form'))return;
+  var wa=f.getAttribute('data-wa'),biz=f.getAttribute('data-biz')||'';
+  f.addEventListener('submit',function(e){
+    e.preventDefault();
+    var nombre=f.querySelector('[name="ef-nombre"]').value.trim();
+    var tel=f.querySelector('[name="ef-tel"]').value.trim();
+    var err=f.querySelector('.ef-error');
+    var digits=tel.replace(/\D/g,'');
+    if(!nombre||digits.length<7){err.hidden=false;return;}
+    err.hidden=true;
+    var sel=f.querySelector('[name="ef-servicio"]:checked');
+    var servicio=sel?sel.value:'';
+    var pueblo=f.querySelector('[name="ef-pueblo"]').value.trim();
+    var msg=f.querySelector('[name="ef-msg"]').value.trim();
+    var text='Hola '+biz+', soy '+nombre+'. Mi teléfono es '+tel+'. Necesito: '+servicio+'.'
+      +(pueblo?' Pueblo: '+pueblo+'.':'')+(msg?' Detalles: '+msg:'');
+    window.open('https://wa.me/'+wa+'?text='+encodeURIComponent(text),'_blank','noopener');
+  });
+})();
+</script>
   </div>
 </div></section>
 
@@ -96,7 +131,7 @@
   <p class="sec-kicker reveal" style="text-align:center">Tu website profesional</p>
   <h2 class="sec-title reveal" style="text-align:center">Planes para tu negocio</h2>
   <p class="sec-sub reveal" style="text-align:center;margin-left:auto;margin-right:auto">Hecha a la medida, lista para recibir clientes por WhatsApp.</p>
-  <div class="plan-grid"><div class="plan"><h3>Solo Web</h3><div class="reg">Regular $300</div><div class="price">$99</div><ul><li>Website profesional de 1 página</li><li>Diseño a la medida de tu negocio</li><li>Botón de WhatsApp y llamada</li><li>Formulario de cotización</li></ul><p style="font-size:.85rem;color:inherit;opacity:.8;margin-bottom:20px">Solo la website, sin hosting, sin dominio, sin nada.</p><a class="pbtn" href="https://wa.me/17873128042?text=Hola%20Manupro%2C%20quiero%20el%20plan%20Solo%20Web%20para%20mi%20website." target="_blank" rel="noopener" data-track="plan_solo_web">Elegir este plan</a></div><div class="plan"><h3>Web + Arranque</h3><div class="reg">Regular $600</div><div class="price">$150</div><ul><li>Todo lo del plan Solo Web</li><li>Hosting por 2 meses</li><li>Dominio .com por 1 año</li><li>Publicación y configuración inicial</li></ul><p style="font-size:.85rem;color:inherit;opacity:.8;margin-bottom:20px">Ideal para arrancar con presencia profesional.</p><a class="pbtn" href="https://wa.me/17873128042?text=Hola%20Manupro%2C%20quiero%20el%20plan%20Web%20%2B%20Arranque%20para%20mi%20website." target="_blank" rel="noopener" data-track="plan_web_+_arranque">Elegir este plan</a></div><div class="plan hot"><span class="badge">La más elegida</span><h3>Tranquilidad Total</h3><div class="reg">Regular $1,000</div><div class="price">$200</div><ul><li>Todo lo del plan Web + Arranque</li><li>Hosting por 1 año completo</li><li>Mantenimiento por 1 año</li><li>Dominio .com por 1 año</li><li>Soporte prioritario</li></ul><p style="font-size:.85rem;color:inherit;opacity:.8;margin-bottom:20px">Tranquilidad por un año: nosotros nos encargamos de todo.</p><a class="pbtn" href="https://wa.me/17873128042?text=Hola%20Manupro%2C%20quiero%20el%20plan%20Tranquilidad%20Total%20para%20mi%20website." target="_blank" rel="noopener" data-track="plan_tranquilidad_total">Elegir este plan</a></div></div>
+  <div class="plan-grid"><div class="plan"><h3>Web + Arranque</h3><div class="reg">Regular $499</div><div class="price">$199</div><ul><li>Website profesional como esta</li><li>Hosting por 2 meses</li><li>Dominio .com por 1 año</li><li>Publicación y configuración inicial</li></ul><p style="font-size:.85rem;color:inherit;opacity:.8;margin-bottom:20px">Ideal para arrancar con presencia profesional.</p><a class="pbtn" href="https://wa.me/17873128042?text=Hola%20Manupro%2C%20quiero%20el%20plan%20Web%20%2B%20Arranque%20para%20mi%20website." target="_blank" rel="noopener" data-track="plan_web_+_arranque">Elegir este plan</a></div><div class="plan hot"><span class="badge">La más elegida</span><h3>Tranquilidad Total</h3><div class="reg">Regular $799</div><div class="price">$299</div><ul><li>Todo lo del plan Web + Arranque</li><li>Hosting por 1 año completo</li><li>Mantenimiento por 1 año</li><li>Dominio .com por 1 año</li><li>Soporte prioritario</li></ul><p style="font-size:.85rem;color:inherit;opacity:.8;margin-bottom:20px">Tranquilidad por un año: nosotros nos encargamos de todo.</p><a class="pbtn" href="https://wa.me/17873128042?text=Hola%20Manupro%2C%20quiero%20el%20plan%20Tranquilidad%20Total%20para%20mi%20website." target="_blank" rel="noopener" data-track="plan_tranquilidad_total">Elegir este plan</a></div></div>
   <p class="plan-note">Precios de oferta por tiempo limitado. Escríbenos y la ponemos en marcha.</p>
 </div></section>
 <section class="cta-final"><div class="wrap">
@@ -106,6 +141,7 @@
 </div></section>
 <footer><div class="wrap fgrid">
   <div><strong style="color:#fff">Rafael Roofing Inc.</strong><br>Puerto Rico &middot; Servicio a toda la isla<br><a href="tel:+17878328969">787-832-8969</a></div>
+  <div>Síguenos:<br><a href="https://www.facebook.com/Rafael-Roofing-107763680881721" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:6px"><svg viewBox="0 0 24 24" width="18" height="18" style="vertical-align:-3px" aria-hidden="true"><path d="M13.5 21v-7h2.4l.4-3h-2.8V9.1c0-.9.3-1.5 1.6-1.5h1.3V4.9c-.2 0-1-.1-1.9-.1-1.9 0-3.2 1.2-3.2 3.3V11H8v3h2.3v7h3.2z"/></svg> Facebook</a><br><a href="https://www.instagram.com/rafaelroofinginc/" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:6px"><svg viewBox="0 0 24 24" width="18" height="18" style="vertical-align:-3px" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.2" cy="6.8" r="1.4"/></svg> Instagram</a></div>
   <div>Sitio demo creado por <a href="https://wa.me/17873128042" target="_blank" rel="noopener">Manupro</a></div>
 </div></footer>
 <a class="wa-float" href="https://wa.me/17878328969?text=Hola%20Rafael%20Roofing%20Inc.%2C%20quiero%20un%20estimado%20gratis%20de%20sellado%20de%20techo." target="_blank" rel="noopener" aria-label="WhatsApp" data-track="wa_float"><svg viewBox="0 0 32 32"><path d="M16 3C9.4 3 4 8.4 4 15c0 2.4.7 4.6 2 6.5L4 29l7.7-1.9c1.8 1 3.9 1.5 4.3 1.5 6.6 0 12-5.4 12-12S22.6 3 16 3zm0 22.5c-1.3 0-2.6-.3-3.7-1l-.3-.2-4.5 1.1 1.2-4.4-.2-.3c-.8-1.2-1.2-2.6-1.2-4.1 0-4.9 4-8.9 8.9-8.9s8.9 4 8.9 8.9-4 8.9-9.1 8.9zm5-6.7c-.3-.1-1.6-.8-1.9-.9-.3-.1-.5-.1-.7.1-.2.3-.8.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.4-2.2-1.4-.8-.7-1.4-1.6-1.5-1.9-.2-.3 0-.4.1-.6l.4-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.1c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.2s.9 2.5 1.1 2.7c.1.2 1.9 2.9 4.5 4 .6.3 1.1.4 1.5.6.6.2 1.2.2 1.6.1.5-.1 1.6-.6 1.8-1.3.2-.6.2-1.2.2-1.3-.1-.1-.3-.2-.6-.3z"/></svg></a>

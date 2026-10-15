@@ -35,3 +35,15 @@ Datos del negocio (verificados):
   filtraciones, impermeabilización, inspección y estimado
   (servicios estándar de su categoría verificada; no se inventaron
   especialidades no verificadas).
+
+RONDA 2 (2026-10-15) — Mejora ELITE:
+- Precios: plan Solo Web ($99) ELIMINADO. Quedan 2 planes: "Web + Arranque" oferta
+  $199 (regular $499 tachado) y "Tranquilidad Total" DESTACADO con badge
+  "La más elegida", oferta $299 (regular $799 tachado). Items expandidos, sin
+  referencias al plan eliminado. Botones → https://wa.me/17873128042 (Manupro)
+  con texto pre-llenado del plan.
+- Formulario: reconstruido por worker paralelo con diseño qelite (3 pasos,
+  chips radio con ícono, pueblo opcional, validación, botón WhatsApp con ícono).
+- NOTA: durante la ronda 2 se detectó otro worker editando los mismos 5 sitios
+  en paralelo (forms qelite 12:58-13:01 UTC). Los edits de planes de esta ronda
+  son quirúrgicos sobre la sección #planes y preservan el trabajo de forms.

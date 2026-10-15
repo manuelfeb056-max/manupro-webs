@@ -1,0 +1,19 @@
+FUENTES DE MATERIAL REAL — Platinum Roofing (platinum-roofing-ponce)
+Investigado: 2026-10-15
+
+DATOS VERIFICADOS
+- Nombre: Platinum roofing — 1852 Las Américas Ave, Ponce, PR 00728
+- Teléfono: 787-975-1883 — VERIFICADO vía Meta places (place_id 570509119307387,
+  phone +17879751883, categoría Roofing Service, estado activo).
+
+LOGO REAL: NO ENCONTRADO. Sin website oficial ni redes sociales verificables; el
+perfil de Google Business no tiene fotos públicas (gallery vacía). No se inventó ninguno.
+
+REDES SOCIALES: NO AGREGADAS — ninguna red verificable hallada.
+
+RESULTADO: SIN MATERIAL VERIFICABLE (logo/redes). Sitio sin cambios.
+
+REVISIÓN 2026-10-15 (segunda pasada): se volvió a consultar el place (place_id 570509119307387)
+con --num-gallery-media 10: galería vacía, sin fotos del negocio. Re-búsqueda de
+Facebook/Instagram/YouTube/TikTok con el teléfono 787-975-1883: sin resultados verificables.
+Se confirma: sin cambios al sitio.

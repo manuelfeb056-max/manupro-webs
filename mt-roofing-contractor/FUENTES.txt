@@ -1,0 +1,30 @@
+FUENTES DE MATERIAL REAL — Contractor M&T Roofing (mt-roofing-contractor)
+Investigado: 2026-10-15
+
+DATOS VERIFICADOS
+- Nombre: Contractor M&T Roofing
+- Teléfono: 939-265-9195 — VERIFICADO vía vivelopr.com (deal activo "Contractor M&T Roofing -
+  Sellado de techo Danosa, Elastomérico o Silicón..."), que lista (939) 265-9195 y
+  (939) 266-0994 como teléfonos del comercio:
+  https://vivelopr.com/pr/deals/contractor_m_t_roofing_25062101
+- El deal menciona "Website, Facebook, Instagram" del comercio. REVISIÓN 2026-10-15 (segunda
+  pasada): se extrajeron las URLs exactas del HTML de VíveloPR (hrefs de la sección
+  "Cómo llegar" — links puestos por el propio comercio):
+  - Website: http://yolinetterentas.wixsite.com/mtroofingservices (verificado en vivo, 15 oct 2026)
+  - Facebook: https://www.facebook.com/MT-Roofing-Services-100315095791846 ("MT Roofing Services")
+  - Instagram: https://www.instagram.com/mtroofingservicespr/
+  NOTA: el header del sitio Wix muestra 939-223-4744 — número distinto, probablemente viejo
+  o secundario. El teléfono verificado en VíveloPR es 939-265-9195.
+
+LOGO REAL: NO ENCONTRADO. No hay website oficial accesible con logo descargable ni
+Google Business con fotos públicas. No se inventó ninguno (el sitio conserva su marca
+SVG original temporal).
+
+REDES SOCIALES: AGREGADAS (revisión 2026-10-15)
+- Facebook: https://www.facebook.com/MT-Roofing-Services-100315095791846
+- Instagram: https://www.instagram.com/mtroofingservicespr/
+- Agregadas en el footer con etiqueta de texto clara ("Facebook", "Instagram") + ícono
+  SVG original cada una, target="_blank" rel="noopener". Regla: solo URLs exactas del
+  propio comercio; nada inventado.
+
+RESULTADO: redes verificadas agregadas; logo sin material público verificable.

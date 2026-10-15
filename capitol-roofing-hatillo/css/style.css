@@ -124,9 +124,13 @@ a{color:inherit;text-decoration:none}
 .sidepanel .sp-cta{margin-top:24px;font-size:1rem}
 .scrim2{position:fixed;inset:0;background:rgba(0,0,0,.55);z-index:98;opacity:0;pointer-events:none;transition:opacity .3s}
 .scrim2.on{opacity:1;pointer-events:auto}
-.wa-float{position:fixed;bottom:22px;right:22px;z-index:100;width:64px;height:64px;border-radius:50%;background:var(--wa);display:flex;align-items:center;justify-content:center;box-shadow:0 12px 34px rgba(37,211,102,.45);transition:transform .25s;animation:floaty 3s ease-in-out infinite}
-.wa-float:hover{transform:scale(1.1)}
-.wa-float .ic{width:32px;height:32px;fill:#fff}
+.wa-float{position:fixed;bottom:22px;right:22px;width:62px;height:62px;border-radius:50%;z-index:999;display:flex;align-items:center;justify-content:center;background:radial-gradient(circle at 30% 25%,#5cf08a 0%,#25d366 35%,#1da851 70%,#128c4b 100%);box-shadow:0 10px 24px rgba(18,140,75,.45),0 2px 6px rgba(0,0,0,.35),inset 0 2px 4px rgba(255,255,255,.35),inset 0 -3px 6px rgba(0,0,0,.25);animation:waFloat 3s ease-in-out infinite}
+.wa-float svg,.wa-float::before{content:"";position:absolute;inset:-4px;border-radius:50%;border:2px solid rgba(37,211,102,.6);animation:waPulseR 2s ease-out infinite}
+@keyframes waFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+@keyframes waPulseR{0%{transform:scale(.9);opacity:1}100%{transform:scale(1.25);opacity:0}}
+.wa-float svg,.wa-float::before{content:"";position:absolute;inset:-4px;border-radius:50%;border:2px solid rgba(37,211,102,.6);animation:waPulseR 2s ease-out infinite}
+@keyframes waFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+@keyframes waPulseR{0%{transform:scale(.9);opacity:1}100%{transform:scale(1.25);opacity:0}}
 @keyframes floaty{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
 .reveal{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s ease}
 .reveal.visible{opacity:1;transform:none}
@@ -183,3 +187,25 @@ a{color:inherit;text-decoration:none}
 /* ===== hover premium en imágenes de galería (mejora ligera) ===== */
 .gal-grid figure img,.galeria figure img,.gallery figure img,.mosaic figure img{transition:transform .5s cubic-bezier(.2,.7,.2,1)}
 .gal-grid figure:hover img,.galeria figure:hover img,.gallery figure:hover img,.mosaic figure:hover img{transform:scale(1.045)}
+
+/* ===== ELITE: form por pasos + chips ===== */
+.cf-step{background:rgba(255,255,255,.045);border:1px solid rgba(255,255,255,.12);border-radius:14px;padding:20px;margin-bottom:18px}
+.cf-stephead{display:flex;align-items:center;gap:12px;margin-bottom:16px}
+.cf-badge{width:34px;height:34px;flex:0 0 34px;border-radius:50%;background:var(--accent);color:#fff;font-weight:800;display:flex;align-items:center;justify-content:center;font-size:1rem;box-shadow:0 4px 14px rgba(0,0,0,.25)}
+.cf-steptitle{font-size:1.05rem;font-weight:800;margin:0}
+.cf-opt{font-style:normal;font-weight:500;opacity:.6;font-size:.8rem}
+.cf-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.cf-chips{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px}
+.cf-chip{position:relative}
+.cf-chip input{position:absolute;opacity:0;pointer-events:none;width:0;height:0}
+.cf-chip label{display:flex!important;align-items:center;gap:10px;padding:12px 14px;border:1.5px solid rgba(255,255,255,.20);border-radius:12px;cursor:pointer;font-weight:600;font-size:.88rem;color:inherit;transition:border-color .2s,box-shadow .2s,background .2s,transform .15s;margin:0!important;text-transform:none!important;letter-spacing:0!important}
+.cf-chip label svg{width:22px;height:22px;flex:0 0 22px;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;opacity:.85}
+.cf-chip label:hover{transform:translateY(-1px)}
+.cf-chip input:checked+label{border-color:var(--accent);background:rgba(122,31,43,.22);box-shadow:0 0 0 3px rgba(122,31,43,.22),0 8px 20px rgba(0,0,0,.22);transform:translateY(-1px)}
+.cf-chip input:focus-visible+label{outline:2px solid var(--accent);outline-offset:2px}
+.cf-chips.err .cf-chip label{border-color:#ff6b6b}
+.cf-chips.err::after{content:"Elige un servicio para continuar";color:#ff6b6b;font-size:.85rem;font-weight:600;display:block;margin-top:2px}
+.q-form input.err,.cform input.err{border-color:#ff6b6b!important}
+.q-submit{display:flex;align-items:center;justify-content:center;gap:10px}
+.q-submit .wa-ic{width:22px;height:22px;flex:0 0 22px}
+@media(max-width:560px){.cf-chips{grid-template-columns:1fr 1fr}.cf-grid{grid-template-columns:1fr}}
