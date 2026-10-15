@@ -228,3 +228,11 @@ section h2 em{font-style:normal;color:var(--cyan)}
 .f-social a{display:inline-flex;align-items:center;gap:8px;color:var(--cyan);font-weight:600;letter-spacing:1px;font-size:1rem;text-transform:uppercase}
 .f-social svg{width:20px;height:20px;fill:currentColor;flex:none}
 .f-social a:hover{text-decoration:underline}
+
+/* Hero con fondo de fotos reales */
+.hero{position:relative;overflow:hidden}
+.hero-bg{position:absolute;inset:0;z-index:0}
+.hb-slide{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity 1.2s ease}
+.hb-slide.on{opacity:.55}
+.hero-scrim{position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(4,10,14,.55) 0%,rgba(4,10,14,.25) 40%,rgba(4,10,14,.75) 100%)}
+.hero-grid,.scanline,.orb,.hero-inner{position:relative;z-index:2}
