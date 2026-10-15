@@ -1,0 +1,18 @@
+FUENTES — Car Wash Playero (sites/car-wash-playero-anasco/)
+============================================================
+
+Logo:
+Sin logo real verificable: la foto de perfil de su página no es un logo del negocio (o no existe). Se usó marca tipográfica con el nombre. NO se inventó ningún logo.
+
+Fotos:
+- Sin fotos de posts extraíbles: Facebook bloquea la extracción desde este entorno (403) y el perfil público no expone fotos por API. La galería enlaza de forma honesta a su Facebook oficial: https://www.facebook.com/profile.php?id=100087280342564
+
+Video hero: no hay video público descargable del cliente; hero construido en código con efectos elite (sin stock).
+
+Datos (verificados del CSV + perfil público):
+- Nombre: Car Wash Playero
+- Teléfono: 939-579-1000 (tel:+119395791000, WhatsApp https://wa.me/19395791000)
+- Pueblo: Añasco, Puerto Rico
+- Red verificada: Facebook https://www.facebook.com/profile.php?id=100087280342564
+
+BRECHA HONESTA: no se inventó ningún dato. Lo que no se pudo verificar (horarios, precios salvo los indicados, servicios exactos) no se afirma: el FAQ y el formulario dirigen a WhatsApp para confirmar.

@@ -1,0 +1,5 @@
+Sitio: JC Detailing
+Instagram: https://www.instagram.com/jcdetailingpr
+Logo: marca tipográfica (sin logo extraíble)
+Fotos: 7 fotos reales de @jcdetailingpr (thumbnail_url via instagram-cli/hatch-zeitgeist)
+Teléfono: 787-314-1215 (San Juan)

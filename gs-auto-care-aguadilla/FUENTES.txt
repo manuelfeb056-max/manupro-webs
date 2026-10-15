@@ -1,0 +1,18 @@
+FUENTES — GS Auto Care (sites/gs-auto-care-aguadilla/)
+============================================================
+
+Logo:
+Sin logo real verificable: la foto de perfil de su página no es un logo del negocio (o no existe). Se usó marca tipográfica con el nombre. NO se inventó ningún logo.
+
+Fotos:
+- Sin fotos de posts extraíbles: Facebook bloquea la extracción desde este entorno (403) y el perfil público no expone fotos por API. La galería enlaza de forma honesta a su Facebook oficial: https://www.facebook.com/GS-Auto-Care-101570984549580/
+
+Video hero: no hay video público descargable del cliente; hero construido en código con efectos elite (sin stock).
+
+Datos (verificados del CSV + perfil público):
+- Nombre: GS Auto Care
+- Teléfono: 787-697-0049 (tel:+117876970049, WhatsApp https://wa.me/17876970049)
+- Pueblo: Aguadilla, Puerto Rico
+- Red verificada: Facebook https://www.facebook.com/GS-Auto-Care-101570984549580/
+
+BRECHA HONESTA: no se inventó ningún dato. Lo que no se pudo verificar (horarios, precios salvo los indicados, servicios exactos) no se afirma: el FAQ y el formulario dirigen a WhatsApp para confirmar.

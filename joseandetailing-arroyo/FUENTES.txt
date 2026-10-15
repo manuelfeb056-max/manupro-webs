@@ -1,0 +1,18 @@
+FUENTES — JoseanDetailing (Arroyo) — grupo C
+==================================================
+Logo: NO — la foto de perfil de Instagram es un close-up de una goma
+  con marca de agua "Detailing", no un logo. Se usa marca tipográfica.
+  https://www.instagram.com/joseandetailing
+Fotos reales: 6 (de sus posts públicos de Instagram vía instagram-cli):
+  foto-1: SUV gris con brillo espejo — https://www.instagram.com/p/DXXHAhSEdoS/
+  foto-3: frente de Honda detallado — https://www.instagram.com/p/DUpXll3Fv3y/
+  foto-5: lavado de motor — https://www.instagram.com/p/DTNrIFOknhZ/
+  foto-6: capó con corrección de pintura — https://www.instagram.com/p/DTEl3HikgIE/
+  foto-7: pickup roja con acabado de show — https://www.instagram.com/p/DN5MG2ZjN6p/
+  foto-8: SUV blanca, brillo final — https://www.instagram.com/p/DMptU-tvpF4/
+  (2 flyers promocionales de sus posts se excluyeron de la galería.)
+Datos de su bio: "Detailed Car, Paint Correction, Paint Protection",
+  787 404 9107, acepta ATH Móvil.
+Red verificada: Instagram (etiquetada en footer).
+Teléfono: 787-404-9107 (del CSV, coincide con su bio).
+Video hero: no (covers de reels no descargables con el tooling disponible).

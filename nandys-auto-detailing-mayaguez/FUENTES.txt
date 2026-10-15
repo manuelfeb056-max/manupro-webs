@@ -1,0 +1,18 @@
+FUENTES — Nandys Auto Detailing (sites/nandys-auto-detailing-mayaguez/)
+============================================================
+
+Logo:
+img/logo.jpg — foto de perfil oficial de su página de Facebook (https://www.facebook.com/nandysautodetailing), descargada 2026-10-15.
+
+Fotos:
+- Sin fotos de posts extraíbles: Facebook bloquea la extracción desde este entorno (403) y el perfil público no expone fotos por API. La galería enlaza de forma honesta a su Facebook oficial: https://www.facebook.com/nandysautodetailing
+
+Video hero: no hay video público descargable del cliente; hero construido en código con efectos elite (sin stock).
+
+Datos (verificados del CSV + perfil público):
+- Nombre: Nandys Auto Detailing
+- Teléfono: 939-278-6188 (tel:+119392786188, WhatsApp https://wa.me/19392786188)
+- Pueblo: Mayagüez, Puerto Rico
+- Red verificada: Facebook https://www.facebook.com/nandysautodetailing
+
+BRECHA HONESTA: no se inventó ningún dato. Lo que no se pudo verificar (horarios, precios salvo los indicados, servicios exactos) no se afirma: el FAQ y el formulario dirigen a WhatsApp para confirmar.

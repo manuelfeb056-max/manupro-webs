@@ -1,0 +1,5 @@
+Sitio: Wet Look
+Instagram: https://www.instagram.com/wetlookpr
+Logo: marca tipográfica (sin logo extraíble)
+Fotos: 8 fotos reales de @wetlookpr (thumbnail_url via instagram-cli/hatch-zeitgeist)
+Teléfono: 787-223-6699 (San Juan)

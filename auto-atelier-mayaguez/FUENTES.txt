@@ -1,0 +1,18 @@
+FUENTES — Auto Atelier (sites/auto-atelier-mayaguez/)
+============================================================
+
+Logo:
+img/logo.jpg — foto de perfil oficial de su página de Facebook (https://www.facebook.com/autoatelierpr/), descargada 2026-10-15.
+
+Fotos:
+- img/real/local-1.jpg: Nuestro local en Mayagüez (foto real del negocio)
+
+Video hero: no hay video público descargable del cliente; hero construido en código con efectos elite (sin stock).
+
+Datos (verificados del CSV + perfil público):
+- Nombre: Auto Atelier
+- Teléfono: 787-808-5035 (tel:+117878085035, WhatsApp https://wa.me/17878085035)
+- Pueblo: Mayagüez, Puerto Rico
+- Red verificada: Facebook https://www.facebook.com/autoatelierpr/
+
+BRECHA HONESTA: no se inventó ningún dato. Lo que no se pudo verificar (horarios, precios salvo los indicados, servicios exactos) no se afirma: el FAQ y el formulario dirigen a WhatsApp para confirmar.

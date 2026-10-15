@@ -1,0 +1,18 @@
+FUENTES — Auto Clean and Detailing (sites/auto-clean-detailing-isabela/)
+============================================================
+
+Logo:
+img/logo.jpg — foto de perfil oficial de su página de Facebook (https://www.facebook.com/autocleanisabela), descargada 2026-10-15.
+
+Fotos:
+- Sin fotos de posts extraíbles: Facebook bloquea la extracción desde este entorno (403) y el perfil público no expone fotos por API. La galería enlaza de forma honesta a su Facebook oficial: https://www.facebook.com/autocleanisabela
+
+Video hero: no hay video público descargable del cliente; hero construido en código con efectos elite (sin stock).
+
+Datos (verificados del CSV + perfil público):
+- Nombre: Auto Clean and Detailing
+- Teléfono: 787-409-7596 (tel:+117874097596, WhatsApp https://wa.me/17874097596)
+- Pueblo: Isabela, Puerto Rico
+- Red verificada: Facebook https://www.facebook.com/autocleanisabela
+
+BRECHA HONESTA: no se inventó ningún dato. Lo que no se pudo verificar (horarios, precios salvo los indicados, servicios exactos) no se afirma: el FAQ y el formulario dirigen a WhatsApp para confirmar.

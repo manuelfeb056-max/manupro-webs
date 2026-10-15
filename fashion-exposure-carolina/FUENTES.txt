@@ -1,0 +1,5 @@
+Sitio: Fashion Exposure Auto Spa
+Instagram: https://www.instagram.com/fashionexposureautospa
+Logo: marca tipográfica (sin logo extraíble)
+Fotos: 3 fotos reales de @fashionexposureautospa (thumbnail_url via instagram-cli/hatch-zeitgeist)
+Teléfono: 787-636-6748 (Carolina)

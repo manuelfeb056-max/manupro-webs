@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://manuelfeb056-max.github.io/manupro-webs/automotive-paint-center-cidra/sitemap.xml

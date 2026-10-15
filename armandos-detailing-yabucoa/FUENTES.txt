@@ -1,0 +1,10 @@
+FUENTES — Armandos Specialist Auto Detailing (Manupro batch d59 grupo AB)
+=============================================================
+Logo: img/logo.png — foto de perfil oficial de su Instagram
+(@armandospecialistautodetail), verificado por nombre de usuario y bio.
+Insignia circular "Armando Specialty Auto Detailing" en azul sobre negro.
+Fotos de posts: la API devolvió 0 posts atribuibles al perfil en esta corrida —
+galería enlaza honesto a su Instagram.
+Datos: bio oficial — especialistas en lavada de autos, recubrimiento cerámico,
+línea System X, shampoo a telas y piel, Meguiar's, CWD. Tel 787-236-6603.
+Instagram: https://www.instagram.com/armandospecialistautodetail
