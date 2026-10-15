@@ -1,2 +1,3 @@
 User-agent: *
 Allow: /
+Sitemap: https://manuelfeb056-max.github.io/manupro-webs/cs-car-wash-ceiba/sitemap.xml

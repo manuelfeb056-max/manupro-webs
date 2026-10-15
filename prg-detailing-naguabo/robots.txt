@@ -1,2 +1,3 @@
 User-agent: *
 Allow: /
+Sitemap: https://manuelfeb056-max.github.io/manupro-webs/prg-detailing-naguabo/sitemap.xml
