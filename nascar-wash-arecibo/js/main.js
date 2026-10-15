@@ -1,26 +1,53 @@
-var BUSINESS_NAME='NASCAR Wash';
-var BUSINESS_WA='17873631340';
-document.addEventListener('DOMContentLoaded',function(){
- var b=document.getElementById('burger'),n=document.getElementById('nav');
- b.addEventListener('click',function(){var o=n.classList.toggle('open');b.classList.toggle('open',o);});
- n.addEventListener('click',function(e){if(e.target===n||e.target.tagName==='A'){n.classList.remove('open');b.classList.remove('open');}});
- document.querySelectorAll('.faq-q').forEach(function(q){q.addEventListener('click',function(){
-  var it=q.parentElement,a=it.querySelector('.faq-a'),open=it.classList.contains('open');
-  document.querySelectorAll('.faq-item.open').forEach(function(o){o.classList.remove('open');o.querySelector('.faq-a').style.maxHeight=null;});
-  if(!open){it.classList.add('open');a.style.maxHeight=a.scrollHeight+'px';}});});
- var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}})},{threshold:.12});
- document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});
- var hb=document.querySelector('.hero .photo-bg');
- if(hb){window.addEventListener('scroll',function(){var y=window.scrollY;if(y<window.innerHeight){hb.style.transform='scale(1.08) translateY('+(y*.18)+'px)';}},{passive:true});}
- var chips=document.querySelectorAll('.chip'),sel='';
- chips.forEach(function(c){c.addEventListener('click',function(){chips.forEach(function(x){x.classList.remove('sel')});c.classList.add('sel');sel=c.dataset.v;document.getElementById('f-err').textContent='';});});
- var form=document.getElementById('quote');
- form.addEventListener('submit',function(e){e.preventDefault();
-  var err=document.getElementById('f-err'),name=document.getElementById('q-nombre').value.trim(),phone=document.getElementById('q-tel').value.trim(),det=document.getElementById('q-det').value.trim();
-  if(name.length<2){err.textContent='Escribe tu nombre.';return;}
-  var d=phone.replace(/\D/g,'');if(d.length<7){err.textContent='Escribe un teléfono válido.';return;}
-  if(!sel){err.textContent='Elige un servicio.';return;}
-  err.textContent='';
-  var msg='Hola '+BUSINESS_NAME+', soy '+name+'. Me interesa: '+sel+'.'+(det?' Detalles: '+det:'')+' Mi teléfono: '+phone;
-  window.open('https://wa.me/'+BUSINESS_WA+'?text='+encodeURIComponent(msg),'_blank');});
-});
+/* NASCAR Wash — interacciones */
+(function(){
+  "use strict";
+  var btn = document.getElementById('menuBtn'),
+      overlay = document.getElementById('menuOverlay'),
+      close = document.getElementById('menuClose');
+  function openMenu(){ overlay.classList.add('open'); overlay.setAttribute('aria-hidden','false'); document.body.style.overflow='hidden'; }
+  function closeMenu(){ overlay.classList.remove('open'); overlay.setAttribute('aria-hidden','true'); document.body.style.overflow=''; }
+  if(btn) btn.addEventListener('click', openMenu);
+  if(close) close.addEventListener('click', closeMenu);
+  overlay.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', closeMenu); });
+  document.addEventListener('keydown', function(e){ if(e.key==='Escape') closeMenu(); });
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(en){ if(en.isIntersecting){ en.target.classList.add('visible'); io.unobserve(en.target); } });
+  }, {threshold:.12});
+  document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
+  var form = document.getElementById('quoteForm');
+  if(form){
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+      var nombre = document.getElementById('qNombre').value.trim(),
+          tel = document.getElementById('qTel').value.trim(),
+          empresa = document.getElementById('qEmpresa').value.trim(),
+          cant = document.getElementById('qCant').value.trim(),
+          frec = document.getElementById('qFrec').value,
+          msg = document.getElementById('qMsg').value.trim(),
+          err = document.getElementById('qError'),
+          serv = '';
+      var checked = form.querySelector('input[name="qServ"]:checked');
+      if(checked) serv = checked.value;
+      if(!nombre || tel.replace(/\D/g,'').length < 7 || !empresa){
+        err.hidden = false;
+        form.classList.remove('shake'); void form.offsetWidth; form.classList.add('shake');
+        (!nombre ? document.getElementById('qNombre') : (!empresa ? document.getElementById('qEmpresa') : document.getElementById('qTel'))).focus();
+        return;
+      }
+      err.hidden = true;
+      var text = 'Hola NASCAR Wash, quiero cotizar para mi flota.%0A%0ANombre: ' + encodeURIComponent(nombre) +
+        '%0ATeléfono: ' + encodeURIComponent(tel) +
+        '%0AEmpresa: ' + encodeURIComponent(empresa) +
+        (cant ? '%0AVehículos: ' + encodeURIComponent(cant) : '') +
+        (serv ? '%0AServicio: ' + encodeURIComponent(serv) : '') +
+        (frec ? '%0AFrecuencia: ' + encodeURIComponent(frec) : '') +
+        (msg ? '%0ADetalles: ' + encodeURIComponent(msg) : '');
+      window.open('https://wa.me/17873631340?text=' + text, '_blank', 'noopener');
+    });
+  }
+  document.querySelectorAll('.faq-list details').forEach(function(d){
+    d.addEventListener('toggle', function(){
+      if(d.open){ document.querySelectorAll('.faq-list details').forEach(function(o){ if(o!==d) o.open = false; }); }
+    });
+  });
+})();

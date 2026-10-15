@@ -3,3 +3,9 @@ Instagram: https://www.instagram.com/opa687
 Logo: marca tipográfica (sin logo extraíble)
 Fotos: 5 fotos reales de @opa687 (thumbnail_url via instagram-cli/hatch-zeitgeist)
 Teléfono: 787-607-3302 (Guaynabo)
+
+
+RECONSTRUCCIÓN ELITE 2026-10-15:
+- Tema TURBO, acento #f39c12, fuentes Russo One/Open Sans
+- Formulario de flota (empresa, cantidad, frecuencia)
+- Planes $149/$249

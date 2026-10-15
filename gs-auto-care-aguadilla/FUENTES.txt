@@ -16,3 +16,15 @@ Datos (verificados del CSV + perfil público):
 - Red verificada: Facebook https://www.facebook.com/GS-Auto-Care-101570984549580/
 
 BRECHA HONESTA: no se inventó ningún dato. Lo que no se pudo verificar (horarios, precios salvo los indicados, servicios exactos) no se afirma: el FAQ y el formulario dirigen a WhatsApp para confirmar.
+
+
+RECONSTRUCCIÓN ELITE 2026-10-15:
+- Tema FOAM, acento #1a7fbf, fuentes Baloo 2/Nunito
+- Formulario de flota (empresa, cantidad, frecuencia)
+- Planes $149/$249
+
+
+RECONSTRUCCIÓN ELITE 2026-10-15:
+- Tema FOAM, acento #1a7fbf, fuentes Baloo 2/Nunito
+- Formulario de flota (empresa, cantidad, frecuencia)
+- Planes $149/$249

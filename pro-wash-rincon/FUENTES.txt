@@ -9,3 +9,9 @@ Datos: ficha pública del negocio — Carr. 115 km 11.6, Rincón Shopping Center
 experiencia; servicios: shampoo interiores, pulido y brillo, lavado de motor,
 restauración de focos y bumpers, cerámica.
 Facebook oficial: http://www.facebook.com/PROWASHAUTODetailing
+
+
+RECONSTRUCCIÓN ELITE 2026-10-15:
+- Tema NIGHT, acento #e67e22, fuentes Archivo Black/Inter
+- Formulario de flota (empresa, cantidad, frecuencia)
+- Planes $149/$249

@@ -16,3 +16,9 @@ Datos de su bio: "Detailed Car, Paint Correction, Paint Protection",
 Red verificada: Instagram (etiquetada en footer).
 Teléfono: 787-404-9107 (del CSV, coincide con su bio).
 Video hero: no (covers de reels no descargables con el tooling disponible).
+
+
+RECONSTRUCCIÓN ELITE 2026-10-15:
+- Tema TURBO, acento #a0a0a0, fuentes Russo One/Open Sans
+- Formulario de flota (empresa, cantidad, frecuencia)
+- Planes $149/$249

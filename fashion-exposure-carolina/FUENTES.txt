@@ -3,3 +3,9 @@ Instagram: https://www.instagram.com/fashionexposureautospa
 Logo: marca tipográfica (sin logo extraíble)
 Fotos: 3 fotos reales de @fashionexposureautospa (thumbnail_url via instagram-cli/hatch-zeitgeist)
 Teléfono: 787-636-6748 (Carolina)
+
+
+RECONSTRUCCIÓN ELITE 2026-10-15:
+- Tema ELITE, acento #27ae60, fuentes Playfair Display/Lato
+- Formulario de flota (empresa, cantidad, frecuencia)
+- Planes $149/$249
