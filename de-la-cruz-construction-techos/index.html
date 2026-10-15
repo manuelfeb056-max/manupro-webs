@@ -34,8 +34,9 @@
 </head><body>
 <button class="fab-menu" id="menuBtn" aria-label="Abrir menú"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
 <div class="menu-overlay" id="menuOverlay">
+  <button class="ov-close" id="ovClose" aria-label="Cerrar menú">×</button>
   <a href="#inicio">Inicio</a><a href="#trabajos">Trabajos</a><a href="#servicios">Servicios</a>
-  <a href="#nosotros">Nosotros</a><a href="#preguntas">Preguntas</a><a href="#planes">Planes</a>
+  <a href="#nosotros">Nosotros</a><a href="#preguntas">Preguntas</a><a href="#cotizar">Cotiza</a><a href="#planes">Planes</a>
   <a class="m-phone" href="tel:+19396404188">939-640-4188</a>
 </div>
 <header class="brand"><div class="logo-circular">DC</div><div class="bname">De la Cruz Construction<small>Aguas Buenas, PR</small></div></header>
@@ -88,6 +89,41 @@
 <div class="faq-item reveal"><button class="faq-q">¿Solo hacen sellado de techos?<span class="pl">+</span></button><div class="faq-a"><p>No. También hacemos construcción y remodelación general: terrazas, baños, pintura, losas y más.</p></div></div>
 <div class="faq-item reveal"><button class="faq-q">¿Trabajan fuera de Aguas Buenas?<span class="pl">+</span></button><div class="faq-a"><p>Sí, cubrimos casi toda la isla. Llámanos y confirmamos tu pueblo.</p></div></div>
 <div class="faq-item reveal"><button class="faq-q">¿Cómo pido mi estimado gratis?<span class="pl">+</span></button><div class="faq-a"><p>Llama o escribe por WhatsApp al 939-640-4188 y coordinamos la visita.</p></div></div>
+</div></section>
+<section class="quote sec" id="cotizar"><div class="wrap">
+<div class="quote-card reveal">
+<div class="quote-copy">
+<span class="kicker">Cotiza por WhatsApp</span>
+<h2>Pide tu estimado gratis</h2>
+<p class="q-sub">Completa esto y te abrimos WhatsApp con tu mensaje listo para De la Cruz Construction. Sin compromiso.</p>
+<ul class="q-points">
+<li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 7"/></svg>Respuesta rápida por WhatsApp</li>
+<li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 7"/></svg>Estimados gratis en casi toda la isla</li>
+<li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 7"/></svg>15+ años de experiencia</li>
+</ul>
+</div>
+<form class="q-form" id="quoteForm">
+<label>Nombre<input type="text" id="qNombre" placeholder="Tu nombre" required></label>
+<label>Teléfono<input type="tel" id="qTel" placeholder="939-000-0000" required></label>
+<label>Servicio que necesitas<select id="qServicio">
+<option>Sellado de techos</option>
+<option>Membrana impermeable</option>
+<option>Reparación de filtraciones</option>
+<option>Construcción de terraza / marquesina / gazebo</option>
+<option>Construcción de piscina</option>
+<option>Construcción de casa completa</option>
+<option>Fachadas</option>
+<option>Muros de contención</option>
+<option>Verjas</option>
+<option>Pintura de casas</option>
+<option>Instalación de losas y mármol</option>
+<option>Remodelación de baños</option>
+<option>Otro proyecto</option>
+</select></label>
+<label>Mensaje<textarea id="qMsg" rows="3" placeholder="Cuéntanos qué necesitas"></textarea></label>
+<button class="btn btn-solid" type="submit">Enviar cotización por WhatsApp</button>
+</form>
+</div>
 </div></section>
 <section class="plans sec" id="planes"><div class="wrap">
   <div style="text-align:center"><span class="kicker">Oferta de lanzamiento</span>

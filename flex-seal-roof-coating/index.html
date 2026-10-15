@@ -30,6 +30,7 @@
 
 <!-- Fullscreen nav -->
 <nav id="overlayNav" class="overlay-nav" aria-hidden="true">
+  <button class="nav-close" id="navClose" aria-label="Cerrar menú">×</button>
   <a href="#inicio">Inicio</a>
   <a href="#galeria">Trabajos</a>
   <a href="#servicios">Servicios</a>
@@ -199,6 +200,39 @@
         <div class="acc-body"><p>Sí. Damos servicio a toda la isla de Puerto Rico.</p></div>
       </div>
     </div>
+  </div>
+</section>
+
+<!-- QUOTE -->
+<section id="cotizacion" class="quote">
+  <div class="wrap">
+    <p class="eyebrow reveal">Estimado gratis</p>
+    <h2 class="reveal">Pide tu cotización<br>por WhatsApp.</h2>
+    <p class="quote-sub reveal">Llena el formulario y te abrimos WhatsApp con tu mensaje listo.</p>
+    <form class="quote-form reveal" id="qform" novalidate>
+      <div class="q-grid">
+        <label>Nombre
+          <input id="qNombre" type="text" name="nombre" placeholder="Tu nombre" autocomplete="name" required>
+        </label>
+        <label>Teléfono
+          <input id="qTel" type="tel" name="telefono" placeholder="787-000-0000" autocomplete="tel" required>
+        </label>
+      </div>
+      <label>Servicio que necesitas
+        <select id="qServicio" name="servicio" required>
+          <option value="" disabled selected>Elige un servicio</option>
+          <option>Recubrimiento de goma (rubber roof coating)</option>
+          <option>Sellado de techos (grietas, juntas, bordes)</option>
+          <option>Inspección y diagnóstico</option>
+          <option>Reparación de filtraciones</option>
+        </select>
+      </label>
+      <label>Mensaje
+        <textarea id="qMsg" name="mensaje" rows="3" placeholder="Cuéntanos de tu techo: filtraciones, pueblo, tamaño..."></textarea>
+      </label>
+      <button class="btn btn-primary shine" type="submit">Enviar cotización por WhatsApp</button>
+      <p class="q-note">Al enviar se abre WhatsApp al 787-932-3939 con tu mensaje listo.</p>
+    </form>
   </div>
 </section>
 

@@ -41,6 +41,7 @@
 
 <button class="menu-btn" id="menuBtn" aria-label="Abrir menú"><span></span><span></span><span></span></button>
 <nav class="nav" id="nav" aria-label="Navegación principal">
+  <button class="mq-close" data-mqclose aria-label="Cerrar menú">×</button>
   <a href="#inicio">Inicio</a>
   <a href="#trabajos">Trabajos</a>
   <a href="#servicios">Servicios</a>
@@ -164,6 +165,35 @@
       <details class="faq-item reveal"><summary>¿Dónde están ubicados?<span class="fx">+</span></summary><div class="fa">Calle #3 Este Lote 247, Bayamón, Puerto Rico.</div></details>
       <details class="faq-item reveal"><summary>¿Cómo los contacto?<span class="fx">+</span></summary><div class="fa">Por WhatsApp al <a href="https://wa.me/17872613118" target="_blank" rel="noopener">787-261-3118</a>, o por llamada al 787-261-3118 o al 787-403-7415.</div></details>
     </div>
+  </div>
+</section>
+
+
+<!-- COTIZADOR -->
+<section class="quote" id="cotizar">
+  <div class="wrap">
+    <p class="q-kicker">Cotización inmediata</p>
+    <h2 class="q-title">Cotiza tu proyecto <span>hoy mismo</span></h2>
+    <p class="q-sub">Completa el formulario y te abrimos WhatsApp con tu solicitud lista para enviar.</p>
+    <form id="quoteForm" class="q-form" novalidate>
+      <div class="q-grid">
+        <label>Tu nombre<input type="text" id="qNombre" placeholder="Nombre y apellido" autocomplete="name" required></label>
+        <label>Tu teléfono<input type="tel" id="qTel" placeholder="787-000-0000" autocomplete="tel" required></label>
+      </div>
+      <label>¿Qué servicio necesitas?
+        <select id="qServicio" required>
+          <option value="" disabled selected>Selecciona un servicio</option>
+          <option>Sellado de techos</option>
+          <option>Reparación de filtraciones</option>
+          <option>Mantenimiento de techos</option>
+          <option>Estimado gratis</option>
+          <option>Otro</option>
+        </select>
+      </label>
+      <label>Detalles<textarea id="qMsg" rows="3" placeholder="Cuéntanos sobre tu techo..."></textarea></label>
+      <button type="submit" class="q-submit">Enviar por WhatsApp</button>
+      <p class="q-note">Al enviar se abre WhatsApp con tu mensaje listo. Sin compromiso.</p>
+    </form>
   </div>
 </section>
 

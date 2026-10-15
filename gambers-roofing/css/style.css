@@ -30,10 +30,12 @@ h1,h2,h3,.brand-name{font-family:'Oswald',sans-serif;letter-spacing:.01em}
 .fab-menu.open span:nth-child(1){transform:translateY(8px) rotate(45deg)}
 .fab-menu.open span:nth-child(2){opacity:0}
 .fab-menu.open span:nth-child(3){transform:translateY(-8px) rotate(-45deg)}
-.fab-nav{position:fixed;top:86px;right:18px;z-index:1199;background:var(--dark);border-radius:16px;padding:10px;display:flex;flex-direction:column;min-width:190px;box-shadow:var(--shadow);opacity:0;transform:translateY(-12px) scale(.96);pointer-events:none;transition:.3s}
+.fab-nav{position:fixed;top:86px;right:18px;z-index:1201;background:var(--dark);border-radius:16px;padding:10px;display:flex;flex-direction:column;min-width:190px;box-shadow:var(--shadow);opacity:0;transform:translateY(-12px) scale(.96);pointer-events:none;transition:.3s}
 .fab-nav.open{opacity:1;transform:none;pointer-events:auto}
 .fab-nav a{color:#fff;padding:11px 16px;border-radius:10px;font-weight:600;font-size:.95rem}
 .fab-nav a:hover{background:rgba(212,80,26,.25)}
+.nav-close{align-self:flex-end;width:40px;height:40px;border-radius:50%;border:1.5px solid var(--brand);background:transparent;color:#fff;font-size:1.5rem;line-height:1;cursor:pointer;display:grid;place-items:center;margin:4px 4px 8px;transition:background .2s}
+.nav-close:hover{background:var(--brand)}
 
 /* ---------- topbar ---------- */
 .topbar{position:fixed;top:0;left:0;right:0;z-index:900;display:flex;align-items:center;justify-content:space-between;padding:14px 84px 14px 20px;background:rgba(250,245,238,.92);backdrop-filter:blur(10px);border-bottom:1px solid rgba(23,19,16,.08)}
@@ -225,3 +227,7 @@ h1,h2,h3,.brand-name{font-family:'Oswald',sans-serif;letter-spacing:.01em}
   .chip{display:none}
   .section{padding:60px 0}
 }
+
+/* ---------- hover premium en galería ---------- */
+.gal-card{transition:transform .3s ease}
+.gal-card:hover{transform:scale(.985)}

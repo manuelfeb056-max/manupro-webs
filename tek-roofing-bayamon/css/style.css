@@ -115,6 +115,15 @@ footer{text-align:center;padding:34px 20px;background:#080808;color:var(--muted)
 .reveal{opacity:0;transform:translateY(28px);transition:opacity .6s ease,transform .6s ease}
 .reveal.visible{opacity:1;transform:none}
 
+/* Quote form */
+.quote{background:linear-gradient(180deg,#0c0c0c,#141a05);padding:80px 20px;border-top:2px solid #2a2a2a}
+.quote-form{max-width:560px;margin:0 auto;background:#161616;border:1px solid #2c2c2c;border-radius:10px;padding:34px 28px;display:grid;gap:18px}
+.quote-form label{display:block;font-family:'Oswald',sans-serif;font-weight:500;font-size:.95rem;color:var(--text);letter-spacing:.5px}
+.quote-form input,.quote-form select,.quote-form textarea{width:100%;margin-top:8px;padding:13px 15px;border-radius:8px;border:1px solid #3a3a3a;background:#0e0e0e;color:var(--text);font-family:'Oswald',sans-serif;font-size:1rem;transition:border-color .25s,box-shadow .25s}
+.quote-form input:focus,.quote-form select:focus,.quote-form textarea:focus{outline:none;border-color:var(--lime);box-shadow:0 0 0 3px rgba(163,230,53,.18)}
+.quote-form select{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23A3E635' stroke-width='2' fill='none'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center}
+.btn-quote{width:100%;justify-content:center;margin-top:4px}
+
 @media(max-width:560px){
   .hero-ctas .btn{width:100%;text-align:center}
   .plan-card.featured{transform:none}

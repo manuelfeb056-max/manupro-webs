@@ -5,18 +5,21 @@
   // Hamburger / overlay nav
   var btn = document.getElementById('menuBtn');
   var nav = document.getElementById('overlayNav');
+  var navClose = document.getElementById('navClose');
+  function closeNav(){
+    nav.classList.remove('show');
+    btn.classList.remove('open');
+    document.body.style.overflow = '';
+  }
   btn.addEventListener('click', function(){
     var open = nav.classList.toggle('show');
     btn.classList.toggle('open', open);
     nav.setAttribute('aria-hidden', open ? 'false' : 'true');
     document.body.style.overflow = open ? 'hidden' : '';
   });
+  if (navClose) navClose.addEventListener('click', closeNav);
   nav.querySelectorAll('a').forEach(function(a){
-    a.addEventListener('click', function(){
-      nav.classList.remove('show');
-      btn.classList.remove('open');
-      document.body.style.overflow = '';
-    });
+    a.addEventListener('click', closeNav);
   });
 
   // FAQ accordion (one open at a time)
@@ -58,4 +61,26 @@
       tilt.style.transform = '';
     });
   }
+})();
+
+(function(){
+  "use strict";
+  // Formulario de cotización -> WhatsApp del negocio
+  var qf = document.getElementById('qform');
+  if (qf) qf.addEventListener('submit', function(e){
+    e.preventDefault();
+    var n = document.getElementById('qNombre').value.trim(),
+        t = document.getElementById('qTel').value.trim(),
+        s = document.getElementById('qServicio').value,
+        m = document.getElementById('qMsg').value.trim();
+    if (!n || !t || !s){
+      if (!n) document.getElementById('qNombre').focus();
+      else if (!t) document.getElementById('qTel').focus();
+      else document.getElementById('qServicio').focus();
+      return;
+    }
+    var txt = 'Hola Flex Seal Rubber Roof Coating, soy ' + n + '. Mi teléfono es ' + t +
+              '. Necesito: ' + s + '.' + (m ? ' ' + m : '');
+    window.open('https://wa.me/17879323939?text=' + encodeURIComponent(txt), '_blank');
+  });
 })();

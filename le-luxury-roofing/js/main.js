@@ -49,3 +49,14 @@
   window.addEventListener('resize', function(){ go(idx); });
   go(0);
 })();
+
+/* Mejora elite: stagger en reveals */
+(function(){
+  try{
+    document.querySelectorAll('.gallery-grid,.gal-track,.svc-grid,.services-grid,.steps,.proceso-steps').forEach(function(grid){
+      Array.prototype.forEach.call(grid.children,function(el,i){
+        if(el.classList.contains('reveal'))el.style.transitionDelay=Math.min(i*70,420)+'ms';
+      });
+    });
+  }catch(e){}
+})();

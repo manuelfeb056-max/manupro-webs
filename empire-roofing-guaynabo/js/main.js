@@ -20,7 +20,23 @@
     if(e.key === 'Escape') toggleMenu(false);
   });
 
-  // --- acordeón FAQ ---
+  // --- formulario de cotización → WhatsApp ---
+  var qf = document.getElementById('quoteForm');
+  if (qf) qf.addEventListener('submit', function(e){
+    e.preventDefault();
+    var n = document.getElementById('qNombre').value.trim();
+    var t = document.getElementById('qTel').value.trim();
+    var s = document.getElementById('qServicio').value;
+    var m = document.getElementById('qMsg').value.trim();
+    var txt = 'Hola Empire Roofing Solutions, soy ' + (n || 'un cliente') +
+      '. Mi teléfono es ' + t + '. Necesito: ' + s + '.' +
+      (m ? ' ' + m : '') + ' Quiero una cotización gratis.';
+    window.open('https://wa.me/17872002782?text=' + encodeURIComponent(txt), '_blank');
+  });
+
+  // --- cerrar overlay con su propio botón ---
+  var ovc = document.getElementById('ovClose');
+  if (ovc) ovc.addEventListener('click', function(){ toggleMenu(false); });
   document.querySelectorAll('.acc-item').forEach(function(item){
     var q = item.querySelector('.acc-q');
     var a = item.querySelector('.acc-a');

@@ -88,3 +88,23 @@
   });
   mark(); restart();
 })();
+/* Menú hamburguesa flotante */
+(function(){
+  var b=document.getElementById('mpBurger'),n=document.getElementById('mpNavOverlay');if(!b||!n)return;
+  function set(o){n.classList.toggle('open',o);b.setAttribute('aria-expanded',o);n.setAttribute('aria-hidden',!o);document.body.style.overflow=o?'hidden':'';}
+  b.addEventListener('click',function(){set(!n.classList.contains('open'));});
+  n.querySelector('.mp-ov-close').addEventListener('click',function(){set(false);});
+  n.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){set(false);});});
+  n.addEventListener('click',function(e){if(e.target===n)set(false);});
+})();
+
+/* Mejora elite: stagger en reveals */
+(function(){
+  try{
+    document.querySelectorAll('.gallery-grid,.gal-track,.svc-grid,.services-grid,.steps,.proceso-steps').forEach(function(grid){
+      Array.prototype.forEach.call(grid.children,function(el,i){
+        if(el.classList.contains('reveal'))el.style.transitionDelay=Math.min(i*70,420)+'ms';
+      });
+    });
+  }catch(e){}
+})();

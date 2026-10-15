@@ -20,6 +20,7 @@
 
 <button class="burger" id="burger" aria-label="Abrir menú"><span></span><span></span><span></span></button>
 <nav class="nav-overlay" id="navOverlay">
+  <button class="mq-close" data-mqclose aria-label="Cerrar menú">×</button>
 <a href="#inicio">Inicio</a>
 <a href="#galeria">Trabajos</a>
 <a href="#servicios">Servicios</a>
@@ -82,6 +83,35 @@
 <div class="faq-item"><button class="faq-q">¿Dónde están ubicados?<span class="pm">+</span></button><div class="faq-a"><p>En Arecibo, Urb. University Gardens, y servimos el área norte de Puerto Rico.</p></div></div><div class="faq-item"><button class="faq-q">¿El sellado aguanta los aguaceros fuertes?<span class="pm">+</span></button><div class="faq-a"><p>Un techo bien sellado y con mantenimiento resiste mucho mejor la lluvia intensa del trópico.</p></div></div><div class="faq-item"><button class="faq-q">¿Cuánto tarda el sellado?<span class="pm">+</span></button><div class="faq-a"><p>Depende del tamaño y la condición del techo; la mayoría de las residencias se completa en uno o dos días.</p></div></div><div class="faq-item"><button class="faq-q">¿Cómo pido una cotización?<span class="pm">+</span></button><div class="faq-a"><p>Por WhatsApp al 787-815-1521: nos describes tu caso y coordinamos.</p></div></div><div class="faq-item"><button class="faq-q">¿Cada cuánto debo revisar mi techo?<span class="pm">+</span></button><div class="faq-a"><p>Con el clima del Caribe se recomienda revisión y limpieza periódica.</p></div></div>
 </div>
 </div>
+</section>
+
+
+<!-- COTIZADOR -->
+<section class="quote" id="cotizar">
+  <div class="wrap">
+    <p class="q-kicker">Cotización inmediata</p>
+    <h2 class="q-title">Cotiza tu proyecto <span>hoy mismo</span></h2>
+    <p class="q-sub">Completa el formulario y te abrimos WhatsApp con tu solicitud lista para enviar.</p>
+    <form id="quoteForm" class="q-form" novalidate>
+      <div class="q-grid">
+        <label>Tu nombre<input type="text" id="qNombre" placeholder="Nombre y apellido" autocomplete="name" required></label>
+        <label>Tu teléfono<input type="tel" id="qTel" placeholder="787-000-0000" autocomplete="tel" required></label>
+      </div>
+      <label>¿Qué servicio necesitas?
+        <select id="qServicio" required>
+          <option value="" disabled selected>Selecciona un servicio</option>
+          <option>Sellado de techos</option>
+          <option>Impermeabilización</option>
+          <option>Reparación de filtraciones</option>
+          <option>Mantenimiento</option>
+          <option>Otro</option>
+        </select>
+      </label>
+      <label>Detalles<textarea id="qMsg" rows="3" placeholder="Cuéntanos sobre tu techo..."></textarea></label>
+      <button type="submit" class="q-submit">Enviar por WhatsApp</button>
+      <p class="q-note">Al enviar se abre WhatsApp con tu mensaje listo. Sin compromiso.</p>
+    </form>
+  </div>
 </section>
 
 <section class="plans" id="planes">

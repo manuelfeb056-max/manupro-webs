@@ -34,8 +34,9 @@
 </head><body>
 <button class="fab-menu" id="menuBtn" aria-label="Abrir menú"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
 <div class="menu-overlay" id="menuOverlay">
+  <button class="menu-close" id="menuClose" aria-label="Cerrar menú">×</button>
   <a href="#inicio">Inicio</a><a href="#trabajos">Trabajos</a><a href="#servicios">Servicios</a>
-  <a href="#nosotros">Nosotros</a><a href="#preguntas">Preguntas</a><a href="#planes">Planes</a>
+  <a href="#nosotros">Nosotros</a><a href="#preguntas">Preguntas</a><a href="#cotizar">Cotizar</a><a href="#planes">Planes</a>
   <a class="m-phone" href="tel:+117872531512">787-253-1512</a>
 </div>
 <header class="brand"><div class="logo-circular">CIM</div><div class="bname">CIM Caribbean<small>Área metro</small></div></header>
@@ -90,6 +91,42 @@
 <div class="faq-item reveal"><button class="faq-q">¿Cada cuánto hay que darle mantenimiento?<span class="pl">+</span></button><div class="faq-a"><p>Con mantenimiento periódico el sistema dura muchos años. Te orientamos sobre el cuidado según tu techo.</p></div></div>
 <div class="faq-item reveal"><button class="faq-q">¿Trabajan fuera del área metro?<span class="pl">+</span></button><div class="faq-a"><p>Sí, servimos el área metro y coordinamos proyectos en toda la isla. Escríbenos.</p></div></div>
 <div class="faq-item reveal"><button class="faq-q">¿Cómo pido una cotización?<span class="pl">+</span></button><div class="faq-a"><p>Por WhatsApp al 787-253-1512: envíanos fotos o medidas y te respondemos con un estimado gratis.</p></div></div>
+</div></section>
+
+    <section class="quote sec" id="cotizar"><div class="wrap">
+  <div class="quote-card">
+    <div class="quote-grid">
+      <div class="quote-info">
+        <span class="kicker reveal">Cotización gratis</span>
+        <h2 class="reveal">Pide tu <span style="color:#0E7490">cotización</span></h2>
+        <p class="lede reveal">Llena esto y se abre WhatsApp con tu mensaje listo. Respondemos con estimado gratis.</p>
+        <ul class="quote-points reveal">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 7"/></svg> Respuesta directa por WhatsApp</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 7"/></svg> Estimados gratis, sin compromiso</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 7"/></svg> Más de 35 años de respaldo</li>
+        </ul>
+      </div>
+      <form class="qform reveal" id="quoteForm" novalidate>
+        <div class="qrow">
+          <label>Nombre<input type="text" name="nombre" placeholder="Tu nombre" required></label>
+          <label>Teléfono<input type="tel" name="telefono" placeholder="787-000-0000" required></label>
+        </div>
+        <label>Servicio que necesita
+          <select name="servicio">
+            <option>Poliuretano líquido</option>
+            <option>Impermeabilización</option>
+            <option>Techos comerciales</option>
+            <option>Sellado de techos</option>
+            <option>Mantenimiento</option>
+            <option>Otro / estimado gratis</option>
+          </select>
+        </label>
+        <label>Mensaje<textarea name="mensaje" placeholder="Cuéntanos qué necesita tu techo..."></textarea></label>
+        <button class="btn btn-solid" type="submit">Enviar por WhatsApp</button>
+        <p class="form-note">Se abre WhatsApp con tu mensaje listo.</p>
+      </form>
+    </div>
+  </div>
 </div></section>
 
     <section class="plans sec" id="planes"><div class="wrap">

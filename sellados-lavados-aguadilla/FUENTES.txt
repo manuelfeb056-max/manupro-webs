@@ -1,0 +1,52 @@
+FUENTES — Sellados y Lavados de Techos y Más (sites/sellados-lavados-aguadilla/)
+================================================================================
+
+VERIFICACIÓN DEL NEGOCIO (2026-10-15):
+- Nombre: Sellados y Lavados de Techos y Más
+- Teléfono VERIFICADO: 939-344-0498 (tel:+19393440498) — coincide con el registro
+  de Facebook Places (place_id 1174760850880991, categoría Construction Company).
+- Dirección: HC 7 Box 33926, Aguadilla, PR (del registro de Facebook Places).
+- Página de Facebook existe (place_id 1174760850880991) pero la API de extracción
+  de posts (facebook-cli) está bloqueada (HTTP 403) y las páginas de Facebook no
+  son accesibles por fetch público. NO se pudieron extraer fotos de sus posts.
+
+Fotos (5, FOTORREALISTAS GENERADAS — NO son fotos reales del negocio):
+- img/f1.webp — aplicación de sellador en techo residencial (ilustrativa)
+- img/f2.webp — impermeabilización de techo en proceso (ilustrativa)
+- img/f3.webp — lavado a presión de techo (ilustrativa)
+- img/f4.webp — techo sellado y limpio, trabajo terminado (ilustrativa)
+- img/f5.webp — detalle de membrana impermeabilizante aplicada (ilustrativa)
+ORIGEN: imágenes fotorrealistas generadas por IA del build anterior del sitio.
+Se mantienen como ilustraciones genéricas del oficio (sin pretender ser trabajo
+real del negocio) hasta conseguir material real del negocio. NINGUNA foto de
+stock de terceros, ninguna foto de otro negocio.
+
+Logo:
+- NO hay logo real disponible. El logo.svg anterior ("SL" inventado) se retiró
+  por no ser el logo real del negocio. La marca se presenta tipográfica.
+
+Servicios (del nombre y la categoría del negocio — sellado de techos):
+sellado de techos, impermeabilización, reparación de filtraciones,
+lavado a presión de techo, limpieza de techo, pintura de techo.
+
+Datos del negocio (verificados):
+- Teléfono/WhatsApp: 939-344-0498 (https://wa.me/19393440498)
+- Ubicación: Aguadilla, Puerto Rico
+- Formulario de cotización: envía a WhatsApp del NEGOCIO (19393440498),
+  campos Nombre (requerido), Teléfono, Servicio (select con los 6 servicios
+  reales del negocio), Mensaje. Mensaje pre-llenado con nombre, teléfono,
+  servicio y mensaje.
+
+BRECHA HONESTA: sin acceso a las fotos reales de sus posts de Facebook
+(API bloqueada). Cuando se consiga acceso (login del negocio o material
+enviado por el cliente), reemplazar img/f*.webp por fotos reales y actualizar
+este archivo.
+
+NOTA DE MEJORA LIGERA (2026-10-15, corrección del cliente):
+- El cliente pidió NO rediseñar: el sitio conserva su diseño original intacto.
+- Mejora ligera aplicada: (1) overlay del menú ahora va POR ENCIMA del botón
+  hamburguesa en z-index; (2) hovers elite aditivos (sheen en botones, zoom en
+  galería, reveal escalonado) sin cambiar diseño base, colores ni tipografías;
+  (3) NUEVA sección "Cotización rápida" justo antes de los planes con formulario
+  que envía a WhatsApp del NEGOCIO (wa.me/<teléfono real>) con Nombre (requerido),
+  Teléfono, Servicio (select con servicios reales del negocio) y Mensaje.

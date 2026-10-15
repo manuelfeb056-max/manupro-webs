@@ -1,0 +1,39 @@
+FUENTES — Tejas Y Sellado De Techos (sites/tejas-sellado-techos-ponce/)
+=======================================================================
+
+Datos del negocio (verificados 2026-10-15):
+- Nombre: Tejas Y Sellado De Techos
+- Teléfono: 787-403-7661 (verificado en Infopáginas — coincide con el del sitio)
+  Referencia: https://pr.eldirectorio.co/empresas/ponce/productos-o-servicios/tejas-y-sellado-de-techos-209
+- Zona: Ponce, Puerto Rico — servicio a toda la isla (Infopáginas)
+- Servicios VERIFICADOS (Infopáginas / eldirectorio):
+  LIMPIEZA, MANTENIMIENTO, INSTALACIÓN Y REMOCIÓN DE TEJAS.
+  Estos servicios son los que lleva el select del formulario de cotización.
+
+Fotos:
+- Las imágenes del sitio (img/f1–f4.jpg, img/g1–g4.jpg) son fotorrealistas
+  de la versión anterior, NO fotos reales del negocio. SE DEJARON TAL CUAL
+  por orden del cliente ("no la toques mucho").
+
+BRECHA HONESTA (material real no disponible):
+- Logo real: NO se pudo descargar. No se encontró página oficial de
+  Facebook verificable para este negocio en buscadores públicos.
+- Fotos reales de su trabajo: NO se pudieron obtener. facebook-cli está
+  bloqueado server-side (HTTP 403 INVALID_VIEWER_CONTEXT en todos sus
+  comandos) y las páginas de Facebook no se pueden leer como web pública
+  desde este entorno. No se encontró website oficial ni anuncios con fotos
+  verificables en ClasificadosOnline.
+- Por orden del cliente: no inventar ni sustituir con stock; se reporta
+  honesto. Cuando el negocio provea fotos reales, reemplazar las actuales.
+
+Cambios de mejora ligera (2026-10-15, sin rediseño):
+- Formulario de cotización: agregado campo "Teléfono" (requerido) y los
+  servicios reales verificados en el select (instalación, remoción,
+  mantenimiento, sellado, sellado de cumbreras, lavado de tejas). Envía a
+  WhatsApp del negocio: https://wa.me/17874037661 con nombre + teléfono +
+  servicio + mensaje.
+- Animaciones: el sitio ya tenía reveal on scroll y hovers premium; se sumó
+  stagger escalonado (70ms por tarjeta) en grupos de tarjetas, con limpieza
+  del delay al terminar para no afectar hovers.
+- Menú hamburguesa: verificado — botón circular z-index 100, panel z-99,
+  botón visible como X para cerrar; no tapa información. Sin cambios.

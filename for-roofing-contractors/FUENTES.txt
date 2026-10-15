@@ -1,0 +1,64 @@
+FUENTES — For Roofing Contractors Inc (sites/for-roofing-contractors/)
+============================================================================
+
+INVESTIGACIÓN (2026-10-15):
+- Sitio web oficial: https://forroofingpr.com/ (verificado: el teléfono 787-758-8709
+  publicado en la web coincide con el dado; la dirección y el email también).
+- Facebook oficial: https://www.facebook.com/people/For-Roofing-Contractors-Inc/100064323960291/
+  (enlazado desde su sitio oficial; teléfono 787-758-8709 verificado también vía
+  Google Places: place_id 1794776468094445, nombre "F.O.R. Roofing Contractors",
+  teléfono +1 787-758-8709, estado abierto).
+
+Datos verificados del negocio:
+- Nombre: For Roofing Contractors Inc (F.O.R. Roofing Contractors)
+- Teléfono: 787-758-8709 (wa.me/17877588709) — coincide con el dado
+- Teléfonos alternos publicados: 787-547-9991, 787-533-8170, 787-274-2376
+- Dirección: 629 Calle Pereira Leal, Urbanización Valencia, San Juan, PR 00921
+- Email: forroofing@gmail.com
+- Fundada: julio de 2005, San Juan, Puerto Rico (20+ años de experiencia)
+- Licencia: #144768
+- Servicios reales (de su sitio oficial): sellado de techos con membrana asfáltica,
+  sellado líquido, impermeabilización, filtraciones de techo, reparación de techos,
+  construcción, remodelación y mantenimiento. Residencial, comercial, industrial y
+  gubernamental. Garantía hasta 10 años en labor. Estimados certificados 100%
+  gratis. Financiamiento: $0 pronto, 60 meses sin intereses (Synchrony Bank).
+
+Logo:
+- img/logo.png — LOGO OFICIAL del sitio forroofingpr.com (F.O.R. ROOFING
+  CONTRACTORS, INC., letras cromadas azules, PNG 932x268 con transparencia real).
+  Fuente: https://forroofingpr.com/wp-content/uploads/2024/06/for-1.png
+- Respaldo del logo anterior: img/backup/logo-2026-10-14.png
+
+Fotos reales (5, 100% del sitio oficial, cero stock):
+- img/real/foto-1.jpg — Equipo de F.O.R. trabajando en un techo (remoción de
+  membrana vieja, equipo de seguridad).
+  Fuente: https://forroofingpr.com/wp-content/uploads/2024/06/Nuestro-equipo-1.jpeg
+- img/real/foto-2.jpg — Techo residencial sellado (foto aérea).
+  Fuente: https://forroofingpr.com/wp-content/uploads/2024/06/Nosotros.jpeg
+- img/real/foto-3.jpg — Planta industrial con membrana sellada (foto aérea,
+  sección "Proyectos Gubernamentales y Privados").
+  Fuente: https://forroofingpr.com/wp-content/uploads/2024/06/Pharmacy-1024x768.jpeg
+- img/real/foto-4.jpg — Proyecto comercial sellado en blanco, terminal de
+  ferris (foto aérea, sección "Proyectos Gubernamentales y Privados").
+  Fuente: https://forroofingpr.com/wp-content/uploads/2024/06/Puerto-1024x768.jpeg
+- img/real/foto-5.jpg — Arte promocional OFICIAL de su Facebook: "F.O.R. ROOFING
+  CONTRACTORS, INC. SELLADO DE TECHO HASTA 60 MESES 0 PRONTO / 0% INTERÉS
+  787-758-8709" (foto de perfil/banner de la página oficial).
+  Fuente: galería de Google del negocio (place_id 1794776468094445), imagen de
+  su página oficial de Facebook.
+- Todas verificadas visualmente y redimensionadas a máx 1920px, calidad JPG 84.
+- Respaldo de las fotos anteriores (stock): img/backup/f1..f5-2026-10-14.webp
+
+NOTA: for-1.png en su sitio se usa junto a la variante logo-master-removebg-preview.png;
+se eligió for-1.png por ser el encabezado principal del sitio oficial.
+
+MEJORA APLICADA (2026-10-15, batch 2 grupo C, mejora ligera):
+- Logo real integrado en header, footer y favicon.
+- Galería y hero con las 5 fotos reales; tarjetas de servicio ampliadas a los
+  servicios reales verificados (sellado con membrana asfáltica,
+  impermeabilización, construcción y remodelación).
+- Formulario de cotización (Nombre, Teléfono, Servicio, Mensaje) -> WhatsApp
+  del negocio con mensaje pre-llenado.
+- Menú flotante: overlay (nav) por encima del botón en z-index, con botón
+  propio de cerrar; botón compacto.
+- Hover premium en galería y botones sin alterar el layout.

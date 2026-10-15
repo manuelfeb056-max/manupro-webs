@@ -1,0 +1,53 @@
+FUENTES — Sellados Ultra (sites/sellados-ultra-mayaguez/)
+==========================================================
+
+VERIFICACIÓN DEL NEGOCIO (2026-10-15):
+- Nombre: Sellados Ultra
+- Teléfono VERIFICADO: 787-224-9551 (tel:+17872249551) — coincide con el
+  directorio Infopáginas para "Sellados Ultra" en Mayagüez.
+- Instagram OFICIAL encontrado: @sellados_ultra — bio: "Somos una compañía de
+  sellado de techos y construcción liviana enfocados en crear una clientela
+  para larga duración, ofreciendo el mejor servicio." (https://www.instagram.com/sellados_ultra)
+  La cuenta es PRIVADA (12 posts, 0 seguidores): NO se pudieron extraer fotos.
+- Ubicación: Mayagüez, Puerto Rico.
+
+Fotos (4, FOTORREALISTAS GENERADAS — NO son fotos reales del negocio):
+- img/g1.jpg — techo sellado con recubrimiento impermeable (ilustrativa)
+- img/g2.jpg — aplicación de sellador en techo de cemento (ilustrativa)
+- img/g3.jpg — impermeabilización de techo residencial (ilustrativa)
+- img/g4.jpg — techo protegido tras sellado completo (ilustrativa)
+ORIGEN: imágenes fotorrealistas generadas por IA del build anterior del sitio.
+Se mantienen como ilustraciones genéricas del oficio hasta conseguir material
+real. NINGUNA foto de stock de terceros, ninguna foto de otro negocio.
+
+Logo:
+- NO hay logo real disponible (cuenta de IG privada, sin foto de perfil
+  accesible). La marca se presenta tipográfica.
+
+Servicios (de la bio oficial de Instagram del negocio — sellado de techos y
+construcción liviana):
+sellado de techos, impermeabilización, reparación de filtraciones,
+construcción liviana, lavado a presión de techo.
+
+Datos del negocio (verificados):
+- Teléfono/WhatsApp: 787-224-9551 (https://wa.me/17872249551)
+- Instagram oficial: https://www.instagram.com/sellados_ultra
+- Ubicación: Mayagüez, Puerto Rico
+- Formulario de cotización: envía a WhatsApp del NEGOCIO (17872249551),
+  campos Nombre (requerido), Teléfono, Servicio (select con los 5 servicios
+  reales del negocio), Mensaje. Mensaje pre-llenado con nombre, teléfono,
+  servicio y mensaje.
+
+BRECHA HONESTA: la cuenta oficial de Instagram es privada y facebook-cli está
+bloqueado, así que no hay fotos reales del trabajo del negocio. Cuando el
+negocio comparta material (o acepte la solicitud), reemplazar img/g*.jpg por
+fotos reales y actualizar este archivo.
+
+NOTA DE MEJORA LIGERA (2026-10-15, corrección del cliente):
+- El cliente pidió NO rediseñar: el sitio conserva su diseño original intacto.
+- Mejora ligera aplicada: (1) overlay del menú ahora va POR ENCIMA del botón
+  hamburguesa en z-index; (2) hovers elite aditivos (sheen en botones, zoom en
+  galería, reveal escalonado) sin cambiar diseño base, colores ni tipografías;
+  (3) NUEVA sección "Cotización rápida" justo antes de los planes con formulario
+  que envía a WhatsApp del NEGOCIO (wa.me/<teléfono real>) con Nombre (requerido),
+  Teléfono, Servicio (select con servicios reales del negocio) y Mensaje.

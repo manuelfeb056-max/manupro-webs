@@ -32,6 +32,7 @@
   <span></span><span></span><span></span>
 </button>
 <nav class="nav-overlay" id="navOverlay" aria-hidden="true">
+  <button class="mq-close" data-mqclose aria-label="Cerrar menú">×</button>
   <a href="#inicio" data-track="nav_inicio">Inicio</a>
   <a href="#galeria" data-track="nav_galeria">Galería</a>
   <a href="#servicios" data-track="nav_servicios">Servicios</a>
@@ -190,6 +191,37 @@
 </section>
 
 <!-- PLANES WEB (ManuPro) -->
+
+<!-- COTIZADOR -->
+<section class="quote" id="cotizar">
+  <div class="wrap">
+    <p class="q-kicker">Cotización inmediata</p>
+    <h2 class="q-title">Cotiza tu proyecto <span>hoy mismo</span></h2>
+    <p class="q-sub">Completa el formulario y te abrimos WhatsApp con tu solicitud lista para enviar.</p>
+    <form id="quoteForm" class="q-form" novalidate>
+      <div class="q-grid">
+        <label>Tu nombre<input type="text" id="qNombre" placeholder="Nombre y apellido" autocomplete="name" required></label>
+        <label>Tu teléfono<input type="tel" id="qTel" placeholder="787-000-0000" autocomplete="tel" required></label>
+      </div>
+      <label>¿Qué servicio necesitas?
+        <select id="qServicio" required>
+          <option value="" disabled selected>Selecciona un servicio</option>
+          <option>Sellado de techos</option>
+          <option>Filtraciones</option>
+          <option>Sellado de grietas</option>
+          <option>Inspección con cámara</option>
+          <option>Reparación estructural</option>
+          <option>Diagnóstico</option>
+          <option>Otro</option>
+        </select>
+      </label>
+      <label>Detalles<textarea id="qMsg" rows="3" placeholder="Cuéntanos sobre tu techo..."></textarea></label>
+      <button type="submit" class="q-submit">Enviar por WhatsApp</button>
+      <p class="q-note">Al enviar se abre WhatsApp con tu mensaje listo. Sin compromiso.</p>
+    </form>
+  </div>
+</section>
+
 <section class="plans" id="planes">
   <div class="wrap">
     <p class="sec-kicker">Webs por ManuPro</p>

@@ -165,3 +165,39 @@ a.info-card:hover{transform:translateX(6px);border-color:var(--cel)}
   .btn-cotizar{display:none}
   .gal-card{flex-basis:78%}
 }
+
+
+/* ===== ManuPro elite touch (2026-10-15): mejora ligera, sin tocar el diseño base ===== */
+
+.nav{z-index:96!important}
+
+/* --- sheen elite en botones --- */
+.btn{position:relative;overflow:hidden}
+.btn::after{content:"";position:absolute;top:0;left:-80%;width:50%;height:100%;background:linear-gradient(105deg,transparent,rgba(255,255,255,.35),transparent);transform:skewX(-20deg);transition:left .6s ease}
+.btn:hover::after{left:130%}
+
+/* --- reveal escalonado --- */
+.cards .reveal:nth-child(2),.cards .on:nth-child(2){transition-delay:.08s}
+.cards .reveal:nth-child(3),.cards .on:nth-child(3){transition-delay:.16s}
+.cards .reveal:nth-child(4),.cards .on:nth-child(4){transition-delay:.24s}
+
+/* --- zoom elite en galería --- */
+.gal-card{overflow:hidden}
+.gal-card img{transition:transform .6s cubic-bezier(.2,.7,.2,1)}
+.gal-card:hover img{transform:scale(1.07)}
+
+/* --- formulario de cotización --- */
+.qsec{padding:72px 0}
+.qsub{opacity:.85;max-width:640px;margin:0 auto 28px;text-align:center}
+.qsec .kicker,.qsec .sec-kicker{text-align:center;display:block;margin-left:auto;margin-right:auto}
+.qform{max-width:620px;margin:0 auto;background:var(--card);border:1px solid var(--line);padding:30px;border-radius:var(--radius);display:grid;gap:16px;box-shadow:0 24px 60px rgba(0,0,0,.25)}
+.qrow{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.qf{display:grid;gap:8px;font-weight:600;font-size:.9rem;color:var(--ink)}
+.qf input,.qf select,.qf textarea{font:inherit;font-weight:400;color:#0A2A5E;background:#0A2A5EBG;border:1.5px solid #0A2A5EBR;border-radius:12px;padding:13px 15px;width:100%;transition:border-color .25s,box-shadow .25s}
+.qf input:focus,.qf select:focus,.qf textarea:focus{outline:none;border-color:var(--cel);box-shadow:0 0 0 3px var(--cel)SOFT}
+.qbtn{display:flex;align-items:center;justify-content:center;gap:12px;background:var(--cel)B;border:0;color:var(--cel)T;font:inherit;font-weight:700;font-size:1.02rem;padding:16px 22px;border-radius:14px;cursor:pointer;transition:transform .25s,box-shadow .25s,filter .25s;position:relative;overflow:hidden}
+.qbtn svg{width:24px;height:24px;fill:currentColor;flex:none}
+.qbtn:hover{transform:translateY(-2px);filter:brightness(1.06);box-shadow:0 14px 32px rgba(0,0,0,.28)}
+.qbtn:active{transform:translateY(0)}
+.qnote{text-align:center;font-size:.82rem;opacity:.65;margin:0}
+@media(max-width:560px){.qrow{grid-template-columns:1fr}.qform{padding:22px}}

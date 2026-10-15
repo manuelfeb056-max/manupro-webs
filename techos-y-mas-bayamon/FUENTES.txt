@@ -1,0 +1,47 @@
+FUENTES — Techos y Más Inc. (sites/techos-y-mas-bayamon/)
+============================================================
+
+Datos del negocio (verificados 2026-10-15):
+- Nombre: Techos y Más Inc.
+- Teléfono: 787-200-6905 (verificado en Infopáginas:
+  https://infopaginas.com/b/bayamon/techos-y-mas-inc — coincide con el del sitio)
+- Teléfono 2: 787-536-8933 (Infopáginas)
+- Dirección: 50-1 Ave. Las Cumbres, Bayamón, PR 00956 (Infopáginas)
+- Facebook oficial: https://www.facebook.com/TECHOS-Y-MAS-INC-256091767775301/
+  (enlace publicado en su ficha de Infopáginas; la página existe pero NO
+  permite acceso público a sus fotos desde este entorno — ver BRECHA abajo)
+- Servicios VERIFICADOS (ficha Infopáginas del negocio):
+  limpieza y remoción de techos, instalación de fiberglass,
+  tratamiento y acondicionamiento de techos, sellado de techo y piscinas,
+  garantía de 20 años libre de filtración, financiamiento con 0 pronto.
+  Estos servicios son los que lleva el select del formulario de cotización.
+- Horario: Lun–Vie 9:00am–5:00pm, Sáb 11:00am–4:00pm (puertoricoindex).
+
+Fotos:
+- Las imágenes del sitio (img/f1.jpg–f4.jpg) son fotorrealistas de la
+  versión anterior, NO fotos reales del negocio. SE DEJARON TAL CUAL por
+  orden del cliente ("no la toques mucho").
+
+BRECHA HONESTA (material real no disponible):
+- Logo real: NO se pudo descargar. La foto de perfil de Facebook no es
+  accesible: facebook-cli está bloqueado server-side (HTTP 403
+  INVALID_VIEWER_CONTEXT en todos sus comandos) y las páginas de Facebook
+  no se pueden leer como web pública desde este entorno (m.facebook.com y
+  www.facebook.com devuelven "perfil no disponible para viewers sin login").
+- Fotos reales de su trabajo: NO se pudieron obtener. Su website oficial
+  (www.techosymasenfiberglass.com, listada en puertoricoindex) ya NO
+  resuelve, y techosymas.com está en venta en GoDaddy. Sin Instagram
+  oficial encontrado ni anuncios con fotos verificables en ClasificadosOnline.
+- Por orden del cliente: no inventar ni sustituir con stock; se reporta
+  honesto. Cuando el negocio provea fotos reales, reemplazar f1–f4.jpg.
+
+Cambios de mejora ligera (2026-10-15, sin rediseño):
+- Formulario de cotización: agregado campo "Teléfono" (requerido) y los
+  servicios reales verificados en el select. Envía a WhatsApp del negocio:
+  https://wa.me/17872006905 con nombre + teléfono + servicio + mensaje.
+- Animaciones: el sitio ya tenía reveal on scroll, parallax de hero y
+  hovers premium; se sumó stagger escalonado (70ms por tarjeta) en grupos
+  de tarjetas, con limpieza del delay al terminar para no afectar hovers.
+- Menú hamburguesa: verificado — botón circular z-index 100, panel z-99,
+  scrim z-98. El botón queda visible como X para cerrar (mismo patrón del
+  modelo 911 que el cliente ama); no tapa información. Sin cambios.

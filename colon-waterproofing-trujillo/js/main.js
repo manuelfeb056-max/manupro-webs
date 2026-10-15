@@ -13,3 +13,17 @@ document.addEventListener('DOMContentLoaded',function(){
   document.querySelectorAll('.rv').forEach(function(el){io.observe(el);});
   var yr=document.getElementById('yr');if(yr)yr.textContent=new Date().getFullYear();
 });
+
+document.addEventListener('DOMContentLoaded',function(){
+var f=document.getElementById('quoteForm');
+if(f){f.addEventListener('submit',function(e){
+e.preventDefault();
+var fd=new FormData(f);
+var n=(fd.get('nombre')||'').toString().trim(),t=(fd.get('telefono')||'').toString().trim();
+if(!n||!t){alert('Por favor completa tu nombre y teléfono.');return;}
+var msg='Hola Colon Waterproofing, soy '+n+'. Mi teléfono es '+t+'. Necesito: '+(fd.get('servicio')||'Cotización')+'. '+((fd.get('mensaje')||'').toString().trim()||'');
+window.open('https://wa.me/17877686094?text='+encodeURIComponent(msg),'_blank');
+});}
+var nc=document.getElementById('navClose');
+if(nc){nc.addEventListener('click',function(){var b=document.getElementById('burger'),p=document.getElementById('navPanel');b.classList.remove('open');p.classList.remove('open');document.body.style.overflow='';});}
+});

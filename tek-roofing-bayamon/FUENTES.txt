@@ -1,0 +1,41 @@
+FUENTES — TEK Roofing Corp. (sites/tek-roofing-bayamon/)
+==============================================================
+
+Datos del negocio (verificados 2026-10-15):
+- Nombre: TEK Roofing Corp.
+- Teléfono: 787-786-9850 (verificado en Infopáginas — coincide con el del sitio)
+  Referencia: https://infopaginas.com/c/guaynabo/roofs-consultants
+- Dirección: Calle 9 #24, Reparto Teresita, Bayamón, PR (Infopáginas)
+- Servicios (del propio sitio + categoría de contratista de techos verificada):
+  sellado de techos, roofing, reparación de grietas/filtraciones,
+  mantenimiento de sellado, inspección de techos. Estos servicios son los
+  que lleva el select del formulario de cotización.
+
+Fotos:
+- Las imágenes del sitio (img/gal-1..4.webp) son fotorrealistas de la
+  versión anterior, NO fotos reales del negocio. SE DEJARON TAL CUAL por
+  orden del cliente ("no la toques mucho").
+
+BRECHA HONESTA (material real no disponible):
+- Logo real: NO se pudo descargar. No se encontró página oficial de
+  Facebook verificable para este negocio en buscadores públicos.
+- Fotos reales de su trabajo: NO se pudieron obtener. facebook-cli está
+  bloqueado server-side (HTTP 403 INVALID_VIEWER_CONTEXT en todos sus
+  comandos) y las páginas de Facebook no se pueden leer como web pública
+  desde este entorno. No se encontró website oficial ni anuncios con fotos
+  verificables en ClasificadosOnline.
+- Por orden del cliente: no inventar ni sustituir con stock; se reporta
+  honesto. Cuando el negocio provea fotos reales, reemplazar gal-1..4.webp.
+
+Cambios de mejora ligera (2026-10-15, sin rediseño):
+- Formulario de cotización NUEVO: sección "Pide tu cotización" justo antes
+  de los planes, con campos Nombre (requerido), Teléfono (requerido),
+  Servicio que necesita (select con los servicios del negocio) y Mensaje.
+  Envía a WhatsApp del negocio: https://wa.me/17877869850 con nombre +
+  teléfono + servicio + mensaje. Estilo industrial lima/negro del sitio.
+  Enlace "COTIZAR" agregado al menú hamburguesa.
+- Animaciones: el sitio ya tenía reveal on scroll y hovers premium; se sumó
+  stagger escalonado (70ms por tarjeta) en grupos de tarjetas y el
+  formulario nuevo entra con reveal, con limpieza del delay al terminar.
+- Menú hamburguesa: verificado — botón circular z-index 100, overlay z-90,
+  botón visible como X para cerrar; no tapa información. Sin cambios.

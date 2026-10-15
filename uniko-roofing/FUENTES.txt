@@ -1,0 +1,42 @@
+FUENTES — Uniko Roofing Service (sites/uniko-roofing/)
+=============================================================
+
+Datos del negocio (verificados 2026-10-15):
+- Nombre: Uniko Roofing Service
+- Teléfono: 787-757-1985 (verificado en Infopáginas — coincide con el del sitio)
+  Referencia: https://es.infopaginas.com/c/carolina/contractors-ceilings
+- Teléfono 2: 787-319-7366 (Infopáginas)
+- Modalidad: servicio a domicilio (Infopáginas)
+- Servicios (del propio sitio + categoría de contratista de techos verificada):
+  sellado de techos, impermeabilización, reparación de goteras,
+  limpieza y preparación del techo (lavado a presión). Estos servicios son
+  los que lleva el select del formulario de cotización.
+
+Fotos:
+- Las imágenes del sitio (img/g1..g4.jpg) son fotorrealistas de la versión
+  anterior, NO fotos reales del negocio. SE DEJARON TAL CUAL por orden del
+  cliente ("no la toques mucho").
+
+BRECHA HONESTA (material real no disponible):
+- Logo real: NO se pudo descargar. No se encontró página oficial de
+  Facebook ni Instagram verificable para este negocio en buscadores públicos.
+- Fotos reales de su trabajo: NO se pudieron obtener. facebook-cli está
+  bloqueado server-side (HTTP 403 INVALID_VIEWER_CONTEXT en todos sus
+  comandos) y las páginas de Facebook no se pueden leer como web pública
+  desde este entorno. No se encontró website oficial ni anuncios con fotos
+  verificables en ClasificadosOnline.
+- Por orden del cliente: no inventar ni sustituir con stock; se reporta
+  honesto. Cuando el negocio provea fotos reales, reemplazar g1..g4.jpg.
+
+Cambios de mejora ligera (2026-10-15, sin rediseño):
+- Formulario de cotización NUEVO: sección "Pide tu estimado gratis" justo
+  antes de los planes, con campos Nombre (requerido), Teléfono (requerido),
+  Servicio que necesita (select con los servicios del negocio) y Mensaje.
+  Envía a WhatsApp del negocio: https://wa.me/17877571985 con nombre +
+  teléfono + servicio + mensaje. Estilo verde claro del sitio.
+  Enlace "Cotizar" agregado al menú hamburguesa.
+- Animaciones: el sitio ya tenía reveal on scroll y hovers premium; se sumó
+  stagger escalonado (70ms por tarjeta) en grupos de tarjetas y el
+  formulario nuevo entra con reveal, con limpieza del delay al terminar.
+- Menú hamburguesa: verificado — botón circular z-index 1000, overlay z-990,
+  botón visible como X para cerrar; no tapa información. Sin cambios.

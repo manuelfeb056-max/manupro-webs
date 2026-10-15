@@ -15,8 +15,10 @@ section{padding:84px 0}
 .burger.open span:nth-child(1){transform:translateY(8px) rotate(45deg)}
 .burger.open span:nth-child(2){opacity:0}
 .burger.open span:nth-child(3){transform:translateY(-8px) rotate(-45deg)}
-.nav-overlay{position:fixed;inset:0;z-index:990;background:color-mix(in srgb,var(--primary) 94%,#000);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;opacity:0;pointer-events:none;transition:opacity .35s}
+.nav-overlay{position:fixed;inset:0;z-index:1001;background:color-mix(in srgb,var(--primary) 94%,#000);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;opacity:0;pointer-events:none;transition:opacity .35s}
 .nav-overlay.open{opacity:1;pointer-events:auto}
+.nav-close{position:absolute;top:22px;right:22px;width:52px;height:52px;border-radius:50%;border:2px solid rgba(255,255,255,.7);background:transparent;color:#fff;font-size:1.8rem;line-height:1;cursor:pointer;transition:transform .25s,background .25s}
+.nav-close:hover{transform:scale(1.1) rotate(90deg);background:rgba(255,255,255,.16)}
 .nav-overlay a{color:#fff;text-decoration:none;font-size:1.5rem;font-weight:700;padding:10px 26px;border-radius:999px;transition:background .25s,transform .25s}
 .nav-overlay a:hover{background:rgba(255,255,255,.16);transform:scale(1.05)}
 .nav-overlay .nav-cta{background:#fff;color:var(--primary);margin-top:14px;font-size:1.2rem}
@@ -90,6 +92,7 @@ footer a{color:#fff;text-decoration:none;font-weight:600}
 @keyframes sandDrift{to{background-position:120px 60px}}
 .hero-inner{position:relative;z-index:2;display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
 .hero-logo svg{width:72px;height:auto;animation:logoBob 4.5s ease-in-out infinite}
+.hero-logo img{max-width:190px;height:auto;border-radius:16px;box-shadow:0 16px 40px rgba(11,94,104,.22);animation:logoBob 4.5s ease-in-out infinite}
 @keyframes logoBob{0%,100%{transform:translateY(0)}50%{transform:translateY(-9px)}}
 .kicker{letter-spacing:.26em;font-size:.7rem;font-weight:700;color:#0E9AA8;margin:20px 0 12px;text-transform:uppercase}
 .hero-title{font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:clamp(2.8rem,7vw,5rem);line-height:.98;color:#0B5E68;letter-spacing:-.02em}
@@ -114,3 +117,13 @@ footer a{color:#fff;text-decoration:none;font-weight:600}
 
 .btn-final{display:inline-block;padding:18px 52px;border-radius:999px;background:var(--primary);color:#fff;font-weight:800;font-size:1.15rem;text-decoration:none;box-shadow:0 16px 44px color-mix(in srgb,var(--primary) 45%,transparent);transition:transform .25s}
 .btn-final:hover{transform:translateY(-4px) scale(1.03)}
+/* Cotización */
+.quote-card{background:#fff;border-radius:24px;padding:38px 34px;box-shadow:0 20px 60px rgba(11,94,104,.14);max-width:680px;margin:0 auto;border-top:6px solid var(--primary)}
+.q-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.quote-card label{display:block;font-weight:700;font-size:.9rem;margin-bottom:16px;color:var(--text)}
+.quote-card input,.quote-card select,.quote-card textarea{width:100%;margin-top:8px;padding:14px 16px;border:2px solid #e3ddd0;border-radius:14px;font-size:1rem;font-family:'Inter',sans-serif;color:var(--text);background:#fdfcf9;transition:border-color .25s,box-shadow .25s}
+.quote-card input:focus,.quote-card select:focus,.quote-card textarea:focus{outline:none;border-color:var(--primary);box-shadow:0 0 0 4px rgba(14,154,168,.15)}
+.quote-card textarea{resize:vertical;min-height:110px}
+.btn-q{width:100%;font-size:1.08rem;padding:17px}
+.q-note{margin-top:14px;text-align:center;font-size:.85rem;color:#7a8494}
+@media(max-width:640px){.q-row{grid-template-columns:1fr}.quote-card{padding:28px 22px}}

@@ -48,3 +48,23 @@
   }, {threshold:.12});
   document.querySelectorAll('.reveal-up').forEach(function(el){ io.observe(el); });
 })();
+
+  // cerrar menú: botón X y click en fondo del overlay
+  (function(){
+    var nav=document.getElementById('navOverlay');if(!nav)return;
+    var burger=document.getElementById('burger')||document.querySelector('.menu-btn');
+    function closeNav(){nav.classList.remove('open');if(burger)burger.classList.remove('open');document.body.style.overflow='';nav.setAttribute('aria-hidden','true');}
+    var x=nav.querySelector('.ov-close');if(x)x.addEventListener('click',closeNav);
+    nav.addEventListener('click',function(e){if(e.target===nav)closeNav();});
+  })();
+
+/* Mejora elite: stagger en reveals */
+(function(){
+  try{
+    document.querySelectorAll('.gallery-grid,.gal-track,.svc-grid,.services-grid,.steps,.proceso-steps').forEach(function(grid){
+      Array.prototype.forEach.call(grid.children,function(el,i){
+        if(el.classList.contains('reveal'))el.style.transitionDelay=Math.min(i*70,420)+'ms';
+      });
+    });
+  }catch(e){}
+})();

@@ -103,3 +103,23 @@
   document.addEventListener('visibilitychange', function(){ if (document.hidden) clearInterval(timer); else restart(); });
   mark(); restart();
 })();
+
+/* cerrar menú con botón X (overlay por encima del botón flotante) */
+(function(){
+  var c = document.querySelector('[data-mqclose]');
+  if(!c) return;
+  c.addEventListener('click', function(){
+    var nav = c.closest('nav') || document.getElementById('menuOverlay');
+    if(nav){ nav.classList.remove('open','show'); nav.setAttribute('aria-hidden','true'); }
+    var scrim = document.getElementById('scrim2');
+    if(scrim) scrim.classList.remove('on');
+    ['floatMenu','menuBtn','burger'].forEach(function(id){
+      var b=document.getElementById(id);
+      if(b){ b.classList.remove('open','active'); b.setAttribute('aria-expanded','false'); }
+    });
+    document.querySelectorAll('.fab-menu,.menu-btn,.burger,.float-menu').forEach(function(b){
+      b.classList.remove('open','active');
+    });
+    document.body.style.overflow = '';
+  });
+})();

@@ -6,10 +6,15 @@
   // Floating hamburger menu
   var fab = document.getElementById("fabMenu");
   var nav = document.getElementById("fabNav");
+  var navClose = document.getElementById("navClose");
   fab.addEventListener("click", function(){
     var open = nav.classList.toggle("open");
     fab.classList.toggle("open", open);
     nav.setAttribute("aria-hidden", open ? "false" : "true");
+  });
+  if (navClose) navClose.addEventListener("click", function(){
+    nav.classList.remove("open"); fab.classList.remove("open");
+    nav.setAttribute("aria-hidden", "true");
   });
   nav.querySelectorAll("a").forEach(function(a){
     a.addEventListener("click", function(){

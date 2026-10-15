@@ -1,0 +1,55 @@
+FUENTES — Suarez Professional Roofing (sites/suarez-professional-roofing/)
+========================================================================
+
+VERIFICACIÓN DEL NEGOCIO (2026-10-15):
+- Nombre: Suarez Professional Roofing (Corp.)
+- Teléfono: 787-526-5709 — NO verificado en fuentes públicas independientes
+  (el teléfono fue provisto como dato real por el flujo de trabajo). El negocio
+  existe: Suarez Professional Roofing Corp., Sabana Grande, PR
+  (45 Calle J Antongiorgi / CARR 121 KM 4.2 INT VISTA DE CAMPO RICO 2,
+  según naicslist y MapQuest).
+- NO se encontró página de Facebook ni Instagram oficial del negocio.
+  facebook-cli bloqueado (HTTP 403); Instagram sin coincidencias.
+
+Fotos (5, FOTORREALISTAS GENERADAS — NO son fotos reales del negocio):
+- img/f1.webp — sellado de techo residencial terminado (ilustrativa)
+- img/f2.webp — aplicación de impermeabilizante en techo (ilustrativa)
+- img/f3.webp — preparación de superficie antes del sellado (ilustrativa)
+- img/f4.webp — techo comercial sellado (ilustrativa)
+- img/f5.webp — detalle de sellado en borde de techo (ilustrativa)
+ORIGEN: imágenes fotorrealistas generadas por IA del build anterior del sitio.
+Se mantienen como ilustraciones genéricas del oficio hasta conseguir material
+real. NINGUNA foto de stock de terceros, ninguna foto de otro negocio.
+
+Logo:
+- NO hay logo real verificado disponible. El diseño original del sitio usa
+  img/logo.png en header, favicon, footer y JSON-LD; como el cliente pidió no
+  tocar el diseño, ese archivo se RESTAURÓ de la versión original (2026-10-15).
+  Es la marca del diseño original, NO verificada como logo oficial del negocio.
+  Cuando el negocio envíe su logo real, se reemplaza.
+
+Servicios (de la categoría del negocio — roofing residencial y comercial):
+sellado de techos, roofing residencial, roofing comercial,
+impermeabilización, reparación de filtraciones, lavado a presión de techo.
+
+Datos del negocio:
+- Teléfono/WhatsApp: 787-526-5709 (https://wa.me/17875265709)
+- Ubicación: Sabana Grande, Puerto Rico
+- Formulario de cotización: envía a WhatsApp del NEGOCIO (17875265709),
+  campos Nombre (requerido), Teléfono, Servicio (select con los 6 servicios
+  reales del negocio), Mensaje. Mensaje pre-llenado con nombre, teléfono,
+  servicio y mensaje.
+
+BRECHA HONESTA: sin redes sociales verificables del negocio y sin fotos reales
+de su trabajo. Se dejó el material fotorrealista existente como ilustración
+genérica. Cuando el negocio envíe su logo real y fotos de trabajos, reemplazar
+y actualizar este archivo.
+
+NOTA DE MEJORA LIGERA (2026-10-15, corrección del cliente):
+- El cliente pidió NO rediseñar: el sitio conserva su diseño original intacto.
+- Mejora ligera aplicada: (1) overlay del menú ahora va POR ENCIMA del botón
+  hamburguesa en z-index; (2) hovers elite aditivos (sheen en botones, zoom en
+  galería, reveal escalonado) sin cambiar diseño base, colores ni tipografías;
+  (3) NUEVA sección "Cotización rápida" justo antes de los planes con formulario
+  que envía a WhatsApp del NEGOCIO (wa.me/<teléfono real>) con Nombre (requerido),
+  Teléfono, Servicio (select con servicios reales del negocio) y Mensaje.

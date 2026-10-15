@@ -33,6 +33,7 @@
 </head><body>
 <button class="fab-menu" id="menuBtn" aria-label="Abrir menú"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
 <div class="menu-overlay" id="menuOverlay">
+<button class="menu-close" id="menuClose" aria-label="Cerrar menú">×</button>
 <a href="#inicio">Inicio</a><a href="#trabajos">Trabajos</a><a href="#servicios">Servicios</a>
 <a href="#nosotros">Nosotros</a><a href="#preguntas">Preguntas</a><a href="#planes">Planes</a>
 <a class="m-phone" href="tel:+17874690017">787-469-0017</a>
@@ -112,6 +113,36 @@
 <div class="faq-item reveal"><button class="faq-q">¿Cómo pido una cotización?<span class="pl">+</span></button><div class="faq-a"><p>Por WhatsApp al 787-469-0017 o llamando al mismo número. Manda fotos de tu techo y te respondemos.</p></div></div>
 <div class="faq-item reveal"><button class="faq-q">¿En qué pueblos trabajan?<span class="pl">+</span></button><div class="faq-a"><p>Caguas como base, y además Gurabo, San Lorenzo, Juncos, Las Piedras, Cayey y Cidra.</p></div></div>
 </div></section>
+
+<!-- ============ COTIZACIÓN ============ -->
+<section class="sec quote-sec" id="cotizar">
+<div class="wrap">
+<div class="quote-card reveal">
+<div class="quote-head">
+<span class="kicker">Cotización gratis</span>
+<h2>Pide tu cotización por WhatsApp</h2>
+<p class="lede">Llena el formulario y te abrimos WhatsApp con tu mensaje listo para enviar.</p>
+</div>
+<form id="qform" class="qform">
+<label>Nombre<input type="text" id="qNombre" placeholder="Tu nombre" required autocomplete="name"></label>
+<label>Teléfono<input type="tel" id="qTel" placeholder="787-000-0000" required autocomplete="tel"></label>
+<label>Servicio que necesita
+<select id="qServicio">
+<option>Sellado de techos residencial</option>
+<option>Sellado de techos comercial</option>
+<option>Reparación de filtraciones</option>
+<option>Lavado a presión de techo</option>
+<option>Pintura de techo</option>
+<option>Instalación de aires acondicionados</option>
+<option>Handyman general</option>
+</select></label>
+<label>Mensaje<textarea id="qMsg" rows="3" placeholder="Cuéntanos de tu techo (tamaño, goteras, pueblo)..."></textarea></label>
+<button class="btn btn-solid qbtn" type="submit">Enviar por WhatsApp</button>
+<p class="q-note">Te respondemos al 787-469-0017.</p>
+</form>
+</div>
+</div>
+</section>
 
 <section class="plans sec" id="planes"><div class="wrap">
 <div style="text-align:center"><span class="kicker">Oferta de lanzamiento</span>

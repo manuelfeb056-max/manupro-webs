@@ -1,0 +1,39 @@
+FUENTES — Granados Roofing and Paint (sites/granados-roofing-aguadilla/)
+====================================================================
+
+Datos verificados del negocio:
+- Nombre: Granados Roofing and Paint (FB: "Granado's Roofing & Paint corp.")
+- Teléfono: 939-224-2416 (tel:+19392242416 / wa.me/19392242416)
+- Dirección: H C-07 Box 36820, Aguadilla, PR (ficha Meta, place_id 628625152940400)
+- Facebook: https://www.facebook.com/GranadosRoofingPaint/ (114 seguidores,
+  nombre coincide con el negocio; teléfono NO visible sin login, pero la
+  ficha Meta del lugar confirma el 939-224-2416 en Aguadilla)
+- Servicios REALES (del nombre del negocio + su página + el sitio):
+  sellado de techos, pintura residencial y comercial, pintura interior y
+  exterior, lavado a presión, reparación de filtraciones.
+
+LOGO: NO se encontró logo real.
+- La foto de perfil de su Facebook (@granadosroofingpaint) es un pin de
+  mapa gris genérico (placeholder de Facebook, sin logo del negocio).
+- img/logo.png es un emblema "GR" creado en el build original, NO el logo
+  real del negocio. Se mantiene como identidad visual temporal.
+
+FOTOS: 0 fotos reales verificables del trabajo del negocio.
+- facebook-cli bloqueado del lado del servidor (403) y Facebook bloquea el
+  scraping anónimo de feeds de fotos. No se encontraron posts indexados.
+- Las fotos img/f1.jpg–f4.jpg son HEREDADAS del build original; su origen
+  NO se pudo verificar como trabajo real de Granados. Se mantienen como
+  ilustrativas del oficio, sin afirmar que son trabajos de este negocio.
+
+MEJORAS 2026-10-15 (mejora ligera, sin rediseño):
+- Formulario de cotización (#cotizar) antes de los planes: Nombre, Teléfono,
+  Servicio (select con los 6 servicios reales) y Mensaje → abre WhatsApp
+  del negocio (wa.me/19392242416) con mensaje pre-llenado.
+- Menú hamburguesa: el panel nav ahora va POR ENCIMA del botón flotante
+  (z-index 100 > 95) y lleva su propio botón de cerrar (×).
+- Animaciones elite suaves: hover premium en botones, galería, tarjetas de
+  servicio y planes (lift + glow), zoom suave en fotos — sin cambiar layout.
+
+BRECHAS HONESTAS: sin logo real, sin fotos reales verificadas. Teléfono y
+dirección verificados por ficha Meta; Facebook encontrado por coincidencia
+de nombre (verificación de teléfono pendiente de login).

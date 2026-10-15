@@ -1,0 +1,51 @@
+FUENTES — Sellosutecho (sites/sellosutecho-pr/)
+==============================================
+
+VERIFICACIÓN DEL NEGOCIO (2026-10-15):
+- Nombre: Sellosutecho
+- Teléfono VERIFICADO: 787-900-8669 (tel:+17879008669) — coincide con el registro
+  de Facebook Places (place_id 1908002099984673, categoría Home Improvement).
+- Dirección VERIFICADA: 32 Cll 22 #4F, Caguas, PR (del registro de Facebook Places).
+- Horario VERIFICADO (publicado): lunes a viernes 7:00am–4:00pm.
+- Página de Facebook existe (place_id 1908002099984673) pero la API de extracción
+  de posts (facebook-cli) está bloqueada (HTTP 403) y las páginas de Facebook no
+  son accesibles por fetch público. NO se pudieron extraer fotos de sus posts.
+  No se encontró Instagram oficial del negocio.
+
+Fotos (4, FOTORREALISTAS GENERADAS — NO son fotos reales del negocio):
+- img/g1.jpg — techo sellado con acabado protector (ilustrativa)
+- img/g2.jpg — aplicación de sellador impermeabilizante (ilustrativa)
+- img/g3.jpg — impermeabilización de techo de cemento (ilustrativa)
+- img/g4.jpg — techo sellado listo contra la lluvia (ilustrativa)
+ORIGEN: imágenes fotorrealistas generadas por IA del build anterior del sitio.
+Se mantienen como ilustraciones genéricas del oficio hasta conseguir material
+real. NINGUNA foto de stock de terceros, ninguna foto de otro negocio.
+
+Logo:
+- NO hay logo real disponible. La marca se presenta tipográfica ("Sellosutecho").
+
+Servicios (de la categoría del negocio — sellado e impermeabilización de techos):
+sellado de techos, impermeabilización, reparación de filtraciones,
+mantenimiento de techos, lavado a presión de techo.
+
+Datos del negocio (verificados):
+- Teléfono/WhatsApp: 787-900-8669 (https://wa.me/17879008669)
+- Dirección: 32 Cll 22 #4F, Caguas, PR
+- Horario: Lun–Vie 7:00am–4:00pm
+- Formulario de cotización: envía a WhatsApp del NEGOCIO (17879008669),
+  campos Nombre (requerido), Teléfono, Servicio (select con los 5 servicios
+  reales del negocio), Mensaje. Mensaje pre-llenado con nombre, teléfono,
+  servicio y mensaje.
+
+BRECHA HONESTA: sin acceso a las fotos reales de sus posts de Facebook
+(API bloqueada). Cuando se consiga acceso o el negocio envíe material,
+reemplazar img/g*.jpg por fotos reales y actualizar este archivo.
+
+NOTA DE MEJORA LIGERA (2026-10-15, corrección del cliente):
+- El cliente pidió NO rediseñar: el sitio conserva su diseño original intacto.
+- Mejora ligera aplicada: (1) overlay del menú ahora va POR ENCIMA del botón
+  hamburguesa en z-index; (2) hovers elite aditivos (sheen en botones, zoom en
+  galería, reveal escalonado) sin cambiar diseño base, colores ni tipografías;
+  (3) NUEVA sección "Cotización rápida" justo antes de los planes con formulario
+  que envía a WhatsApp del NEGOCIO (wa.me/<teléfono real>) con Nombre (requerido),
+  Teléfono, Servicio (select con servicios reales del negocio) y Mensaje.

@@ -1,0 +1,42 @@
+FUENTES — Grupo La Fiebre Valenzuela (sites/grupo-fiebre-valenzuela-techos/)
+=========================================================================
+
+Datos del negocio (NO verificados en redes — ver brechas):
+- Nombre: Grupo La Fiebre Valenzuela
+- Teléfono: 787-324-3022 (tel:+17873243022 / wa.me/17873243022)
+- Área: Puerto Rico (pueblo específico no confirmado)
+- Producto que anuncian: Crossco 8500 (fórmula acrílica elastomérica 100%)
+
+LOGO: NO se encontró logo real.
+- No se encontró página oficial de Facebook ni Instagram del negocio.
+  (La coincidencia "GrupoLaFiebre" / @grupo.lafiebre es otro giro y no se
+  pudo vincular al teléfono 787-324-3022, por lo que NO se usa.)
+- img/logo.svg es un emblema "GFV" creado en el build original, NO el logo
+  real del negocio. Se mantiene como identidad visual temporal.
+
+FOTOS: 0 fotos reales verificables del trabajo del negocio.
+- Sin redes verificables no hay fuente de fotos reales. facebook-cli
+  bloqueado del lado del servidor (403) y sin posts indexados.
+- img/hero.jpg e img/g1.jpg–g3.jpg son HEREDADAS del build original; su
+  origen NO se pudo verificar como trabajo real del negocio. Se mantienen
+  como ilustrativas del oficio, sin afirmar que son trabajos de este negocio.
+
+SERVICIOS del formulario (del propio sitio, oficio de sellado):
+  Sellado de techos con Crossco 8500, Reparación de filtraciones,
+  Recubrimiento elastomérico / protección UV, Inspección de techo.
+
+MEJORAS 2026-10-15 (mejora ligera, sin rediseño):
+- Formulario de cotización (#cotizar) antes de los planes: Nombre, Teléfono,
+  Servicio (select con los 4 servicios) y Mensaje → abre WhatsApp del
+  negocio (wa.me/17873243022) con mensaje pre-llenado.
+- Menú hamburguesa: el panel lateral ahora va POR ENCIMA del botón
+  (z-index 110 > 100) y lleva su propio botón de cerrar (×); el overlay
+  de fondo quedó en 105.
+- Animaciones elite suaves: hover premium en botones, galería y tarjetas
+  (lift + glow), zoom suave en fotos — sin cambiar layout.
+
+BRECHAS HONESTAS: negocio SIN material real verificable (sin logo, sin
+fotos, sin redes). Solo el teléfono y el nombre vienen del brief. Si el
+negocio no tiene redes verificables, la regla standing pide reportarlo:
+ESTE es el caso — el sitio queda como demo ilustrativa hasta que el negocio
+provea material real.

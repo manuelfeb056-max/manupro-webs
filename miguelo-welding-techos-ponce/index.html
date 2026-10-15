@@ -32,6 +32,7 @@
   <span></span><span></span><span></span>
 </button>
 <nav class="nav-overlay" id="navOverlay" aria-hidden="true">
+  <button class="ov-close" aria-label="Cerrar menú">&times;</button>
   <a href="#inicio" data-track="nav_inicio">Inicio</a>
   <a href="#galeria" data-track="nav_galeria">Galería</a>
   <a href="#servicios" data-track="nav_servicios">Servicios</a>
@@ -256,6 +257,72 @@
 </section>
 
 <!-- PLANES -->
+
+<!-- ============ COTIZACIÓN POR WHATSAPP (mejora elite) ============ -->
+<section class="mp-quote" id="cotizar">
+<style>
+.mp-quote{padding:70px 20px;background:linear-gradient(160deg,#0c0e12,#141821)}
+.mp-quote-card{max-width:620px;margin:0 auto;background:rgba(255,255,255,.045);border:1px solid rgba(212,162,78,.35);border-radius:20px;padding:38px 32px;box-shadow:0 24px 60px rgba(0,0,0,.45)}
+.mp-quote-kicker{color:#D4A24E;font-size:.78rem;font-weight:800;letter-spacing:.24em;text-transform:uppercase;margin-bottom:10px}
+.mp-quote h2{color:#fff;font-size:clamp(1.6rem,4vw,2.2rem);margin:0 0 8px}
+.mp-quote-sub{color:#b9c2cf;margin:0 0 26px;font-size:1rem}
+.mp-qf label{display:block;color:#dfe5ee;font-size:.9rem;font-weight:600;margin-bottom:16px}
+.mp-qf input,.mp-qf select,.mp-qf textarea{width:100%;margin-top:7px;padding:13px 15px;border-radius:12px;border:1px solid rgba(255,255,255,.16);background:rgba(0,0,0,.35);color:#fff;font-size:1rem;font-family:inherit;transition:border-color .25s,box-shadow .25s}
+.mp-qf select option{background:#141821;color:#fff}
+.mp-qf input:focus,.mp-qf select:focus,.mp-qf textarea:focus{outline:none;border-color:#D4A24E;box-shadow:0 0 0 3px rgba(212,162,78,.22)}
+.mp-qf textarea{resize:vertical;min-height:88px}
+.mp-qf-btn{width:100%;padding:16px;border:none;border-radius:14px;background:linear-gradient(135deg,#25d366,#128c4b);color:#fff;font-size:1.05rem;font-weight:800;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:10px;transition:transform .25s,box-shadow .25s;margin-top:6px}
+.mp-qf-btn:hover{transform:translateY(-2px);box-shadow:0 14px 34px rgba(37,211,102,.4)}
+.mp-qf-btn svg{width:22px;height:22px;fill:#fff}
+.mp-qf-note{text-align:center;color:#8b95a5;font-size:.82rem;margin-top:14px}
+</style>
+  <div class="mp-quote-card reveal">
+    <p class="mp-quote-kicker">Cotización gratis</p>
+    <h2>Pide tu estimado por WhatsApp</h2>
+    <p class="mp-quote-sub">Completa esto y abrimos el chat con tu mensaje listo para enviar a Miguelo Welding Services.</p>
+    <form class="mp-qf" id="mpQuoteForm" novalidate>
+      <label>Nombre*
+        <input type="text" id="mpQNombre" placeholder="Tu nombre" required>
+      </label>
+      <label>Teléfono*
+        <input type="tel" id="mpQTel" placeholder="787-000-0000" required>
+      </label>
+      <label>¿Qué servicio necesitas?*
+        <select id="mpQServicio" required>
+              <option value="Techos en galvalume">Techos en galvalume</option>
+              <option value="Soldadura y fabricación">Soldadura y fabricación</option>
+              <option value="Tablados">Tablados</option>
+              <option value="Reparaciones">Reparaciones</option>
+              <option value="Otro / Necesito orientación">Otro / Necesito orientación</option>
+        </select>
+      </label>
+      <label>Mensaje
+        <textarea id="mpQMsg" placeholder="Cuéntanos de tu techo: tamaño, filtraciones, pueblo..."></textarea>
+      </label>
+      <button type="submit" class="mp-qf-btn">
+        <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.6-6.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.3-.6.8-.8 1-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4 0-.5.1-.7l.4-.5c.1-.2.1-.3 0-.5L9.4 8c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.2-.7.5-.2.3-.9.9-.9 2.2s.9 2.5 1.1 2.7c.1.2 1.8 2.8 4.4 3.9 1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2 0-.1-.2-.1-.4-.2z"/></svg>
+        Enviar por WhatsApp
+      </button>
+      <p class="mp-qf-note">Sin compromiso · Te responden directo al WhatsApp del negocio</p>
+    </form>
+  </div>
+<script>
+(function(){
+  var f=document.getElementById('mpQuoteForm');if(!f)return;
+  f.addEventListener('submit',function(e){
+    e.preventDefault();
+    var n=document.getElementById('mpQNombre').value.trim();
+    var t=document.getElementById('mpQTel').value.trim();
+    var s=document.getElementById('mpQServicio').value;
+    var m=document.getElementById('mpQMsg').value.trim();
+    if(!n||!t){alert('Por favor escribe tu nombre y teléfono.');return;}
+    var txt='Hola Miguelo Welding Services, soy '+n+' ('+t+'). Necesito: '+s+'.'+(m?' '+m:'');
+    window.open('https://wa.me/17874324394?text='+encodeURIComponent(txt),'_blank');
+  });
+})();
+</script>
+</section>
+
 <section class="section plans" id="planes">
   <div class="wrap">
     <p class="sec-kicker">Impulsa tu negocio</p>

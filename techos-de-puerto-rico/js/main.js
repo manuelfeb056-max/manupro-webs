@@ -12,6 +12,8 @@ function toggleMenu(force) {
 }
 menuBtn.addEventListener('click', () => toggleMenu());
 overlayNav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => toggleMenu(false)));
+const navClose = document.getElementById('navClose');
+if (navClose) navClose.addEventListener('click', () => toggleMenu(false));
 document.addEventListener('keydown', e => { if (e.key === 'Escape') toggleMenu(false); });
 
 // Acordeón FAQ

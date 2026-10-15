@@ -173,3 +173,31 @@ a.info-card:hover{transform:translateX(6px);border-color:var(--accent)}
   .header-cta{display:none}
   .plan-hot{transform:none}
 }
+
+/* === Menú hamburguesa flotante (agregado mejora elite) === */
+.mp-burger{position:fixed;top:16px;right:16px;z-index:2000;width:52px;height:52px;border-radius:50%;background:var(--accent);border:none;cursor:pointer;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;box-shadow:0 8px 24px rgba(0,0,0,.35);transition:transform .25s}
+.mp-burger:hover{transform:scale(1.07)}
+.mp-burger span{width:22px;height:2.5px;background:#fff;border-radius:2px;display:block;transition:transform .3s,opacity .3s}
+.mp-nav-overlay{position:fixed;inset:0;z-index:2001;background:rgba(8,10,14,.97);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;opacity:0;pointer-events:none;transition:opacity .35s}
+.mp-nav-overlay.open{opacity:1;pointer-events:auto}
+.mp-nav-overlay a{color:#fff;text-decoration:none;font-size:1.35rem;font-weight:700;padding:10px 22px;border-radius:10px;transition:background .25s,color .25s}
+.mp-nav-overlay a:hover{background:rgba(255,255,255,.1);color:#C0392B}
+.mp-nav-overlay .mp-nav-cta{background:var(--accent);color:#fff!important;margin-top:10px;font-size:1.1rem}
+.mp-ov-close{position:absolute;top:16px;right:16px;width:52px;height:52px;border-radius:50%;border:1px solid rgba(255,255,255,.4);background:rgba(255,255,255,.08);color:#fff;font-size:26px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:transform .25s}
+.mp-ov-close:hover{transform:rotate(90deg)}
+
+/* ===== MEJORA ELITE: animaciones suaves (sin cambiar diseño base) ===== */
+.g-item,.gal-item,.case,.work-card,.project-card{transition:transform .45s cubic-bezier(.2,.7,.2,1),box-shadow .45s}
+.g-item:hover,.gal-item:hover,.case:hover,.work-card:hover,.project-card:hover{transform:translateY(-6px);box-shadow:0 18px 44px rgba(0,0,0,.28)}
+.g-item img,.gal-item img,.case img,.work-card img,.project-card img{transition:transform .7s cubic-bezier(.2,.7,.2,1)}
+.g-item:hover img,.gal-item:hover img,.case:hover img,.work-card:hover img,.project-card:hover img{transform:scale(1.07)}
+.btn,.btn-wa,.btn-gold,.btn-fire,.btn-primary,.btn-dispatch{position:relative;overflow:hidden;transition:transform .25s,box-shadow .25s,filter .25s}
+.btn:hover,.btn-wa:hover,.btn-gold:hover,.btn-fire:hover,.btn-primary:hover,.btn-dispatch:hover{transform:translateY(-2px);filter:brightness(1.06)}
+.btn::after,.btn-wa::after,.btn-gold::after,.btn-fire::after,.btn-primary::after,.btn-dispatch::after{content:"";position:absolute;top:0;left:-80%;width:50%;height:100%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.35),transparent);transform:skewX(-20deg);transition:left .6s}
+.btn:hover::after,.btn-wa:hover::after,.btn-gold:hover::after,.btn-fire:hover::after,.btn-primary:hover::after,.btn-dispatch:hover::after{left:130%}
+.svc,.service-card,.step,.paso{transition:transform .4s cubic-bezier(.2,.7,.2,1),box-shadow .4s}
+.svc:hover,.service-card:hover,.step:hover,.paso:hover{transform:translateY(-5px)}
+img{animation:mpFadeIn .8s ease both}
+@keyframes mpFadeIn{from{opacity:0}to{opacity:1}}
+html{scroll-behavior:smooth}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}}

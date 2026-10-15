@@ -53,3 +53,28 @@
     rev.forEach(function(el){ io.observe(el); });
   } else { rev.forEach(function(el){ el.classList.add('in'); }); }
 })();
+
+/* Cotizador → WhatsApp (AXA: 787-630-1889) */
+(function(){
+  "use strict";
+  var f = document.getElementById('quoteForm');
+  if(!f) return;
+  f.addEventListener('submit', function(e){
+    e.preventDefault();
+    var n = document.getElementById('qNombre'),
+        t = document.getElementById('qTel'),
+        s = document.getElementById('qServicio'),
+        m = document.getElementById('qMsg');
+    var ok = true;
+    [n,t,s].forEach(function(el){
+      var bad = !el.value.trim();
+      el.classList.toggle('err', bad);
+      if(bad) ok = false;
+    });
+    if(!ok) return;
+    var txt = 'Hola AXA Roofing Services, soy ' + n.value.trim() +
+      ' (' + t.value.trim() + '). Necesito: ' + s.value + '.' +
+      (m.value.trim() ? ' Detalle: ' + m.value.trim() : '');
+    window.open('https://wa.me/17876301889?text=' + encodeURIComponent(txt), '_blank');
+  });
+})();

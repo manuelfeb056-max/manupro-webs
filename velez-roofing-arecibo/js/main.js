@@ -12,3 +12,16 @@ document.querySelectorAll('.faq-item.open').forEach(function(o){o.classList.remo
 if(!open){it.classList.add('open');a.style.maxHeight=a.scrollHeight+'px';}
 });});
 })();
+
+/* Formulario de cotización -> WhatsApp del negocio (mejora 2026-10-15) */
+(function(){
+var qf=document.getElementById('qform');if(!qf)return;
+qf.addEventListener('submit',function(e){e.preventDefault();
+var n=document.getElementById('qNombre').value.trim();
+if(!n){document.getElementById('qNombre').focus();return;}
+var t=document.getElementById('qTel').value.trim();
+var s=document.getElementById('qServicio').value;
+var m=document.getElementById('qMsg').value.trim();
+var txt='Hola Vélez Roofing, soy '+n+'. Me interesa: '+s+'.'+(t?' Mi teléfono: '+t+'.':'')+(m?' '+m:'');
+window.open('https://wa.me/17873561797?text='+encodeURIComponent(txt),'_blank');});
+})();

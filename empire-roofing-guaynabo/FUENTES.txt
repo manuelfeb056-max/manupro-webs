@@ -1,0 +1,40 @@
+FUENTES — Empire Roofing Solutions (sites/empire-roofing-guaynabo/)
+==================================================================
+
+BRECHAS HONESTAS:
+- Sin redes sociales verificables: no se encontró página oficial de Facebook
+  ni Instagram del negocio en búsqueda web pública (varias consultas
+  2026-10-15).
+- Logo: SIN logo real (no hay foto de perfil oficial descargable sin la
+  página de Facebook). El sitio conserva su marca SVG original (techo +
+  corona "empire").
+- Fotos: 0 fotos reales del negocio. Las 5 imágenes de la galería
+  (img/e01.jpg..e05.jpg) vienen del lote anterior y son ilustrativas (estilo
+  stock), NO trabajo verificado del negocio. No se agregaron más fotos para
+  no presentar material ajeno como propio.
+
+Datos del negocio (verificados en Infopáginas):
+- https://es.infopaginas.com/b/guaynabo/empire-roofing-solutions
+- Nombre: Empire Roofing Solutions
+- Teléfonos: 787-200-2782 (principal, WhatsApp: https://wa.me/17872002782)
+  y 787-698-1222 (segunda línea)
+- Dirección: Metro Office Park, Edificio 7, Suite 204, Guaynabo, PR 00968
+- Horario publicado: Lun–Sáb 6:00 AM – 3:00 PM, Dom cerrado
+- 22+ años de experiencia; miembros del National Roofing Contractors
+  Association (NRCA); cotizaciones gratis; todo tipo de techos
+  (industrial, comercial, residencial); cubren toda la isla.
+- Servicios reales (del listado Infopáginas, usados en el select del
+  formulario de cotización): sellado e impermeabilizado en sistemas de
+  silicón, acrílico, uretano, membranas asfálticas y TPO; pisos en epoxy
+  (tráfico vehicular y peatonal); sellado de estacionamientos multipisos;
+  sellado residencial y comercial.
+
+Mejoras aplicadas 2026-10-15 (toque ligero, sin rediseño):
+- Formulario de cotización (Nombre, Teléfono, Servicio select con TODOS
+  los servicios reales, Mensaje) antes de los planes; abre WhatsApp del
+  negocio con mensaje pre-llenado.
+- Menú hamburguesa: overlay ahora con z-index por encima del botón
+  flotante + botón propio de cerrar dentro del overlay; enlace "Cotiza"
+  agregado al menú.
+- El sitio ya tenía animaciones elite (shine, tilt 3D, reveal, wa pulse);
+  no se alteró su identidad.

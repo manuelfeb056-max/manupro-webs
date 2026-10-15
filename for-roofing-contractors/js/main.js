@@ -4,12 +4,15 @@
 
   var btn = document.getElementById('menuBtn'),
       nav = document.getElementById('nav'),
-      scrim = document.getElementById('navScrim');
-  function close(){ nav.classList.remove('open'); scrim.classList.remove('on'); }
+      scrim = document.getElementById('navScrim'),
+      closeBtn = document.getElementById('navClose');
+  function close(){ nav.classList.remove('open'); scrim.classList.remove('on'); document.body.style.overflow=''; }
   if (btn) btn.addEventListener('click', function(){
     var open = nav.classList.toggle('open');
     scrim.classList.toggle('on', open);
+    document.body.style.overflow = open ? 'hidden' : '';
   });
+  if (closeBtn) closeBtn.addEventListener('click', close);
   if (scrim) scrim.addEventListener('click', close);
   nav.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', close); });
 
@@ -62,4 +65,22 @@
   window.addEventListener('scroll',function(){
     topbar.style.boxShadow=window.scrollY>10?'0 8px 30px rgba(14,124,91,.16)':'none';
   },{passive:true});
+
+  /* Formulario de cotización -> WhatsApp del negocio */
+  var qf=document.getElementById('qform');
+  if(qf) qf.addEventListener('submit',function(e){
+    e.preventDefault();
+    var n=document.getElementById('qNombre').value.trim(),
+        t=document.getElementById('qTel').value.trim(),
+        s=document.getElementById('qServicio').value,
+        m=document.getElementById('qMsg').value.trim();
+    if(!n||!t||!s){
+      if(!n)document.getElementById('qNombre').focus();
+      else if(!t)document.getElementById('qTel').focus();
+      else document.getElementById('qServicio').focus();
+      return;
+    }
+    var txt='Hola For Roofing Contractors, soy '+n+'. Mi telefono es '+t+'. Necesito: '+s+'.'+(m?' '+m:'');
+    window.open('https://wa.me/17877588709?text='+encodeURIComponent(txt),'_blank');
+  });
 })();

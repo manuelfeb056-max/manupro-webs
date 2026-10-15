@@ -1,0 +1,42 @@
+FUENTES — Five Star Roofing (sites/five-star-roofing-sj/)
+============================================================================
+
+INVESTIGACIÓN (2026-10-15):
+- ElDirectorio.com: eldirectorio.com/fivestarroofing — "FIVE STAR ROOFING"
+  (VERIFICADO): teléfono 787-942-9627 (coincide con el dado), email
+  fivestarroofing@gmail.com, dirección Bo. Caimito Alto, Carr. 842 Km. 4.5,
+  San Juan, PR 00927. Más de 20 años de experiencia.
+  Productos/servicios reales publicados (verificados): membranas asfálticas,
+  membranas elastoméricas, uretano, sistemas en fiberglass, sistemas
+  ecoamigables, impermeabilización. Más de 20 productos disponibles.
+  (eldirectorio.com/fivestarroofing)
+- Página oficial de Facebook: NO ENCONTRADA. Búsquedas exhaustivas
+  (nombre+pueblo, nombre+teléfono en varios formatos, "site:facebook.com",
+  Instagram, variaciones) no devolvieron ninguna página de Facebook verificable
+  de este negocio con el teléfono 787-942-9627.
+- Instagram oficial: NO ENCONTRADO.
+
+Datos verificados del negocio:
+- Nombre: Five Star Roofing
+- Teléfono: 787-942-9627 (wa.me/17879429627) — coincide con el dado
+- Email: fivestarroofing@gmail.com
+- Dirección: Bo. Caimito Alto, Carr. 842 Km. 4.5, San Juan, PR 00927
+- Experiencia: 20+ años
+
+RESULTADO: SIN MATERIAL REAL — sin página de Facebook/Instagram verificable,
+no se puede descargar logo ni fotos reales del negocio. No se inventó ni se
+usó material de terceros. El sitio queda con su galería original (img/g1-g5.jpg)
+y su marca dibujada en el header.
+
+BRECHA HONESTA: si el negocio activa o comparte su Facebook/Instagram, las
+fotos reales se integran en una fase futura.
+
+MEJORA APLICADA (2026-10-15, batch 2 grupo C, mejora ligera):
+- Formulario de cotización existente (#waForm): se agregó el <select> de
+  "Servicio que necesitas" con TODOS los servicios reales verificados
+  (membrana asfáltica, elastomérica, uretano, fiberglass, ecoamigable,
+  evaluación). El mensaje a WhatsApp ahora sigue el formato:
+  "Hola Five Star Roofing, soy <nombre>. Mi teléfono es <tel>. Necesito:
+  <servicio>. Tipo de propiedad: <tipo>. <mensaje>".
+- Menú flotante: overlay (overlay-nav) por encima del botón en z-index
+  (overlay z-95, botón z-85), con botón propio de cerrar "×"; botón compacto.

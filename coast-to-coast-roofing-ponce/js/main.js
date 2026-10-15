@@ -39,3 +39,18 @@
   },{threshold:0.12});
   document.querySelectorAll(".reveal").forEach(function(el){io.observe(el);});
 })();
+
+/* Formulario de cotización → WhatsApp */
+(function(){
+  var f=document.getElementById('quoteForm');if(!f)return;
+  f.addEventListener('submit',function(e){
+    e.preventDefault();
+    var fd=new FormData(f);
+    var n=(fd.get('nombre')||'').toString().trim(),t=(fd.get('telefono')||'').toString().trim();
+    if(!n||!t){alert('Por favor completa tu nombre y teléfono.');return;}
+    var msg='Hola Coast to Coast Roofing, soy '+n+'. Mi teléfono es '+t+'. Necesito: '+(fd.get('servicio')||'Cotización')+'. '+((fd.get('mensaje')||'').toString().trim()||'');
+    window.open('https://wa.me/17876371547?text='+encodeURIComponent(msg),'_blank');
+  });
+  var c=document.getElementById('navClose');
+  if(c){c.addEventListener('click',function(){document.getElementById('nav').classList.remove('open');document.getElementById('menuBtn').classList.remove('open');document.getElementById('navScrim').classList.remove('on');document.body.style.overflow='';});}
+})();

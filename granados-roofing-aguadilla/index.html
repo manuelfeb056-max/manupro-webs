@@ -41,6 +41,7 @@
 
 <button class="menu-btn" id="menuBtn" aria-label="Abrir menú"><span></span><span></span><span></span></button>
 <nav class="nav" id="nav" aria-label="Navegación principal">
+  <button class="nav-close" id="navClose" aria-label="Cerrar menú">×</button>
   <a href="#inicio">Inicio</a>
   <a href="#trabajos">Trabajos</a>
   <a href="#servicios">Servicios</a>
@@ -165,6 +166,35 @@
       <details class="faq-item reveal"><summary>¿Cómo los contacto?<span class="fx">+</span></summary><div class="fa">Por WhatsApp al <a href="https://wa.me/19392242416" target="_blank" rel="noopener">939-224-2416</a>. Te respondemos rápido.</div></details>
     </div>
   </div>
+</section>
+
+<!-- ============ COTIZACIÓN ============ -->
+<section class="section quote-sec" id="cotizar">
+<div class="wrap">
+<div class="quote-card reveal">
+<div class="quote-head">
+<p class="kicker">Cotización por WhatsApp</p>
+<h2 class="h2">Pide tu cotización</h2>
+<p class="sec-sub">Llena el formulario y te abrimos WhatsApp con tu mensaje listo para enviar.</p>
+</div>
+<form id="qform" class="qform">
+<label>Nombre<input type="text" id="qNombre" placeholder="Tu nombre" required autocomplete="name"></label>
+<label>Teléfono<input type="tel" id="qTel" placeholder="939-000-0000" required autocomplete="tel"></label>
+<label>Servicio que necesita
+<select id="qServicio">
+<option>Sellado de techos</option>
+<option>Pintura residencial</option>
+<option>Pintura comercial</option>
+<option>Pintura interior y exterior</option>
+<option>Lavado a presión</option>
+<option>Reparación de filtraciones</option>
+</select></label>
+<label>Mensaje<textarea id="qMsg" rows="3" placeholder="Cuéntanos de tu techo o proyecto..."></textarea></label>
+<button class="btn btn-wa btn-lg qbtn" type="submit">Enviar por WhatsApp</button>
+<p class="q-note">Te respondemos al 939-224-2416.</p>
+</form>
+</div>
+</div>
 </section>
 
 <section class="section pricing" id="planes">

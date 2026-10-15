@@ -1,0 +1,42 @@
+FUENTES — Flex Seal Rubber Roof Coating (sites/flex-seal-roof-coating/)
+============================================================================
+
+INVESTIGACIÓN (2026-10-15):
+- Infopáginas: es.infopaginas.com/b/flex-seal-rubber-roof-coating — "FLEX SEAL
+  RUBBER ROOF COATING" (VERIFICADO): teléfono 787-932-3939 (coincide con el
+  dado), "Servicio a Toda la Isla", categoría sellado de techo. El listado
+  anuncia sitio web propio pero la URL está truncada en el directorio
+  (https://flexsealpr.c...); las variantes flexsealpr.com/.net/.org están
+  caídas (sin respuesta) al momento de la verificación — no se pudo recuperar
+  la URL completa del sitio oficial.
+- Página oficial de Facebook: NO ENCONTRADA. Búsquedas exhaustivas
+  (nombre+pueblo, nombre+teléfono en varios formatos, "site:facebook.com",
+  Instagram, variaciones) no devolvieron ninguna página de Facebook verificable
+  de este negocio con el teléfono 787-932-3939.
+- Instagram oficial: NO ENCONTRADO.
+
+Datos verificados del negocio:
+- Nombre: Flex Seal Rubber Roof Coating
+- Teléfono: 787-932-3939 (wa.me/17879323939) — coincide con el dado
+- Área: toda la isla de Puerto Rico
+
+Servicios reales (de la web del negocio + directorio):
+- Recubrimiento de goma líquido (rubber roof coating)
+- Sellado de techos (grietas, juntas, bordes y puntos críticos)
+- Inspección y diagnóstico (estimado gratis)
+- Reparación de filtraciones
+
+RESULTADO: SIN MATERIAL REAL — sin página de Facebook/Instagram verificable ni
+sitio oficial accesible, no se puede descargar logo ni fotos reales del
+negocio. No se inventó ni se usó material de terceros. El sitio queda con su
+galería original (img/flex-1..4.jpg) y su marca dibujada en el header.
+
+BRECHA HONESTA: si se recupera la URL completa de su sitio oficial o el
+negocio comparte su Facebook, las fotos reales se integran en una fase futura.
+
+MEJORA APLICADA (2026-10-15, batch 2 grupo C, mejora ligera):
+- Formulario de cotización (Nombre, Teléfono, Servicio, Mensaje) -> WhatsApp
+  del negocio (787-932-3939) con mensaje pre-llenado, antes de los planes.
+- Menú flotante: overlay (overlay-nav) por encima del botón en z-index
+  (overlay z-195, botón z-185), con botón propio de cerrar "×"; botón compacto.
+- Hovers premium ya existían en galería y tarjetas; reveal on scroll activo.

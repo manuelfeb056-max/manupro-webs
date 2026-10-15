@@ -48,3 +48,29 @@
   }, {threshold:.12});
   document.querySelectorAll('.reveal-up').forEach(function(el){ io.observe(el); });
 })();
+
+/* ===== ManuPro elite touch: formulario de cotización a WhatsApp (2026-10-15) ===== */
+document.querySelectorAll('.qform').forEach(function(f){
+  f.addEventListener('submit', function(e){
+    e.preventDefault();
+    var g = function(n){ return (f.elements[n].value || '').trim(); };
+    var nombre = g('nombre');
+    if(!nombre){ f.elements['nombre'].focus(); return; }
+    var parts = ['Hola ' + f.dataset.biz + ', soy ' + nombre];
+    if(g('telefono')) parts.push('mi teléfono es ' + g('telefono'));
+    parts.push('Servicio que necesito: ' + g('servicio'));
+    if(g('mensaje')) parts.push('Mensaje: ' + g('mensaje'));
+    window.open('https://wa.me/' + f.dataset.wa + '?text=' + encodeURIComponent(parts.join('. ') + '.'), '_blank', 'noopener');
+  });
+});
+
+/* ===== ManuPro elite touch: botón cerrar dentro del overlay (2026-10-15) ===== */
+(function(){
+  var ov = document.getElementById('menuOverlay'), c = document.getElementById('mClose');
+  if(c && ov){ c.addEventListener('click', function(){
+    ov.classList.remove('open');
+    var b = document.getElementById('menuBtn');
+    if(b) b.classList.remove('x');
+    document.body.style.overflow = '';
+  }); }
+})();

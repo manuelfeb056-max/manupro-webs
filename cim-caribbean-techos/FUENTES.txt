@@ -1,0 +1,33 @@
+FUENTES — CIM Caribbean (sites/cim-caribbean-techos/)
+================================================================
+
+DATOS VERIFICADOS:
+- Nombre: CIM Caribbean
+- Teléfono: 787-253-1512 (también publican 787-791-1254 en sus clasificados)
+- Área: área metro, Puerto Rico (sirven toda la isla)
+- Especialidad: impermeabilización con POLIURETANO LÍQUIDO, 35+ años en la
+  industria, estimados gratis
+- Fuente: anuncio verificado en ClasificadosOnline
+  https://ClasificadosOnline.com/PR/Services/Detail.asp?ID=62478
+  ("¡¡NO SELLES TU TECHO...CORRIGE FILTRACIONES!! Area Metro, CIM CARIBBEAN")
+
+REDES SOCIALES: NO se encontró Facebook ni Instagram oficial de CIM Caribbean
+en búsquedas web (2026-10-15). 
+
+FOTOS REALES: 0. No se pudo acceder a fotos de su trabajo. Los posts de
+Facebook no son accesibles desde este entorno (facebook-cli bloqueado por
+Meta, graph API requiere token, scraping directo bloqueado). Las fotos
+g1-g4 existentes en img/ son genéricas y NO se verificaron como trabajo
+real de CIM Caribbean; se dejaron intactas por orden del cliente ("no la
+toques mucho").
+
+LOGO REAL: no disponible (sin redes sociales). Se mantuvo la marca
+tipográfica "CIM" existente.
+
+MEJORA LIGERA APLICADA 2026-10-15:
+- Formulario de cotización a WhatsApp (Nombre, Teléfono, Servicio <select>,
+  Mensaje) antes de los planes, abre wa.me/17872531512 con mensaje pre-llenado.
+- Menú: overlay ahora por ENCIMA del botón (z-index 210), con botón de
+  cerrar propio; botón hamburguesa compacto (52px).
+- Animaciones elite suaves: reveal on scroll (ya existía) + hovers premium en
+  tarjetas y botones.

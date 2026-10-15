@@ -21,6 +21,8 @@
     document.body.style.overflow = open ? "hidden" : "";
   }
   burger.addEventListener("click", function(){ toggleNav(); });
+  var navClose = document.getElementById("navClose");
+  if(navClose) navClose.addEventListener("click", function(){ toggleNav(false); });
   overlay.querySelectorAll("a").forEach(function(a){
     a.addEventListener("click", function(){ toggleNav(false); });
   });
@@ -62,14 +64,14 @@
     var nombre = document.getElementById("fNombre").value.trim();
     var tel = document.getElementById("fTel").value.trim();
     var tipo = document.getElementById("fTipo").value;
+    var serv = document.getElementById("fServicio").value;
     var msg = document.getElementById("fMsg").value.trim();
-    if(!nombre || !tel){
-      alert("Escribe tu nombre y tu teléfono para enviarte por WhatsApp.");
+    if(!nombre || !tel || !serv){
+      alert("Escribe tu nombre, tu teléfono y elige el servicio que necesitas.");
       return;
     }
-    var text = "Hola Five Star Roofing, soy " + nombre + ". Mi teléfono: " + tel +
-               ". Tipo de propiedad: " + tipo + "." + (msg ? " " + msg : "") +
-               " Quiero cotizar el sellado de mi techo.";
+    var text = "Hola Five Star Roofing, soy " + nombre + ". Mi teléfono es " + tel +
+               ". Necesito: " + serv + ". Tipo de propiedad: " + tipo + "." + (msg ? " " + msg : "");
     window.open("https://wa.me/" + WA_NUMBER + "?text=" + encodeURIComponent(text), "_blank");
   });
 

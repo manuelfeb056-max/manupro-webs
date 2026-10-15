@@ -1,0 +1,40 @@
+FUENTES — De la Cruz Construction (sites/de-la-cruz-construction-techos/)
+======================================================================
+
+BRECHAS HONESTAS:
+- Sin redes sociales verificables: no se encontró página oficial de Facebook
+  ni Instagram del negocio en búsqueda web pública (varias consultas
+  2026-10-15). El negocio tiene cuenta de TikTok @construdelacruz (mencionada
+  en resultados), pero no se usó como fuente de fotos.
+- Logo: SIN logo real (no hay foto de perfil oficial descargable sin la
+  página de Facebook). El sitio conserva su marca tipográfica "DC" circular.
+- Fotos: 0 fotos reales del negocio. Las 4 imágenes de la galería
+  (img/g1.jpg..g4.jpg) vienen del lote anterior y son ilustrativas (estilo
+  stock), NO trabajo verificado del negocio. No se agregaron más fotos para
+  no presentar material ajeno como propio.
+
+Datos del negocio (verificados en Infopáginas):
+- https://es.infopaginas.com/b/aguas-buenas/de-la-cruz-construction-2
+- Nombre: De la Cruz Construction
+- Teléfono: 939-640-4188 (WhatsApp del negocio: https://wa.me/19396404188)
+- Dirección: Carr. #173, Km. 7.3 Interior, Bo. Sumidero Sector La Capilla,
+  Aguas Buenas, PR 00703
+- Horario publicado: Lun–Sáb 8:00 AM – 7:00 PM, Dom cerrado
+- 15+ años de experiencia; construcción netamente puertorriqueña;
+  estimados gratis; rapidez y garantía; cubren casi toda la isla.
+- Servicios reales (del listado Infopáginas, usados en el select del
+  formulario de cotización): sellado de techos, membrana impermeable,
+  construcción y remodelación de terraza/marquesina/gazebos, construcción
+  y remodelación de piscina, construcción de casa completa (terrera o en
+  columna), fachadas, muros de contención, verjas, pintura de casas,
+  instalación de losas (mármol, mosaico, coralina), remodelación de baños,
+  reparación de filtraciones.
+
+Mejoras aplicadas 2026-10-15 (toque ligero, sin rediseño):
+- Formulario de cotización (Nombre, Teléfono, Servicio select con TODOS
+  los servicios reales, Mensaje) antes de los planes; abre WhatsApp del
+  negocio con mensaje pre-llenado.
+- Menú hamburguesa: overlay ahora con z-index por encima del botón
+  flotante + botón propio de cerrar dentro del overlay.
+- Animaciones elite suaves: shine en botones principales, glow premium en
+  hover de tarjetas de servicio y galería.

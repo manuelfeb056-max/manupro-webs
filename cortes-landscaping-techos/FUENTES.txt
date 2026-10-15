@@ -1,0 +1,27 @@
+FUENTES — Corte's Landscaping (sites/cortes-landscaping-techos/)
+================================================================
+
+DATOS (del sitio existente y campañas previas):
+- Nombre: Corte's Landscaping
+- Teléfono: 787-321-8753
+- Servicios: lavado y sellado de techos, mantenimiento de áreas verdes,
+  corte de grama y recorte
+- Zona: Florida, Arecibo y área norte (según su FAQ)
+
+REDES SOCIALES: NO se encontró Facebook ni Instagram oficial de Corte's
+Landscaping en búsquedas web (2026-10-15). Sin redes verificables.
+
+FOTOS REALES: 0. Las fotos existentes se dejaron intactas por orden del
+cliente ("no la toques mucho").
+
+LOGO REAL: no disponible. Se mantuvo la marca existente.
+
+MEJORA LIGERA APLICADA 2026-10-15:
+- Formulario de cotización a WhatsApp (Nombre, Teléfono, Servicio <select>
+  con sus servicios reales, Mensaje) antes de los planes,
+  abre wa.me/17873218753 con mensaje pre-llenado.
+- Menú: overlay por ENCIMA del botón (z-index 1010), con botón de cerrar
+  propio; botón hamburguesa compacto (52px).
+- Animaciones: reveal on scroll (ya existía) + hovers premium suaves.
+- Nota: el FAQ tiene un div desbalanceado pre-existente (línea ~70); no se
+  tocó por la orden de no alterar el diseño.

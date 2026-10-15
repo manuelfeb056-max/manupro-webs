@@ -72,9 +72,11 @@
       var biz = form.dataset.biz || 'el negocio',
           wa = form.dataset.wa || '17876307704',
           nombre = document.getElementById('fNombre').value.trim(),
+          telefono = document.getElementById('fTelefono').value.trim(),
           servicio = document.getElementById('fServicio').value,
           msg = document.getElementById('fMsg').value.trim();
-      var text = 'Hola ' + biz + ', soy ' + nombre + '. Me interesa: ' + servicio + '.' + (msg ? ' ' + msg : '');
+      if(!telefono){alert('Por favor escribe tu teléfono.');return;}
+      var text = 'Hola ' + biz + ', soy ' + nombre + ' (' + telefono + '). Me interesa: ' + servicio + '.' + (msg ? ' ' + msg : '');
       window.open('https://wa.me/' + wa + '?text=' + encodeURIComponent(text), '_blank');
     });
   }
@@ -116,4 +118,24 @@
   vp.addEventListener('touchstart', pauseTemp, {passive:true});
   document.addEventListener('visibilitychange', function(){ if (document.hidden) clearInterval(timer); else restart(); });
   mark(); restart();
+})();
+/* Menú hamburguesa flotante */
+(function(){
+  var b=document.getElementById('mpBurger'),n=document.getElementById('mpNavOverlay');if(!b||!n)return;
+  function set(o){n.classList.toggle('open',o);b.setAttribute('aria-expanded',o);n.setAttribute('aria-hidden',!o);document.body.style.overflow=o?'hidden':'';}
+  b.addEventListener('click',function(){set(!n.classList.contains('open'));});
+  n.querySelector('.mp-ov-close').addEventListener('click',function(){set(false);});
+  n.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){set(false);});});
+  n.addEventListener('click',function(e){if(e.target===n)set(false);});
+})();
+
+/* Mejora elite: stagger en reveals */
+(function(){
+  try{
+    document.querySelectorAll('.gallery-grid,.gal-track,.svc-grid,.services-grid,.steps,.proceso-steps').forEach(function(grid){
+      Array.prototype.forEach.call(grid.children,function(el,i){
+        if(el.classList.contains('reveal'))el.style.transitionDelay=Math.min(i*70,420)+'ms';
+      });
+    });
+  }catch(e){}
 })();

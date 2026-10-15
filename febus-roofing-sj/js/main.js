@@ -104,8 +104,9 @@
   form.addEventListener("submit", function(e){
     e.preventDefault();
     var d = new FormData(form);
-    var msg = "Hola Febus Roofing, soy " + d.get("nombre") +
-      " (" + d.get("telefono") + "). Techo: " + d.get("servicio") + "." +
+    var msg = "Hola Febus Roofing, soy " + (d.get("nombre") || "un cliente") +
+      ". Mi teléfono es " + d.get("telefono") +
+      ". Necesito: " + d.get("servicio") + "." +
       (d.get("mensaje") ? " " + d.get("mensaje") : "") +
       " Quiero una cotización gratis.";
     window.open("https://wa.me/" + WA + "?text=" + encodeURIComponent(msg), "_blank");

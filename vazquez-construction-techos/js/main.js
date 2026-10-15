@@ -41,3 +41,16 @@
   }, {threshold: 0.12});
   document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
 })();
+
+// Formulario de cotización -> WhatsApp del negocio (mejora 2026-10-15)
+(function(){
+var qf=document.getElementById('qform');if(!qf)return;
+qf.addEventListener('submit',function(e){e.preventDefault();
+var n=document.getElementById('qNombre').value.trim();
+if(!n){document.getElementById('qNombre').focus();return;}
+var t=document.getElementById('qTel').value.trim();
+var s=document.getElementById('qServicio').value;
+var m=document.getElementById('qMsg').value.trim();
+var txt='Hola Vazquez Construction Group, soy '+n+'. Me interesa: '+s+'.'+(t?' Mi teléfono: '+t+'.':'')+(m?' '+m:'');
+window.open('https://wa.me/17873645335?text='+encodeURIComponent(txt),'_blank');});
+})();

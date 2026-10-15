@@ -71,7 +71,7 @@
 </header>
 
 <section class="gallery" id="trabajos">
-  <h2 class="section-title">Nuestros trabajos</h2>
+  <h2 class="section-title">Nuestro oficio</h2>
   <p class="section-sub">Sellado real, techo a techo.</p>
   <div class="gallery-grid">
     <figure><img src="img/gal-1.webp" alt="Aplicación de sellador blanco en techo residencial" loading="lazy"><figcaption>Sellador elastomérico</figcaption></figure>
@@ -161,6 +161,27 @@
     <p class="contact-phone"><a href="tel:+17875976536">787-597-6536</a></p>
     <a class="btn btn-sky" href="https://wa.me/17875976536?text=Hola%20V%20%26%20A%20Roofing%2C%20quiero%20cotizar%20el%20sellado%20de%20mi%20techo." target="_blank" rel="noopener">Cotizar ahora</a>
   </div>
+</section>
+
+<section class="quote" id="cotizar">
+  <h2 class="section-title">Cotiza tu sellado</h2>
+  <p class="section-sub" style="text-align:center;max-width:56ch;margin:0 auto 8px">Llena el formulario y te abrimos WhatsApp con tu mensaje listo para V &amp; A Roofing.</p>
+  <form class="qform" id="qform" novalidate>
+    <div class="qf-grid">
+      <label>Nombre*<input id="qNombre" name="nombre" type="text" placeholder="Tu nombre" required autocomplete="name"></label>
+      <label>Teléfono<input id="qTel" name="telefono" type="tel" placeholder="787-000-0000" autocomplete="tel"></label>
+      <label>Servicio que necesita<select id="qServicio" name="servicio">
+        <option>Membrana asfáltica</option>
+        <option>Sellado líquido</option>
+        <option>Pintura de techos</option>
+        <option>Reparación de filtraciones</option>
+        <option>Estimado gratis</option>
+      </select></label>
+      <label class="qf-full">Mensaje<textarea id="qMsg" name="mensaje" rows="3" placeholder="Cuéntanos del techo: pueblo, tamaño aproximado, ¿tiene filtraciones?"></textarea></label>
+    </div>
+    <button class="btn btn-sky qf-submit" type="submit">Enviar por WhatsApp</button>
+    <p class="qf-note">Al enviar, se abre WhatsApp con tu mensaje dirigido a V &amp; A Roofing (787-597-6536).</p>
+  </form>
 </section>
 
 <section class="plans" id="planes">

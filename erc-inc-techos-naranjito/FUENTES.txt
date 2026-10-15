@@ -1,0 +1,35 @@
+FUENTES — ERC Inc (sites/erc-inc-techos-naranjito/)
+=====================================================
+
+BRECHAS HONESTAS:
+- Sin redes sociales verificables: no se encontró página oficial de Facebook
+  ni Instagram del negocio en búsqueda web pública (varias consultas
+  2026-10-15). Datos de lugar de Meta AI (place_id 1584309948889189) listan
+  ERC Inc en PR-814, Naranjito, como contratista activo.
+- Logo: SIN logo real (no hay foto de perfil oficial descargable sin la
+  página de Facebook). El sitio conserva su marca SVG original (techo en
+  círculo cobre).
+- Fotos: 0 fotos reales del negocio. Las 4 imágenes de la galería
+  (img/g1.jpg..g4.jpg) vienen del lote anterior y son ilustrativas (estilo
+  stock), NO trabajo verificado del negocio. No se agregaron más fotos para
+  no presentar material ajeno como propio.
+
+Datos del negocio (verificados):
+- Nombre: ERC Inc
+- Teléfono: 787-869-6268 (WhatsApp del negocio: https://wa.me/17878696268)
+- Ubicación: Naranjito, PR — área central (PR-814)
+- Categoría: contratista general (construcción, remodelación, sellado)
+- Servicios (del contenido verificado del sitio; usados en el select del
+  formulario de cotización): construcción general, remodelación, sellado
+  de techos, reparación de filtraciones, mantenimiento de techos
+  (limpieza y resane).
+
+Mejoras aplicadas 2026-10-15 (toque ligero, sin rediseño):
+- Formulario de cotización (Nombre, Teléfono, Servicio select con TODOS
+  los servicios reales, Mensaje) antes de los planes; abre WhatsApp del
+  negocio con mensaje pre-llenado.
+- Menú hamburguesa: overlay ahora con z-index por encima del botón
+  flotante + botón propio de cerrar dentro del overlay; enlace "Cotiza"
+  agregado al menú.
+- Animaciones elite suaves: shine en botones principales (el sitio ya
+  tenía parallax en hero, reveal y shine en la foto).

@@ -34,6 +34,19 @@
 </script>
 </head>
 <body>
+<button class="mp-burger" id="mpBurger" aria-label="Abrir menú" aria-expanded="false"><span></span><span></span><span></span></button>
+<nav class="mp-nav-overlay" id="mpNavOverlay" aria-hidden="true">
+  <button class="mp-ov-close" aria-label="Cerrar menú">&times;</button>
+  <a href="#inicio">Inicio</a>
+  <a href="#galeria">Galería</a>
+  <a href="#servicios">Servicios</a>
+  <a href="#nosotros">Nosotros</a>
+  <a href="#preguntas">Preguntas</a>
+  <a href="#contacto">Contacto</a>
+  <a href="#planes">Planes web</a>
+  <a class="mp-nav-cta" href="https://wa.me/17873727436?text=Hola%20J&B%20Roofing%2C%20quiero%20una%20cotizaci%C3%B3n." target="_blank" rel="noopener">Cotizar</a>
+</nav>
+
 
 <!-- ============ HERO: claro océano + olas + diamante ============ -->
 <section class="hero" id="inicio">
@@ -163,6 +176,8 @@
       <form class="cform reveal" id="cform" data-biz="J&amp;B Roofing" data-wa="17873727436">
         <label for="fNombre">Nombre</label>
         <input id="fNombre" type="text" required placeholder="Tu nombre">
+        <label for="fTelefono">Teléfono</label>
+        <input id="fTelefono" type="tel" required placeholder="787-000-0000">
         <label for="fServicio">Servicio</label>
         <select id="fServicio"><option>Sellado de techos</option><option>Impermeabilización</option><option>Grietas y empozamientos</option><option>Lavado a presión</option><option>Otro</option></select>
         <label for="fMsg">Mensaje</label>

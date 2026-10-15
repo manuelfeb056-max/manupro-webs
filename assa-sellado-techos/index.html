@@ -32,6 +32,7 @@
   <span></span><span></span><span></span>
 </button>
 <nav class="nav-overlay" id="navOverlay" aria-hidden="true">
+  <button class="mq-close" data-mqclose aria-label="Cerrar menú">×</button>
   <a href="#inicio" data-track="nav_inicio">Inicio</a>
   <a href="#galeria" data-track="nav_galeria">Galería</a>
   <a href="#servicios" data-track="nav_servicios">Servicios</a>
@@ -221,6 +222,36 @@
       <a class="btn btn-primary big" href="https://wa.me/17872872772?text=Hola%20ASSA%20Sellado%20de%20Techos%2C%20quiero%20un%20estimado%20gratis." target="_blank" rel="noopener" data-track="cta_wa">Pedir estimado gratis</a>
       <a class="btn btn-outline big" href="tel:+17872872772" data-track="cta_tel">787-287-2772</a>
     </div>
+  </div>
+</section>
+
+<!-- COTIZADOR -->
+<section class="section quote" id="cotizar">
+  <div class="wrap">
+    <p class="sec-kicker">Cotización inmediata</p>
+    <h2 class="sec-title">Pide tu <span class="accent">estimado gratis</span></h2>
+    <p class="sec-note">Llena el formulario y te abrimos WhatsApp con tu solicitud lista para enviar. Respondemos el mismo día.</p>
+    <form id="quoteForm" class="quote-form" novalidate>
+      <div class="qf-grid">
+        <label>Tu nombre<input type="text" id="qNombre" name="nombre" placeholder="Nombre y apellido" autocomplete="name" required></label>
+        <label>Tu teléfono<input type="tel" id="qTel" name="telefono" placeholder="787-000-0000" autocomplete="tel" required></label>
+      </div>
+      <label>¿Qué servicio necesitas?
+        <select id="qServicio" name="servicio" required>
+          <option value="" disabled selected>Selecciona un servicio</option>
+          <option>Membrana asfáltica</option>
+          <option>Sellado líquido</option>
+          <option>Techo residencial</option>
+          <option>Techo industrial / comercial</option>
+          <option>Reparación de filtraciones y goteras</option>
+          <option>Estimado gratis / inspección</option>
+          <option>Otro</option>
+        </select>
+      </label>
+      <label>Cuéntanos de tu techo<textarea id="qMsg" name="mensaje" rows="3" placeholder="Ej: techo de mi casa con filtración en el cuarto principal..."></textarea></label>
+      <button type="submit" class="btn btn-primary qf-submit">Enviar por WhatsApp</button>
+      <p class="qf-note">Al enviar se abre WhatsApp con tu mensaje listo. Sin compromiso.</p>
+    </form>
   </div>
 </section>
 

@@ -1,0 +1,41 @@
+FUENTES — Techero Rivera (sites/techero-rivera-utuado/)
+============================================================
+
+Fotos (5, FOTORREALISTAS ILUSTRATIVAS — no son fotos del negocio):
+Se conservaron las imágenes fotorrealistas que ya traía el sitio.
+Muestran el proceso genérico de sellado de techos; NO se presentan
+como trabajos reales de Techero Rivera.
+
+- img/real/foto-1.jpg — Aplicación de sellador en techo con rodillo
+  (también usada como imagen del hero).
+- img/real/foto-2.jpg — Sellado en proceso.
+- img/real/foto-3.jpg — Impermeabilización de superficie.
+- img/real/foto-4.jpg — Detalle del sellado.
+- img/real/foto-5.jpg — Acabado final del techo sellado.
+
+Logo:
+- SIN LOGO REAL DISPONIBLE. No se encontró logo oficial del negocio
+  en búsquedas públicas (web + social, 2026-10-15). El sitio usa una
+  marca tipográfica "TR" con los colores del tema (verde montaña +
+  ámbar); NO es el logo del negocio y no se presenta como tal.
+
+Datos del negocio (verificados):
+- Nombre: Techero Rivera
+- Teléfono: 939-219-7376 (tel:+19392197376) — verificado en el
+  registro del lugar (place_id 921496276631243, categoría
+  Roofing Service)
+- WhatsApp: https://wa.me/19392197376
+- Ubicación: Utuado, Puerto Rico (Bo. Roncador)
+- Facebook: página oficial https://www.facebook.com/techerorivera
+  (handle confirmado en el registro del lugar; el teléfono del
+  registro +19392197376 coincide con el del negocio)
+- BRECHA HONESTA: la página de Facebook existe y el teléfono coincide,
+  pero el conector de Facebook devolvió 403 (INVALID_VIEWER_CONTEXT)
+  al intentar leer sus publicaciones y foto de perfil, y las fotos no
+  están indexadas en buscadores públicos. Sin acceso a fotos reales
+  de su trabajo, se dejaron las ilustrativas. Si el negocio provee
+  fotos reales o acceso, se reemplazan.
+- Servicios del formulario: sellado de techo, reparación de
+  filtraciones, impermeabilización, inspección y estimado
+  (servicios estándar de su categoría verificada "Roofing Service";
+  no se inventaron especialidades no verificadas).

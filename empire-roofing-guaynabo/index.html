@@ -60,11 +60,13 @@
   <svg viewBox="0 0 24 24" class="icon-close"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" fill="none"/></svg>
 </button>
 <nav class="overlay-nav" id="overlayNav" aria-hidden="true">
+  <button class="ov-close" id="ovClose" aria-label="Cerrar menú">×</button>
   <a href="#galeria">Trabajos</a>
   <a href="#servicios">Servicios</a>
   <a href="#proceso">Proceso</a>
   <a href="#cobertura">Cobertura</a>
   <a href="#faq">Preguntas</a>
+  <a href="#cotizar">Cotiza</a>
   <a href="#planes">Planes</a>
   <a href="https://wa.me/17872002782?text=Hola%20Empire%20Roofing%20Solutions%2C%20quiero%20una%20cotizaci%C3%B3n%20de%20sellado%20de%20techo" class="nav-cta">Cotizar por WhatsApp</a>
 </nav>
@@ -135,7 +137,7 @@
 <!-- ===== GALERÍA (right after hero) ===== -->
 <section class="gallery" id="galeria">
   <div class="wrap">
-    <p class="kicker">TRABAJO REAL</p>
+    <p class="kicker">Nuestro oficio</p>
     <h2 class="reveal">Del techo <em>vulnerable</em> al techo <em>imperio</em></h2>
     <p class="section-sub reveal">Residencial y comercial: cada superficie sellada con el sistema correcto para su material.</p>
     <div class="masonry">
@@ -243,6 +245,33 @@
         <div class="acc-a"><p>En Metro Office Park, Edificio 7, Suite 204, Guaynabo. Servimos Guaynabo y toda el área metropolitana de Puerto Rico.</p></div>
       </div>
     </div>
+  </div>
+</section>
+
+<!-- ===== COTIZACIÓN ===== -->
+<section class="quote" id="cotizar">
+  <div class="wrap narrow">
+    <p class="kicker reveal">COTIZA SIN COMPROMISO</p>
+    <h2 class="reveal">Pide tu <em>cotización</em></h2>
+    <p class="section-sub reveal">Llena esto y te abrimos WhatsApp con tu mensaje listo para Empire Roofing Solutions. Cotizaciones gratis.</p>
+    <form class="quote-form reveal" id="quoteForm">
+      <label>Nombre<input type="text" id="qNombre" placeholder="Tu nombre" required></label>
+      <label>Teléfono<input type="tel" id="qTel" placeholder="787-000-0000" required></label>
+      <label>Servicio que necesitas<select id="qServicio">
+        <option>Sellado con silicón</option>
+        <option>Sellado acrílico</option>
+        <option>Sellado con uretano</option>
+        <option>Membrana asfáltica</option>
+        <option>Membrana TPO</option>
+        <option>Piso en epoxy (vehicular / peatonal)</option>
+        <option>Sellado de estacionamiento multipisos</option>
+        <option>Sellado residencial</option>
+        <option>Sellado comercial</option>
+        <option>Otro</option>
+      </select></label>
+      <label>Mensaje<textarea id="qMsg" rows="3" placeholder="Cuéntanos de tu techo o proyecto"></textarea></label>
+      <button class="btn btn-primary shine" type="submit">Enviar por WhatsApp</button>
+    </form>
   </div>
 </section>
 

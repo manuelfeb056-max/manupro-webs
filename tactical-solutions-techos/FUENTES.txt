@@ -1,0 +1,67 @@
+FUENTES — Tactical Solutions Corp (sites/tactical-solutions-techos/)
+=================================================================
+
+VERIFICACIÓN DEL NEGOCIO (2026-10-15):
+- Nombre: Tactical Solutions Corp
+- Teléfono: 939-429-5098 (tel:+19394295098) — provisto como dato real por el
+  flujo de trabajo. NO verificado en fuentes públicas independientes (la cuenta
+  oficial de Instagram no publica teléfono).
+- Instagram OFICIAL VERIFICADO: @tacticalsolutionscorp
+  (https://www.instagram.com/tacticalsolutionscorp) — "Tactical Solutions Corp",
+  12 posts públicos. Bio oficial: "Landscaping & Lawn Care · Painting ·
+  Pressure Washing · Commercial & Residential · Serving All of Puerto Rico".
+  (OJO: @tactical_solutions es OTRA empresa — "Tactical Solutions Suppressors",
+  armas de fuego — NO es este negocio.)
+- Captions reales de sus posts: "Mantenimiento de áreas verdes. Represa
+  Carraizo."; "ANTES Y DESPUÉS | REPARACIÓN Y PINTURA PROFESIONAL... restauramos
+  una pared con áreas deterioradas, realizando la preparación completa de la
+  superficie, reparación, masillado, lija"; "Nos especializamos en el
+  mantenimiento y mejoramiento de propiedades comerciales, industriales,
+  gubernamentales y privadas, ofreciendo un servicio basado en calidad,
+  responsabilidad y resultados."
+
+Fotos (5, FOTORREALISTAS GENERADAS — NO son fotos reales del negocio):
+- img/t1.jpg — mantenimiento de propiedad residencial (ilustrativa)
+- img/t2.jpg — trabajo de pintura profesional (ilustrativa)
+- img/t3.jpg — lavado a presión de superficie (ilustrativa)
+- img/t4.jpg — áreas verdes mantenidas (ilustrativa)
+- img/t5.jpg — propiedad comercial atendida (ilustrativa)
+ORIGEN: imágenes fotorrealistas generadas por IA del build anterior del sitio.
+Se mantienen como ilustraciones genéricas del oficio hasta descargar fotos de
+sus posts (los endpoints de media de instagram-cli no exponen las URLs de las
+imágenes; browser.open sí lee los posts pero sin URL de imagen descargable).
+NINGUNA foto de stock de terceros, ninguna foto de otro negocio.
+
+Logo (REAL):
+- img/logo.jpg — foto de perfil OFICIAL de la cuenta de Instagram
+  @tacticalsolutionscorp (descargada 2026-10-15 vía instagram-cli,
+  "TS / TACTICAL SOLUTIONS, CORP." en círculo multicolor, 150×150px).
+  Se usa en el parche del hero (reemplazó el SVG inventado), favicon y JSON-LD. Es SU logo real,
+  no inventado.
+
+Servicios (de la bio y captions oficiales de Instagram del negocio + sellado
+de techos del posicionamiento del sitio):
+sellado de techos, pintura, reparación y pintura, lavado a presión,
+mantenimiento de áreas verdes, mantenimiento comercial, residencial.
+
+Datos del negocio:
+- Teléfono/WhatsApp: 939-429-5098 (https://wa.me/19394295098)
+- Instagram oficial: https://www.instagram.com/tacticalsolutionscorp
+- Cobertura: todo Puerto Rico
+- Formulario de cotización: envía a WhatsApp del NEGOCIO (19394295098),
+  campos Nombre (requerido), Teléfono, Servicio (select con los 7 servicios
+  reales del negocio), Mensaje. Mensaje pre-llenado con nombre, teléfono,
+  servicio y mensaje.
+
+BRECHA HONESTA: logo real conseguido; fotos de posts no descargables con las
+herramientas disponibles. Cuando se logre extraer las imágenes de sus 12 posts,
+reemplazar img/t*.jpg por fotos reales y actualizar este archivo.
+
+NOTA DE MEJORA LIGERA (2026-10-15, corrección del cliente):
+- El cliente pidió NO rediseñar: el sitio conserva su diseño original intacto.
+- Mejora ligera aplicada: (1) overlay del menú ahora va POR ENCIMA del botón
+  hamburguesa en z-index; (2) hovers elite aditivos (sheen en botones, zoom en
+  galería, reveal escalonado) sin cambiar diseño base, colores ni tipografías;
+  (3) NUEVA sección "Cotización rápida" justo antes de los planes con formulario
+  que envía a WhatsApp del NEGOCIO (wa.me/<teléfono real>) con Nombre (requerido),
+  Teléfono, Servicio (select con servicios reales del negocio) y Mensaje.

@@ -16,6 +16,7 @@
 <body data-site="humacao-roofing">
 <button class="burger" id="burger" aria-label="Abrir menú" aria-expanded="false"><span></span><span></span><span></span></button>
 <nav class="nav-overlay" id="navOverlay" aria-hidden="true">
+  <button class="menu-close" id="menuClose" aria-label="Cerrar menú">×</button>
   <a href="#inicio" data-track="nav_inicio">Inicio</a>
   <a href="#galeria" data-track="nav_galeria">Galería</a>
   <a href="#servicios" data-track="nav_servicios">Servicios</a>
@@ -95,6 +96,30 @@
     <div class="faq-item"><button class="faq-q">¿Qué áreas atienden?<span class="pm">+</span></button><div class="faq-a"><p>Estamos en Humacao y cubrimos el este: Naguabo, Las Piedras, Yabucoa, Maunabo, Patillas y pueblos cercanos.</p></div></div>
     <div class="faq-item"><button class="faq-q">¿El sellado aguanta la temporada de huracanes?<span class="pm">+</span></button><div class="faq-a"><p>Un sellado profesional bien aplicado es tu mejor defensa contra las lluvias fuertes. Recomendamos inspeccionar el techo antes de cada temporada.</p></div></div>
     <div class="faq-item"><button class="faq-q">¿Dan garantía?<span class="pm">+</span></button><div class="faq-a"><p>Sí, todo trabajo incluye garantía escrita. Si filtra en el área trabajada durante la garantía, regresamos a corregirlo.</p></div></div>
+  </div>
+</div></section>
+
+<!-- ============ COTIZACIÓN ============ -->
+<section id="cotizar"><div class="wrap">
+  <div class="quote-card reveal">
+    <p class="sec-kicker reveal" style="text-align:center">Cotización gratis</p>
+    <h2 class="sec-title reveal" style="text-align:center">Pide tu cotización</h2>
+    <p class="sec-sub reveal" style="text-align:center;margin-left:auto;margin-right:auto">Llena el formulario y te abrimos WhatsApp con tu mensaje listo para enviar.</p>
+    <form id="qform" class="qform">
+      <label>Nombre<input type="text" id="qNombre" placeholder="Tu nombre" required autocomplete="name"></label>
+      <label>Teléfono<input type="tel" id="qTel" placeholder="787-000-0000" required autocomplete="tel"></label>
+      <label>Servicio que necesita
+        <select id="qServicio">
+          <option>Sellado de techos</option>
+          <option>Reparación de goteras</option>
+          <option>Impermeabilización</option>
+          <option>Mantenimiento de techos</option>
+          <option>Inspección de techo</option>
+        </select></label>
+      <label>Mensaje<textarea id="qMsg" rows="3" placeholder="Cuéntanos de tu techo (goteras, tamaño, pueblo)..."></textarea></label>
+      <button class="btn-qf" type="submit" data-track="qform_submit">Enviar por WhatsApp</button>
+      <p class="q-note">Te respondemos al 787-850-4280.</p>
+    </form>
   </div>
 </div></section>
 

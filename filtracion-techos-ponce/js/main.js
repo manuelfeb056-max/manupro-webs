@@ -5,7 +5,8 @@
   /* Menú flotante */
   var btn=document.getElementById("menuBtn"),
       nav=document.getElementById("nav"),
-      scrim=document.getElementById("navScrim");
+      scrim=document.getElementById("navScrim"),
+      closeBtn=document.getElementById("navClose");
   function toggleNav(force){
     var open=typeof force==="boolean"?force:!nav.classList.contains("open");
     nav.classList.toggle("open",open);
@@ -14,6 +15,7 @@
     document.body.style.overflow=open?"hidden":"";
   }
   btn.addEventListener("click",function(){toggleNav();});
+  if(closeBtn) closeBtn.addEventListener("click",function(){toggleNav(false);});
   scrim.addEventListener("click",function(){toggleNav(false);});
   nav.querySelectorAll("a").forEach(function(a){a.addEventListener("click",function(){toggleNav(false);});});
 
@@ -67,4 +69,25 @@
     entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target);}});
   },{threshold:0.12});
   document.querySelectorAll(".reveal").forEach(function(el){io.observe(el);});
+})();
+
+(function(){
+  "use strict";
+  /* Formulario de cotización -> WhatsApp del negocio */
+  var qf=document.getElementById("qform");
+  if(qf) qf.addEventListener("submit",function(e){
+    e.preventDefault();
+    var n=document.getElementById("qNombre").value.trim(),
+        t=document.getElementById("qTel").value.trim(),
+        s=document.getElementById("qServicio").value,
+        m=document.getElementById("qMsg").value.trim();
+    if(!n||!t||!s){
+      if(!n)document.getElementById("qNombre").focus();
+      else if(!t)document.getElementById("qTel").focus();
+      else document.getElementById("qServicio").focus();
+      return;
+    }
+    var txt="Hola Filtración Techos, soy "+n+". Mi teléfono es "+t+". Necesito: "+s+"."+(m?" "+m:"");
+    window.open("https://wa.me/19392683546?text="+encodeURIComponent(txt),"_blank");
+  });
 })();

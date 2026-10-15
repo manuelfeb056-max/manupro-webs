@@ -16,11 +16,13 @@
 <body data-site="cortes-landscaping-techos">
 <button class="burger" id="burger" aria-label="Abrir menú" aria-expanded="false"><span></span><span></span><span></span></button>
 <nav class="nav-overlay" id="navOverlay" aria-hidden="true">
+  <button class="nav-close" id="navClose" aria-label="Cerrar menú">×</button>
   <a href="#inicio" data-track="nav_inicio">Inicio</a>
   <a href="#galeria" data-track="nav_galeria">Galería</a>
   <a href="#servicios" data-track="nav_servicios">Servicios</a>
   <a href="#proceso" data-track="nav_proceso">Proceso</a>
   <a href="#faq" data-track="nav_faq">Preguntas</a>
+  <a href="#cotizar" data-track="nav_cotizar">Cotizar</a>
   <a href="#planes" data-track="nav_planes">Planes web</a>
   <a class="nav-cta" href="https://wa.me/17873218753?text=Hola%20Corte%E2%80%99s%20Landscaping%2C%20quiero%20un%20estimado%20gratis%20de%20sellado%20de%20techo." target="_blank" rel="noopener" data-track="nav_wa">Cotizar</a>
 </nav>
@@ -48,7 +50,7 @@
 <section id="galeria"><div class="wrap">
   <p class="sec-kicker reveal">Nuestro trabajo</p>
   <h2 class="sec-title reveal">Techos que hablan por sí solos</h2>
-  <p class="sec-sub reveal">Trabajos reales de sellado: aplicación, acabado y detalle profesional.</p>
+  <p class="sec-sub reveal">El oficio en acción: aplicación, acabado y detalle profesional.</p>
   <div class="gallery-grid"><div class="g-item"><img src="img/g1.jpg" alt="Corte’s Landscaping - Aplicación de sellador" loading="lazy"><div class="g-cap">Aplicación de sellador</div></div><div class="g-item"><img src="img/g2.jpg" alt="Corte’s Landscaping - Techo sellado" loading="lazy"><div class="g-cap">Techo sellado</div></div><div class="g-item"><img src="img/g3.jpg" alt="Corte’s Landscaping - Detalle de aplicación" loading="lazy"><div class="g-cap">Detalle de aplicación</div></div><div class="g-item"><img src="img/g4.jpg" alt="Corte’s Landscaping - Acabado de membrana" loading="lazy"><div class="g-cap">Acabado de membrana</div></div></div>
 </div></section>
 <section id="servicios"><div class="wrap">
@@ -67,6 +69,39 @@
   <h2 class="sec-title reveal">Lo que nos preguntan</h2>
   <div style="margin-top:30px"><div class="faq-item"><button class="faq-q">¿Hacen estimados gratis?<span class="pm">+</span></button><div class="faq-a"><p>Sí. Visitamos tu propiedad en el área norte y te damos tu estimado sin costo ni compromiso.</p></div></div><div class="faq-item"><button class="faq-q">¿Qué pueblos cubren?<span class="pm">+</span></button><div class="faq-a"><p>Florida, Arecibo y el área norte: Quebradillas, Hatillo, Camuy, Barceloneta, Manatí y Vega Baja.</p></div></div><div class="faq-item"><button class="faq-q">¿Solo trabajan techos o también jardinería?<span class="pm">+</span></button><div class="faq-a"><p>Las dos cosas: lavado y sellado de techos, y mantenimiento de áreas verdes. Un solo equipo para tu casa completa.</p></div></div><div class="faq-item"><button class="faq-q">¿Es necesario lavar el techo antes de sellarlo?<span class="pm">+</span></button><div class="faq-a"><p>Sí. La superficie tiene que estar limpia para que el sellador adhiera bien y el trabajo dure.</p></div></div><div class="faq-item"><button class="faq-q">¿Cada cuánto se le da mantenimiento al jardín?<span class="pm">+</span></button><div class="faq-a"><p>Depende del tamaño y del tipo de plantas. Te proponemos un plan de visitas según lo que necesite tu propiedad.</p></div></div></div>
 </div></section>
+<section id="cotizar"><div class="wrap">
+  <div class="quote-card">
+    <div class="quote-grid">
+      <div>
+        <p class="sec-kicker reveal">Estimado gratis</p>
+        <h2 class="sec-title reveal">Pide tu cotización</h2>
+        <p class="sec-sub reveal">Llena esto y se abre WhatsApp con tu mensaje listo. Respondemos rápido.</p>
+        <ul class="quote-points reveal">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 7"/></svg> Inspección y estimado gratis</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 7"/></svg> Respuesta directa por WhatsApp</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 7"/></svg> Techos y áreas verdes, un solo equipo</li>
+        </ul>
+      </div>
+      <form class="qform reveal" id="quoteForm" novalidate>
+        <div class="qrow">
+          <label>Nombre<input type="text" name="nombre" placeholder="Tu nombre" required></label>
+          <label>Teléfono<input type="tel" name="telefono" placeholder="787-000-0000" required></label>
+        </div>
+        <label>Servicio que necesita
+          <select name="servicio">
+            <option>Lavado y sellado de techos</option>
+            <option>Mantenimiento de áreas verdes</option>
+            <option>Corte de grama y recorte</option>
+            <option>Otro / estimado gratis</option>
+          </select>
+        </label>
+        <label>Mensaje<textarea name="mensaje" placeholder="Cuéntanos qué necesitas..."></textarea></label>
+        <button class="btn btn-primary" type="submit">Enviar por WhatsApp</button>
+        <p class="form-note">Se abre WhatsApp con tu mensaje listo.</p>
+      </form>
+    </div>
+  </div>
+</section>
 <section id="planes"><div class="plans">
   <p class="sec-kicker reveal" style="text-align:center">Tu website profesional</p>
   <h2 class="sec-title reveal" style="text-align:center">Planes para tu negocio</h2>

@@ -57,6 +57,7 @@
   <span></span><span></span><span></span>
 </button>
 <nav class="overlay-nav" id="overlayNav" aria-hidden="true">
+  <button class="nav-close" id="navClose" aria-label="Cerrar menú">×</button>
   <div class="overlay-inner">
     <a href="#inicio">Inicio</a>
     <a href="#galeria">Trabajos</a>
@@ -297,6 +298,17 @@
           <option>Condominio</option>
           <option>Industria</option>
           <option>Otro</option>
+        </select>
+      </label>
+      <label>Servicio que necesitas
+        <select name="servicio" id="fServicio" required>
+          <option value="" disabled selected>Elige un servicio</option>
+          <option>Sellado con membrana asfáltica</option>
+          <option>Sellado con membrana elastomérica</option>
+          <option>Sellado con uretano</option>
+          <option>Sistema en fiberglass</option>
+          <option>Sistema ecoamigable</option>
+          <option>Evaluación de mi techo</option>
         </select>
       </label>
       <label>Mensaje

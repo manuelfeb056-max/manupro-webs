@@ -227,3 +227,14 @@ a.info-card:hover{background:rgba(53,196,240,.14);transform:translateX(6px)}
   .form-row{grid-template-columns:1fr}
   .hero{padding-bottom:140px}
 }
+
+/* ---------- menu: overlay por encima del boton + cierre propio, boton compacto ---------- */
+.menu-overlay{z-index:110}
+.menu-close{position:absolute;top:20px;right:20px;width:50px;height:50px;border-radius:50%;border:1px solid rgba(255,255,255,.3);background:rgba(255,255,255,.1);color:#fff;font-size:1.4rem;cursor:pointer;transition:background .25s,transform .25s;line-height:1;z-index:2}
+.menu-close:hover{background:var(--cyan);color:#0a2b4a;transform:rotate(90deg)}
+.burger{width:52px;height:52px}
+/* ---------- elite micro-hover ---------- */
+.svc-card,.step,.info-card{transition:transform .35s cubic-bezier(.2,.7,.2,1),box-shadow .35s,border-color .35s}
+.svc-card:hover{transform:translateY(-6px)}
+.btn{transition:transform .25s,box-shadow .25s,background .25s}
+.btn:hover{transform:translateY(-2px)}

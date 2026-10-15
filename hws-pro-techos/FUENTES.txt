@@ -1,0 +1,41 @@
+FUENTES — HWS-PRO (sites/hws-pro-techos/)
+===============================================
+
+Datos verificados del negocio:
+- Nombre: HWS-PRO ("AQUÍ CUMPLIMOS")
+- Teléfono: 787-210-5404 (tel:+17872105404 / wa.me/17872105404)
+- Dirección: Magnolia Gardens, calle 9 f-1, San Juan - Río Piedras, PR 00956
+- Fuente: página de socio de ClasificadosOnline
+  https://www.clasificadosonline.com/m/PartnerListingM.asp?CID=65&ID=57049
+  (socio desde 2025; teléfono y dirección coinciden con el brief)
+- Servicios REALES (de sus 15 anuncios clasificados verificados):
+  Sellado de techos, Instalación de tejas, Instalación de techos galvalum,
+  Reparaciones, Albañilería, Reparación de varilla expuesta, Pintura
+  residencial y comercial, Remodelación de baños, Remodelación general,
+  Gypsum board, Instalación de losas/mármol/piedras/mosaicos, Restauración
+  de pisos (cristalizado de mármol y terrazo), Lavado y mantenimiento de
+  pisos en barro/tejas/saltillo, Backsplash, Piscinas.
+
+LOGO: NO se encontró logo real.
+- No se encontró página oficial de Facebook ni Instagram del negocio.
+- img/logo.png es un emblema "HWS-PRO" creado en el build original, NO el
+  logo real del negocio. Se mantiene como identidad visual temporal.
+
+FOTOS: 0 fotos reales verificables del trabajo del negocio.
+- La columna "Photo" de sus anuncios en ClasificadosOnline sale vacía.
+- img/f1.webp–f5.webp son HEREDADAS del build original; su origen NO se
+  pudo verificar como trabajo real de HWS-PRO. Se mantienen como
+  ilustrativas del oficio, sin afirmar que son trabajos de este negocio.
+
+MEJORAS 2026-10-15 (mejora ligera, sin rediseño):
+- Formulario de cotización (#cotizar) antes de los planes: Nombre, Teléfono,
+  Servicio (select con los 13 servicios reales de sus anuncios) y Mensaje →
+  abre WhatsApp del negocio (wa.me/17872105404) con mensaje pre-llenado.
+- Menú hamburguesa: el panel nav ahora va POR ENCIMA del botón flotante
+  (z-index 100 > 95) y lleva su propio botón de cerrar (×).
+- Animaciones elite suaves: hover premium en botones, galería, filas de
+  servicio (desliz lateral), planes y tarjetas de contacto; zoom suave en
+  fotos — sin cambiar layout.
+
+BRECHAS HONESTAS: sin logo real, sin fotos reales, sin redes sociales.
+Teléfono, dirección y servicios verificados en ClasificadosOnline.

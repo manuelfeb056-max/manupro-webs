@@ -13,6 +13,8 @@ document.addEventListener('DOMContentLoaded', () => {
   };
   btn.addEventListener('click', () => toggle());
   nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => toggle(false)));
+  const navClose = document.getElementById('navClose');
+  if (navClose) navClose.addEventListener('click', () => toggle(false));
 
   // Acordeón FAQ
   document.querySelectorAll('.acc-item').forEach(item => {
@@ -51,4 +53,17 @@ document.addEventListener('DOMContentLoaded', () => {
     entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); } });
   }, { threshold: 0.12 });
   document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+  // Formulario de cotización -> WhatsApp del negocio
+  const qf = document.getElementById('quoteForm');
+  if (qf) qf.addEventListener('submit', e => {
+    e.preventDefault();
+    const name = document.getElementById('qName').value.trim();
+    const phone = document.getElementById('qPhone').value.trim();
+    const service = document.getElementById('qService').value;
+    const msg = document.getElementById('qMsg').value.trim();
+    if (!name) { alert('Por favor escribe tu nombre.'); document.getElementById('qName').focus(); return; }
+    const text = 'Hola Techero Rivera, soy ' + name + (phone ? ' (' + phone + ')' : '') + '. Necesito: ' + service + '.' + (msg ? ' ' + msg : '');
+    window.open('https://wa.me/19392197376?text=' + encodeURIComponent(text), '_blank');
+  });
 });

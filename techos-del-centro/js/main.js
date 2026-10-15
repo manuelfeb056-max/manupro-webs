@@ -14,6 +14,8 @@
   });
   sc.addEventListener('click', closeMenu);
   sp.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', closeMenu); });
+  var spClose = document.getElementById('spClose');
+  if (spClose) spClose.addEventListener('click', closeMenu);
 
   /* reveal */
   var io = new IntersectionObserver(function(entries){

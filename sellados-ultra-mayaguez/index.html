@@ -32,6 +32,7 @@
   <span></span><span></span><span></span>
 </button>
 <nav class="nav-overlay" id="navOverlay" aria-hidden="true">
+  <button class="m-close" id="mClose" aria-label="Cerrar menú">×</button>
   <a href="#inicio" data-track="nav_inicio">Inicio</a>
   <a href="#galeria" data-track="nav_galeria">Galería</a>
   <a href="#servicios" data-track="nav_servicios">Servicios</a>
@@ -256,6 +257,42 @@
 </section>
 
 <!-- PLANES -->
+
+<section class="qsec" id="cotiza">
+  <div class="wrap">
+    <p class="sec-kicker reveal-up">Cotización rápida</p>
+    <h2 class="sec-title reveal-up">Pide tu <span class="accent">estimado gratis</span></h2>
+    <p class="qsub reveal-up">Completa el formulario y te abrimos WhatsApp con tu mensaje listo. Sin costo ni compromiso.</p>
+    <form class="qform reveal-up" data-wa="17872249551" data-biz="Sellados Ultra" novalidate>
+      <div class="qrow">
+        <label class="qf">Nombre*
+          <input type="text" name="nombre" required autocomplete="name" placeholder="Tu nombre">
+        </label>
+        <label class="qf">Teléfono
+          <input type="tel" name="telefono" autocomplete="tel" placeholder="787-000-0000">
+        </label>
+      </div>
+      <label class="qf">Servicio que necesita
+        <select name="servicio">
+      <option>Sellado de techos residencial</option>
+      <option>Impermeabilización</option>
+      <option>Mantenimiento de sellado</option>
+      <option>Estimado gratis</option>
+      <option>Otro</option>
+        </select>
+      </label>
+      <label class="qf">Mensaje
+        <textarea name="mensaje" rows="3" placeholder="Cuéntanos del techo: tamaño, filtraciones, pueblo..."></textarea>
+      </label>
+      <button class="qbtn" type="submit">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.2 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .6l-.4.6-.5.5c-.2.2-.3.4-.1.7.2.3.9 1.5 2 2.4 1.4 1.2 2.5 1.6 2.9 1.8.3.2.5.1.7-.1l1-1.2c.2-.3.4-.2.7-.1l2 1c.3.1.5.2.6.4 0 .1 0 .6-.2 1.2z"/></svg>
+        Enviar por WhatsApp
+      </button>
+      <p class="qnote">Se abre WhatsApp con tu mensaje listo para enviar.</p>
+    </form>
+  </div>
+</section>
+
 <section class="section plans" id="planes">
   <div class="wrap">
     <p class="sec-kicker">Impulsa tu negocio</p>

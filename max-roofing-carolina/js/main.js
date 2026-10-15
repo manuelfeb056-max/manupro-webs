@@ -62,12 +62,13 @@
     var nombre = document.getElementById("fNombre").value.trim();
     var tel = document.getElementById("fTel").value.trim();
     var tipo = document.getElementById("fTipo").value;
+    var servicio = document.getElementById("fServicio").value;
     var msg = document.getElementById("fMsg").value.trim();
     if(!nombre || !tel){
       alert("Escribe tu nombre y tu teléfono para enviarte por WhatsApp.");
       return;
     }
-    var text = "Hola Max Roofing, soy " + nombre + ". Mi teléfono: " + tel +
+    var text = "Hola Max Roofing, soy " + nombre + " (" + tel + "). Servicio: " + servicio +
                ". Tipo de propiedad: " + tipo + "." + (msg ? " " + msg : "") +
                " Quiero cotizar el sellado de mi techo.";
     window.open("https://wa.me/" + WA_NUMBER + "?text=" + encodeURIComponent(text), "_blank");
@@ -86,4 +87,15 @@
       document.body.appendChild(lb);
     });
   });
+})();
+
+/* Mejora elite: stagger en reveals */
+(function(){
+  try{
+    document.querySelectorAll('.gallery-grid,.gal-track,.svc-grid,.services-grid,.steps,.proceso-steps').forEach(function(grid){
+      Array.prototype.forEach.call(grid.children,function(el,i){
+        if(el.classList.contains('reveal'))el.style.transitionDelay=Math.min(i*70,420)+'ms';
+      });
+    });
+  }catch(e){}
 })();

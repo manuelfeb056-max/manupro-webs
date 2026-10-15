@@ -1,0 +1,42 @@
+FUENTES — GG Services (sites/gg-services-sellado-caguas/)
+============================================================
+
+Datos verificados del negocio:
+- Nombre: GG Services (Juan Guzmán)
+- Teléfono: 787-469-0017 (tel:+17874690017 / wa.me/17874690017)
+- Dirección: San Rafael, Calle 3 D34, Caguas, PR (ficha Meta, place_id 9247623378594300)
+- Área de servicio: Caguas, Gurabo, San Lorenzo, Juncos, Las Piedras, Cayey, Cidra
+  (de su anuncio clasificado: info-centro-24.com/clasificado/puerto-rico/servicios/45-46572.html)
+- Servicios REALES (de su anuncio clasificado verificado):
+  sellado de techos, handyman, instalación de aires acondicionados,
+  lavado a presión, pintura. El sitio además lista sellado residencial y
+  comercial, reparación de filtraciones y estimados gratis.
+
+LOGO: NO se encontró logo real.
+- Se buscó página oficial de Facebook: la única coincidencia por nombre
+  (@ggservices, "G & G Services") es OTRO negocio (Rebecca Vernon,
+  teléfono 443-365-4581, EE.UU.) — descartada por teléfono no coincidente.
+- NO se usa ninguna imagen como "logo real": el escudo "GG" del hero es
+  un emblema decorativo creado en el build original, NO el logo del negocio.
+
+FOTOS: 0 fotos reales verificables del trabajo del negocio.
+- facebook-cli está bloqueado del lado del servidor (403 en todos los
+  comandos) y Facebook bloquea el scraping anónimo de los feeds de fotos.
+- Las fotos img/g1.jpg–g5.jpg son HEREDADAS del build original; su origen
+  NO se pudo verificar como trabajo real de GG Services. Se mantienen como
+  ilustrativas del oficio (sellado de techos en PR), sin afirmar que son
+  trabajos de este negocio.
+
+MEJORAS 2026-10-15 (mejora ligera, sin rediseño):
+- Formulario de cotización (#cotizar) antes de los planes: Nombre, Teléfono,
+  Servicio (select con los 7 servicios reales del anuncio) y Mensaje →
+  abre WhatsApp del negocio (wa.me/17874690017) con mensaje pre-llenado.
+- Menú hamburguesa: el overlay ahora va POR ENCIMA del botón flotante
+  (z-index 250 > 200) y lleva su propio botón de cerrar (×).
+- Animaciones elite suaves: hover premium en botones, tarjetas y galería
+  (lift + glow), zoom suave en fotos, transiciones cubic-bezier — sin
+  cambiar el layout ni la identidad.
+
+BRECHAS HONESTAS: sin logo real, sin fotos reales verificadas, sin redes
+sociales verificables del negocio (regla 2026-10-12). Los datos de contacto
+y servicios están verificados por clasificado + ficha Meta.

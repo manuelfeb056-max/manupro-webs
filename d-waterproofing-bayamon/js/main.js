@@ -70,3 +70,14 @@
     window.open('https://wa.me/' + WA + '?text=' + encodeURIComponent(msg), '_blank');
   });
 })();
+
+/* menu close propio del overlay */
+(function(){
+  var c=document.getElementById('menuClose');if(!c)return;
+  c.addEventListener('click',function(){
+    document.body.classList.remove('menu-open');
+    var b=document.getElementById('burger'),o=document.getElementById('menuOverlay');
+    if(b)b.setAttribute('aria-expanded','false');if(o)o.setAttribute('aria-hidden','true');
+    document.body.style.overflow='';
+  });
+})();

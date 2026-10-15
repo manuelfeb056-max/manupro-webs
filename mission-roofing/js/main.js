@@ -30,3 +30,14 @@ document.querySelectorAll('a[href^="#"]').forEach(a=>a.addEventListener('click',
   const t=document.querySelector(a.getAttribute('href'));
   if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth'});}
 }));
+
+/* Mejora elite: stagger en reveals */
+(function(){
+  try{
+    document.querySelectorAll('.gallery-grid,.gal-track,.svc-grid,.services-grid,.steps,.proceso-steps').forEach(function(grid){
+      Array.prototype.forEach.call(grid.children,function(el,i){
+        if(el.classList.contains('reveal'))el.style.transitionDelay=Math.min(i*70,420)+'ms';
+      });
+    });
+  }catch(e){}
+})();

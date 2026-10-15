@@ -12,6 +12,20 @@ if(!open){it.classList.add('open');a.style.maxHeight=a.scrollHeight+'px';}
 });
 var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target);}});},{threshold:.12});
 document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});
+
+// ---------- formulario de cotización → WhatsApp ----------
+var qf=document.getElementById('quoteForm');
+if(qf){qf.addEventListener('submit',function(e){e.preventDefault();
+var n=document.getElementById('qNombre').value.trim();
+var t=document.getElementById('qTel').value.trim();
+var s=document.getElementById('qServicio').value;
+var m=document.getElementById('qMsg').value.trim();
+var txt='Hola ERC Inc, soy '+(n||'un cliente')+'. Mi teléfono es '+t+'. Necesito: '+s+'.'+(m?' '+m:'')+' Quiero una cotización gratis.';
+window.open('https://wa.me/17878696268?text='+encodeURIComponent(txt),'_blank');});}
+
+// ---------- cerrar overlay con su propio botón ----------
+var ovc=document.getElementById('ovClose');
+if(ovc){ovc.addEventListener('click',function(){ov.classList.remove('open');btn.classList.remove('x');document.body.style.overflow='';});}
 var back=document.querySelector('.hv-back'),main=document.querySelector('.hv-main');
 if(back&&main&&window.matchMedia('(prefers-reduced-motion: no-preference)').matches){
 window.addEventListener('scroll',function(){

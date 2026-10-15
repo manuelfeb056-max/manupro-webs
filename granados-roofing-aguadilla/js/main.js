@@ -63,3 +63,17 @@
     topbar.style.boxShadow=window.scrollY>10?'0 8px 30px rgba(0,0,0,.35)':'none';
   },{passive:true});
 })();
+
+// ---------- mejora elite 2026-10-15: botón cerrar del menú ----------
+(function(){var c=document.getElementById('navClose'),nav=document.getElementById('nav'),scrim=document.getElementById('navScrim');
+if(c&&nav){c.addEventListener('click',function(){nav.classList.remove('open');if(scrim)scrim.classList.remove('on');});}})();
+
+// ---------- mejora elite 2026-10-15: formulario de cotización → WhatsApp ----------
+(function(){var qf=document.getElementById('qform');if(!qf)return;
+qf.addEventListener('submit',function(e){e.preventDefault();
+var n=document.getElementById('qNombre').value.trim(),
+    t=document.getElementById('qTel').value.trim(),
+    s=document.getElementById('qServicio').value,
+    m=document.getElementById('qMsg').value.trim();
+var txt='Hola Granados Roofing and Paint, soy '+(n||'un cliente')+'. Mi teléfono es '+(t||'—')+'. Necesito: '+s+'.'+(m?' '+m:'');
+window.open('https://wa.me/19392242416?text='+encodeURIComponent(txt),'_blank');});})();

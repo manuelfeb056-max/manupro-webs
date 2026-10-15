@@ -1,0 +1,28 @@
+FUENTES — Coast to Coast Roofing Contractors (sites/coast-to-coast-roofing-ponce/)
+=================================================================================
+
+DATOS VERIFICADOS:
+- Nombre: Coast to Coast Roofing Contractors
+- Teléfono: 787-637-1547 (coincide con el listado)
+- Dirección: 1009 Urb Sombras del Real, Ponce, Puerto Rico
+- Fuente: https://www.puertoricoindex.com/company/51726/Coast_to_Coast_Roofing_Contractors
+  y SuperPagesPR (Contratistas por especialidad / Techos)
+
+REDES SOCIALES: NO se encontró Facebook ni Instagram oficial en búsquedas
+web (2026-10-15). Solo directorios.
+
+FOTOS REALES: 0. Sin redes accesibles no se pudieron obtener fotos de su
+trabajo. Las fotos f1-f4 existentes en img/ se dejaron intactas por orden
+del cliente ("no la toques mucho").
+
+LOGO REAL: no disponible (sin redes sociales). Se mantuvo el logo.svg
+existente.
+
+MEJORA LIGERA APLICADA 2026-10-15:
+- Formulario de cotización a WhatsApp (Nombre, Teléfono, Servicio <select>
+  con sus servicios reales: sellado, reparación, impermeabilización,
+  detalles y uniones, inspección, Mensaje) antes de los planes,
+  abre wa.me/17876371547 con mensaje pre-llenado.
+- Menú: nav por ENCIMA del botón (z-index 210), con botón de cerrar propio;
+  botón hamburguesa compacto (52px).
+- Animaciones: reveal on scroll (ya existía) + hovers premium suaves.

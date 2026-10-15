@@ -1,0 +1,34 @@
+FUENTES — Techos Ultraflex (sites/techos-ultraflex-pr/)
+============================================================
+
+Fotos (4, FOTORREALISTAS ILUSTRATIVAS — no son fotos del negocio):
+Se conservaron las imágenes fotorrealistas que ya traía el sitio.
+Muestran el proceso genérico de sellado de techos; NO se presentan
+como trabajos reales de Techos Ultraflex.
+
+- img/real/foto-1.jpg — Proceso de sellado de techo (hero).
+- img/real/foto-2.jpg — Aplicación de sellador.
+- img/real/foto-3.jpg — Impermeabilización.
+- img/real/foto-4.jpg — Detalle del sellado.
+
+Logo:
+- SIN LOGO REAL DISPONIBLE. No se encontró página de Facebook ni
+  fotos del negocio en búsquedas públicas (web + social,
+  2026-10-15). El sitio usa una marca tipográfica "TU" con los
+  colores del tema (cian acero + navy); NO es el logo del negocio
+  y no se presenta como tal.
+
+Datos del negocio (verificados):
+- Nombre: Techos Ultraflex
+- Teléfono: 787-944-5946 (tel:+17879445946) — verificado en
+  es.infopaginas.com (categoría Techos / Consultores, San Juan)
+- WhatsApp: https://wa.me/17879445946
+- Área: San Juan / Puerto Rico
+- BRECHA HONESTA: no se encontró red social verificable ni fotos
+  del trabajo real del negocio en fuentes públicas. Se dejaron las
+  imágenes ilustrativas. Si el negocio provee material real,
+  se reemplaza.
+- Servicios del formulario: sellado de techo, reparación de
+  filtraciones, impermeabilización, inspección y estimado
+  (servicios estándar de su categoría verificada; no se inventaron
+  especialidades no verificadas).

@@ -41,10 +41,12 @@
 
 <button class="menu-btn" id="menuBtn" aria-label="Abrir menú"><span></span><span></span><span></span></button>
 <nav class="nav" id="nav" aria-label="Navegación principal">
+  <button class="nav-close" id="navClose" aria-label="Cerrar menú">×</button>
   <a href="#inicio">Inicio</a>
   <a href="#trabajos">Trabajos</a>
   <a href="#servicios">Servicios</a>
   <a href="#preguntas">Preguntas</a>
+  <a href="#cotizacion">Cotización</a>
   <a href="#planes">Planes</a>
   <a href="#contacto">Contacto</a>
   <a class="nav-cta" href="https://wa.me/19392683546?text=Hola%20Filtraci%C3%B3n%20Techos%2C%20quiero%20una%20cotizaci%C3%B3n%20para%20mi%20techo." target="_blank" rel="noopener">Cotizar</a>
@@ -167,6 +169,44 @@
       <details class="faq-item reveal"><summary>¿El sellado incluye el lavado del techo?<span class="fx">+</span></summary><div class="fa">Sí. Antes de sellar lavamos el techo a presión para que el recubrimiento adhiera correctamente.</div></details>
       <details class="faq-item reveal"><summary>¿Dónde están ubicados?<span class="fx">+</span></summary><div class="fa">Estamos en la Calle Messier, Ponce, Puerto Rico. Atendemos Ponce y pueblos cercanos.</div></details>
       <details class="faq-item reveal"><summary>¿Cómo pido una cotización?<span class="fx">+</span></summary><div class="fa">Por WhatsApp al <a href="https://wa.me/19392683546" target="_blank" rel="noopener">939-268-3546</a>. Envíanos fotos de tu techo y te orientamos.</div></details>
+    </div>
+  </div>
+</section>
+
+<!-- ============ COTIZACIÓN ============ -->
+<section class="section quote" id="cotizacion">
+  <div class="wrap">
+    <p class="kicker reveal">Cotización por WhatsApp</p>
+    <h2 class="h2 reveal">Pide tu cotización</h2>
+    <p class="sec-sub reveal">Llena el formulario y te abrimos WhatsApp con tu mensaje listo. Envíanos fotos de tu techo y te orientamos.</p>
+    <div class="quote-card reveal">
+      <form id="qform" novalidate>
+        <div class="q-grid">
+          <label>Nombre
+            <input id="qNombre" type="text" name="nombre" placeholder="Tu nombre" autocomplete="name" required>
+          </label>
+          <label>Teléfono
+            <input id="qTel" type="tel" name="telefono" placeholder="939-000-0000" autocomplete="tel" required>
+          </label>
+        </div>
+        <label>Servicio que necesitas
+          <select id="qServicio" name="servicio" required>
+            <option value="" disabled selected>Elige un servicio</option>
+            <option>Sellado de techos</option>
+            <option>Reparación de filtraciones</option>
+            <option>Lavado a presión</option>
+            <option>Impermeabilización</option>
+          </select>
+        </label>
+        <label>Mensaje
+          <textarea id="qMsg" name="mensaje" rows="3" placeholder="Cuéntanos de tu techo: goteras, manchas, pueblo..."></textarea>
+        </label>
+        <button class="btn btn-wa btn-lg" type="submit">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.4 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.4 0 .6l-.4.6-.5.5c-.2.2-.3.4-.1.7.2.3.9 1.5 2 2.4 1.4 1.2 2.5 1.6 2.9 1.8.3.2.5.1.7-.1l1-1.2c.2-.3.4-.2.7-.1l2 1c.3.1.5.2.6.4 0 .1 0 .7-.2 1.3z"/></svg>
+          Enviar cotización por WhatsApp
+        </button>
+        <p class="q-note">Al enviar se abre WhatsApp al 939-268-3546 con tu mensaje listo.</p>
+      </form>
     </div>
   </div>
 </section>

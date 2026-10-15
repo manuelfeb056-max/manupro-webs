@@ -1,0 +1,29 @@
+FUENTES — Colon Waterproofing Inc (sites/colon-waterproofing-trujillo/)
+======================================================================
+
+DATOS VERIFICADOS:
+- Nombre: Colon Waterproofing Inc
+- Teléfonos: 787-768-6094 / 787-698-3484 (ambos publicados por el negocio)
+- Dirección: Carr 844, 3 Cll Betania, Trujillo Alto, PR
+- 27 años de experiencia dedicados al sellado de techo, estimados gratis
+- Horario: Lun–Sáb 7:00am–4:00pm
+- Facebook OFICIAL: https://www.facebook.com/colonwaterproofinginc
+  (verificado: dirección y teléfono coinciden con el negocio)
+- Website: colonwaterproofing.com (caído al 2026-10-15, no responde)
+
+FOTOS REALES: 0 descargables. La página de Facebook existe pero los canales
+de extracción están bloqueados desde este entorno: facebook-cli devuelve
+403 (INVALID_VIEWER_CONTEXT, deshabilitado por Meta), graph API requiere
+token, curl directo a facebook.com es bloqueado por bot-detection. Las fotos
+de la galería existente se dejaron intactas por orden del cliente.
+
+LOGO REAL: no descargable por el bloqueo de Meta. Se mantuvo la marca
+existente del sitio.
+
+MEJORA LIGERA APLICADA 2026-10-15:
+- Formulario de cotización a WhatsApp (Nombre, Teléfono, Servicio <select>:
+  sellado de techo, reparación de filtraciones, mantenimiento, Mensaje)
+  antes de los planes, abre wa.me/17877686094 con mensaje pre-llenado.
+- Menú: panel por ENCIMA del botón (z-index 130), con botón de cerrar
+  propio; botón hamburguesa compacto (52px).
+- Animaciones: reveal on scroll (ya existía, clase .rv) + hovers premium.

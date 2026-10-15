@@ -1,0 +1,38 @@
+FUENTES — Embelleciendo Techos del Este y Pintura (sites/embelleciendo-techos-este/)
+==================================================================================
+
+BRECHAS HONESTAS:
+- Sin redes sociales verificables: no se encontró página oficial de Facebook
+  ni Instagram del negocio en búsqueda web pública (varias consultas
+  2026-10-15). Datos de lugar de Meta AI (place_id 936999541928720) listan el
+  negocio en 51 Calle Jesús de Piñero, Las Piedras, PR, con teléfono
+  +1 931-458-0010 — pero el código de área 931 NO es de Puerto Rico (787/939),
+  por lo que ese teléfono NO se considera verificado y NO se usa en el sitio.
+- Teléfono: el cliente (Manupro) indicó "sin teléfono registrado". TODOS los
+  CTAs, el WhatsApp flotante y el formulario de cotización usan el número de
+  Manupro https://wa.me/17873128042. El sitio NO muestra ningún teléfono del
+  negocio (se eliminó el 931-458-0010 del lote anterior).
+- Logo: SIN logo real (no hay foto de perfil oficial descargable sin la
+  página de Facebook). El sitio conserva su medallón SVG original.
+- Fotos: 0 fotos reales del negocio. Las 4 imágenes de la galería
+  (img/g1.jpg..g4.jpg) vienen del lote anterior y son ilustrativas (estilo
+  stock), NO trabajo verificado del negocio. No se agregaron más fotos para
+  no presentar material ajeno como propio.
+
+Datos del negocio:
+- Nombre: Embelleciendo Techos del Este y Pintura
+- Ubicación: Las Piedras, PR — área este (Humacao/Fajardo)
+- Servicios (del contenido del sitio; usados en el select del formulario):
+  sellado de techos, pintura exterior de casa, sellado de techo de zinc/metal,
+  reparación de filtraciones, paquete sellado + pintura.
+
+Mejoras aplicadas 2026-10-15 (toque ligero, sin rediseño):
+- Teléfono no verificado eliminado de todo el sitio (meta, JSON-LD, FAQ,
+  footer, CTAs); CTAs ahora al WhatsApp de Manupro 17873128042.
+- Formulario de cotización (Nombre, Teléfono, Servicio select con TODOS
+  los servicios reales, Mensaje) antes de los planes; abre WhatsApp de
+  Manupro con mensaje pre-llenado nombrando el negocio.
+- Menú hamburguesa: overlay ahora con z-index por encima del botón
+  flotante + botón propio de cerrar dentro del overlay; enlace "Cotiza"
+  agregado al menú.
+- Animaciones elite suaves: shine en botones primarios.

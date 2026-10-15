@@ -155,3 +155,37 @@ footer a{color:var(--ember);text-decoration:none}
 /* reveal */
 .reveal{opacity:0;transform:translateY(26px);transition:opacity .7s,transform .7s}
 .reveal.visible{opacity:1;transform:none}
+
+/* ===== mejora elite 2026-10-15: menú por encima del botón + cierre propio ===== */
+.nav-overlay{z-index:210}
+.menu-close{position:absolute;top:22px;right:24px;width:54px;height:54px;border-radius:50%;border:1px solid rgba(255,255,255,.35);background:rgba(255,255,255,.08);color:var(--cream);font-size:1.9rem;line-height:1;cursor:pointer;transition:background .25s,transform .3s;z-index:2}
+.menu-close:hover{background:var(--brick);transform:rotate(90deg)}
+
+/* ===== mejora elite 2026-10-15: formulario de cotización ===== */
+.quote-card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:clamp(30px,5vw,54px);box-shadow:0 24px 70px rgba(180,67,42,.14);position:relative;overflow:hidden;max-width:900px;margin:0 auto}
+.quote-card::before{content:"";position:absolute;top:0;left:0;right:0;height:6px;background:linear-gradient(90deg,var(--brick),var(--ember))}
+.qform{display:grid;grid-template-columns:1fr 1fr;gap:16px;max-width:720px;margin:26px auto 0;text-align:left}
+.qform label{display:block;font-weight:700;font-size:.93rem;color:var(--char)}
+.qform label:nth-child(3),.qform label:nth-child(4){grid-column:1/-1}
+.qform input,.qform select,.qform textarea{width:100%;margin-top:8px;background:var(--cream);border:1.5px solid var(--line);border-radius:10px;padding:14px 16px;font-family:inherit;font-size:1rem;color:var(--char);outline:none;transition:border-color .25s,box-shadow .25s}
+.qform input:focus,.qform select:focus,.qform textarea:focus{border-color:var(--brick);box-shadow:0 0 0 4px rgba(180,67,42,.12)}
+.btn-qf{grid-column:1/-1;background:var(--brick);color:#fff;border:0;border-radius:10px;padding:17px;font-family:'Oswald',sans-serif;font-size:1.05rem;letter-spacing:.08em;text-transform:uppercase;cursor:pointer;transition:transform .3s cubic-bezier(.2,.7,.2,1),box-shadow .3s}
+.btn-qf:hover{transform:translateY(-3px);box-shadow:0 16px 36px rgba(180,67,42,.45)}
+.q-note{grid-column:1/-1;text-align:center;color:var(--mut);font-size:.9rem;margin:0}
+@media(max-width:640px){.qform{grid-template-columns:1fr}}
+
+/* ===== mejora elite 2026-10-15: animaciones suaves ===== */
+.g-item{transition:transform .4s cubic-bezier(.2,.7,.2,1),box-shadow .4s}
+.g-item:hover{transform:translateY(-8px);box-shadow:0 22px 44px rgba(30,26,23,.16)}
+.g-item img{transition:transform .6s cubic-bezier(.2,.7,.2,1)}
+.g-item:hover img{transform:scale(1.05)}
+.svc{transition:transform .4s cubic-bezier(.2,.7,.2,1),box-shadow .4s}
+.svc:hover{transform:translateY(-8px);box-shadow:0 22px 44px rgba(30,26,23,.14)}
+.step{transition:transform .4s cubic-bezier(.2,.7,.2,1)}
+.step:hover{transform:translateY(-5px)}
+.plan{transition:transform .4s cubic-bezier(.2,.7,.2,1),box-shadow .4s}
+.plan:hover{transform:translateY(-6px)}
+.btn-primary,.btn-ghost,.btn-final{transition:transform .3s cubic-bezier(.2,.7,.2,1),box-shadow .3s,background .3s}
+.btn-final:hover{transform:translateY(-3px);box-shadow:0 16px 36px rgba(180,67,42,.5)}
+.burger{transition:transform .25s}
+.burger:hover{transform:scale(1.07)}

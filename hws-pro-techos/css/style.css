@@ -153,3 +153,39 @@ a.info-card:hover{border-color:var(--red);transform:translateY(-3px)}
   .gal-card{flex-basis:78%}
   .svc-row{grid-template-columns:52px 1fr 30px}
 }
+
+/* ===== mejora elite 2026-10-15: menú por encima del botón + cierre propio ===== */
+.nav{z-index:100}
+.nav-close{position:absolute;top:20px;right:22px;width:52px;height:52px;border-radius:50%;border:1px solid rgba(255,255,255,.35);background:rgba(255,255,255,.07);color:#eef1f5;font-size:1.9rem;line-height:1;cursor:pointer;transition:background .25s,transform .3s;z-index:2}
+.nav-close:hover{background:var(--red);transform:rotate(90deg)}
+
+/* ===== mejora elite 2026-10-15: formulario de cotización ===== */
+.quote-card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:clamp(30px,5vw,56px);box-shadow:0 24px 70px rgba(214,40,40,.16);position:relative;overflow:hidden}
+.quote-card::before{content:"";position:absolute;top:0;left:0;right:0;height:6px;background:linear-gradient(90deg,var(--red),#ff7a5c)}
+.quote-head{text-align:center;max-width:640px;margin:0 auto 28px}
+.quote-head .sec-sub{margin-bottom:0}
+.qform{display:grid;grid-template-columns:1fr 1fr;gap:16px;max-width:760px;margin:0 auto}
+.qform label{display:block;font-weight:600;font-size:.93rem;color:var(--ink)}
+.qform label:nth-child(3),.qform label:nth-child(4){grid-column:1/-1}
+.qform input,.qform select,.qform textarea{width:100%;margin-top:8px;background:var(--deep);border:1.5px solid var(--line);border-radius:8px;padding:14px 16px;font-family:var(--font);font-size:1rem;color:var(--ink);outline:none;transition:border-color .25s,box-shadow .25s}
+.qform input:focus,.qform select:focus,.qform textarea:focus{border-color:var(--red);box-shadow:0 0 0 4px rgba(214,40,40,.18)}
+.qform select option{background:var(--deep)}
+.qbtn{grid-column:1/-1;justify-content:center}
+.q-note{grid-column:1/-1;text-align:center;color:var(--muted);font-size:.9rem;margin:0}
+@media(max-width:640px){.qform{grid-template-columns:1fr}}
+
+/* ===== mejora elite 2026-10-15: animaciones suaves ===== */
+.btn{transition:transform .3s cubic-bezier(.2,.7,.2,1),box-shadow .3s,background .3s}
+.btn:hover{transform:translateY(-3px);box-shadow:0 14px 34px rgba(214,40,40,.4)}
+.gal-card{transition:transform .4s cubic-bezier(.2,.7,.2,1),box-shadow .4s}
+.gal-card:hover{transform:translateY(-8px);box-shadow:0 22px 44px rgba(0,0,0,.5)}
+.gal-card img{transition:transform .6s cubic-bezier(.2,.7,.2,1)}
+.gal-card:hover img{transform:scale(1.05)}
+.svc-row{transition:transform .35s cubic-bezier(.2,.7,.2,1),background .35s,border-color .35s}
+.svc-row:hover{transform:translateX(8px)}
+.plan{transition:transform .4s cubic-bezier(.2,.7,.2,1),box-shadow .4s}
+.plan:hover{transform:translateY(-6px)}
+.info-card{transition:transform .4s cubic-bezier(.2,.7,.2,1),box-shadow .4s}
+.info-card:hover{transform:translateY(-6px);box-shadow:0 18px 40px rgba(0,0,0,.45)}
+.menu-btn{transition:transform .25s}
+.menu-btn:hover{transform:scale(1.07)}

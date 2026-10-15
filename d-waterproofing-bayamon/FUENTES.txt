@@ -1,0 +1,32 @@
+FUENTES — D Waterproofing Corp (sites/d-waterproofing-bayamon/)
+===============================================================
+
+DATOS VERIFICADOS:
+- Nombre: D Waterproofing Corp
+- Teléfono: 787-787-9055
+- Dirección: #291 Carr 864 Km 1.6 Int, Bo Hato Tejas, Bayamón, PR 00959
+- Desde 1994. Contratistas de sellado residencial e industrial.
+- Certificaciones: DACO y Administración de Servicios Generales (ASG).
+- Instaladores certificados: Danosa, Soprema, Johns Manville, Carlisle,
+  Hydro Stop, Republic, Neoguard, Met Fab, Siplast, Firestone.
+- Servicios: sellado de techos (roof sealing), cemento liviano (lightweight
+  cement), fabricación de metales a la medida, techos galvalum standing seam.
+- Horario: Lun–Vie 7:00am–4:00pm
+- Emails: dwaterproofingpr@gmail.com / deborah.dwaterproofing@gmail.com
+- Fuentes: Infopáginas (en.infopaginas.com/b/bayamon/d-waterproofing-corp-metal-roofing-and-waterproofing-contractors),
+  Manta, BBB, directorio DBE PRHTA 2024.
+
+REDES SOCIALES: NO se encontró Facebook ni Instagram oficial en búsquedas
+web (2026-10-15).
+
+FOTOS REALES: 0 descargables. Las fotos existentes se dejaron intactas por
+orden del cliente.
+
+MEJORA LIGERA APLICADA 2026-10-15:
+- El formulario de cotización YA EXISTÍA y es correcto (Nombre, Teléfono,
+  Pueblo, Servicio <select> con servicios reales, Mensaje → wa.me/17877879055
+  con mensaje pre-llenado incluyendo teléfono). No se tocó.
+- Menú: overlay por ENCIMA del botón (z-index 110), con botón de cerrar
+  propio; botón hamburguesa compacto (52px).
+- Animaciones: reveal on scroll + hero con slowzoom (ya existían) +
+  hovers premium suaves agregados.

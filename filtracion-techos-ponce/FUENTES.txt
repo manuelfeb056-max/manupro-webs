@@ -1,0 +1,37 @@
+FUENTES — Filtración Techos (sites/filtracion-techos-ponce/)
+============================================================================
+
+INVESTIGACIÓN (2026-10-15):
+- Google Places: place_id 1250207816078156 — "Filtración Techos", Contractor,
+  dirección 3509 Cll Messier, Ponce, PR 00717, teléfono +1 939-268-3546
+  (VERIFICADO: coincide con el dado), estado abierto. GALERÍA DE FOTOS: VACÍA
+  (sin imágenes del negocio en el perfil).
+- Sitio oficial declarado: https://filtracion-techos.negocio.site/ — CAÍDO
+  (HTTP 404 al momento de la verificación). No se pudo recuperar logo ni fotos.
+- Página oficial de Facebook: NO ENCONTRADA. Búsquedas exhaustivas
+  (nombre+pueblo, nombre+teléfono en varios formatos, "site:facebook.com",
+  Instagram, variaciones) no devolvieron ninguna página de Facebook verificable
+  de este negocio con el teléfono 939-268-3546.
+- Instagram oficial: NO ENCONTRADO.
+
+Datos verificados del negocio:
+- Nombre: Filtración Techos
+- Teléfono: 939-268-3546 (wa.me/19392683546) — coincide con el dado
+- Dirección: 3509 Calle Messier, Ponce, PR 00717
+- Categoría: Contractor
+
+RESULTADO: SIN MATERIAL REAL — sin página de Facebook/Instagram verificable ni
+galería en Google, no se puede descargar logo ni fotos reales del negocio. No
+se inventó ni se usó material de terceros. El sitio queda con su galería
+original (img/f1-f4.jpg) y su logo.svg.
+
+BRECHA HONESTA: el perfil de Google del negocio existe y el teléfono coincide,
+pero no tiene fotos. Si el negocio activa su página filtracion-techos.negocio.site
+o comparte su Facebook, las fotos reales se integran en una fase futura.
+
+MEJORA APLICADA (2026-10-15, batch 2 grupo C, mejora ligera):
+- Formulario de cotización (Nombre, Teléfono, Servicio, Mensaje) -> WhatsApp
+  del negocio (939-268-3546) con mensaje pre-llenado, antes de los planes.
+- Menú flotante: overlay (nav) por encima del botón en z-index (nav z-95,
+  scrim z-90, botón z-80), con botón propio de cerrar "×"; botón compacto (56px).
+- Hover premium en tarjetas de galería y servicios; reveal on scroll ya existía.

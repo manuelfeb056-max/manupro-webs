@@ -1,0 +1,50 @@
+FUENTES — Rafael Roofing Inc. (rafael-roofing-pr)
+==================================================
+
+Página oficial de Facebook: https://www.facebook.com/Rafael-Roofing-107763680881721
+  Hallada enlazada desde su ficha oficial en Infopáginas
+  (https://infopaginas.com/b/mayaguez/rafael-roofing-inc).
+  NOTA: la página no devolvió datos públicos en este entorno (login wall);
+  el material fotográfico verificado se tomó del SITIO OFICIAL del negocio.
+Instagram oficial: https://www.instagram.com/rafaelroofinginc/ (enlazado en la
+  misma ficha; no se pudo extraer material público en este entorno).
+Sitio web oficial: https://rafaelroofingpr.com/
+
+Datos verificados:
+  - Nombre: Rafael Roofing Inc.
+  - Teléfono: 787-832-8969 — VERIFICADO (aparece en rafaelroofingpr.com y en
+    su ficha de Infopáginas). Coincide con el dado.
+  - Segundo teléfono publicado: 787-433-5056 (emergencias)
+  - Área: servicio a toda la isla (base Mayagüez)
+
+Logo:
+  - img/logo.png — logo OFICIAL descargado de su sitio web
+    (259x153, PNG con fondo blanco).
+    Fuente: https://rafaelroofingpr.com/wp-content/uploads/2023/09/Logo-Rafael-Roofing.png
+
+Fotos reales (10): trabajos de impermeabilización con membrana asfáltica,
+subidas por el negocio a la biblioteca de medios de su sitio oficial
+(fotos tipo WhatsApp: IMG-2024/2025-WA...). Redimensionadas a máx 1920px
+y comprimidas a JPG calidad 82. Se excluyeron imágenes de stock del
+template del sitio (slugs worker-performs-overhaul, engineer-helmet, etc.).
+
+  - img/real/foto-1.jpg — Obrero aplicando membrana asfáltica con soplete en techo plano.
+    Fuente: https://rafaelroofingpr.com/wp-content/uploads/2025/08/IMG-20250518-WA0022.jpg
+  - img/real/foto-2.jpg — Techo con membrana de aluminio recién instalada.
+    Fuente: https://rafaelroofingpr.com/wp-content/uploads/2025/08/IMG-20250518-WA0018.jpg
+  - img/real/foto-3.jpg — Techo con membrana, ventilaciones y unidades de aire.
+    Fuente: https://rafaelroofingpr.com/wp-content/uploads/2025/08/IMG-20250303-WA0012.jpg
+  - img/real/foto-4.jpg — Calentador solar instalado sobre techo con membrana.
+    Fuente: https://rafaelroofingpr.com/wp-content/uploads/2025/08/IMG-20250303-WA0007.jpg
+  - img/real/foto-5.jpg — Techo en proceso: rollos de membrana y materiales en sitio.
+    Fuente: https://rafaelroofingpr.com/wp-content/uploads/2025/08/IMG-20250224-WA0002.jpg
+  - img/real/foto-6.jpg — Instalación parcial de membrana, underlayment negro visible.
+    Fuente: https://rafaelroofingpr.com/wp-content/uploads/2025/08/IMG-20250128-WA0001.jpg
+  - img/real/foto-7.jpg — Detalle de costuras de membrana con cubeta de primer.
+    Fuente: https://rafaelroofingpr.com/wp-content/uploads/2025/08/IMG-20250124-WA0019.jpg
+  - img/real/foto-8.jpg — Balcón/terraza sellado con membrana.
+    Fuente: https://rafaelroofingpr.com/wp-content/uploads/2025/08/IMG-20241228-WA0006.jpg
+  - img/real/foto-9.jpg — Borde de techo sellado terminado con baranda.
+    Fuente: https://rafaelroofingpr.com/wp-content/uploads/2025/08/IMG-20241228-WA0005.jpg
+  - img/real/foto-10.jpg — Techo sellado mojado (prueba de agua) con edificios de fondo.
+    Fuente: https://rafaelroofingpr.com/wp-content/uploads/2025/08/IMG-20241113-WA0005.jpg

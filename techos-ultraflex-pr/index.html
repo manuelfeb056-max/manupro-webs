@@ -46,11 +46,13 @@
   <span></span><span></span><span></span>
 </button>
 <nav class="overlay-nav" id="overlayNav" aria-hidden="true">
+  <button class="nav-close" id="navClose" aria-label="Cerrar menú">&times;</button>
   <a href="#inicio">Inicio</a>
   <a href="#trabajos">Trabajos</a>
   <a href="#sistema">El sistema</a>
   <a href="#servicios">Servicios</a>
   <a href="#faq">Preguntas</a>
+  <a href="#cotizacion">Cotización</a>
   <a href="#planes">Planes</a>
   <a href="#contacto">Contacto</a>
   <a class="nav-cta" href="https://wa.me/17879445946?text=Hola%20Techos%20Ultraflex%2C%20quiero%20una%20cotizaci%C3%B3n%20gratis." target="_blank" rel="noopener">Cotizar por WhatsApp</a>
@@ -229,6 +231,34 @@
         <p>Sí. Todo trabajo se entrega con garantía por escrito y te explicamos el cuidado básico para mantener el sistema.</p>
       </details>
     </div>
+  </div>
+</section>
+
+<!-- ============ COTIZACIÓN ============ -->
+<section class="section quote-sec" id="cotizacion">
+  <div class="wrap">
+    <p class="kicker reveal">Cotización gratis</p>
+    <h2 class="reveal">Pide tu estimado por WhatsApp</h2>
+    <p class="quote-sub reveal">Completa el formulario y se abre WhatsApp con tu mensaje listo para enviarlo directo a Techos Ultraflex.</p>
+    <form class="quote-form reveal" id="quoteForm" novalidate>
+      <div class="q-grid">
+        <label>Nombre<input type="text" id="qName" placeholder="Tu nombre" required autocomplete="name"></label>
+        <label>Teléfono<input type="tel" id="qPhone" placeholder="787-000-0000" autocomplete="tel"></label>
+      </div>
+      <label>Servicio que necesita
+        <select id="qService">
+          <option>Sellado residencial</option>
+          <option>Sellado comercial</option>
+          <option>Membrana elastomérica ultraflex</option>
+          <option>Reparación de filtraciones</option>
+          <option>Impermeabilización</option>
+          <option>Otro</option>
+        </select>
+      </label>
+      <label>Mensaje<textarea id="qMsg" rows="4" placeholder="Cuéntanos sobre tu techo: tamaño, filtraciones, pueblo..."></textarea></label>
+      <button type="submit" class="btn btn-aqua btn-q">Enviar por WhatsApp</button>
+      <p class="q-note">Al enviar, se abre WhatsApp con tu mensaje listo para Techos Ultraflex (787-944-5946).</p>
+    </form>
   </div>
 </section>
 

@@ -63,3 +63,20 @@
     topbar.style.boxShadow=window.scrollY>10?'0 8px 30px rgba(58,44,34,.18)':'none';
   },{passive:true});
 })();
+
+/* Formulario de cotización -> WhatsApp del negocio (mejora 2026-10-15) */
+(function(){
+  "use strict";
+  var qf = document.getElementById('qform');
+  if (!qf) return;
+  qf.addEventListener('submit', function(e){
+    e.preventDefault();
+    var n = document.getElementById('qNombre').value.trim();
+    if (!n) { document.getElementById('qNombre').focus(); return; }
+    var t = document.getElementById('qTel').value.trim();
+    var s = document.getElementById('qServicio').value;
+    var m = document.getElementById('qMsg').value.trim();
+    var txt = 'Hola Zero Leak Roofing, soy ' + n + '. Me interesa: ' + s + '.' + (t ? ' Mi teléfono: ' + t + '.' : '') + (m ? ' ' + m : '');
+    window.open('https://wa.me/17879027405?text=' + encodeURIComponent(txt), '_blank');
+  });
+})();

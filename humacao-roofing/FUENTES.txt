@@ -1,0 +1,41 @@
+FUENTES — Humacao Roofing (sites/humacao-roofing/)
+======================================================
+
+Datos verificados del negocio:
+- Nombre: Humacao Roofing (FB: "Humacao Maintenance & Roofing Service Inc.")
+- Teléfono: 787-850-4280 (tel:+17878504280 / wa.me/17878504280)
+- Dirección: 15 Sector Cuesta Los Jobos, Humacao, PR
+  (ficha Meta, place_id 414088050562039, categoría Roofing Service)
+- Facebook: https://www.facebook.com/HumacaoRoofing/ (10.6K seguidores,
+  nombre coincide con el negocio; teléfono NO visible sin login, pero la
+  ficha Meta del lugar confirma el 787-850-4280 en Humacao)
+- Servicios REALES (del sitio + nombre de la página):
+  sellado de techos, reparación de goteras, impermeabilización,
+  mantenimiento de techos, inspección de techo.
+
+LOGO: NO se encontró logo real utilizable.
+- La foto de perfil de su Facebook (@HumacaoRoofing) es una foto personal
+  (dos personas en una oficina, banner de aniversario) — no es un logo y
+  no se puede verificar que sean los dueños; NO se usa.
+- El sticker "HR" del hero es un emblema decorativo del build original.
+
+FOTOS: 0 fotos reales verificables del trabajo del negocio.
+- facebook-cli bloqueado del lado del servidor (403) y Facebook bloquea el
+  scraping anónimo de feeds de fotos. No se encontraron posts indexados.
+- img/g1.jpg–g4.jpg son HEREDADAS del build original; su origen NO se pudo
+  verificar como trabajo real de Humacao Roofing. Se mantienen como
+  ilustrativas del oficio, sin afirmar que son trabajos de este negocio.
+
+MEJORAS 2026-10-15 (mejora ligera, sin rediseño):
+- Formulario de cotización (#cotizar) antes de los planes: Nombre, Teléfono,
+  Servicio (select con los 5 servicios reales) y Mensaje → abre WhatsApp
+  del negocio (wa.me/17878504280) con mensaje pre-llenado. Botón con
+  data-track="qform_submit" integrado al tracker de métricas existente.
+- Menú hamburguesa: el overlay ahora va POR ENCIMA del botón flotante
+  (z-index 210 > 200) y lleva su propio botón de cerrar (×).
+- Animaciones elite suaves: hover premium en botones, galería, servicios y
+  planes (lift + glow), zoom suave en fotos — sin cambiar layout.
+
+BRECHAS HONESTAS: sin logo real, sin fotos reales verificadas. Teléfono y
+dirección verificados por ficha Meta; Facebook encontrado por coincidencia
+de nombre (verificación de teléfono pendiente de login).

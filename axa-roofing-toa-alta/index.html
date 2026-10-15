@@ -152,6 +152,38 @@
   </div>
 </section>
 
+<!-- ============ COTIZADOR ============ -->
+<section class="quote" id="cotizar">
+  <div class="wrap narrow">
+    <p class="kicker">Cotización inmediata</p>
+    <h2 class="sec-title">Cotiza tu <span>proyecto</span> hoy</h2>
+    <p class="quote-sub">Completa el formulario y te abrimos WhatsApp con tu solicitud lista para enviar. Evaluación sin costo.</p>
+    <form id="quoteForm" class="quote-form" novalidate>
+      <div class="qf-grid">
+        <label>Tu nombre<input type="text" id="qNombre" name="nombre" placeholder="Nombre y apellido" autocomplete="name" required></label>
+        <label>Tu teléfono<input type="tel" id="qTel" name="telefono" placeholder="787-000-0000" autocomplete="tel" required></label>
+      </div>
+      <label>¿Qué servicio necesitas?
+        <select id="qServicio" name="servicio" required>
+          <option value="" disabled selected>Selecciona un servicio</option>
+          <option>Sellado residencial (silicón / acrílico)</option>
+          <option>Sellado comercial</option>
+          <option>Impermeabilización industrial / farmacéutica</option>
+          <option>Membrana TPO</option>
+          <option>Espuma SPF</option>
+          <option>Sistema Danosa</option>
+          <option>Reparación de filtraciones</option>
+          <option>Evaluación y cotización gratis</option>
+          <option>Otro</option>
+        </select>
+      </label>
+      <label>Detalles del techo<textarea id="qMsg" name="mensaje" rows="3" placeholder="Ej: techo comercial en Toa Alta, aprox. 2,000 pies cuadrados..."></textarea></label>
+      <button type="submit" class="btn btn-navy qf-submit">Enviar por WhatsApp</button>
+      <p class="qf-note">Al enviar se abre WhatsApp con tu mensaje listo. Sin compromiso.</p>
+    </form>
+  </div>
+</section>
+
 <!-- ============ PLANES ============ -->
 <section class="plans" id="planes">
   <div class="wrap">

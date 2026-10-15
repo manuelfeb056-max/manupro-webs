@@ -30,6 +30,7 @@
 
 <!-- Fullscreen nav -->
 <nav id="overlayNav" class="overlay-nav" aria-hidden="true">
+  <button class="mq-close" data-mqclose aria-label="Cerrar menú">×</button>
   <a href="#inicio">Inicio</a>
   <a href="#galeria">Trabajos</a>
   <a href="#servicios">Servicios</a>
@@ -194,6 +195,38 @@
         <div class="acc-body"><p>Al 787-603-2240 o al 787-533-4581. También por WhatsApp al 787-603-2240.</p></div>
       </div>
     </div>
+  </div>
+</section>
+
+<!-- QUOTE -->
+<section id="cotizar" class="quote">
+  <div class="wrap">
+    <p class="eyebrow reveal">Cotización inmediata</p>
+    <h2 class="reveal">Cotiza tu techo<br>ahora mismo.</h2>
+    <p class="quote-sub reveal">Llena el formulario y te abrimos WhatsApp con tu solicitud lista para enviar.</p>
+    <form id="quoteForm" class="quote-form reveal" novalidate>
+      <div class="qf-grid">
+        <label>Tu nombre<input type="text" id="qNombre" name="nombre" placeholder="Nombre y apellido" autocomplete="name" required></label>
+        <label>Tu teléfono<input type="tel" id="qTel" name="telefono" placeholder="787-000-0000" autocomplete="tel" required></label>
+      </div>
+      <label>¿Qué servicio necesitas?
+        <select id="qServicio" name="servicio" required>
+          <option value="" disabled selected>Selecciona un servicio</option>
+          <option>Sellado de techo residencial</option>
+          <option>Sellado de techo comercial</option>
+          <option>Sellado de techo industrial</option>
+          <option>Sellado de cisterna</option>
+          <option>Lavado a presión</option>
+          <option>Membrana impermeable</option>
+          <option>Reparación de filtraciones</option>
+          <option>Trabajo de emergencia</option>
+          <option>Otro</option>
+        </select>
+      </label>
+      <label>Detalles<textarea id="qMsg" name="mensaje" rows="3" placeholder="Ej: filtración en el techo de mi casa en Dorado..."></textarea></label>
+      <button type="submit" class="btn btn-primary qf-submit">Enviar por WhatsApp</button>
+      <p class="qf-note">Al enviar se abre WhatsApp con tu mensaje listo. Sin compromiso.</p>
+    </form>
   </div>
 </section>
 

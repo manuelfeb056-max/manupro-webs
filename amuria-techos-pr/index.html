@@ -50,6 +50,7 @@
   <svg viewBox="0 0 24 24" class="icon-close"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" fill="none"/></svg>
 </button>
 <nav class="overlay-nav" id="overlayNav" aria-hidden="true">
+  <button class="mq-close" data-mqclose aria-label="Cerrar menú">×</button>
   <a href="#galeria">Trabajos</a>
   <a href="#servicios">Servicios</a>
   <a href="#proceso">Proceso</a>
@@ -120,7 +121,7 @@
 <!-- ===== GALERÍA (right after hero) ===== -->
 <section class="gallery" id="galeria">
   <div class="wrap">
-    <p class="kicker">TRABAJO REAL</p>
+    <p class="kicker">Nuestro oficio</p>
     <h2 class="reveal">Techos que ya <span class="hl">aguantan</span> la lluvia</h2>
     <p class="section-sub reveal">Así queda un sellado bien hecho: superficie uniforme, sellos limpios y un techo listo para la temporada.</p>
   </div>
@@ -234,6 +235,35 @@
 </section>
 
 <!-- ===== PLANES (oferta Manupro) ===== -->
+
+<!-- COTIZADOR -->
+<section class="quote" id="cotizar">
+  <div class="wrap">
+    <p class="q-kicker">Cotización inmediata</p>
+    <h2 class="q-title">Cotiza tu proyecto <span>hoy mismo</span></h2>
+    <p class="q-sub">Completa el formulario y te abrimos WhatsApp con tu solicitud lista para enviar.</p>
+    <form id="quoteForm" class="q-form" novalidate>
+      <div class="q-grid">
+        <label>Tu nombre<input type="text" id="qNombre" placeholder="Nombre y apellido" autocomplete="name" required></label>
+        <label>Tu teléfono<input type="tel" id="qTel" placeholder="787-000-0000" autocomplete="tel" required></label>
+      </div>
+      <label>¿Qué servicio necesitas?
+        <select id="qServicio" required>
+          <option value="" disabled selected>Selecciona un servicio</option>
+          <option>Sellado elastomérico</option>
+          <option>Impermeabilización total</option>
+          <option>Reparación de filtraciones</option>
+          <option>Mantenimiento preventivo</option>
+          <option>Otro</option>
+        </select>
+      </label>
+      <label>Detalles<textarea id="qMsg" rows="3" placeholder="Cuéntanos sobre tu techo..."></textarea></label>
+      <button type="submit" class="q-submit">Enviar por WhatsApp</button>
+      <p class="q-note">Al enviar se abre WhatsApp con tu mensaje listo. Sin compromiso.</p>
+    </form>
+  </div>
+</section>
+
 <section class="plans" id="planes">
   <div class="wrap">
     <p class="kicker">TU NEGOCIO EN INTERNET</p>

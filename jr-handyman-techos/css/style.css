@@ -36,7 +36,7 @@ a{text-decoration:none}
 .burger.open span:nth-child(1){transform:translateY(8px) rotate(45deg)}
 .burger.open span:nth-child(2){opacity:0}
 .burger.open span:nth-child(3){transform:translateY(-8px) rotate(-45deg)}
-.nav-overlay{position:fixed;inset:0;z-index:99;background:rgba(7,59,45,.97);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;opacity:0;pointer-events:none;transition:opacity .3s}
+.nav-overlay{position:fixed;inset:0;z-index:101;background:rgba(7,59,45,.97);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;opacity:0;pointer-events:none;transition:opacity .3s}
 .nav-overlay.open{opacity:1;pointer-events:auto}
 .nav-overlay a{color:#fff;font-size:1.6rem;font-weight:700;padding:10px 26px;border-radius:12px;transition:background .2s}
 .nav-overlay a:hover{background:rgba(255,255,255,.12)}
@@ -207,3 +207,23 @@ a{text-decoration:none}
   .timeline{grid-template-columns:1fr}
   .hero-ctas .btn{width:100%;justify-content:center}
 }
+
+/* === FIX menú: botón cerrar dentro del overlay (overlay va por encima) === */
+.nav-overlay .ov-close{position:absolute;top:18px;right:18px;width:52px;height:52px;border-radius:50%;border:1px solid rgba(255,255,255,.35);background:rgba(0,0,0,.35);color:#fff;font-size:26px;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:transform .25s,background .25s}
+.nav-overlay .ov-close:hover{transform:rotate(90deg);background:rgba(255,255,255,.15)}
+
+/* ===== MEJORA ELITE: animaciones suaves (sin cambiar diseño base) ===== */
+.g-item,.gal-item,.case,.work-card,.project-card{transition:transform .45s cubic-bezier(.2,.7,.2,1),box-shadow .45s}
+.g-item:hover,.gal-item:hover,.case:hover,.work-card:hover,.project-card:hover{transform:translateY(-6px);box-shadow:0 18px 44px rgba(0,0,0,.28)}
+.g-item img,.gal-item img,.case img,.work-card img,.project-card img{transition:transform .7s cubic-bezier(.2,.7,.2,1)}
+.g-item:hover img,.gal-item:hover img,.case:hover img,.work-card:hover img,.project-card:hover img{transform:scale(1.07)}
+.btn,.btn-wa,.btn-gold,.btn-fire,.btn-primary,.btn-dispatch{position:relative;overflow:hidden;transition:transform .25s,box-shadow .25s,filter .25s}
+.btn:hover,.btn-wa:hover,.btn-gold:hover,.btn-fire:hover,.btn-primary:hover,.btn-dispatch:hover{transform:translateY(-2px);filter:brightness(1.06)}
+.btn::after,.btn-wa::after,.btn-gold::after,.btn-fire::after,.btn-primary::after,.btn-dispatch::after{content:"";position:absolute;top:0;left:-80%;width:50%;height:100%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.35),transparent);transform:skewX(-20deg);transition:left .6s}
+.btn:hover::after,.btn-wa:hover::after,.btn-gold:hover::after,.btn-fire:hover::after,.btn-primary:hover::after,.btn-dispatch:hover::after{left:130%}
+.svc,.service-card,.step,.paso{transition:transform .4s cubic-bezier(.2,.7,.2,1),box-shadow .4s}
+.svc:hover,.service-card:hover,.step:hover,.paso:hover{transform:translateY(-5px)}
+img{animation:mpFadeIn .8s ease both}
+@keyframes mpFadeIn{from{opacity:0}to{opacity:1}}
+html{scroll-behavior:smooth}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}}

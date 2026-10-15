@@ -1,0 +1,36 @@
+FUENTES — Febus Roofing (sites/febus-roofing-sj/)
+==================================================
+
+BRECHAS HONESTAS:
+- Sin redes sociales verificables: no se encontró página oficial de Facebook
+  ni Instagram del negocio en búsqueda web pública (varias consultas
+  2026-10-15).
+- Logo: SIN logo real (no hay foto de perfil oficial descargable sin la
+  página de Facebook). El sitio conserva su marca SVG original (techo +
+  gota ámbar/azul) y favicon SVG.
+- Fotos: 0 fotos reales del negocio. Las 5 imágenes de la galería
+  (img/g1.jpg..g5.jpg) vienen del lote anterior y son ilustrativas (estilo
+  stock), NO trabajo verificado del negocio. No se agregaron más fotos para
+  no presentar material ajeno como propio.
+
+Datos del negocio (verificados en Infopáginas):
+- https://infopaginas.com/b/san-juan/febus-roofing
+- Nombre: Febus Roofing
+- Teléfono: 787-593-5986 (WhatsApp del negocio: https://wa.me/17875935986)
+- Ubicación: San Juan, PR 00923 (también listado en Buen Consejo, Cataño)
+- Categoría: contratista de techos (sellado residencial y comercial)
+- Servicios reales (de las tarjetas del sitio; usados en el select del
+  formulario de cotización): sellado residencial, sellado comercial,
+  reparación de filtraciones, inspección y mantenimiento, preparación
+  de superficie.
+
+Mejoras aplicadas 2026-10-15 (toque ligero, sin rediseño):
+- Formulario de cotización YA existía en la sección de contacto (antes de
+  los planes); se amplió el select con TODOS los servicios reales del
+  negocio y el mensaje pre-llenado ahora sigue el formato
+  "Hola Febus Roofing, soy <nombre>. Mi teléfono es <tel>. Necesito:
+  <servicio>. <mensaje>".
+- Menú hamburguesa: es un dropdown compacto que abre DEBAJO del botón
+  (no tapa información); se dejó como está por orden de no tocar el diseño.
+- El sitio ya tenía animaciones elite (lluvia en canvas, nubes, shine,
+  reveal, chips flotantes, sello giratorio); no se alteró su identidad.

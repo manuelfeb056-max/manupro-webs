@@ -34,6 +34,7 @@
 </head><body>
 <button class="fab-menu" id="menuBtn" aria-label="Abrir menú"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
 <div class="menu-overlay" id="menuOverlay">
+  <button class="mq-close" data-mqclose aria-label="Cerrar menú">×</button>
 <a href="#inicio">Inicio</a><a href="#trabajos">Trabajos</a><a href="#servicios">Servicios</a>
 <a href="#nosotros">Nosotros</a><a href="#preguntas">Preguntas</a><a href="#planes">Planes</a>
 <a class="m-phone" href="tel:+17873108848">787-310-8848</a>
@@ -79,6 +80,37 @@
 <p class="lede">Lo que todo dueño de propiedad pregunta antes de contratarnos.</p>
 <div class="faq-item reveal"><button class="faq-q">¿Qué incluye el mantenimiento general?<span class="pl">+</span></button><div class="faq-a"><p>Sellado de techos, reparaciones menores, pintura, limpieza y revisión de desagües: todo lo que una propiedad necesita para estar al día.</p></div></div><div class="faq-item reveal"><button class="faq-q">¿Sellan techos comerciales y residenciales?<span class="pl">+</span></button><div class="faq-a"><p>Sí, trabajamos casas y negocios en el área norte: sellado de techos de concreto y mantenimiento general.</p></div></div><div class="faq-item reveal"><button class="faq-q">¿Trabajan fuera de Barceloneta?<span class="pl">+</span></button><div class="faq-a"><p>Sí, servimos el área norte de Puerto Rico. Escríbenos por WhatsApp y confirmamos tu pueblo.</p></div></div><div class="faq-item reveal"><button class="faq-q">¿Cada cuánto se debe sellar el techo?<span class="pl">+</span></button><div class="faq-a"><p>Cada 4 a 5 años, según el sistema aplicado y la exposición al sol y la lluvia.</p></div></div><div class="faq-item reveal"><button class="faq-q">¿Cómo pido una cotización?<span class="pl">+</span></button><div class="faq-a"><p>Por WhatsApp al 787-310-8848: envíanos fotos del techo o de la propiedad y te respondemos con un estimado gratis.</p></div></div>
 </div></section>
+
+<!-- COTIZADOR -->
+<section class="quote" id="cotizar">
+  <div class="wrap">
+    <p class="q-kicker">Cotización inmediata</p>
+    <h2 class="q-title">Cotiza tu proyecto <span>hoy mismo</span></h2>
+    <p class="q-sub">Completa el formulario y te abrimos WhatsApp con tu solicitud lista para enviar.</p>
+    <form id="quoteForm" class="q-form" novalidate>
+      <div class="q-grid">
+        <label>Tu nombre<input type="text" id="qNombre" placeholder="Nombre y apellido" autocomplete="name" required></label>
+        <label>Tu teléfono<input type="tel" id="qTel" placeholder="787-000-0000" autocomplete="tel" required></label>
+      </div>
+      <label>¿Qué servicio necesitas?
+        <select id="qServicio" required>
+          <option value="" disabled selected>Selecciona un servicio</option>
+          <option>Sellado de techos</option>
+          <option>Reparación de filtraciones</option>
+          <option>Mantenimiento general</option>
+          <option>Inspecciones preventivas</option>
+          <option>Cuidado de techos</option>
+          <option>Estimados gratis</option>
+          <option>Otro</option>
+        </select>
+      </label>
+      <label>Detalles<textarea id="qMsg" rows="3" placeholder="Cuéntanos sobre tu techo..."></textarea></label>
+      <button type="submit" class="q-submit">Enviar por WhatsApp</button>
+      <p class="q-note">Al enviar se abre WhatsApp con tu mensaje listo. Sin compromiso.</p>
+    </form>
+  </div>
+</section>
+
 <section class="plans sec" id="planes"><div class="wrap">
 <div style="text-align:center"><span class="kicker">Oferta de lanzamiento</span>
 <h2>Tu negocio también merece verse así</h2>

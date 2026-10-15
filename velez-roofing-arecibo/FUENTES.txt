@@ -1,0 +1,36 @@
+FUENTES — Vélez Roofing General Contractors (sites/velez-roofing-arecibo/)
+======================================================================
+
+LOGO REAL:
+- img/logo.jpg — foto de perfil OFICIAL de la página de Facebook
+  "Velez Roofing General Contractors" (Arecibo, PR), descargada vía
+  Graph API pública (graph.facebook.com/195252343978097/picture),
+  recortada al rótulo circular. La foto muestra el rótulo físico real
+  del negocio: "VELEZ ROOFING / Sellados de Techo / 30 años de
+  experiencia / Experiencia, Calidad y Garantía / Est. 1989 /
+  787-879-5988 / 787-356-1797". Descargada el 2026-10-15.
+  Colores del logo: dorado #D9A13B aprox., azul marino, negro.
+
+FOTOS DE TRABAJOS:
+- 0 fotos reales de trabajos. Se intentó obtener fotos de posts de la
+  página de Facebook, pero facebook-cli tiene el comando de timeline
+  deshabilitado del lado del servidor (HTTP 403 "Invalid Viewer
+  Context") y la web oficial del negocio (www.velezroofing.com) está
+  caída/suplantada por contenido de casino chino — NO se usó nada de ahí.
+  La galería conserva las 5 imágenes fotorrealistas generadas
+  (img/v1.jpg–v5.jpg) hasta que el negocio provea fotos reales.
+  NUNCA se presentaron como fotos reales en FUENTES ni en el sitio.
+
+DATOS DEL NEGOCIO (verificados):
+- Nombre: Vélez Roofing General Contractors (página de FB verificada
+  con ID 195252343978097 vía findglocal mirror).
+- Teléfono: 787-356-1797 (celular, coincide con el asignado; aparece
+  también en el rótulo del logo). Oficina alterna: 787-879-5988.
+- Email: velezroofinggc@gmail.com (publicado en la página).
+- Ubicación: Arecibo, Puerto Rico (00614).
+- Servicios (de su página oficial): conservación de techos residencial
+  y comercial, sellado, estimados gratis; 23-30 años de experiencia;
+  clientes: Municipio de Arecibo, Job Corps, Salvation Army, Tribunal
+  de Jayuya, Colegio Marista, etc.
+- Facebook: https://www.facebook.com/195252343978097/
+  (Velez Roofing General Contractors, Arecibo)

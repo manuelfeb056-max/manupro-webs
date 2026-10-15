@@ -23,3 +23,17 @@
     el.addEventListener('click',function(){try{window.MPMetrics&&MPMetrics.track(el.getAttribute('data-track'));}catch(e){}});
   });
 })();
+
+// ---------- mejora elite 2026-10-15: botón cerrar del menú ----------
+(function(){var c=document.getElementById('menuClose'),nav=document.getElementById('navOverlay'),burger=document.getElementById('burger');
+if(c&&nav){c.addEventListener('click',function(){nav.classList.remove('open');if(burger)burger.classList.remove('open');document.body.style.overflow='';});}})();
+
+// ---------- mejora elite 2026-10-15: formulario de cotización → WhatsApp ----------
+(function(){var qf=document.getElementById('qform');if(!qf)return;
+qf.addEventListener('submit',function(e){e.preventDefault();
+var n=document.getElementById('qNombre').value.trim(),
+    t=document.getElementById('qTel').value.trim(),
+    s=document.getElementById('qServicio').value,
+    m=document.getElementById('qMsg').value.trim();
+var txt='Hola Humacao Roofing, soy '+(n||'un cliente')+'. Mi teléfono es '+(t||'—')+'. Necesito: '+s+'.'+(m?' '+m:'');
+window.open('https://wa.me/17878504280?text='+encodeURIComponent(txt),'_blank');});})();

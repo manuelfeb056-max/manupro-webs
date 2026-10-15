@@ -32,6 +32,7 @@
 
 <button class="burger" id="burger" aria-label="Abrir menú"><span></span><span></span><span></span></button>
 <nav class="side-menu" id="sideMenu">
+  <button class="menu-close" id="menuClose" aria-label="Cerrar menú">×</button>
   <a href="#inicio">Inicio</a>
   <a href="#trabajos">Trabajos</a>
   <a href="#servicios">Servicios</a>
@@ -117,6 +118,33 @@
       <p><strong>Servicio:</strong> Sellado de techos</p>
     </div>
   </div>
+</section>
+
+<!-- ============ COTIZACIÓN ============ -->
+<section class="section quote-sec" id="cotizar">
+<div class="wrap">
+<div class="quote-card">
+<div class="quote-head">
+<p class="eyebrow">Cotización gratis</p>
+<h2>Pide tu <span class="accent">cotización</span></h2>
+<p>Llena el formulario y te abrimos WhatsApp con tu mensaje listo para enviar.</p>
+</div>
+<form id="qform" class="qform">
+<label>Nombre<input type="text" id="qNombre" placeholder="Tu nombre" required autocomplete="name"></label>
+<label>Teléfono<input type="tel" id="qTel" placeholder="787-000-0000" required autocomplete="tel"></label>
+<label>Servicio que necesita
+<select id="qServicio">
+<option>Sellado de techos con Crossco 8500</option>
+<option>Reparación de filtraciones</option>
+<option>Recubrimiento elastomérico / protección UV</option>
+<option>Inspección de techo</option>
+</select></label>
+<label>Mensaje<textarea id="qMsg" rows="3" placeholder="Cuéntanos de tu techo..."></textarea></label>
+<button class="btn btn-lg qbtn" type="submit">Enviar por WhatsApp</button>
+<p class="q-note">Te respondemos al 787-324-3022.</p>
+</form>
+</div>
+</div>
 </section>
 
 <section class="section plans" id="planes">

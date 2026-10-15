@@ -1,0 +1,24 @@
+FUENTES — Jireh Roofing Contractors Inc. (sites/jireh-roofing-guaynabo/)
+========================================================================
+
+LOGO REAL:
+- img/logo-real.png — Logotipo OFICIAL de Jireh Roofing Contractors Inc.,
+  descargado de su website oficial. Fuente:
+  https://jirehroofingpr.com/wp-content/uploads/2025/02/Jireh-Roofing-Contractors-Inc-LOGO.png
+  (PNG con transparencia, 404x131). Reemplaza el logo inventado anterior.
+
+Foto REAL (1, de su website oficial https://jirehroofingpr.com/):
+- img/real/foto-1.jpg — Unidad de servicio rotulada de Jireh Roofing
+  (787-630-7704) y proyecto comercial (Taco Maker). Fuente:
+  https://jirehroofingpr.com/wp-content/uploads/2025/02/WEB-Jireh-Roofing-Contractors-Inc-nosotros-04.jpg
+  Descargada el 2026-10-15. Verificada visualmente: activos reales del negocio.
+
+NOTA: otras imágenes "servicios-0X.jpg" de su web son gráficos promocionales
+con fotos de stock, NO se usaron como fotos reales de trabajo.
+
+Datos verificados (de jirehroofingpr.com):
+- Teléfonos: 787-630-7704 (coincide), 787-740-1929
+- Dirección: Ave. Betances #184, Hermanas Dávila, Bayamón PR
+- Servicios: impermeabilización residencial y comercial, sistemas de sellado
+  avanzados (Danosa AL-80-4), reparación y mantenimiento de techos,
+  construcción general. Lun-Vie 8:00am-4:30pm.

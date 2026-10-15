@@ -82,3 +82,18 @@
   });
   mark(); restart();
 })();
+
+/* ===== ManuPro elite touch: formulario de cotización a WhatsApp (2026-10-15) ===== */
+document.querySelectorAll('.qform').forEach(function(f){
+  f.addEventListener('submit', function(e){
+    e.preventDefault();
+    var g = function(n){ return (f.elements[n].value || '').trim(); };
+    var nombre = g('nombre');
+    if(!nombre){ f.elements['nombre'].focus(); return; }
+    var parts = ['Hola ' + f.dataset.biz + ', soy ' + nombre];
+    if(g('telefono')) parts.push('mi teléfono es ' + g('telefono'));
+    parts.push('Servicio que necesito: ' + g('servicio'));
+    if(g('mensaje')) parts.push('Mensaje: ' + g('mensaje'));
+    window.open('https://wa.me/' + f.dataset.wa + '?text=' + encodeURIComponent(parts.join('. ') + '.'), '_blank', 'noopener');
+  });
+});

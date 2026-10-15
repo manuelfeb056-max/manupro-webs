@@ -41,6 +41,7 @@
 
 <button class="menu-btn" id="menuBtn" aria-label="Abrir menú"><span></span><span></span><span></span></button>
 <nav class="nav" id="nav" aria-label="Navegación principal">
+  <button class="nav-close" id="navClose" aria-label="Cerrar menú">×</button>
   <span class="nav-num">01</span><a href="#inicio">Inicio</a>
   <span class="nav-num">02</span><a href="#trabajos">Trabajos</a>
   <span class="nav-num">03</span><a href="#servicios">Servicios</a>
@@ -136,6 +137,42 @@
       <details class="faq-item reveal"><summary><span class="q-n">05</span>¿Cómo pido la cotización gratis?<span class="fx">+</span></summary><div class="fa">Escríbenos por WhatsApp al <a href="https://wa.me/17872105404" target="_blank" rel="noopener">787-210-5404</a> y coordinamos.</div></details>
     </div>
   </div>
+</section>
+
+<!-- ============ COTIZACIÓN ============ -->
+<section class="section quote-sec" id="cotizar">
+<div class="wrap">
+<div class="quote-card reveal">
+<div class="quote-head">
+<p class="kicker">Cotización gratis</p>
+<h2 class="h2">Pide tu cotización</h2>
+<p class="sec-sub">Llena el formulario y te abrimos WhatsApp con tu mensaje listo para enviar.</p>
+</div>
+<form id="qform" class="qform">
+<label>Nombre<input type="text" id="qNombre" placeholder="Tu nombre" required autocomplete="name"></label>
+<label>Teléfono<input type="tel" id="qTel" placeholder="787-000-0000" required autocomplete="tel"></label>
+<label>Servicio que necesita
+<select id="qServicio">
+<option>Sellado de techos</option>
+<option>Instalación de tejas</option>
+<option>Instalación de techos galvalum</option>
+<option>Reparaciones</option>
+<option>Albañilería</option>
+<option>Reparación de varilla expuesta</option>
+<option>Pintura residencial y comercial</option>
+<option>Remodelación de baños</option>
+<option>Remodelación general</option>
+<option>Gypsum board</option>
+<option>Instalación de losas y mármol</option>
+<option>Restauración de pisos</option>
+<option>Lavado y mantenimiento de pisos</option>
+</select></label>
+<label>Mensaje<textarea id="qMsg" rows="3" placeholder="Cuéntanos de tu proyecto..."></textarea></label>
+<button class="btn btn-wa btn-lg qbtn" type="submit">Enviar por WhatsApp</button>
+<p class="q-note">Te respondemos al 787-210-5404.</p>
+</form>
+</div>
+</div>
 </section>
 
 <section class="section pricing" id="planes">

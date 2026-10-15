@@ -15,6 +15,8 @@
   nav.querySelectorAll('a').forEach(function(a){
     a.addEventListener('click', function(){ toggle(false); });
   });
+  var navClose = document.getElementById('navClose');
+  if(navClose) navClose.addEventListener('click', function(){ toggle(false); });
   document.addEventListener('keydown', function(e){
     if(e.key === 'Escape' && nav.classList.contains('show')) toggle(false);
   });
@@ -44,5 +46,18 @@
 
   window.addEventListener('resize', function(){
     if(window.innerWidth > 980 && nav.classList.contains('show')) toggle(false);
+  });
+
+  // Formulario de cotización -> WhatsApp del negocio
+  var qf = document.getElementById('quoteForm');
+  if(qf) qf.addEventListener('submit', function(e){
+    e.preventDefault();
+    var name = document.getElementById('qName').value.trim();
+    var phone = document.getElementById('qPhone').value.trim();
+    var service = document.getElementById('qService').value;
+    var msg = document.getElementById('qMsg').value.trim();
+    if(!name){ alert('Por favor escribe tu nombre.'); document.getElementById('qName').focus(); return; }
+    var text = 'Hola Techos Ultraflex, soy ' + name + (phone ? ' (' + phone + ')' : '') + '. Necesito: ' + service + '.' + (msg ? ' ' + msg : '');
+    window.open('https://wa.me/17879445946?text=' + encodeURIComponent(text), '_blank');
   });
 })();

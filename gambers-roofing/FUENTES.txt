@@ -1,0 +1,41 @@
+FUENTES — Gambers Roofing Contractors (sites/gambers-roofing/)
+============================================================================
+
+INVESTIGACIÓN (2026-10-15):
+- Infopáginas: es.infopaginas.com/b/gambers-roofing-contractors — "GAMBERS
+  ROOFING CONTRACTORS" (VERIFICADO): teléfono 787-903-6604 (coincide con el
+  dado), "Servicio a Toda la Isla", 6134 Calle Jazmín, Dorado, PR.
+  Servicios reales publicados (verificados): sellado de techo con sistema
+  Danosa, selladores líquidos Danosa, uretano, pintura de casas, lavado a
+  presión, construcción de patios. 20+ años de experiencia. Certificados DACO
+  y Danosa. Garantía de 3 a 10 años. Estimados gratis.
+- Página oficial de Facebook: NO ENCONTRADA. Búsquedas exhaustivas
+  (nombre+pueblo, nombre+teléfono en varios formatos, "site:facebook.com",
+  Instagram, variaciones) no devolvieron ninguna página de Facebook verificable
+  de este negocio con el teléfono 787-903-6604.
+- Instagram oficial: NO ENCONTRADO.
+
+Datos verificados del negocio:
+- Nombre: Gambers Roofing Contractors
+- Teléfono: 787-903-6604 (wa.me/17879036604) — coincide con el dado
+- Dirección: 6134 Calle Jazmín, Dorado, PR
+- Área: toda la isla de Puerto Rico
+- Experiencia: 20+ años; certificados DACO y Danosa; garantía 3–10 años
+
+RESULTADO: SIN MATERIAL REAL — sin página de Facebook/Instagram verificable,
+no se puede descargar logo ni fotos reales del negocio. No se inventó ni se
+usó material de terceros. El sitio queda con su galería original (img/g1-g5.jpg)
+y su marca dibujada en el header.
+
+BRECHA HONESTA: si el negocio comparte su Facebook/Instagram, las fotos
+reales se integran en una fase futura.
+
+MEJORA APLICADA (2026-10-15, batch 2 grupo C, mejora ligera):
+- Formulario de cotización (#leadForm) YA EXISTÍA y cumple el requisito:
+  Nombre, Teléfono, Servicio <select> con TODOS los servicios reales
+  verificados (sistema Danosa, selladores líquidos Danosa, uretano, pintura
+  de casa, lavado a presión, construcción de patio), Mensaje -> WhatsApp del
+  negocio (787-903-6604) con mensaje pre-llenado.
+- Menú flotante: overlay (fab-nav) por encima del botón en z-index (nav z-1201,
+  botón z-1200), con botón propio de cerrar "×"; botón compacto (56px).
+- Hover premium en galería; reveal on scroll ya existía.

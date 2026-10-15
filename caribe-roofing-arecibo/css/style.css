@@ -24,7 +24,7 @@ h1,h2,h3,.fh{font-family:var(--fh)}
 .burger.open span:nth-child(1){transform:translateY(8px) rotate(45deg)}
 .burger.open span:nth-child(2){opacity:0}
 .burger.open span:nth-child(3){transform:translateY(-8px) rotate(-45deg)}
-.nav-overlay{position:fixed;inset:0;z-index:290;background:color-mix(in srgb,var(--bg) 96%,transparent);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;opacity:0;pointer-events:none;transition:opacity .3s}
+.nav-overlay{position:fixed;inset:0;z-index:301;background:color-mix(in srgb,var(--bg) 96%,transparent);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;opacity:0;pointer-events:none;transition:opacity .3s}
 .nav-overlay.show{opacity:1;pointer-events:auto}
 .nav-overlay a{font-family:var(--fh);font-size:1.8rem;letter-spacing:2px;text-transform:uppercase;padding:8px;font-weight:700}
 .nav-overlay a:hover{color:var(--brand2)}
@@ -124,3 +124,39 @@ h1,h2,h3,.fh{font-family:var(--fh)}
 .hero-caribe .hero-brand-text strong{letter-spacing:5px}
 .hero-caribe .zone-chips span{border-color:rgba(43,212,232,.45);color:var(--brand2);background:rgba(14,138,158,.14)}
 @media(max-width:760px){.roof-ride{width:130px;bottom:132px}.sun{width:130px;height:130px}}
+
+/* botón cerrar del menú (no tapa información) */
+.mq-close{position:absolute;top:18px;right:18px;width:46px;height:46px;border-radius:50%;border:1.5px solid currentColor;background:rgba(0,0,0,.35);color:inherit;font-size:1.7rem;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;opacity:.9;transition:transform .2s,opacity .2s}
+.mq-close:hover{transform:scale(1.08);opacity:1}
+
+/* ---------- cotizador ---------- */
+.quote{padding:80px 0}
+.q-kicker{text-transform:uppercase;letter-spacing:.22em;font-size:.75rem;font-weight:800;color:var(--accent,var(--brand,var(--org,var(--cyan,var(--teal,var(--g,var(--c,#168730))))));margin-bottom:10px}
+.q-title{font-size:clamp(1.9rem,4.5vw,2.9rem);line-height:1.05;margin-bottom:10px}
+.q-title span{color:var(--accent,var(--brand,var(--org,var(--cyan,var(--teal,var(--g,var(--c,#168730))))))}
+.q-sub{opacity:.75;margin-bottom:28px;font-size:1.05rem}
+.q-form{max-width:640px;background:rgba(255,255,255,.045);border:1px solid rgba(255,255,255,.14);border-radius:18px;padding:34px 30px;box-shadow:0 20px 55px rgba(0,0,0,.28)}
+.q-form label{display:block;font-weight:700;font-size:.9rem;margin-bottom:16px}
+.q-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.q-form input,.q-form select,.q-form textarea{width:100%;margin-top:8px;background:rgba(0,0,0,.28);border:1.5px solid rgba(255,255,255,.2);border-radius:12px;color:inherit;padding:13px 15px;font-size:1rem;font-family:inherit;outline:none;transition:border-color .2s,box-shadow .2s}
+.q-form select option{color:#111}
+.q-form input:focus,.q-form select:focus,.q-form textarea:focus{border-color:var(--accent,var(--brand,var(--org,var(--cyan,var(--teal,var(--g,var(--c,#168730))))));box-shadow:0 0 0 3px rgba(255,255,255,.08)}
+.q-form input.err,.q-form select.err{border-color:#ff6b6b}
+.q-form textarea{resize:vertical;min-height:84px}
+.q-submit{width:100%;margin-top:8px;padding:16px;border:0;border-radius:12px;background:var(--accent,var(--brand,var(--org,var(--cyan,var(--teal,var(--g,var(--c,#168730))))));color:#fff;font-weight:800;font-size:1.02rem;cursor:pointer;letter-spacing:.03em;transition:transform .2s,box-shadow .2s,filter .2s}
+.q-submit:hover{transform:translateY(-2px);filter:brightness(1.1);box-shadow:0 12px 30px rgba(0,0,0,.35)}
+.q-note{text-align:center;opacity:.65;font-size:.87rem;margin-top:12px}
+@media(max-width:640px){.q-grid{grid-template-columns:1fr}.q-form{padding:26px 20px}.quote{padding:60px 0}}
+
+/* ===== entrada elite del hero (mejora ligera) ===== */
+.hero-inner>*,.hero-content>*,.hero .wrap>*{animation:mpHeroIn .9s cubic-bezier(.2,.7,.2,1) both}
+.hero-inner>*:nth-child(2),.hero-content>*:nth-child(2),.hero .wrap>*:nth-child(2){animation-delay:.1s}
+.hero-inner>*:nth-child(3),.hero-content>*:nth-child(3),.hero .wrap>*:nth-child(3){animation-delay:.2s}
+.hero-inner>*:nth-child(4),.hero-content>*:nth-child(4),.hero .wrap>*:nth-child(4){animation-delay:.3s}
+.hero-inner>*:nth-child(5),.hero-content>*:nth-child(5),.hero .wrap>*:nth-child(5){animation-delay:.4s}
+@keyframes mpHeroIn{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:none}}
+@media(prefers-reduced-motion:reduce){.hero-inner>*,.hero-content>*,.hero .wrap>*{animation:none}}
+
+/* ===== hover premium en imágenes de galería (mejora ligera) ===== */
+.gal-grid figure img,.galeria figure img,.gallery figure img,.mosaic figure img{transition:transform .5s cubic-bezier(.2,.7,.2,1)}
+.gal-grid figure:hover img,.galeria figure:hover img,.gallery figure:hover img,.mosaic figure:hover img{transform:scale(1.045)}

@@ -144,7 +144,7 @@ a{color:inherit;text-decoration:none}
 .float-menu.open span:nth-child(1){transform:translateY(8px) rotate(45deg)}
 .float-menu.open span:nth-child(2){opacity:0}
 .float-menu.open span:nth-child(3){transform:translateY(-8px) rotate(-45deg)}
-.sidepanel{position:fixed;top:0;right:-330px;width:310px;height:100dvh;background:#0c0c08;border-left:3px solid var(--accent);z-index:99;padding:96px 30px 30px;transition:right .35s cubic-bezier(.2,.7,.2,1);display:flex;flex-direction:column;gap:6px}
+.sidepanel{position:fixed;top:0;right:-330px;width:310px;height:100dvh;background:#0c0c08;border-left:3px solid var(--accent);z-index:101;padding:96px 30px 30px;transition:right .35s cubic-bezier(.2,.7,.2,1);display:flex;flex-direction:column;gap:6px}
 .sidepanel.open{right:0}
 .sidepanel a{font-family:'Archivo Black',sans-serif;font-size:1.35rem;text-transform:uppercase;padding:10px 0;border-bottom:1px solid var(--line);color:var(--ink)}
 .sidepanel a:hover{color:var(--accent)}
@@ -160,3 +160,20 @@ a{color:inherit;text-decoration:none}
   .mosaic{grid-template-columns:repeat(2,1fr);grid-auto-rows:170px}
   .plan.hot{transform:none}
 }
+
+/* botón cerrar del menú (no tapa información) */
+.mq-close{position:absolute;top:18px;right:18px;width:46px;height:46px;border-radius:50%;border:1.5px solid currentColor;background:rgba(0,0,0,.35);color:inherit;font-size:1.7rem;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;opacity:.9;transition:transform .2s,opacity .2s}
+.mq-close:hover{transform:scale(1.08);opacity:1}
+
+/* ===== entrada elite del hero (mejora ligera) ===== */
+.hero-inner>*,.hero-content>*,.hero .wrap>*{animation:mpHeroIn .9s cubic-bezier(.2,.7,.2,1) both}
+.hero-inner>*:nth-child(2),.hero-content>*:nth-child(2),.hero .wrap>*:nth-child(2){animation-delay:.1s}
+.hero-inner>*:nth-child(3),.hero-content>*:nth-child(3),.hero .wrap>*:nth-child(3){animation-delay:.2s}
+.hero-inner>*:nth-child(4),.hero-content>*:nth-child(4),.hero .wrap>*:nth-child(4){animation-delay:.3s}
+.hero-inner>*:nth-child(5),.hero-content>*:nth-child(5),.hero .wrap>*:nth-child(5){animation-delay:.4s}
+@keyframes mpHeroIn{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:none}}
+@media(prefers-reduced-motion:reduce){.hero-inner>*,.hero-content>*,.hero .wrap>*{animation:none}}
+
+/* ===== hover premium en imágenes de galería (mejora ligera) ===== */
+.gal-grid figure img,.galeria figure img,.gallery figure img,.mosaic figure img{transition:transform .5s cubic-bezier(.2,.7,.2,1)}
+.gal-grid figure:hover img,.galeria figure:hover img,.gallery figure:hover img,.mosaic figure:hover img{transform:scale(1.045)}
