@@ -1,0 +1,5 @@
+
+Nota 2026-10-15: la imagen "Es tu Problema Tico Techos..." (anuncio real del negocio en Facebook, tel. 787-225-2625 coincidente) NO es un logo — se movió a img/real/foto-1.jpg como foto real del negocio. El sitio usa marca tipográfica hasta conseguir el logo oficial.
+
+2026-10-15 — Logo real APG Service: extraído del screenshot enviado por Mannuel (post de Facebook "APG Techos." 15 AGO 2022). Versión azul/naranja sobre blanco, 1400x900. Integrado en header, tarjeta del formulario, favicon y JSON-LD.
+Foto real: img/real/foto-2.jpg (techo trabajado, del mismo post de Facebook). img/real/foto-1.jpg es el anuncio "Tico Techos" del negocio (no logo).
