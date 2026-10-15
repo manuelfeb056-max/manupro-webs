@@ -21,3 +21,5 @@ NOTA ADICIONAL (2026-10-15, verificación cruzada):
 - OJO: "Selladores de Techos L&M Roofing" (Caguas) tiene Facebook
   (facebook.com/profile.php?id=100063933857372) pero es OTRO negocio con otro teléfono —
   NO usar su material.
+
+LOGO (2026-10-15, corrección honestidad): el logo anterior era INVENTADO (placeholder del constructor), no oficial del negocio. Reemplazado por wordmark tipográfico con las iniciales del negocio + favicon-badge.png generado. Si el negocio provee su logo oficial, reemplazar img/favicon-badge.png y los <span class="wordmark">.

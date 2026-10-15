@@ -64,12 +64,14 @@
           sel = form.querySelector('input[name="fServicio"]:checked'),
           chips = form.querySelector('.cf-chips');
       var ok = true;
-      [nombre, tel].forEach(function(el){
-        var digits=(el.value.match(/\d/g)||[]).length;
-        var bad=el.value.trim().length<2||digits<7;
-        el.classList.toggle('err',bad);if(bad)ok=false;
-      });
-      if(!sel){ok=false;chips.classList.add('err');}else{chips.classList.remove('err');}
+      (function(){
+      var badN=nombre.value.trim().length<2;
+      nombre.classList.toggle('err',badN);if(badN)ok=false;
+      var digits=(tel.value.match(/\d/g)||[]).length;
+      var badT=digits<7;
+      tel.classList.toggle('err',badT);if(badT)ok=false;
+    })();/*VALID*/
+          if(!sel){ok=false;chips.classList.add('err');}else{chips.classList.remove('err');}
       if(!ok) return;
       var parts=['Hola ' + biz + ', soy ' + nombre.value.trim() + ' (' + tel.value.trim() + ').',
                  'Me interesa: ' + sel.value + '.'];

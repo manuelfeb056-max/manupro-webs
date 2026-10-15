@@ -24,3 +24,5 @@ INVESTIGACIÓN (2026-10-15):
 RESULTADO: SIN MATERIAL REAL — negocio verificado con teléfono coincidente, pero
 sin logo público ni redes verificables. No se inventó material nuevo ni se usó
 material de terceros. No se tocó index.html.
+
+LOGO (2026-10-15, corrección honestidad): el logo anterior era INVENTADO (placeholder del constructor), no oficial del negocio. Reemplazado por wordmark tipográfico con las iniciales del negocio + favicon-badge.png generado. Si el negocio provee su logo oficial, reemplazar img/favicon-badge.png y los <span class="wordmark">.

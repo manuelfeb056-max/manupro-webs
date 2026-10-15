@@ -32,3 +32,5 @@ SEGUNDA PASADA (2026-10-15):
   RECOMENDACIÓN: reemplazarlo por wordmark de texto o eliminarlo; no presentarlo
   como marca oficial del negocio.
 - Sin cambios: SIN MATERIAL REAL.
+
+LOGO (2026-10-15, corrección honestidad): el logo anterior era INVENTADO (placeholder del constructor), no oficial del negocio. Reemplazado por wordmark tipográfico con las iniciales del negocio + favicon-badge.png generado. Si el negocio provee su logo oficial, reemplazar img/favicon-badge.png y los <span class="wordmark">.

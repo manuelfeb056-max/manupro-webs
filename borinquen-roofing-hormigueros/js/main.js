@@ -44,12 +44,14 @@ if(!open){it.classList.add('open');a.style.maxHeight=a.scrollHeight+'px';}
         sel=f.querySelector('input[name="qServicio"]:checked'),
         chips=document.getElementById('qChips');
     var ok=true;
-    [n,t].forEach(function(el){
-      var digits=(el.value.match(/\d/g)||[]).length;
-      var bad=el.value.trim().length<2||digits<7;
-      el.classList.toggle('err',bad);if(bad)ok=false;
-    });
-    if(!sel){ok=false;chips.classList.add('err');}else{chips.classList.remove('err');}
+    (function(){
+      var badN=n.value.trim().length<2;
+      n.classList.toggle('err',badN);if(badN)ok=false;
+      var digits=(t.value.match(/\d/g)||[]).length;
+      var badT=digits<7;
+      t.classList.toggle('err',badT);if(badT)ok=false;
+    })();/*VALID*/
+        if(!sel){ok=false;chips.classList.add('err');}else{chips.classList.remove('err');}
     if(!ok) return;
     var parts=['Hola Borinquen Roofing, soy '+n.value.trim()+' ('+t.value.trim()+').',
                'Me interesa: '+sel.value+'.'];
