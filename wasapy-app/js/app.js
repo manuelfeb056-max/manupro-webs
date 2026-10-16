@@ -1,3 +1,25 @@
+
+// ===== MODO DIRECTO (sin backend): usa Pollinations gratis sin llave =====
+const POLL = {
+  async chat(messages, model){
+    const prompt = messages.map(m=>m.role+": "+m.content).join("\n");
+    const r = await fetch("https://text.pollinations.ai/"+encodeURIComponent(prompt)+"?model="+(model||"openai"));
+    if(!r.ok) throw new Error("pollinations");
+    return await r.text();
+  },
+  image(prompt, w, h){
+    return "https://image.pollinations.ai/prompt/"+encodeURIComponent(prompt)+"?width="+(w||1024)+"&height="+(h||1024)+"&model=flux&nologo=true&seed="+Math.floor(Math.random()*999999);
+  }
+};
+// intenta backend primero, si falla usa Pollinations directo
+async function aiChat(messages){
+  try{
+    const r = await fetch(WASAPY_API+"/chat",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({messages})});
+    if(r.ok){ const d = await r.json(); return {text:d.respuesta||d.text, via:"backend"}; }
+    throw 0;
+  }catch(e){ return {text: await POLL.chat(messages), via:"directo"}; }
+}
+
 /* ============ WASAPY — App ============ */
 /* Configura aquí la URL del backend */
 /* API base viene de js/config.js (WASAPY_API) */
@@ -120,34 +142,27 @@ async function sendChat(text) {
   chatInput.value = "";
   chatHistory.push({ role: "user", content: text });
   showTyping();
-  const negocio = $("chatNegocio").value.trim() || null;
+  mascotWork("Pensando...");
   try {
-    const r = await fetch(API_BASE + "/chat", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ messages: chatHistory.slice(-20), negocio })
-    });
-    if (!r.ok) throw new Error("HTTP " + r.status);
-    const data = await r.json();
-    hideTyping();
-    // intentar generar audio de la respuesta
+    const result = await aiChat(chatHistory.slice(-20));
+    hideTyping(); mascotIdle();
+    // intentar audio solo si hay backend
     let audioUrl = null;
-    try {
-      const tr = await fetch(API_BASE + "/tts", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ texto: data.respuesta.slice(0, 500) })
-      });
-      if (tr.ok) {
-        const blob = await tr.blob();
-        audioUrl = URL.createObjectURL(blob);
-      }
-    } catch (e) { /* audio opcional */ }
-    addMsg("bot", data.respuesta, data.proveedor, audioUrl);
-    chatHistory.push({ role: "assistant", content: data.respuesta });
+    if(result.via==="backend"){
+      try {
+        const tr = await fetch(API_BASE + "/tts", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ texto: result.text.slice(0, 500) })
+        });
+        if (tr.ok) { const blob = await tr.blob(); audioUrl = URL.createObjectURL(blob); }
+      } catch (e) {}
+    }
+    addMsg("bot", result.text, result.via==="directo"?"Wasapy IA":result.proveedor, audioUrl);
+    chatHistory.push({ role: "assistant", content: result.text });
   } catch (err) {
-    hideTyping();
-    addMsg("bot", "No pude conectar con el backend. Verifica que esté corriendo en " + API_BASE + ".");
+    hideTyping(); mascotIdle();
+    addMsg("bot", "Tuve un problema. Intenta de nuevo.");
   }
 }
 
@@ -264,20 +279,28 @@ $("genContentBtn").addEventListener("click", async () => {
   btn.disabled = true;
   mascotWork(true, "Creando contenido");
   $("contentResult").innerHTML = '<div class="spinner"></div>';
+  const cantidad = parseInt($("ctCantidad").value, 10);
+  const red = $("ctRed").value;
+  const tema = $("ctTema").value.trim();
   try {
-    const r = await fetch(API_BASE + "/contenido", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        negocio,
-        rubro,
-        tema: $("ctTema").value.trim() || null,
-        cantidad: parseInt($("ctCantidad").value, 10),
-        red: $("ctRed").value
-      })
-    });
-    if (!r.ok) throw new Error("HTTP " + r.status);
-    const d = await r.json();
+    let d = null;
+    try {
+      const r = await fetch(API_BASE + "/contenido", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ negocio, rubro, tema: tema || null, cantidad, red })
+      });
+      if (r.ok) d = await r.json();
+      else throw 0;
+    } catch(e) {
+      const prompt = "Genera "+cantidad+" ideas de contenido para "+red+" del negocio '"+negocio+"' ("+rubro+")"+(tema?". Tema: "+tema:"")+". Para cada idea dame: titulo, copy listo para publicar y 3 hashtags. Responde en formato numerado.";
+      const txt = await POLL.chat([{role:"user",content:prompt}]);
+      const ideas = txt.split(/\n(?=\d+[\.)\-])/).filter(s=>s.trim().length>10).slice(0,cantidad).map(s=>{
+        const lines = s.trim().split("\n");
+        return { titulo: lines[0].replace(/^\d+[\.)\-]\s*/,"").slice(0,80), texto: lines.slice(1).join("\n").slice(0,400), hashtags: (s.match(/#\w+/g)||[]).slice(0,5) };
+      });
+      d = { ideas: ideas.length?ideas:[{titulo:"Ideas para "+negocio,texto:txt.slice(0,500),hashtags:[]}] };
+    }
     $("contentResult").innerHTML = (d.ideas || []).map((idea, i) => `
       <div class="idea">
         <h4>${i + 1}. ${esc(idea.titulo)}</h4>
@@ -288,7 +311,6 @@ $("genContentBtn").addEventListener("click", async () => {
           Copiar copy
         </button>
       </div>`).join("");
-    // copiar al portapapeles
     document.querySelectorAll(".copy-btn").forEach((b) => {
       b.addEventListener("click", async () => {
         const idea = d.ideas[parseInt(b.dataset.i, 10)];
@@ -302,7 +324,7 @@ $("genContentBtn").addEventListener("click", async () => {
       });
     });
   } catch (err) {
-    $("contentResult").innerHTML = `<div class="empty">Error al generar. Verifica la conexión con el backend.</div>`;
+    $("contentResult").innerHTML = `<div class="empty">Error al generar. Intenta de nuevo.</div>`;
   }
   mascotWork(false);
   btn.disabled = false;
@@ -316,20 +338,22 @@ $("genImgBtn").addEventListener("click", async () => {
   btn.disabled = true;
   mascotWork(true, "Generando imagen");
   $("imgResult").innerHTML = '<div class="spinner"></div>';
+  const w = parseInt($("imgW").value, 10), h = parseInt($("imgH").value, 10);
+  let url = null;
   try {
     const r = await fetch(API_BASE + "/generar-imagen", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        prompt,
-        ancho: parseInt($("imgW").value, 10),
-        alto: parseInt($("imgH").value, 10)
-      })
+      body: JSON.stringify({ prompt, ancho: w, alto: h })
     });
-    if (!r.ok) throw new Error("HTTP " + r.status);
-    const d = await r.json();
-    const seed = Date.now();
-    const url = d.url + (d.url.includes("?") ? "&" : "?") + "seed=" + seed;
+    if (r.ok) {
+      const d = await r.json();
+      url = d.url + (d.url.includes("?") ? "&" : "?") + "seed=" + Date.now();
+    } else throw 0;
+  } catch(e) {
+    url = POLL.image(prompt, w, h);
+  }
+  try {
     $("imgResult").innerHTML = `
       <div class="gen-img">
         <img src="${esc(url)}" alt="Imagen generada" loading="lazy">
@@ -338,7 +362,7 @@ $("genImgBtn").addEventListener("click", async () => {
         </a>
       </div>`;
   } catch (err) {
-    $("imgResult").innerHTML = `<div class="empty">Error al generar. Verifica la conexión con el backend.</div>`;
+    $("imgResult").innerHTML = `<div class="empty">Error al generar. Intenta de nuevo.</div>`;
   }
   mascotWork(false);
   btn.disabled = false;
