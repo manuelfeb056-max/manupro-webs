@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Wasapy — Presencia real con IA</title>
+<meta name="description" content="Wasapy: agente de IA centrado en CRM. Presencia real en WhatsApp, Messenger y Facebook.">
+<link rel="icon" href="assets/logo.webp">
+<link rel="apple-touch-icon" href="assets/logo.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="app">
+
+  <!-- ======= TOP BAR ======= -->
+  <header class="topbar">
+    <a class="brand" href="#" id="brandHome">
+      <img class="brand-logo" src="assets/logo.webp" alt="Wasapy">
+      <span>
+        <span class="brand-name">Wasa<span class="w">py</span></span><br>
+        <span class="brand-sub">Presencia real con IA</span>
+      </span>
+    </a>
+    <button class="status-pill" id="healthBtn" aria-label="Estado del sistema">
+      <span class="dot" id="healthDot"></span>
+      <span id="healthTxt">Sistema</span>
+    </button>
+  </header>
+
+  <main>
+    <!-- ======= 1. CHAT ======= -->
+    <section class="view active" id="v-chat">
+      <h2 class="view-title">Agente IA</h2>
+      <p class="view-sub">Tu presencia real: aprende cómo hablas y responde como tú.</p>
+      <div class="card" style="padding:14px">
+        <label class="lbl" style="margin-top:0">Negocio (opcional)</label>
+        <input type="text" id="chatNegocio" placeholder="Ej: Barbería El Corte, Ponce">
+      </div>
+      <div class="chat-wrap">
+        <div class="chat-box" id="chatBox"></div>
+        <div class="chat-input">
+          <button class="icon-btn rec" id="recBtn" aria-label="Grabar audio">
+            <svg viewBox="0 0 24 24"><path d="M12 14a3 3 0 0 0 3-3V6a3 3 0 1 0-6 0v5a3 3 0 0 0 3 3zm5-3a5 5 0 0 1-10 0H5a7 7 0 0 0 6 6.92V21h2v-3.08A7 7 0 0 0 19 11h-2z"/></svg>
+          </button>
+          <input type="text" id="chatInput" placeholder="Escríbele al agente..." autocomplete="off">
+          <button class="icon-btn send" id="sendBtn" aria-label="Enviar">
+            <svg viewBox="0 0 24 24"><path d="M2 21l21-9L2 3v7l15 2-15 2v7z"/></svg>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======= 2. ANALIZADOR DE FLYERS ======= -->
+    <section class="view" id="v-flyer">
+      <h2 class="view-title">Analizador de flyers</h2>
+      <p class="view-sub">Sube tu flyer y la IA te dice qué agregar o quitar para una métrica perfecta.</p>
+      <div class="card">
+        <div class="drop" id="dropZone">
+          <svg viewBox="0 0 24 24"><path d="M9 16h6v-6h4l-7-7-7 7h4v6zm-4 2h14v2H5v-2z"/></svg>
+          <p><strong>Toca para subir tu flyer</strong><br>o arrástralo aquí (JPG, PNG, WebP)</p>
+          <input type="file" id="flyerInput" accept="image/jpeg,image/png,image/webp">
+        </div>
+        <img class="preview" id="flyerPreview" alt="" style="display:none">
+        <button class="btn btn-block" id="analyzeBtn" style="display:none">
+          <svg viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27a6.5 6.5 0 1 0-.7.7l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0A4.5 4.5 0 1 1 14 9.5 4.5 4.5 0 0 1 9.5 14z"/></svg>
+          Analizar flyer
+        </button>
+        <div id="flyerResult"></div>
+      </div>
+    </section>
+
+    <!-- ======= 3. GENERADOR DE CONTENIDO ======= -->
+    <section class="view" id="v-contenido">
+      <h2 class="view-title">Generador de contenido</h2>
+      <p class="view-sub">Ideas, copies y hashtags listos para tus redes.</p>
+      <div class="card">
+        <label class="lbl" style="margin-top:0">Nombre del negocio</label>
+        <input type="text" id="ctNegocio" placeholder="Ej: Dulces María">
+        <div class="row2">
+          <div>
+            <label class="lbl">Rubro</label>
+            <input type="text" id="ctRubro" placeholder="Ej: repostería">
+          </div>
+          <div>
+            <label class="lbl">Red social</label>
+            <select id="ctRed">
+              <option value="instagram">Instagram</option>
+              <option value="facebook">Facebook</option>
+              <option value="tiktok">TikTok</option>
+              <option value="whatsapp">WhatsApp</option>
+            </select>
+          </div>
+        </div>
+        <label class="lbl">Tema (opcional)</label>
+        <input type="text" id="ctTema" placeholder="Ej: promoción de fin de semana">
+        <div class="row2">
+          <div>
+            <label class="lbl">Cantidad de ideas</label>
+            <select id="ctCantidad">
+              <option value="3">3 ideas</option>
+              <option value="5" selected>5 ideas</option>
+              <option value="8">8 ideas</option>
+            </select>
+          </div>
+        </div>
+        <br>
+        <button class="btn btn-block" id="genContentBtn">
+          <svg viewBox="0 0 24 24"><path d="M12 2l2.4 7.2H22l-6 4.6 2.3 7.2-6.3-4.5-6.3 4.5L8 13.8 2 9.2h7.6L12 2z"/></svg>
+          Generar contenido
+        </button>
+        <div id="contentResult" style="margin-top:16px"></div>
+      </div>
+    </section>
+
+    <!-- ======= 4. GENERADOR DE IMÁGENES ======= -->
+    <section class="view" id="v-imagen">
+      <h2 class="view-title">Generador de imágenes</h2>
+      <p class="view-sub">Crea imágenes para tus publicaciones con IA.</p>
+      <div class="card">
+        <label class="lbl" style="margin-top:0">Describe la imagen</label>
+        <textarea id="imgPrompt" placeholder="Ej: flyer moderno de barbería, silla de barbero, tonos verdes y negros, texto ESPACIO PARA TEXTO"></textarea>
+        <div class="row2">
+          <div>
+            <label class="lbl">Ancho</label>
+            <select id="imgW">
+              <option value="1024" selected>1024</option>
+              <option value="768">768</option>
+              <option value="512">512</option>
+            </select>
+          </div>
+          <div>
+            <label class="lbl">Alto</label>
+            <select id="imgH">
+              <option value="1024" selected>1024</option>
+              <option value="768">768</option>
+              <option value="512">512</option>
+            </select>
+          </div>
+        </div>
+        <br>
+        <button class="btn btn-block" id="genImgBtn">
+          <svg viewBox="0 0 24 24"><path d="M21 19V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2zM8.5 11l2.5 3 3.5-4.5L19 16H5l3.5-5z"/></svg>
+          Generar imagen
+        </button>
+        <div class="gen-grid" id="imgResult"></div>
+      </div>
+    </section>
+
+    <!-- ======= 5. CRM DASHBOARD ======= -->
+    <section class="view" id="v-crm">
+      <h2 class="view-title">CRM</h2>
+      <p class="view-sub">Tus conversaciones y clientes en un solo lugar.</p>
+      <div class="stats-row">
+        <div class="stat"><b id="stTotal">0</b><span>Conversaciones</span></div>
+        <div class="stat"><b id="stHot">0</b><span>Calientes</span></div>
+        <div class="stat"><b id="stResp">0</b><span>Resp. por IA</span></div>
+        <div class="stat"><b id="stHoy">0</b><span>Hoy</span></div>
+      </div>
+      <div id="convList"></div>
+    </section>
+  </main>
+
+  <!-- ======= BOTTOM NAV ======= -->
+  <nav class="bottomnav">
+    <button class="navbtn active" data-view="v-chat">
+      <svg viewBox="0 0 24 24"><path d="M20 2H4a2 2 0 0 0-2 2v18l4-4h14a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2z"/></svg>
+      Agente
+    </button>
+    <button class="navbtn" data-view="v-flyer">
+      <svg viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27a6.5 6.5 0 1 0-.7.7l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0A4.5 4.5 0 1 1 14 9.5 4.5 4.5 0 0 1 9.5 14z"/></svg>
+      Flyers
+    </button>
+    <button class="navbtn" data-view="v-contenido">
+      <svg viewBox="0 0 24 24"><path d="M3 17.25V21h3.75L17.8 9.94l-3.75-3.75L3 17.25zM20.7 7.04a1 1 0 0 0 0-1.41l-2.34-2.34a1 1 0 0 0-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"/></svg>
+      Contenido
+    </button>
+    <button class="navbtn" data-view="v-imagen">
+      <svg viewBox="0 0 24 24"><path d="M21 19V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2zM8.5 11l2.5 3 3.5-4.5L19 16H5l3.5-5z"/></svg>
+      Imágenes
+    </button>
+    <button class="navbtn" data-view="v-crm">
+      <svg viewBox="0 0 24 24"><path d="M16 11a3 3 0 1 0-3-3 3 3 0 0 0 3 3zm-8 0a3 3 0 1 0-3-3 3 3 0 0 0 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05A4.22 4.22 0 0 1 17 16.5V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>
+      CRM
+    </button>
+  </nav>
+
+  <!-- ======= HEALTH MODAL ======= -->
+  <div class="modal" id="healthModal">
+    <div class="modal-box">
+      <h3>Estado del sistema</h3>
+      <div id="provList"></div>
+      <button class="btn btn-ghost modal-close" id="healthClose">Cerrar</button>
+    </div>
+  </div>
+
+  <div class="toast" id="toast"></div>
+</div>
+
+<script src="js/app.js"></script>
+</body>
+</html>
