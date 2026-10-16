@@ -86,6 +86,18 @@ function addMsg(who, text, prov, audioUrl) {
   return div;
 }
 
+/* Mascota estilo Muse: estado trabajando */
+const museMascot = $("museMascot"), museStatus = $("museStatus");
+const STATUS_IDLE = "¿En qué te ayudo hoy?";
+function mascotWork(on, label) {
+  if (!museMascot) return;
+  museMascot.classList.toggle("working", !!on);
+  if (museStatus) {
+    museStatus.classList.toggle("working", !!on);
+    museStatus.textContent = on ? (label || "Trabajando") : STATUS_IDLE;
+  }
+}
+
 function showTyping() {
   const div = document.createElement("div");
   div.className = "msg bot typing";
@@ -93,10 +105,12 @@ function showTyping() {
   div.innerHTML = "<span></span><span></span><span></span>";
   chatBox.appendChild(div);
   chatBox.scrollTop = chatBox.scrollHeight;
+  mascotWork(true, "Pensando");
 }
 function hideTyping() {
   const t = $("typingRow");
   if (t) t.remove();
+  mascotWork(false);
 }
 
 async function sendChat(text) {
@@ -219,6 +233,7 @@ $("analyzeBtn").addEventListener("click", async () => {
   if (!flyerFile) return;
   const btn = $("analyzeBtn");
   btn.disabled = true;
+  mascotWork(true, "Analizando flyer");
   $("flyerResult").innerHTML = '<div class="spinner"></div>';
   try {
     const fd = new FormData();
@@ -236,6 +251,7 @@ $("analyzeBtn").addEventListener("click", async () => {
   } catch (err) {
     $("flyerResult").innerHTML = `<div class="empty">Error al analizar. Verifica la conexión con el backend.</div>`;
   }
+  mascotWork(false);
   btn.disabled = false;
 });
 
@@ -246,6 +262,7 @@ $("genContentBtn").addEventListener("click", async () => {
   if (!negocio || !rubro) { toast("Escribe el negocio y el rubro"); return; }
   const btn = $("genContentBtn");
   btn.disabled = true;
+  mascotWork(true, "Creando contenido");
   $("contentResult").innerHTML = '<div class="spinner"></div>';
   try {
     const r = await fetch(API_BASE + "/contenido", {
@@ -287,6 +304,7 @@ $("genContentBtn").addEventListener("click", async () => {
   } catch (err) {
     $("contentResult").innerHTML = `<div class="empty">Error al generar. Verifica la conexión con el backend.</div>`;
   }
+  mascotWork(false);
   btn.disabled = false;
 });
 
@@ -296,6 +314,7 @@ $("genImgBtn").addEventListener("click", async () => {
   if (prompt.length < 3) { toast("Describe la imagen primero"); return; }
   const btn = $("genImgBtn");
   btn.disabled = true;
+  mascotWork(true, "Generando imagen");
   $("imgResult").innerHTML = '<div class="spinner"></div>';
   try {
     const r = await fetch(API_BASE + "/generar-imagen", {
@@ -321,6 +340,7 @@ $("genImgBtn").addEventListener("click", async () => {
   } catch (err) {
     $("imgResult").innerHTML = `<div class="empty">Error al generar. Verifica la conexión con el backend.</div>`;
   }
+  mascotWork(false);
   btn.disabled = false;
 });
 

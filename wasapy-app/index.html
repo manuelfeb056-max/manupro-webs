@@ -20,7 +20,7 @@
     <a class="brand" href="#" id="brandHome">
       <img class="brand-logo" src="assets/logo.webp" alt="Wasapy">
       <span>
-        <span class="brand-name">Wasa<span class="w">py</span></span><br>
+        <span class="brand-name">Wasapy</span><br>
         <span class="brand-sub">Presencia real con IA</span>
       </span>
     </a>
@@ -31,24 +31,28 @@
   </header>
 
   <main>
-    <!-- ======= 1. CHAT ======= -->
+    <!-- ======= 1. CHAT (estilo Muse) ======= -->
     <section class="view active" id="v-chat">
-      <h2 class="view-title">Agente IA</h2>
-      <p class="view-sub">Tu presencia real: aprende cómo hablas y responde como tú.</p>
-      <div class="card" style="padding:14px">
-        <label class="lbl" style="margin-top:0">Negocio (opcional)</label>
-        <input type="text" id="chatNegocio" placeholder="Ej: Barbería El Corte, Ponce">
+      <div class="muse-hero" id="museHero">
+        <img class="muse-mascot" id="museMascot" src="assets/mascot.webp" alt="Wasapy">
+        <div class="muse-status" id="museStatus">¿En qué te ayudo hoy?</div>
       </div>
       <div class="chat-wrap">
         <div class="chat-box" id="chatBox"></div>
-        <div class="chat-input">
-          <button class="icon-btn rec" id="recBtn" aria-label="Grabar audio">
-            <svg viewBox="0 0 24 24"><path d="M12 14a3 3 0 0 0 3-3V6a3 3 0 1 0-6 0v5a3 3 0 0 0 3 3zm5-3a5 5 0 0 1-10 0H5a7 7 0 0 0 6 6.92V21h2v-3.08A7 7 0 0 0 19 11h-2z"/></svg>
+        <div class="muse-inputbar">
+          <button class="muse-plus" id="plusBtn" aria-label="Adjuntar">
+            <svg viewBox="0 0 24 24"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg>
           </button>
           <input type="text" id="chatInput" placeholder="Escríbele al agente..." autocomplete="off">
-          <button class="icon-btn send" id="sendBtn" aria-label="Enviar">
+          <button class="muse-mic" id="recBtn" aria-label="Grabar audio">
+            <svg viewBox="0 0 24 24"><path d="M12 14a3 3 0 0 0 3-3V6a3 3 0 1 0-6 0v5a3 3 0 0 0 3 3zm5-3a5 5 0 0 1-10 0H5a7 7 0 0 0 6 6.92V21h2v-3.08A7 7 0 0 0 19 11h-2z"/></svg>
+          </button>
+          <button class="muse-send" id="sendBtn" aria-label="Enviar">
             <svg viewBox="0 0 24 24"><path d="M2 21l21-9L2 3v7l15 2-15 2v7z"/></svg>
           </button>
+        </div>
+        <div class="chat-negocio">
+          <input type="text" id="chatNegocio" placeholder="Negocio (opcional) — Ej: Barbería El Corte, Ponce">
         </div>
       </div>
     </section>
