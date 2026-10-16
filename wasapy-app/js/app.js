@@ -461,3 +461,22 @@ $("waConnectBtn") && $("waConnectBtn").addEventListener("click", async () => {
 
 cargarConexiones();
 cargarConversaciones();
+
+// Avatar picker: cambia la mascota en toda la app
+document.querySelectorAll('.av-btn').forEach(btn=>{
+  btn.addEventListener('click',()=>{
+    document.querySelectorAll('.av-btn').forEach(b=>b.classList.remove('active'));
+    btn.classList.add('active');
+    const av = btn.dataset.av;
+    document.querySelectorAll('.brand-logo, .mascot-img, #mascotImg').forEach(img=>{ img.src = 'assets/'+av; });
+    localStorage.setItem('wasapy_avatar', av);
+  });
+});
+// restaurar avatar elegido
+(function(){
+  const av = localStorage.getItem('wasapy_avatar');
+  if(av){
+    document.querySelectorAll('.brand-logo, .mascot-img, #mascotImg').forEach(img=>{ img.src = 'assets/'+av; });
+    document.querySelectorAll('.av-btn').forEach(b=>b.classList.toggle('active', b.dataset.av===av));
+  }
+})();
