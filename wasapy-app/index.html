@@ -152,10 +152,14 @@
     <!-- ======= 5. CRM DASHBOARD ======= -->
     <section class="view" id="v-crm">
       <h2 class="view-title">CRM</h2>
-      <p class="view-sub">Tus conversaciones y clientes en un solo lugar.</p>
+      <p class="view-sub">Conecta tus redes y mira tus conversaciones reales en un solo lugar.</p>
+      <div class="card" style="margin-bottom:14px">
+        <label class="lbl" style="margin-top:0">Conectar redes</label>
+        <div id="connBox" class="conn-grid"><div class="empty">Cargando...</div></div>
+      </div>
       <div class="stats-row">
         <div class="stat"><b id="stTotal">0</b><span>Conversaciones</span></div>
-        <div class="stat"><b id="stHot">0</b><span>Calientes</span></div>
+        <div class="stat"><b id="stHot">0</b><span>Sin leer</span></div>
         <div class="stat"><b id="stResp">0</b><span>Resp. por IA</span></div>
         <div class="stat"><b id="stHoy">0</b><span>Hoy</span></div>
       </div>
@@ -196,9 +200,24 @@
     </div>
   </div>
 
+  <!-- ======= WHATSAPP MODAL ======= -->
+  <div class="modal" id="waModal">
+    <div class="modal-box">
+      <h3>Conectar WhatsApp</h3>
+      <p style="font-size:.9rem;opacity:.8;margin-bottom:12px">Desde <b>business.facebook.com → WhatsApp → Configuración de la API</b> copia tu <b>Phone Number ID</b> y genera un <b>token permanente</b> (usuario del sistema).</p>
+      <label class="lbl">Phone Number ID</label>
+      <input type="text" id="waPhoneId" placeholder="Ej: 123456789012345" inputmode="numeric">
+      <label class="lbl">Token permanente</label>
+      <input type="password" id="waToken" placeholder="Pega tu token aquí" autocomplete="off">
+      <button class="btn btn-block" id="waConnectBtn" style="margin-top:12px">Conectar WhatsApp</button>
+      <button class="btn btn-ghost modal-close" id="waClose">Cerrar</button>
+    </div>
+  </div>
+
   <div class="toast" id="toast"></div>
 </div>
 
+<script src="js/config.js"></script>
 <script src="js/app.js"></script>
 </body>
 </html>

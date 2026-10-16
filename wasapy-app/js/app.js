@@ -1,6 +1,7 @@
 /* ============ WASAPY — App ============ */
 /* Configura aquí la URL del backend */
-const API_BASE = "http://localhost:8000";
+/* API base viene de js/config.js (WASAPY_API) */
+const API_BASE = (typeof WASAPY_API !== "undefined" ? WASAPY_API : "").replace(/\/+$/, "");
 
 const $ = (id) => document.getElementById(id);
 const chatBox = $("chatBox"), chatInput = $("chatInput");
@@ -323,7 +324,7 @@ $("genImgBtn").addEventListener("click", async () => {
   btn.disabled = false;
 });
 
-/* ================= 5. CRM DASHBOARD (datos de ejemplo) ================= */
+/* ================= 5. CRM — CONEXIONES REALES ================= */
 const CHAN_ICON = {
   whatsapp: '<svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.5 14.1c-.2.6-1.3 1.6-2 1.7-.6.1-1.2.2-1.9-.1-.4-.1-1-.3-1.7-.6-3-1.3-4.9-4.3-5.1-4.5-.1-.2-1.2-1.6-1.2-3s.8-2.1 1-2.4c.3-.3.6-.4.8-.4h.6c.2 0 .4 0 .7.5.2.6.9 2.2 1 2.3.1.1.1.3 0 .5-.1.2-.2.3-.3.5l-.4.5c-.2.2-.3.4-.1.7.2.3.8 1.3 1.7 2.1 1.1 1 2.1 1.4 2.4 1.5.3.1.5 0 .7-.2.2-.2.8-1 1-1.3.2-.3.4-.3.7-.2.3.2 1.9.9 2.2 1 .3.2.5.3.6.4.1.2.1.9-.2 1.8z"/></svg>',
   messenger: '<svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.5 15.5L2 22l4.7-1.2A10 10 0 1 0 12 2zm1.2 13.5l-2.6-2.8-5 2.8 5.5-5.8 2.6 2.8 4.9-2.8-5.4 5.8z"/></svg>',
@@ -332,37 +333,111 @@ const CHAN_ICON = {
 };
 const CHAN_NAME = { whatsapp: "WhatsApp", messenger: "Messenger", facebook: "Facebook", instagram: "Instagram" };
 
-const CONVS_EJEMPLO = [
-  { nombre: "María Torres", inicial: "MT", ultimo: "¿Cuánto sale el plan para mi salón? Me interesa empezar ya.", tiempo: "10:24", canal: "whatsapp", estado: "hot", estadoLbl: "Caliente", unread: 2, ia: true },
-  { nombre: "Carlos Méndez", inicial: "CM", ultimo: "Wasapy: ¡Perfecto! Te envío la cotización por aquí mismo.", tiempo: "09:51", canal: "messenger", estado: "warm", estadoLbl: "Tibio", unread: 0, ia: true },
-  { nombre: "Pizzería Don Tito", inicial: "PT", ultimo: "Gracias, lo reviso con mi socio y te aviso.", tiempo: "09:12", canal: "facebook", estado: "warm", estadoLbl: "Tibio", unread: 0, ia: false },
-  { nombre: "Laura Jiménez", inicial: "LJ", ultimo: "Wasapy: Claro que sí, ¿qué día te viene bien?", tiempo: "08:47", canal: "whatsapp", estado: "hot", estadoLbl: "Caliente", unread: 1, ia: true },
-  { nombre: "Taller Hernández", inicial: "TH", ultimo: "Solo estaba preguntando por curiosidad.", tiempo: "Ayer", canal: "instagram", estado: "cold", estadoLbl: "Frío", unread: 0, ia: false },
-  { nombre: "Sofía Ramírez", inicial: "SR", ultimo: "Wasapy: ¡Bienvenida! Cuéntame de tu negocio.", tiempo: "Ayer", canal: "whatsapp", estado: "new", estadoLbl: "Nuevo", unread: 3, ia: true },
-  { nombre: "Colmado El Vecino", inicial: "CV", ultimo: "¿Eso funciona para un colmado pequeño?", tiempo: "Ayer", canal: "messenger", estado: "warm", estadoLbl: "Tibio", unread: 1, ia: false },
-  { nombre: "Diego Fuentes", inicial: "DF", ultimo: "Wasapy: Entendido, lo agendo para el viernes.", tiempo: "15 oct", canal: "facebook", estado: "cold", estadoLbl: "Frío", unread: 0, ia: true }
-];
-
-function renderCRM() {
-  const hot = CONVS_EJEMPLO.filter((c) => c.estado === "hot").length;
-  const ia = CONVS_EJEMPLO.filter((c) => c.ia).length;
-  const hoy = CONVS_EJEMPLO.filter((c) => c.tiempo.includes(":")).length;
-  $("stTotal").textContent = CONVS_EJEMPLO.length;
-  $("stHot").textContent = hot;
-  $("stResp").textContent = ia;
-  $("stHoy").textContent = hoy;
-  $("convList").innerHTML = CONVS_EJEMPLO.map((c) => `
-    <div class="conv">
-      <div class="avatar">${esc(c.inicial)}</div>
-      <div class="conv-info">
-        <div class="conv-name">${esc(c.nombre)} <span class="badge ${c.estado}">${esc(c.estadoLbl)}</span></div>
-        <div class="conv-msg">${esc(c.ultimo)}</div>
-        <div class="chan" style="margin-top:5px">${CHAN_ICON[c.canal] || ""}${CHAN_NAME[c.canal] || c.canal}${c.ia ? " · respondido por IA" : ""}</div>
-      </div>
-      <div class="conv-right">
-        <div class="conv-time">${esc(c.tiempo)}</div>
-        ${c.unread ? `<span class="unread">${c.unread}</span>` : ""}
-      </div>
-    </div>`).join("");
+function canalBtn(canal, conectado, nombre) {
+  const lbl = conectado ? (nombre ? "Conectado: " + esc(nombre) : "Conectado") : "Conectar " + CHAN_NAME[canal];
+  const cls = conectado ? "conn-ok" : "";
+  return `<button class="conn-btn ${cls}" data-canal="${canal}" data-conectado="${conectado ? 1 : 0}">
+    ${CHAN_ICON[canal] || ""}<span>${lbl}</span></button>`;
 }
-renderCRM();
+
+async function cargarConexiones() {
+  const box = $("connBox");
+  try {
+    const r = await fetch(API_BASE + "/conexiones");
+    if (!r.ok) throw new Error();
+    const e = await r.json();
+    const fbN = (e.facebook.paginas[0] || {}).nombre || "";
+    const igN = (e.instagram.cuentas[0] || {}).usuario || "";
+    box.innerHTML =
+      canalBtn("facebook", e.facebook.conectado, fbN) +
+      canalBtn("instagram", e.instagram.conectado, igN ? "@" + igN : "") +
+      canalBtn("messenger", e.messenger.conectado, fbN) +
+      canalBtn("whatsapp", e.whatsapp.conectado, e.whatsapp.numero || "");
+    box.querySelectorAll(".conn-btn").forEach((b) => {
+      b.addEventListener("click", () => {
+        const canal = b.dataset.canal;
+        if (canal === "whatsapp") { $("waModal").classList.add("open"); return; }
+        window.location.href = API_BASE + "/oauth/meta/iniciar?canal=" + canal;
+      });
+    });
+  } catch (err) {
+    box.innerHTML = '<div class="empty">Sin conexión al backend.</div>';
+  }
+}
+
+async function cargarConversaciones() {
+  const list = $("convList");
+  try {
+    const r = await fetch(API_BASE + "/conversaciones");
+    if (!r.ok) throw new Error();
+    const data = await r.json();
+    const convs = data.conversaciones || [];
+    $("stTotal").textContent = convs.length;
+    $("stHot").textContent = convs.filter((c) => (c.unread || 0) > 0).length;
+    $("stResp").textContent = convs.filter((c) => c.ia).length;
+    $("stHoy").textContent = convs.filter((c) => (c.tiempo || "").includes(":")).length;
+    if (!convs.length) {
+      list.innerHTML = `<div class="card"><div class="empty" style="padding:28px 16px;text-align:center">
+        <p style="font-weight:700;margin-bottom:8px">Conecta tus redes para ver conversaciones reales</p>
+        <p style="font-size:.9rem;opacity:.75">Sin conexiones no hay datos que mostrar. Toca arriba para conectar Facebook, Instagram, Messenger o WhatsApp.</p>
+      </div></div>`;
+      return;
+    }
+    list.innerHTML = convs.map((c) => `
+      <div class="conv">
+        <div class="avatar">${esc(c.inicial || "?")}</div>
+        <div class="conv-info">
+          <div class="conv-name">${esc(c.nombre || "?")}</div>
+          <div class="conv-msg">${esc(c.ultimo || "")}</div>
+          <div class="chan" style="margin-top:5px">${CHAN_ICON[c.canal] || ""}${CHAN_NAME[c.canal] || c.canal}${c.ia ? " · respondido por IA" : ""}</div>
+        </div>
+        <div class="conv-right">
+          <div class="conv-time">${esc(c.tiempo || "")}</div>
+          ${c.unread ? `<span class="unread">${c.unread}</span>` : ""}
+        </div>
+      </div>`).join("");
+  } catch (err) {
+    list.innerHTML = '<div class="empty">No se pudieron cargar las conversaciones.</div>';
+  }
+}
+
+// WhatsApp: conectar con phone_number_id + token permanente
+$("waClose") && $("waClose").addEventListener("click", () => $("waModal").classList.remove("open"));
+$("waModal") && $("waModal").addEventListener("click", (e) => {
+  if (e.target === $("waModal")) $("waModal").classList.remove("open");
+});
+$("waConnectBtn") && $("waConnectBtn").addEventListener("click", async () => {
+  const pid = $("waPhoneId").value.trim(), tok = $("waToken").value.trim();
+  if (!pid || !tok) { toast("Pega el Phone Number ID y el token."); return; }
+  $("waConnectBtn").disabled = true;
+  try {
+    const r = await fetch(API_BASE + "/conexiones/whatsapp", {
+      method: "POST", headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ phone_number_id: pid, token: tok }),
+    });
+    const j = await r.json();
+    if (!r.ok) throw new Error(j.detail || "Error");
+    toast("WhatsApp conectado: " + (j.numero || "listo"));
+    $("waModal").classList.remove("open");
+    cargarConexiones(); cargarConversaciones();
+  } catch (err) {
+    toast("No se pudo conectar: " + err.message);
+  }
+  $("waConnectBtn").disabled = false;
+});
+
+// aviso de OAuth recién completado
+(function () {
+  const q = new URLSearchParams(location.search);
+  const ok = q.get("conectado"), err = q.get("error");
+  if (ok) {
+    toast("¡" + CHAN_NAME[ok] + " conectado!");
+    history.replaceState(null, "", location.pathname);
+  } else if (err) {
+    toast("No se pudo conectar. Intenta de nuevo.");
+    history.replaceState(null, "", location.pathname);
+  }
+})();
+
+cargarConexiones();
+cargarConversaciones();
