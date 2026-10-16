@@ -349,3 +349,7 @@ select{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='ht
 .av-btn{width:52px;height:52px;border-radius:50%;border:2px solid transparent;padding:2px;background:#fff;cursor:pointer;transition:.2s;box-shadow:0 2px 8px rgba(15,23,42,.08)}
 .av-btn img{width:100%;height:100%;border-radius:50%;object-fit:cover}
 .av-btn.active{border-color:var(--green);transform:scale(1.08)}
+
+/* ---------- Logos oficiales de redes ---------- */
+.chan-logo{width:32px;height:32px;flex:none;border-radius:8px}
+.conn-btn{display:flex;align-items:center;gap:12px}
