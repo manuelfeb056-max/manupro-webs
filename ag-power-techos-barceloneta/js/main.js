@@ -1,55 +1,78 @@
-document.addEventListener('DOMContentLoaded',function(){
-var btn=document.getElementById('menuBtn'),ov=document.getElementById('menuOverlay');
-btn.addEventListener('click',function(){var o=ov.classList.toggle('open');btn.classList.toggle('x',o);document.body.style.overflow=o?'hidden':'';});
-ov.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){ov.classList.remove('open');btn.classList.remove('x');document.body.style.overflow='';});});
-document.querySelectorAll('.faq-item').forEach(function(it){
-var q=it.querySelector('.faq-q'),a=it.querySelector('.faq-a');
-q.addEventListener('click',function(){
-var open=it.classList.contains('open');
-document.querySelectorAll('.faq-item.open').forEach(function(o){o.classList.remove('open');o.querySelector('.faq-a').style.maxHeight=null;});
-if(!open){it.classList.add('open');a.style.maxHeight=a.scrollHeight+'px';}
-});
-});
-var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target);}});},{threshold:.12});
-document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});
-});
-
-/* cerrar menú con botón X (overlay por encima del botón flotante) */
+/* AG Power — engine: polaroid cinta + lightbox, FAQ, reveals, counters, menu, form->WA */
 (function(){
-  var c = document.querySelector('[data-mqclose]');
-  if(!c) return;
-  c.addEventListener('click', function(){
-    var nav = c.closest('nav') || document.getElementById('menuOverlay');
-    if(nav){ nav.classList.remove('open','show'); nav.setAttribute('aria-hidden','true'); }
-    var scrim = document.getElementById('scrim2');
-    if(scrim) scrim.classList.remove('on');
-    ['floatMenu','menuBtn','burger'].forEach(function(id){
-      var b=document.getElementById(id);
-      if(b){ b.classList.remove('open','active'); b.setAttribute('aria-expanded','false'); }
-    });
-    document.querySelectorAll('.fab-menu,.menu-btn,.burger,.float-menu').forEach(function(b){
-      b.classList.remove('open','active');
-    });
-    document.body.style.overflow = '';
+  "use strict";
+  var hv = document.getElementById('heroVideo');
+  if (hv) {
+    var src = hv.querySelector('source');
+    function killVideo(){ hv.style.display = 'none'; }
+    if (src) src.addEventListener('error', killVideo);
+    hv.addEventListener('error', killVideo, true);
+    setTimeout(function(){ if (hv.readyState < 2) killVideo(); else hv.style.display = 'block'; }, 4000);
+    hv.addEventListener('canplay', function(){ hv.style.display = 'block'; });
+  }
+  var lb = document.getElementById('lightbox');
+  var lbImg = document.getElementById('lbImg');
+  var lbCap = document.getElementById('lbCap');
+  function openLb(fig){
+    var im = fig.querySelector('img');
+    lbImg.src = im.src; lbImg.alt = im.alt;
+    lbCap.textContent = fig.getAttribute('data-cap') || '';
+    lb.classList.add('open'); document.body.style.overflow = 'hidden';
+  }
+  function closeLb(){ lb.classList.remove('open'); document.body.style.overflow = ''; }
+  document.querySelectorAll('.pol').forEach(function(fig){
+    fig.addEventListener('click', function(){ openLb(fig); });
   });
-})();
-
-/* Cotizador elite → WhatsApp (AG Power: 17873108848) */
-(function(){
-  var f=document.getElementById('quoteForm');
-  if(!f) return;
-  f.addEventListener('submit',function(e){
-    e.preventDefault();
-    var n=document.getElementById('qNombre'),t=document.getElementById('qTel'),
-        p=document.getElementById('qPueblo'),m=document.getElementById('qMsg'),
-        s=f.querySelector('input[name="qServicio"]:checked'),
-        chips=f.querySelector('.qe-chips'),ok=true;
-    [n,t].forEach(function(el){var bad=!el.value.trim();el.classList.toggle('err',bad);if(bad)ok=false;});
-    var sb=!s;chips.classList.toggle('err',sb);if(sb)ok=false;
-    if(!ok) return;
-    var txt='Hola AG Power, soy '+n.value.trim()+' ('+t.value.trim()+').\nServicio: '+s.value+'.'
-      +(p.value.trim()?'\nPueblo: '+p.value.trim()+'.':'')
-      +(m.value.trim()?'\nDetalles: '+m.value.trim():'');
-    window.open('https://wa.me/17873108848?text='+encodeURIComponent(txt),'_blank');
+  var lbx = document.getElementById('lbClose');
+  if (lbx) lbx.addEventListener('click', closeLb);
+  lb.addEventListener('click', function(e){ if (e.target === lb) closeLb(); });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape') closeLb(); });
+  document.querySelectorAll('.faq-item').forEach(function(item){
+    var q = item.querySelector('.faq-q'), a = item.querySelector('.faq-a');
+    q.addEventListener('click', function(){
+      var open = item.classList.contains('open');
+      document.querySelectorAll('.faq-item.open').forEach(function(o){
+        o.classList.remove('open'); o.querySelector('.faq-a').style.maxHeight = null;
+        o.querySelector('.faq-q').setAttribute('aria-expanded', 'false');
+      });
+      if (!open) { item.classList.add('open'); a.style.maxHeight = a.scrollHeight + 'px'; q.setAttribute('aria-expanded', 'true'); }
+    });
   });
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){ if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); } });
+  }, {threshold: .12});
+  document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
+  var cio = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if (!e.isIntersecting) return;
+      var el = e.target, target = parseInt(el.dataset.count || '0', 10), suf = el.dataset.suffix || '';
+      var t0 = null, dur = 1400;
+      function tick(t){
+        if (!t0) t0 = t;
+        var p = Math.min((t - t0) / dur, 1);
+        var ease = 1 - Math.pow(1 - p, 3);
+        el.textContent = Math.round(target * ease).toLocaleString('es-PR') + suf;
+        if (p < 1) requestAnimationFrame(tick);
+      }
+      requestAnimationFrame(tick); cio.unobserve(el);
+    });
+  }, {threshold: .5});
+  document.querySelectorAll('[data-count]').forEach(function(el){ cio.observe(el); });
+  var btn = document.getElementById('menuBtn'), nav = document.getElementById('nav');
+  if (btn) btn.addEventListener('click', function(){ nav.classList.toggle('open'); });
+  nav.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ nav.classList.remove('open'); }); });
+  var header = document.getElementById('header');
+  window.addEventListener('scroll', function(){ header.style.boxShadow = window.scrollY > 10 ? '0 8px 30px rgba(0,0,0,.5)' : 'none'; }, {passive:true});
+  var form = document.getElementById('cform');
+  if (form) {
+    form.addEventListener('submit', function(ev){
+      ev.preventDefault();
+      var nombre = document.getElementById('fNombre').value.trim();
+      var servicio = document.getElementById('fServicio').value;
+      var pueblo = document.getElementById('fPueblo').value.trim();
+      var msg = document.getElementById('fMsg').value.trim();
+      var text = 'Hola AG Power, soy ' + nombre + '. Me interesa: ' + servicio + '.' + (pueblo ? ' Pueblo: ' + pueblo + '.' : '') + (msg ? ' ' + msg : '');
+      window.open('https://wa.me/17873108848?text=' + encodeURIComponent(text), '_blank');
+    });
+  }
 })();

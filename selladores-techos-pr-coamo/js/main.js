@@ -1,152 +1,93 @@
-/* Selladores de Techos PR — menú flotante, reveal, galería carrusel */
+/* Selladores de Techos PR — engine: lightbox, FAQ, reveals, counters, menu, form->WA */
 (function(){
   "use strict";
+  var WA = document.body.dataset.wa || '17873128042';
+  var NAME = document.body.dataset.name || 'este negocio';
 
-  /* ---------- menú flotante hamburguesa ---------- */
-  var fab = document.getElementById('menuFab'),
-      side = document.getElementById('sideNav'),
-      close = document.getElementById('sideClose'),
-      scrim = document.getElementById('sideScrim');
-  function openNav(){ side.classList.add('open'); scrim.classList.add('open'); document.body.style.overflow = 'hidden'; }
-  function closeNav(){ side.classList.remove('open'); scrim.classList.remove('open'); document.body.style.overflow = ''; }
-  if (fab) fab.addEventListener('click', openNav);
-  if (close) close.addEventListener('click', closeNav);
-  if (scrim) scrim.addEventListener('click', closeNav);
-  document.addEventListener('keydown', function(e){ if (e.key === 'Escape') closeNav(); });
-  side.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', closeNav); });
+  var lb = document.getElementById('lightbox');
+  var lbImg = document.getElementById('lbImg');
+  var lbCap = document.getElementById('lbCap');
+  function openLb(fig){
+    var im = fig.querySelector('img');
+    lbImg.src = im.src;
+    lbImg.alt = im.alt;
+    lbCap.textContent = fig.getAttribute('data-cap') || '';
+    lb.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeLb(){
+    lb.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+  document.querySelectorAll('.pol').forEach(function(fig){
+    fig.addEventListener('click', function(){ openLb(fig); });
+  });
+  document.getElementById('lbClose').addEventListener('click', closeLb);
+  lb.addEventListener('click', function(e){ if (e.target === lb) closeLb(); });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape') closeLb(); });
 
-  /* ---------- reveal on scroll ---------- */
+  document.querySelectorAll('.faq-item').forEach(function(item){
+    var q = item.querySelector('.faq-q'), a = item.querySelector('.faq-a');
+    q.addEventListener('click', function(){
+      var open = item.classList.contains('open');
+      document.querySelectorAll('.faq-item.open').forEach(function(o){
+        o.classList.remove('open');
+        o.querySelector('.faq-a').style.maxHeight = null;
+        o.querySelector('.faq-q').setAttribute('aria-expanded', 'false');
+      });
+      if (!open) {
+        item.classList.add('open');
+        a.style.maxHeight = a.scrollHeight + 'px';
+        q.setAttribute('aria-expanded', 'true');
+      }
+    });
+  });
+
   var io = new IntersectionObserver(function(entries){
     entries.forEach(function(e){
       if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); }
     });
   }, {threshold: .12});
   document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
-})();
 
-/* ---------- galería carrusel: botones + táctil + auto ---------- */
-(function(){
-  var vp = document.getElementById('galViewport');
-  if (!vp) return;
-  var track = vp.firstElementChild;
-  var cards = track.children;
-  if (!cards.length) return;
-  var prev = document.getElementById('galPrev'), next = document.getElementById('galNext');
-  var dotsBox = document.getElementById('galDots');
-  var dots = [];
-  if (dotsBox && cards.length <= 12) {
-    for (var i = 0; i < cards.length; i++) {
-      (function(i){
-        var b = document.createElement('button');
-        b.setAttribute('aria-label', 'Foto ' + (i+1));
-        b.addEventListener('click', function(){ go(i); restart(); });
-        dotsBox.appendChild(b); dots.push(b);
-      })(i);
-    }
-  }
-  function cardStep(){
-    var c = cards[0];
-    return c ? c.getBoundingClientRect().width + 16 : 320;
-  }
-  function current(){ return Math.round(vp.scrollLeft / cardStep()); }
-  function go(i){
-    i = (i + cards.length) % cards.length;
-    vp.scrollTo({left: i * cardStep(), behavior: 'smooth'});
-    setTimeout(mark, 400);
-  }
-  function mark(){
-    if (!dots.length) return;
-    var c = Math.min(Math.max(current(), 0), dots.length - 1);
-    dots.forEach(function(d, j){ d.classList.toggle('on', j === c); });
-  }
-  var timer = null, idle = null;
-  function restart(){
-    clearInterval(timer);
-    timer = setInterval(function(){
-      var c = current();
-      go(c + 1 >= cards.length ? 0 : c + 1);
-    }, 3500);
-  }
-  function pauseTemp(){
-    clearInterval(timer);
-    clearTimeout(idle);
-    idle = setTimeout(restart, 6000);
-  }
-  if (prev) prev.addEventListener('click', function(){ go(current() - 1); restart(); });
-  if (next) next.addEventListener('click', function(){ go(current() + 1); restart(); });
-  vp.addEventListener('scroll', mark, {passive: true});
-  vp.addEventListener('pointerdown', pauseTemp);
-  vp.addEventListener('touchstart', pauseTemp, {passive: true});
-  document.addEventListener('visibilitychange', function(){
-    if (document.hidden) clearInterval(timer); else restart();
-  });
-  mark(); restart();
-})();
-
-/* ===== ELITE-PACK JS (mejora ligera 2026-10-15) ===== */
-(function(){
-  if (window.__elitePack) return; window.__elitePack = true;
-
-  /* 1. reveal on scroll — suave, sin tocar el diseño base */
-  var rsel = '.g-card,.svc-card,.faq-item,.plan,.ci-row,.stat,.case,.qp';
-  var rels = Array.prototype.slice.call(document.querySelectorAll(rsel)).filter(function(el){
-    return !el.classList.contains('reveal') && !el.classList.contains('elite-reveal');
-  });
-  rels.forEach(function(el){ el.classList.add('elite-reveal'); });
-  if ('IntersectionObserver' in window) {
-    var io = new IntersectionObserver(function(es){
-      es.forEach(function(e){ if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
-    }, {threshold: .1, rootMargin: '0px 0px -40px 0px'});
-    document.querySelectorAll('.elite-reveal').forEach(function(el){ io.observe(el); });
-  } else {
-    document.querySelectorAll('.elite-reveal').forEach(function(el){ el.classList.add('in'); });
-  }
-  /* si el sitio ya trae .reveal sin observer propio, lo activamos también */
-  var own = Array.prototype.slice.call(document.querySelectorAll('.reveal:not(.visible):not(.in)'));
-  if (own.length && 'IntersectionObserver' in window) {
-    var io2 = new IntersectionObserver(function(es){
-      es.forEach(function(e){ if (e.isIntersecting) { e.target.classList.add('in'); io2.unobserve(e.target); } });
-    }, {threshold: .1});
-    own.forEach(function(el){
-      var cs = getComputedStyle(el);
-      if (cs.opacity === '0' || el.style.opacity === '0' || cs.transform !== 'none') io2.observe(el);
+  var cio = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if (!e.isIntersecting) return;
+      var el = e.target, target = parseInt(el.dataset.count || '0', 10), suf = el.dataset.suffix || '';
+      var t0 = null, dur = 1400;
+      function tick(t){
+        if (!t0) t0 = t;
+        var p = Math.min((t - t0) / dur, 1);
+        var ease = 1 - Math.pow(1 - p, 3);
+        el.textContent = Math.round(target * ease).toLocaleString('es-PR') + suf;
+        if (p < 1) requestAnimationFrame(tick);
+      }
+      requestAnimationFrame(tick);
+      cio.unobserve(el);
     });
-  }
+  }, {threshold: .5});
+  document.querySelectorAll('[data-count]').forEach(function(el){ cio.observe(el); });
 
-  /* 2. hover premium en tarjetas */
-  document.querySelectorAll('.g-card,.svc-card,.case,.plan').forEach(function(el){
-    el.classList.add('elite-card');
+  var btn = document.getElementById('menuBtn'), nav = document.getElementById('nav');
+  if (btn) btn.addEventListener('click', function(){ nav.classList.toggle('open'); });
+  nav.querySelectorAll('a').forEach(function(a){
+    a.addEventListener('click', function(){ nav.classList.remove('open'); });
   });
 
-  /* 3. fix menú: overlay por encima del botón + botón cerrar propio */
-  var overlays = document.querySelectorAll('.menu-overlay,#menuOverlay,.nav');
-  overlays.forEach(function(ov){
-    ov.style.zIndex = '400';
-    if (!ov.querySelector('.elite-mclose')) {
-      var b = document.createElement('button');
-      b.className = 'elite-mclose'; b.setAttribute('aria-label', 'Cerrar menú'); b.textContent = '×';
-      b.addEventListener('click', function(){
-        ov.classList.remove('open');
-        document.querySelectorAll('.fab-menu.x,.menu-btn.x,#menuBtn.x').forEach(function(m){ m.classList.remove('x'); });
-      });
-      ov.appendChild(b);
-    }
-  });
-  document.querySelectorAll('.fab-menu,.menu-btn,#menuBtn').forEach(function(m){ m.style.zIndex = '390'; });
+  var header = document.getElementById('header');
+  window.addEventListener('scroll', function(){
+    header.style.boxShadow = window.scrollY > 10 ? '0 8px 30px rgba(0,0,0,.5)' : 'none';
+  }, {passive:true});
 
-  /* 4. formulario de cotización -> WhatsApp del negocio */
-  var qf = document.getElementById('qform');
-  if (qf && !qf.__eliteWired) {
-    qf.__eliteWired = true;
-    qf.addEventListener('submit', function(e){
-      e.preventDefault();
-      var v = function(id){ var el = document.getElementById(id); return el ? el.value.trim() : ''; };
-      var n = v('qNombre'), t = v('qTel'), s = v('qServicio'), m = v('qMsg');
-      var biz = qf.getAttribute('data-biz') || 'nuestro negocio';
-      var wa = qf.getAttribute('data-wa') || '';
-      if (!wa) return;
-      var txt = 'Hola ' + biz + ', soy ' + (n || 'un cliente') + (t ? ' (' + t + ')' : '') + '. Necesito: ' + s + '.' + (m ? ' ' + m : '');
-      window.open('https://wa.me/' + wa + '?text=' + encodeURIComponent(txt), '_blank');
+  var form = document.getElementById('cform');
+  if (form) {
+    form.addEventListener('submit', function(ev){
+      ev.preventDefault();
+      var nombre = document.getElementById('fNombre').value.trim();
+      var servicio = document.getElementById('fServicio').value;
+      var msg = document.getElementById('fMsg').value.trim();
+      var text = 'Hola ' + NAME + ', soy ' + nombre + '. Me interesa: ' + servicio + '.' + (msg ? ' ' + msg : '');
+      window.open('https://wa.me/' + WA + '?text=' + encodeURIComponent(text), '_blank');
     });
   }
 })();

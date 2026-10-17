@@ -1,76 +1,90 @@
-/* Masso Roofing Inc — site engine */
+/* Masso Roofing Inc — engine: hero video fallback, polaroid cinta + lightbox, FAQ, reveals, counters, menu, form->WA */
 (function(){
   "use strict";
-
-  var btn = document.getElementById('menuBtn'),
-      nav = document.getElementById('nav'),
-      scrim = document.getElementById('navScrim');
-  function close(){ nav.classList.remove('open'); scrim.classList.remove('on'); }
-  if (btn) btn.addEventListener('click', function(){
-    var open = nav.classList.toggle('open');
-    scrim.classList.toggle('on', open);
-  });
-  if (scrim) scrim.addEventListener('click', close);
-  nav.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', close); });
-
-  var io = new IntersectionObserver(function(es){
-    es.forEach(function(e){ if (e.isIntersecting){ e.target.classList.add('visible'); io.unobserve(e.target); } });
-  }, {threshold:.12});
-  document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
-
-  var vp = document.getElementById('galViewport');
-  if (vp){
-    var track = vp.firstElementChild, cards = track.children,
-        dotsBox = document.getElementById('galDots'), dots = [],
-        timer = null, idle = null;
-    for (var i=0;i<cards.length;i++){
-      (function(i){
-        var b=document.createElement('button');
-        b.setAttribute('aria-label','Foto '+(i+1));
-        b.addEventListener('click',function(){ go(i); restart(); });
-        dotsBox.appendChild(b); dots.push(b);
-      })(i);
-    }
-    function step(){ var c=cards[0]; return c?c.getBoundingClientRect().width+16:320; }
-    function cur(){ return Math.round(vp.scrollLeft/step()); }
-    function go(i){
-      i=(i+cards.length)%cards.length;
-      vp.scrollTo({left:i*step(),behavior:'smooth'});
-      setTimeout(mark,400);
-    }
-    function mark(){
-      var c=Math.min(Math.max(cur(),0),dots.length-1);
-      dots.forEach(function(d,j){ d.classList.toggle('on',j===c); });
-    }
-    function restart(){
-      clearInterval(timer);
-      timer=setInterval(function(){ var c=cur(); go(c+1>=cards.length?0:c+1); },3500);
-    }
-    function pauseTemp(){ clearInterval(timer); clearTimeout(idle); idle=setTimeout(restart,6000); }
-    document.getElementById('galPrev').addEventListener('click',function(){ go(cur()-1); restart(); });
-    document.getElementById('galNext').addEventListener('click',function(){ go(cur()+1); restart(); });
-    vp.addEventListener('scroll',mark,{passive:true});
-    vp.addEventListener('pointerdown',pauseTemp);
-    vp.addEventListener('touchstart',pauseTemp,{passive:true});
-    document.addEventListener('visibilitychange',function(){
-      if(document.hidden)clearInterval(timer);else restart();
-    });
-    mark(); restart();
+  var hv = document.getElementById('heroVideo');
+  if (hv) {
+    var src = hv.querySelector('source');
+    function killVideo(){ hv.style.display = 'none'; }
+    if (src) src.addEventListener('error', killVideo);
+    hv.addEventListener('error', killVideo, true);
+    setTimeout(function(){
+      if (hv.readyState < 2) killVideo(); else hv.style.display = 'block';
+    }, 4000);
+    hv.addEventListener('canplay', function(){ hv.style.display = 'block'; });
   }
-
-  var topbar=document.getElementById('topbar');
-  window.addEventListener('scroll',function(){
-    topbar.style.boxShadow=window.scrollY>10?'0 8px 30px rgba(58,44,34,.18)':'none';
-  },{passive:true});
-})();
-
-/* Mejora elite: stagger en reveals */
-(function(){
-  try{
-    document.querySelectorAll('.gallery-grid,.gal-track,.svc-grid,.services-grid,.steps,.proceso-steps').forEach(function(grid){
-      Array.prototype.forEach.call(grid.children,function(el,i){
-        if(el.classList.contains('reveal'))el.style.transitionDelay=Math.min(i*70,420)+'ms';
+  var lb = document.getElementById('lightbox');
+  var lbImg = document.getElementById('lbImg');
+  var lbCap = document.getElementById('lbCap');
+  function openLb(fig){
+    var im = fig.querySelector('img');
+    lbImg.src = im.src; lbImg.alt = im.alt;
+    lbCap.textContent = fig.getAttribute('data-cap') || '';
+    lb.classList.add('open'); document.body.style.overflow = 'hidden';
+  }
+  function closeLb(){ lb.classList.remove('open'); document.body.style.overflow = ''; }
+  document.querySelectorAll('.pol').forEach(function(fig){
+    fig.addEventListener('click', function(){ openLb(fig); });
+  });
+  document.getElementById('lbClose').addEventListener('click', closeLb);
+  lb.addEventListener('click', function(e){ if (e.target === lb) closeLb(); });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape') closeLb(); });
+  document.querySelectorAll('.faq-item').forEach(function(item){
+    var q = item.querySelector('.faq-q'), a = item.querySelector('.faq-a');
+    q.addEventListener('click', function(){
+      var open = item.classList.contains('open');
+      document.querySelectorAll('.faq-item.open').forEach(function(o){
+        o.classList.remove('open');
+        o.querySelector('.faq-a').style.maxHeight = null;
+        o.querySelector('.faq-q').setAttribute('aria-expanded', 'false');
       });
+      if (!open) {
+        item.classList.add('open');
+        a.style.maxHeight = a.scrollHeight + 'px';
+        q.setAttribute('aria-expanded', 'true');
+      }
     });
-  }catch(e){}
+  });
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); }
+    });
+  }, {threshold: .12});
+  document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
+  var cio = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if (!e.isIntersecting) return;
+      var el = e.target, target = parseInt(el.dataset.count || '0', 10), suf = el.dataset.suffix || '';
+      var t0 = null, dur = 1400;
+      function tick(t){
+        if (!t0) t0 = t;
+        var p = Math.min((t - t0) / dur, 1);
+        var ease = 1 - Math.pow(1 - p, 3);
+        el.textContent = Math.round(target * ease).toLocaleString('es-PR') + suf;
+        if (p < 1) requestAnimationFrame(tick);
+      }
+      requestAnimationFrame(tick);
+      cio.unobserve(el);
+    });
+  }, {threshold: .5});
+  document.querySelectorAll('[data-count]').forEach(function(el){ cio.observe(el); });
+  var btn = document.getElementById('menuBtn'), nav = document.getElementById('nav');
+  if (btn) btn.addEventListener('click', function(){ nav.classList.toggle('open'); });
+  nav.querySelectorAll('a').forEach(function(a){
+    a.addEventListener('click', function(){ nav.classList.remove('open'); });
+  });
+  var header = document.getElementById('header');
+  window.addEventListener('scroll', function(){
+    header.style.boxShadow = window.scrollY > 10 ? '0 8px 30px rgba(0,0,0,.5)' : 'none';
+  }, {passive:true});
+  var form = document.getElementById('cform');
+  if (form) {
+    form.addEventListener('submit', function(ev){
+      ev.preventDefault();
+      var nombre = document.getElementById('fNombre').value.trim();
+      var servicio = document.getElementById('fServicio').value;
+      var msg = document.getElementById('fMsg').value.trim();
+      var text = 'Hola Masso Roofing Inc, soy ' + nombre + '. Me interesa: ' + servicio + '.' + (msg ? ' ' + msg : '');
+      window.open('https://wa.me/17877951097?text=' + encodeURIComponent(text), '_blank');
+    });
+  }
 })();
