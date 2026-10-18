@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Transit Wash | Mobile Car Wash a Domicilio</title>
+<meta name="description" content="Transit Wash - Mobile Car Wash a domicilio. Lavado, detailing interior y encerado donde estes. Cotiza por WhatsApp.">
+<link rel="icon" type="image/png" href="img/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<script>
+/* Si ya vio la presentacion en esta sesion, entrar directo */
+try { if (sessionStorage.getItem('tw_intro') === 'seen') document.documentElement.classList.add('no-intro'); } catch (e) {}
+</script>
+</head>
+<body>
+
+<!-- ============ PRESENTACION CINEMATOGRAFICA ============ -->
+<div id="intro" role="dialog" aria-label="Presentacion Transit Wash">
+  <canvas id="introBubbles" aria-hidden="true"></canvas>
+
+  <div class="intro-splash" id="introSplash">
+    <div class="splash-logo">
+      <img src="img/logo-circle.png" alt="Transit Wash - Mobile Car Wash">
+      <span class="ripple r1"></span><span class="ripple r2"></span><span class="ripple r3"></span>
+    </div>
+    <p class="splash-kicker">MOBILE CAR WASH</p>
+    <p class="splash-loading" id="splashLoading"><span class="dot"></span><span class="dot"></span><span class="dot"></span></p>
+    <button class="splash-enter" id="splashEnter" hidden>
+      <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5" fill="currentColor" stroke="none"/><path d="M15.5 8.5a5 5 0 0 1 0 7"/><path d="M18.5 5.5a9.4 9.4 0 0 1 0 13"/></svg>
+      TOCA PARA VER CON SONIDO
+    </button>
+  </div>
+
+  <div class="intro-cinema" id="introCinema" aria-hidden="true">
+    <video id="introVideo" playsinline preload="auto" src="img/intro-video.mp4"></video>
+    <div class="cine-bar cine-top"></div>
+    <div class="cine-bar cine-bottom"></div>
+    <div class="intro-progress"><span id="introProg"></span></div>
+  </div>
+
+  <button class="intro-skip" id="introSkip" aria-label="Saltar presentacion">
+    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M5 5l14 14M19 5L5 19"/></svg>
+    <span>SALTAR</span>
+  </button>
+
+  <canvas id="burstCanvas" aria-hidden="true"></canvas>
+</div>
+
+<!-- ============ MENU FLOTANTE ============ -->
+<button class="menu-btn" id="menuBtn" aria-label="Abrir menu">
+  <span></span><span></span><span></span>
+</button>
+<nav class="menu-overlay" id="menuOverlay" aria-hidden="true">
+  <button class="menu-close" id="menuClose" aria-label="Cerrar menu">
+    <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M5 5l14 14M19 5L5 19"/></svg>
+  </button>
+  <img class="menu-logo" src="img/logo-circle.png" alt="Transit Wash">
+  <a href="#inicio">Inicio</a>
+  <a href="#servicios">Servicios</a>
+  <a href="#proceso">Como funciona</a>
+  <a href="#marca">Transit Wash</a>
+  <a href="#faq">Preguntas</a>
+  <a href="#cotizar" class="menu-cta">Cotizar por WhatsApp</a>
+</nav>
+
+<!-- ============ HERO ============ -->
+<header class="hero" id="inicio">
+  <div class="hero-bg" aria-hidden="true">
+    <img src="img/logo-full.jpg" alt="">
+    <div class="hero-shade"></div>
+  </div>
+  <canvas id="heroBubbles" aria-hidden="true"></canvas>
+  <div class="hero-inner">
+    <div class="hero-badge reveal">
+      <svg class="orbit" viewBox="0 0 200 200" aria-hidden="true">
+        <defs><path id="orbitPath" d="M100,100 m-78,0 a78,78 0 1,1 156,0 a78,78 0 1,1 -156,0"/></defs>
+        <text><textPath href="#orbitPath">TRANSIT WASH &#8226; MOBILE CAR WASH &#8226; </textPath></text>
+      </svg>
+      <img class="badge-logo" src="img/logo-circle.png" alt="Transit Wash - Mobile Car Wash">
+      <span class="badge-shine"></span>
+    </div>
+    <p class="kicker reveal">MOBILE CAR WASH - SERVICIO A DOMICILIO</p>
+    <h1 class="reveal">EL CAR WASH<br><span>LLEGA A TI</span></h1>
+    <p class="tagline reveal">Lavado y detailing movil con acabado elite. Tu no te mueves, nosotros llegamos.</p>
+    <div class="hero-ctas reveal">
+      <a class="btn btn-wa" href="https://wa.me/17873128042?text=Hola%20Transit%20Wash%2C%20quiero%20cotizar%20un%20lavado%20a%20domicilio" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.6-6.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.3-.6.8-.8 1-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4 0-.5.1-.7l.4-.5c.1-.2.1-.4 0-.5l-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.2-.7.3-.9.9-1.1 2.2-.2 3.9a11.6 11.6 0 0 0 4.5 4.2c1.7.8 2.4.9 3.2.7.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2 0-.1-.2-.1-.4-.2z"/></svg>
+        Cotizar por WhatsApp
+      </a>
+      <a class="btn btn-ghost" href="#servicios">Ver servicios</a>
+    </div>
+  </div>
+  <a class="scroll-hint" href="#servicios" aria-label="Bajar">
+    <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg>
+  </a>
+  <svg class="wave" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true"><path d="M0,50 C240,90 480,10 720,45 C960,80 1200,20 1440,55 L1440,90 L0,90 Z"/></svg>
+</header>
+
+<!-- ============ MARQUEE ============ -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track">
+    <span>LAVADO A DOMICILIO</span><i>&#10022;</i><span>DETAILING INTERIOR</span><i>&#10022;</i><span>ENCERADO</span><i>&#10022;</i><span>TAPICERIA</span><i>&#10022;</i><span>RINES Y GOMAS</span><i>&#10022;</i>
+    <span>LAVADO A DOMICILIO</span><i>&#10022;</i><span>DETAILING INTERIOR</span><i>&#10022;</i><span>ENCERADO</span><i>&#10022;</i><span>TAPICERIA</span><i>&#10022;</i><span>RINES Y GOMAS</span><i>&#10022;</i>
+  </div>
+</div>
+
+<!-- ============ SERVICIOS ============ -->
+<section class="services" id="servicios">
+  <div class="wrap">
+    <p class="kicker">Lo que hacemos</p>
+    <h2>SERVICIOS <span>MOVILES</span></h2>
+    <p class="section-sub">Todo el equipo va en la van. Tu solo abre la puerta.</p>
+    <div class="cards">
+      <article class="card tilt reveal">
+        <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 17h14M6 17l1.2-4.2A2 2 0 0 1 9.1 11h5.8a2 2 0 0 1 1.9 1.4L18 17"/><circle cx="7.5" cy="17.5" r="1.8"/><circle cx="16.5" cy="17.5" r="1.8"/><path d="M9 11V7h6v4M4 20c1-2 2-2 3 0s2 2 3 0 2-2 3 0 2 2 3 0 2-2 3 0"/></svg></div>
+        <h3>Lavado exterior premium</h3>
+        <p>Espuma activa, lavado a mano y secado sin marcas. Brillo de vitrina.</p>
+      </article>
+      <article class="card tilt reveal">
+        <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h16M6 12V7a6 6 0 0 1 12 0v5"/><path d="M7 12v7M17 12v7M4 19h16"/></svg></div>
+        <h3>Detailing interior</h3>
+        <p>Aspirado profundo, tablero, consolas y cristales por dentro. Como nuevo.</p>
+      </article>
+      <article class="card tilt reveal">
+        <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M19.1 4.9L17 7M7 17l-2.1 2.1"/></svg></div>
+        <h3>Encerado y proteccion</h3>
+        <p>Capa de cera que protege la pintura y realza el brillo por semanas.</p>
+      </article>
+      <article class="card tilt reveal">
+        <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8h16v9a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V8z"/><path d="M4 8l2-4h12l2 4M9 12h6"/></svg></div>
+        <h3>Limpieza de tapiceria</h3>
+        <p>Asientos y alfombras renovados, sin manchas ni malos olores.</p>
+      </article>
+      <article class="card tilt reveal">
+        <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="3"/><path d="M12 4v2M12 18v2M4 12h2M18 12h2"/></svg></div>
+        <h3>Rines y gomas</h3>
+        <p>Descontaminado de rines y acabado negro en gomas. El detalle final.</p>
+      </article>
+      <article class="card tilt reveal">
+        <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-5.5-7-11a7 7 0 0 1 14 0c0 5.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></div>
+        <h3>Servicio 100% movil</h3>
+        <p>Casa, trabajo o donde estes. Llegamos con agua, luz y todo el equipo.</p>
+      </article>
+    </div>
+  </div>
+  <svg class="wave wave-flip" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true"><path d="M0,50 C240,90 480,10 720,45 C960,80 1200,20 1440,55 L1440,90 L0,90 Z"/></svg>
+</section>
+
+<!-- ============ PROCESO ============ -->
+<section class="process" id="proceso">
+  <div class="wrap">
+    <p class="kicker">Facil asi</p>
+    <h2>COMO <span>FUNCIONA</span></h2>
+    <div class="steps">
+      <div class="step reveal"><span class="step-num">1</span><h3>Cotiza por WhatsApp</h3><p>Escríbenos, dinos tu carro y donde estas. Te cotizamos al momento.</p></div>
+      <div class="step reveal"><span class="step-num">2</span><h3>Agendamos tu cita</h3><p>Coordinamos el dia y la hora que te convenga. Sin filas, sin espera.</p></div>
+      <div class="step reveal"><span class="step-num">3</span><h3>Lo dejamos nuevo</h3><p>Llegamos con todo el equipo y tu carro sale brillando. Asi de simple.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ MARCA ============ -->
+<section class="brand" id="marca">
+  <canvas id="brandBubbles" aria-hidden="true"></canvas>
+  <div class="wrap brand-grid">
+    <div class="brand-frame reveal">
+      <img src="img/logo-full.jpg" alt="Transit Wash - Mobile Car Wash">
+      <span class="frame-shine"></span>
+    </div>
+    <div class="brand-copy reveal">
+      <p class="kicker">TRANSIT WASH</p>
+      <h2>EL CAR WASH <span>SIN SALIR</span> DE TU CASA</h2>
+      <p>Somos un car wash movil: llevamos el lavado profesional hasta tu puerta con equipo completo y productos de calidad. Sin filas, sin salas de espera, sin perder tu dia.</p>
+      <p>Tu carro merece verse elite todos los dias. Nosotros nos encargamos del resto.</p>
+      <a class="btn btn-wa" href="https://wa.me/17873128042?text=Hola%20Transit%20Wash%2C%20quiero%20agendar%20un%20servicio" target="_blank" rel="noopener">Agendar por WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="faq" id="faq">
+  <div class="wrap">
+    <p class="kicker">Dudas comunes</p>
+    <h2>PREGUNTAS <span>FRECUENTES</span></h2>
+    <div class="accordion">
+      <div class="acc-item reveal">
+        <button class="acc-q">De verdad llegan hasta donde estoy?<svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg></button>
+        <div class="acc-a"><p>Si. Somos 100% moviles: casa, trabajo o donde estes. Escribenos por WhatsApp con tu ubicacion y coordinamos.</p></div>
+      </div>
+      <div class="acc-item reveal">
+        <button class="acc-q">Necesito tener agua o luz disponible?<svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg></button>
+        <div class="acc-a"><p>No. La van va equipada con todo: agua, electricidad y productos profesionales. Tu no pones nada.</p></div>
+      </div>
+      <div class="acc-item reveal">
+        <button class="acc-q">Cuanto tarda un servicio?<svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg></button>
+        <div class="acc-a"><p>Depende del servicio que elijas. Un lavado exterior es rapido; un detailing completo toma mas tiempo. Te decimos el estimado al cotizar.</p></div>
+      </div>
+      <div class="acc-item reveal">
+        <button class="acc-q">Como son los precios?<svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg></button>
+        <div class="acc-a"><p>Cada carro y cada servicio es distinto. Escribenos por WhatsApp, dinos que necesitas y te cotizamos al momento, sin compromiso.</p></div>
+      </div>
+      <div class="acc-item reveal">
+        <button class="acc-q">Atienden varios carros o flotas?<svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg></button>
+        <div class="acc-a"><p>Si. Si tienes mas de un carro, una familia completa o una flota de trabajo, escribenos y coordinamos un plan a tu medida.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CTA FINAL ============ -->
+<section class="cta-final" id="cotizar">
+  <div class="wrap">
+    <img class="cta-logo reveal" src="img/logo-circle.png" alt="Transit Wash">
+    <h2 class="reveal">TU CARRO COMO NUEVO,<br><span>SIN MOVERTE</span></h2>
+    <p class="reveal">Cotiza ahora por WhatsApp. Respondemos rapido.</p>
+    <a class="btn btn-wa btn-big reveal" href="https://wa.me/17873128042?text=Hola%20Transit%20Wash%2C%20quiero%20cotizar%20un%20lavado%20a%20domicilio" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.6-6.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.3-.6.8-.8 1-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4 0-.5.1-.7l.4-.5c.1-.2.1-.4 0-.5l-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.2-.7.3-.9.9-1.1 2.2-.2 3.9a11.6 11.6 0 0 0 4.5 4.2c1.7.8 2.4.9 3.2.7.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2 0-.1-.2-.1-.4-.2z"/></svg>
+      Cotizar por WhatsApp
+    </a>
+  </div>
+  <svg class="wave" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true"><path d="M0,50 C240,90 480,10 720,45 C960,80 1200,20 1440,55 L1440,90 L0,90 Z"/></svg>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="wrap foot-grid">
+    <div class="foot-brand">
+      <img src="img/logo-circle.png" alt="Transit Wash">
+      <p><strong>TRANSIT WASH</strong><br>Mobile Car Wash</p>
+    </div>
+    <div class="foot-social">
+      <a class="soc3d" href="https://www.facebook.com/share/v/19cfrafzep/" target="_blank" rel="noopener" aria-label="Facebook de Transit Wash">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M13.5 22v-8h2.7l.4-3.2h-3.1V8.7c0-.9.3-1.6 1.7-1.6h1.5V4.2c-.3 0-1.2-.1-2.3-.1-2.3 0-3.9 1.4-3.9 4v2.7H7.8V14h2.7v8h3z"/></svg>
+      </a>
+      <a class="soc3d" href="https://wa.me/17873128042?text=Hola%20Transit%20Wash" target="_blank" rel="noopener" aria-label="WhatsApp de Transit Wash">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.6-6.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.3-.6.8-.8 1-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4 0-.5.1-.7l.4-.5c.1-.2.1-.4 0-.5l-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.2-.7.3-.9.9-1.1 2.2-.2 3.9a11.6 11.6 0 0 0 4.5 4.2c1.7.8 2.4.9 3.2.7.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2 0-.1-.2-.1-.4-.2z"/></svg>
+      </a>
+    </div>
+    <p class="foot-copy">&copy; 2026 Transit Wash - Mobile Car Wash. Todos los derechos reservados.</p>
+  </div>
+</footer>
+
+<!-- ============ WHATSAPP FLOTANTE ============ -->
+<a class="wa-float" href="https://wa.me/17873128042?text=Hola%20Transit%20Wash%2C%20quiero%20cotizar" target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp">
+  <svg viewBox="0 0 24 24" width="30" height="30" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.6-6.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.3-.6.8-.8 1-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4 0-.5.1-.7l.4-.5c.1-.2.1-.4 0-.5l-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.2-.7.3-.9.9-1.1 2.2-.2 3.9a11.6 11.6 0 0 0 4.5 4.2c1.7.8 2.4.9 3.2.7.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2 0-.1-.2-.1-.4-.2z"/></svg>
+</a>
+
+<script src="js/main.js"></script>
+</body>
+</html>
