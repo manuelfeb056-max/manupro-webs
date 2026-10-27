@@ -1,0 +1,12 @@
+FUENTES — Car Wash a Domicilio (GoWash) (sites/gowash-san-juan/)
+
+Fotos 100% reales de la página oficial de Facebook del negocio (https://www.facebook.com/gowashdomicilio), cosechadas 2026-10-27 con UA Googlebot vía lookaside.fbsbx.com (sin login) y verificadas visualmente:
+- img/real/hero-jeep.jpg — Jeep levantado recién lavado (media_id 4681343585271643)
+- img/real/range-rover-negra.jpg — Range Rover negra (1290583306401710)
+- img/real/interior-cuero.jpg — Interior en cuero rojo detallado (5018643901541608)
+- img/real/motor-limpio.jpg — Compartimiento de motor limpio (5018644041541594)
+- img/real/bronco-roja.jpg — Ford Bronco roja (564457322347649)
+- img/real/bmw-blanca.jpg — BMW blanca (541313657995349)
+- img/real/jeep-interior.jpg — Jeep con puertas abiertas, interior detallado (3163820167024000)
+Logo: img/logo.png — gráfico oficial Go Wash a Domicilio de la página (media_id 3717588544980490, con teléfono 939-245-4400 visible). Paleta del sitio (azul cielo + blanco + rojo del rótulo) sacada del logo.
+Cero stock, cero datos inventados, cero precios.
