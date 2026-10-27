@@ -121,12 +121,12 @@ section{position:relative;padding:96px 0}
 .gallery{background:var(--black)}
 .gal-wrap{position:relative;margin-top:10px}
 .gal-viewport{overflow:hidden;border-radius:22px;scroll-behavior:smooth}
-.gal-track{display:flex;gap:16px;transition:transform .6s var(--ease)}
+.gal-track{display:flex;gap:16px;align-items:flex-start;transition:transform .6s var(--ease)}
 .gal-card{flex:0 0 340px;max-width:82vw;border-radius:20px;overflow:hidden;border:1px solid rgba(255,255,255,.12);background:var(--panel);transition:transform .35s var(--ease),box-shadow .35s}
 .gal-card:hover{transform:translateY(-6px);box-shadow:0 24px 50px rgba(230,0,0,.2)}
-.gal-card img{width:100%;height:420px;object-fit:cover}
+.gal-card img{width:100%;height:auto;object-fit:contain;background:#000}
 .gal-card figcaption{padding:14px 18px;color:#ddd;font-size:15px;font-weight:600}
-.gal-btn{position:absolute;top:200px;width:52px;height:52px;border-radius:50%;border:1px solid rgba(255,255,255,.3);background:rgba(0,0,0,.7);color:#fff;font-size:30px;cursor:pointer;z-index:3;transition:transform .3s var(--ease),background .3s}
+.gal-btn{position:absolute;top:38%;width:52px;height:52px;border-radius:50%;border:1px solid rgba(255,255,255,.3);background:rgba(0,0,0,.7);color:#fff;font-size:30px;cursor:pointer;z-index:3;transition:transform .3s var(--ease),background .3s}
 .gal-btn:hover{transform:scale(1.1);background:var(--red)}
 .gal-prev{left:-8px}.gal-next{right:-8px}
 .gal-dots{display:flex;gap:8px;justify-content:center;margin-top:22px}
