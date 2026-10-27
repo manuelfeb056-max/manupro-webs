@@ -57,3 +57,18 @@ footer{border-top:1px solid var(--line);padding:34px 0}
 .wa-float svg{width:30px;height:30px}
 .reveal{opacity:0;transform:translateY(18px);transition:opacity .6s,transform .6s}.reveal.in{opacity:1;transform:none}
 @media(max-width:760px){.split{grid-template-columns:1fr}.split img{height:300px}.hero{min-height:84vh}}
+
+/* RONDA 50 B: servicios escalonados + proceso foto + checklist */
+.mz-svc{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;align-items:start}
+.mz-svc-card{background:var(--card);border:1px solid var(--line);border-radius:18px;overflow:hidden}
+.mz-svc-card img{width:100%;height:170px;object-fit:cover}
+.mz-svc-card:nth-child(even) img{height:215px}
+.mz-svc-card:nth-child(3n+2){margin-top:30px}
+.mz-svc-body{padding:20px 22px}.mz-svc-body h3{font-size:21px;margin-bottom:8px}.mz-svc-body p{color:var(--mut)}
+.mz-proc{display:grid;grid-template-columns:1fr 1.25fr;gap:28px;margin-top:26px;align-items:center}
+.mz-proc>img{width:100%;height:320px;object-fit:cover;border-radius:18px}
+.mz-check{list-style:none;display:grid;gap:16px}
+.mz-check li{padding-left:34px;position:relative;font-size:17px}
+.mz-check li::before{content:"✓";position:absolute;left:0;top:0;color:var(--acc);font-weight:700;font-size:20px}
+@media(max-width:900px){.mz-svc{grid-template-columns:1fr 1fr}.mz-svc-card:nth-child(3n+2){margin-top:0}}
+@media(max-width:760px){.mz-svc{grid-template-columns:1fr}.mz-svc-card:nth-child(even) img{height:190px}.mz-proc{grid-template-columns:1fr}.mz-proc>img{height:230px}}

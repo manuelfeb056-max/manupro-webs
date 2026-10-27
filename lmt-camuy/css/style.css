@@ -44,9 +44,13 @@ section{padding:88px 0}
 .hero-strip{position:relative;z-index:2;display:flex;flex-wrap:wrap;gap:0;border-top:3px solid #c8102e;background:rgba(5,7,13,.9)}
 .hero-strip span{flex:1 1 150px;text-align:center;font-family:'Barlow Condensed',sans-serif;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:.9rem .5rem;color:#6db3ff;font-size:.95rem}
 
-/* ---------- services ---------- */
-.grid-serv{display:grid;grid-template-columns:repeat(3,1fr);gap:1.1rem}
-.card{background:#0c1322;border:1px solid #1e2c4a;border-left:5px solid #2f7de1;border-radius:12px;padding:1.6rem}
+/* ---------- services: mosaico con foto, primera tarjeta alta ---------- */
+.grid-serv{display:grid;grid-template-columns:repeat(3,1fr);gap:1.1rem;align-items:start}
+.card{background:#0c1322;border:1px solid #1e2c4a;border-left:5px solid #2f7de1;border-radius:12px;overflow:hidden;padding:0}
+.card .svc-photo{width:100%;height:180px;object-fit:cover}
+.card .svc-body{padding:1.4rem 1.6rem 1.6rem}
+.card.svc-tall{grid-row:span 2}
+.card.svc-tall .svc-photo{height:380px}
 .card h3{font-size:1.5rem;color:#fff;margin-bottom:.5rem}
 .card p{color:#9aa8bd}
 
@@ -65,13 +69,15 @@ section{padding:88px 0}
 .work-frame:hover img{transform:scale(1.04)}
 .work-frame figcaption{padding:.8rem 1rem;color:#9aa8bd;font-size:.9rem}
 
-/* ---------- proceso ---------- */
+/* ---------- proceso: línea de tiempo vertical con puntos y mini-fotos ---------- */
 .proceso{background:#0a0f1a}
-.steps{display:grid;grid-template-columns:repeat(5,1fr);gap:1rem}
-.step{background:#0c1322;border:1px solid #1e2c4a;border-top:5px solid #c8102e;border-radius:12px;padding:1.4rem}
-.step-n{font-family:'Barlow Condensed',sans-serif;font-size:2.2rem;font-weight:800;color:#c8102e}
-.step h3{font-size:1.3rem;margin:.3rem 0 .4rem}
-.step p{color:#9aa8bd;font-size:.95rem}
+.timeline{position:relative;display:grid;gap:1rem;padding-left:2.2rem}
+.timeline::before{content:"";position:absolute;left:.7rem;top:.5rem;bottom:.5rem;width:3px;background:#c8102e;border-radius:3px}
+.tl-item{position:relative;display:grid;grid-template-columns:120px 1fr;gap:1.2rem;align-items:center;background:#0c1322;border:1px solid #1e2c4a;border-radius:12px;padding:1rem 1.4rem 1rem 1rem}
+.tl-dot{position:absolute;left:-2.2rem;top:50%;transform:translateY(-50%);width:18px;height:18px;border-radius:50%;background:#2f7de1;border:4px solid #0a0f1a;box-shadow:0 0 0 2px #c8102e}
+.tl-photo{width:120px;height:90px;object-fit:cover;border-radius:8px}
+.tl-item h3{font-size:1.4rem;margin-bottom:.3rem}
+.tl-item p{color:#9aa8bd;font-size:.95rem}
 
 /* ---------- faq ---------- */
 .faq{display:grid;gap:.8rem}
@@ -111,12 +117,17 @@ footer{border-top:1px solid #1e2c4a;padding:1.6rem 0}
 
 @media(max-width:900px){
   .grid-serv,.gallery{grid-template-columns:repeat(2,1fr)}
-  .steps{grid-template-columns:repeat(2,1fr)}
+  .card.svc-tall{grid-row:auto}
+  .card.svc-tall .svc-photo{height:220px}
   .ceramica-inner,.contacto-inner{grid-template-columns:1fr}
   .benefits li{grid-template-columns:1fr}
 }
 @media(max-width:560px){
-  .grid-serv,.gallery,.steps{grid-template-columns:1fr}
+  .grid-serv,.gallery{grid-template-columns:1fr}
+  .timeline{padding-left:1.8rem}
+  .tl-item{grid-template-columns:1fr}
+  .tl-photo{width:100%;height:160px}
+  .tl-dot{left:-1.8rem}
   section{padding:64px 0}
   .hero-logo{width:130px}
   .work-frame img{height:260px}

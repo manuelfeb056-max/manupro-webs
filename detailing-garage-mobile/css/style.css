@@ -53,15 +53,21 @@ section{padding:84px 0;position:relative}
 .work-frame .cap-car{display:block;color:var(--acc2);font-weight:800;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;margin-bottom:.2rem}
 /* servicios */
 .svc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1.2rem}
-.svc{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:1.8rem 1.5rem}
-.svc h3{font-size:1.35rem;margin-bottom:.5rem}
-.svc p{color:var(--muted);font-size:.96rem}
+.svc{background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.svc img{width:100%;height:210px;object-fit:cover}
+.svc-body{padding:1.5rem}
+.svc-body h3{font-size:1.35rem;margin-bottom:.5rem}
+.svc-body p{color:var(--muted);font-size:.96rem}
+.svc-two{grid-template-columns:repeat(2,1fr)}
+.svc-two .svc-tall img{height:360px}
 /* proceso */
-.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.2rem;counter-reset:step}
-.step{background:var(--bg2);border:1px solid var(--line);border-radius:14px;padding:1.8rem 1.5rem}
-.step .num{width:46px;height:46px;border-radius:50%;background:var(--acc);color:#04121a;display:grid;place-items:center;font-family:"Bebas Neue",sans-serif;font-size:1.3rem;margin-bottom:1rem}
-.step h3{font-size:1.3rem;margin-bottom:.4rem}
-.step p{color:var(--muted);font-size:.95rem}
+.chatflow{display:flex;flex-direction:column;gap:.4rem;max-width:760px;margin:0 auto}
+.bubble{max-width:78%;padding:1.4rem 1.6rem;border-radius:22px;background:var(--bg2);border:1px solid var(--line)}
+.bubble-in{border-bottom-left-radius:6px;align-self:flex-start}
+.bubble-out{border-bottom-right-radius:6px;align-self:flex-end;background:var(--card);border-color:var(--acc)}
+.bubble h3{font-size:1.3rem;margin-bottom:.4rem}
+.bubble p{color:var(--muted);font-size:.95rem}
+.chat-arrow{align-self:center;color:var(--acc);font-size:1.8rem;line-height:1;transform:rotate(90deg)}
 /* faq */
 .faq{max-width:780px;margin:0 auto}
 .faq-item{border:1px solid var(--line);border-radius:12px;margin-bottom:.8rem;background:var(--card);overflow:hidden}
@@ -87,4 +93,4 @@ footer{border-top:1px solid var(--line);padding:2.5rem 0;text-align:center;color
 footer a{color:var(--acc2);font-weight:700}
 .reveal{opacity:0;transform:translateY(18px);transition:.5s}
 .reveal.in{opacity:1;transform:none}
-@media(max-width:760px){section{padding:64px 0}}
+@media(max-width:760px){section{padding:64px 0}.svc-two{grid-template-columns:1fr}.svc-two .svc-tall img{height:210px}.bubble{max-width:100%}}

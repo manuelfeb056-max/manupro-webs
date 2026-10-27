@@ -57,3 +57,15 @@ footer{border-top:1px solid var(--line);padding:34px 0}
 .wa-float svg{width:30px;height:30px}
 .reveal{opacity:0;transform:translateY(18px);transition:opacity .6s,transform .6s}.reveal.in{opacity:1;transform:none}
 @media(max-width:760px){.split{grid-template-columns:1fr}.split img{height:300px}.hero{min-height:84vh}}
+
+/* RONDA 50 B: servicios mosaico + proceso timeline */
+.ff-svc{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.ff-svc-card{background:var(--card);border:1px solid var(--line);border-radius:18px;overflow:hidden}
+.ff-svc-card img{width:100%;height:190px;object-fit:cover}
+.ff-svc-body{padding:20px 22px}.ff-svc-body h3{font-size:22px;margin-bottom:8px}.ff-svc-body p{color:var(--mut)}
+.ff-svc-card.ff-wide{grid-column:1/-1}.ff-svc-card.ff-wide img{height:300px}
+.ff-timeline{display:flex;align-items:flex-start;gap:14px;margin-top:26px;position:relative}
+.ff-tl{flex:1;text-align:center}.ff-dot{display:block;width:16px;height:16px;border-radius:50%;background:var(--acc);margin:0 auto 14px;box-shadow:0 0 0 5px var(--bg2)}
+.ff-tl h3{font-size:19px;margin-bottom:6px}.ff-tl p{color:var(--mut);font-size:15px}
+.ff-arr{color:var(--acc);font-size:26px;padding-top:2px}
+@media(max-width:760px){.ff-svc{grid-template-columns:1fr}.ff-svc-card.ff-wide{grid-column:auto}.ff-svc-card.ff-wide img{height:210px}.ff-timeline{flex-direction:column}.ff-tl{text-align:left}.ff-dot{margin:0 0 10px}.ff-arr{transform:rotate(90deg);padding:0}}

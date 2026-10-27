@@ -57,3 +57,17 @@ footer{border-top:1px solid var(--line);padding:34px 0}
 .wa-float svg{width:30px;height:30px}
 .reveal{opacity:0;transform:translateY(18px);transition:opacity .6s,transform .6s}.reveal.in{opacity:1;transform:none}
 @media(max-width:760px){.split{grid-template-columns:1fr}.split img{height:300px}.hero{min-height:84vh}}
+
+/* RONDA 50 B: servicios 3 columnas alturas variadas + proceso vertical con puntos */
+.tm-svc{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;align-items:start}
+.tm-svc-card{background:var(--card);border:1px solid var(--line);border-radius:18px;overflow:hidden}
+.tm-svc-card img{width:100%;height:180px;object-fit:cover}
+.tm-svc-card.tm-tall img{height:320px}
+.tm-svc-body{padding:20px 22px}.tm-svc-body h3{font-size:21px;margin-bottom:8px}.tm-svc-body p{color:var(--mut)}
+.tm-steps{position:relative;margin-top:26px;padding-left:46px}
+.tm-steps::before{content:"";position:absolute;left:19px;top:10px;bottom:10px;width:2px;background:var(--line)}
+.tm-step{position:relative;padding-bottom:26px}.tm-step:last-child{padding-bottom:0}
+.tm-step::before{content:"";position:absolute;left:-46px;top:4px;width:20px;height:20px;border-radius:50%;background:var(--acc);border:4px solid var(--bg);box-shadow:0 0 0 2px var(--acc)}
+.tm-step h3{font-size:21px;margin-bottom:6px}.tm-step p{color:var(--mut)}
+@media(max-width:900px){.tm-svc{grid-template-columns:1fr 1fr}}
+@media(max-width:760px){.tm-svc{grid-template-columns:1fr}.tm-svc-card.tm-tall img{height:220px}}
