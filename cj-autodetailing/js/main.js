@@ -9,11 +9,18 @@
   }, { threshold: .12 });
   function startReveals() { document.querySelectorAll('.reveal:not(.in)').forEach(function (el) { io.observe(el); }); }
   window.startReveals = startReveals;
+  /* El video del loading sigue corriendo de fondo en el hero al entrar */
+  function playHero() {
+    var hv = document.getElementById('heroVideo');
+    if (!hv) return;
+    try { var pr = hv.play(); if (pr && pr.catch) pr.catch(function () {}); } catch (e) {}
+  }
 
   /* ---------- Intro con video de fondo ---------- */
   var intro = document.getElementById('intro');
   if (document.documentElement.classList.contains('no-intro')) {
     if (intro) intro.remove();
+    playHero();
     startReveals();
   } else if (intro) {
     body.classList.add('locked');
@@ -49,6 +56,7 @@
         intro.remove();
         body.classList.remove('locked');
         try { sessionStorage.setItem('cj_intro', 'seen'); } catch (e) {}
+        playHero();
         requestAnimationFrame(startReveals);
       }, 520);
     }
@@ -61,6 +69,7 @@
     enter.addEventListener('click', exitIntro);
     skip.addEventListener('click', exitIntro);
   } else {
+    playHero();
     startReveals();
   }
 
