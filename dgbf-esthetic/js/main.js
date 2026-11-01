@@ -100,6 +100,27 @@ lb.querySelector(".lb-prev").addEventListener("click", function(e){ e.stopPropag
 lb.querySelector(".lb-next").addEventListener("click", function(e){ e.stopPropagation(); openLB(lbIdx + 1); });
 lb.addEventListener("click", function(e){ if(e.target === lb) closeLB(); });
 
+/* ── Slider antes / después (arrastrable) ── */
+var ba = document.getElementById("baSlider");
+if(ba){
+  var setPos = function(clientX){
+    var r = ba.getBoundingClientRect();
+    var p = ((clientX - r.left) / r.width) * 100;
+    p = Math.max(4, Math.min(96, p));
+    ba.style.setProperty("--pos", p + "%");
+  };
+  var dragging = false;
+  ba.addEventListener("pointerdown", function(e){
+    dragging = true;
+    try{ ba.setPointerCapture(e.pointerId); }catch(_){}
+    setPos(e.clientX);
+  });
+  ba.addEventListener("pointermove", function(e){ if(dragging) setPos(e.clientX); });
+  ["pointerup","pointercancel","pointerleave"].forEach(function(ev){
+    ba.addEventListener(ev, function(){ dragging = false; });
+  });
+}
+
 /* ── Reveal on scroll ── */
 var io = new IntersectionObserver(function(entries){
   entries.forEach(function(en){

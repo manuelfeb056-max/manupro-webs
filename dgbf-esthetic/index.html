@@ -44,7 +44,13 @@
   </video>
   <div class="hero-shade"></div>
   <div class="hero-content">
-    <div class="hero-logo rv"><img src="img/logo.jpg" alt="DGBF Esthetic"></div>
+    <div class="seal rv">
+      <svg class="seal-ring" viewBox="0 0 200 200" aria-hidden="true">
+        <defs><path id="sealCirc" d="M100,100 m-80,0 a80,80 0 1,1 160,0 a80,80 0 1,1 -160,0"/></defs>
+        <text class="seal-text"><textPath href="#sealCirc" textLength="502" lengthAdjust="spacingAndGlyphs">DGBF ESTHETIC · CAROLINA · PUERTO RICO ·</textPath></text>
+      </svg>
+      <div class="seal-core"><img src="img/logo.jpg" alt="DGBF Esthetic"></div>
+    </div>
     <p class="eyebrow light rv">Carolina, Puerto Rico</p>
     <h1 class="rv">Relaja tu cuerpo<br><em>y renueva tu piel</em></h1>
     <p class="hero-sub rv">Tratamientos personalizados para resaltar tu belleza natural.<br>Cada visita es una experiencia exclusiva.</p>
@@ -88,7 +94,7 @@
       </ul>
     </div>
     <div class="about-card rv">
-      <div class="logo-plaque"><img src="img/logo.jpg" alt="DGBF Esthetic"></div>
+      <div class="logo-circle"><img src="img/logo.jpg" alt="DGBF Esthetic"></div>
       <p class="about-quote">"Estética con sentido humano, resultados reales y atención personalizada."</p>
       <p class="about-name">Dulce — Fundadora</p>
     </div>
@@ -315,10 +321,16 @@
       <p>Sabemos que muchas clientas prefieren mantener su privacidad, y siempre la respetamos al 100%. Tú decides qué mostrar y cómo recibir tus beneficios.</p>
       <a class="btn btn-primary" data-wa data-service="Hola DGBF Esthetic, quiero información del programa de recompensas">Quiero mis recompensas</a>
     </div>
-    <figure class="ba-card rv">
-      <img src="img/antes-despues.jpg" alt="Antes y después de tratamiento facial en DGBF Esthetic" loading="lazy">
-      <figcaption>Resultado real · Tratamiento facial</figcaption>
-    </figure>
+    <div class="rv">
+      <div class="ba-slider" id="baSlider">
+        <img class="ba-img ba-after" src="img/despues.jpg" alt="Después del tratamiento facial" loading="lazy" draggable="false">
+        <img class="ba-img ba-before" src="img/antes.jpg" alt="Antes del tratamiento facial" loading="lazy" draggable="false">
+        <div class="ba-handle" aria-hidden="true"><span></span></div>
+        <span class="ba-tag ba-tag-l">Antes</span>
+        <span class="ba-tag ba-tag-r">Después</span>
+      </div>
+      <p class="ba-hint">Desliza para comparar el resultado real</p>
+    </div>
   </div>
 </section>
 
@@ -392,6 +404,10 @@
           </a>
         </div>
       </div>
+    </div>
+    <div class="map-card rv">
+      <iframe title="Mapa — DGBF Esthetic, Ave. San Marcos 404, Carolina PR" src="https://www.google.com/maps?q=Ave.+San+Marcos+404,+Carolina,+PR+00982&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+      <a class="btn btn-primary" href="https://www.google.com/maps/search/?api=1&query=Ave.+San+Marcos+404+Carolina+PR+00982" target="_blank" rel="noopener">Abrir en Google Maps</a>
     </div>
     <div class="cta-final rv">
       <h3>Tu piel merece lo mejor.<br><em>Agenda tu cita hoy.</em></h3>
