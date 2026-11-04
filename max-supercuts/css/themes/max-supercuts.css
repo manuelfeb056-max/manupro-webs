@@ -10,7 +10,7 @@ body{font-family:'Oswald',sans-serif}
 @media(max-width:860px){.hero-diag-grid{grid-template-columns:1fr}.hero-diag-photo{height:300px}}
 /* logo: diamante */
 /* identidad: negro cálido de barbería */
-.theme-max-supercuts{--bg:#0f0c09;--bg2:#161009;--card:#1a1410;--ink:#f6efe2;--muted:#ab9c84;--line:rgba(255,220,170,.1)}
+.theme-max-supercuts{--bg:#0a0a0a;--bg2:#101010;--card:#161616;--ink:#f7f4ea;--muted:#a6a6a6;--line:rgba(255,255,255,.1);--accent:#ffc400}
 
 /* ---- contacto único ---- */
 .theme-max-supercuts .ct-pole-flex{display:flex;gap:26px;align-items:center;justify-content:center;flex-wrap:wrap;margin:24px 0}
