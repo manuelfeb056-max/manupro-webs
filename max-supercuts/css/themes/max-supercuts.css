@@ -24,3 +24,23 @@ body{font-family:'Oswald',sans-serif}
 .theme-max-supercuts .ct-pole-info p a{color:var(--accent);font-weight:700}
 .theme-max-supercuts .ct-pole-map{max-width:640px;margin:0 auto}
 .theme-max-supercuts .ct-pole-map iframe{width:100%;height:220px;border:0;border-radius:14px}
+
+/* ===== optimización móvil (2026-11-04) ===== */
+@media(max-width:860px){
+  /* El backdrop-filter del header atrapaba el drawer fixed: lo descentraba y ensanchaba la página */
+  .header{backdrop-filter:none;-webkit-backdrop-filter:none}
+  /* El drawer arrastraba left:0 del media query viejo: se asomaba a medias */
+  .nav{left:auto!important;visibility:hidden;transition:transform .3s ease,visibility 0s .35s}
+  .nav.open{transform:none!important;visibility:visible;transition:transform .3s ease}
+  /* Header compacto: nada se mete debajo del botón flotante de 3 rayas */
+  .header-inner{padding:10px 78px 10px 16px;gap:10px}
+  .logo{font-size:1.05rem;white-space:nowrap}
+  .logo-img{gap:10px;min-width:0}
+  .logo-img img{width:52px;height:52px;animation:none}
+  /* Hero: menos aire arriba, botones apilados a todo ancho, foto limpia sin diagonal rota */
+  .hero-diag{padding:104px 0 56px}
+  .hero-diag-grid{gap:28px}
+  .hero-ctas{flex-direction:column;align-items:stretch}
+  .hero-ctas .btn{justify-content:center}
+  .hero-diag-photo{clip-path:none;border-radius:18px;height:300px}
+}
