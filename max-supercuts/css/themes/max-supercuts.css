@@ -1,6 +1,6 @@
 /* MAX SUPERCUTS — diagonal barbershop */
 body{font-family:'Oswald',sans-serif}
-.logo,.sec-title,.hero-diag-text h1{font-family:'Alfa Slab One',serif;font-weight:400}
+.logo,.sec-title,.hero-diag-text h1,.hero-title{font-family:'Alfa Slab One',serif;font-weight:400}
 .hero-diag{background:linear-gradient(160deg,#16161c,#0b0b10);clip-path:polygon(0 0,100% 0,100% calc(100% - 4vw),0 100%);padding:150px 0 calc(70px + 4vw)}
 .hero-diag-grid{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center}
 .hero-diag-text h1{font-size:clamp(2.2rem,5.6vw,3.8rem);line-height:1.08;margin:0 0 6px}
@@ -43,4 +43,6 @@ body{font-family:'Oswald',sans-serif}
   .hero-ctas{flex-direction:column;align-items:stretch}
   .hero-ctas .btn{justify-content:center}
   .hero-diag-photo{clip-path:none;border-radius:18px;height:300px}
+  /* el scroll-hint chocaba con el botón flotante de WhatsApp */
+  .scroll-hint{display:none}
 }
