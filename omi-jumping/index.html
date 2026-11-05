@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Omi Jumping | Alquiler de Inflables en Fajardo, Puerto Rico — Diversión sin Límite</title>
+<meta name="description" content="Omi Jumping — Diversión sin límite. Alquiler de inflables, chorreras, castillos, toro mecánico, photobooth 360, popcorn, algodón y catering en Fajardo, Puerto Rico. Juegos Interactivos desde $150 todo el día. Reserva por WhatsApp.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="icon" href="img/logo.jpg">
+</head>
+<body>
+
+<!-- ══════════ LOADER 3D ══════════ -->
+<div class="loader" id="loader" aria-hidden="true">
+  <img class="loader-logo" src="img/logo.jpg" alt="Omi Jumping — Diversión sin límite">
+  <div class="loader-castle" aria-hidden="true"><i></i><i></i><i></i></div>
+  <p class="loader-text">Inflando la diversión...</p>
+  <div class="loader-bar"><b id="loadBar"></b></div>
+  <p class="loader-pct"><span id="loadPct">0</span>%</p>
+</div>
+
+<!-- ══════════ HEADER ══════════ -->
+<header class="header">
+  <div class="header-in">
+    <img class="header-logo" src="img/logo.jpg" alt="Omi Jumping">
+    <p class="header-name">Omi Jumping<span>Diversión sin límite · Fajardo</span></p>
+    <a class="btn btn-primary sm header-cta" data-wa data-service="Hola Omi Jumping, quiero reservar para mi evento">Reserva ahora</a>
+  </div>
+</header>
+
+<!-- ══════════ MENÚ FLOTANTE 3 RAYAS ══════════ -->
+<button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">
+  <span></span><span></span><span></span>
+</button>
+<nav class="overlay-menu" id="overlayMenu" aria-hidden="true">
+  <div class="overlay-inner">
+    <a href="#inicio">Inicio</a>
+    <a href="#servicios">Servicios</a>
+    <a href="#reserva">Reserva en 30 segundos</a>
+    <a href="#como-funciona">Cómo funciona</a>
+    <a href="#para-quien">Para quién</a>
+    <a href="#galeria">Galería</a>
+    <a href="#nosotros">Nosotros</a>
+    <a href="#faq">Preguntas</a>
+    <a href="#contacto">Contacto</a>
+    <a href="#precios">Precios</a>
+    <a class="menu-cta" data-wa data-service="Hola Omi Jumping, quiero reservar para mi evento">Reserva por WhatsApp</a>
+    <p class="menu-foot">Fajardo, Puerto Rico 00718 · (787) 321-5921 · Siempre abierto</p>
+  </div>
+</nav>
+
+<!-- ══════════ HERO 3D ══════════ -->
+<section class="hero" id="inicio">
+  <div class="balloon b1" aria-hidden="true"></div>
+  <div class="balloon b2" aria-hidden="true"></div>
+  <div class="balloon b3" aria-hidden="true"></div>
+  <div class="wrap hero-grid">
+    <div>
+      <p class="badge rv"><svg viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg> Fajardo, Puerto Rico</p>
+      <h1 class="rv">DIVERSIÓN<br><span class="h-red">SIN LÍMITE</span></h1>
+      <p class="hero-sub rv">Inflables, chorreras, juegos gigantes, toro mecánico, photobooth 360, popcorn, algodón y catering. Llevamos la fiesta a tu escuela, iglesia, gimnasio o campamento.</p>
+      <div class="offer rv">
+        <p class="offer-price">$150<small>desde</small></p>
+        <p><b>Juegos Interactivos — Todo el Día.</b> Eleva tus fiestas a otro nivel con los juegos gigantes que todos quieren probar.</p>
+      </div>
+      <div class="hero-ctas rv">
+        <a class="btn btn-wa" data-wa data-service="Hola Omi Jumping, quiero reservar para mi evento"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.6-6.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.3-.6.8-.8 1-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4 0-.5.1-.7l.4-.5c.1-.2.1-.3 0-.5l-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.2-.7.3-.9.9-1.1 2.2-.2 3.9a11.6 11.6 0 0 0 4.5 4.2c1.7.8 2.4.9 3.2.7.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2 0-.1-.2-.1-.5-.2z"/></svg> Reserva por WhatsApp</a>
+        <a class="btn btn-ghost" href="#precios">Ver precios</a>
+      </div>
+      <p class="hero-note rv">Llámanos directo: <b><a href="tel:+17873215921">(787) 321-5921</a></b> · Siempre abierto</p>
+    </div>
+
+    <div class="rv">
+      <div class="stage" id="stage">
+        <div class="ring" id="ring">
+          <figure class="slide"><img src="img/hero-castillo.jpg" alt="Castillo inflable rojo y azul de Omi Jumping en Fajardo"><figcaption><small>CASTILLOS 13x13 · DESDE $99</small>El clásico que nunca falla</figcaption></figure>
+          <figure class="slide"><img src="img/hero-tiki.jpg" alt="Chorrera inflable estilo tiki de Omi Jumping"><figcaption><small>CHORRERA MINI · $175</small>Especial de fin de semana</figcaption></figure>
+          <figure class="slide"><img src="img/hero-obstaculos.jpg" alt="Carrera de obstáculos inflable de Omi Jumping"><figcaption><small>OBSTÁCULOS · DESDE $299</small>La competencia que todos quieren ganar</figcaption></figure>
+        </div>
+        <button class="ring-arrow prev" id="ringPrev" aria-label="Foto anterior">‹</button>
+        <button class="ring-arrow next" id="ringNext" aria-label="Foto siguiente">›</button>
+        <div class="ring-nav" id="ringNav">
+          <button class="on" aria-label="Foto 1"></button>
+          <button aria-label="Foto 2"></button>
+          <button aria-label="Foto 3"></button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ FRANJA DE CONFIANZA ══════════ -->
+<section class="trust">
+  <div class="wrap trust-in">
+    <div class="trust-item rv"><svg viewBox="0 0 24 24"><path d="M12 21s-8-5.5-8-11a5 5 0 0 1 9-3 5 5 0 0 1 9 3c0 5.5-8 11-8 11z"/></svg><span><b>587</b> seguidores en Facebook</span></div>
+    <div class="trust-item rv"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm1 10.6l4 2.3-.7 1.3L11 13.5V7h2z"/></svg><span><b>Siempre abierto</b></span></div>
+    <div class="trust-item rv"><svg viewBox="0 0 24 24"><path d="M20 6H4a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2zm-2 8H6v-2h12z"/></svg><span>ATH Móvil · PayPal · Klarna · Visa · Mastercard · Efectivo</span></div>
+    <div class="trust-item rv"><svg viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg><span>Fajardo, Puerto Rico 00718</span></div>
+  </div>
+</section>
+
+<!-- ══════════ SERVICIOS ══════════ -->
+<section class="section" id="servicios">
+  <div class="wrap">
+    <p class="eyebrow center rv">Nuestros servicios</p>
+    <h2 class="center rv">Todo para tu fiesta, <em>en un solo lugar</em></h2>
+    <p class="center lead rv">Inflables, juegos, comida y diversión. Toca "Reservar" y tu mensaje llega listo por WhatsApp.</p>
+
+    <div class="svc-grid">
+      <article class="svc-card rv">
+        <div class="svc-media"><img src="img/svc-interactivos.jpg" alt="Juegos Interactivos de Omi Jumping" loading="lazy"><span class="svc-tag red">OFERTA PRINCIPAL</span></div>
+        <div class="svc-body">
+          <h3>Juegos Interactivos</h3>
+          <p>Juegos gigantes para competir y reír todo el día: tiro al blanco, lanzamiento de hacha y más. Para escuelas, iglesias, gimnasios y campamentos.</p>
+          <p class="svc-price">desde $150.00 <small>· Todo el Día</small></p>
+          <div class="svc-foot"><a class="btn btn-primary sm" data-wa data-service="Hola Omi Jumping, quiero reservar los Juegos Interactivos (desde $150 todo el día)">Reservar</a></div>
+        </div>
+      </article>
+
+      <article class="svc-card rv">
+        <div class="svc-media"><img src="img/hero-castillo.jpg" alt="Castillo inflable rojo y azul" loading="lazy"><span class="svc-tag">EL CLÁSICO</span></div>
+        <div class="svc-body">
+          <h3>Castillos 13x13</h3>
+          <p>Castillos inflables de colores para que los niños brinquen sin parar. El favorito de los cumpleaños.</p>
+          <p class="svc-price">$99</p>
+          <div class="svc-foot"><a class="btn btn-primary sm" data-wa data-service="Hola Omi Jumping, quiero reservar un Castillo 13x13 ($99)">Reservar</a></div>
+        </div>
+      </article>
+
+      <article class="svc-card rv">
+        <div class="svc-media"><img src="img/svc-casas-brinco.jpg" alt="Casas de Brinco 13x13 de Omi Jumping" loading="lazy"><span class="svc-tag">INCLUYE POPCORN + ALGODÓN</span></div>
+        <div class="svc-body">
+          <h3>Casas de Brinco 13x13</h3>
+          <p>Casa de brinco con popcorn y algodón incluidos. Diversión y merienda en un solo paquete.</p>
+          <p class="svc-price">$150 <small>· incluye popcorn + algodón</small></p>
+          <div class="svc-foot"><a class="btn btn-primary sm" data-wa data-service="Hola Omi Jumping, quiero reservar una Casa de Brinco 13x13 ($150, incluye popcorn y algodón)">Reservar</a></div>
+        </div>
+      </article>
+
+      <article class="svc-card rv">
+        <div class="svc-media"><img src="img/hero-tiki.jpg" alt="Chorrera inflable de Omi Jumping" loading="lazy"><span class="svc-tag blue">ESPECIAL DE LA SEMANA</span></div>
+        <div class="svc-body">
+          <h3>Chorreras</h3>
+          <p>Chorrera Mini, Chorrera y Chorreras Medianas para refrescar la fiesta. La Mini incluye popcorn.</p>
+          <p class="svc-price">desde $175 <small>· Mini $175 · Chorrera $199 · Medianas $225 / $250 / $275</small></p>
+          <div class="svc-foot"><a class="btn btn-primary sm" data-wa data-service="Hola Omi Jumping, quiero reservar una Chorrera">Reservar</a></div>
+        </div>
+      </article>
+
+      <article class="svc-card rv">
+        <div class="svc-media"><img src="img/hero-obstaculos.jpg" alt="Carrera de obstáculos inflable" loading="lazy"><span class="svc-tag red">60 PIES</span></div>
+        <div class="svc-body">
+          <h3>Carreras de Obstáculos</h3>
+          <p>Corre, trepa y deslízate en la carrera inflable más grande. Disponible la versión gigante de 60 pies.</p>
+          <p class="svc-price">desde $299 <small>· 60 pies $350</small></p>
+          <div class="svc-foot"><a class="btn btn-primary sm" data-wa data-service="Hola Omi Jumping, quiero reservar una Carrera de Obstáculos (desde $299)">Reservar</a></div>
+        </div>
+      </article>
+
+      <article class="svc-card rv">
+        <div class="svc-media"><img src="img/svc-espuma.jpg" alt="Cañón de Espuma de Omi Jumping" loading="lazy"><span class="svc-tag">DESDE $150 EL DÍA</span></div>
+        <div class="svc-body">
+          <h3>Cañón de Espuma</h3>
+          <p>Una fiesta de espuma que los niños nunca olvidan. Ideal para verano, campamentos y actividades escolares.</p>
+          <p class="svc-price">desde $150 <small>· el día</small></p>
+          <div class="svc-foot"><a class="btn btn-primary sm" data-wa data-service="Hola Omi Jumping, quiero reservar el Cañón de Espuma (desde $150 el día)">Reservar</a></div>
+        </div>
+      </article>
+
+      <article class="svc-card rv">
+        <div class="svc-media"><video autoplay muted loop playsinline preload="metadata" poster="img/svc-photobooth.jpg"><source src="video/photobooth-360.mp4" type="video/mp4"></video><span class="svc-tag blue">VIDEO 360</span></div>
+        <div class="svc-body">
+          <h3>Photobooth 360</h3>
+          <p>Videos 360 inolvidables para tu evento, de 2 a 3 personas por toma. El recuerdo que todos quieren compartir.</p>
+          <p class="svc-price">desde $150</p>
+          <div class="svc-foot"><a class="btn btn-primary sm" data-wa data-service="Hola Omi Jumping, quiero reservar el Photobooth 360 (desde $150)">Reservar</a></div>
+        </div>
+      </article>
+
+      <article class="svc-card rv">
+        <div class="svc-media"><img src="img/svc-toro.jpg" alt="Toro Mecánico de Omi Jumping" loading="lazy"></div>
+        <div class="svc-body">
+          <h3>Toro Mecánico</h3>
+          <p>¿Quién aguanta más sobre el toro? El reto que pone a todos a gritar y a reír en tu fiesta.</p>
+          <p class="svc-price"><small>Cotiza por WhatsApp</small></p>
+          <div class="svc-foot"><a class="btn btn-primary sm" data-wa data-service="Hola Omi Jumping, quiero cotizar el Toro Mecánico">Cotizar</a></div>
+        </div>
+      </article>
+
+      <article class="svc-card rv">
+        <div class="svc-media"><img src="img/svc-playground.jpg" alt="Playground de Omi Jumping" loading="lazy"><span class="svc-tag">LO NUEVO</span></div>
+        <div class="svc-body">
+          <h3>Playground</h3>
+          <p>Zona de juegos nueva y disponible para tus eventos. Ideal para los más pequeños.</p>
+          <p class="svc-price"><small>Cotiza por WhatsApp</small></p>
+          <div class="svc-foot"><a class="btn btn-primary sm" data-wa data-service="Hola Omi Jumping, quiero cotizar el Playground">Cotizar</a></div>
+        </div>
+      </article>
+
+      <article class="svc-card rv">
+        <div class="svc-media"><img src="img/svc-mantecado.jpg" alt="Máquina de Mantecado de 3 sabores de Omi Jumping" loading="lazy"><span class="svc-tag">3 SABORES</span></div>
+        <div class="svc-body">
+          <h3>Máquina de Mantecado</h3>
+          <p>Mantecado suave de 3 sabores para refrescar a todos tus invitados. Para toda actividad.</p>
+          <p class="svc-price"><small>Cotiza por WhatsApp</small></p>
+          <div class="svc-foot"><a class="btn btn-primary sm" data-wa data-service="Hola Omi Jumping, quiero cotizar la Máquina de Mantecado (3 sabores)">Cotizar</a></div>
+        </div>
+      </article>
+
+      <article class="svc-card rv">
+        <div class="svc-media"><img src="img/svc-comestibles.jpg" alt="Máquinas de popcorn, algodón, piraguas y slush" loading="lazy"></div>
+        <div class="svc-body">
+          <h3>Popcorn, Algodón, Piraguas y Slush</h3>
+          <p>Máquinas de popcorn y algodón, piraguas y slush. También mealprep envasados de popcorn, algodón y piraguas.</p>
+          <p class="svc-price"><small>Cotiza por WhatsApp</small></p>
+          <div class="svc-foot"><a class="btn btn-primary sm" data-wa data-service="Hola Omi Jumping, quiero cotizar popcorn, algodón, piraguas o slush">Cotizar</a></div>
+        </div>
+      </article>
+
+      <article class="svc-card rv">
+        <div class="svc-media"><img src="img/svc-gigantes.jpg" alt="Juegos Gigantes de Omi Jumping" loading="lazy"></div>
+        <div class="svc-body">
+          <h3>Juegos Gigantes</h3>
+          <p>Double Axe Throw, Guess Who gigante y más juegos gigantes para competir en grande.</p>
+          <p class="svc-price"><small>Cotiza por WhatsApp</small></p>
+          <div class="svc-foot"><a class="btn btn-primary sm" data-wa data-service="Hola Omi Jumping, quiero cotizar los Juegos Gigantes">Cotizar</a></div>
+        </div>
+      </article>
+
+      <article class="svc-card rv">
+        <div class="svc-media"><img src="img/svc-mesas.jpg" alt="Mesas, sillas y carpa de Omi Jumping" loading="lazy"></div>
+        <div class="svc-body">
+          <h3>Mesas, Sillas y Carpa</h3>
+          <p>Todo el equipo para montar tu evento: mesas, sillas y carpa para que tus invitados estén cómodos.</p>
+          <p class="svc-price"><small>Cotiza por WhatsApp</small></p>
+          <div class="svc-foot"><a class="btn btn-primary sm" data-wa data-service="Hola Omi Jumping, quiero cotizar mesas, sillas y carpa">Cotizar</a></div>
+        </div>
+      </article>
+
+      <article class="svc-card rv">
+        <div class="svc-media"><img src="img/svc-catering.jpg" alt="Servicio de catering y postres de Omi Jumping" loading="lazy"></div>
+        <div class="svc-body">
+          <h3>Catering y Postres</h3>
+          <p>Servicio de catering y postres para tu evento. Nachos con queso y mucho más para completar la mesa.</p>
+          <p class="svc-price"><small>Cotiza por WhatsApp</small></p>
+          <div class="svc-foot"><a class="btn btn-primary sm" data-wa data-service="Hola Omi Jumping, quiero cotizar el servicio de catering y postres">Cotizar</a></div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ COTIZADOR ══════════ -->
+<section class="section alt" id="reserva">
+  <div class="wrap">
+    <div class="quote rv">
+      <p class="eyebrow light">Reserva en 30 segundos</p>
+      <h2>Separa tu fecha <em>por WhatsApp</em></h2>
+      <p>Llena el formulario y tu mensaje llega listo a nuestro WhatsApp. Te confirmamos disponibilidad y cómo apartar tu fecha.</p>
+      <form class="quote-form" id="quoteForm">
+        <label>Fecha del evento
+          <input type="date" id="qFecha" required>
+        </label>
+        <label>Tipo de evento
+          <select id="qTipo" required>
+            <option value="" selected>Elige el tipo de evento</option>
+            <option>Cumpleaños</option>
+            <option>Escuela</option>
+            <option>Iglesia</option>
+            <option>Gimnasio</option>
+            <option>Campamento</option>
+            <option>Boda</option>
+            <option>Graduación</option>
+            <option>Otro</option>
+          </select>
+        </label>
+        <label>Servicio que te interesa
+          <select id="qServicio" required>
+            <option value="" selected>Elige un servicio</option>
+            <option>Juegos Interactivos (desde $150 todo el día)</option>
+            <option>Castillo 13x13 ($99)</option>
+            <option>Casa de Brinco 13x13 ($150, incluye popcorn y algodón)</option>
+            <option>Chorrera Mini ($175, incluye popcorn)</option>
+            <option>Chorrera ($199)</option>
+            <option>Chorrera Mediana ($225 / $250 / $275)</option>
+            <option>Carrera de Obstáculos (desde $299)</option>
+            <option>Carrera de Obstáculos 60 pies ($350)</option>
+            <option>Cañón de Espuma (desde $150 el día)</option>
+            <option>Photobooth 360 (desde $150)</option>
+            <option>Toro Mecánico</option>
+            <option>Playground</option>
+            <option>Máquina de Mantecado (3 sabores)</option>
+            <option>Popcorn, Algodón, Piraguas o Slush</option>
+            <option>Juegos Gigantes</option>
+            <option>Mesas, Sillas y Carpa</option>
+            <option>Catering y Postres</option>
+            <option>Paquete completo para mi evento</option>
+          </select>
+        </label>
+        <label>Pueblo del evento
+          <input type="text" id="qPueblo" placeholder="Ej. Fajardo" required>
+        </label>
+        <label class="full">Tu nombre
+          <input type="text" id="qNombre" placeholder="Tu nombre" required>
+        </label>
+        <button class="btn btn-sun big" type="submit"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.6-6.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.3-.6.8-.8 1-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4 0-.5.1-.7l.4-.5c.1-.2.1-.3 0-.5l-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.2-.7.3-.9.9-1.1 2.2-.2 3.9a11.6 11.6 0 0 0 4.5 4.2c1.7.8 2.4.9 3.2.7.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2 0-.1-.2-.1-.5-.2z"/></svg> Enviar reserva por WhatsApp</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ CÓMO FUNCIONA ══════════ -->
+<section class="section" id="como-funciona">
+  <div class="wrap">
+    <p class="eyebrow center rv">Así de fácil</p>
+    <h2 class="center rv">Tu fiesta lista en <em>3 pasos</em></h2>
+    <div class="steps">
+      <div class="step rv">
+        <div class="step-num">1</div>
+        <h3>Escríbenos por WhatsApp</h3>
+        <p>Cuéntanos la fecha, el tipo de evento y el servicio que quieres. Respondemos rápido.</p>
+      </div>
+      <div class="step rv">
+        <div class="step-num">2</div>
+        <h3>Separa tu fecha</h3>
+        <p>Te confirmamos disponibilidad y cómo apartar tu fecha. Paga con ATH Móvil, PayPal, Klarna, tarjeta o efectivo.</p>
+      </div>
+      <div class="step rv">
+        <div class="step-num">3</div>
+        <h3>Diversión sin límite</h3>
+        <p>Llevamos, instalamos y recogemos. Tú solo disfruta: los Juegos Interactivos son todo el día.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ PARA QUIÉN ══════════ -->
+<section class="section alt" id="para-quien">
+  <div class="wrap">
+    <p class="eyebrow center rv">Actividad para</p>
+    <h2 class="center rv">Ideal para <em>tu evento</em></h2>
+    <p class="center lead rv">Si tienes una fiesta, tenemos el inflable. Y mucho más.</p>
+    <div class="aud-grid">
+      <div class="aud-card rv">
+        <div class="aud-ico"><svg viewBox="0 0 24 24"><path d="M12 3L1 9l11 6 9-4.9V17h2V9L12 3zM5 13.2V17c0 1.7 3.1 3 7 3s7-1.3 7-3v-3.8l-7 3.8-7-3.8z"/></svg></div>
+        <h3>Escuela</h3>
+        <p>Días de logros, field days y actividades escolares.</p>
+      </div>
+      <div class="aud-card rv">
+        <div class="aud-ico"><svg viewBox="0 0 24 24"><path d="M12 2l-8 4v6c0 5 3.4 9.4 8 10 4.6-.6 8-5 8-10V6l-8-4zm-1 14.6l-3.5-3.5 1.4-1.4L11 13.8l6.1-6.1 1.4 1.4-7.5 7.5z"/></svg></div>
+        <h3>Iglesia</h3>
+        <p>Retiros, kermeses y actividades de la comunidad.</p>
+      </div>
+      <div class="aud-card rv">
+        <div class="aud-ico"><svg viewBox="0 0 24 24"><path d="M20.6 13.4L11 3.8A2 2 0 0 0 9.6 3.2H4a1 1 0 0 0-1 1v5.6c0 .5.2 1 .6 1.4l9.6 9.6a2 2 0 0 0 2.8 0l4.6-4.6a2 2 0 0 0 0-2.8zM6.5 8A1.5 1.5 0 1 1 8 6.5 1.5 1.5 0 0 1 6.5 8z"/></svg></div>
+        <h3>Gimnasio</h3>
+        <p>Eventos deportivos y actividades para toda la familia.</p>
+      </div>
+      <div class="aud-card rv">
+        <div class="aud-ico"><svg viewBox="0 0 24 24"><path d="M12 2a9 9 0 0 0-9 9c0 2.4 1 4.6 2.6 6.2L4 20l2.8-1.6A9 9 0 1 0 12 2zm-1.5 5.5l.8 3.2 3.2.8-3.2.8-.8 3.2-.8-3.2-3.2-.8 3.2-.8.8-3.2zm6 8l.5 2 2 .5-2 .5-.5 2-.5-2-2-.5 2-.5.5-2z"/></svg></div>
+        <h3>Campamento</h3>
+        <p>Verano, campamentos y días de campo inolvidables.</p>
+      </div>
+    </div>
+    <p class="center rv" style="margin-top:26px;font-weight:700;color:var(--royal)">¿Otro tipo de evento? Cumpleaños, bodas, graduaciones y mucho más — pregúntanos por WhatsApp.</p>
+  </div>
+</section>
+
+<!-- ══════════ GALERÍA ══════════ -->
+<section class="section" id="galeria">
+  <div class="wrap">
+    <p class="eyebrow center rv">Galería real</p>
+    <h2 class="center rv">Nuestros inflables <em>y ofertas</em></h2>
+    <p class="center lead rv">Fotos y flyers reales de nuestra página de Facebook. Toca cualquier imagen para verla en grande.</p>
+    <div class="gal-grid">
+      <button class="gal-item rv" data-full="img/svc-interactivos.jpg"><img src="img/svc-interactivos.jpg" alt="Flyer Juegos Interactivos desde $150 todo el día" loading="lazy"></button>
+      <button class="gal-item rv" data-full="img/flyer-chorrera-mini.jpg"><img src="img/flyer-chorrera-mini.jpg" alt="Flyer Chorrera Mini $175 especial fin de semana" loading="lazy"></button>
+      <button class="gal-item rv" data-full="img/flyer-chorrera-199.jpg"><img src="img/flyer-chorrera-199.jpg" alt="Flyer Chorrera $199 especial de la semana" loading="lazy"></button>
+      <button class="gal-item rv" data-full="img/flyer-castillos-99.jpg"><img src="img/flyer-castillos-99.jpg" alt="Flyer Castillos 13x13 $99" loading="lazy"></button>
+      <button class="gal-item rv" data-full="img/svc-casas-brinco.jpg"><img src="img/svc-casas-brinco.jpg" alt="Flyer Casas de Brinco 13x13 $150 incluye popcorn y algodón" loading="lazy"></button>
+      <button class="gal-item rv" data-full="img/flyer-medianas-225.jpg"><img src="img/flyer-medianas-225.jpg" alt="Flyer Chorreras Medianas $225" loading="lazy"></button>
+      <button class="gal-item rv" data-full="img/flyer-medianas-250.jpg"><img src="img/flyer-medianas-250.jpg" alt="Flyer Chorreras Medianas $250" loading="lazy"></button>
+      <button class="gal-item rv" data-full="img/flyer-medianas-275.jpg"><img src="img/flyer-medianas-275.jpg" alt="Flyer Chorreras Medianas $275" loading="lazy"></button>
+      <button class="gal-item rv" data-full="img/flyer-obstaculos-299.jpg"><img src="img/flyer-obstaculos-299.jpg" alt="Flyer Carreras de Obstáculos desde $299" loading="lazy"></button>
+      <button class="gal-item rv" data-full="img/flyer-obstaculos-60.jpg"><img src="img/flyer-obstaculos-60.jpg" alt="Flyer Carrera de Obstáculos 60 pies $350" loading="lazy"></button>
+      <button class="gal-item rv" data-full="img/flyer-fin-semana.jpg"><img src="img/flyer-fin-semana.jpg" alt="Flyer Inflables disponibles para este fin de semana" loading="lazy"></button>
+      <button class="gal-item rv" data-full="img/flyer-mega-chorreras.jpg"><img src="img/flyer-mega-chorreras.jpg" alt="Flyer Mega Chorreras de Omi Jumping" loading="lazy"></button>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ SOBRE NOSOTROS ══════════ -->
+<section class="section alt" id="nosotros">
+  <div class="wrap split">
+    <div class="rv">
+      <p class="eyebrow">Sobre nosotros</p>
+      <h2>Omi Jumping: <em>diversión sin límite</em></h2>
+      <p class="lead">Somos de Fajardo, Puerto Rico. Alquilamos inflables, máquinas de popcorn, algodón y espuma, y damos servicio de catering, postres y mealprep envasados de popcorn, algodón, piragua y nachos con queso.</p>
+      <ul class="check-list">
+        <li><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm-1.2 14.2l-4-4 1.6-1.6 2.4 2.4 5.6-5.6 1.6 1.6-7.2 7.2z"/></svg> Inflables, chorreras, castillos y juegos gigantes</li>
+        <li><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm-1.2 14.2l-4-4 1.6-1.6 2.4 2.4 5.6-5.6 1.6 1.6-7.2 7.2z"/></svg> Toro mecánico, photobooth 360, playground y cañón de espuma</li>
+        <li><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm-1.2 14.2l-4-4 1.6-1.6 2.4 2.4 5.6-5.6 1.6 1.6-7.2 7.2z"/></svg> Popcorn, algodón, piraguas, slush y mantecado de 3 sabores</li>
+        <li><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm-1.2 14.2l-4-4 1.6-1.6 2.4 2.4 5.6-5.6 1.6 1.6-7.2 7.2z"/></svg> Mesas, sillas, carpa, catering y postres</li>
+      </ul>
+      <div class="about-stats">
+        <div><b>587</b><span>seguidores en Facebook</span></div>
+        <div><b>Siempre</b><span>abierto</span></div>
+        <div><b>Fajardo</b><span>Puerto Rico 00718</span></div>
+      </div>
+    </div>
+    <div class="rv">
+      <img class="about-logo" src="img/logo.jpg" alt="Logo oficial de Omi Jumping">
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ FAQ ══════════ -->
+<section class="section" id="faq">
+  <div class="wrap narrow">
+    <p class="eyebrow center rv">Preguntas frecuentes</p>
+    <h2 class="center rv">Resolvemos <em>tus dudas</em></h2>
+    <div class="faq rv">
+      <details open>
+        <summary>¿Cuánto tiempo dura el alquiler?</summary>
+        <p>Los Juegos Interactivos son todo el día. Para los demás servicios, confirma la duración por WhatsApp al (787) 321-5921.</p>
+      </details>
+      <details>
+        <summary>¿Llevan los inflables a mi pueblo?</summary>
+        <p>Estamos en Fajardo, Puerto Rico. Escríbenos por WhatsApp con tu pueblo y la fecha del evento y te confirmamos disponibilidad.</p>
+      </details>
+      <details>
+        <summary>¿Qué incluye el alquiler?</summary>
+        <p>Depende del servicio. Las Casas de Brinco 13x13 incluyen popcorn y algodón, y la Chorrera Mini incluye popcorn. Pregúntanos por WhatsApp qué incluye el servicio que te interesa.</p>
+      </details>
+      <details>
+        <summary>¿Cómo reservo o aparto mi fecha?</summary>
+        <p>Por WhatsApp al (787) 321-5921 o con el formulario de esta página. Cuéntanos la fecha, el tipo de evento y el servicio, y te confirmamos disponibilidad y cómo apartar tu fecha.</p>
+      </details>
+      <details>
+        <summary>¿Qué métodos de pago aceptan?</summary>
+        <p>ATH Móvil, PayPal, Klarna, VISA, Mastercard y efectivo.</p>
+      </details>
+      <details>
+        <summary>¿Para qué edades son los inflables?</summary>
+        <p>No tenemos edades publicadas. Escríbenos por WhatsApp con la edad de los niños y te recomendamos el inflable ideal para tu evento.</p>
+      </details>
+    </div>
+    <div class="center" style="margin-top:2rem">
+      <a class="btn btn-primary" data-wa data-service="Hola Omi Jumping, tengo una pregunta sobre mi evento">Preguntar por WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ CONTACTO ══════════ -->
+<section class="section alt" id="contacto">
+  <div class="wrap">
+    <p class="eyebrow center rv">Ubícanos</p>
+    <h2 class="center rv">Estamos en <em>Fajardo</em>, Puerto Rico</h2>
+    <div class="contact-grid">
+      <div class="c-card rv">
+        <svg viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>
+        <h3>Ubicación</h3>
+        <p>Fajardo, Puerto Rico 00718</p>
+        <a href="https://www.google.com/maps/search/?api=1&query=Fajardo,+Puerto+Rico+00718" target="_blank" rel="noopener">Cómo llegar</a>
+      </div>
+      <div class="c-card rv">
+        <svg viewBox="0 0 24 24"><path d="M6.6 10.8a15.6 15.6 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.24 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1 11.4 11.4 0 0 0 .57 3.6 1 1 0 0 1-.25 1z"/></svg>
+        <h3>Teléfono / WhatsApp</h3>
+        <p><a href="tel:+17873215921">(787) 321-5921</a></p>
+        <a data-wa data-service="Hola Omi Jumping, quiero información">Escríbenos</a>
+      </div>
+      <div class="c-card rv">
+        <svg viewBox="0 0 24 24"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+        <h3>Email</h3>
+        <p><a href="mailto:omarrojas585990@gmail.com">omarrojas585990@gmail.com</a></p>
+      </div>
+      <div class="c-card rv">
+        <svg viewBox="0 0 24 24"><path d="M13.5 21v-7h2.4l.4-3h-2.8V9.1c0-.9.3-1.5 1.6-1.5h1.3V4.9c-.6-.1-1.4-.2-2.2-.2-2.2 0-3.7 1.3-3.7 3.8V11H8v3h2.5v7z"/></svg>
+        <h3>Síguenos</h3>
+        <p><a href="https://www.facebook.com/share/1e139r1e3s/" target="_blank" rel="noopener">Facebook: Omi Jumping</a><br><a href="https://www.instagram.com/omijumping" target="_blank" rel="noopener">Instagram: @omijumping</a></p>
+      </div>
+    </div>
+    <div class="map-card rv">
+      <iframe title="Mapa — Omi Jumping, Fajardo, Puerto Rico" src="https://www.google.com/maps?q=Fajardo,+Puerto+Rico+00718&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+    </div>
+    <div class="cta-final rv">
+      <h3>Tu fiesta merece diversión sin límite.<br>Reserva tu fecha hoy.</h3>
+      <a class="btn btn-wa big" data-wa data-service="Hola Omi Jumping, quiero reservar para mi evento">Reserva por WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ PRECIOS (al final, antes del footer) ══════════ -->
+<section class="section prices" id="precios">
+  <div class="wrap">
+    <p class="eyebrow center rv">Precios reales</p>
+    <h2 class="center rv">Lista de <em>precios</em></h2>
+    <p class="center lead rv">Estos son los precios publicados en nuestra página de Facebook. Sin sorpresas.</p>
+    <div class="price-table rv">
+      <div class="price-row head"><span>Servicio</span><span>Precio</span></div>
+      <div class="price-row hl"><span class="p-name">Juegos Interactivos<small>Todo el día · oferta principal</small></span><span class="p-val">desde $150.00<small>todo el día</small></span></div>
+      <div class="price-row"><span class="p-name">Castillos 13x13</span><span class="p-val">$99</span></div>
+      <div class="price-row"><span class="p-name">Casas de Brinco 13x13<small>Incluye popcorn y algodón</small></span><span class="p-val">$150</span></div>
+      <div class="price-row"><span class="p-name">Chorrera Mini<small>Especial fin de semana · incluye popcorn</small></span><span class="p-val">$175</span></div>
+      <div class="price-row"><span class="p-name">Chorrera<small>Especial de la semana</small></span><span class="p-val">$199</span></div>
+      <div class="price-row"><span class="p-name">Chorreras Medianas<small>16 x 30 y 19 x 30</small></span><span class="p-val">$225 / $250 / $275</span></div>
+      <div class="price-row"><span class="p-name">Carreras de Obstáculos</span><span class="p-val">desde $299</span></div>
+      <div class="price-row"><span class="p-name">Carrera de Obstáculos 60 pies</span><span class="p-val">$350</span></div>
+      <div class="price-row"><span class="p-name">Cañón de Espuma</span><span class="p-val">desde $150<small>el día</small></span></div>
+      <div class="price-row"><span class="p-name">Photobooth 360</span><span class="p-val">desde $150</span></div>
+      <div class="price-row"><span class="p-name">Toro Mecánico</span><span class="p-val"><small>Cotiza por WhatsApp</small></span></div>
+      <div class="price-row"><span class="p-name">Playground</span><span class="p-val"><small>Cotiza por WhatsApp</small></span></div>
+      <div class="price-row"><span class="p-name">Máquina de Mantecado<small>3 sabores</small></span><span class="p-val"><small>Cotiza por WhatsApp</small></span></div>
+      <div class="price-row"><span class="p-name">Popcorn, Algodón, Piraguas y Slush</span><span class="p-val"><small>Cotiza por WhatsApp</small></span></div>
+      <div class="price-row"><span class="p-name">Juegos Gigantes</span><span class="p-val"><small>Cotiza por WhatsApp</small></span></div>
+      <div class="price-row"><span class="p-name">Mesas, Sillas y Carpa</span><span class="p-val"><small>Cotiza por WhatsApp</small></span></div>
+      <div class="price-row"><span class="p-name">Catering y Postres<small>Nachos con queso y más</small></span><span class="p-val"><small>Cotiza por WhatsApp</small></span></div>
+    </div>
+    <p class="price-note rv">Precios según los flyers publicados en Facebook. Aceptamos <b>ATH Móvil, PayPal, Klarna, VISA, Mastercard y efectivo</b>. Para confirmar disponibilidad y apartar tu fecha, escríbenos por WhatsApp al <b>(787) 321-5921</b>.</p>
+    <div class="center rv" style="margin-top:28px">
+      <a class="btn btn-primary big" data-wa data-service="Hola Omi Jumping, quiero reservar para mi evento">Reserva por WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ FOOTER ══════════ -->
+<footer class="footer">
+  <div class="wrap">
+    <img class="footer-logo" src="img/logo.jpg" alt="Omi Jumping">
+    <p><b>Omi Jumping</b> · Diversión sin límite · Fajardo, Puerto Rico 00718</p>
+    <p>Teléfono / WhatsApp: <a href="tel:+17873215921">(787) 321-5921</a> · <a href="mailto:omarrojas585990@gmail.com">omarrojas585990@gmail.com</a></p>
+    <div class="footer-links">
+      <a href="https://www.facebook.com/share/1e139r1e3s/" target="_blank" rel="noopener">Facebook</a>
+      <a href="https://www.instagram.com/omijumping" target="_blank" rel="noopener">Instagram @omijumping</a>
+      <a data-wa data-service="Hola Omi Jumping, quiero reservar para mi evento">WhatsApp</a>
+    </div>
+    <p class="tiny">© 2026 Omi Jumping. Todos los derechos reservados.</p>
+  </div>
+</footer>
+
+<!-- ══════════ WHATSAPP FLOTANTE ══════════ -->
+<a class="wa-float" data-wa data-service="Hola Omi Jumping, quiero información" aria-label="WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.6-6.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.3-.6.8-.8 1-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4 0-.5.1-.7l.4-.5c.1-.2.1-.3 0-.5l-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.2-.7.3-.9.9-1.1 2.2-.2 3.9a11.6 11.6 0 0 0 4.5 4.2c1.7.8 2.4.9 3.2.7.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2 0-.1-.2-.1-.5-.2z"/></svg>
+</a>
+
+<!-- ══════════ LIGHTBOX ══════════ -->
+<div class="lightbox" id="lightbox" aria-hidden="true">
+  <button class="lb-close" aria-label="Cerrar">×</button>
+  <button class="lb-prev" aria-label="Anterior">‹</button>
+  <img id="lbImg" src="" alt="Foto o flyer de Omi Jumping">
+  <button class="lb-next" aria-label="Siguiente">›</button>
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>
