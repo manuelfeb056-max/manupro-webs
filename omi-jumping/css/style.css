@@ -271,9 +271,9 @@ html:not(.js) .rv{opacity:1;transform:none}
 .c-card a{color:var(--royal);font-weight:700}
 /* Contacto con logos grandes (mismo estilo que la fila de redes del hero) */
 .contact-logos{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-top:40px}
-.soc-lg{width:88px;height:88px;border-radius:22px;flex-direction:column;gap:5px}
-.soc-lg svg{width:36px;height:36px}
-.soc-lg span{font-family:var(--font-b);font-weight:600;font-size:.78rem;color:#fff;line-height:1.1;text-align:center}
+.contact-logos .soc-lg{width:88px;height:88px;border-radius:22px;flex-direction:column;gap:5px}
+.contact-logos .soc-lg svg{width:36px;height:36px}
+.contact-logos .soc-lg span{font-family:var(--font-b);font-weight:600;font-size:.78rem;color:#fff;line-height:1.1;text-align:center}
 .contact-info{text-align:center;margin-top:30px}
 .contact-phone{margin-bottom:10px}
 .contact-email{font-size:1.05rem;overflow-wrap:anywhere}
@@ -300,7 +300,7 @@ html:not(.js) .rv{opacity:1;transform:none}
 .price-row .p-val{font-family:var(--font-t);font-weight:800;font-size:1.25rem;color:var(--red);text-align:right;white-space:nowrap;text-shadow:0 1px 0 #fff,0 3px 6px rgba(237,28,36,.22)}
 .price-row .p-val small{display:block;font-family:var(--font-b);font-weight:600;font-size:.78rem;color:var(--muted)}
 /* Fila protagonista 3D: la oferta principal sobresale del resto */
-.price-row.price-hero{position:relative;background:linear-gradient(135deg,#fff8d6,#ffe27a);border:2px solid var(--sun);translate:0 0 34px;box-shadow:0 26px 44px rgba(11,77,162,.3)}
+.price-row.price-hero{position:relative;background:linear-gradient(135deg,#fff8d6,#ffe27a);border:2px solid var(--sun);margin-top:22px;translate:0 0 34px;box-shadow:0 26px 44px rgba(11,77,162,.3)}
 .price-row.price-hero:hover{translate:0 -4px 48px;rotate:x 2deg}
 .price-row.price-hero .p-val{font-size:1.6rem;text-shadow:0 2px 0 #fff,0 5px 10px rgba(237,28,36,.3)}
 .p-badge{position:absolute;top:-13px;right:18px;background:var(--red);color:#fff;font-family:var(--font-b);font-weight:600;font-size:.72rem;letter-spacing:.1em;padding:5px 12px;border-radius:99px;box-shadow:0 8px 16px rgba(237,28,36,.4)}
@@ -362,7 +362,9 @@ html:not(.js) .rv{opacity:1;transform:none}
   .svc-grid{grid-template-columns:1fr}
   .gal-grid{grid-template-columns:repeat(2,1fr)}
   .aud-grid{grid-template-columns:1fr 1fr}
-  .soc-lg{width:76px;height:76px}
+  .contact-logos .soc-lg{width:76px;height:76px}
+  .contact-logos .soc-lg svg{width:32px;height:32px}
+  .price-row.head{grid-template-columns:1fr auto}
   .map-card iframe{height:260px}
   .quote{padding:32px 22px}
   .quote-form{grid-template-columns:1fr}
@@ -517,7 +519,7 @@ html:not(.js) .rv{opacity:1;transform:none}
 }
 @media(max-width:640px){
   .hero-logo{width:172px}
-  .soc{width:48px;height:48px}
+  .social-row .soc{width:48px;height:48px}
   .cat-arrow{display:none}
   .cat-track .gal-item{width:210px}
   .builder-grid{grid-template-columns:1fr}

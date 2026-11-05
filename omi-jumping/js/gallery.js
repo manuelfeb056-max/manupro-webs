@@ -1,8 +1,7 @@
-/* Galería completa de Omi Jumping: 47 fotos y flyers reales de su Facebook. */
+/* Galería completa de Omi Jumping: 41 fotos y flyers reales de su Facebook. */
 var GALLERY = [
   {src: "img/galeria/gal-servicios-logo.jpg", alt: "Flyer de servicios de Omi Jumping"},
   {src: "img/galeria/gal-mesas.jpg", alt: "Mesas para eventos de Omi Jumping"},
-  {src: "img/galeria/gal-evento-navidad-7nov.jpg", alt: "Flyer evento de Navidad 7 noviembre 2026"},
   {src: "img/galeria/gal-evento-navidad-7nov-2.jpg", alt: "Flyer evento de Navidad 7 noviembre 2026"},
   {src: "img/galeria/gal-chorrera-mini-175.jpg", alt: "Flyer Chorrera Mini $175 especial fin de semana"},
   {src: "img/galeria/gal-castillo-real.jpg", alt: "Castillo inflable rojo y azul en Fajardo"},
@@ -14,17 +13,13 @@ var GALLERY = [
   {src: "img/galeria/gal-castillos-99.jpg", alt: "Flyer Castillos 13x13 $99"},
   {src: "img/galeria/gal-medianas-225.jpg", alt: "Flyer Chorreras Medianas $225"},
   {src: "img/galeria/gal-medianas-250.jpg", alt: "Flyer Chorreras Medianas $250"},
-  {src: "img/galeria/gal-medianas-275.jpg", alt: "Flyer Chorreras Medianas $275"},
   {src: "img/galeria/gal-fin-de-semana.jpg", alt: "Flyer inflables para este fin de semana"},
   {src: "img/galeria/gal-halloween-31oct.jpg", alt: "Flyer especial 31 de octubre"},
   {src: "img/galeria/gal-playground.jpg", alt: "Flyer Playground nuevo y disponible"},
   {src: "img/galeria/gal-playground-2.jpg", alt: "Flyer Playground nuevo y disponible"},
   {src: "img/galeria/gal-obstaculos-299.jpg", alt: "Flyer Carreras de Obstáculos desde $299"},
-  {src: "img/galeria/gal-obstaculos-299-2.jpg", alt: "Flyer Carreras de Obstáculos $299"},
   {src: "img/galeria/gal-mantecado-3-sabores.jpg", alt: "Flyer Máquina de Mantecado 3 sabores"},
   {src: "img/galeria/gal-obstaculos-60pies-350.jpg", alt: "Flyer Carrera de Obstáculos 60 pies $350"},
-  {src: "img/galeria/gal-chorrera-199-2.jpg", alt: "Flyer Chorrera $199 especial de la semana"},
-  {src: "img/galeria/gal-playground-3.jpg", alt: "Flyer Playground nuevo y disponible"},
   {src: "img/galeria/gal-photobooth-360-150.jpg", alt: "Flyer Photobooth 360 desde $150"},
   {src: "img/galeria/gal-obstaculos-60pies-350-2.jpg", alt: "Flyer Carrera de Obstáculos 60 pies $350"},
   {src: "img/galeria/gal-chorrera-199-3.jpg", alt: "Flyer Chorrera $199 especial de la semana"},
@@ -46,5 +41,4 @@ var GALLERY = [
   {src: "img/galeria/gal-juegos-gigantes.jpg", alt: "Flyer Juegos Gigantes Double Axe Throw"},
   {src: "img/galeria/gal-maquinas-comestibles.jpg", alt: "Flyer máquinas de Slush y Piraguas"},
   {src: "img/galeria/gal-juegos-interactivos-150.jpg", alt: "Flyer Juegos Interactivos desde $150 todo el día"},
-  {src: "img/galeria/gal-juegos-interactivos-150-2.jpg", alt: "Flyer Juegos Interactivos desde $150 todo el día"},
 ];
