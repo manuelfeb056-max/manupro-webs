@@ -491,31 +491,11 @@ html:not(.js) .rv{opacity:1;transform:none}
 
 /* ══════════ LA FIESTA · ESCENA EN CÓDIGO ══════════ */
 .fiesta{background:linear-gradient(180deg,#bfeaff 0%,#e6f7ff 45%,#fff8d6 100%);padding:84px 0 70px;overflow:hidden}
-.fiesta-sky{position:relative;max-width:980px;height:470px;margin:0 auto;border-radius:28px;overflow:hidden;container-type:inline-size;
+.fiesta-sky{position:relative;max-width:980px;height:470px;margin:0 auto;border-radius:28px;overflow:hidden;
   background:linear-gradient(180deg,#6ec9f5 0%,#a5e2ff 52%,#bfe8a8 52.2%,#79c14e 100%);box-shadow:var(--shadow)}
-.fiesta-sun{position:absolute;top:26px;right:44px;width:84px;height:84px;border-radius:50%;
-  background:radial-gradient(circle at 35% 35%,#fff6b0,#FFD500 60%,#ffb800);box-shadow:0 0 44px rgba(255,213,0,.85)}
-.fiesta-cloud{position:absolute;background:#fff;border-radius:50%;opacity:.92;filter:blur(1px)}
-.fiesta-cloud.fc1{width:150px;height:44px;top:56px;left:7%}
-.fiesta-cloud.fc2{width:110px;height:34px;top:130px;left:56%}
-.fiesta-bunch{position:absolute;left:5%;top:14px;width:104px;z-index:4}
-.fiesta-bunch .b3d{position:relative;display:inline-block;width:34px;margin-right:-6px;cursor:default}
-.fiesta-castle{position:absolute;left:50%;transform:translateX(-50%);bottom:64px;width:min(560px,88%);z-index:3;cursor:pointer}
-.fiesta-castle svg{width:100%;height:auto;display:block;filter:drop-shadow(0 18px 22px rgba(11,77,162,.30))}
-.fiesta-castle:active{transform:translateX(-50%) scale(.985)}
-.char{position:absolute;width:64px;z-index:4;will-change:transform}
-.char svg{width:100%;height:auto;display:block;filter:drop-shadow(0 6px 8px rgba(0,0,0,.25))}
-.char1{left:16%;bottom:96px}
-.char2{left:36%;bottom:108px}
-.char3{left:55%;bottom:90px}
-.char4{left:71%;bottom:100px}
-.fiesta-grass{position:absolute;left:0;right:0;bottom:0;height:66px;
-  background:radial-gradient(circle at 12% 0, #8fd45f 14px, transparent 15px),
-             radial-gradient(circle at 38% 0, #8fd45f 12px, transparent 13px),
-             radial-gradient(circle at 64% 0, #8fd45f 15px, transparent 16px),
-             radial-gradient(circle at 88% 0, #8fd45f 12px, transparent 13px),
-             linear-gradient(180deg,#8fd45f,#5da32f);z-index:2}
-.fiesta-confetti{position:absolute;inset:0;pointer-events:none;z-index:6;overflow:hidden}
+#fiestaCanvas{display:block;width:100%;height:100%;cursor:pointer;touch-action:manipulation}
+#fiestaCanvas:focus-visible{outline:3px solid var(--sun);outline-offset:-3px}
+.fiesta-tap{position:absolute;left:50%;bottom:14px;transform:translateX(-50%);background:rgba(255,255,255,.92);color:var(--royal);font-family:var(--font-b);font-weight:600;font-size:.85rem;padding:7px 16px;border-radius:99px;pointer-events:none;box-shadow:var(--shadow-sm);z-index:5;white-space:nowrap}
 .fiesta-cta{margin-top:38px}
 .fiesta-hint{color:var(--muted);font-size:.9rem;margin-top:14px}
 
@@ -546,13 +526,6 @@ html:not(.js) .rv{opacity:1;transform:none}
   .cat-track .gal-item{width:210px}
   .builder-grid{grid-template-columns:1fr}
   .fiesta-sky{height:380px}
-  .fiesta-castle{width:94%;bottom:52px}
-  .char{width:46px}
-  .fiesta-bunch{width:78px}
   .game-arena{height:280px}
 }
 
-/* Fiesta: escalado proporcional al ancho de la escena (cqw; el px anterior queda de fallback) */
-.char{width:min(64px,13cqw)}
-.fiesta-bunch{width:min(104px,21cqw)}
-.fiesta-bunch .b3d{width:min(34px,7cqw)}
