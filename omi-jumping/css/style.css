@@ -1,4 +1,8 @@
 /* ═══════════════ OMI JUMPING · Fajardo PR · estilo elite ═══════════════ */
+/* ── Fuentes locales (sin Google Fonts: carga más rápido y sin depender de red externa) ── */
+@font-face{font-family:"Baloo 2";font-style:normal;font-weight:400 800;font-display:swap;src:url(../fonts/baloo2.woff2) format("woff2")}
+@font-face{font-family:"Fredoka";font-style:normal;font-weight:300 700;font-display:swap;src:url(../fonts/fredoka.woff2) format("woff2")}
+@font-face{font-family:"Nunito";font-style:normal;font-weight:200 1000;font-display:swap;src:url(../fonts/nunito.woff2) format("woff2")}
 :root{
   --sky:#00AEEF; --sky-d:#0093d6; --sun:#FFD500; --red:#ED1C24; --royal:#0B4DA2;
   --royal-d:#083a7a; --ink:#12233d; --muted:#5b6b82; --line:#e3ecf5;
@@ -163,6 +167,19 @@ html:not(.js) .rv{opacity:1;transform:none}
 .trust-item{display:flex;align-items:center;gap:10px;font-family:var(--font-b);font-weight:600;font-size:.98rem}
 .trust-item svg{width:22px;height:22px;fill:var(--sun);flex:none}
 .trust-item b{color:var(--sun)}
+/* Mini-logos de pago en la franja de confianza */
+.pay-minis{display:inline-flex;align-items:center;gap:7px;flex-wrap:wrap}
+.pay-minis img{height:22px;width:auto;background:#fff;border-radius:6px;padding:3px 6px;box-shadow:0 2px 8px rgba(0,0,0,.28);flex:none}
+
+/* ══════════ MÉTODOS DE PAGO · LOGOS ORIGINALES 3D ══════════ */
+.pagos{background:linear-gradient(180deg,#fff,#eef7ff)}
+.pay-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:40px;perspective:1100px}
+.pay-card{position:relative;background:#fff;border:1.5px solid var(--line);border-radius:var(--radius);padding:26px 18px 20px;text-align:center;box-shadow:0 14px 30px rgba(11,77,162,.12),0 3px 0 rgba(11,77,162,.08);transition:transform .35s cubic-bezier(.22,.9,.3,1),box-shadow .35s;transform-style:preserve-3d;will-change:transform}
+.pay-card:hover{transform:translateY(-8px) rotateX(7deg) rotateY(-7deg);box-shadow:0 26px 48px rgba(11,77,162,.22),0 6px 0 rgba(11,77,162,.08)}
+.pay-card::before{content:"";position:absolute;inset:0;border-radius:inherit;background:linear-gradient(180deg,rgba(255,255,255,.9),transparent 42%);pointer-events:none}
+.pay-logo{height:64px;display:flex;align-items:center;justify-content:center;transform:translateZ(28px)}
+.pay-logo img{max-width:172px;max-height:64px;width:auto;height:auto;object-fit:contain}
+.pay-name{font-family:var(--font-t);font-weight:800;font-size:1.15rem;color:var(--royal);margin-top:12px;transform:translateZ(18px)}
 
 /* ══════════ SERVICIOS · FILA HORIZONTAL PLANA NORMAL (v9) ══════════ */
 .svc-hint{text-align:center;color:var(--muted);font-size:.9rem;margin-top:10px}
@@ -346,6 +363,13 @@ html:not(.js) .rv{opacity:1;transform:none}
   .hero-ctas .btn{width:100%}
   .trust-in{flex-direction:column;align-items:center;gap:12px}
   .trust-item{max-width:100%}
+  .pay-minis{justify-content:center}
+  .pay-minis img{height:20px}
+  .pay-grid{grid-template-columns:repeat(2,1fr);gap:14px}
+  .pay-card{padding:20px 12px 16px}
+  .pay-logo{height:52px}
+  .pay-logo img{max-width:140px;max-height:52px}
+  .pay-name{font-size:1rem}
   .offer{flex-direction:column;align-items:flex-start;gap:6px}
   .gal-grid{grid-template-columns:repeat(2,1fr)}
   .aud-grid{grid-template-columns:1fr 1fr}

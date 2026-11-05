@@ -7,10 +7,10 @@
 <noscript><style>.loader{display:none!important}.rv{opacity:1!important;transform:none!important}</style></noscript>
 <title>Omi Jumping | Alquiler de Inflables en Fajardo, Puerto Rico — Diversión sin Límite</title>
 <meta name="description" content="Omi Jumping — Diversión sin límite. Alquiler de inflables, chorreras, castillos, toro mecánico, photobooth 360, popcorn, algodón y catering en Fajardo, Puerto Rico. Juegos Interactivos desde $150 todo el día. Reserva por WhatsApp.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css?v=9">
+<link rel="preload" href="fonts/baloo2.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/fredoka.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/nunito.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/style.css?v=10">
 <link rel="icon" href="img/logo.jpg">
 </head>
 <body>
@@ -51,6 +51,7 @@
     <a href="#como-funciona">Cómo funciona</a>
     <a href="#para-quien">Para quién</a>
     <a href="#galeria">Galería</a>
+    <a href="#experiencia">Experiencia</a>
     <a href="#nosotros">Nosotros</a>
     <a href="#faq">Preguntas</a>
     <a href="#contacto">Contacto</a>
@@ -100,7 +101,7 @@
   <div class="wrap trust-in">
     <div class="trust-item rv"><svg width="22" height="22" viewBox="0 0 24 24"><path d="M12 21s-8-5.5-8-11a5 5 0 0 1 9-3 5 5 0 0 1 9 3c0 5.5-8 11-8 11z"/></svg><span><b>587</b> seguidores en Facebook</span></div>
     <div class="trust-item rv"><svg width="22" height="22" viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm1 10.6l4 2.3-.7 1.3L11 13.5V7h2z"/></svg><span><b>Siempre abierto</b></span></div>
-    <div class="trust-item rv"><svg width="22" height="22" viewBox="0 0 24 24"><path d="M20 6H4a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2zm-2 8H6v-2h12z"/></svg><span>ATH Móvil · PayPal · Klarna · Visa · Mastercard · Efectivo</span></div>
+    <div class="trust-item rv"><svg width="22" height="22" viewBox="0 0 24 24"><path d="M20 6H4a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2zm-2 8H6v-2h12z"/></svg><span class="pay-minis" aria-label="Aceptamos ATH Móvil, PayPal, Klarna, Visa, Mastercard y efectivo"><img src="img/pagos/ath-movil.png" alt="ATH Móvil" loading="lazy" width="62" height="15"><img src="img/pagos/paypal.svg" alt="PayPal" loading="lazy" width="62" height="17"><img src="img/pagos/klarna.svg" alt="Klarna" loading="lazy" width="62" height="14"><img src="img/pagos/visa.svg" alt="Visa" loading="lazy" width="52" height="17"><img src="img/pagos/mastercard.svg" alt="Mastercard" loading="lazy" width="44" height="27"><img src="img/pagos/efectivo.svg" alt="Efectivo" loading="lazy" width="30" height="19"></span></div>
     <div class="trust-item rv"><svg width="22" height="22" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg><span>Fajardo, Puerto Rico 00718</span></div>
   </div>
 </section>
@@ -429,6 +430,23 @@
   </div>
 </section>
 
+<!-- ══════════ LA EXPERIENCIA · FOTOS REALES DE EVENTOS ══════════ -->
+<section class="section" id="experiencia">
+  <div class="wrap">
+    <p class="eyebrow center rv">La experiencia</p>
+    <h2 class="center rv">La experiencia más divertida <em>para tu fiesta</em></h2>
+    <p class="center lead rv">Mira la diversión real en nuestras fiestas.</p>
+    <div class="cat-wrap rv" id="expWrap">
+      <button class="cat-arrow prev" id="expPrev" aria-label="Anterior">‹</button>
+      <div class="cat-viewport" id="expViewport">
+        <div class="cat-track" id="expTrack"></div>
+      </div>
+      <button class="cat-arrow next" id="expNext" aria-label="Siguiente">›</button>
+      <div class="cat-dots" id="expDots"></div>
+    </div>
+  </div>
+</section>
+
 <!-- ══════════ SOBRE NOSOTROS ══════════ -->
 <section class="section alt" id="nosotros">
   <div class="wrap split">
@@ -550,6 +568,24 @@
   </div>
 </section>
 
+<!-- ══════════ MÉTODOS DE PAGO · LOGOS ORIGINALES 3D ══════════ -->
+<section class="section pagos" id="pagos">
+  <div class="wrap">
+    <p class="eyebrow center rv">Paga como quieras</p>
+    <h2 class="center rv">Métodos de <em>pago</em></h2>
+    <p class="center lead rv">Aceptamos todos estos métodos. Elige el que te convenga al reservar por WhatsApp.</p>
+    <div class="pay-grid rv">
+      <div class="pay-card" data-tilt><div class="pay-logo"><img src="img/pagos/ath-movil.png" alt="ATH Móvil — logo oficial de Evertec" width="166" height="40" loading="lazy"></div><p class="pay-name">ATH Móvil</p></div>
+      <div class="pay-card" data-tilt><div class="pay-logo"><img src="img/pagos/paypal.svg" alt="PayPal — logo oficial" width="150" height="40" loading="lazy"></div><p class="pay-name">PayPal</p></div>
+      <div class="pay-card" data-tilt><div class="pay-logo"><img src="img/pagos/klarna.svg" alt="Klarna — logo oficial" width="168" height="38" loading="lazy"></div><p class="pay-name">Klarna</p></div>
+      <div class="pay-card" data-tilt><div class="pay-logo"><img src="img/pagos/visa.svg" alt="Visa — logo oficial" width="124" height="40" loading="lazy"></div><p class="pay-name">Visa</p></div>
+      <div class="pay-card" data-tilt><div class="pay-logo"><img src="img/pagos/mastercard.svg" alt="Mastercard — logo oficial" width="104" height="64" loading="lazy"></div><p class="pay-name">Mastercard</p></div>
+      <div class="pay-card" data-tilt><div class="pay-logo"><img src="img/pagos/efectivo.svg" alt="Efectivo" width="96" height="61" loading="lazy"></div><p class="pay-name">Efectivo</p></div>
+    </div>
+    <p class="center muted rv" style="margin-top:22px">¿Dudas con el pago? Escríbenos por WhatsApp al <b>(787) 321-5921</b> y te confirmamos.</p>
+  </div>
+</section>
+
 <!-- ══════════ LA FIESTA · ESCENA 100% EN CÓDIGO ══════════ -->
 <section class="fiesta" id="fiesta">
   <div class="fiesta-sky" id="fiestaSky">
@@ -648,9 +684,10 @@
   <button class="lb-next" aria-label="Siguiente">›</button>
 </div>
 
-<script src="js/gsap.min.js?v=9"></script>
-<script src="js/ScrollTrigger.min.js?v=9"></script>
-<script src="js/gallery.js?v=9"></script>
-<script src="js/main.js?v=9"></script>
+<script src="js/gsap.min.js?v=10"></script>
+<script src="js/ScrollTrigger.min.js?v=10"></script>
+<script src="js/gallery.js?v=10"></script>
+<script src="js/exp.js?v=10"></script>
+<script src="js/main.js?v=10"></script>
 </body>
 </html>
