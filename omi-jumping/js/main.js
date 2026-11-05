@@ -186,13 +186,14 @@ if(catViewport){
   setTimeout(function(){ catMeasure(); catViewport.scrollLeft = CAT.setW; }, 600);
 }
 
-/* ── Servicios: fila horizontal con coverflow 3D (mismo lenguaje del hero) ──
+/* ── Servicios: fila horizontal PLANA normal hacia el lado (v9) ──
    Corre sola despacio hacia el lado, swipe con el dedo/mouse, pausa al tocar.
+   Sin coverflow 3D: ninguna tarjeta sale cortada por los bordes.
    Tap limpio en la FOTO abre la foto completa (lightbox modo single). */
 var svcTrack = document.getElementById("svcTrack"),
     svcViewport = document.getElementById("svcViewport"),
     svcDots = document.getElementById("svcDots");
-var SVC = {setW: 0, cardW: 340, pages: 1, auto: true, resumeAt: 0, dragging: false, dragged: false};
+var SVC = {setW: 0, cardW: 340, auto: true, resumeAt: 0, dragging: false, dragged: false, total: 14};
 if(svcTrack && svcTrack.children.length){
   svcTrack.innerHTML = svcTrack.innerHTML + svcTrack.innerHTML + svcTrack.innerHTML;
   /* Solo el primer video del Photobooth reproduce; los clones quedan en pausa */
@@ -203,35 +204,14 @@ if(svcTrack && svcTrack.children.length){
 function svcMeasure(){
   if(!svcViewport || !svcTrack || !svcTrack.children.length) return;
   var first = svcTrack.children[0];
-  var second = svcTrack.children[14];
+  var second = svcTrack.children[SVC.total];
   SVC.cardW = first.offsetWidth + 20;
-  SVC.setW = second ? second.offsetLeft : 14 * SVC.cardW;
-  SVC.pages = Math.max(1, Math.ceil(SVC.setW / svcViewport.clientWidth));
+  SVC.setW = second ? second.offsetLeft : SVC.total * SVC.cardW;
+  /* 14 bolitas = 14 servicios: la activa marca la tarjeta actual */
   var dots = "";
-  for(var i = 0; i < SVC.pages; i++){ dots += '<button aria-label="Ir a la página ' + (i + 1) + ' de servicios"></button>'; }
+  for(var i = 0; i < SVC.total; i++){ dots += '<button aria-label="Ir al servicio ' + (i + 1) + ' de 14"></button>'; }
   svcDots.innerHTML = dots;
-  svcCoverflow();
-}
-/* Coverflow 3D: la tarjeta del centro de frente y grande, las vecinas
-   inclinadas hacia afuera y más pequeñas, con transición suave */
-function svcCoverflow(){
-  if(!svcViewport || !svcTrack || !SVC.setW) return;
-  var vw = svcViewport.clientWidth;
-  if(!vw) return;
-  var cx = svcViewport.scrollLeft + vw / 2;
-  var maxA = isMobile ? 34 : 48;
-  var kids = svcTrack.children;
-  var start = Math.max(0, Math.floor(svcViewport.scrollLeft / SVC.cardW) - 1);
-  var end = Math.min(kids.length, Math.ceil((svcViewport.scrollLeft + vw) / SVC.cardW) + 1);
-  for(var i = start; i < end; i++){
-    var card = kids[i];
-    var cc = card.offsetLeft + card.offsetWidth / 2;
-    var a = (cc - cx) / (vw / 2);
-    if(a > 1) a = 1; else if(a < -1) a = -1;
-    var deg = a * Math.abs(a) * maxA;
-    var sc = 1 - Math.min(0.16, Math.abs(a) * 0.16);
-    card.style.transform = "rotateY(" + deg.toFixed(1) + "deg) scale(" + sc.toFixed(3) + ")";
-  }
+  svcUpdateDots();
 }
 function svcWrap(){
   if(!svcViewport) return;
@@ -239,12 +219,15 @@ function svcWrap(){
   if(sl >= SVC.setW * 2){ svcViewport.scrollLeft = sl - SVC.setW; }
   else if(sl <= 0){ svcViewport.scrollLeft = sl + SVC.setW; }
 }
+/* La bolita activa = la tarjeta más cercana al borde izquierdo del viewport
+   (la que se está viendo completa). Cambia con scroll, swipe, auto-scroll y flechas */
 function svcUpdateDots(){
-  if(!svcDots || !svcDots.children.length) return;
+  if(!svcDots || !svcDots.children.length || !SVC.setW || !SVC.cardW) return;
   var pos = ((svcViewport.scrollLeft % SVC.setW) + SVC.setW) % SVC.setW;
-  var page = Math.min(SVC.pages - 1, Math.floor(pos / svcViewport.clientWidth));
+  var idx = Math.round(pos / SVC.cardW) % SVC.total;
+  if(idx < 0) idx = 0; else if(idx >= SVC.total) idx = SVC.total - 1;
   for(var i = 0; i < svcDots.children.length; i++){
-    svcDots.children[i].classList.toggle("on", i === page);
+    svcDots.children[i].classList.toggle("on", i === idx);
   }
 }
 function snapSvc(){
@@ -260,7 +243,6 @@ function svcResumeSoon(ms){ svcPause(ms || 3000); }
 if(svcViewport){
   /* Auto-scroll despacio con setInterval (fiable en headless y pestañas inactivas) */
   setInterval(function(){
-    svcCoverflow();
     if(SVC.auto && !SVC.dragging && !document.hidden && SVC.setW > 0){
       /* Acumular el avance fraccionario: scrollLeft redondea cada asignación
          a entero, así que sumar 0.42px/tick directo se redondea a 0 y el
@@ -277,6 +259,9 @@ if(svcViewport){
       SVC.auto = true;
     }
   }, 20);
+  /* La bolita cambia con CUALQUIER movimiento del carrusel (scroll, swipe,
+     auto-scroll, flechas, snap): el evento scroll lo cubre todo */
+  svcViewport.addEventListener("scroll", function(){ svcUpdateDots(); }, {passive: true});
   /* Arrastre con mouse + swipe táctil, tap en la foto abre el lightbox */
   var sDragX = 0, sDragScroll = 0, sDragMoved = 0;
   svcViewport.addEventListener("pointerdown", function(e){
@@ -335,7 +320,7 @@ if(svcViewport){
     var idx = Array.prototype.indexOf.call(svcDots.children, btn);
     var pos = ((svcViewport.scrollLeft % SVC.setW) + SVC.setW) % SVC.setW;
     var base = svcViewport.scrollLeft - pos;
-    svcViewport.scrollTo({left: base + idx * svcViewport.clientWidth, behavior: "smooth"});
+    svcViewport.scrollTo({left: base + idx * SVC.cardW, behavior: "smooth"});
     setTimeout(snapSvc, 650);
     svcResumeSoon(3000);
   });
@@ -975,8 +960,7 @@ if(gsapOn){
     gsap.from(el, {y: 44, opacity: 0, duration: 0.9, ease: "power3.out",
       scrollTrigger: {trigger: el, start: "top 88%", once: true}});
   });
-  /* Tarjetas de servicios: solo fade (el coverflow 3D maneja el transform,
-     un fromTo con y/scale pelearía con él cada 20ms) */
+  /* Tarjetas de servicios: solo fade (v9, fila plana: sin transform en loop) */
   ScrollTrigger.batch(".svc-card", {start: "top 88%", once: true,
     onEnter: function(b){ gsap.fromTo(b, {opacity: 0}, {opacity: 1, duration: 0.8, stagger: 0.09, ease: "power2.out", overwrite: "auto"}); }});
   ScrollTrigger.batch(".step, .aud-card, .c-card", {start: "top 88%", once: true,

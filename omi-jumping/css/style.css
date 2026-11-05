@@ -164,14 +164,14 @@ html:not(.js) .rv{opacity:1;transform:none}
 .trust-item svg{width:22px;height:22px;fill:var(--sun);flex:none}
 .trust-item b{color:var(--sun)}
 
-/* ══════════ SERVICIOS · FILA HORIZONTAL CON COVERFLOW 3D ══════════ */
+/* ══════════ SERVICIOS · FILA HORIZONTAL PLANA NORMAL (v9) ══════════ */
 .svc-hint{text-align:center;color:var(--muted);font-size:.9rem;margin-top:10px}
 .svc-wrap{position:relative;margin-top:30px}
 .svc-viewport{overflow-x:auto;scrollbar-width:none;-ms-overflow-style:none;
   touch-action:pan-y;cursor:grab;border-radius:18px;overscroll-behavior-x:contain;padding:10px 2px}
 .svc-viewport::-webkit-scrollbar{display:none}
 .svc-viewport.dragging{cursor:grabbing}
-.svc-track{display:flex;gap:20px;width:max-content;perspective:1200px;padding:6px 2px}
+.svc-track{display:flex;gap:20px;width:max-content;padding:6px 2px}
 .svc-track .svc-card{width:320px;flex:0 0 auto;margin-top:0;transition:box-shadow .25s}
 .svc-track .svc-card:hover{box-shadow:var(--shadow)}
 .svc-arrow{position:absolute;top:42%;transform:translateY(-50%);z-index:4;width:48px;height:48px;border-radius:50%;
@@ -180,7 +180,7 @@ html:not(.js) .rv{opacity:1;transform:none}
 .svc-arrow.next{right:-8px}
 .svc-dots{display:flex;gap:8px;justify-content:center;margin-top:20px;flex-wrap:wrap}
 .svc-dots button{width:10px;height:10px;border-radius:50%;border:none;background:rgba(11,77,162,.25);padding:0;transition:.2s}
-.svc-dots button.on{background:var(--sun);transform:scale(1.3);box-shadow:0 0 0 2px var(--royal)}
+.svc-dots button.on{background:var(--sun);transform:scale(1.45);box-shadow:0 0 0 2px var(--royal)}
 .svc-card{background:#fff;border:1.5px solid var(--line);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow-sm);
   display:flex;flex-direction:column;transition:transform .25s,box-shadow .25s}
 .svc-card:hover{transform:translateY(-6px);box-shadow:var(--shadow)}
