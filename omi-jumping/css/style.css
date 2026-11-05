@@ -37,7 +37,6 @@ html:not(.js) .rv{opacity:1;transform:none}
 .force-on{opacity:1!important;transform:none!important}
 /* Cuando GSAP está activo, él maneja los reveals (sin doble animación) */
 .gsap-on .rv{opacity:1;transform:none;transition:none}
-.gsap-on .ring{transition:none}
 
 /* ── Titular hero con líneas para animación por palabras ── */
 .hero h1 .line{display:block;overflow:hidden;padding-bottom:.06em;margin-bottom:-.06em}
@@ -150,25 +149,6 @@ html:not(.js) .rv{opacity:1;transform:none}
 .hero-note{margin-top:16px;font-size:.92rem;color:var(--muted)}
 .hero-note b{color:var(--royal)}
 
-/* Carrusel 3D */
-.stage{perspective:1200px;position:relative;height:520px;overflow:hidden;border-radius:26px;touch-action:pan-y;cursor:grab}
-.stage:active{cursor:grabbing}
-.ring{position:absolute;inset:0;transform-style:preserve-3d;transition:transform .9s cubic-bezier(.22,.9,.3,1)}
-.slide{position:absolute;inset:0;border-radius:26px;overflow:hidden;box-shadow:0 30px 60px rgba(11,77,162,.35);
-  backface-visibility:hidden;border:5px solid #fff}
-.slide img{width:100%;height:100%;object-fit:cover}
-.slide figcaption{position:absolute;left:0;right:0;bottom:0;padding:44px 20px 16px;color:#fff;
-  font-family:var(--font-t);font-weight:800;font-size:1.25rem;line-height:1.15;
-  background:linear-gradient(180deg,transparent,rgba(11,77,162,.85))}
-.slide figcaption small{display:block;font-family:var(--font-b);font-weight:600;font-size:.85rem;color:var(--sun);letter-spacing:.06em}
-.slide:nth-child(1){transform:rotateY(0deg) translateZ(300px)}
-.slide:nth-child(2){transform:rotateY(180deg) translateZ(300px)}
-.ring-nav{display:flex;justify-content:center;gap:10px;margin-top:14px}
-.ring-nav button{width:12px;height:12px;border-radius:50%;border:2px solid rgba(11,77,162,.4);background:rgba(11,77,162,.25);box-shadow:0 2px 8px rgba(0,0,0,.15);cursor:pointer}
-.ring-nav button.on{background:var(--sun);border-color:var(--sun)}
-.ring-arrow{position:absolute;top:50%;transform:translateY(-50%);z-index:3;width:46px;height:46px;border-radius:50%;
-  border:none;background:#fff;color:var(--royal);font-size:1.5rem;box-shadow:var(--shadow-sm)}
-.ring-arrow.prev{left:10px}.ring-arrow.next{right:10px}
 /* Globos flotantes */
 .balloon{position:absolute;border-radius:50% 50% 50% 50%/55% 55% 45% 45%;opacity:.85;animation:rise 7s ease-in-out infinite;pointer-events:none}
 .balloon::after{content:"";position:absolute;left:50%;top:100%;width:2px;height:34px;background:rgba(18,35,61,.35)}
@@ -184,8 +164,23 @@ html:not(.js) .rv{opacity:1;transform:none}
 .trust-item svg{width:22px;height:22px;fill:var(--sun);flex:none}
 .trust-item b{color:var(--sun)}
 
-/* ══════════ SERVICIOS ══════════ */
-.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:44px}
+/* ══════════ SERVICIOS · FILA HORIZONTAL CON COVERFLOW 3D ══════════ */
+.svc-hint{text-align:center;color:var(--muted);font-size:.9rem;margin-top:10px}
+.svc-wrap{position:relative;margin-top:30px}
+.svc-viewport{overflow-x:auto;scrollbar-width:none;-ms-overflow-style:none;
+  touch-action:pan-y;cursor:grab;border-radius:18px;overscroll-behavior-x:contain;padding:10px 2px}
+.svc-viewport::-webkit-scrollbar{display:none}
+.svc-viewport.dragging{cursor:grabbing}
+.svc-track{display:flex;gap:20px;width:max-content;perspective:1200px;padding:6px 2px}
+.svc-track .svc-card{width:320px;flex:0 0 auto;margin-top:0;transition:box-shadow .25s}
+.svc-track .svc-card:hover{box-shadow:var(--shadow)}
+.svc-arrow{position:absolute;top:42%;transform:translateY(-50%);z-index:4;width:48px;height:48px;border-radius:50%;
+  border:none;background:#fff;color:var(--royal);font-size:1.7rem;box-shadow:var(--shadow-sm)}
+.svc-arrow.prev{left:-8px}
+.svc-arrow.next{right:-8px}
+.svc-dots{display:flex;gap:8px;justify-content:center;margin-top:20px;flex-wrap:wrap}
+.svc-dots button{width:10px;height:10px;border-radius:50%;border:none;background:rgba(11,77,162,.25);padding:0;transition:.2s}
+.svc-dots button.on{background:var(--sun);transform:scale(1.3);box-shadow:0 0 0 2px var(--royal)}
 .svc-card{background:#fff;border:1.5px solid var(--line);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow-sm);
   display:flex;flex-direction:column;transition:transform .25s,box-shadow .25s}
 .svc-card:hover{transform:translateY(-6px);box-shadow:var(--shadow)}
@@ -326,18 +321,17 @@ html:not(.js) .rv{opacity:1;transform:none}
 .lightbox img{max-width:min(92vw,900px);max-height:86vh;border-radius:14px;box-shadow:0 30px 80px rgba(0,0,0,.5)}
 .lb-close,.lb-prev,.lb-next{position:absolute;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.4);color:#fff;
   width:48px;height:48px;border-radius:50%;font-size:1.7rem;display:flex;align-items:center;justify-content:center}
-.lb-close{top:18px;right:18px}
+.lb-close{top:18px;right:18px;background:rgba(255,255,255,.28);border-color:rgba(255,255,255,.65)}
 .lb-prev{left:14px;top:50%;transform:translateY(-50%)}
 .lb-next{right:14px;top:50%;transform:translateY(-50%)}
+/* Lightbox de una sola foto (servicios): sin flechas prev/next, solo X */
+.lightbox.lb-single .lb-prev,.lightbox.lb-single .lb-next{display:none}
 
 /* ══════════ RESPONSIVE ══════════ */
 @media(max-width:1020px){
-  .svc-grid{grid-template-columns:repeat(2,1fr)}
   .gal-grid{grid-template-columns:repeat(3,1fr)}
   .aud-grid{grid-template-columns:repeat(2,1fr)}
   .hero-grid{grid-template-columns:1fr;gap:30px}
-  .stage{height:460px}
-  .ring-arrow.prev{left:6px}.ring-arrow.next{right:6px}
 }
 @media(max-width:860px){
   .split{grid-template-columns:1fr}
@@ -350,15 +344,9 @@ html:not(.js) .rv{opacity:1;transform:none}
   .hero{padding-top:104px}
   .hero-ctas{flex-direction:column}
   .hero-ctas .btn{width:100%}
-  .stage{height:400px}
-  .slide figcaption{padding:36px 16px 24px;font-size:.95rem;line-height:1.35}
-  .slide figcaption small{font-size:.8rem}
   .trust-in{flex-direction:column;align-items:center;gap:12px}
   .trust-item{max-width:100%}
-  .slide:nth-child(1){transform:rotateY(0deg) translateZ(190px)}
-  .slide:nth-child(2){transform:rotateY(180deg) translateZ(190px)}
   .offer{flex-direction:column;align-items:flex-start;gap:6px}
-  .svc-grid{grid-template-columns:1fr}
   .gal-grid{grid-template-columns:repeat(2,1fr)}
   .aud-grid{grid-template-columns:1fr 1fr}
   .contact-logos .soc-lg{width:76px;height:76px}
@@ -380,7 +368,6 @@ html:not(.js) .rv{opacity:1;transform:none}
   .hero-shine{display:none}
   .loader{transition:opacity .3s ease;animation:none}
   .loader.done{transform:none;opacity:0;visibility:hidden}
-  .ring{transition:none}
 }
 
 /* ══════════ HERO CENTRADO ESTILO TONY ══════════ */
@@ -415,8 +402,6 @@ html:not(.js) .rv{opacity:1;transform:none}
   box-shadow:var(--shadow-sm);margin-bottom:20px;flex-wrap:wrap;justify-content:center}
 .countdown svg{width:20px;height:20px;fill:var(--sky-d);flex:none}
 .countdown small{color:var(--muted);font-weight:500}
-.stage-col{max-width:860px;margin:34px auto 0}
-.stage-hint{text-align:center;color:var(--muted);font-size:.85rem;margin-top:12px}
 
 /* ══════════ GLOBOS 3D ELITE ══════════ */
 #balloonLayer{position:absolute;inset:0;overflow:hidden;pointer-events:none;z-index:2}
@@ -431,7 +416,7 @@ html:not(.js) .rv{opacity:1;transform:none}
   touch-action:pan-y;cursor:grab;border-radius:18px;overscroll-behavior-x:contain}
 .cat-viewport::-webkit-scrollbar{display:none}
 .cat-viewport.dragging{cursor:grabbing}
-.cat-track{display:flex;gap:16px;padding:6px 2px;width:max-content;perspective:1200px}
+.cat-track{display:flex;gap:16px;padding:6px 2px;width:max-content}
 .cat-track .gal-item{width:250px;flex:0 0 auto;scroll-snap-align:start}
 .cat-arrow{position:absolute;top:42%;transform:translateY(-50%);z-index:4;width:48px;height:48px;border-radius:50%;
   border:none;background:#fff;color:var(--royal);font-size:1.7rem;box-shadow:var(--shadow-sm)}
@@ -520,6 +505,8 @@ html:not(.js) .rv{opacity:1;transform:none}
   .hero-logo{width:172px}
   .social-row .soc{width:48px;height:48px}
   .cat-arrow{display:none}
+  .svc-arrow{display:none}
+  .svc-track .svc-card{width:300px}
   .cat-track .gal-item{width:210px}
   .builder-grid{grid-template-columns:1fr}
   .fiesta-sky{height:380px}

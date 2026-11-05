@@ -10,7 +10,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css?v=7">
+<link rel="stylesheet" href="css/style.css?v=8">
 <link rel="icon" href="img/logo.jpg">
 </head>
 <body>
@@ -92,21 +92,6 @@
       <a class="btn btn-ghost" href="#precios">Ver precios</a>
     </div>
     <p class="hero-note rv hero-anim">Siempre abierto · Respuesta rápida por WhatsApp</p>
-    <div class="rv hero-anim stage-col">
-      <div class="stage" id="stage">
-        <div class="ring" id="ring">
-          <figure class="slide"><img src="img/hero-castillo.jpg" alt="Castillo inflable rojo y azul de Omi Jumping en Fajardo"><figcaption><small>CASTILLOS 13x13 · DESDE $99</small>El clásico que nunca falla</figcaption></figure>
-          <figure class="slide"><img src="img/hero-obstaculos.jpg" alt="Carrera de obstáculos inflable de Omi Jumping"><figcaption><small>OBSTÁCULOS · DESDE $299</small>La carrera que todos quieren</figcaption></figure>
-        </div>
-        <button class="ring-arrow prev" id="ringPrev" aria-label="Foto anterior">‹</button>
-        <button class="ring-arrow next" id="ringNext" aria-label="Foto siguiente">›</button>
-      </div>
-      <div class="ring-nav" id="ringNav">
-        <button class="on" aria-label="Foto 1"></button>
-        <button aria-label="Foto 2"></button>
-      </div>
-      <p class="stage-hint">Toca un globo para reventarlo · Desliza el carrusel con el dedo o el mouse</p>
-    </div>
   </div>
 </section>
 
@@ -133,8 +118,12 @@
     <p class="eyebrow center rv">Nuestros servicios</p>
     <h2 class="center rv">Todo para tu fiesta, <em>en un solo lugar</em></h2>
     <p class="center lead rv">Inflables, juegos, comida y diversión. Toca "Reservar" y tu mensaje llega listo por WhatsApp.</p>
+    <p class="center rv svc-hint">Desliza hacia el lado para ver todos los servicios · Toca una foto para verla en grande</p>
 
-    <div class="svc-grid">
+    <div class="svc-wrap rv" id="svcWrap">
+      <button class="svc-arrow prev" id="svcPrev" aria-label="Anterior">‹</button>
+      <div class="svc-viewport" id="svcViewport">
+        <div class="svc-track" id="svcTrack">
       <article class="svc-card rv">
         <div class="svc-media"><img src="img/svc-interactivos.jpg" alt="Juegos Interactivos de Omi Jumping" loading="lazy"><span class="svc-tag red">OFERTA PRINCIPAL</span></div>
         <div class="svc-body">
@@ -274,6 +263,10 @@
           <div class="svc-foot"><a class="btn btn-primary sm" data-wa data-service="Hola Omi Jumping, quiero cotizar el servicio de catering y postres">Cotizar</a></div>
         </div>
       </article>
+        </div>
+      </div>
+      <button class="svc-arrow next" id="svcNext" aria-label="Siguiente">›</button>
+      <div class="svc-dots" id="svcDots"></div>
     </div>
   </div>
 </section>
@@ -655,9 +648,9 @@
   <button class="lb-next" aria-label="Siguiente">›</button>
 </div>
 
-<script src="js/gsap.min.js?v=7"></script>
-<script src="js/ScrollTrigger.min.js?v=7"></script>
-<script src="js/gallery.js?v=7"></script>
-<script src="js/main.js?v=7"></script>
+<script src="js/gsap.min.js?v=8"></script>
+<script src="js/ScrollTrigger.min.js?v=8"></script>
+<script src="js/gallery.js?v=8"></script>
+<script src="js/main.js?v=8"></script>
 </body>
 </html>

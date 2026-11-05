@@ -88,29 +88,9 @@ function catMeasure(){
   var dots = "";
   for(var i = 0; i < CAT.pages; i++){ dots += '<button aria-label="Ir a la página ' + (i + 1) + ' del catálogo"></button>'; }
   catDots.innerHTML = dots;
-  catCoverflow();
 }
-/* Coverflow 3D (mismo lenguaje del hero): la tarjeta del centro de frente
-   y grande, las vecinas inclinadas hacia afuera y más pequeñas */
-function catCoverflow(){
-  if(!catViewport || !catTrack || !CAT.setW) return;
-  var vw = catViewport.clientWidth;
-  if(!vw) return;
-  var cx = catViewport.scrollLeft + vw / 2;
-  var maxA = isMobile ? 34 : 48;
-  var kids = catTrack.children;
-  var start = Math.max(0, Math.floor(catViewport.scrollLeft / CAT.cardW) - 1);
-  var end = Math.min(kids.length, Math.ceil((catViewport.scrollLeft + vw) / CAT.cardW) + 1);
-  for(var i = start; i < end; i++){
-    var card = kids[i];
-    var cc = card.offsetLeft + card.offsetWidth / 2;
-    var a = (cc - cx) / (vw / 2);
-    if(a > 1) a = 1; else if(a < -1) a = -1;
-    var deg = a * Math.abs(a) * maxA;
-    var sc = 1 - Math.min(0.16, Math.abs(a) * 0.16);
-    card.style.transform = "rotateY(" + deg.toFixed(1) + "deg) scale(" + sc.toFixed(3) + ")";
-  }
-}
+/* Galería normal hacia el lado (plana, sin coverflow 3D — v8): las tarjetas
+   corren en scroll horizontal simple con auto-scroll y swipe */
 function catWrap(){
   if(!catViewport) return;
   var sl = catViewport.scrollLeft;
@@ -138,7 +118,6 @@ function catResumeSoon(ms){ catPause(ms || 3000); }
 if(catViewport){
   /* Auto-scroll con setInterval (rAF se estrangula en pestañas/headless inactivos; el intervalo es fiable) */
   setInterval(function(){
-    catCoverflow();
     if(CAT.auto && !CAT.dragging && !document.hidden && CAT.setW > 0){
       catViewport.scrollLeft += (isMobile ? 0.54 : 0.72);
       catWrap();
@@ -205,6 +184,164 @@ if(catViewport){
   window.addEventListener("resize", function(){ catMeasure(); });
   window.addEventListener("load", function(){ catMeasure(); catViewport.scrollLeft = CAT.setW; });
   setTimeout(function(){ catMeasure(); catViewport.scrollLeft = CAT.setW; }, 600);
+}
+
+/* ── Servicios: fila horizontal con coverflow 3D (mismo lenguaje del hero) ──
+   Corre sola despacio hacia el lado, swipe con el dedo/mouse, pausa al tocar.
+   Tap limpio en la FOTO abre la foto completa (lightbox modo single). */
+var svcTrack = document.getElementById("svcTrack"),
+    svcViewport = document.getElementById("svcViewport"),
+    svcDots = document.getElementById("svcDots");
+var SVC = {setW: 0, cardW: 340, pages: 1, auto: true, resumeAt: 0, dragging: false, dragged: false};
+if(svcTrack && svcTrack.children.length){
+  svcTrack.innerHTML = svcTrack.innerHTML + svcTrack.innerHTML + svcTrack.innerHTML;
+  /* Solo el primer video del Photobooth reproduce; los clones quedan en pausa */
+  svcTrack.querySelectorAll("video").forEach(function(v, i){
+    if(i > 0){ v.removeAttribute("autoplay"); v.pause(); }
+  });
+}
+function svcMeasure(){
+  if(!svcViewport || !svcTrack || !svcTrack.children.length) return;
+  var first = svcTrack.children[0];
+  var second = svcTrack.children[14];
+  SVC.cardW = first.offsetWidth + 20;
+  SVC.setW = second ? second.offsetLeft : 14 * SVC.cardW;
+  SVC.pages = Math.max(1, Math.ceil(SVC.setW / svcViewport.clientWidth));
+  var dots = "";
+  for(var i = 0; i < SVC.pages; i++){ dots += '<button aria-label="Ir a la página ' + (i + 1) + ' de servicios"></button>'; }
+  svcDots.innerHTML = dots;
+  svcCoverflow();
+}
+/* Coverflow 3D: la tarjeta del centro de frente y grande, las vecinas
+   inclinadas hacia afuera y más pequeñas, con transición suave */
+function svcCoverflow(){
+  if(!svcViewport || !svcTrack || !SVC.setW) return;
+  var vw = svcViewport.clientWidth;
+  if(!vw) return;
+  var cx = svcViewport.scrollLeft + vw / 2;
+  var maxA = isMobile ? 34 : 48;
+  var kids = svcTrack.children;
+  var start = Math.max(0, Math.floor(svcViewport.scrollLeft / SVC.cardW) - 1);
+  var end = Math.min(kids.length, Math.ceil((svcViewport.scrollLeft + vw) / SVC.cardW) + 1);
+  for(var i = start; i < end; i++){
+    var card = kids[i];
+    var cc = card.offsetLeft + card.offsetWidth / 2;
+    var a = (cc - cx) / (vw / 2);
+    if(a > 1) a = 1; else if(a < -1) a = -1;
+    var deg = a * Math.abs(a) * maxA;
+    var sc = 1 - Math.min(0.16, Math.abs(a) * 0.16);
+    card.style.transform = "rotateY(" + deg.toFixed(1) + "deg) scale(" + sc.toFixed(3) + ")";
+  }
+}
+function svcWrap(){
+  if(!svcViewport) return;
+  var sl = svcViewport.scrollLeft;
+  if(sl >= SVC.setW * 2){ svcViewport.scrollLeft = sl - SVC.setW; }
+  else if(sl <= 0){ svcViewport.scrollLeft = sl + SVC.setW; }
+}
+function svcUpdateDots(){
+  if(!svcDots || !svcDots.children.length) return;
+  var pos = ((svcViewport.scrollLeft % SVC.setW) + SVC.setW) % SVC.setW;
+  var page = Math.min(SVC.pages - 1, Math.floor(pos / svcViewport.clientWidth));
+  for(var i = 0; i < svcDots.children.length; i++){
+    svcDots.children[i].classList.toggle("on", i === page);
+  }
+}
+function snapSvc(){
+  if(!svcViewport) return;
+  var target = Math.round(svcViewport.scrollLeft / SVC.cardW) * SVC.cardW;
+  svcViewport.scrollTo({left: target, behavior: "smooth"});
+}
+function svcPause(ms){
+  SVC.auto = false;
+  SVC.resumeAt = Date.now() + (ms || 3000);
+}
+function svcResumeSoon(ms){ svcPause(ms || 3000); }
+if(svcViewport){
+  /* Auto-scroll despacio con setInterval (fiable en headless y pestañas inactivas) */
+  setInterval(function(){
+    svcCoverflow();
+    if(SVC.auto && !SVC.dragging && !document.hidden && SVC.setW > 0){
+      /* Acumular el avance fraccionario: scrollLeft redondea cada asignación
+         a entero, así que sumar 0.42px/tick directo se redondea a 0 y el
+         carrusel se quedaría quieto para siempre */
+      SVC.acc = (SVC.acc || 0) + (isMobile ? 0.55 : 0.7);
+      var step = Math.floor(SVC.acc);
+      if(step > 0){
+        SVC.acc -= step;
+        svcViewport.scrollLeft += step;
+        svcWrap();
+        svcUpdateDots();
+      }
+    } else if(Date.now() > SVC.resumeAt && !SVC.dragging){
+      SVC.auto = true;
+    }
+  }, 20);
+  /* Arrastre con mouse + swipe táctil, tap en la foto abre el lightbox */
+  var sDragX = 0, sDragScroll = 0, sDragMoved = 0;
+  svcViewport.addEventListener("pointerdown", function(e){
+    SVC.dragging = true; SVC.dragged = false; SVC.auto = false;
+    sDragX = e.clientX; sDragScroll = svcViewport.scrollLeft; sDragMoved = 0;
+    svcViewport.classList.add("dragging");
+    try{ svcViewport.setPointerCapture(e.pointerId); }catch(_){}
+  });
+  svcViewport.addEventListener("pointermove", function(e){
+    if(!SVC.dragging) return;
+    var dx = e.clientX - sDragX;
+    sDragMoved = Math.max(sDragMoved, Math.abs(dx));
+    if(sDragMoved > 7){ SVC.dragged = true; }
+    svcViewport.scrollLeft = sDragScroll - dx;
+    svcWrap();
+  });
+  function svcEndDrag(){
+    if(!SVC.dragging) return;
+    SVC.dragging = false;
+    svcViewport.classList.remove("dragging");
+    if(SVC.dragged){
+      snapSvc();
+      setTimeout(function(){ SVC.dragged = false; }, 350);
+    }
+    svcResumeSoon(3000);
+  }
+  svcViewport.addEventListener("pointerup", svcEndDrag);
+  svcViewport.addEventListener("pointercancel", svcEndDrag);
+  svcViewport.addEventListener("mouseenter", function(){ SVC.auto = false; });
+  svcViewport.addEventListener("mouseleave", function(){ if(!SVC.dragging){ svcResumeSoon(2000); } });
+  svcViewport.addEventListener("click", function(e){
+    if(SVC.dragged) return;
+    /* Reservar/Cotizar son enlaces: que sigan a WhatsApp, sin abrir la foto */
+    if(e.target.closest("a, button")) return;
+    var card = e.target.closest(".svc-card");
+    if(!card) return;
+    var img = card.querySelector(".svc-media img");
+    var vid = card.querySelector(".svc-media video");
+    var title = card.querySelector("h3");
+    if(img){ openSingleLB(img.currentSrc || img.src, img.alt); }
+    else if(vid){ openSingleLB(vid.poster, title ? title.textContent : "Photobooth 360"); }
+  });
+  document.getElementById("svcPrev").addEventListener("click", function(){
+    var step = Math.max(1, Math.round(svcViewport.clientWidth * 0.8 / SVC.cardW)) * SVC.cardW;
+    svcViewport.scrollBy({left: -step, behavior: "smooth"});
+    svcResumeSoon(3000);
+  });
+  document.getElementById("svcNext").addEventListener("click", function(){
+    var step = Math.max(1, Math.round(svcViewport.clientWidth * 0.8 / SVC.cardW)) * SVC.cardW;
+    svcViewport.scrollBy({left: step, behavior: "smooth"});
+    svcResumeSoon(3000);
+  });
+  svcDots.addEventListener("click", function(e){
+    var btn = e.target.closest("button");
+    if(!btn) return;
+    var idx = Array.prototype.indexOf.call(svcDots.children, btn);
+    var pos = ((svcViewport.scrollLeft % SVC.setW) + SVC.setW) % SVC.setW;
+    var base = svcViewport.scrollLeft - pos;
+    svcViewport.scrollTo({left: base + idx * svcViewport.clientWidth, behavior: "smooth"});
+    setTimeout(snapSvc, 650);
+    svcResumeSoon(3000);
+  });
+  window.addEventListener("resize", function(){ svcMeasure(); });
+  window.addEventListener("load", function(){ svcMeasure(); svcViewport.scrollLeft = SVC.setW; });
+  setTimeout(function(){ svcMeasure(); svcViewport.scrollLeft = SVC.setW; }, 600);
 }
 
 /* ── Loader ELITE: "EL INFLABLE SE ESTÁ INFLANDO" ── */
@@ -305,94 +442,6 @@ menu.querySelectorAll("a").forEach(function(a){
   setInterval(update, 3600000);
 })();
 
-/* ── Carrusel 3D del hero: autoplay con pausa al tocar / hover ── */
-var ring = document.getElementById("ring"),
-    stage = document.getElementById("stage"),
-    dots = document.querySelectorAll("#ringNav button"),
-    idx = 0, total = 2, ringRot = 0, autoTimer = null, resumeTimer = null,
-    ringHold = false, ringVisible = false;
-function showSlide(n){
-  var next = ((n % total) + total) % total;
-  /* Camino más corto: al cerrar el loop (2→0) sigue girando hacia adelante
-     (-240→-360) en vez de rebobinar 240° hacia atrás */
-  var target = -next * 180;
-  ringRot += ((target - ringRot + 540) % 360) - 180;
-  idx = next;
-  if(gsapOn){
-    gsap.to(ring, {rotationY: ringRot, duration: 1.1, ease: "power3.inOut"});
-  } else {
-    ring.style.transform = "rotateY(" + ringRot + "deg)";
-  }
-  dots.forEach(function(d, i){ d.classList.toggle("on", i === idx); });
-}
-function ringStopAuto(){
-  if(autoTimer){ clearInterval(autoTimer); autoTimer = null; }
-}
-function ringStartAuto(){
-  ringStopAuto();
-  if(resumeTimer){ clearTimeout(resumeTimer); resumeTimer = null; }
-  if(reduced || document.hidden || !ringVisible || ringHold) return;
-  autoTimer = setInterval(function(){
-    if(!document.hidden && ringVisible && !ringHold){ showSlide(idx + 1); }
-  }, 4000);
-}
-function ringPause(ms){
-  ringHold = true;
-  ringStopAuto();
-  if(resumeTimer){ clearTimeout(resumeTimer); }
-  resumeTimer = setTimeout(function(){ ringHold = false; ringStartAuto(); }, ms || 3000);
-}
-function restartAuto(){ ringHold = false; ringStartAuto(); }
-document.getElementById("ringNext").addEventListener("click", function(){ showSlide(idx + 1); restartAuto(); });
-document.getElementById("ringPrev").addEventListener("click", function(){ showSlide(idx - 1); restartAuto(); });
-dots.forEach(function(d, i){
-  d.addEventListener("click", function(){ showSlide(i); restartAuto(); });
-});
-/* Pausa al pasar el mouse (solo desktop con hover real) */
-if(window.matchMedia("(hover: hover) and (pointer: fine)").matches){
-  stage.addEventListener("mouseenter", function(){ ringHold = true; ringStopAuto(); });
-  stage.addEventListener("mouseleave", function(){ ringPause(3000); });
-}
-/* Swipe con dedo o mouse: desliza para cambiar de oferta, pausa al tocar */
-var swipeX = 0, swipeY = 0, swipeOn = false;
-stage.addEventListener("pointerdown", function(e){
-  if(e.target.closest(".ring-arrow, .ring-nav")) return;
-  swipeOn = true; swipeX = e.clientX; swipeY = e.clientY;
-  ringHold = true; ringStopAuto();
-  if(resumeTimer){ clearTimeout(resumeTimer); resumeTimer = null; }
-});
-stage.addEventListener("pointerup", function(e){
-  if(!swipeOn) return;
-  swipeOn = false;
-  var dx = e.clientX - swipeX, dy = e.clientY - swipeY;
-  if(Math.abs(dx) > 40 && Math.abs(dx) > Math.abs(dy)){
-    showSlide(idx + (dx < 0 ? 1 : -1));
-  }
-  ringPause(3000);
-});
-stage.addEventListener("pointercancel", function(){ swipeOn = false; ringPause(3000); });
-/* Solo avanza mientras la pestaña está visible y el carrusel en pantalla */
-document.addEventListener("visibilitychange", function(){
-  if(document.hidden){ ringStopAuto(); }
-  else if(!ringHold){ ringStartAuto(); }
-});
-if("IntersectionObserver" in window){
-  new IntersectionObserver(function(entries){
-    ringVisible = entries[0].isIntersecting;
-    if(ringVisible && !ringHold){ ringStartAuto(); }
-    else if(!ringVisible){ ringStopAuto(); }
-  }, {threshold: 0.15}).observe(stage);
-} else {
-  ringVisible = true;
-}
-ringStartAuto();
-stage.addEventListener("mousemove", function(e){
-  var r = stage.getBoundingClientRect();
-  var x = (e.clientX - r.left) / r.width - 0.5;
-  var y = (e.clientY - r.top) / r.height - 0.5;
-  stage.style.transform = "rotateY(" + (x * 8) + "deg) rotateX(" + (-y * 6) + "deg)";
-});
-stage.addEventListener("mouseleave", function(){ stage.style.transform = ""; });
 
 /* ── Cotizador: abre WhatsApp con el mensaje prellenado ── */
 var form = document.getElementById("quoteForm");
@@ -532,35 +581,60 @@ if(builderGrid){
   builderUpdate();
 }
 
-/* ── Lightbox de galería ── */
+/* ── Lightbox: galería (con prev/next) y foto única de servicio (solo X) ── */
 var lb = document.getElementById("lightbox"),
     lbImg = document.getElementById("lbImg"),
-    lbIdx = 0;
+    lbIdx = 0,
+    lbMode = "gallery";
 function galCount(){ return (typeof GALLERY !== "undefined") ? GALLERY.length : 0; }
+function pauseAllCarousels(ms){
+  if(catViewport){ catPause(ms); }
+  if(svcViewport){ svcPause(ms); }
+}
+function resumeAllCarousels(ms){
+  if(catViewport){ catResumeSoon(ms); }
+  if(svcViewport){ svcResumeSoon(ms); }
+}
 function openLB(i){
   var n = galCount();
   if(!n) return;
+  lbMode = "gallery";
+  lb.classList.remove("lb-single");
   lbIdx = ((i % n) + n) % n;
   lbImg.src = GALLERY[lbIdx].src;
   lbImg.alt = GALLERY[lbIdx].alt;
   lb.classList.add("open");
   lb.setAttribute("aria-hidden", "false");
   document.body.style.overflow = "hidden";
-  if(catViewport){ catPause(60000); }
+  pauseAllCarousels(60000);
+}
+/* Una sola foto (servicios): completa, sin recortes, sin prev/next */
+function openSingleLB(src, alt){
+  if(!src) return;
+  lbMode = "single";
+  lb.classList.add("lb-single");
+  lbImg.src = src;
+  lbImg.alt = alt || "Foto de Omi Jumping";
+  lb.classList.add("open");
+  lb.setAttribute("aria-hidden", "false");
+  document.body.style.overflow = "hidden";
+  pauseAllCarousels(60000);
 }
 function closeLB(){
   lb.classList.remove("open");
+  lb.classList.remove("lb-single");
+  lbMode = "gallery";
   lb.setAttribute("aria-hidden", "true");
   document.body.style.overflow = "";
-  if(catViewport){ catResumeSoon(3000); }
+  resumeAllCarousels(3000);
 }
 lb.querySelector(".lb-close").addEventListener("click", closeLB);
-lb.querySelector(".lb-prev").addEventListener("click", function(e){ e.stopPropagation(); openLB(lbIdx - 1); });
-lb.querySelector(".lb-next").addEventListener("click", function(e){ e.stopPropagation(); openLB(lbIdx + 1); });
+lb.querySelector(".lb-prev").addEventListener("click", function(e){ e.stopPropagation(); if(lbMode === "gallery"){ openLB(lbIdx - 1); } });
+lb.querySelector(".lb-next").addEventListener("click", function(e){ e.stopPropagation(); if(lbMode === "gallery"){ openLB(lbIdx + 1); } });
 lb.addEventListener("click", function(e){ if(e.target === lb) closeLB(); });
 document.addEventListener("keydown", function(e){
   if(e.key === "Escape"){ setMenu(false); closeLB(); }
-  if(lb.classList.contains("open")){
+  if(lb.classList.contains("open") && lbMode === "gallery"){
     if(e.key === "ArrowRight"){ openLB(lbIdx + 1); }
     if(e.key === "ArrowLeft"){ openLB(lbIdx - 1); }
   }
@@ -827,7 +901,6 @@ if(gsapOn){
   gsap.set(".social-row .soc", {y: 18});
   gsap.set(".hero h1 .w", {yPercent: 115});
   gsap.set(".hero .offer", {scale: 0.7, transformOrigin: "50% 100%"});
-  gsap.set(".hero .stage", {scale: 0.82, rotationY: -24, opacity: 0});
   gsap.set([".hero .hero-sub", ".hero .hero-ctas", ".hero .hero-note", ".call-today", ".countdown"], {y: 24});
   heroTl = gsap.timeline({paused: true, defaults: {ease: "power3.out"}});
   heroTl
@@ -842,9 +915,7 @@ if(gsapOn){
     .to(".hero .offer", {opacity: 1, scale: 1, duration: 0.9, ease: "elastic.out(1, 0.55)"}, 1.15)
     .to(".countdown", {opacity: 1, y: 0, duration: 0.5}, 1.4)
     .to(".hero .hero-ctas", {opacity: 1, y: 0, duration: 0.5}, 1.5)
-    .to(".hero .hero-note", {opacity: 1, y: 0, duration: 0.5}, 1.6)
-    .to(".stage-col", {opacity: 1, duration: 0.3}, 1.1)
-    .to(".hero .stage", {opacity: 1, scale: 1, rotationY: 0, duration: 1.1, ease: "power3.out"}, 1.1);
+    .to(".hero .hero-note", {opacity: 1, y: 0, duration: 0.5}, 1.6);
 
   /* ── Física de rebote: el precio de la oferta se infla y rebota ── */
   gsap.set(".offer-price", {transformOrigin: "50% 100%"});
@@ -898,14 +969,16 @@ if(gsapOn){
   /* ── Reveals con ScrollTrigger en cada sección ── */
   var single = gsap.utils.toArray(".rv:not(.hero-anim)").filter(function(el){
     if(el.classList.contains("quote") || el.classList.contains("price-table") || el.classList.contains("cat-wrap")){ return false; }
-    return !el.closest(".svc-grid, .steps, .aud-grid, .contact-grid, .price-table, .cat-track, .builder, .game");
+    return !el.closest(".svc-wrap, .steps, .aud-grid, .contact-grid, .price-table, .cat-track, .builder, .game");
   });
   single.forEach(function(el){
     gsap.from(el, {y: 44, opacity: 0, duration: 0.9, ease: "power3.out",
       scrollTrigger: {trigger: el, start: "top 88%", once: true}});
   });
+  /* Tarjetas de servicios: solo fade (el coverflow 3D maneja el transform,
+     un fromTo con y/scale pelearía con él cada 20ms) */
   ScrollTrigger.batch(".svc-card", {start: "top 88%", once: true,
-    onEnter: function(b){ gsap.fromTo(b, {y: 50, opacity: 0, scale: 0.94}, {y: 0, opacity: 1, scale: 1, duration: 0.8, stagger: 0.09, ease: "back.out(1.5)", overwrite: true}); }});
+    onEnter: function(b){ gsap.fromTo(b, {opacity: 0}, {opacity: 1, duration: 0.8, stagger: 0.09, ease: "power2.out", overwrite: "auto"}); }});
   ScrollTrigger.batch(".step, .aud-card, .c-card", {start: "top 88%", once: true,
     onEnter: function(b){ gsap.fromTo(b, {y: 40, opacity: 0}, {y: 0, opacity: 1, duration: 0.7, stagger: 0.1, ease: "power3.out", overwrite: true}); }});
   ScrollTrigger.batch(".price-row:not(.head)", {start: "top 92%", once: true,
@@ -920,6 +993,8 @@ if(gsapOn){
     scrollTrigger: {trigger: "#arma-tu-fiesta", start: "top 80%", once: true}});
   gsap.from(".cat-wrap", {y: 44, opacity: 0, duration: 0.9, ease: "power3.out",
     scrollTrigger: {trigger: "#galeria", start: "top 82%", once: true}});
+  gsap.from(".svc-wrap", {y: 44, opacity: 0, duration: 0.9, ease: "power3.out",
+    scrollTrigger: {trigger: "#servicios", start: "top 82%", once: true}});
   gsap.from(".fiesta-sky", {scale: 0.94, opacity: 0, duration: 1, ease: "back.out(1.4)",
     scrollTrigger: {trigger: "#fiesta", start: "top 82%", once: true}});
 
