@@ -151,7 +151,8 @@ html:not(.js) .rv{opacity:1;transform:none}
 .hero-note b{color:var(--royal)}
 
 /* Carrusel 3D */
-.stage{perspective:1200px;position:relative;height:520px;overflow:hidden;border-radius:26px}
+.stage{perspective:1200px;position:relative;height:520px;overflow:hidden;border-radius:26px;touch-action:pan-y;cursor:grab}
+.stage:active{cursor:grabbing}
 .ring{position:absolute;inset:0;transform-style:preserve-3d;transition:transform .9s cubic-bezier(.22,.9,.3,1)}
 .slide{position:absolute;inset:0;border-radius:26px;overflow:hidden;box-shadow:0 30px 60px rgba(11,77,162,.35);
   backface-visibility:hidden;border:5px solid #fff}

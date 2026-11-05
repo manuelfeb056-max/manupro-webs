@@ -282,30 +282,87 @@ menu.querySelectorAll("a").forEach(function(a){
   setInterval(update, 3600000);
 })();
 
-/* ── Carrusel 3D del hero (GSAP cuando está, vanilla si no) ── */
+/* ── Carrusel 3D del hero: autoplay con pausa al tocar / hover ── */
 var ring = document.getElementById("ring"),
     stage = document.getElementById("stage"),
     dots = document.querySelectorAll("#ringNav button"),
-    idx = 0, total = 3, autoTimer = null;
+    idx = 0, total = 3, ringRot = 0, autoTimer = null, resumeTimer = null,
+    ringHold = false, ringVisible = false;
 function showSlide(n){
-  idx = ((n % total) + total) % total;
+  var next = ((n % total) + total) % total;
+  /* Camino más corto: al cerrar el loop (2→0) sigue girando hacia adelante
+     (-240→-360) en vez de rebobinar 240° hacia atrás */
+  var target = -next * 120;
+  ringRot += ((target - ringRot + 540) % 360) - 180;
+  idx = next;
   if(gsapOn){
-    gsap.to(ring, {rotationY: -idx * 120, duration: 1.1, ease: "power3.inOut"});
+    gsap.to(ring, {rotationY: ringRot, duration: 1.1, ease: "power3.inOut"});
   } else {
-    ring.style.transform = "rotateY(" + (-idx * 120) + "deg)";
+    ring.style.transform = "rotateY(" + ringRot + "deg)";
   }
   dots.forEach(function(d, i){ d.classList.toggle("on", i === idx); });
 }
-function restartAuto(){
-  if(autoTimer){ clearInterval(autoTimer); }
-  autoTimer = setInterval(function(){ showSlide(idx + 1); }, 4200);
+function ringStopAuto(){
+  if(autoTimer){ clearInterval(autoTimer); autoTimer = null; }
 }
+function ringStartAuto(){
+  ringStopAuto();
+  if(resumeTimer){ clearTimeout(resumeTimer); resumeTimer = null; }
+  if(reduced || document.hidden || !ringVisible || ringHold) return;
+  autoTimer = setInterval(function(){
+    if(!document.hidden && ringVisible && !ringHold){ showSlide(idx + 1); }
+  }, 4000);
+}
+function ringPause(ms){
+  ringHold = true;
+  ringStopAuto();
+  if(resumeTimer){ clearTimeout(resumeTimer); }
+  resumeTimer = setTimeout(function(){ ringHold = false; ringStartAuto(); }, ms || 3000);
+}
+function restartAuto(){ ringHold = false; ringStartAuto(); }
 document.getElementById("ringNext").addEventListener("click", function(){ showSlide(idx + 1); restartAuto(); });
 document.getElementById("ringPrev").addEventListener("click", function(){ showSlide(idx - 1); restartAuto(); });
 dots.forEach(function(d, i){
   d.addEventListener("click", function(){ showSlide(i); restartAuto(); });
 });
-restartAuto();
+/* Pausa al pasar el mouse (solo desktop con hover real) */
+if(window.matchMedia("(hover: hover) and (pointer: fine)").matches){
+  stage.addEventListener("mouseenter", function(){ ringHold = true; ringStopAuto(); });
+  stage.addEventListener("mouseleave", function(){ ringPause(3000); });
+}
+/* Swipe con dedo o mouse: desliza para cambiar de oferta, pausa al tocar */
+var swipeX = 0, swipeY = 0, swipeOn = false;
+stage.addEventListener("pointerdown", function(e){
+  if(e.target.closest(".ring-arrow, .ring-nav")) return;
+  swipeOn = true; swipeX = e.clientX; swipeY = e.clientY;
+  ringHold = true; ringStopAuto();
+  if(resumeTimer){ clearTimeout(resumeTimer); resumeTimer = null; }
+});
+stage.addEventListener("pointerup", function(e){
+  if(!swipeOn) return;
+  swipeOn = false;
+  var dx = e.clientX - swipeX, dy = e.clientY - swipeY;
+  if(Math.abs(dx) > 40 && Math.abs(dx) > Math.abs(dy)){
+    showSlide(idx + (dx < 0 ? 1 : -1));
+  }
+  ringPause(3000);
+});
+stage.addEventListener("pointercancel", function(){ swipeOn = false; ringPause(3000); });
+/* Solo avanza mientras la pestaña está visible y el carrusel en pantalla */
+document.addEventListener("visibilitychange", function(){
+  if(document.hidden){ ringStopAuto(); }
+  else if(!ringHold){ ringStartAuto(); }
+});
+if("IntersectionObserver" in window){
+  new IntersectionObserver(function(entries){
+    ringVisible = entries[0].isIntersecting;
+    if(ringVisible && !ringHold){ ringStartAuto(); }
+    else if(!ringVisible){ ringStopAuto(); }
+  }, {threshold: 0.15}).observe(stage);
+} else {
+  ringVisible = true;
+}
+ringStartAuto();
 stage.addEventListener("mousemove", function(e){
   var r = stage.getBoundingClientRect();
   var x = (e.clientX - r.left) / r.width - 0.5;
