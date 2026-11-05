@@ -750,6 +750,37 @@ if(builderGrid){
   builderUpdate();
 }
 
+/* ── Arma tu fiesta: cerrado por defecto (v11); abre al tocar ── */
+var builderBox = document.getElementById("builderBox"),
+    builderOpenBtn = document.getElementById("builderOpen"),
+    builderCloseRow = document.getElementById("builderCloseRow"),
+    builderCloseBtn = document.getElementById("builderClose");
+function openBuilder(scroll){
+  if(!builderBox) return;
+  builderBox.classList.remove("builder-hidden");
+  if(builderCloseRow) builderCloseRow.classList.remove("builder-hidden");
+  if(builderOpenBtn){ builderOpenBtn.classList.add("builder-hidden"); builderOpenBtn.setAttribute("aria-expanded", "true"); }
+  if(window.ScrollTrigger){ ScrollTrigger.refresh(); }
+  if(gsapOn){ gsap.fromTo(builderBox, {opacity: 0, y: 24}, {opacity: 1, y: 0, duration: 0.6, ease: "power3.out", clearProps: "opacity,transform"}); }
+  if(scroll){
+    setTimeout(function(){ document.getElementById("arma-tu-fiesta").scrollIntoView({behavior: "smooth"}); }, 60);
+  }
+}
+function closeBuilder(){
+  if(!builderBox) return;
+  builderBox.classList.add("builder-hidden");
+  if(builderCloseRow) builderCloseRow.classList.add("builder-hidden");
+  if(builderOpenBtn){ builderOpenBtn.classList.remove("builder-hidden"); builderOpenBtn.setAttribute("aria-expanded", "false"); }
+  if(window.ScrollTrigger){ ScrollTrigger.refresh(); }
+  document.getElementById("arma-tu-fiesta").scrollIntoView({behavior: "smooth"});
+}
+if(builderOpenBtn){ builderOpenBtn.addEventListener("click", function(){ openBuilder(false); }); }
+if(builderCloseBtn){ builderCloseBtn.addEventListener("click", closeBuilder); }
+/* Menú de 3 rayas y CTA del hero: ir a la sección Y abrir el constructor */
+document.querySelectorAll('a[href="#arma-tu-fiesta"]').forEach(function(a){
+  a.addEventListener("click", function(){ openBuilder(true); });
+});
+
 /* ── Lightbox: galería (con prev/next) y foto única de servicio (solo X) ── */
 var lb = document.getElementById("lightbox"),
     lbImg = document.getElementById("lbImg"),
