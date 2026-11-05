@@ -88,6 +88,28 @@ function catMeasure(){
   var dots = "";
   for(var i = 0; i < CAT.pages; i++){ dots += '<button aria-label="Ir a la página ' + (i + 1) + ' del catálogo"></button>'; }
   catDots.innerHTML = dots;
+  catCoverflow();
+}
+/* Coverflow 3D (mismo lenguaje del hero): la tarjeta del centro de frente
+   y grande, las vecinas inclinadas hacia afuera y más pequeñas */
+function catCoverflow(){
+  if(!catViewport || !catTrack || !CAT.setW) return;
+  var vw = catViewport.clientWidth;
+  if(!vw) return;
+  var cx = catViewport.scrollLeft + vw / 2;
+  var maxA = isMobile ? 34 : 48;
+  var kids = catTrack.children;
+  var start = Math.max(0, Math.floor(catViewport.scrollLeft / CAT.cardW) - 1);
+  var end = Math.min(kids.length, Math.ceil((catViewport.scrollLeft + vw) / CAT.cardW) + 1);
+  for(var i = start; i < end; i++){
+    var card = kids[i];
+    var cc = card.offsetLeft + card.offsetWidth / 2;
+    var a = (cc - cx) / (vw / 2);
+    if(a > 1) a = 1; else if(a < -1) a = -1;
+    var deg = a * Math.abs(a) * maxA;
+    var sc = 1 - Math.min(0.16, Math.abs(a) * 0.16);
+    card.style.transform = "rotateY(" + deg.toFixed(1) + "deg) scale(" + sc.toFixed(3) + ")";
+  }
 }
 function catWrap(){
   if(!catViewport) return;
@@ -116,6 +138,7 @@ function catResumeSoon(ms){ catPause(ms || 3000); }
 if(catViewport){
   /* Auto-scroll con setInterval (rAF se estrangula en pestañas/headless inactivos; el intervalo es fiable) */
   setInterval(function(){
+    catCoverflow();
     if(CAT.auto && !CAT.dragging && !document.hidden && CAT.setW > 0){
       catViewport.scrollLeft += (isMobile ? 0.54 : 0.72);
       catWrap();
@@ -646,7 +669,7 @@ function fiestaStart(){
   chars.forEach(function(ch, i){
     if(!ch) return;
     gsap.set(ch, {transformOrigin: "50% 100%"});
-    bounceTweens.push(gsap.to(ch, {y: -42 - i * 6, duration: 0.55 + i * 0.07, yoyo: true, repeat: -1, ease: "sine.inOut", delay: i * 0.14}));
+    bounceTweens.push(gsap.to(ch, {y: -28 - i * 4, duration: 0.55 + i * 0.07, yoyo: true, repeat: -1, ease: "sine.inOut", delay: i * 0.14}));
     bounceTweens.push(gsap.to(ch, {scaleY: 0.86, scaleX: 1.12, duration: 0.27, yoyo: true, repeat: -1, ease: "sine.inOut", delay: i * 0.14}));
   });
   /* Lluvia de confetti al entrar */

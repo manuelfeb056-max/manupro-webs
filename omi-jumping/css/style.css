@@ -431,7 +431,7 @@ html:not(.js) .rv{opacity:1;transform:none}
   touch-action:pan-y;cursor:grab;border-radius:18px;overscroll-behavior-x:contain}
 .cat-viewport::-webkit-scrollbar{display:none}
 .cat-viewport.dragging{cursor:grabbing}
-.cat-track{display:flex;gap:16px;padding:6px 2px;width:max-content}
+.cat-track{display:flex;gap:16px;padding:6px 2px;width:max-content;perspective:1200px}
 .cat-track .gal-item{width:250px;flex:0 0 auto;scroll-snap-align:start}
 .cat-arrow{position:absolute;top:42%;transform:translateY(-50%);z-index:4;width:48px;height:48px;border-radius:50%;
   border:none;background:#fff;color:var(--royal);font-size:1.7rem;box-shadow:var(--shadow-sm)}
@@ -484,10 +484,10 @@ html:not(.js) .rv{opacity:1;transform:none}
 .fiesta-castle:active{transform:translateX(-50%) scale(.985)}
 .char{position:absolute;width:64px;z-index:4;will-change:transform}
 .char svg{width:100%;height:auto;display:block;filter:drop-shadow(0 6px 8px rgba(0,0,0,.25))}
-.char1{left:20%;bottom:96px}
-.char2{left:45%;bottom:108px}
-.char3{left:66%;bottom:90px}
-.char4{left:82%;bottom:100px}
+.char1{left:16%;bottom:96px}
+.char2{left:36%;bottom:108px}
+.char3{left:55%;bottom:90px}
+.char4{left:71%;bottom:100px}
 .fiesta-grass{position:absolute;left:0;right:0;bottom:0;height:66px;
   background:radial-gradient(circle at 12% 0, #8fd45f 14px, transparent 15px),
              radial-gradient(circle at 38% 0, #8fd45f 12px, transparent 13px),
