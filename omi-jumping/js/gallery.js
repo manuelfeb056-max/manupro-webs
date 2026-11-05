@@ -1,4 +1,4 @@
-/* Galería completa de Omi Jumping: 48 fotos y flyers reales de su Facebook. */
+/* Galería completa de Omi Jumping: 47 fotos y flyers reales de su Facebook. */
 var GALLERY = [
   {src: "img/galeria/gal-servicios-logo.jpg", alt: "Flyer de servicios de Omi Jumping"},
   {src: "img/galeria/gal-mesas.jpg", alt: "Mesas para eventos de Omi Jumping"},
