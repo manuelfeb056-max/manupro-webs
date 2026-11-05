@@ -3,23 +3,28 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>document.documentElement.classList.add("js")</script>
+<noscript><style>.loader{display:none!important}.rv{opacity:1!important;transform:none!important}</style></noscript>
 <title>Omi Jumping | Alquiler de Inflables en Fajardo, Puerto Rico — Diversión sin Límite</title>
 <meta name="description" content="Omi Jumping — Diversión sin límite. Alquiler de inflables, chorreras, castillos, toro mecánico, photobooth 360, popcorn, algodón y catering en Fajardo, Puerto Rico. Juegos Interactivos desde $150 todo el día. Reserva por WhatsApp.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/style.css?v=3">
 <link rel="icon" href="img/logo.jpg">
 </head>
 <body>
 
 <!-- ══════════ LOADER 3D ══════════ -->
 <div class="loader" id="loader" aria-hidden="true">
-  <img class="loader-logo" src="img/logo.jpg" alt="Omi Jumping — Diversión sin límite">
-  <div class="loader-castle" aria-hidden="true"><i></i><i></i><i></i></div>
+  <div class="loader-balloons" aria-hidden="true"><span class="lb lb1"></span><span class="lb lb2"></span><span class="lb lb3"></span><span class="lb lb4"></span><span class="lb lb5"></span></div>
+  <div class="loader-inflate" id="loaderInflate">
+    <img class="loader-logo" id="loaderLogo" src="img/logo.jpg" alt="Omi Jumping — Diversión sin límite">
+  </div>
   <p class="loader-text">Inflando la diversión...</p>
   <div class="loader-bar"><b id="loadBar"></b></div>
   <p class="loader-pct"><span id="loadPct">0</span>%</p>
+  <p class="loader-skip">Toca para entrar</p>
 </div>
 
 <!-- ══════════ HEADER ══════════ -->
@@ -39,7 +44,7 @@
   <div class="overlay-inner">
     <a href="#inicio">Inicio</a>
     <a href="#servicios">Servicios</a>
-    <a href="#arma-tu-fiesta">Arma tu fiesta</a>
+    <a class="menu-hot" href="#arma-tu-fiesta">Arma tu fiesta</a>
     <a href="#fiesta">La fiesta</a>
     <a href="#reserva">Reserva en 30 segundos</a>
     <a href="#como-funciona">Cómo funciona</a>
@@ -58,24 +63,31 @@
 <section class="hero" id="inicio">
   <div id="balloonLayer" aria-hidden="true"></div>
   <div class="wrap hero-center">
-    <img class="hero-logo rv hero-anim" src="img/logo.jpg" alt="Omi Jumping — Diversión sin límite">
+    <div class="hero-logo-unit rv hero-anim">
+      <div class="hero-logo-halo" aria-hidden="true"></div>
+      <div class="hero-logo-clip">
+        <img class="hero-logo" src="img/logo.jpg" alt="Omi Jumping — Diversión sin límite">
+        <span class="hero-shine" aria-hidden="true"></span>
+      </div>
+    </div>
     <div class="social-row rv hero-anim" id="socialRow">
-      <a class="soc soc-fb" href="https://www.facebook.com/share/1e139r1e3s/" target="_blank" rel="noopener" aria-label="Facebook de Omi Jumping"><svg viewBox="0 0 24 24"><path d="M13.5 21v-7h2.4l.4-3h-2.8V9.1c0-.9.3-1.5 1.6-1.5h1.3V4.9c-.6-.1-1.4-.2-2.2-.2-2.2 0-3.7 1.3-3.7 3.8V11H8v3h2.5v7z"/></svg></a>
-      <a class="soc soc-gg" href="https://www.google.com/maps/search/?api=1&amp;query=Omi+Jumping+Fajardo+Puerto+Rico" target="_blank" rel="noopener" aria-label="Buscar Omi Jumping en Google"><svg viewBox="0 0 24 24"><path d="M21.6 12.2c0-.7-.1-1.4-.2-2H12v3.9h5.5c-.2 1.3-.9 2.4-2 3.1v2.6h3.2c1.9-1.7 3-4.3 3-7.6zM12 22c2.7 0 5-.9 6.6-2.4l-3.2-2.6c-.9.6-2 1-3.4 1-2.6 0-4.8-1.8-5.6-4.1H3.1v2.6C4.7 20.1 8 22 12 22zm-5.6-8.1c-.2-.6-.3-1.3-.3-1.9s.1-1.3.3-1.9V7.5H3.1A10 10 0 0 0 2 12c0 1.6.4 3.1 1.1 4.5l3.3-2.6zm5.6-7.6c1.5 0 2.8.5 3.8 1.5L18.7 5C17 3.7 14.7 3 12 3 8 3 4.7 4.9 3.1 8.5l3.3 2.6c.8-2.4 3-4.1 5.6-4.1z"/></svg></a>
-      <a class="soc soc-ig" href="https://www.instagram.com/omijumping" target="_blank" rel="noopener" aria-label="Instagram de Omi Jumping"><svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 3.3.1 4.8 1.7 4.9 4.9.1 1.3.1 1.6.1 4.8s0 3.6-.1 4.8c-.1 3.2-1.7 4.8-4.9 4.9-1.3.1-1.6.1-4.9.1s-3.6 0-4.9-.1c-3.3-.1-4.8-1.7-4.9-4.9C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.8C2.4 4 4 2.4 7.2 2.3 8.4 2.2 8.8 2.2 12 2.2zm0 3.6a6.2 6.2 0 1 0 0 12.4 6.2 6.2 0 0 0 0-12.4zm0 10.2a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.4-10.5a1.4 1.4 0 1 0 0 2.9 1.4 1.4 0 0 0 0-2.9z"/></svg></a>
-      <a class="soc soc-wa" href="https://wa.me/17873215921" target="_blank" rel="noopener" aria-label="WhatsApp de Omi Jumping"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.6-6.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.3-.6.8-.8 1-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4 0-.5.1-.7l.4-.5c.1-.2.1-.3 0-.5l-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.2-.7.3-.9.9-1.1 2.2-.2 3.9a11.6 11.6 0 0 0 4.5 4.2c1.7.8 2.4.9 3.2.7.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2 0-.1-.2-.1-.5-.2z"/></svg></a>
+      <a class="soc soc-fb" href="https://www.facebook.com/share/1e139r1e3s/" target="_blank" rel="noopener" aria-label="Facebook de Omi Jumping"><svg width="26" height="26" viewBox="0 0 24 24"><path d="M13.5 21v-7h2.4l.4-3h-2.8V9.1c0-.9.3-1.5 1.6-1.5h1.3V4.9c-.6-.1-1.4-.2-2.2-.2-2.2 0-3.7 1.3-3.7 3.8V11H8v3h2.5v7z"/></svg></a>
+      <a class="soc soc-gg" href="https://www.google.com/maps/search/?api=1&amp;query=Omi+Jumping+Fajardo+Puerto+Rico" target="_blank" rel="noopener" aria-label="Buscar Omi Jumping en Google"><svg width="26" height="26" viewBox="0 0 24 24"><path d="M21.6 12.2c0-.7-.1-1.4-.2-2H12v3.9h5.5c-.2 1.3-.9 2.4-2 3.1v2.6h3.2c1.9-1.7 3-4.3 3-7.6zM12 22c2.7 0 5-.9 6.6-2.4l-3.2-2.6c-.9.6-2 1-3.4 1-2.6 0-4.8-1.8-5.6-4.1H3.1v2.6C4.7 20.1 8 22 12 22zm-5.6-8.1c-.2-.6-.3-1.3-.3-1.9s.1-1.3.3-1.9V7.5H3.1A10 10 0 0 0 2 12c0 1.6.4 3.1 1.1 4.5l3.3-2.6zm5.6-7.6c1.5 0 2.8.5 3.8 1.5L18.7 5C17 3.7 14.7 3 12 3 8 3 4.7 4.9 3.1 8.5l3.3 2.6c.8-2.4 3-4.1 5.6-4.1z"/></svg></a>
+      <a class="soc soc-ig" href="https://www.instagram.com/omijumping" target="_blank" rel="noopener" aria-label="Instagram de Omi Jumping"><svg width="26" height="26" viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 3.3.1 4.8 1.7 4.9 4.9.1 1.3.1 1.6.1 4.8s0 3.6-.1 4.8c-.1 3.2-1.7 4.8-4.9 4.9-1.3.1-1.6.1-4.9.1s-3.6 0-4.9-.1c-3.3-.1-4.8-1.7-4.9-4.9C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.8C2.4 4 4 2.4 7.2 2.3 8.4 2.2 8.8 2.2 12 2.2zm0 3.6a6.2 6.2 0 1 0 0 12.4 6.2 6.2 0 0 0 0-12.4zm0 10.2a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.4-10.5a1.4 1.4 0 1 0 0 2.9 1.4 1.4 0 0 0 0-2.9z"/></svg></a>
+      <a class="soc soc-wa" href="https://wa.me/17873215921" target="_blank" rel="noopener" aria-label="WhatsApp de Omi Jumping"><svg width="26" height="26" viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.6-6.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.3-.6.8-.8 1-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4 0-.5.1-.7l.4-.5c.1-.2.1-.3 0-.5l-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.2-.7.3-.9.9-1.1 2.2-.2 3.9a11.6 11.6 0 0 0 4.5 4.2c1.7.8 2.4.9 3.2.7.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2 0-.1-.2-.1-.5-.2z"/></svg></a>
     </div>
     <a class="call-today rv hero-anim" href="tel:+17873215921"><span>LLÁMANOS HOY</span><b>787-321-5921</b></a>
-    <p class="badge rv hero-anim"><svg viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg> Fajardo, Puerto Rico</p>
-    <h1 class="rv hero-anim"><span class="line"><span class="w">DIVERSIÓN</span></span><span class="line"><span class="w h-red">SIN</span> <span class="w h-red">LÍMITE</span></span></h1>
+    <p class="badge rv hero-anim"><svg width="16" height="16" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg> Fajardo, Puerto Rico</p>
+    <h1 class="rv hero-anim"><span class="line"><span class="w">DIVERSIÓN</span></span> <span class="line"><span class="w h-red">SIN</span> <span class="w h-red">LÍMITE</span></span></h1>
     <p class="hero-sub rv hero-anim">Inflables, chorreras, juegos gigantes, toro mecánico, photobooth 360, popcorn, algodón y catering. Llevamos la fiesta a tu escuela, iglesia, gimnasio o campamento.</p>
     <div class="offer rv hero-anim">
       <p class="offer-price">$150<small>desde</small></p>
       <p><b>Juegos Interactivos — Todo el Día.</b> Eleva tus fiestas a otro nivel con los juegos gigantes que todos quieren probar.</p>
     </div>
-    <p class="countdown rv hero-anim" id="countdown"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm1 10.6l4 2.3-.7 1.3L11 13.5V7h2z"/></svg><span id="cdText">Calculando el fin de semana...</span><small>Sujeto a confirmación por WhatsApp</small></p>
+    <p class="countdown rv hero-anim" id="countdown"><svg width="20" height="20" viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm1 10.6l4 2.3-.7 1.3L11 13.5V7h2z"/></svg><span id="cdText">Calculando el fin de semana...</span><small>Sujeto a confirmación por WhatsApp</small></p>
     <div class="hero-ctas rv hero-anim">
-      <a class="btn btn-wa" data-wa data-service="Hola Omi Jumping, quiero reservar para mi evento"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.6-6.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.3-.6.8-.8 1-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4 0-.5.1-.7l.4-.5c.1-.2.1-.3 0-.5l-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.2-.7.3-.9.9-1.1 2.2-.2 3.9a11.6 11.6 0 0 0 4.5 4.2c1.7.8 2.4.9 3.2.7.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2 0-.1-.2-.1-.5-.2z"/></svg> Reserva por WhatsApp</a>
+      <a class="btn btn-wa" data-wa data-service="Hola Omi Jumping, quiero reservar para mi evento"><svg width="20" height="20" viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.6-6.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.3-.6.8-.8 1-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4 0-.5.1-.7l.4-.5c.1-.2.1-.3 0-.5l-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.2-.7.3-.9.9-1.1 2.2-.2 3.9a11.6 11.6 0 0 0 4.5 4.2c1.7.8 2.4.9 3.2.7.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2 0-.1-.2-.1-.5-.2z"/></svg> Reserva por WhatsApp</a>
+      <a class="btn btn-sun" href="#arma-tu-fiesta">Arma tu fiesta</a>
       <a class="btn btn-ghost" href="#precios">Ver precios</a>
     </div>
     <p class="hero-note rv hero-anim">Siempre abierto · Respuesta rápida por WhatsApp</p>
@@ -102,10 +114,10 @@
 <!-- ══════════ FRANJA DE CONFIANZA ══════════ -->
 <section class="trust">
   <div class="wrap trust-in">
-    <div class="trust-item rv"><svg viewBox="0 0 24 24"><path d="M12 21s-8-5.5-8-11a5 5 0 0 1 9-3 5 5 0 0 1 9 3c0 5.5-8 11-8 11z"/></svg><span><b>587</b> seguidores en Facebook</span></div>
-    <div class="trust-item rv"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm1 10.6l4 2.3-.7 1.3L11 13.5V7h2z"/></svg><span><b>Siempre abierto</b></span></div>
-    <div class="trust-item rv"><svg viewBox="0 0 24 24"><path d="M20 6H4a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2zm-2 8H6v-2h12z"/></svg><span>ATH Móvil · PayPal · Klarna · Visa · Mastercard · Efectivo</span></div>
-    <div class="trust-item rv"><svg viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg><span>Fajardo, Puerto Rico 00718</span></div>
+    <div class="trust-item rv"><svg width="22" height="22" viewBox="0 0 24 24"><path d="M12 21s-8-5.5-8-11a5 5 0 0 1 9-3 5 5 0 0 1 9 3c0 5.5-8 11-8 11z"/></svg><span><b>587</b> seguidores en Facebook</span></div>
+    <div class="trust-item rv"><svg width="22" height="22" viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm1 10.6l4 2.3-.7 1.3L11 13.5V7h2z"/></svg><span><b>Siempre abierto</b></span></div>
+    <div class="trust-item rv"><svg width="22" height="22" viewBox="0 0 24 24"><path d="M20 6H4a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2zm-2 8H6v-2h12z"/></svg><span>ATH Móvil · PayPal · Klarna · Visa · Mastercard · Efectivo</span></div>
+    <div class="trust-item rv"><svg width="22" height="22" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg><span>Fajardo, Puerto Rico 00718</span></div>
   </div>
 </section>
 
@@ -285,7 +297,7 @@
           <p id="bNote">Marca al menos un servicio para ver tu total.</p>
         </div>
         <ul class="builder-list" id="bList"></ul>
-        <button class="btn btn-wa big" id="bSend" type="button"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.6-6.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.3-.6.8-.8 1-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4 0-.5.1-.7l.4-.5c.1-.2.1-.3 0-.5l-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.2-.7.3-.9.9-1.1 2.2-.2 3.9a11.6 11.6 0 0 0 4.5 4.2c1.7.8 2.4.9 3.2.7.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2 0-.1-.2-.1-.5-.2z"/></svg> Enviar mi fiesta por WhatsApp</button>
+        <button class="btn btn-wa big" id="bSend" type="button"><svg width="20" height="20" viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.6-6.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.3-.6.8-.8 1-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4 0-.5.1-.7l.4-.5c.1-.2.1-.3 0-.5l-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.2-.7.3-.9.9-1.1 2.2-.2 3.9a11.6 11.6 0 0 0 4.5 4.2c1.7.8 2.4.9 3.2.7.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2 0-.1-.2-.1-.5-.2z"/></svg> Enviar mi fiesta por WhatsApp</button>
         <p class="builder-fine">Los servicios "a cotizar" no suman al total — te confirmamos su precio por WhatsApp. Total estimado, sujeto a confirmación por WhatsApp.</p>
       </aside>
     </div>
@@ -345,7 +357,7 @@
         <label class="full">Tu nombre
           <input type="text" id="qNombre" placeholder="Tu nombre" required>
         </label>
-        <button class="btn btn-sun big" type="submit"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.6-6.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.3-.6.8-.8 1-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4 0-.5.1-.7l.4-.5c.1-.2.1-.3 0-.5l-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.2-.7.3-.9.9-1.1 2.2-.2 3.9a11.6 11.6 0 0 0 4.5 4.2c1.7.8 2.4.9 3.2.7.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2 0-.1-.2-.1-.5-.2z"/></svg> Enviar reserva por WhatsApp</button>
+        <button class="btn btn-sun big" type="submit"><svg width="20" height="20" viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.6-6.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.3-.6.8-.8 1-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4 0-.5.1-.7l.4-.5c.1-.2.1-.3 0-.5l-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.2-.7.3-.9.9-1.1 2.2-.2 3.9a11.6 11.6 0 0 0 4.5 4.2c1.7.8 2.4.9 3.2.7.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2 0-.1-.2-.1-.5-.2z"/></svg> Enviar reserva por WhatsApp</button>
       </form>
     </div>
   </div>
@@ -384,22 +396,22 @@
     <p class="center lead rv">Si tienes una fiesta, tenemos el inflable. Y mucho más.</p>
     <div class="aud-grid">
       <div class="aud-card rv">
-        <div class="aud-ico"><svg viewBox="0 0 24 24"><path d="M12 3L1 9l11 6 9-4.9V17h2V9L12 3zM5 13.2V17c0 1.7 3.1 3 7 3s7-1.3 7-3v-3.8l-7 3.8-7-3.8z"/></svg></div>
+        <div class="aud-ico"><svg width="32" height="32" viewBox="0 0 24 24"><path d="M12 3L1 9l11 6 9-4.9V17h2V9L12 3zM5 13.2V17c0 1.7 3.1 3 7 3s7-1.3 7-3v-3.8l-7 3.8-7-3.8z"/></svg></div>
         <h3>Escuela</h3>
         <p>Días de logros, field days y actividades escolares.</p>
       </div>
       <div class="aud-card rv">
-        <div class="aud-ico"><svg viewBox="0 0 24 24"><path d="M12 2l-8 4v6c0 5 3.4 9.4 8 10 4.6-.6 8-5 8-10V6l-8-4zm-1 14.6l-3.5-3.5 1.4-1.4L11 13.8l6.1-6.1 1.4 1.4-7.5 7.5z"/></svg></div>
+        <div class="aud-ico"><svg width="32" height="32" viewBox="0 0 24 24"><path d="M12 2l-8 4v6c0 5 3.4 9.4 8 10 4.6-.6 8-5 8-10V6l-8-4zm-1 14.6l-3.5-3.5 1.4-1.4L11 13.8l6.1-6.1 1.4 1.4-7.5 7.5z"/></svg></div>
         <h3>Iglesia</h3>
         <p>Retiros, kermeses y actividades de la comunidad.</p>
       </div>
       <div class="aud-card rv">
-        <div class="aud-ico"><svg viewBox="0 0 24 24"><path d="M20.6 13.4L11 3.8A2 2 0 0 0 9.6 3.2H4a1 1 0 0 0-1 1v5.6c0 .5.2 1 .6 1.4l9.6 9.6a2 2 0 0 0 2.8 0l4.6-4.6a2 2 0 0 0 0-2.8zM6.5 8A1.5 1.5 0 1 1 8 6.5 1.5 1.5 0 0 1 6.5 8z"/></svg></div>
+        <div class="aud-ico"><svg width="32" height="32" viewBox="0 0 24 24"><path d="M20.6 13.4L11 3.8A2 2 0 0 0 9.6 3.2H4a1 1 0 0 0-1 1v5.6c0 .5.2 1 .6 1.4l9.6 9.6a2 2 0 0 0 2.8 0l4.6-4.6a2 2 0 0 0 0-2.8zM6.5 8A1.5 1.5 0 1 1 8 6.5 1.5 1.5 0 0 1 6.5 8z"/></svg></div>
         <h3>Gimnasio</h3>
         <p>Eventos deportivos y actividades para toda la familia.</p>
       </div>
       <div class="aud-card rv">
-        <div class="aud-ico"><svg viewBox="0 0 24 24"><path d="M12 2a9 9 0 0 0-9 9c0 2.4 1 4.6 2.6 6.2L4 20l2.8-1.6A9 9 0 1 0 12 2zm-1.5 5.5l.8 3.2 3.2.8-3.2.8-.8 3.2-.8-3.2-3.2-.8 3.2-.8.8-3.2zm6 8l.5 2 2 .5-2 .5-.5 2-.5-2-2-.5 2-.5.5-2z"/></svg></div>
+        <div class="aud-ico"><svg width="32" height="32" viewBox="0 0 24 24"><path d="M12 2a9 9 0 0 0-9 9c0 2.4 1 4.6 2.6 6.2L4 20l2.8-1.6A9 9 0 1 0 12 2zm-1.5 5.5l.8 3.2 3.2.8-3.2.8-.8 3.2-.8-3.2-3.2-.8 3.2-.8.8-3.2zm6 8l.5 2 2 .5-2 .5-.5 2-.5-2-2-.5 2-.5.5-2z"/></svg></div>
         <h3>Campamento</h3>
         <p>Verano, campamentos y días de campo inolvidables.</p>
       </div>
@@ -433,10 +445,10 @@
       <h2>Omi Jumping: <em>diversión sin límite</em></h2>
       <p class="lead">Somos de Fajardo, Puerto Rico. Alquilamos inflables, máquinas de popcorn, algodón y espuma, y damos servicio de catering, postres y mealprep envasados de popcorn, algodón, piragua y nachos con queso.</p>
       <ul class="check-list">
-        <li><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm-1.2 14.2l-4-4 1.6-1.6 2.4 2.4 5.6-5.6 1.6 1.6-7.2 7.2z"/></svg> Inflables, chorreras, castillos y juegos gigantes</li>
-        <li><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm-1.2 14.2l-4-4 1.6-1.6 2.4 2.4 5.6-5.6 1.6 1.6-7.2 7.2z"/></svg> Toro mecánico, photobooth 360, playground y cañón de espuma</li>
-        <li><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm-1.2 14.2l-4-4 1.6-1.6 2.4 2.4 5.6-5.6 1.6 1.6-7.2 7.2z"/></svg> Popcorn, algodón, piraguas, slush y mantecado de 3 sabores</li>
-        <li><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm-1.2 14.2l-4-4 1.6-1.6 2.4 2.4 5.6-5.6 1.6 1.6-7.2 7.2z"/></svg> Mesas, sillas, carpa, catering y postres</li>
+        <li><svg width="22" height="22" viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm-1.2 14.2l-4-4 1.6-1.6 2.4 2.4 5.6-5.6 1.6 1.6-7.2 7.2z"/></svg> Inflables, chorreras, castillos y juegos gigantes</li>
+        <li><svg width="22" height="22" viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm-1.2 14.2l-4-4 1.6-1.6 2.4 2.4 5.6-5.6 1.6 1.6-7.2 7.2z"/></svg> Toro mecánico, photobooth 360, playground y cañón de espuma</li>
+        <li><svg width="22" height="22" viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm-1.2 14.2l-4-4 1.6-1.6 2.4 2.4 5.6-5.6 1.6 1.6-7.2 7.2z"/></svg> Popcorn, algodón, piraguas, slush y mantecado de 3 sabores</li>
+        <li><svg width="22" height="22" viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm-1.2 14.2l-4-4 1.6-1.6 2.4 2.4 5.6-5.6 1.6 1.6-7.2 7.2z"/></svg> Mesas, sillas, carpa, catering y postres</li>
       </ul>
       <div class="about-stats">
         <div><b>587</b><span>seguidores en Facebook</span></div>
@@ -492,29 +504,16 @@
   <div class="wrap">
     <p class="eyebrow center rv">Ubícanos</p>
     <h2 class="center rv">Estamos en <em>Fajardo</em>, Puerto Rico</h2>
-    <div class="contact-grid">
-      <div class="c-card rv">
-        <svg viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>
-        <h3>Ubicación</h3>
-        <p>Fajardo, Puerto Rico 00718</p>
-        <a href="https://www.google.com/maps/search/?api=1&query=Fajardo,+Puerto+Rico+00718" target="_blank" rel="noopener">Cómo llegar</a>
-      </div>
-      <div class="c-card rv">
-        <svg viewBox="0 0 24 24"><path d="M6.6 10.8a15.6 15.6 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.24 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1 11.4 11.4 0 0 0 .57 3.6 1 1 0 0 1-.25 1z"/></svg>
-        <h3>Teléfono / WhatsApp</h3>
-        <p><a href="tel:+17873215921">(787) 321-5921</a></p>
-        <a data-wa data-service="Hola Omi Jumping, quiero información">Escríbenos</a>
-      </div>
-      <div class="c-card rv">
-        <svg viewBox="0 0 24 24"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
-        <h3>Email</h3>
-        <p><a href="mailto:omarrojas585990@gmail.com">omarrojas585990@gmail.com</a></p>
-      </div>
-      <div class="c-card rv">
-        <svg viewBox="0 0 24 24"><path d="M13.5 21v-7h2.4l.4-3h-2.8V9.1c0-.9.3-1.5 1.6-1.5h1.3V4.9c-.6-.1-1.4-.2-2.2-.2-2.2 0-3.7 1.3-3.7 3.8V11H8v3h2.5v7z"/></svg>
-        <h3>Síguenos</h3>
-        <p><a href="https://www.facebook.com/share/1e139r1e3s/" target="_blank" rel="noopener">Facebook: Omi Jumping</a><br><a href="https://www.instagram.com/omijumping" target="_blank" rel="noopener">Instagram: @omijumping</a></p>
-      </div>
+    <div class="contact-logos rv">
+      <a class="soc soc-lg soc-fb" href="https://www.facebook.com/share/1e139r1e3s/" target="_blank" rel="noopener" aria-label="Facebook de Omi Jumping"><svg width="36" height="36" viewBox="0 0 24 24"><path d="M13.5 21v-7h2.4l.4-3h-2.8V9.1c0-.9.3-1.5 1.6-1.5h1.3V4.9c-.6-.1-1.4-.2-2.2-.2-2.2 0-3.7 1.3-3.7 3.8V11H8v3h2.5v7z"/></svg><span>Facebook</span></a>
+      <a class="soc soc-lg soc-ig" href="https://www.instagram.com/omijumping" target="_blank" rel="noopener" aria-label="Instagram de Omi Jumping"><svg width="36" height="36" viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 3.3.1 4.8 1.7 4.9 4.9.1 1.3.1 1.6.1 4.8s0 3.6-.1 4.8c-.1 3.2-1.7 4.8-4.9 4.9-1.3.1-1.6.1-4.9.1s-3.6 0-4.9-.1c-3.3-.1-4.8-1.7-4.9-4.9C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.8C2.4 4 4 2.4 7.2 2.3 8.4 2.2 8.8 2.2 12 2.2zm0 3.6a6.2 6.2 0 1 0 0 12.4 6.2 6.2 0 0 0 0-12.4zm0 10.2a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.4-10.5a1.4 1.4 0 1 0 0 2.9 1.4 1.4 0 0 0 0-2.9z"/></svg><span>Instagram</span></a>
+      <a class="soc soc-lg soc-wa" href="https://wa.me/17873215921" target="_blank" rel="noopener" aria-label="WhatsApp de Omi Jumping"><svg width="36" height="36" viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.6-6.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.3-.6.8-.8 1-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4 0-.5.1-.7l.4-.5c.1-.2.1-.3 0-.5l-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.2-.7.3-.9.9-1.1 2.2-.2 3.9a11.6 11.6 0 0 0 4.5 4.2c1.7.8 2.4.9 3.2.7.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2 0-.1-.2-.1-.5-.2z"/></svg><span>WhatsApp</span></a>
+      <a class="soc soc-lg soc-gg" href="https://www.google.com/maps/search/?api=1&query=Omi+Jumping+Fajardo+Puerto+Rico" target="_blank" rel="noopener" aria-label="Buscar Omi Jumping en Google Maps"><svg width="36" height="36" viewBox="0 0 24 24"><path d="M21.6 12.2c0-.7-.1-1.4-.2-2H12v3.9h5.5c-.2 1.3-.9 2.4-2 3.1v2.6h3.2c1.9-1.7 3-4.3 3-7.6zM12 22c2.7 0 5-.9 6.6-2.4l-3.2-2.6c-.9.6-2 1-3.4 1-2.6 0-4.8-1.8-5.6-4.1H3.1v2.6C4.7 20.1 8 22 12 22zm-5.6-8.1c-.2-.6-.3-1.3-.3-1.9s.1-1.3.3-1.9V7.5H3.1A10 10 0 0 0 2 12c0 1.6.4 3.1 1.1 4.5l3.3-2.6zm5.6-7.6c1.5 0 2.8.5 3.8 1.5L18.7 5C17 3.7 14.7 3 12 3 8 3 4.7 4.9 3.1 8.5l3.3 2.6c.8-2.4 3-4.1 5.6-4.1z"/></svg><span>Google Maps</span></a>
+    </div>
+    <div class="contact-info rv">
+      <a class="call-today contact-phone" href="tel:+17873215921"><span>LLÁMANOS HOY</span><b>787-321-5921</b></a>
+      <p class="contact-email"><a href="mailto:omarrojas585990@gmail.com">omarrojas585990@gmail.com</a></p>
+      <p class="contact-loc">Fajardo, Puerto Rico 00718 · <a href="https://www.google.com/maps/search/?api=1&query=Fajardo,+Puerto+Rico+00718" target="_blank" rel="noopener">Cómo llegar</a></p>
     </div>
     <div class="map-card rv">
       <iframe title="Mapa — Omi Jumping, Fajardo, Puerto Rico" src="https://www.google.com/maps?q=Fajardo,+Puerto+Rico+00718&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
@@ -534,7 +533,7 @@
     <p class="center lead rv">Estos son los precios publicados en nuestra página de Facebook. Sin sorpresas.</p>
     <div class="price-table rv">
       <div class="price-row head"><span>Servicio</span><span>Precio</span></div>
-      <div class="price-row hl"><span class="p-name">Juegos Interactivos<small>Todo el día · oferta principal</small></span><span class="p-val">desde $150.00<small>todo el día</small></span></div>
+      <div class="price-row hl price-hero"><span class="p-name">Juegos Interactivos<small>Todo el día · oferta principal</small></span><span class="p-val">desde $150.00<small>todo el día</small></span><span class="p-badge">OFERTA PRINCIPAL</span></div>
       <div class="price-row"><span class="p-name">Castillos 13x13</span><span class="p-val">$99</span></div>
       <div class="price-row"><span class="p-name">Casas de Brinco 13x13<small>Incluye popcorn y algodón</small></span><span class="p-val">$150</span></div>
       <div class="price-row"><span class="p-name">Chorrera Mini<small>Especial fin de semana · incluye popcorn</small></span><span class="p-val">$175</span></div>
@@ -567,7 +566,7 @@
     <div class="fiesta-cloud fc2" data-depth="20" aria-hidden="true"></div>
     <div class="fiesta-bunch" id="fiestaBunch" data-depth="26" aria-hidden="true"></div>
     <div class="fiesta-castle" id="fiestaCastle" data-depth="10" role="button" tabindex="0" aria-label="Castillo inflable: tócalo para una explosión de confetti">
-      <svg viewBox="0 0 640 430" aria-hidden="true">
+      <svg width="640" height="430" viewBox="0 0 640 430" aria-hidden="true">
         <rect x="70" y="330" width="500" height="70" rx="18" fill="#ED1C24"/>
         <rect x="70" y="330" width="500" height="22" rx="11" fill="#ff5a3c"/>
         <rect x="90" y="150" width="96" height="182" rx="10" fill="#0B4DA2"/>
@@ -591,20 +590,16 @@
         <path d="M150 332 q30 -18 60 0 q30 -18 60 0 q30 -18 60 0 q30 -18 60 0 q30 -18 60 0 q30 -18 60 0" stroke="#fff" stroke-width="5" fill="none" opacity="0.7"/>
       </svg>
       <div class="char char1" id="char1" aria-hidden="true">
-        <svg viewBox="0 0 80 110"><circle cx="40" cy="26" r="17" fill="#FFD9B3"/><path d="M23 24 q17 -16 34 0 q-4 -14 -17 -14 q-13 0 -17 14" fill="#12233d"/><circle cx="34" cy="26" r="2.4" fill="#12233d"/><circle cx="46" cy="26" r="2.4" fill="#12233d"/><path d="M34 34 q6 5 12 0" stroke="#12233d" stroke-width="2" fill="none" stroke-linecap="round"/><rect x="26" y="44" width="28" height="34" rx="12" fill="#ED1C24"/><rect x="18" y="48" width="9" height="26" rx="4.5" fill="#ED1C24" transform="rotate(18 22 60)"/><rect x="53" y="48" width="9" height="26" rx="4.5" fill="#ED1C24" transform="rotate(-18 58 60)"/><rect x="28" y="76" width="10" height="26" rx="5" fill="#0B4DA2"/><rect x="42" y="76" width="10" height="26" rx="5" fill="#0B4DA2"/></svg>
+        <svg width="80" height="110" viewBox="0 0 80 110"><circle cx="40" cy="26" r="17" fill="#FFD9B3"/><path d="M23 24 q17 -16 34 0 q-4 -14 -17 -14 q-13 0 -17 14" fill="#12233d"/><circle cx="34" cy="26" r="2.4" fill="#12233d"/><circle cx="46" cy="26" r="2.4" fill="#12233d"/><path d="M34 34 q6 5 12 0" stroke="#12233d" stroke-width="2" fill="none" stroke-linecap="round"/><rect x="26" y="44" width="28" height="34" rx="12" fill="#ED1C24"/><rect x="18" y="48" width="9" height="26" rx="4.5" fill="#ED1C24" transform="rotate(18 22 60)"/><rect x="53" y="48" width="9" height="26" rx="4.5" fill="#ED1C24" transform="rotate(-18 58 60)"/><rect x="28" y="76" width="10" height="26" rx="5" fill="#0B4DA2"/><rect x="42" y="76" width="10" height="26" rx="5" fill="#0B4DA2"/></svg>
       </div>
       <div class="char char2" id="char2" aria-hidden="true">
-        <svg viewBox="0 0 80 110"><circle cx="40" cy="26" r="17" fill="#C98B5E"/><path d="M23 22 q17 -14 34 0 q-2 -12 -17 -12 q-15 0 -17 12" fill="#3a2417"/><circle cx="34" cy="26" r="2.4" fill="#12233d"/><circle cx="46" cy="26" r="2.4" fill="#12233d"/><path d="M34 34 q6 5 12 0" stroke="#12233d" stroke-width="2" fill="none" stroke-linecap="round"/><rect x="26" y="44" width="28" height="34" rx="12" fill="#FFD500"/><rect x="18" y="48" width="9" height="26" rx="4.5" fill="#FFD500" transform="rotate(18 22 60)"/><rect x="53" y="48" width="9" height="26" rx="4.5" fill="#FFD500" transform="rotate(-18 58 60)"/><rect x="28" y="76" width="10" height="26" rx="5" fill="#ED1C24"/><rect x="42" y="76" width="10" height="26" rx="5" fill="#ED1C24"/></svg>
+        <svg width="80" height="110" viewBox="0 0 80 110"><circle cx="40" cy="26" r="17" fill="#C98B5E"/><path d="M23 22 q17 -14 34 0 q-2 -12 -17 -12 q-15 0 -17 12" fill="#3a2417"/><circle cx="34" cy="26" r="2.4" fill="#12233d"/><circle cx="46" cy="26" r="2.4" fill="#12233d"/><path d="M34 34 q6 5 12 0" stroke="#12233d" stroke-width="2" fill="none" stroke-linecap="round"/><rect x="26" y="44" width="28" height="34" rx="12" fill="#FFD500"/><rect x="18" y="48" width="9" height="26" rx="4.5" fill="#FFD500" transform="rotate(18 22 60)"/><rect x="53" y="48" width="9" height="26" rx="4.5" fill="#FFD500" transform="rotate(-18 58 60)"/><rect x="28" y="76" width="10" height="26" rx="5" fill="#ED1C24"/><rect x="42" y="76" width="10" height="26" rx="5" fill="#ED1C24"/></svg>
       </div>
       <div class="char char3" id="char3" aria-hidden="true">
-        <svg viewBox="0 0 80 110"><circle cx="40" cy="26" r="17" fill="#FFD9B3"/><path d="M24 26 q-2 -16 16 -16 q18 0 16 16 q-6 -8 -16 -8 q-10 0 -16 8" fill="#ED1C24"/><circle cx="34" cy="26" r="2.4" fill="#12233d"/><circle cx="46" cy="26" r="2.4" fill="#12233d"/><path d="M34 34 q6 5 12 0" stroke="#12233d" stroke-width="2" fill="none" stroke-linecap="round"/><rect x="26" y="44" width="28" height="34" rx="12" fill="#00AEEF"/><rect x="18" y="48" width="9" height="26" rx="4.5" fill="#00AEEF" transform="rotate(18 22 60)"/><rect x="53" y="48" width="9" height="26" rx="4.5" fill="#00AEEF" transform="rotate(-18 58 60)"/><rect x="28" y="76" width="10" height="26" rx="5" fill="#0B4DA2"/><rect x="42" y="76" width="10" height="26" rx="5" fill="#0B4DA2"/></svg>
+        <svg width="80" height="110" viewBox="0 0 80 110"><circle cx="40" cy="26" r="17" fill="#FFD9B3"/><path d="M24 26 q-2 -16 16 -16 q18 0 16 16 q-6 -8 -16 -8 q-10 0 -16 8" fill="#ED1C24"/><circle cx="34" cy="26" r="2.4" fill="#12233d"/><circle cx="46" cy="26" r="2.4" fill="#12233d"/><path d="M34 34 q6 5 12 0" stroke="#12233d" stroke-width="2" fill="none" stroke-linecap="round"/><rect x="26" y="44" width="28" height="34" rx="12" fill="#00AEEF"/><rect x="18" y="48" width="9" height="26" rx="4.5" fill="#00AEEF" transform="rotate(18 22 60)"/><rect x="53" y="48" width="9" height="26" rx="4.5" fill="#00AEEF" transform="rotate(-18 58 60)"/><rect x="28" y="76" width="10" height="26" rx="5" fill="#0B4DA2"/><rect x="42" y="76" width="10" height="26" rx="5" fill="#0B4DA2"/></svg>
       </div>
-    </div>
-    <div class="fiesta-slide" id="fiestaSlide" data-depth="16" aria-hidden="true">
-      <svg viewBox="0 0 220 300"><path d="M30 20 Q200 90 170 280" stroke="#FFD500" stroke-width="64" fill="none" stroke-linecap="round"/><path d="M30 20 Q200 90 170 280" stroke="#00AEEF" stroke-width="44" fill="none" stroke-linecap="round"/><path d="M18 8 Q196 82 158 272" stroke="#ED1C24" stroke-width="6" fill="none" stroke-linecap="round"/><path d="M42 32 Q204 98 182 288" stroke="#ED1C24" stroke-width="6" fill="none" stroke-linecap="round"/></svg>
-      <div class="char slider" id="charSlider">
-        <svg viewBox="0 0 80 110"><circle cx="40" cy="26" r="17" fill="#C98B5E"/><path d="M23 22 q17 -14 34 0 q-2 -12 -17 -12 q-15 0 -17 12" fill="#12233d"/><circle cx="34" cy="26" r="2.4" fill="#12233d"/><circle cx="46" cy="26" r="2.4" fill="#12233d"/><path d="M33 34 q7 6 14 0" stroke="#12233d" stroke-width="2" fill="none" stroke-linecap="round"/><rect x="26" y="44" width="28" height="34" rx="12" fill="#FF5CA8"/><rect x="28" y="76" width="10" height="26" rx="5" fill="#0B4DA2"/><rect x="42" y="76" width="10" height="26" rx="5" fill="#0B4DA2"/></svg>
-      </div>
+      <div class="char char4" id="char4" aria-hidden="true">
+        <svg width="80" height="110" viewBox="0 0 80 110"><circle cx="40" cy="26" r="17" fill="#C98B5E"/><path d="M23 22 q17 -14 34 0 q-2 -12 -17 -12 q-15 0 -17 12" fill="#12233d"/><circle cx="34" cy="26" r="2.4" fill="#12233d"/><circle cx="46" cy="26" r="2.4" fill="#12233d"/><path d="M33 34 q7 6 14 0" stroke="#12233d" stroke-width="2" fill="none" stroke-linecap="round"/><rect x="26" y="44" width="28" height="34" rx="12" fill="#FF5CA8"/><rect x="28" y="76" width="10" height="26" rx="5" fill="#0B4DA2"/><rect x="42" y="76" width="10" height="26" rx="5" fill="#0B4DA2"/></svg>
     </div>
     <div class="fiesta-grass" aria-hidden="true"></div>
     <div class="fiesta-confetti" id="fiestaConfetti" aria-hidden="true"></div>
@@ -649,7 +644,7 @@
 
 <!-- ══════════ WHATSAPP FLOTANTE ══════════ -->
 <a class="wa-float" data-wa data-service="Hola Omi Jumping, quiero información" aria-label="WhatsApp">
-  <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.6-6.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.3-.6.8-.8 1-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4 0-.5.1-.7l.4-.5c.1-.2.1-.3 0-.5l-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.2-.7.3-.9.9-1.1 2.2-.2 3.9a11.6 11.6 0 0 0 4.5 4.2c1.7.8 2.4.9 3.2.7.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2 0-.1-.2-.1-.5-.2z"/></svg>
+  <svg width="32" height="32" viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.6-6.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.3-.6.8-.8 1-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4 0-.5.1-.7l.4-.5c.1-.2.1-.3 0-.5l-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.2-.7.3-.9.9-1.1 2.2-.2 3.9a11.6 11.6 0 0 0 4.5 4.2c1.7.8 2.4.9 3.2.7.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2 0-.1-.2-.1-.5-.2z"/></svg>
 </a>
 
 <!-- ══════════ LIGHTBOX ══════════ -->
@@ -660,9 +655,9 @@
   <button class="lb-next" aria-label="Siguiente">›</button>
 </div>
 
-<script src="js/gsap.min.js"></script>
-<script src="js/ScrollTrigger.min.js"></script>
-<script src="js/gallery.js"></script>
-<script src="js/main.js"></script>
+<script src="js/gsap.min.js?v=3"></script>
+<script src="js/ScrollTrigger.min.js?v=3"></script>
+<script src="js/gallery.js?v=3"></script>
+<script src="js/main.js?v=3"></script>
 </body>
 </html>

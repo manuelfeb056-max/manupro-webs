@@ -21,7 +21,7 @@ var _uid = 0;
 function balloonSVG(color){
   _uid++;
   var g = "bg" + _uid;
-  return '<svg viewBox="0 0 100 152" aria-hidden="true">' +
+  return '<svg width="100" height="152" viewBox="0 0 100 152" aria-hidden="true">' +
     '<defs><radialGradient id="' + g + '" cx="35%" cy="30%" r="75%">' +
     '<stop offset="0%" stop-color="#ffffff" stop-opacity="0.9"/>' +
     '<stop offset="42%" stop-color="' + color.c + '" stop-opacity="0.96"/>' +
@@ -184,35 +184,56 @@ if(catViewport){
   setTimeout(function(){ catMeasure(); catViewport.scrollLeft = CAT.setW; }, 600);
 }
 
-/* ── Loader 3D: barra de carga con % ── */
+/* ── Loader ELITE: "EL INFLABLE SE ESTÁ INFLANDO" ── */
 var loader = document.getElementById("loader"),
     loadBar = document.getElementById("loadBar"),
     loadPct = document.getElementById("loadPct"),
-    pct = 0, loaderDone = false;
+    loaderLogo = document.getElementById("loaderLogo"),
+    pct = 0, loaderDone = false,
+    REDUCED = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+if(loaderLogo && (!gsapOn || REDUCED)){ loaderLogo.style.transform = "none"; }
 function finishLoader(){
   if(loaderDone) return;
   loaderDone = true;
   loadBar.style.width = "100%";
   loadPct.textContent = "100";
-  setTimeout(function(){
+  if(!REDUCED && gsapOn){
+    burstConfetti(loader, loader.offsetWidth / 2, loader.offsetHeight / 2, 46, 320);
+    gsap.fromTo(loaderLogo, {scaleY: 0.82, scaleX: 1.1}, {scaleY: 1, scaleX: 1, duration: 0.7, ease: "elastic.out(1, 0.4)"});
+    setTimeout(function(){
+      loader.classList.add("done");
+      if(heroTl){ heroTl.play(); }
+      startBalloonRain();
+      setTimeout(function(){ loader.style.display = "none"; }, 700);
+    }, 380);
+  } else {
     loader.classList.add("done");
     if(heroTl){ heroTl.play(); }
     startBalloonRain();
-  }, 350);
+    setTimeout(function(){ loader.style.display = "none"; }, 700);
+  }
+}
+/* El logo entra DESINFLADO (aplastado) y se INFLA con física de rebote */
+if(!REDUCED && gsapOn && loaderLogo){
+  gsap.set(loaderLogo, {scaleY: 0.1, scaleX: 1.35, transformOrigin: "50% 100%"});
+  gsap.timeline()
+    .to(loaderLogo, {scaleY: 1.12, scaleX: 0.92, duration: 0.85, ease: "elastic.out(1, 0.45)"})
+    .to(loaderLogo, {scaleY: 1, scaleX: 1, duration: 0.5, ease: "power2.out"}, "-=0.15");
 }
 var tick = setInterval(function(){
-  pct = Math.min(92, pct + Math.floor(Math.random() * 14) + 6);
+  pct = Math.min(100, pct + Math.floor(Math.random() * 13) + 8);
   loadBar.style.width = pct + "%";
   loadPct.textContent = pct;
-  if(pct >= 92){ clearInterval(tick); }
-}, 180);
+  if(pct >= 100){ clearInterval(tick); setTimeout(finishLoader, 220); }
+}, 110);
 window.addEventListener("load", function(){
   clearInterval(tick);
   loadBar.style.width = "100%";
   loadPct.textContent = "100";
-  setTimeout(finishLoader, 500);
+  setTimeout(finishLoader, 300);
 });
-setTimeout(finishLoader, 4000);
+loader.addEventListener("click", function(){ finishLoader(); });
+setTimeout(finishLoader, 2200);
 
 /* ── Links de WhatsApp con mensaje prellenado ── */
 document.querySelectorAll("[data-wa]").forEach(function(el){
@@ -564,23 +585,13 @@ if(balloonLayer){
 var bounceTweens = [];
 function fiestaStart(){
   if(!gsapOn || bounceTweens.length) return;
-  var chars = [document.getElementById("char1"), document.getElementById("char2"), document.getElementById("char3")];
+  var chars = [document.getElementById("char1"), document.getElementById("char2"), document.getElementById("char3"), document.getElementById("char4")];
   chars.forEach(function(ch, i){
     if(!ch) return;
     gsap.set(ch, {transformOrigin: "50% 100%"});
     bounceTweens.push(gsap.to(ch, {y: -42 - i * 6, duration: 0.55 + i * 0.07, yoyo: true, repeat: -1, ease: "sine.inOut", delay: i * 0.14}));
     bounceTweens.push(gsap.to(ch, {scaleY: 0.86, scaleX: 1.12, duration: 0.27, yoyo: true, repeat: -1, ease: "sine.inOut", delay: i * 0.14}));
   });
-  /* Personaje deslizándose por la chorrera, en loop */
-  var slider = document.getElementById("charSlider");
-  if(slider){
-    gsap.set(slider, {transformOrigin: "50% 50%"});
-    gsap.timeline({repeat: -1, repeatDelay: 0.6})
-      .to(slider, {x: 88, y: 198, rotation: 62, duration: 1.15, ease: "power2.in"})
-      .to(slider, {opacity: 0, duration: 0.2}, "+=0.1")
-      .set(slider, {x: 0, y: 0, rotation: 0})
-      .to(slider, {opacity: 1, duration: 0.3});
-  }
   /* Lluvia de confetti al entrar */
   var sky = document.getElementById("fiestaSky");
   var rain = 0;
@@ -732,7 +743,7 @@ var heroTl = null;
 if(gsapOn){
   /* ── Timeline de entrada del hero (en pausa hasta que se va el loader) ── */
   gsap.set(".hero-anim", {opacity: 0});
-  gsap.set(".hero-logo", {scale: 0.55, rotation: -6});
+  gsap.set(".hero-logo-unit", {scale: REDUCED ? 1 : 0.85});
   gsap.set(".social-row .soc", {y: 18});
   gsap.set(".hero h1 .w", {yPercent: 115});
   gsap.set(".hero .offer", {scale: 0.7, transformOrigin: "50% 100%"});
@@ -740,7 +751,7 @@ if(gsapOn){
   gsap.set([".hero .hero-sub", ".hero .hero-ctas", ".hero .hero-note", ".call-today", ".countdown"], {y: 24});
   heroTl = gsap.timeline({paused: true, defaults: {ease: "power3.out"}});
   heroTl
-    .to(".hero-logo", {opacity: 1, scale: 1, rotation: 0, duration: 0.9, ease: "elastic.out(1, 0.6)"}, 0)
+    .to(".hero-logo-unit", {opacity: 1, scale: 1, duration: 1.15, ease: REDUCED ? "power2.out" : "elastic.out(1, 0.55)"}, 0)
     .to(".social-row", {opacity: 1, duration: 0.1}, 0.35)
     .to(".social-row .soc", {opacity: 1, y: 0, duration: 0.5, stagger: 0.08, ease: "back.out(2)"}, 0.35)
     .to(".call-today", {opacity: 1, y: 0, duration: 0.6, ease: "back.out(1.6)"}, 0.55)
@@ -778,6 +789,32 @@ if(gsapOn){
   /* Pulso suave del CTA principal del hero */
   gsap.to(".hero-ctas .btn-wa", {scale: 1.045, duration: 0.85, yoyo: true, repeat: -1, ease: "sine.inOut", delay: 2});
 
+  /* ── Logo hero: inflado suave + respiración + brillo + halo + tilt ── */
+  if(!REDUCED){
+    var logoUnit = document.querySelector(".hero-logo-unit");
+    if(logoUnit){
+      var floatAmp = isMobile ? -4 : -8;
+      gsap.to(logoUnit, {y: floatAmp, duration: 2.25, yoyo: true, repeat: -1, ease: "sine.inOut", delay: 2});
+      gsap.to(".hero-logo-halo", {scale: 1.07, opacity: 0.9, duration: 2.25, yoyo: true, repeat: -1, ease: "sine.inOut", delay: 2});
+      gsap.fromTo(".hero-shine", {xPercent: -320}, {xPercent: 460, duration: 1.15, ease: "sine.inOut", repeat: -1, repeatDelay: 4.9, delay: 3});
+      if(window.matchMedia("(pointer: fine)").matches){
+        var heroEl = document.querySelector(".hero");
+        heroEl.addEventListener("mousemove", function(e){
+          var r = heroEl.getBoundingClientRect();
+          var nx = (e.clientX - r.left) / r.width * 2 - 1;
+          var ny = (e.clientY - r.top) / r.height * 2 - 1;
+          gsap.to(logoUnit, {rotationY: nx * 6, rotationX: -ny * 6, duration: 0.9, ease: "power2.out", overwrite: "auto"});
+        });
+        heroEl.addEventListener("mouseleave", function(){
+          gsap.to(logoUnit, {rotationY: 0, rotationX: 0, duration: 1.1, ease: "power2.out", overwrite: "auto"});
+        });
+      } else {
+        gsap.to(logoUnit, {rotationX: 3.5, ease: "none",
+          scrollTrigger: {trigger: ".hero", start: "top top", end: "bottom top", scrub: 1.2}});
+      }
+    }
+  }
+
   /* ── Reveals con ScrollTrigger en cada sección ── */
   var single = gsap.utils.toArray(".rv:not(.hero-anim)").filter(function(el){
     if(el.classList.contains("quote") || el.classList.contains("price-table") || el.classList.contains("cat-wrap")){ return false; }
@@ -808,4 +845,25 @@ if(gsapOn){
 
   window.addEventListener("load", function(){ ScrollTrigger.refresh(); });
 }
+
+/* ── Red de seguridad: ninguna sección puede quedarse invisible jamás ── */
+function forceReveal(){
+  var vh = window.innerHeight || 800;
+  var sel = ".rv, .svc-card, .step, .aud-card, .c-card, .b-item, .price-row, .quote, .price-table, .builder-side, .cat-wrap, .fiesta-sky";
+  document.querySelectorAll(sel).forEach(function(el){
+    if(el.classList.contains("hero-anim")) return;
+    var r = el.getBoundingClientRect();
+    if(r.top < vh * 0.92 && r.bottom > -100){
+      if(getComputedStyle(el).opacity === "0"){ el.classList.add("force-on"); }
+    }
+  });
+  if(window.ScrollTrigger){ ScrollTrigger.refresh(); }
+}
+window.addEventListener("load", function(){ setTimeout(forceReveal, 2000); });
+setTimeout(forceReveal, 5000);
+var frT = null;
+window.addEventListener("scroll", function(){
+  if(frT) return;
+  frT = setTimeout(function(){ frT = null; forceReveal(); }, 250);
+}, {passive: true});
 })();
