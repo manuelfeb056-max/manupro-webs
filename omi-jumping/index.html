@@ -39,6 +39,8 @@
   <div class="overlay-inner">
     <a href="#inicio">Inicio</a>
     <a href="#servicios">Servicios</a>
+    <a href="#arma-tu-fiesta">Arma tu fiesta</a>
+    <a href="#fiesta">La fiesta</a>
     <a href="#reserva">Reserva en 30 segundos</a>
     <a href="#como-funciona">Cómo funciona</a>
     <a href="#para-quien">Para quién</a>
@@ -52,32 +54,36 @@
   </div>
 </nav>
 
-<!-- ══════════ HERO 3D ══════════ -->
+<!-- ══════════ HERO 3D · LOGO GRANDE + REDES + TELÉFONO ══════════ -->
 <section class="hero" id="inicio">
-  <div class="balloon b1" aria-hidden="true"></div>
-  <div class="balloon b2" aria-hidden="true"></div>
-  <div class="balloon b3" aria-hidden="true"></div>
-  <div class="wrap hero-grid">
-    <div>
-      <p class="badge rv"><svg viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg> Fajardo, Puerto Rico</p>
-      <h1 class="rv">DIVERSIÓN<br><span class="h-red">SIN LÍMITE</span></h1>
-      <p class="hero-sub rv">Inflables, chorreras, juegos gigantes, toro mecánico, photobooth 360, popcorn, algodón y catering. Llevamos la fiesta a tu escuela, iglesia, gimnasio o campamento.</p>
-      <div class="offer rv">
-        <p class="offer-price">$150<small>desde</small></p>
-        <p><b>Juegos Interactivos — Todo el Día.</b> Eleva tus fiestas a otro nivel con los juegos gigantes que todos quieren probar.</p>
-      </div>
-      <div class="hero-ctas rv">
-        <a class="btn btn-wa" data-wa data-service="Hola Omi Jumping, quiero reservar para mi evento"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.6-6.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.3-.6.8-.8 1-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4 0-.5.1-.7l.4-.5c.1-.2.1-.3 0-.5l-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.2-.7.3-.9.9-1.1 2.2-.2 3.9a11.6 11.6 0 0 0 4.5 4.2c1.7.8 2.4.9 3.2.7.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2 0-.1-.2-.1-.5-.2z"/></svg> Reserva por WhatsApp</a>
-        <a class="btn btn-ghost" href="#precios">Ver precios</a>
-      </div>
-      <p class="hero-note rv">Llámanos directo: <b><a href="tel:+17873215921">(787) 321-5921</a></b> · Siempre abierto</p>
+  <div id="balloonLayer" aria-hidden="true"></div>
+  <div class="wrap hero-center">
+    <img class="hero-logo rv hero-anim" src="img/logo.jpg" alt="Omi Jumping — Diversión sin límite">
+    <div class="social-row rv hero-anim" id="socialRow">
+      <a class="soc soc-fb" href="https://www.facebook.com/share/1e139r1e3s/" target="_blank" rel="noopener" aria-label="Facebook de Omi Jumping"><svg viewBox="0 0 24 24"><path d="M13.5 21v-7h2.4l.4-3h-2.8V9.1c0-.9.3-1.5 1.6-1.5h1.3V4.9c-.6-.1-1.4-.2-2.2-.2-2.2 0-3.7 1.3-3.7 3.8V11H8v3h2.5v7z"/></svg></a>
+      <a class="soc soc-gg" href="https://www.google.com/maps/search/?api=1&amp;query=Omi+Jumping+Fajardo+Puerto+Rico" target="_blank" rel="noopener" aria-label="Buscar Omi Jumping en Google"><svg viewBox="0 0 24 24"><path d="M21.6 12.2c0-.7-.1-1.4-.2-2H12v3.9h5.5c-.2 1.3-.9 2.4-2 3.1v2.6h3.2c1.9-1.7 3-4.3 3-7.6zM12 22c2.7 0 5-.9 6.6-2.4l-3.2-2.6c-.9.6-2 1-3.4 1-2.6 0-4.8-1.8-5.6-4.1H3.1v2.6C4.7 20.1 8 22 12 22zm-5.6-8.1c-.2-.6-.3-1.3-.3-1.9s.1-1.3.3-1.9V7.5H3.1A10 10 0 0 0 2 12c0 1.6.4 3.1 1.1 4.5l3.3-2.6zm5.6-7.6c1.5 0 2.8.5 3.8 1.5L18.7 5C17 3.7 14.7 3 12 3 8 3 4.7 4.9 3.1 8.5l3.3 2.6c.8-2.4 3-4.1 5.6-4.1z"/></svg></a>
+      <a class="soc soc-ig" href="https://www.instagram.com/omijumping" target="_blank" rel="noopener" aria-label="Instagram de Omi Jumping"><svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 3.3.1 4.8 1.7 4.9 4.9.1 1.3.1 1.6.1 4.8s0 3.6-.1 4.8c-.1 3.2-1.7 4.8-4.9 4.9-1.3.1-1.6.1-4.9.1s-3.6 0-4.9-.1c-3.3-.1-4.8-1.7-4.9-4.9C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.8C2.4 4 4 2.4 7.2 2.3 8.4 2.2 8.8 2.2 12 2.2zm0 3.6a6.2 6.2 0 1 0 0 12.4 6.2 6.2 0 0 0 0-12.4zm0 10.2a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.4-10.5a1.4 1.4 0 1 0 0 2.9 1.4 1.4 0 0 0 0-2.9z"/></svg></a>
+      <a class="soc soc-wa" href="https://wa.me/17873215921" target="_blank" rel="noopener" aria-label="WhatsApp de Omi Jumping"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.6-6.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.3-.6.8-.8 1-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4 0-.5.1-.7l.4-.5c.1-.2.1-.3 0-.5l-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.2-.7.3-.9.9-1.1 2.2-.2 3.9a11.6 11.6 0 0 0 4.5 4.2c1.7.8 2.4.9 3.2.7.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2 0-.1-.2-.1-.5-.2z"/></svg></a>
     </div>
-
-    <div class="rv">
+    <a class="call-today rv hero-anim" href="tel:+17873215921"><span>LLÁMANOS HOY</span><b>787-321-5921</b></a>
+    <p class="badge rv hero-anim"><svg viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg> Fajardo, Puerto Rico</p>
+    <h1 class="rv hero-anim"><span class="line"><span class="w">DIVERSIÓN</span></span><span class="line"><span class="w h-red">SIN</span> <span class="w h-red">LÍMITE</span></span></h1>
+    <p class="hero-sub rv hero-anim">Inflables, chorreras, juegos gigantes, toro mecánico, photobooth 360, popcorn, algodón y catering. Llevamos la fiesta a tu escuela, iglesia, gimnasio o campamento.</p>
+    <div class="offer rv hero-anim">
+      <p class="offer-price">$150<small>desde</small></p>
+      <p><b>Juegos Interactivos — Todo el Día.</b> Eleva tus fiestas a otro nivel con los juegos gigantes que todos quieren probar.</p>
+    </div>
+    <p class="countdown rv hero-anim" id="countdown"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm1 10.6l4 2.3-.7 1.3L11 13.5V7h2z"/></svg><span id="cdText">Calculando el fin de semana...</span><small>Sujeto a confirmación por WhatsApp</small></p>
+    <div class="hero-ctas rv hero-anim">
+      <a class="btn btn-wa" data-wa data-service="Hola Omi Jumping, quiero reservar para mi evento"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.6-6.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.3-.6.8-.8 1-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4 0-.5.1-.7l.4-.5c.1-.2.1-.3 0-.5l-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.2-.7.3-.9.9-1.1 2.2-.2 3.9a11.6 11.6 0 0 0 4.5 4.2c1.7.8 2.4.9 3.2.7.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2 0-.1-.2-.1-.5-.2z"/></svg> Reserva por WhatsApp</a>
+      <a class="btn btn-ghost" href="#precios">Ver precios</a>
+    </div>
+    <p class="hero-note rv hero-anim">Siempre abierto · Respuesta rápida por WhatsApp</p>
+    <div class="rv hero-anim stage-col">
       <div class="stage" id="stage">
         <div class="ring" id="ring">
           <figure class="slide"><img src="img/hero-castillo.jpg" alt="Castillo inflable rojo y azul de Omi Jumping en Fajardo"><figcaption><small>CASTILLOS 13x13 · DESDE $99</small>El clásico que nunca falla</figcaption></figure>
-          <figure class="slide"><img src="img/hero-tiki.jpg" alt="Chorrera inflable estilo tiki de Omi Jumping"><figcaption><small>CHORRERA MINI · $175</small>Especial de fin de semana</figcaption></figure>
+          <figure class="slide"><img src="img/flyer-chorrera-mini.jpg" alt="Flyer Chorrera Mini $175 de Omi Jumping"><figcaption><small>CHORRERA MINI · $175</small>Especial de fin de semana</figcaption></figure>
           <figure class="slide"><img src="img/hero-obstaculos.jpg" alt="Carrera de obstáculos inflable de Omi Jumping"><figcaption><small>OBSTÁCULOS · DESDE $299</small>La competencia que todos quieren ganar</figcaption></figure>
         </div>
         <button class="ring-arrow prev" id="ringPrev" aria-label="Foto anterior">‹</button>
@@ -88,6 +94,7 @@
           <button aria-label="Foto 3"></button>
         </div>
       </div>
+      <p class="stage-hint">Toca un globo para reventarlo · Desliza el carrusel con el dedo o el mouse</p>
     </div>
   </div>
 </section>
@@ -101,6 +108,13 @@
     <div class="trust-item rv"><svg viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg><span>Fajardo, Puerto Rico 00718</span></div>
   </div>
 </section>
+
+<!-- ══════════ MARQUESINA FIESTA ══════════ -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track" id="marqueeTrack">
+    <span>Juegos Interactivos • Castillos • Chorreras • Toro Mecánico • Photobooth 360 • Cañón de Espuma • Popcorn y Algodón • Mantecado • Catering • Playground • Juegos Gigantes • Diversión sin Límite •&nbsp;</span><span>Juegos Interactivos • Castillos • Chorreras • Toro Mecánico • Photobooth 360 • Cañón de Espuma • Popcorn y Algodón • Mantecado • Catering • Playground • Juegos Gigantes • Diversión sin Límite •&nbsp;</span>
+  </div>
+</div>
 
 <!-- ══════════ SERVICIOS ══════════ -->
 <section class="section" id="servicios">
@@ -141,7 +155,7 @@
       </article>
 
       <article class="svc-card rv">
-        <div class="svc-media"><img src="img/hero-tiki.jpg" alt="Chorrera inflable de Omi Jumping" loading="lazy"><span class="svc-tag blue">ESPECIAL DE LA SEMANA</span></div>
+        <div class="svc-media"><img src="img/flyer-chorrera-mini.jpg" alt="Flyer Chorrera Mini $175 de Omi Jumping" loading="lazy"><span class="svc-tag blue">ESPECIAL DE LA SEMANA</span></div>
         <div class="svc-body">
           <h3>Chorreras</h3>
           <p>Chorrera Mini, Chorrera y Chorreras Medianas para refrescar la fiesta. La Mini incluye popcorn.</p>
@@ -249,6 +263,31 @@
           <div class="svc-foot"><a class="btn btn-primary sm" data-wa data-service="Hola Omi Jumping, quiero cotizar el servicio de catering y postres">Cotizar</a></div>
         </div>
       </article>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ ARMA TU FIESTA · CONSTRUCTOR ══════════ -->
+<section class="section" id="arma-tu-fiesta">
+  <div class="wrap">
+    <p class="eyebrow center rv">Arma tu fiesta</p>
+    <h2 class="center rv">Arma tu fiesta <em>y ve el total en vivo</em></h2>
+    <p class="center lead rv">Marca lo que quieres, elige la fecha y el total se suma solo. Precios reales de nuestros flyers de Facebook — sin depósitos inventados.</p>
+    <div class="builder rv">
+      <div class="builder-grid" id="builderGrid"></div>
+      <aside class="builder-side">
+        <label class="builder-date">Fecha del evento
+          <input type="date" id="bFecha">
+        </label>
+        <div class="builder-total">
+          <span>Total estimado</span>
+          <b id="bTotal">$0</b>
+          <p id="bNote">Marca al menos un servicio para ver tu total.</p>
+        </div>
+        <ul class="builder-list" id="bList"></ul>
+        <button class="btn btn-wa big" id="bSend" type="button"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.6-6.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.3-.6.8-.8 1-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4 0-.5.1-.7l.4-.5c.1-.2.1-.3 0-.5l-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.2-.7.3-.9.9-1.1 2.2-.2 3.9a11.6 11.6 0 0 0 4.5 4.2c1.7.8 2.4.9 3.2.7.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2 0-.1-.2-.1-.5-.2z"/></svg> Enviar mi fiesta por WhatsApp</button>
+        <p class="builder-fine">Los servicios "a cotizar" no suman al total — te confirmamos su precio por WhatsApp. Total estimado, sujeto a confirmación por WhatsApp.</p>
+      </aside>
     </div>
   </div>
 </section>
@@ -374,20 +413,14 @@
   <div class="wrap">
     <p class="eyebrow center rv">Galería real</p>
     <h2 class="center rv">Nuestros inflables <em>y ofertas</em></h2>
-    <p class="center lead rv">Fotos y flyers reales de nuestra página de Facebook. Toca cualquier imagen para verla en grande.</p>
-    <div class="gal-grid">
-      <button class="gal-item rv" data-full="img/svc-interactivos.jpg"><img src="img/svc-interactivos.jpg" alt="Flyer Juegos Interactivos desde $150 todo el día" loading="lazy"></button>
-      <button class="gal-item rv" data-full="img/flyer-chorrera-mini.jpg"><img src="img/flyer-chorrera-mini.jpg" alt="Flyer Chorrera Mini $175 especial fin de semana" loading="lazy"></button>
-      <button class="gal-item rv" data-full="img/flyer-chorrera-199.jpg"><img src="img/flyer-chorrera-199.jpg" alt="Flyer Chorrera $199 especial de la semana" loading="lazy"></button>
-      <button class="gal-item rv" data-full="img/flyer-castillos-99.jpg"><img src="img/flyer-castillos-99.jpg" alt="Flyer Castillos 13x13 $99" loading="lazy"></button>
-      <button class="gal-item rv" data-full="img/svc-casas-brinco.jpg"><img src="img/svc-casas-brinco.jpg" alt="Flyer Casas de Brinco 13x13 $150 incluye popcorn y algodón" loading="lazy"></button>
-      <button class="gal-item rv" data-full="img/flyer-medianas-225.jpg"><img src="img/flyer-medianas-225.jpg" alt="Flyer Chorreras Medianas $225" loading="lazy"></button>
-      <button class="gal-item rv" data-full="img/flyer-medianas-250.jpg"><img src="img/flyer-medianas-250.jpg" alt="Flyer Chorreras Medianas $250" loading="lazy"></button>
-      <button class="gal-item rv" data-full="img/flyer-medianas-275.jpg"><img src="img/flyer-medianas-275.jpg" alt="Flyer Chorreras Medianas $275" loading="lazy"></button>
-      <button class="gal-item rv" data-full="img/flyer-obstaculos-299.jpg"><img src="img/flyer-obstaculos-299.jpg" alt="Flyer Carreras de Obstáculos desde $299" loading="lazy"></button>
-      <button class="gal-item rv" data-full="img/flyer-obstaculos-60.jpg"><img src="img/flyer-obstaculos-60.jpg" alt="Flyer Carrera de Obstáculos 60 pies $350" loading="lazy"></button>
-      <button class="gal-item rv" data-full="img/flyer-fin-semana.jpg"><img src="img/flyer-fin-semana.jpg" alt="Flyer Inflables disponibles para este fin de semana" loading="lazy"></button>
-      <button class="gal-item rv" data-full="img/flyer-mega-chorreras.jpg"><img src="img/flyer-mega-chorreras.jpg" alt="Flyer Mega Chorreras de Omi Jumping" loading="lazy"></button>
+        <p class="center rv" style="margin-top:10px"><b id="galCount">48 fotos y flyers reales</b> de nuestra página de Facebook. Toca cualquier imagen para verla en grande.</p>
+    <div class="cat-wrap rv" id="catWrap">
+      <button class="cat-arrow prev" id="catPrev" aria-label="Anterior">‹</button>
+      <div class="cat-viewport" id="catViewport">
+        <div class="cat-track" id="catTrack"></div>
+      </div>
+      <button class="cat-arrow next" id="catNext" aria-label="Siguiente">›</button>
+      <div class="cat-dots" id="catDots"></div>
     </div>
   </div>
 </section>
@@ -526,6 +559,79 @@
   </div>
 </section>
 
+<!-- ══════════ LA FIESTA · ESCENA 100% EN CÓDIGO ══════════ -->
+<section class="fiesta" id="fiesta">
+  <div class="fiesta-sky" id="fiestaSky">
+    <div class="fiesta-sun" data-depth="6" aria-hidden="true"></div>
+    <div class="fiesta-cloud fc1" data-depth="14" aria-hidden="true"></div>
+    <div class="fiesta-cloud fc2" data-depth="20" aria-hidden="true"></div>
+    <div class="fiesta-bunch" id="fiestaBunch" data-depth="26" aria-hidden="true"></div>
+    <div class="fiesta-castle" id="fiestaCastle" data-depth="10" role="button" tabindex="0" aria-label="Castillo inflable: tócalo para una explosión de confetti">
+      <svg viewBox="0 0 640 430" aria-hidden="true">
+        <rect x="70" y="330" width="500" height="70" rx="18" fill="#ED1C24"/>
+        <rect x="70" y="330" width="500" height="22" rx="11" fill="#ff5a3c"/>
+        <rect x="90" y="150" width="96" height="182" rx="10" fill="#0B4DA2"/>
+        <rect x="90" y="128" width="96" height="26" rx="6" fill="#083a7a"/>
+        <rect x="454" y="150" width="96" height="182" rx="10" fill="#0B4DA2"/>
+        <rect x="454" y="128" width="96" height="26" rx="6" fill="#083a7a"/>
+        <path d="M78 150 L138 84 L198 150 Z" fill="#ED1C24"/>
+        <path d="M442 150 L502 84 L562 150 Z" fill="#ED1C24"/>
+        <rect x="138" y="66" width="4" height="26" fill="#fff"/>
+        <path d="M142 66 L172 74 L142 84 Z" fill="#FFD500"/>
+        <rect x="502" y="66" width="4" height="26" fill="#fff"/>
+        <path d="M506 66 L536 74 L506 84 Z" fill="#FFD500"/>
+        <circle cx="138" cy="205" r="16" fill="#7dd8ff"/>
+        <circle cx="502" cy="205" r="16" fill="#7dd8ff"/>
+        <rect x="186" y="210" width="268" height="122" rx="10" fill="#00AEEF"/>
+        <rect x="186" y="210" width="268" height="18" rx="9" fill="#FFD500"/>
+        <path d="M272 332 v-52 a48 48 0 0 1 96 0 v52 Z" fill="#083a7a"/>
+        <path d="M284 332 v-44 a36 36 0 0 1 72 0 v44 Z" fill="#fff" opacity="0.9"/>
+        <circle cx="228" cy="262" r="13" fill="#FFD500"/>
+        <circle cx="412" cy="262" r="13" fill="#FFD500"/>
+        <path d="M150 332 q30 -18 60 0 q30 -18 60 0 q30 -18 60 0 q30 -18 60 0 q30 -18 60 0 q30 -18 60 0" stroke="#fff" stroke-width="5" fill="none" opacity="0.7"/>
+      </svg>
+      <div class="char char1" id="char1" aria-hidden="true">
+        <svg viewBox="0 0 80 110"><circle cx="40" cy="26" r="17" fill="#FFD9B3"/><path d="M23 24 q17 -16 34 0 q-4 -14 -17 -14 q-13 0 -17 14" fill="#12233d"/><circle cx="34" cy="26" r="2.4" fill="#12233d"/><circle cx="46" cy="26" r="2.4" fill="#12233d"/><path d="M34 34 q6 5 12 0" stroke="#12233d" stroke-width="2" fill="none" stroke-linecap="round"/><rect x="26" y="44" width="28" height="34" rx="12" fill="#ED1C24"/><rect x="18" y="48" width="9" height="26" rx="4.5" fill="#ED1C24" transform="rotate(18 22 60)"/><rect x="53" y="48" width="9" height="26" rx="4.5" fill="#ED1C24" transform="rotate(-18 58 60)"/><rect x="28" y="76" width="10" height="26" rx="5" fill="#0B4DA2"/><rect x="42" y="76" width="10" height="26" rx="5" fill="#0B4DA2"/></svg>
+      </div>
+      <div class="char char2" id="char2" aria-hidden="true">
+        <svg viewBox="0 0 80 110"><circle cx="40" cy="26" r="17" fill="#C98B5E"/><path d="M23 22 q17 -14 34 0 q-2 -12 -17 -12 q-15 0 -17 12" fill="#3a2417"/><circle cx="34" cy="26" r="2.4" fill="#12233d"/><circle cx="46" cy="26" r="2.4" fill="#12233d"/><path d="M34 34 q6 5 12 0" stroke="#12233d" stroke-width="2" fill="none" stroke-linecap="round"/><rect x="26" y="44" width="28" height="34" rx="12" fill="#FFD500"/><rect x="18" y="48" width="9" height="26" rx="4.5" fill="#FFD500" transform="rotate(18 22 60)"/><rect x="53" y="48" width="9" height="26" rx="4.5" fill="#FFD500" transform="rotate(-18 58 60)"/><rect x="28" y="76" width="10" height="26" rx="5" fill="#ED1C24"/><rect x="42" y="76" width="10" height="26" rx="5" fill="#ED1C24"/></svg>
+      </div>
+      <div class="char char3" id="char3" aria-hidden="true">
+        <svg viewBox="0 0 80 110"><circle cx="40" cy="26" r="17" fill="#FFD9B3"/><path d="M24 26 q-2 -16 16 -16 q18 0 16 16 q-6 -8 -16 -8 q-10 0 -16 8" fill="#ED1C24"/><circle cx="34" cy="26" r="2.4" fill="#12233d"/><circle cx="46" cy="26" r="2.4" fill="#12233d"/><path d="M34 34 q6 5 12 0" stroke="#12233d" stroke-width="2" fill="none" stroke-linecap="round"/><rect x="26" y="44" width="28" height="34" rx="12" fill="#00AEEF"/><rect x="18" y="48" width="9" height="26" rx="4.5" fill="#00AEEF" transform="rotate(18 22 60)"/><rect x="53" y="48" width="9" height="26" rx="4.5" fill="#00AEEF" transform="rotate(-18 58 60)"/><rect x="28" y="76" width="10" height="26" rx="5" fill="#0B4DA2"/><rect x="42" y="76" width="10" height="26" rx="5" fill="#0B4DA2"/></svg>
+      </div>
+    </div>
+    <div class="fiesta-slide" id="fiestaSlide" data-depth="16" aria-hidden="true">
+      <svg viewBox="0 0 220 300"><path d="M30 20 Q200 90 170 280" stroke="#FFD500" stroke-width="64" fill="none" stroke-linecap="round"/><path d="M30 20 Q200 90 170 280" stroke="#00AEEF" stroke-width="44" fill="none" stroke-linecap="round"/><path d="M18 8 Q196 82 158 272" stroke="#ED1C24" stroke-width="6" fill="none" stroke-linecap="round"/><path d="M42 32 Q204 98 182 288" stroke="#ED1C24" stroke-width="6" fill="none" stroke-linecap="round"/></svg>
+      <div class="char slider" id="charSlider">
+        <svg viewBox="0 0 80 110"><circle cx="40" cy="26" r="17" fill="#C98B5E"/><path d="M23 22 q17 -14 34 0 q-2 -12 -17 -12 q-15 0 -17 12" fill="#12233d"/><circle cx="34" cy="26" r="2.4" fill="#12233d"/><circle cx="46" cy="26" r="2.4" fill="#12233d"/><path d="M33 34 q7 6 14 0" stroke="#12233d" stroke-width="2" fill="none" stroke-linecap="round"/><rect x="26" y="44" width="28" height="34" rx="12" fill="#FF5CA8"/><rect x="28" y="76" width="10" height="26" rx="5" fill="#0B4DA2"/><rect x="42" y="76" width="10" height="26" rx="5" fill="#0B4DA2"/></svg>
+      </div>
+    </div>
+    <div class="fiesta-grass" aria-hidden="true"></div>
+    <div class="fiesta-confetti" id="fiestaConfetti" aria-hidden="true"></div>
+  </div>
+  <div class="wrap fiesta-cta">
+    <p class="eyebrow center rv">La fiesta</p>
+    <h2 class="center rv">Tu fiesta es la <em>próxima</em></h2>
+    <p class="center lead rv">Castillo, chorrera, popcorn, algodón y todos tus amigos brincando. Toca el castillo y mira lo que pasa.</p>
+    <div class="center rv"><a class="btn btn-wa big" data-wa data-service="Hola Omi Jumping, quiero reservar mi fiesta">Reserva por WhatsApp</a></div>
+    <p class="fiesta-hint center rv">Toca el castillo para una explosión de confetti · Los personajes son dibujos animados hechos en código</p>
+  </div>
+  <div class="wrap game" id="juego">
+    <div class="game-head rv">
+      <h3>REVIENTA LOS GLOBOS</h3>
+      <p>Revienta todos los globos que puedas en 20 segundos. Cada globo vale 10 puntos.</p>
+    </div>
+    <div class="game-bar rv">
+      <span class="game-stat">Puntos: <b id="gScore">0</b></span>
+      <span class="game-stat">Tiempo: <b id="gTime">20</b>s</span>
+      <button class="btn btn-sun" id="gStart" type="button">Jugar</button>
+    </div>
+    <div class="game-arena rv" id="gameArena"><p class="game-idle">Toca "Jugar" y revienta globos</p></div>
+    <p class="game-end center" id="gEnd" hidden></p>
+    <div class="center" id="gEndCta" hidden><a class="btn btn-wa big" id="gEndWa" href="https://wa.me/17873215921" target="_blank" rel="noopener">Reserva tu fiesta por WhatsApp</a></div>
+  </div>
+</section>
+
 <!-- ══════════ FOOTER ══════════ -->
 <footer class="footer">
   <div class="wrap">
@@ -554,6 +660,9 @@
   <button class="lb-next" aria-label="Siguiente">›</button>
 </div>
 
+<script src="js/gsap.min.js"></script>
+<script src="js/ScrollTrigger.min.js"></script>
+<script src="js/gallery.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>
