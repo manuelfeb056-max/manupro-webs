@@ -286,13 +286,13 @@ menu.querySelectorAll("a").forEach(function(a){
 var ring = document.getElementById("ring"),
     stage = document.getElementById("stage"),
     dots = document.querySelectorAll("#ringNav button"),
-    idx = 0, total = 3, ringRot = 0, autoTimer = null, resumeTimer = null,
+    idx = 0, total = 2, ringRot = 0, autoTimer = null, resumeTimer = null,
     ringHold = false, ringVisible = false;
 function showSlide(n){
   var next = ((n % total) + total) % total;
   /* Camino más corto: al cerrar el loop (2→0) sigue girando hacia adelante
      (-240→-360) en vez de rebobinar 240° hacia atrás */
-  var target = -next * 120;
+  var target = -next * 180;
   ringRot += ((target - ringRot + 540) % 360) - 180;
   idx = next;
   if(gsapOn){

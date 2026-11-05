@@ -162,10 +162,9 @@ html:not(.js) .rv{opacity:1;transform:none}
   background:linear-gradient(180deg,transparent,rgba(11,77,162,.85))}
 .slide figcaption small{display:block;font-family:var(--font-b);font-weight:600;font-size:.85rem;color:var(--sun);letter-spacing:.06em}
 .slide:nth-child(1){transform:rotateY(0deg) translateZ(300px)}
-.slide:nth-child(2){transform:rotateY(120deg) translateZ(300px)}
-.slide:nth-child(3){transform:rotateY(240deg) translateZ(300px)}
-.ring-nav{position:absolute;left:50%;bottom:12px;transform:translateX(-50%);display:flex;gap:10px;z-index:3}
-.ring-nav button{width:12px;height:12px;border-radius:50%;border:2px solid #fff;background:rgba(11,77,162,.35);box-shadow:0 2px 8px rgba(0,0,0,.2)}
+.slide:nth-child(2){transform:rotateY(180deg) translateZ(300px)}
+.ring-nav{display:flex;justify-content:center;gap:10px;margin-top:14px}
+.ring-nav button{width:12px;height:12px;border-radius:50%;border:2px solid rgba(11,77,162,.4);background:rgba(11,77,162,.25);box-shadow:0 2px 8px rgba(0,0,0,.15);cursor:pointer}
 .ring-nav button.on{background:var(--sun);border-color:var(--sun)}
 .ring-arrow{position:absolute;top:50%;transform:translateY(-50%);z-index:3;width:46px;height:46px;border-radius:50%;
   border:none;background:#fff;color:var(--royal);font-size:1.5rem;box-shadow:var(--shadow-sm)}
@@ -352,13 +351,12 @@ html:not(.js) .rv{opacity:1;transform:none}
   .hero-ctas{flex-direction:column}
   .hero-ctas .btn{width:100%}
   .stage{height:400px}
-  .slide figcaption{padding:36px 16px 20px;font-size:.95rem;line-height:1.35}
+  .slide figcaption{padding:36px 16px 24px;font-size:.95rem;line-height:1.35}
   .slide figcaption small{font-size:.8rem}
   .trust-in{flex-direction:column;align-items:center;gap:12px}
   .trust-item{max-width:100%}
   .slide:nth-child(1){transform:rotateY(0deg) translateZ(190px)}
-  .slide:nth-child(2){transform:rotateY(120deg) translateZ(190px)}
-  .slide:nth-child(3){transform:rotateY(240deg) translateZ(190px)}
+  .slide:nth-child(2){transform:rotateY(180deg) translateZ(190px)}
   .offer{flex-direction:column;align-items:flex-start;gap:6px}
   .svc-grid{grid-template-columns:1fr}
   .gal-grid{grid-template-columns:repeat(2,1fr)}
