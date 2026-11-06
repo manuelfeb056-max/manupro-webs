@@ -10,7 +10,7 @@
 <link rel="preload" href="fonts/baloo2.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="fonts/fredoka.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="fonts/nunito.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="css/style.css?v=16">
+<link rel="stylesheet" href="css/style.css?v=17">
 <link rel="icon" href="img/logo.jpg">
 </head>
 <body>
@@ -113,7 +113,7 @@
   </div>
 </div>
 
-<!-- ══════════ CATÁLOGO v16 · tira horizontal · 47 tarjetas con precio ══════════ -->
+<!-- ══════════ CATÁLOGO v17 · tira horizontal · 47 tarjetas con precio ══════════ -->
 <section class="section" id="catalogo">
   <div class="wrap">
     <p class="eyebrow center rv">Catálogo completo</p>
@@ -142,10 +142,14 @@
     </div>
 
     <!-- ── MÁQUINAS DE COMIDA · OFERTAS COMPLETAS ── -->
-    <div class="off-grid">
+    <p class="center rv svc-hint">Desliza hacia el lado para ver las máquinas</p>
+    <div class="cat-strip rv" id="offStrip">
+      <button class="cat-strip-arrow prev" id="offPrev" aria-label="Anterior">‹</button>
+      <div class="cat-strip-viewport" id="offViewport">
+        <div class="cat-strip-track" id="offTrack">
       <div class="off-card off-icee rv">
         <div class="off-photo">
-          <img src="img/off-icee.jpg?v=16" alt="Máquinas de slush ICEE de Omi Jumping — 3 sabores de colores" loading="lazy">
+          <img src="img/off-icee.jpg?v=17" alt="Máquinas de slush ICEE de Omi Jumping — 3 sabores de colores" loading="lazy">
           <span class="off-badge">¡El favorito de la fiesta!</span>
         </div>
         <div class="off-head"><h3>Máquina ICEE</h3><p>Raspados de colores para toda la fiesta</p></div>
@@ -164,7 +168,7 @@
       </div>
       <div class="off-card off-mantecado rv">
         <div class="off-photo">
-          <img class="off-photo-mantecado" src="img/svc-mantecado.jpg?v=16" alt="Máquina de Mantecado Soft de Omi Jumping — 3 sabores" loading="lazy">
+          <img class="off-photo-mantecado" src="img/svc-mantecado.jpg?v=17" alt="Máquina de Mantecado Soft de Omi Jumping — 3 sabores" loading="lazy">
           <span class="off-badge">¡Frío y dulce!</span>
         </div>
         <div class="off-head"><h3>Mantecado Soft</h3><p>El helado suave que todos aman</p></div>
@@ -181,11 +185,15 @@
         <a class="btn btn-primary big" data-wa data-service="Hola Omi Jumping, quiero reservar el Mantecado Soft. ¿Me confirmas disponibilidad?" style="width:100%">Reservar Mantecado Soft</a>
         </div>
       </div>
+        </div>
+      </div>
+      <button class="cat-strip-arrow next" id="offNext" aria-label="Siguiente">›</button>
+      <div class="cat-strip-dots" id="offDots"></div>
     </div>
   </div>
 </section>
 
-<!-- ══════════ ANUNCIOS v16 · FLYERS + VIDEOS HACIA EL LADO ══════════ -->
+<!-- ══════════ ANUNCIOS v17 · FLYERS + VIDEOS HACIA EL LADO ══════════ -->
 <section class="section alt" id="anuncios">
   <div class="wrap">
     <p class="eyebrow center rv">Anuncios</p>
@@ -632,11 +640,11 @@
   <button class="lb-next" aria-label="Siguiente">›</button>
 </div>
 
-<script src="js/gsap.min.js?v=16"></script>
-<script src="js/ScrollTrigger.min.js?v=16"></script>
-<script src="js/gallery.js?v=16"></script>
-<script src="js/catalogo.js?v=16"></script>
-<script src="js/main.js?v=16"></script>
-<script src="js/fiesta-canvas.js?v=16"></script>
+<script src="js/gsap.min.js?v=17"></script>
+<script src="js/ScrollTrigger.min.js?v=17"></script>
+<script src="js/gallery.js?v=17"></script>
+<script src="js/catalogo.js?v=17"></script>
+<script src="js/main.js?v=17"></script>
+<script src="js/fiesta-canvas.js?v=17"></script>
 </body>
 </html>

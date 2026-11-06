@@ -1,4 +1,4 @@
-/* ═══════════════ OMI JUMPING · CATÁLOGO v16 ═══════════════
+/* ═══════════════ OMI JUMPING · CATÁLOGO v17 ═══════════════
    Datos del documento FINAL 2026-11-06 (catalogo-omi-jumping-2026-11-06.md):
    44 ítems únicos (47 tarjetas: carpas/mesas/sillas son 5 precios con 2 fotos),
    47 tarjetas con precio SEGURO confirmado por Omar, todas con precio.
@@ -9,7 +9,7 @@
    Sin apóstrofes en los strings (regla standing: rompen el form de WhatsApp). */
 (function(){
 "use strict";
-var V = "?v=16";
+var V = "?v=17";
 var IMG = "img/catalogo/";
 var VID = "img/catalogo/videos/";
 
@@ -105,7 +105,7 @@ function waMsg(it){
   return m + ". ¿Me confirmas disponibilidad?";
 }
 
-/* ── Render del catálogo v16 · TIRA HORIZONTAL hacia el lado ──
+/* ── Render del catálogo v17 · TIRA HORIZONTAL hacia el lado ──
    Una sola tira con las 47 tarjetas en orden perfecto del documento
    (castillos → combos → chorreras → juegos → obstáculos → toro →
    carpas → espuma). Sin grid viejo: el único catálogo es esta tira.
@@ -261,7 +261,7 @@ if(track){
   applyFilter("todos");
 }
 
-/* ── Tira horizontal genérica (Anuncios v16): flechas + puntos + swipe ──
+/* ── Tira horizontal genérica (Anuncios v17): flechas + puntos + swipe ──
    Mismo patrón que la tira del catálogo, sin auto-scroll ni bucle:
    medir tarjetas, puntos por página, flechas por ~80% del viewport,
    arrastre con mouse/táctil y snap a tarjeta. El clic justo después de
@@ -283,7 +283,7 @@ function initAdStrip(ids){
     S.pages = Math.max(1, Math.ceil(totalW / vp.clientWidth));
     var html = "";
     for(var p = 0; p < S.pages; p++){ html += '<button aria-label="Ir a la página ' + (p + 1) + '"></button>'; }
-    if(dots){ dots.innerHTML = html; }
+    if(dots){ dots.innerHTML = html; dots.style.display = S.pages > 1 ? "" : "none"; }
     updateDots();
   }
   function updateDots(){
@@ -402,5 +402,11 @@ if(vidGrid){
       });
     });
   });
+}
+
+/* ── Tira horizontal de ofertas (v17): ICEE + Mantecado hacia el lado ──
+   Las 2 tarjetas son HTML estático, no se renderizan por JS. */
+if(document.getElementById("offTrack")){
+  initAdStrip({vp: "offViewport", tr: "offTrack", dots: "offDots", prev: "offPrev", next: "offNext"});
 }
 })();
