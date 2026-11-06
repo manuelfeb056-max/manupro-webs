@@ -654,9 +654,21 @@ var BUILDER = [
   {id: "castillopeq", name: "Castillo Pequeño Azul y Amarillo", desc: "Precio confirmado", price: 90},
   {id: "castillamalla", name: "Castillo Rojo y Azul con Malla", desc: "Frente de malla · precio confirmado", price: 165},
   {id: "castillopeqmorado", name: "Castillo Pequeño Morado y Rosa", desc: "Sin chorrera · precio confirmado", price: 100},
-  {id: "combomorado", name: "Combo Castillo + Chorrera Morado", desc: "Con piscina", price: null},
+  {id: "castillo-rojo-azul", name: "Castillo Rojo y Azul", desc: "Torres cónicas rojas · precio confirmado", price: 100},
+  {id: "castillo-corona", name: "Castillo Morado con Corona", desc: "Corona amarilla · precio confirmado", price: 100},
+  {id: "castillo-rosa-azul", name: "Castillo Rosa y Azul", desc: "Conos azules · precio confirmado", price: 100},
+  {id: "castillo-toy-story", name: "Castillo Toy Story", desc: "Woody y Buzz · precio confirmado", price: 100},
+  {id: "castillo-azul-naranja", name: "Castillo Azul y Naranja", desc: "Precio confirmado", price: 100},
+  {id: "combomorado", name: "Combo Castillo + Chorrera Morado", desc: "Con piscina · precio confirmado", price: 150},
   {id: "combopiscina", name: "Combo Castillo + Chorrera con Piscina", desc: "Con piscina redonda · precio confirmado", price: 145},
   {id: "comborojoamarillo", name: "Combo Rojo y Amarillo con Piscina", desc: "Chorrera roja y amarilla · precio confirmado", price: 275},
+  {id: "combo-4en1", name: "Combo 4 en 1 (13x20)", desc: "Doble chorrera y piscina · precio confirmado", price: 200},
+  {id: "combo-turquesa", name: "Combo Rosa y Morado (Turquesa)", desc: "Chorrera turquesa · precio confirmado", price: 150},
+  {id: "combo-playa", name: "Combo Azul y Verde (Playa)", desc: "Piscina naranja y amarilla · precio confirmado", price: 175},
+  {id: "combo-rojo-verde", name: "Combo Rojo y Verde", desc: "Chorrera y piscina rojas · precio confirmado", price: 175},
+  {id: "combo-azul-naranja", name: "Combo Azul y Naranja con Chorrera", desc: "Torres cónicas azules · precio confirmado", price: 150},
+  {id: "combo-rosa-azul", name: "Combo Rosa y Morado (Azul)", desc: "Chorrera azul · precio confirmado", price: 150},
+  {id: "combo-verde-azul", name: "Combo Verde y Azul con Chorrera", desc: "Chorrera verde y azul · precio confirmado", price: 150},
   {id: "chorreramorada", name: "Chorrera Morada", desc: "Alta, con piscina · precio confirmado", price: 350},
   {id: "chorreraverde", name: "Chorrera Verde", desc: "Con piscina · precio confirmado", price: 299},
   {id: "chorrerahelado", name: "Chorrera de Helado", desc: "Temática de helado · precio confirmado", price: 275},
@@ -665,25 +677,42 @@ var BUILDER = [
   {id: "chorreraazulverde", name: "Chorrera Azul y Verde con Palmeras", desc: "Con palmeras · precio confirmado", price: 275},
   {id: "chorreramoradaazul", name: "Chorrera Morada y Azul con Palmeras", desc: "Larga, con palmeras · precio confirmado", price: 450},
   {id: "chorreraazulamarilla", name: "Chorrera Azul y Amarilla con Arcos", desc: "Alta, con arcos · precio confirmado", price: 450},
+  {id: "chorrera-tropical", name: "Chorrera Tropical con Palmeras", desc: "Con piscina · precio confirmado", price: 275},
+  {id: "chorrera-grande-azul", name: "Chorrera Grande Azul", desc: "Con piscina · precio confirmado", price: 275},
+  {id: "chorrera-wild-thing", name: "Chorrera Wild Thing", desc: "Piscina naranja · precio confirmado", price: 200},
+  {id: "chorrera-blazing", name: "Chorrera Blazing River", desc: "Doble chorrera y slip-n-slide · precio confirmado", price: 250},
+  {id: "chorrera-tropical-roja", name: "Chorrera Tropical Roja", desc: "Con palmeras · precio confirmado", price: 250},
   {id: "callofduty", name: "Carrera de Obstáculos Call of Duty", desc: "Camuflaje · precio confirmado", price: 450},
   {id: "carreraverde", name: "Carrera de Obstáculos Verde y Amarilla", desc: "Túneles y muro de escalar · precio confirmado", price: 350},
-  {id: "hoopzone", name: "Hoop Zone", desc: "Baloncesto inflable", price: null},
+  {id: "carrera-gigante", name: "Carrera de Obstáculos Gigante", desc: "Amarilla y negra, en coliseo · precio confirmado", price: 500},
+  {id: "carrera-tubos", name: "Carrera de Obstáculos con Tubos", desc: "Arcos de tubos y túnel · precio confirmado", price: 325},
+  {id: "carrera-roja-verde", name: "Carrera de Obstáculos Gigante Roja y Verde", desc: "Torres de castillo y piscina · precio confirmado", price: 325},
+  {id: "hoopzone", name: "Hoop Zone", desc: "Baloncesto inflable · precio confirmado", price: 150},
   {id: "deportivo4", name: "Juego Deportivo 4 en 1", desc: "Fútbol, béisbol, baloncesto y fútbol americano · precio confirmado", price: 200},
   {id: "axethrow", name: "Axe Throw", desc: "Dos dianas de tiro de hacha · precio confirmado", price: 175},
+  {id: "big-throw-down", name: "Big Throw Down", desc: "Hachas y dardos gigantes · precio confirmado", price: 175},
   {id: "comida", name: "Popcorn, Algodón, Piraguas y Slush", desc: "Máquinas de comida y mealprep", price: null},
   {id: "gigantes", name: "Juegos Gigantes", desc: "Double Axe Throw y más", price: 175},
   {id: "carpa20", name: "Carpa 20x20", desc: "Precio confirmado", price: 200},
   {id: "carpa10", name: "Carpa 10x20", desc: "Precio confirmado", price: 175},
-  {id: "sillamesas", name: "Sillas y Mesas", desc: "Sillas $1.00 c/u · Mesas 6 pies $6.00 · Redondas $10.00", price: null},
+  {id: "sillas", name: "Sillas", desc: "$1.00 c/u · precio confirmado", price: 1},
+  {id: "mesas6", name: "Mesas 6 pies", desc: "Precio confirmado", price: 6},
+  {id: "mesas-redondas", name: "Mesas redondas", desc: "Precio confirmado", price: 10},
   {id: "catering", name: "Catering y Postres", desc: "Nachos con queso y más", price: null}
 ];
 var builderGrid = document.getElementById("builderGrid");
 if(builderGrid){
   var bHtml = "";
   BUILDER.forEach(function(it){
-    var priceHtml = (it.price !== null)
-      ? '<span class="b-price">$' + it.price + "</span>"
-      : '<span class="b-price"><small>A cotizar</small></span>';
+    var priceHtml;
+    if(it.sizes){
+      var minP = Math.min.apply(null, it.sizes.map(function(s){ return s[1]; }));
+      priceHtml = '<span class="b-price">desde $' + minP + "</span>";
+    } else if(it.price !== null){
+      priceHtml = '<span class="b-price">$' + it.price + "</span>";
+    } else {
+      priceHtml = '<span class="b-price"><small>A cotizar</small></span>';
+    }
     var selHtml = "";
     if(it.sizes){
       selHtml = '<select data-size-for="' + it.id + '" aria-label="Opciones de ' + it.name + '">';
@@ -724,6 +753,14 @@ function builderUpdate(){
     else { hasQuote = true; listHtml += "<li><span>" + p.item.name + "</span><b>A cotizar</b></li>"; }
   });
   listEl.innerHTML = listHtml;
+  /* Los ítems con tallas/ofertas muestran el precio de la opción elegida */
+  BUILDER.forEach(function(it){
+    if(it.sizes){
+      var label = document.querySelector('.b-item[data-id="' + it.id + '"] .b-price');
+      var sel = document.querySelector('[data-size-for="' + it.id + '"]');
+      if(label && sel){ label.textContent = "$" + sel.value; }
+    }
+  });
   if(!picked.length){
     totalEl.textContent = "$0";
     noteEl.textContent = "Marca al menos un servicio para ver tu total.";
@@ -734,7 +771,7 @@ function builderUpdate(){
     totalEl.textContent = "$" + total;
     noteEl.textContent = hasQuote
       ? "Total estimado de los servicios con precio. Los servicios a cotizar se confirman por WhatsApp."
-      : "Total estimado según precios de Facebook.";
+      : "Total estimado según precios confirmados.";
   }
   document.querySelectorAll(".b-item").forEach(function(label){
     var cb = label.querySelector('input[type="checkbox"]');
@@ -1198,7 +1235,7 @@ document.querySelectorAll(".pay-card[data-tilt]").forEach(function(card){
   card.addEventListener("pointerleave", function(){ card.style.transform = ""; });
 });
 
-/* ── Servicios → Catálogo v13: "Ver en el catálogo" aplica el filtro y baja ──
+/* ── Servicios → Catálogo v14: "Ver en el catálogo" aplica el filtro y baja ──
    Cada tarjeta de Servicios lleva un enlace con data-filter (castillos,
    combos, chorreras, juegos, obstaculos, toro, carpas, espuma, todos).
    El clic aprieta el botón de filtro del catálogo (reusa applyFilter de

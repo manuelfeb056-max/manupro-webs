@@ -10,7 +10,7 @@
 <link rel="preload" href="fonts/baloo2.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="fonts/fredoka.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="fonts/nunito.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="css/style.css?v=13">
+<link rel="stylesheet" href="css/style.css?v=14">
 <link rel="icon" href="img/logo.jpg">
 </head>
 <body>
@@ -142,8 +142,8 @@
         <div class="svc-body">
           <h3>Castillos 13x13</h3>
           <p>Castillos inflables de colores para que los niños brinquen sin parar. El favorito de los cumpleaños.</p>
-          <p class="svc-price">$99</p>
-          <div class="svc-foot"><a class="btn btn-primary sm" data-wa data-service="Hola Omi Jumping, quiero reservar un Castillo 13x13 ($99)">Reservar</a></div>
+          <p class="svc-price">desde $90</p>
+          <div class="svc-foot"><a class="btn btn-primary sm" data-wa data-service="Hola Omi Jumping, quiero reservar un Castillo (desde $90)">Reservar</a></div>
           <a class="svc-cat-link" href="#catalogo" data-filter="castillos">Ver en el catálogo ›</a>
         </div>
       </article>
@@ -164,7 +164,7 @@
         <div class="svc-body">
           <h3>Chorreras</h3>
           <p>Chorrera Mini, Chorrera y Chorreras Medianas para refrescar la fiesta. La Mini incluye popcorn.</p>
-          <p class="svc-price">desde $175 <small>· Mini $175 · Chorrera $199 · Medianas $225 / $250 / $275</small></p>
+          <p class="svc-price">desde $200 <small>· 13 chorreras con precio confirmado</small></p>
           <div class="svc-foot"><a class="btn btn-primary sm" data-wa data-service="Hola Omi Jumping, quiero reservar una Chorrera">Reservar</a></div>
           <a class="svc-cat-link" href="#catalogo" data-filter="chorreras">Ver en el catálogo ›</a>
         </div>
@@ -175,8 +175,8 @@
         <div class="svc-body">
           <h3>Carreras de Obstáculos</h3>
           <p>Corre, trepa y deslízate en la carrera inflable más grande. Disponible la versión gigante de 60 pies.</p>
-          <p class="svc-price">desde $299 <small>· 60 pies $350</small></p>
-          <div class="svc-foot"><a class="btn btn-primary sm" data-wa data-service="Hola Omi Jumping, quiero reservar una Carrera de Obstáculos (desde $299)">Reservar</a></div>
+          <p class="svc-price">desde $325 <small>· 5 carreras con precio confirmado</small></p>
+          <div class="svc-foot"><a class="btn btn-primary sm" data-wa data-service="Hola Omi Jumping, quiero reservar una Carrera de Obstáculos (desde $325)">Reservar</a></div>
           <a class="svc-cat-link" href="#catalogo" data-filter="obstaculos">Ver en el catálogo ›</a>
         </div>
       </article>
@@ -287,12 +287,12 @@
   </div>
 </section>
 
-<!-- ══════════ CATÁLOGO v13 · 44 ítems reales · precios revisados 2026-11-06 ══════════ -->
+<!-- ══════════ CATÁLOGO v14 · tira horizontal · 44 ítems con precio ══════════ -->
 <section class="section" id="catalogo">
   <div class="wrap">
     <p class="eyebrow center rv">Catálogo completo</p>
     <h2 class="center rv">El catálogo <em>completo</em> de Omi Jumping</h2>
-    <p class="center lead rv">Cada inflable con su foto real. Los precios confirmados van en grande; lo demás se cotiza por WhatsApp según el tiempo de servicio y si lleva operador.</p>
+    <p class="center lead rv">Cada inflable con su foto real y su precio confirmado. Desliza hacia el lado para ver los 47 productos en orden: castillos, combos, chorreras, juegos, obstáculos, toro, carpas y espuma.</p>
     <div class="cat-filters rv" id="catFilters">
       <button class="on" data-filter="todos">Todos</button>
       <button data-filter="castillos">Castillos</button>
@@ -305,7 +305,15 @@
       <button data-filter="espuma">Espuma</button>
     </div>
     <p class="cat-count rv" id="catCount">Cargando el catálogo...</p>
-    <div class="cat-grid" id="catGrid"></div>
+    <p class="center rv svc-hint">Desliza hacia el lado para ver todo el catálogo · Toca una foto para verla en grande</p>
+    <div class="cat-strip rv" id="catStrip">
+      <button class="cat-strip-arrow prev" id="catStripPrev" aria-label="Anterior">‹</button>
+      <div class="cat-strip-viewport" id="catStripViewport">
+        <div class="cat-strip-track" id="catStripTrack"></div>
+      </div>
+      <button class="cat-strip-arrow next" id="catStripNext" aria-label="Siguiente">›</button>
+      <div class="cat-strip-dots" id="catStripDots"></div>
+    </div>
 
     <!-- ── MÁQUINAS DE COMIDA · OFERTAS COMPLETAS ── -->
     <div class="off-grid">
@@ -339,7 +347,7 @@
   </div>
 </section>
 
-<!-- ══════════ ANUNCIOS v13 · FLYERS + VIDEOS ══════════ -->
+<!-- ══════════ ANUNCIOS v14 · FLYERS + VIDEOS ══════════ -->
 <section class="section alt" id="anuncios">
   <div class="wrap">
     <p class="eyebrow center rv">Anuncios</p>
@@ -357,7 +365,7 @@
   <div class="wrap">
     <p class="eyebrow center rv">Arma tu fiesta</p>
     <h2 class="center rv">Arma tu fiesta <em>y ve el total en vivo</em></h2>
-    <p class="center lead rv">Marca lo que quieres, elige la fecha y el total se suma solo. Precios reales de nuestros flyers de Facebook — sin depósitos inventados.</p>
+    <p class="center lead rv">Marca lo que quieres, elige la fecha y el total se suma solo. Precios confirmados por Omi Jumping — sin depósitos inventados.</p>
     <button class="builder-cta rv" id="builderOpen" type="button" aria-expanded="false" aria-controls="builderBox">
       <span class="builder-cta-ico" aria-hidden="true"><svg width="32" height="32" viewBox="0 0 24 24"><path d="M12 2C8.1 2 5 5.1 5 9c0 2.9 1.9 5 3.7 6.5.8.7 1.3 1.3 1.3 2.2v.3h4v-.3c0-.9.5-1.5 1.3-2.2C17.1 14 19 11.9 19 9c0-3.9-3.1-7-7-7zM11 19.5h2l-.6 1.6h-.8L11 19.5z"/></svg></span>
       <span class="builder-cta-txt"><b>Arma tu fiesta</b><small>Toca aquí para elegir inflables, chorreras y máquinas y ver tu total en vivo</small></span>
@@ -621,34 +629,57 @@
   <div class="wrap">
     <p class="eyebrow center rv">Precios reales</p>
     <h2 class="center rv">Lista de <em>precios</em></h2>
-    <p class="center lead rv">Estos son los precios publicados en nuestra página de Facebook. Sin sorpresas.</p>
+    <p class="center lead rv">Precios confirmados por Omi Jumping. Sin sorpresas.</p>
     <div class="price-table rv">
       <div class="price-row head"><span>Servicio</span><span>Precio</span></div>
       <div class="price-row hl price-hero"><span class="p-name">Juegos Interactivos<small>Todo el día · oferta principal</small></span><span class="p-val">desde $150.00<small>todo el día</small></span><span class="p-badge">OFERTA PRINCIPAL</span></div>
-      <div class="price-row"><span class="p-name">Castillos 13x13</span><span class="p-val">$99</span></div>
+      <div class="price-row"><span class="p-name">Castillos 13x13</span><span class="p-val">desde $90</span></div>
       <div class="price-row"><span class="p-name">Casas de Brinco 13x13<small>Incluye popcorn y algodón</small></span><span class="p-val">$150</span></div>
       <div class="price-row"><span class="p-name">Chorrera Mini<small>Especial fin de semana · incluye popcorn</small></span><span class="p-val">$175</span></div>
       <div class="price-row"><span class="p-name">Chorrera<small>Especial de la semana</small></span><span class="p-val">$199</span></div>
       <div class="price-row"><span class="p-name">Chorreras Medianas<small>16 x 30 y 19 x 30</small></span><span class="p-val">$225 / $250 / $275</span></div>
-      <div class="price-row"><span class="p-name">Carreras de Obstáculos</span><span class="p-val">desde $299</span></div>
+      <div class="price-row"><span class="p-name">Carreras de Obstáculos</span><span class="p-val">desde $325</span></div>
       <div class="price-row"><span class="p-name">Carrera de Obstáculos 60 pies</span><span class="p-val">$350</span></div>
       <div class="price-row"><span class="p-name">Carrera de Obstáculos Call of Duty<small>Camuflaje · precio confirmado</small></span><span class="p-val">$450</span></div>
       <div class="price-row"><span class="p-name">Castillo Pequeño Azul y Amarillo<small>Precio confirmado</small></span><span class="p-val">$90</span></div>
       <div class="price-row"><span class="p-name">Castillo Rojo y Azul con Malla<small>Precio confirmado</small></span><span class="p-val">$165</span></div>
       <div class="price-row"><span class="p-name">Castillo Pequeño Morado y Rosa<small>Precio confirmado</small></span><span class="p-val">$100</span></div>
+      <div class="price-row"><span class="p-name">Castillo Rojo y Azul<small>Precio confirmado</small></span><span class="p-val">$100</span></div>
+      <div class="price-row"><span class="p-name">Castillo Morado con Corona<small>Precio confirmado</small></span><span class="p-val">$100</span></div>
+      <div class="price-row"><span class="p-name">Castillo Rosa y Azul<small>Precio confirmado</small></span><span class="p-val">$100</span></div>
+      <div class="price-row"><span class="p-name">Castillo Toy Story<small>Precio confirmado</small></span><span class="p-val">$100</span></div>
+      <div class="price-row"><span class="p-name">Castillo Azul y Naranja<small>Precio confirmado</small></span><span class="p-val">$100</span></div>
       <div class="price-row"><span class="p-name">Chorrera Morada<small>Alta, con piscina · precio confirmado</small></span><span class="p-val">$350</span></div>
       <div class="price-row"><span class="p-name">Chorrera Verde<small>Con piscina · precio confirmado</small></span><span class="p-val">$299</span></div>
       <div class="price-row"><span class="p-name">Combo Castillo + Chorrera con Piscina<small>Precio confirmado</small></span><span class="p-val">$145</span></div>
       <div class="price-row"><span class="p-name">Combo Rojo y Amarillo con Piscina<small>Precio confirmado</small></span><span class="p-val">$275</span></div>
+      <div class="price-row"><span class="p-name">Combo Castillo + Chorrera Morado<small>Precio confirmado</small></span><span class="p-val">$150</span></div>
+      <div class="price-row"><span class="p-name">Combo 4 en 1 (13x20)<small>Precio confirmado</small></span><span class="p-val">$200</span></div>
+      <div class="price-row"><span class="p-name">Combo Rosa y Morado (Turquesa)<small>Precio confirmado</small></span><span class="p-val">$150</span></div>
+      <div class="price-row"><span class="p-name">Combo Azul y Verde (Playa)<small>Precio confirmado</small></span><span class="p-val">$175</span></div>
+      <div class="price-row"><span class="p-name">Combo Rojo y Verde<small>Precio confirmado</small></span><span class="p-val">$175</span></div>
+      <div class="price-row"><span class="p-name">Combo Azul y Naranja con Chorrera<small>Precio confirmado</small></span><span class="p-val">$150</span></div>
+      <div class="price-row"><span class="p-name">Combo Rosa y Morado (Azul)<small>Precio confirmado</small></span><span class="p-val">$150</span></div>
+      <div class="price-row"><span class="p-name">Combo Verde y Azul con Chorrera<small>Precio confirmado</small></span><span class="p-val">$150</span></div>
       <div class="price-row"><span class="p-name">Chorrera de Helado<small>Precio confirmado</small></span><span class="p-val">$275</span></div>
       <div class="price-row"><span class="p-name">Chorrera Amarilla con Slip-n-Slide<small>Precio confirmado</small></span><span class="p-val">$450</span></div>
       <div class="price-row"><span class="p-name">Chorrera Tropical con Sol<small>Precio confirmado</small></span><span class="p-val">$275</span></div>
       <div class="price-row"><span class="p-name">Chorrera Azul y Verde con Palmeras<small>Precio confirmado</small></span><span class="p-val">$275</span></div>
       <div class="price-row"><span class="p-name">Chorrera Morada y Azul con Palmeras<small>Precio confirmado</small></span><span class="p-val">$450</span></div>
       <div class="price-row"><span class="p-name">Chorrera Azul y Amarilla con Arcos<small>Precio confirmado</small></span><span class="p-val">$450</span></div>
+      <div class="price-row"><span class="p-name">Chorrera Tropical con Palmeras<small>Precio confirmado</small></span><span class="p-val">$275</span></div>
+      <div class="price-row"><span class="p-name">Chorrera Grande Azul<small>Precio confirmado</small></span><span class="p-val">$275</span></div>
+      <div class="price-row"><span class="p-name">Chorrera Wild Thing<small>Precio confirmado</small></span><span class="p-val">$200</span></div>
+      <div class="price-row"><span class="p-name">Chorrera Blazing River<small>Precio confirmado</small></span><span class="p-val">$250</span></div>
+      <div class="price-row"><span class="p-name">Chorrera Tropical Roja<small>Precio confirmado</small></span><span class="p-val">$250</span></div>
       <div class="price-row"><span class="p-name">Juego Deportivo 4 en 1<small>Fútbol, béisbol, baloncesto y fútbol americano · precio confirmado</small></span><span class="p-val">$200</span></div>
       <div class="price-row"><span class="p-name">Axe Throw<small>Dos dianas de tiro de hacha · precio confirmado</small></span><span class="p-val">$175</span></div>
+      <div class="price-row"><span class="p-name">Hoop Zone<small>Baloncesto inflable · precio confirmado</small></span><span class="p-val">$150</span></div>
+      <div class="price-row"><span class="p-name">Big Throw Down<small>Hachas y dardos gigantes · precio confirmado</small></span><span class="p-val">$175</span></div>
       <div class="price-row"><span class="p-name">Carrera de Obstáculos Verde y Amarilla<small>Túneles y muro de escalar · precio confirmado</small></span><span class="p-val">$350</span></div>
+      <div class="price-row"><span class="p-name">Carrera de Obstáculos Gigante<small>Amarilla y negra, en coliseo · precio confirmado</small></span><span class="p-val">$500</span></div>
+      <div class="price-row"><span class="p-name">Carrera de Obstáculos con Tubos<small>Arcos de tubos y túnel · precio confirmado</small></span><span class="p-val">$325</span></div>
+      <div class="price-row"><span class="p-name">Carrera de Obstáculos Gigante Roja y Verde<small>Torres de castillo y piscina · precio confirmado</small></span><span class="p-val">$325</span></div>
       <div class="price-row"><span class="p-name">Cañón de Espuma<small>Precio confirmado</small></span><span class="p-val">$175</span></div>
       <div class="price-row"><span class="p-name">Máquina ICEE · Oferta 1<small>2 horas · 50 vasos (9 oz) · 3 sabores · 2 toppings</small></span><span class="p-val">$290</span></div>
       <div class="price-row"><span class="p-name">Máquina ICEE · Oferta 2<small>3 horas · 100 vasos (9 oz) · 3 sabores · 3 toppings</small></span><span class="p-val">$350</span></div>
@@ -663,12 +694,9 @@
       <div class="price-row"><span class="p-name">Mesas redondas<small>Precio confirmado</small></span><span class="p-val">$10.00</span></div>
       <div class="price-row"><span class="p-name">Photobooth 360</span><span class="p-val">desde $150</span></div>
       <div class="price-row"><span class="p-name">Toro Mecánico<small>Precio confirmado</small></span><span class="p-val">$175</span></div>
-      <div class="price-row"><span class="p-name">Playground</span><span class="p-val"><small>Cotiza por WhatsApp</small></span></div>
-      <div class="price-row"><span class="p-name">Popcorn, Algodón, Piraguas y Slush</span><span class="p-val"><small>Cotiza por WhatsApp</small></span></div>
       <div class="price-row"><span class="p-name">Juegos Gigantes<small>Axe Throw $175 · Deportivo 4 en 1 $200</small></span><span class="p-val">desde $175</span></div>
-      <div class="price-row"><span class="p-name">Catering y Postres<small>Nachos con queso y más</small></span><span class="p-val"><small>Cotiza por WhatsApp</small></span></div>
     </div>
-    <p class="price-note rv">Precios de nuestra página de Facebook y del catálogo confirmado por Omar Rojas. Los servicios sin precio fijo se cotizan por WhatsApp según el tiempo de servicio y si llevan operador. Aceptamos <b>ATH Móvil, PayPal, Klarna, VISA, Mastercard y efectivo</b>. Para confirmar disponibilidad y apartar tu fecha, escríbenos por WhatsApp al <b>(787) 321-5921</b>.</p>
+    <p class="price-note rv">Precios del catálogo confirmado por Omar Rojas y de nuestra página de Facebook. Los servicios sin precio fijo (Playground, popcorn, catering y más) se cotizan por WhatsApp según el tiempo de servicio y si llevan operador. Aceptamos <b>ATH Móvil, PayPal, Klarna, VISA, Mastercard y efectivo</b>. Para confirmar disponibilidad y apartar tu fecha, escríbenos por WhatsApp al <b>(787) 321-5921</b>.</p>
     <div class="center rv" style="margin-top:28px">
       <a class="btn btn-primary big" data-wa data-service="Hola Omi Jumping, quiero reservar para mi evento">Reserva por WhatsApp</a>
     </div>
@@ -750,11 +778,11 @@
   <button class="lb-next" aria-label="Siguiente">›</button>
 </div>
 
-<script src="js/gsap.min.js?v=13"></script>
-<script src="js/ScrollTrigger.min.js?v=13"></script>
-<script src="js/gallery.js?v=13"></script>
-<script src="js/catalogo.js?v=13"></script>
-<script src="js/main.js?v=13"></script>
-<script src="js/fiesta-canvas.js?v=13"></script>
+<script src="js/gsap.min.js?v=14"></script>
+<script src="js/ScrollTrigger.min.js?v=14"></script>
+<script src="js/gallery.js?v=14"></script>
+<script src="js/catalogo.js?v=14"></script>
+<script src="js/main.js?v=14"></script>
+<script src="js/fiesta-canvas.js?v=14"></script>
 </body>
 </html>

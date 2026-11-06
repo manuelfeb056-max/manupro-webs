@@ -1,14 +1,15 @@
-/* ═══════════════ OMI JUMPING · CATÁLOGO v13 ═══════════════
+/* ═══════════════ OMI JUMPING · CATÁLOGO v14 ═══════════════
    Datos del documento FINAL 2026-11-06 (catalogo-omi-jumping-2026-11-06.md):
    44 ítems únicos (47 tarjetas: carpas/mesas/sillas son 5 precios con 2 fotos),
-   24 tarjetas con precio SEGURO confirmado por Omar, 23 "Cotiza por WhatsApp".
-   Revisión de precios 2026-11-06: #9 combo morado y #32 Hoop Zone SIN precio
-   (los $350/#9 y $175/#32 de v12 eran de otra unidad); #41 toro = $175 SEGURO.
+   47 tarjetas con precio SEGURO confirmado por Omar, 0 por cotizar.
+   Precios completos 2026-11-06: regla de Omar + lista de respuestas 6-23.
+   #4 = $165 y #7 = $90 (precios por foto, pendientes de confirmación).
+   Revisión de precios 2026-11-06 + respuestas de Omar: catálogo COMPLETO 44/44.
    Precio SEGURO solo cuando el documento lo marca SEGURO. NUNCA se inventa un precio.
    Sin apóstrofes en los strings (regla standing: rompen el form de WhatsApp). */
 (function(){
 "use strict";
-var V = "?v=13";
+var V = "?v=14";
 var IMG = "img/catalogo/";
 var VID = "img/catalogo/videos/";
 
@@ -19,33 +20,33 @@ var VID = "img/catalogo/videos/";
    img2: segundo ángulo (misma unidad) */
 var CATALOGO = [
   /* ── Castillos / Casas de brinco (8) ── */
-  {cat: "castillos", name: "Castillo Rojo y Azul", desc: "Torres cónicas rojas, columnas grises, rampa roja con punta verde.", img: "castillo-rojo-azul-01.jpg", price: null},
-  {cat: "castillos", name: "Castillo Morado con Corona", desc: "Morado y rojo con corona amarilla y torres rojas.", img: "castillo-morado-corona.jpg", price: null},
-  {cat: "castillos", name: "Castillo Rosa y Azul", desc: "Conos azules y rampa azul.", img: "castillo-rosa-azul.jpg", price: null},
+  {cat: "castillos", name: "Castillo Rojo y Azul", desc: "Torres cónicas rojas, columnas grises, rampa roja con punta verde.", img: "castillo-rojo-azul-01.jpg", price: "100"},
+  {cat: "castillos", name: "Castillo Morado con Corona", desc: "Morado y rojo con corona amarilla y torres rojas.", img: "castillo-morado-corona.jpg", price: "100"},
+  {cat: "castillos", name: "Castillo Rosa y Azul", desc: "Conos azules y rampa azul.", img: "castillo-rosa-azul.jpg", price: "100"},
   {cat: "castillos", name: "Castillo Rojo y Azul con Malla", desc: "Frente de malla, rampa azul con rayas rojas.", img: "castillo-rojo-azul-02.jpg", price: "165"},
-  {cat: "castillos", name: "Castillo Toy Story", desc: "Temático Toy Story con Woody y Buzz en panel, en cancha techada.", img: "castillo-toy-story.jpg", price: null},
-  {cat: "castillos", name: "Castillo Azul y Naranja", desc: "Azul y naranja, foto de almacén.", img: "castillo-azul-naranja.jpg", price: null},
+  {cat: "castillos", name: "Castillo Toy Story", desc: "Temático Toy Story con Woody y Buzz en panel, en cancha techada.", img: "castillo-toy-story.jpg", price: "100"},
+  {cat: "castillos", name: "Castillo Azul y Naranja", desc: "Azul y naranja, foto de almacén.", img: "castillo-azul-naranja.jpg", price: "100"},
   {cat: "castillos", name: "Castillo Pequeño Azul y Amarillo", desc: "Columnas amarillas y rampa azul.", img: "castillo-azul-amarillo-pequeno.jpg", price: "90"},
   {cat: "castillos", name: "Castillo Pequeño Morado y Rosa", desc: "Conos morados, paredes rosas, escalón rosa y azul. Sin chorrera.", img: "castillo-morado-rosa.jpg", price: "100"},
   /* ── Combos castillo + chorrera (10) ── */
-  {cat: "combos", name: "Combo Castillo + Chorrera Morado", desc: "Chorrera lateral morada y azul, con piscina.", img: "combo-castillo-chorrera-morado.jpg", price: null},
+  {cat: "combos", name: "Combo Castillo + Chorrera Morado", desc: "Chorrera lateral morada y azul, con piscina.", img: "combo-castillo-chorrera-morado.jpg", price: "150"},
   {cat: "combos", name: "Combo Castillo + Chorrera con Piscina", desc: "Conos azul y rojo, columnas rojas, arco gris, piscina redonda azul y morada.", img: "combo-castillo-chorrera-azul-naranja-piscina.jpg", img2: "combo-castillo-chorrera-azul-naranja-piscina-angulo-2.jpg", price: "145", tag: "2 ANGULOS"},
-  {cat: "combos", name: "Combo 4 en 1 (13x20)", desc: "Azul, morado y blanco con doble chorrera y piscina. Medida en la foto: 4en1 (13x20).", img: "combo-4en1-13x20.jpg", price: null},
+  {cat: "combos", name: "Combo 4 en 1 (13x20)", desc: "Azul, morado y blanco con doble chorrera y piscina. Medida en la foto: 4en1 (13x20).", img: "combo-4en1-13x20.jpg", price: "200"},
   {cat: "combos", name: "Combo Rojo y Amarillo con Piscina", desc: "Torres rojas con coronas grises, chorrera roja y amarilla, piscina azul.", img: "combo-castillo-chorrera-rojo-amarillo-piscina.jpg", price: "275"},
-  {cat: "combos", name: "Combo Rosa y Morado (Turquesa)", desc: "Sin conos, techo turquesa, chorrera turquesa, escalón rosa y turquesa.", img: "combo-rosa-morado-chorrera-turquesa.jpg", price: null},
-  {cat: "combos", name: "Combo Azul y Verde (Playa)", desc: "Columnas azules, conos azul oscuro y verde, piscina naranja y amarilla.", img: "combo-azul-verde-playa-piscina.jpg", price: null},
-  {cat: "combos", name: "Combo Rojo y Verde", desc: "Columnas verdes, conos naranja, chorrera y piscina rojas, base roja.", img: "combo-rojo-verde-chorrera-piscina.jpg", price: null},
-  {cat: "combos", name: "Combo Azul y Naranja con Chorrera", desc: "Torres cónicas azules, techo gris, paredes naranja y amarillo.", img: "combo-azul-naranja-chorrera.jpg", img2: "combo-azul-naranja-chorrera-angulo-2.jpg", price: null, tag: "2 ANGULOS"},
-  {cat: "combos", name: "Combo Rosa y Morado (Azul)", desc: "Conos morados, techo azul, chorrera azul con laterales rosas, base morada.", img: "combo-rosa-morado-chorrera-azul.jpg", price: null},
-  {cat: "combos", name: "Combo Verde y Azul con Chorrera", desc: "Columnas blancas, conos azules, techo rojo, base roja.", img: "combo-verde-azul-chorrera.jpg", price: null},
+  {cat: "combos", name: "Combo Rosa y Morado (Turquesa)", desc: "Sin conos, techo turquesa, chorrera turquesa, escalón rosa y turquesa.", img: "combo-rosa-morado-chorrera-turquesa.jpg", price: "150"},
+  {cat: "combos", name: "Combo Azul y Verde (Playa)", desc: "Columnas azules, conos azul oscuro y verde, piscina naranja y amarilla.", img: "combo-azul-verde-playa-piscina.jpg", price: "175"},
+  {cat: "combos", name: "Combo Rojo y Verde", desc: "Columnas verdes, conos naranja, chorrera y piscina rojas, base roja.", img: "combo-rojo-verde-chorrera-piscina.jpg", price: "175"},
+  {cat: "combos", name: "Combo Azul y Naranja con Chorrera", desc: "Torres cónicas azules, techo gris, paredes naranja y amarillo.", img: "combo-azul-naranja-chorrera.jpg", img2: "combo-azul-naranja-chorrera-angulo-2.jpg", price: "150", tag: "2 ANGULOS"},
+  {cat: "combos", name: "Combo Rosa y Morado (Azul)", desc: "Conos morados, techo azul, chorrera azul con laterales rosas, base morada.", img: "combo-rosa-morado-chorrera-azul.jpg", price: "150"},
+  {cat: "combos", name: "Combo Verde y Azul con Chorrera", desc: "Columnas blancas, conos azules, techo rojo, base roja.", img: "combo-verde-azul-chorrera.jpg", price: "150"},
   /* ── Chorreras con agua (13) ── */
-  {cat: "chorreras", name: "Chorrera Tropical con Palmeras", desc: "Naranja, verde, azul y morado, con piscina al final.", img: "chorrera-tropical-palmeras.jpg", price: null},
-  {cat: "chorreras", name: "Chorrera Grande Azul", desc: "Azul, amarilla y roja con piscina, al aire libre.", img: "chorrera-grande-azul.jpg", price: null},
-  {cat: "chorreras", name: "Chorrera Wild Thing", desc: "Azul y morada con palmeras y letrero WILD THING, piscina naranja.", img: "chorrera-wild-thing.jpg", price: null},
+  {cat: "chorreras", name: "Chorrera Tropical con Palmeras", desc: "Naranja, verde, azul y morado, con piscina al final.", img: "chorrera-tropical-palmeras.jpg", price: "275"},
+  {cat: "chorreras", name: "Chorrera Grande Azul", desc: "Azul, amarilla y roja con piscina, al aire libre.", img: "chorrera-grande-azul.jpg", price: "275"},
+  {cat: "chorreras", name: "Chorrera Wild Thing", desc: "Azul y morada con palmeras y letrero WILD THING, piscina naranja.", img: "chorrera-wild-thing.jpg", price: "200"},
   {cat: "chorreras", name: "Chorrera de Helado", desc: "Temática de helado: azul, morada y amarilla con cono gigante y paletas.", img: "chorrera-helado.jpg", price: "275"},
-  {cat: "chorreras", name: "Chorrera Blazing River", desc: "Roja, amarilla y gris, doble chorrera con slip-n-slide y piscina.", img: "chorrera-blazing-river.jpg", price: null},
+  {cat: "chorreras", name: "Chorrera Blazing River", desc: "Roja, amarilla y gris, doble chorrera con slip-n-slide y piscina.", img: "chorrera-blazing-river.jpg", price: "250"},
   {cat: "chorreras", name: "Chorrera Amarilla con Slip-n-Slide", desc: "Amarilla y naranja con slip-n-slide largo y piscina al final.", img: "chorrera-amarilla-slip-n-slide.jpg", price: "450"},
-  {cat: "chorreras", name: "Chorrera Tropical Roja", desc: "Roja y verde con palmeras y piscina azul. Imagen de fabricante, no foto instalada.", img: "chorrera-tropical-roja-render.jpg", price: null, tag: "RENDER"},
+  {cat: "chorreras", name: "Chorrera Tropical Roja", desc: "Roja y verde con palmeras y piscina azul. Imagen de fabricante, no foto instalada.", img: "chorrera-tropical-roja-render.jpg", price: "250", tag: "RENDER"},
   {cat: "chorreras", name: "Chorrera Tropical con Sol", desc: "Sol con lentes en la parte superior, palmeras, azul, naranja y verde.", img: "chorrera-tropical-sol.jpg", price: "275"},
   {cat: "chorreras", name: "Chorrera Azul y Verde con Palmeras", desc: "Azul y verde con palmeras y piscina azul.", img: "chorrera-azul-verde-palmeras.jpg", price: "275"},
   {cat: "chorreras", name: "Chorrera Morada y Azul con Palmeras", desc: "Larga, morada y azul con palmeras y piscina alargada.", img: "chorrera-morada-azul-palmeras.jpg", price: "450"},
@@ -53,16 +54,16 @@ var CATALOGO = [
   {cat: "chorreras", name: "Chorrera Morada (Alta)", desc: "Alta, morada y gris con laterales grises y piscina azul. Video en Anuncios.", img: "chorrera-morada-gris-almacen.jpg", price: "350"},
   {cat: "chorreras", name: "Chorrera Verde", desc: "Verde con laterales amarillos y piscina verde, vista de drone. Video en Anuncios.", img: "videos/poster-chorrera-verde.jpg", price: "299", tag: "VIDEO"},
   /* ── Juegos interactivos (4) ── */
-  {cat: "juegos", name: "Hoop Zone", desc: "Baloncesto inflable rojo y negro, con aros y puntos (30/50/10).", img: "juego-hoop-zone-baloncesto.jpg", price: null},
+  {cat: "juegos", name: "Hoop Zone", desc: "Baloncesto inflable rojo y negro, con aros y puntos (30/50/10).", img: "juego-hoop-zone-baloncesto.jpg", price: "150"},
   {cat: "juegos", name: "Axe Throw", desc: "Dos dianas de tiro de hacha, letreros THROW.", img: "juego-axe-throw.jpg", price: "175"},
-  {cat: "juegos", name: "Big Throw Down", desc: "3 estaciones: 2 Axe Challenge y 1 Dart Throw al centro.", img: "juego-big-throw-down.jpg", price: null},
+  {cat: "juegos", name: "Big Throw Down", desc: "3 estaciones: 2 Axe Challenge y 1 Dart Throw al centro.", img: "juego-big-throw-down.jpg", price: "175"},
   {cat: "juegos", name: "Juego Deportivo 4 en 1", desc: "Fútbol, béisbol, baloncesto y fútbol americano, con pelotas.", img: "juego-deportivo-4-en-1.jpg", price: "200"},
   /* ── Carreras de obstáculos (5) ── */
-  {cat: "obstaculos", name: "Carrera de Obstáculos Gigante", desc: "Amarilla y negra instalada en coliseo.", img: "carrera-obstaculos-gigante.jpg", price: null},
+  {cat: "obstaculos", name: "Carrera de Obstáculos Gigante", desc: "Amarilla y negra instalada en coliseo.", img: "carrera-obstaculos-gigante.jpg", price: "500"},
   {cat: "obstaculos", name: "Carrera de Obstáculos Verde y Amarilla", desc: "Verde, amarilla, roja y negra con túneles y muro de escalar.", img: "carrera-obstaculos-verde-amarilla.jpg", price: "350"},
   {cat: "obstaculos", name: "Carrera de Obstáculos Call of Duty", desc: "Camuflaje, vista aérea, túneles y muros rojo y negro. Video en Anuncios.", img: "carrera-obstaculos-camuflaje.jpg", price: "450"},
-  {cat: "obstaculos", name: "Carrera de Obstáculos con Tubos", desc: "Roja, amarilla, azul y negra con arcos de tubos, túnel y muro de escalar.", img: "carrera-obstaculos-roja-amarilla-tubos.jpg", price: null},
-  {cat: "obstaculos", name: "Carrera de Obstáculos Gigante Roja y Verde", desc: "Roja, verde, amarilla y azul con torres de castillo, chorrera y piscina.", img: "carrera-obstaculos-gigante-roja-verde.jpg", price: null},
+  {cat: "obstaculos", name: "Carrera de Obstáculos con Tubos", desc: "Roja, amarilla, azul y negra con arcos de tubos, túnel y muro de escalar.", img: "carrera-obstaculos-roja-amarilla-tubos.jpg", price: "325"},
+  {cat: "obstaculos", name: "Carrera de Obstáculos Gigante Roja y Verde", desc: "Roja, verde, amarilla y azul con torres de castillo, chorrera y piscina.", img: "carrera-obstaculos-gigante-roja-verde.jpg", price: "325"},
   /* ── Toro mecánico (1) ── */
   {cat: "toro", name: "Toro Mecánico", desc: "Estructura roja techada y consola de control amarilla. Video en Anuncios.", img: "toro-mecanico.jpg", price: "175"},
   /* ── Carpas, mesas y sillas (5 precios, 2 fotos) ── */
@@ -104,10 +105,20 @@ function waMsg(it){
   return m + ". ¿Me confirmas disponibilidad?";
 }
 
-/* ── Render del catálogo ── */
-var grid = document.getElementById("catGrid");
+/* ── Render del catálogo v14 · TIRA HORIZONTAL hacia el lado ──
+   Una sola tira con las 47 tarjetas en orden perfecto del documento
+   (castillos → combos → chorreras → juegos → obstáculos → toro →
+   carpas → espuma). Sin grid viejo: el único catálogo es esta tira.
+   Flechas + puntos + arrastre/swipe. Sin auto-scroll ni bucle infinito
+   (los filtros cambian el conjunto visible). */
+var track = document.getElementById("catStripTrack");
+var viewport = document.getElementById("catStripViewport");
+var dotsEl = document.getElementById("catStripDots");
+var prevBtn = document.getElementById("catStripPrev");
+var nextBtn = document.getElementById("catStripNext");
 var countEl = document.getElementById("catCount");
-if(grid){
+var STRIP = {cardW: 340, pages: 1, dragging: false, dragged: false};
+if(track){
   var html = "";
   CATALOGO.forEach(function(it, i){
     var tagHtml = "";
@@ -130,9 +141,10 @@ if(grid){
       '<div class="cat-foot"><a class="btn btn-primary sm" data-wa data-service="' + waMsg(it).replace(/"/g, "&quot;") + '">' + btnTxt + "</a></div>" +
       "</div></article>";
   });
-  grid.innerHTML = html;
+  track.innerHTML = html;
   /* Toca la foto: abre en grande (usa el lightbox de main.js) */
-  grid.addEventListener("click", function(e){
+  track.addEventListener("click", function(e){
+    if(STRIP.dragged) return;
     var media = e.target.closest(".cat-media");
     var ang = e.target.closest("[data-angle]");
     if(ang){
@@ -150,7 +162,7 @@ if(grid){
   var filters = document.querySelectorAll("#catFilters button");
   function applyFilter(f){
     var shown = 0;
-    grid.querySelectorAll(".cat-card").forEach(function(card){
+    track.querySelectorAll(".cat-card").forEach(function(card){
       var ok = (f === "todos" || card.getAttribute("data-cat") === f);
       card.style.display = ok ? "" : "none";
       if(ok) shown++;
@@ -159,6 +171,9 @@ if(grid){
       var priced = CATALOGO.filter(function(it){ return it.price !== null; }).length;
       countEl.innerHTML = "Mostrando <b>" + shown + "</b> de <b>" + CATALOGO.length + "</b> productos · <b>" + priced + "</b> con precio confirmado · <b>" + (CATALOGO.length - priced) + "</b> por cotizar";
     }
+    if(viewport){ viewport.scrollLeft = 0; }
+    stripMeasure();
+    stripUpdateDots();
     if(window.ScrollTrigger){ ScrollTrigger.refresh(); }
   }
   filters.forEach(function(btn){
@@ -168,6 +183,81 @@ if(grid){
       applyFilter(btn.getAttribute("data-filter"));
     });
   });
+  /* ── Tira horizontal: medir, puntos, flechas, arrastre ── */
+  function stripMeasure(){
+    if(!viewport || !track.children.length) return;
+    var first = null;
+    for(var i = 0; i < track.children.length; i++){
+      if(track.children[i].style.display !== "none"){ first = track.children[i]; break; }
+    }
+    if(!first) return;
+    STRIP.cardW = first.offsetWidth + 20;
+    var visibleW = 0;
+    track.querySelectorAll(".cat-card").forEach(function(card){
+      if(card.style.display !== "none") visibleW += STRIP.cardW;
+    });
+    STRIP.pages = Math.max(1, Math.ceil(visibleW / viewport.clientWidth));
+    var dots = "";
+    for(var p = 0; p < STRIP.pages; p++){ dots += '<button aria-label="Ir a la página ' + (p + 1) + ' del catálogo"></button>'; }
+    if(dotsEl){ dotsEl.innerHTML = dots; }
+  }
+  function stripUpdateDots(){
+    if(!dotsEl || !dotsEl.children.length || !viewport) return;
+    var page = Math.min(STRIP.pages - 1, Math.floor(viewport.scrollLeft / viewport.clientWidth));
+    if(page < 0) page = 0;
+    for(var i = 0; i < dotsEl.children.length; i++){
+      dotsEl.children[i].classList.toggle("on", i === page);
+    }
+  }
+  function snapStrip(){
+    if(!viewport) return;
+    var target = Math.round(viewport.scrollLeft / STRIP.cardW) * STRIP.cardW;
+    viewport.scrollTo({left: target, behavior: "smooth"});
+  }
+  function stripStep(dir){
+    if(!viewport) return;
+    var step = Math.max(1, Math.round(viewport.clientWidth * 0.8 / STRIP.cardW)) * STRIP.cardW;
+    viewport.scrollBy({left: dir * step, behavior: "smooth"});
+    setTimeout(snapStrip, 450);
+  }
+  if(prevBtn){ prevBtn.addEventListener("click", function(){ stripStep(-1); }); }
+  if(nextBtn){ nextBtn.addEventListener("click", function(){ stripStep(1); }); }
+  if(dotsEl){
+    dotsEl.addEventListener("click", function(e){
+      var btn = e.target.closest("button");
+      if(!btn) return;
+      var idx = Array.prototype.indexOf.call(dotsEl.children, btn);
+      viewport.scrollTo({left: idx * viewport.clientWidth, behavior: "smooth"});
+      setTimeout(snapStrip, 650);
+    });
+  }
+  if(viewport){
+    viewport.addEventListener("scroll", function(){ stripUpdateDots(); }, {passive: true});
+    var dStartX = 0, dStartScroll = 0, dMoved = 0;
+    viewport.addEventListener("pointerdown", function(e){
+      STRIP.dragging = true; STRIP.dragged = false;
+      dStartX = e.clientX; dStartScroll = viewport.scrollLeft; dMoved = 0;
+      viewport.classList.add("dragging");
+      try{ viewport.setPointerCapture(e.pointerId); }catch(_){}
+    });
+    viewport.addEventListener("pointermove", function(e){
+      if(!STRIP.dragging) return;
+      var dx = e.clientX - dStartX;
+      dMoved = Math.max(dMoved, Math.abs(dx));
+      if(dMoved > 7){ STRIP.dragged = true; }
+      viewport.scrollLeft = dStartScroll - dx;
+    });
+    function endStripDrag(){
+      if(!STRIP.dragging) return;
+      STRIP.dragging = false;
+      viewport.classList.remove("dragging");
+      if(STRIP.dragged){ snapStrip(); setTimeout(function(){ STRIP.dragged = false; }, 350); }
+    }
+    viewport.addEventListener("pointerup", endStripDrag);
+    viewport.addEventListener("pointercancel", endStripDrag);
+    window.addEventListener("resize", function(){ stripMeasure(); stripUpdateDots(); });
+    window.addEventListener("load", function(){ stripMeasure(); stripUpdateDots(); });
+  }
   applyFilter("todos");
 }
 
