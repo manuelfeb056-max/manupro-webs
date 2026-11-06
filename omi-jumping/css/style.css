@@ -529,3 +529,74 @@ html:not(.js) .rv{opacity:1;transform:none}
   .game-arena{height:280px}
 }
 
+
+/* ══════════ CATÁLOGO v12 · 44 ítems + Anuncios + ofertas ══════════ */
+.cat-filters{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:26px}
+.cat-filters button{font-family:var(--font-b);font-weight:600;font-size:.95rem;padding:10px 18px;border-radius:99px;border:2px solid var(--royal);background:#fff;color:var(--royal);transition:.2s}
+.cat-filters button:hover{border-color:var(--sky);color:var(--sky-d)}
+.cat-filters button.on{background:var(--royal);color:#fff}
+.cat-count{text-align:center;color:var(--muted);margin-top:14px;font-size:.95rem}
+.cat-count b{color:var(--royal)}
+.cat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:28px}
+.cat-card{background:#fff;border:1.5px solid var(--line);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow-sm);display:flex;flex-direction:column;transition:transform .25s,box-shadow .25s}
+.cat-card:hover{transform:translateY(-6px);box-shadow:var(--shadow)}
+.cat-media{position:relative;aspect-ratio:4/3;overflow:hidden;background:var(--bg-soft);cursor:pointer}
+.cat-media img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.cat-card:hover .cat-media img{transform:scale(1.06)}
+.cat-tag{position:absolute;top:12px;left:12px;background:var(--sun);color:var(--royal);font-family:var(--font-b);font-weight:700;font-size:.78rem;padding:6px 12px;border-radius:99px;box-shadow:0 4px 12px rgba(0,0,0,.2);z-index:2}
+.cat-tag.blue{background:var(--royal);color:#fff}
+.cat-tag.red{background:var(--red);color:#fff}
+.cat-body{padding:18px 20px 20px;display:flex;flex-direction:column;gap:7px;flex:1}
+.cat-body h3{font-size:1.22rem}
+.cat-body p{font-size:.95rem;color:var(--muted);flex:1}
+.cat-price{font-family:var(--font-t);font-weight:800;font-size:1.5rem;color:var(--red)}
+.cat-price small{font-size:.85rem;font-family:var(--font-b);font-weight:600;color:var(--muted)}
+.cat-price.cotiza small{font-size:1.02rem;color:var(--royal)}
+.cat-foot{margin-top:4px}
+.cat-foot .btn{width:100%}
+.cat-angles{display:flex;gap:8px;margin-top:2px}
+.cat-angles img{width:64px;height:48px;object-fit:cover;border-radius:10px;border:2px solid var(--line);cursor:pointer}
+.cat-angles img:hover{border-color:var(--sky)}
+
+/* Ofertas ICEE y Mantecado (dentro del catálogo) */
+.off-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;margin-top:48px}
+.off-card{background:linear-gradient(180deg,#fff,#fff8d6);border:2px solid var(--sun);border-radius:var(--radius);padding:26px;box-shadow:var(--shadow-sm)}
+.off-card h3{font-size:1.5rem;margin-bottom:4px}
+.off-note{font-size:.92rem;color:var(--muted);margin-bottom:16px}
+.off-tier{display:flex;justify-content:space-between;align-items:center;gap:12px;background:#fff;border:1.5px solid var(--line);border-radius:14px;padding:12px 16px;margin-bottom:10px}
+.off-tier b{font-family:var(--font-t);font-size:1.05rem;color:var(--royal)}
+.off-tier span{font-size:.9rem;color:var(--muted);text-align:right}
+.off-price{font-family:var(--font-t);font-weight:800;font-size:1.5rem;color:var(--red);white-space:nowrap}
+.off-lists{font-size:.92rem;color:var(--muted);margin:12px 0 16px;display:grid;gap:6px}
+.off-lists b{color:var(--royal)}
+
+/* Anuncios: flyers */
+.ad-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;margin-top:28px}
+.ad-card{background:#fff;border:1.5px solid var(--line);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow-sm);display:flex;flex-direction:column;transition:transform .25s,box-shadow .25s}
+.ad-card:hover{transform:translateY(-6px);box-shadow:var(--shadow)}
+.ad-media{position:relative;aspect-ratio:1/1;overflow:hidden;background:#fff;cursor:pointer}
+.ad-media img{width:100%;height:100%;object-fit:contain}
+.ad-body{padding:18px 20px 20px;display:flex;flex-direction:column;gap:7px;flex:1}
+.ad-body h3{font-size:1.22rem}
+.ad-body p{font-size:.95rem;color:var(--muted);flex:1}
+
+/* Anuncios: videos */
+.vid-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;margin-top:28px}
+.vid-card{background:#fff;border:1.5px solid var(--line);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow-sm);display:flex;flex-direction:column}
+.vid-card video{width:100%;aspect-ratio:4/3;background:#000;display:block;object-fit:contain}
+.vid-body{padding:18px 20px 20px;display:flex;flex-direction:column;gap:7px;flex:1}
+.vid-body h3{font-size:1.22rem}
+.vid-sub{font-size:.92rem;color:var(--muted)}
+
+@media(max-width:1020px){
+  .cat-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:640px){
+  .cat-grid{grid-template-columns:1fr}
+  .off-grid{grid-template-columns:1fr}
+  .ad-grid{grid-template-columns:1fr}
+  .vid-grid{grid-template-columns:1fr}
+  .cat-filters button{padding:8px 14px;font-size:.88rem}
+  .off-tier{flex-direction:column;align-items:flex-start;gap:4px}
+  .off-tier span{text-align:left}
+}

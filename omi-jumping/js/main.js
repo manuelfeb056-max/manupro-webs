@@ -645,14 +645,24 @@ var BUILDER = [
   {id: "mediana", name: "Chorrera Mediana", desc: "Elige el tamaño", price: null, sizes: [["16 x 30 · $225", 225], ["19 x 30 · $250", 250], ["Grande · $275", 275]]},
   {id: "obstaculos", name: "Carrera de Obstáculos", desc: "Desde $299", price: 299},
   {id: "obst60", name: "Carrera de Obstáculos 60 pies", desc: "La gigante", price: 350},
-  {id: "espuma", name: "Cañón de Espuma", desc: "Desde $150 el día", price: 150},
+  {id: "espuma", name: "Cañón de Espuma", desc: "$175 · precio confirmado", price: 175},
   {id: "photo", name: "Photobooth 360", desc: "Desde $150", price: 150},
   {id: "toro", name: "Toro Mecánico", desc: "El reto de la fiesta", price: null},
   {id: "playground", name: "Playground", desc: "Lo nuevo, para los más pequeños", price: null},
-  {id: "mantecado", name: "Máquina de Mantecado", desc: "3 sabores", price: null},
+  {id: "mantecado", name: "Máquina de Mantecado", desc: "Chocolate y vainilla · elige la oferta", price: null, sizes: [["Oferta 1 · 2h · $280", 280], ["Oferta 2 · 3h · $325", 325], ["Oferta 3 · 4h · $380", 380]]},
+  {id: "icee", name: "Máquina ICEE", desc: "3 sabores · elige la oferta", price: null, sizes: [["Oferta 1 · 2h · $290", 290], ["Oferta 2 · 3h · $350", 350], ["Oferta 3 · 4h · $450", 450]]},
+  {id: "castillopeq", name: "Castillo Pequeño Azul y Amarillo", desc: "Precio confirmado", price: 90},
+  {id: "combomorado", name: "Combo Castillo + Chorrera Morado", desc: "Con piscina · precio confirmado", price: 350},
+  {id: "chorreramorada", name: "Chorrera Morada", desc: "Alta, con piscina · precio confirmado", price: 350},
+  {id: "chorreraverde", name: "Chorrera Verde", desc: "Con piscina · precio confirmado", price: 299},
+  {id: "callofduty", name: "Carrera de Obstáculos Call of Duty", desc: "Camuflaje · precio confirmado", price: 450},
+  {id: "hoopzone", name: "Hoop Zone", desc: "Baloncesto inflable · precio confirmado", price: 175},
+  {id: "deportivo4", name: "Juego Deportivo 4 en 1", desc: "Fútbol, béisbol, baloncesto y fútbol americano · precio confirmado", price: 200},
   {id: "comida", name: "Popcorn, Algodón, Piraguas y Slush", desc: "Máquinas de comida y mealprep", price: null},
-  {id: "gigantes", name: "Juegos Gigantes", desc: "Double Axe Throw y más", price: null},
-  {id: "mesas", name: "Mesas, Sillas y Carpa", desc: "Todo el equipo para tu evento", price: null},
+  {id: "gigantes", name: "Juegos Gigantes", desc: "Double Axe Throw y más", price: 175},
+  {id: "carpa20", name: "Carpa 20x20", desc: "Precio confirmado", price: 200},
+  {id: "carpa10", name: "Carpa 10x20", desc: "Precio confirmado", price: 175},
+  {id: "sillamesas", name: "Sillas y Mesas", desc: "Sillas $1.00 c/u · Mesas 6 pies $6.00 · Redondas $10.00", price: null},
   {id: "catering", name: "Catering y Postres", desc: "Nachos con queso y más", price: null}
 ];
 var builderGrid = document.getElementById("builderGrid");
@@ -664,7 +674,7 @@ if(builderGrid){
       : '<span class="b-price"><small>A cotizar</small></span>';
     var selHtml = "";
     if(it.sizes){
-      selHtml = '<select data-size-for="' + it.id + '" aria-label="Tamaño de Chorrera Mediana">';
+      selHtml = '<select data-size-for="' + it.id + '" aria-label="Opciones de ' + it.name + '">';
       it.sizes.forEach(function(s){ selHtml += '<option value="' + s[1] + '">' + s[0] + "</option>"; });
       selHtml += "</select>";
     }
@@ -822,6 +832,7 @@ function openSingleLB(src, alt){
   document.body.style.overflow = "hidden";
   pauseAllCarousels(60000);
 }
+window.openSingleLB = openSingleLB; /* v12: el catálogo la usa para abrir fotos */
 /* Experiencia: foto completa con X + prev/next (igual que la galería) */
 function expCount(){ return (typeof EXP !== "undefined") ? EXP.length : 0; }
 function openExpLB(i){
