@@ -413,7 +413,7 @@ if(svcViewport){
   svcViewport.addEventListener("mouseleave", function(){ if(!SVC.dragging){ svcResumeSoon(2000); } });
   svcViewport.addEventListener("click", function(e){
     if(SVC.dragged) return;
-    /* Reservar/Cotizar son enlaces: que sigan a WhatsApp, sin abrir la foto */
+    /* Reservar son enlaces: que sigan a WhatsApp, sin abrir la foto */
     if(e.target.closest("a, button")) return;
     var card = e.target.closest(".svc-card");
     if(!card) return;
@@ -612,7 +612,7 @@ menu.querySelectorAll("a").forEach(function(a){
 })();
 
 
-/* ── Cotizador: abre WhatsApp con el mensaje prellenado ── */
+/* ── Arma tu Fiesta: abre WhatsApp con el mensaje prellenado ── */
 var form = document.getElementById("quoteForm");
 form.addEventListener("submit", function(e){
   e.preventDefault();
@@ -711,7 +711,7 @@ if(builderGrid){
     } else if(it.price !== null){
       priceHtml = '<span class="b-price">$' + it.price + "</span>";
     } else {
-      priceHtml = '<span class="b-price"><small>A cotizar</small></span>';
+      priceHtml = '<span class="b-price"><small>Precio a confirmar</small></span>';
     }
     var selHtml = "";
     if(it.sizes){
@@ -750,7 +750,7 @@ function builderUpdate(){
   var listHtml = "";
   picked.forEach(function(p){
     if(p.price !== null){ total += p.price; listHtml += "<li><span>" + p.item.name + "</span><b>$" + p.price + "</b></li>"; }
-    else { hasQuote = true; listHtml += "<li><span>" + p.item.name + "</span><b>A cotizar</b></li>"; }
+    else { hasQuote = true; listHtml += "<li><span>" + p.item.name + "</span><b>Precio a confirmar</b></li>"; }
   });
   listEl.innerHTML = listHtml;
   /* Los ítems con tallas/ofertas muestran el precio de la opción elegida */
@@ -765,12 +765,12 @@ function builderUpdate(){
     totalEl.textContent = "$0";
     noteEl.textContent = "Marca al menos un servicio para ver tu total.";
   } else if(total === 0){
-    totalEl.textContent = "A cotizar";
+    totalEl.textContent = "A confirmar";
     noteEl.textContent = "Te confirmamos el precio por WhatsApp.";
   } else {
     totalEl.textContent = "$" + total;
     noteEl.textContent = hasQuote
-      ? "Total estimado de los servicios con precio. Los servicios a cotizar se confirman por WhatsApp."
+      ? "Total estimado de los servicios con precio. Los servicios con precio a confirmar se confirman por WhatsApp."
       : "Total estimado según precios confirmados.";
   }
   document.querySelectorAll(".b-item").forEach(function(label){
@@ -798,11 +798,11 @@ if(builderGrid){
     var total = 0;
     picked.forEach(function(p){
       if(p.price !== null){ total += p.price; lines.push("- " + p.item.name + " ($" + p.price + ")"); }
-      else { lines.push("- " + p.item.name + " (a cotizar)"); }
+      else { lines.push("- " + p.item.name + " (precio a confirmar)"); }
     });
     lines.push("");
     lines.push("Fecha del evento: " + fechaTxt);
-    lines.push(total > 0 ? "Total estimado: $" + total : "Total: a cotizar");
+    lines.push(total > 0 ? "Total estimado: $" + total : "Total: a confirmar");
     lines.push("¿Me confirmas disponibilidad y precio final?");
     window.open("https://wa.me/" + WA_NUMBER + "?text=" + encodeURIComponent(lines.join("\n")), "_blank", "noopener");
   });

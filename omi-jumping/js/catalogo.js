@@ -1,7 +1,7 @@
 /* ═══════════════ OMI JUMPING · CATÁLOGO v14 ═══════════════
    Datos del documento FINAL 2026-11-06 (catalogo-omi-jumping-2026-11-06.md):
    44 ítems únicos (47 tarjetas: carpas/mesas/sillas son 5 precios con 2 fotos),
-   47 tarjetas con precio SEGURO confirmado por Omar, 0 por cotizar.
+   47 tarjetas con precio SEGURO confirmado por Omar, todas con precio.
    Precios completos 2026-11-06: regla de Omar + lista de respuestas 6-23.
    #4 = $165 y #7 = $90 (precios por foto, pendientes de confirmación).
    Revisión de precios 2026-11-06 + respuestas de Omar: catálogo COMPLETO 44/44.
@@ -9,12 +9,12 @@
    Sin apóstrofes en los strings (regla standing: rompen el form de WhatsApp). */
 (function(){
 "use strict";
-var V = "?v=14";
+var V = "?v=15";
 var IMG = "img/catalogo/";
 var VID = "img/catalogo/videos/";
 
 /* cat: castillos | combos | chorreras | juegos | obstaculos | toro | carpas | espuma
-   price: string con el precio SEGURO, o null = "Cotiza por WhatsApp"
+   price: string con el precio SEGURO, o null = "Precio a confirmar"
    unit: texto extra del precio (ej. "c/u")
    tag: "VIDEO" | "RENDER" | "2 ANGULOS" | null
    img2: segundo ángulo (misma unidad) */
@@ -80,8 +80,8 @@ var CATALOGO = [
 var ANUNCIOS = [
   {img: "flyer-carnival-nuevos-inventario.jpg", name: "Juegos de Carnival — Nuevos en inventario", desc: "Casetas de juegos de carnival: basketball, baseball, soccer, tiro al blanco y payaso.", wa: "Hola Omi Jumping, quiero reservar los juegos de carnival nuevos en inventario."},
   {img: "flyer-pagos-klarna-paypal.jpg", name: "Paga con Klarna o PayPal", desc: "En Omi Jumping puedes pagar con Klarna, PayPal, Mastercard y AMEX.", wa: "Hola Omi Jumping, quiero información sobre los métodos de pago."},
-  {img: "juego-tanque-de-agua-dunk-tank.jpg", name: "Dunk Tank — Tanque de Agua", desc: "Anuncio del producto. Pregunta el precio por WhatsApp.", wa: "Hola Omi Jumping, quiero cotizar el Dunk Tank (Tanque de Agua)."},
-  {img: "juego-connect-four-inflable.jpg", name: "Connect Four Inflable", desc: "Anuncio del producto. Pregunta el precio por WhatsApp.", wa: "Hola Omi Jumping, quiero cotizar el Connect Four inflable."}
+  {img: "juego-tanque-de-agua-dunk-tank.jpg", name: "Dunk Tank — Tanque de Agua", desc: "Anuncio del producto. Pregunta por WhatsApp.", wa: "Hola Omi Jumping, quiero información del Dunk Tank (Tanque de Agua)."},
+  {img: "juego-connect-four-inflable.jpg", name: "Connect Four Inflable", desc: "Anuncio del producto. Pregunta por WhatsApp.", wa: "Hola Omi Jumping, quiero información del Connect Four inflable."}
 ];
 
 /* ── Videos de Anuncios (preload none, sin autoplay) ── */
@@ -127,12 +127,12 @@ if(track){
     else if(it.tag === "2 ANGULOS") tagHtml = '<span class="cat-tag">2 ÁNGULOS</span>';
     var priceHtml = (it.price !== null)
       ? '<p class="cat-price">' + priceLabel(it) + "</p>"
-      : '<p class="cat-price cotiza"><small>Cotiza por WhatsApp</small></p>';
+      : '<p class="cat-price noprice"><small>Precio a confirmar</small></p>';
     var anglesHtml = "";
     if(it.img2){
       anglesHtml = '<div class="cat-angles"><img src="' + IMG + it.img2 + V + '" alt="Otro ángulo de ' + it.name + '" loading="lazy" data-angle="' + i + '"></div>';
     }
-    var btnTxt = (it.price !== null) ? "Reservar" : "Cotizar";
+    var btnTxt = "Reservar";
     html += '<article class="cat-card rv" data-cat="' + it.cat + '">' +
       '<div class="cat-media" data-photo="' + i + '">' + tagHtml +
         '<img src="' + IMG + it.img + V + '" alt="' + it.name + ' de Omi Jumping" loading="lazy"></div>' +
@@ -169,7 +169,7 @@ if(track){
     });
     if(countEl){
       var priced = CATALOGO.filter(function(it){ return it.price !== null; }).length;
-      countEl.innerHTML = "Mostrando <b>" + shown + "</b> de <b>" + CATALOGO.length + "</b> productos · <b>" + priced + "</b> con precio confirmado · <b>" + (CATALOGO.length - priced) + "</b> por cotizar";
+      countEl.innerHTML = "Mostrando <b>" + shown + "</b> de <b>" + CATALOGO.length + "</b> productos · <b>" + priced + "</b> con precio confirmado";
     }
     if(viewport){ viewport.scrollLeft = 0; }
     stripMeasure();
@@ -288,8 +288,8 @@ if(vidGrid){
   VIDEOS.forEach(function(v){
     var priceHtml = (v.price !== null)
       ? '<p class="cat-price">' + "$" + v.price + "</p>"
-      : '<p class="cat-price cotiza"><small>' + v.sub + "</small></p>";
-    var btnTxt = v.confirm ? "Preguntar por WhatsApp" : ((v.price !== null) ? "Reservar" : "Cotizar");
+      : '<p class="cat-price noprice"><small>' + v.sub + "</small></p>";
+    var btnTxt = v.confirm ? "Preguntar por WhatsApp" : "Reservar";
     var wa = v.confirm
       ? "Hola Omi Jumping, quiero información sobre " + v.wa + ". ¿Lo tienen disponible para mi fiesta?"
       : "Hola Omi Jumping, quiero reservar " + v.wa + (v.price ? " ($" + v.price + ")" : "") + ". ¿Me confirmas disponibilidad?";
