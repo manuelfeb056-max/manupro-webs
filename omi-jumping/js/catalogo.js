@@ -1,12 +1,14 @@
-/* ═══════════════ OMI JUMPING · CATÁLOGO v12 ═══════════════
+/* ═══════════════ OMI JUMPING · CATÁLOGO v13 ═══════════════
    Datos del documento FINAL 2026-11-06 (catalogo-omi-jumping-2026-11-06.md):
    44 ítems únicos (47 tarjetas: carpas/mesas/sillas son 5 precios con 2 fotos),
-   13 tarjetas con precio SEGURO confirmado por Omar, 34 "Cotiza por WhatsApp".
+   24 tarjetas con precio SEGURO confirmado por Omar, 23 "Cotiza por WhatsApp".
+   Revisión de precios 2026-11-06: #9 combo morado y #32 Hoop Zone SIN precio
+   (los $350/#9 y $175/#32 de v12 eran de otra unidad); #41 toro = $175 SEGURO.
    Precio SEGURO solo cuando el documento lo marca SEGURO. NUNCA se inventa un precio.
    Sin apóstrofes en los strings (regla standing: rompen el form de WhatsApp). */
 (function(){
 "use strict";
-var V = "?v=12";
+var V = "?v=13";
 var IMG = "img/catalogo/";
 var VID = "img/catalogo/videos/";
 
@@ -20,16 +22,16 @@ var CATALOGO = [
   {cat: "castillos", name: "Castillo Rojo y Azul", desc: "Torres cónicas rojas, columnas grises, rampa roja con punta verde.", img: "castillo-rojo-azul-01.jpg", price: null},
   {cat: "castillos", name: "Castillo Morado con Corona", desc: "Morado y rojo con corona amarilla y torres rojas.", img: "castillo-morado-corona.jpg", price: null},
   {cat: "castillos", name: "Castillo Rosa y Azul", desc: "Conos azules y rampa azul.", img: "castillo-rosa-azul.jpg", price: null},
-  {cat: "castillos", name: "Castillo Rojo y Azul con Malla", desc: "Frente de malla, rampa azul con rayas rojas.", img: "castillo-rojo-azul-02.jpg", price: null},
+  {cat: "castillos", name: "Castillo Rojo y Azul con Malla", desc: "Frente de malla, rampa azul con rayas rojas.", img: "castillo-rojo-azul-02.jpg", price: "165"},
   {cat: "castillos", name: "Castillo Toy Story", desc: "Temático Toy Story con Woody y Buzz en panel, en cancha techada.", img: "castillo-toy-story.jpg", price: null},
   {cat: "castillos", name: "Castillo Azul y Naranja", desc: "Azul y naranja, foto de almacén.", img: "castillo-azul-naranja.jpg", price: null},
   {cat: "castillos", name: "Castillo Pequeño Azul y Amarillo", desc: "Columnas amarillas y rampa azul.", img: "castillo-azul-amarillo-pequeno.jpg", price: "90"},
-  {cat: "castillos", name: "Castillo Pequeño Morado y Rosa", desc: "Conos morados, paredes rosas, escalón rosa y azul. Sin chorrera.", img: "castillo-morado-rosa.jpg", price: null},
+  {cat: "castillos", name: "Castillo Pequeño Morado y Rosa", desc: "Conos morados, paredes rosas, escalón rosa y azul. Sin chorrera.", img: "castillo-morado-rosa.jpg", price: "100"},
   /* ── Combos castillo + chorrera (10) ── */
-  {cat: "combos", name: "Combo Castillo + Chorrera Morado", desc: "Chorrera lateral morada y azul, con piscina.", img: "combo-castillo-chorrera-morado.jpg", price: "350"},
-  {cat: "combos", name: "Combo Castillo + Chorrera con Piscina", desc: "Conos azul y rojo, columnas rojas, arco gris, piscina redonda azul y morada.", img: "combo-castillo-chorrera-azul-naranja-piscina.jpg", img2: "combo-castillo-chorrera-azul-naranja-piscina-angulo-2.jpg", price: null, tag: "2 ANGULOS"},
+  {cat: "combos", name: "Combo Castillo + Chorrera Morado", desc: "Chorrera lateral morada y azul, con piscina.", img: "combo-castillo-chorrera-morado.jpg", price: null},
+  {cat: "combos", name: "Combo Castillo + Chorrera con Piscina", desc: "Conos azul y rojo, columnas rojas, arco gris, piscina redonda azul y morada.", img: "combo-castillo-chorrera-azul-naranja-piscina.jpg", img2: "combo-castillo-chorrera-azul-naranja-piscina-angulo-2.jpg", price: "145", tag: "2 ANGULOS"},
   {cat: "combos", name: "Combo 4 en 1 (13x20)", desc: "Azul, morado y blanco con doble chorrera y piscina. Medida en la foto: 4en1 (13x20).", img: "combo-4en1-13x20.jpg", price: null},
-  {cat: "combos", name: "Combo Rojo y Amarillo con Piscina", desc: "Torres rojas con coronas grises, chorrera roja y amarilla, piscina azul.", img: "combo-castillo-chorrera-rojo-amarillo-piscina.jpg", price: null},
+  {cat: "combos", name: "Combo Rojo y Amarillo con Piscina", desc: "Torres rojas con coronas grises, chorrera roja y amarilla, piscina azul.", img: "combo-castillo-chorrera-rojo-amarillo-piscina.jpg", price: "275"},
   {cat: "combos", name: "Combo Rosa y Morado (Turquesa)", desc: "Sin conos, techo turquesa, chorrera turquesa, escalón rosa y turquesa.", img: "combo-rosa-morado-chorrera-turquesa.jpg", price: null},
   {cat: "combos", name: "Combo Azul y Verde (Playa)", desc: "Columnas azules, conos azul oscuro y verde, piscina naranja y amarilla.", img: "combo-azul-verde-playa-piscina.jpg", price: null},
   {cat: "combos", name: "Combo Rojo y Verde", desc: "Columnas verdes, conos naranja, chorrera y piscina rojas, base roja.", img: "combo-rojo-verde-chorrera-piscina.jpg", price: null},
@@ -40,29 +42,29 @@ var CATALOGO = [
   {cat: "chorreras", name: "Chorrera Tropical con Palmeras", desc: "Naranja, verde, azul y morado, con piscina al final.", img: "chorrera-tropical-palmeras.jpg", price: null},
   {cat: "chorreras", name: "Chorrera Grande Azul", desc: "Azul, amarilla y roja con piscina, al aire libre.", img: "chorrera-grande-azul.jpg", price: null},
   {cat: "chorreras", name: "Chorrera Wild Thing", desc: "Azul y morada con palmeras y letrero WILD THING, piscina naranja.", img: "chorrera-wild-thing.jpg", price: null},
-  {cat: "chorreras", name: "Chorrera de Helado", desc: "Temática de helado: azul, morada y amarilla con cono gigante y paletas.", img: "chorrera-helado.jpg", price: null},
+  {cat: "chorreras", name: "Chorrera de Helado", desc: "Temática de helado: azul, morada y amarilla con cono gigante y paletas.", img: "chorrera-helado.jpg", price: "275"},
   {cat: "chorreras", name: "Chorrera Blazing River", desc: "Roja, amarilla y gris, doble chorrera con slip-n-slide y piscina.", img: "chorrera-blazing-river.jpg", price: null},
-  {cat: "chorreras", name: "Chorrera Amarilla con Slip-n-Slide", desc: "Amarilla y naranja con slip-n-slide largo y piscina al final.", img: "chorrera-amarilla-slip-n-slide.jpg", price: null},
+  {cat: "chorreras", name: "Chorrera Amarilla con Slip-n-Slide", desc: "Amarilla y naranja con slip-n-slide largo y piscina al final.", img: "chorrera-amarilla-slip-n-slide.jpg", price: "450"},
   {cat: "chorreras", name: "Chorrera Tropical Roja", desc: "Roja y verde con palmeras y piscina azul. Imagen de fabricante, no foto instalada.", img: "chorrera-tropical-roja-render.jpg", price: null, tag: "RENDER"},
-  {cat: "chorreras", name: "Chorrera Tropical con Sol", desc: "Sol con lentes en la parte superior, palmeras, azul, naranja y verde.", img: "chorrera-tropical-sol.jpg", price: null},
-  {cat: "chorreras", name: "Chorrera Azul y Verde con Palmeras", desc: "Azul y verde con palmeras y piscina azul.", img: "chorrera-azul-verde-palmeras.jpg", price: null},
-  {cat: "chorreras", name: "Chorrera Morada y Azul con Palmeras", desc: "Larga, morada y azul con palmeras y piscina alargada.", img: "chorrera-morada-azul-palmeras.jpg", price: null},
-  {cat: "chorreras", name: "Chorrera Azul y Amarilla con Arcos", desc: "Alta, con arcos y piscina.", img: "chorrera-azul-amarilla-arcos-piscina.jpg", price: null},
+  {cat: "chorreras", name: "Chorrera Tropical con Sol", desc: "Sol con lentes en la parte superior, palmeras, azul, naranja y verde.", img: "chorrera-tropical-sol.jpg", price: "275"},
+  {cat: "chorreras", name: "Chorrera Azul y Verde con Palmeras", desc: "Azul y verde con palmeras y piscina azul.", img: "chorrera-azul-verde-palmeras.jpg", price: "275"},
+  {cat: "chorreras", name: "Chorrera Morada y Azul con Palmeras", desc: "Larga, morada y azul con palmeras y piscina alargada.", img: "chorrera-morada-azul-palmeras.jpg", price: "450"},
+  {cat: "chorreras", name: "Chorrera Azul y Amarilla con Arcos", desc: "Alta, con arcos y piscina.", img: "chorrera-azul-amarilla-arcos-piscina.jpg", price: "450"},
   {cat: "chorreras", name: "Chorrera Morada (Alta)", desc: "Alta, morada y gris con laterales grises y piscina azul. Video en Anuncios.", img: "chorrera-morada-gris-almacen.jpg", price: "350"},
   {cat: "chorreras", name: "Chorrera Verde", desc: "Verde con laterales amarillos y piscina verde, vista de drone. Video en Anuncios.", img: "videos/poster-chorrera-verde.jpg", price: "299", tag: "VIDEO"},
   /* ── Juegos interactivos (4) ── */
-  {cat: "juegos", name: "Hoop Zone", desc: "Baloncesto inflable rojo y negro, con aros y puntos (30/50/10).", img: "juego-hoop-zone-baloncesto.jpg", price: "175"},
-  {cat: "juegos", name: "Axe Throw", desc: "Dos dianas de tiro de hacha, letreros THROW.", img: "juego-axe-throw.jpg", price: null},
+  {cat: "juegos", name: "Hoop Zone", desc: "Baloncesto inflable rojo y negro, con aros y puntos (30/50/10).", img: "juego-hoop-zone-baloncesto.jpg", price: null},
+  {cat: "juegos", name: "Axe Throw", desc: "Dos dianas de tiro de hacha, letreros THROW.", img: "juego-axe-throw.jpg", price: "175"},
   {cat: "juegos", name: "Big Throw Down", desc: "3 estaciones: 2 Axe Challenge y 1 Dart Throw al centro.", img: "juego-big-throw-down.jpg", price: null},
   {cat: "juegos", name: "Juego Deportivo 4 en 1", desc: "Fútbol, béisbol, baloncesto y fútbol americano, con pelotas.", img: "juego-deportivo-4-en-1.jpg", price: "200"},
   /* ── Carreras de obstáculos (5) ── */
   {cat: "obstaculos", name: "Carrera de Obstáculos Gigante", desc: "Amarilla y negra instalada en coliseo.", img: "carrera-obstaculos-gigante.jpg", price: null},
-  {cat: "obstaculos", name: "Carrera de Obstáculos Verde y Amarilla", desc: "Verde, amarilla, roja y negra con túneles y muro de escalar.", img: "carrera-obstaculos-verde-amarilla.jpg", price: null},
+  {cat: "obstaculos", name: "Carrera de Obstáculos Verde y Amarilla", desc: "Verde, amarilla, roja y negra con túneles y muro de escalar.", img: "carrera-obstaculos-verde-amarilla.jpg", price: "350"},
   {cat: "obstaculos", name: "Carrera de Obstáculos Call of Duty", desc: "Camuflaje, vista aérea, túneles y muros rojo y negro. Video en Anuncios.", img: "carrera-obstaculos-camuflaje.jpg", price: "450"},
   {cat: "obstaculos", name: "Carrera de Obstáculos con Tubos", desc: "Roja, amarilla, azul y negra con arcos de tubos, túnel y muro de escalar.", img: "carrera-obstaculos-roja-amarilla-tubos.jpg", price: null},
   {cat: "obstaculos", name: "Carrera de Obstáculos Gigante Roja y Verde", desc: "Roja, verde, amarilla y azul con torres de castillo, chorrera y piscina.", img: "carrera-obstaculos-gigante-roja-verde.jpg", price: null},
   /* ── Toro mecánico (1) ── */
-  {cat: "toro", name: "Toro Mecánico", desc: "Estructura roja techada y consola de control amarilla. Video en Anuncios.", img: "toro-mecanico.jpg", price: null},
+  {cat: "toro", name: "Toro Mecánico", desc: "Estructura roja techada y consola de control amarilla. Video en Anuncios.", img: "toro-mecanico.jpg", price: "175"},
   /* ── Carpas, mesas y sillas (5 precios, 2 fotos) ── */
   {cat: "carpas", name: "Carpa 20x20", desc: "Carpa blanca para tu evento.", img: "carpa-blanca.jpg", price: "200"},
   {cat: "carpas", name: "Carpa 10x20", desc: "Carpa blanca para tu evento.", img: "carpa-blanca.jpg", price: "175"},
@@ -87,7 +89,7 @@ var VIDEOS = [
   {src: "obstaculo-camuflaje-call-of-duty.mp4", poster: "poster-obstaculo-camuflaje.jpg", title: "Call of Duty — Carrera de Obstáculos", sub: "$450 · Video 0:50", price: "450", wa: "Carrera de Obstáculos Call of Duty"},
   {src: "chorrera-verde-drone.mp4", poster: "poster-chorrera-verde.jpg", title: "Chorrera Verde (Drone)", sub: "$299 · Video 2:12", price: "299", wa: "Chorrera Verde"},
   {src: "chorrera-morada.mp4", poster: "poster-chorrera-morada.jpg", title: "Chorrera Morada", sub: "$350 · Video 0:22", price: "350", wa: "Chorrera Morada"},
-  {src: "toro-mecanico.mp4", poster: "poster-toro-mecanico.jpg", title: "Toro Mecánico", sub: "Cotiza por WhatsApp · Video 0:22", price: null, wa: "Toro Mecánico"},
+  {src: "toro-mecanico.mp4", poster: "poster-toro-mecanico.jpg", title: "Toro Mecánico", sub: "$175 · Video 0:22", price: "175", wa: "Toro Mecánico"},
   {src: "catch-the-stick-por-confirmar.mp4", poster: "poster-catch-the-stick.jpg", title: "¿Quieres este juego en tu fiesta?", sub: "Pregunta por WhatsApp", price: null, wa: "el juego Catch the Stick", confirm: true}
 ];
 
@@ -154,7 +156,8 @@ if(grid){
       if(ok) shown++;
     });
     if(countEl){
-      countEl.innerHTML = "Mostrando <b>" + shown + "</b> de <b>" + CATALOGO.length + "</b> productos · <b>13</b> con precio confirmado · <b>34</b> por cotizar";
+      var priced = CATALOGO.filter(function(it){ return it.price !== null; }).length;
+      countEl.innerHTML = "Mostrando <b>" + shown + "</b> de <b>" + CATALOGO.length + "</b> productos · <b>" + priced + "</b> con precio confirmado · <b>" + (CATALOGO.length - priced) + "</b> por cotizar";
     }
     if(window.ScrollTrigger){ ScrollTrigger.refresh(); }
   }

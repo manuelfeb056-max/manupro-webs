@@ -647,17 +647,29 @@ var BUILDER = [
   {id: "obst60", name: "Carrera de Obstáculos 60 pies", desc: "La gigante", price: 350},
   {id: "espuma", name: "Cañón de Espuma", desc: "$175 · precio confirmado", price: 175},
   {id: "photo", name: "Photobooth 360", desc: "Desde $150", price: 150},
-  {id: "toro", name: "Toro Mecánico", desc: "El reto de la fiesta", price: null},
+  {id: "toro", name: "Toro Mecánico", desc: "El reto de la fiesta · precio confirmado", price: 175},
   {id: "playground", name: "Playground", desc: "Lo nuevo, para los más pequeños", price: null},
   {id: "mantecado", name: "Máquina de Mantecado", desc: "Chocolate y vainilla · elige la oferta", price: null, sizes: [["Oferta 1 · 2h · $280", 280], ["Oferta 2 · 3h · $325", 325], ["Oferta 3 · 4h · $380", 380]]},
   {id: "icee", name: "Máquina ICEE", desc: "3 sabores · elige la oferta", price: null, sizes: [["Oferta 1 · 2h · $290", 290], ["Oferta 2 · 3h · $350", 350], ["Oferta 3 · 4h · $450", 450]]},
   {id: "castillopeq", name: "Castillo Pequeño Azul y Amarillo", desc: "Precio confirmado", price: 90},
-  {id: "combomorado", name: "Combo Castillo + Chorrera Morado", desc: "Con piscina · precio confirmado", price: 350},
+  {id: "castillamalla", name: "Castillo Rojo y Azul con Malla", desc: "Frente de malla · precio confirmado", price: 165},
+  {id: "castillopeqmorado", name: "Castillo Pequeño Morado y Rosa", desc: "Sin chorrera · precio confirmado", price: 100},
+  {id: "combomorado", name: "Combo Castillo + Chorrera Morado", desc: "Con piscina", price: null},
+  {id: "combopiscina", name: "Combo Castillo + Chorrera con Piscina", desc: "Con piscina redonda · precio confirmado", price: 145},
+  {id: "comborojoamarillo", name: "Combo Rojo y Amarillo con Piscina", desc: "Chorrera roja y amarilla · precio confirmado", price: 275},
   {id: "chorreramorada", name: "Chorrera Morada", desc: "Alta, con piscina · precio confirmado", price: 350},
   {id: "chorreraverde", name: "Chorrera Verde", desc: "Con piscina · precio confirmado", price: 299},
+  {id: "chorrerahelado", name: "Chorrera de Helado", desc: "Temática de helado · precio confirmado", price: 275},
+  {id: "chorreraamarilla", name: "Chorrera Amarilla con Slip-n-Slide", desc: "Slip-n-slide largo · precio confirmado", price: 450},
+  {id: "chorrerasol", name: "Chorrera Tropical con Sol", desc: "Sol con lentes · precio confirmado", price: 275},
+  {id: "chorreraazulverde", name: "Chorrera Azul y Verde con Palmeras", desc: "Con palmeras · precio confirmado", price: 275},
+  {id: "chorreramoradaazul", name: "Chorrera Morada y Azul con Palmeras", desc: "Larga, con palmeras · precio confirmado", price: 450},
+  {id: "chorreraazulamarilla", name: "Chorrera Azul y Amarilla con Arcos", desc: "Alta, con arcos · precio confirmado", price: 450},
   {id: "callofduty", name: "Carrera de Obstáculos Call of Duty", desc: "Camuflaje · precio confirmado", price: 450},
-  {id: "hoopzone", name: "Hoop Zone", desc: "Baloncesto inflable · precio confirmado", price: 175},
+  {id: "carreraverde", name: "Carrera de Obstáculos Verde y Amarilla", desc: "Túneles y muro de escalar · precio confirmado", price: 350},
+  {id: "hoopzone", name: "Hoop Zone", desc: "Baloncesto inflable", price: null},
   {id: "deportivo4", name: "Juego Deportivo 4 en 1", desc: "Fútbol, béisbol, baloncesto y fútbol americano · precio confirmado", price: 200},
+  {id: "axethrow", name: "Axe Throw", desc: "Dos dianas de tiro de hacha · precio confirmado", price: 175},
   {id: "comida", name: "Popcorn, Algodón, Piraguas y Slush", desc: "Máquinas de comida y mealprep", price: null},
   {id: "gigantes", name: "Juegos Gigantes", desc: "Double Axe Throw y más", price: 175},
   {id: "carpa20", name: "Carpa 20x20", desc: "Precio confirmado", price: 200},
@@ -1184,5 +1196,21 @@ document.querySelectorAll(".pay-card[data-tilt]").forEach(function(card){
     card.style.transform = "translateY(-8px) rotateX(" + (-y * 10).toFixed(1) + "deg) rotateY(" + (x * 12).toFixed(1) + "deg)";
   });
   card.addEventListener("pointerleave", function(){ card.style.transform = ""; });
+});
+
+/* ── Servicios → Catálogo v13: "Ver en el catálogo" aplica el filtro y baja ──
+   Cada tarjeta de Servicios lleva un enlace con data-filter (castillos,
+   combos, chorreras, juegos, obstaculos, toro, carpas, espuma, todos).
+   El clic aprieta el botón de filtro del catálogo (reusa applyFilter de
+   catalogo.js) y baja suave hasta #catalogo. Sin JS, el href lleva igual. */
+document.querySelectorAll(".svc-cat-link").forEach(function(link){
+  link.addEventListener("click", function(e){
+    e.preventDefault();
+    var f = link.getAttribute("data-filter") || "todos";
+    var btn = document.querySelector('#catFilters button[data-filter="' + f + '"]');
+    if(btn){ btn.click(); }
+    var cat = document.getElementById("catalogo");
+    if(cat){ cat.scrollIntoView({behavior: "smooth"}); }
+  });
 });
 })();

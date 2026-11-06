@@ -215,6 +215,9 @@ html:not(.js) .rv{opacity:1;transform:none}
 .svc-price{font-family:var(--font-t);font-weight:800;font-size:1.45rem;color:var(--red)}
 .svc-price small{font-size:.85rem;font-family:var(--font-b);font-weight:600;color:var(--muted)}
 .svc-foot{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:6px}
+/* v13: "Ver en el catálogo" — cada servicio enlaza a su filtro del catálogo */
+.svc-cat-link{display:inline-block;margin-top:10px;font-weight:700;font-size:.92rem;color:var(--royal);border-bottom:2px solid var(--sun);padding-bottom:1px}
+.svc-cat-link:hover{color:var(--sky-d);border-color:var(--sky)}
 
 /* ══════════ COTIZADOR ══════════ */
 .quote{background:linear-gradient(135deg,var(--royal) 0%,#0a63c4 55%,var(--sky) 100%);border-radius:28px;
