@@ -305,149 +305,6 @@ if(expViewport){
   setTimeout(function(){ expMeasure(); expViewport.scrollLeft = EXP_ST.setW; }, 600);
 }
 
-/* ── Servicios: fila horizontal PLANA normal hacia el lado (v9) ──
-   Corre sola despacio hacia el lado, swipe con el dedo/mouse, pausa al tocar.
-   Sin coverflow 3D: ninguna tarjeta sale cortada por los bordes.
-   Tap limpio en la FOTO abre la foto completa (lightbox modo single). */
-var svcTrack = document.getElementById("svcTrack"),
-    svcViewport = document.getElementById("svcViewport"),
-    svcDots = document.getElementById("svcDots");
-var SVC = {setW: 0, cardW: 340, auto: true, resumeAt: 0, dragging: false, dragged: false, total: 14};
-if(svcTrack && svcTrack.children.length){
-  svcTrack.innerHTML = svcTrack.innerHTML + svcTrack.innerHTML + svcTrack.innerHTML;
-  /* Solo el primer video del Photobooth reproduce; los clones quedan en pausa */
-  svcTrack.querySelectorAll("video").forEach(function(v, i){
-    if(i > 0){ v.removeAttribute("autoplay"); v.pause(); }
-  });
-}
-function svcMeasure(){
-  if(!svcViewport || !svcTrack || !svcTrack.children.length) return;
-  var first = svcTrack.children[0];
-  var second = svcTrack.children[SVC.total];
-  SVC.cardW = first.offsetWidth + 20;
-  SVC.setW = second ? second.offsetLeft : SVC.total * SVC.cardW;
-  /* 14 bolitas = 14 servicios: la activa marca la tarjeta actual */
-  var dots = "";
-  for(var i = 0; i < SVC.total; i++){ dots += '<button aria-label="Ir al servicio ' + (i + 1) + ' de 14"></button>'; }
-  svcDots.innerHTML = dots;
-  svcUpdateDots();
-}
-function svcWrap(){
-  if(!svcViewport) return;
-  var sl = svcViewport.scrollLeft;
-  if(sl >= SVC.setW * 2){ svcViewport.scrollLeft = sl - SVC.setW; }
-  else if(sl <= 0){ svcViewport.scrollLeft = sl + SVC.setW; }
-}
-/* La bolita activa = la tarjeta más cercana al borde izquierdo del viewport
-   (la que se está viendo completa). Cambia con scroll, swipe, auto-scroll y flechas */
-function svcUpdateDots(){
-  if(!svcDots || !svcDots.children.length || !SVC.setW || !SVC.cardW) return;
-  var pos = ((svcViewport.scrollLeft % SVC.setW) + SVC.setW) % SVC.setW;
-  var idx = Math.round(pos / SVC.cardW) % SVC.total;
-  if(idx < 0) idx = 0; else if(idx >= SVC.total) idx = SVC.total - 1;
-  for(var i = 0; i < svcDots.children.length; i++){
-    svcDots.children[i].classList.toggle("on", i === idx);
-  }
-}
-function snapSvc(){
-  if(!svcViewport) return;
-  var target = Math.round(svcViewport.scrollLeft / SVC.cardW) * SVC.cardW;
-  svcViewport.scrollTo({left: target, behavior: "smooth"});
-}
-function svcPause(ms){
-  SVC.auto = false;
-  SVC.resumeAt = Date.now() + (ms || 3000);
-}
-function svcResumeSoon(ms){ svcPause(ms || 3000); }
-if(svcViewport){
-  /* Auto-scroll despacio con setInterval (fiable en headless y pestañas inactivas) */
-  setInterval(function(){
-    if(SVC.auto && !SVC.dragging && !document.hidden && SVC.setW > 0){
-      /* Acumular el avance fraccionario: scrollLeft redondea cada asignación
-         a entero, así que sumar 0.42px/tick directo se redondea a 0 y el
-         carrusel se quedaría quieto para siempre */
-      SVC.acc = (SVC.acc || 0) + (isMobile ? 0.55 : 0.7);
-      var step = Math.floor(SVC.acc);
-      if(step > 0){
-        SVC.acc -= step;
-        svcViewport.scrollLeft += step;
-        svcWrap();
-        svcUpdateDots();
-      }
-    } else if(Date.now() > SVC.resumeAt && !SVC.dragging){
-      SVC.auto = true;
-    }
-  }, 20);
-  /* La bolita cambia con CUALQUIER movimiento del carrusel (scroll, swipe,
-     auto-scroll, flechas, snap): el evento scroll lo cubre todo */
-  svcViewport.addEventListener("scroll", function(){ svcUpdateDots(); }, {passive: true});
-  /* Arrastre con mouse + swipe táctil, tap en la foto abre el lightbox */
-  var sDragX = 0, sDragScroll = 0, sDragMoved = 0;
-  svcViewport.addEventListener("pointerdown", function(e){
-    SVC.dragging = true; SVC.dragged = false; SVC.auto = false;
-    sDragX = e.clientX; sDragScroll = svcViewport.scrollLeft; sDragMoved = 0;
-    svcViewport.classList.add("dragging");
-    try{ svcViewport.setPointerCapture(e.pointerId); }catch(_){}
-  });
-  svcViewport.addEventListener("pointermove", function(e){
-    if(!SVC.dragging) return;
-    var dx = e.clientX - sDragX;
-    sDragMoved = Math.max(sDragMoved, Math.abs(dx));
-    if(sDragMoved > 7){ SVC.dragged = true; }
-    svcViewport.scrollLeft = sDragScroll - dx;
-    svcWrap();
-  });
-  function svcEndDrag(){
-    if(!SVC.dragging) return;
-    SVC.dragging = false;
-    svcViewport.classList.remove("dragging");
-    if(SVC.dragged){
-      snapSvc();
-      setTimeout(function(){ SVC.dragged = false; }, 350);
-    }
-    svcResumeSoon(3000);
-  }
-  svcViewport.addEventListener("pointerup", svcEndDrag);
-  svcViewport.addEventListener("pointercancel", svcEndDrag);
-  svcViewport.addEventListener("mouseenter", function(){ SVC.auto = false; });
-  svcViewport.addEventListener("mouseleave", function(){ if(!SVC.dragging){ svcResumeSoon(2000); } });
-  svcViewport.addEventListener("click", function(e){
-    if(SVC.dragged) return;
-    /* Reservar son enlaces: que sigan a WhatsApp, sin abrir la foto */
-    if(e.target.closest("a, button")) return;
-    var card = e.target.closest(".svc-card");
-    if(!card) return;
-    var img = card.querySelector(".svc-media img");
-    var vid = card.querySelector(".svc-media video");
-    var title = card.querySelector("h3");
-    if(img){ openSingleLB(img.currentSrc || img.src, img.alt); }
-    else if(vid){ openSingleLB(vid.poster, title ? title.textContent : "Photobooth 360"); }
-  });
-  document.getElementById("svcPrev").addEventListener("click", function(){
-    var step = Math.max(1, Math.round(svcViewport.clientWidth * 0.8 / SVC.cardW)) * SVC.cardW;
-    svcViewport.scrollBy({left: -step, behavior: "smooth"});
-    svcResumeSoon(3000);
-  });
-  document.getElementById("svcNext").addEventListener("click", function(){
-    var step = Math.max(1, Math.round(svcViewport.clientWidth * 0.8 / SVC.cardW)) * SVC.cardW;
-    svcViewport.scrollBy({left: step, behavior: "smooth"});
-    svcResumeSoon(3000);
-  });
-  svcDots.addEventListener("click", function(e){
-    var btn = e.target.closest("button");
-    if(!btn) return;
-    var idx = Array.prototype.indexOf.call(svcDots.children, btn);
-    var pos = ((svcViewport.scrollLeft % SVC.setW) + SVC.setW) % SVC.setW;
-    var base = svcViewport.scrollLeft - pos;
-    svcViewport.scrollTo({left: base + idx * SVC.cardW, behavior: "smooth"});
-    setTimeout(snapSvc, 650);
-    svcResumeSoon(3000);
-  });
-  window.addEventListener("resize", function(){ svcMeasure(); });
-  window.addEventListener("load", function(){ svcMeasure(); svcViewport.scrollLeft = SVC.setW; });
-  setTimeout(function(){ svcMeasure(); svcViewport.scrollLeft = SVC.setW; }, 600);
-}
-
 /* ── Loader ELITE: "EL INFLABLE SE ESTÁ INFLANDO" ── */
 var loader = document.getElementById("loader"),
     loadBar = document.getElementById("loadBar"),
@@ -485,15 +342,16 @@ if(!REDUCED && gsapOn && loaderLogo){
     .to(loaderLogo, {scaleY: 1, scaleX: 1, duration: 0.5, ease: "power2.out"}, "-=0.15");
 }
 /* ── Precarga REAL del loader (v10): la barra sigue la carga de los assets
-   críticos (logo, fotos de servicios, primera tanda de galería, logos de pago
-   y fuentes). Al terminar el loader la web ya está cargada completa: nada
-   aparece tarde ni salta. Mínimo 900 ms para que se vea la animación de
-   inflado, máximo 1800 ms, saltable al tocar. Un asset que falle igual
-   cuenta como listo: nada puede dejar el loader colgado. */
+   críticos (logo, primeras fotos del catálogo, primera tanda de galería,
+   logos de pago y fuentes). Al terminar el loader la web ya está cargada
+   completa: nada aparece tarde ni salta. Mínimo 900 ms para que se vea la
+   animación de inflado, máximo 1800 ms, saltable al tocar. Un asset que
+   falle igual cuenta como listo: nada puede dejar el loader colgado. */
 var PRELOAD_START = Date.now();
 function preloadList(){
   var list = ["img/logo.jpg"];
-  document.querySelectorAll(".svc-media img").forEach(function(im){
+  document.querySelectorAll(".cat-media img").forEach(function(im, idx){
+    if(idx >= 6) return;
     var s = im.getAttribute("src");
     if(s && list.indexOf(s) < 0){ list.push(s); }
   });
@@ -840,7 +698,7 @@ document.querySelectorAll('a[href="#arma-tu-fiesta"]').forEach(function(a){
   a.addEventListener("click", function(){ openBuilder(true); });
 });
 
-/* ── Lightbox: galería (con prev/next) y foto única de servicio (solo X) ── */
+/* ── Lightbox: galería (con prev/next) y foto única del catálogo (solo X) ── */
 var lb = document.getElementById("lightbox"),
     lbImg = document.getElementById("lbImg"),
     lbIdx = 0,
@@ -848,12 +706,10 @@ var lb = document.getElementById("lightbox"),
 function galCount(){ return (typeof GALLERY !== "undefined") ? GALLERY.length : 0; }
 function pauseAllCarousels(ms){
   if(catViewport){ catPause(ms); }
-  if(svcViewport){ svcPause(ms); }
   if(expViewport){ expPause(ms); }
 }
 function resumeAllCarousels(ms){
   if(catViewport){ catResumeSoon(ms); }
-  if(svcViewport){ svcResumeSoon(ms); }
   if(expViewport){ expResumeSoon(ms); }
 }
 function openLB(i){
@@ -925,13 +781,6 @@ if(!gsapOn){
     });
   }, {threshold: 0.12});
   document.querySelectorAll(".rv").forEach(function(el){ io.observe(el); });
-}
-
-/* ── Video Photobooth: reintento de autoplay silencioso ── */
-var vid = document.querySelector(".svc-media video");
-if(vid){
-  var p = vid.play();
-  if(p && p.catch){ p.catch(function(){}); }
 }
 
 /* ═══════════════ GLOBOS ELITE 3D ═══════════════ */
@@ -1171,15 +1020,12 @@ if(gsapOn){
   /* ── Reveals con ScrollTrigger en cada sección ── */
   var single = gsap.utils.toArray(".rv:not(.hero-anim)").filter(function(el){
     if(el.classList.contains("quote") || el.classList.contains("price-table") || el.classList.contains("cat-wrap")){ return false; }
-    return !el.closest(".svc-wrap, .steps, .aud-grid, .contact-grid, .price-table, .cat-track, .builder, .game");
+    return !el.closest(".steps, .aud-grid, .contact-grid, .price-table, .cat-track, .builder, .game");
   });
   single.forEach(function(el){
     gsap.from(el, {y: 44, opacity: 0, duration: 0.9, ease: "power3.out",
       scrollTrigger: {trigger: el, start: "top 88%", once: true}});
   });
-  /* Tarjetas de servicios: solo fade (v9, fila plana: sin transform en loop) */
-  ScrollTrigger.batch(".svc-card", {start: "top 88%", once: true,
-    onEnter: function(b){ gsap.fromTo(b, {opacity: 0}, {opacity: 1, duration: 0.8, stagger: 0.09, ease: "power2.out", overwrite: "auto"}); }});
   ScrollTrigger.batch(".step, .aud-card, .c-card", {start: "top 88%", once: true,
     onEnter: function(b){ gsap.fromTo(b, {y: 40, opacity: 0}, {y: 0, opacity: 1, duration: 0.7, stagger: 0.1, ease: "power3.out", overwrite: true}); }});
   ScrollTrigger.batch(".price-row:not(.head)", {start: "top 92%", once: true,
@@ -1194,8 +1040,6 @@ if(gsapOn){
     scrollTrigger: {trigger: "#arma-tu-fiesta", start: "top 80%", once: true}});
   gsap.from(".cat-wrap", {y: 44, opacity: 0, duration: 0.9, ease: "power3.out",
     scrollTrigger: {trigger: "#galeria", start: "top 82%", once: true}});
-  gsap.from(".svc-wrap", {y: 44, opacity: 0, duration: 0.9, ease: "power3.out",
-    scrollTrigger: {trigger: "#servicios", start: "top 82%", once: true}});
   gsap.from(".fiesta-sky", {scale: 0.94, opacity: 0, duration: 1, ease: "back.out(1.4)",
     scrollTrigger: {trigger: "#fiesta", start: "top 82%", once: true}});
 
@@ -1205,7 +1049,7 @@ if(gsapOn){
 /* ── Red de seguridad: ninguna sección puede quedarse invisible jamás ── */
 function forceReveal(){
   var vh = window.innerHeight || 800;
-  var sel = ".rv, .svc-card, .step, .aud-card, .c-card, .b-item, .price-row, .quote, .price-table, .builder-side, .cat-wrap, .fiesta-sky";
+  var sel = ".rv, .step, .aud-card, .c-card, .b-item, .price-row, .quote, .price-table, .builder-side, .cat-wrap, .fiesta-sky";
   document.querySelectorAll(sel).forEach(function(el){
     if(el.classList.contains("hero-anim")) return;
     var r = el.getBoundingClientRect();
@@ -1235,19 +1079,4 @@ document.querySelectorAll(".pay-card[data-tilt]").forEach(function(card){
   card.addEventListener("pointerleave", function(){ card.style.transform = ""; });
 });
 
-/* ── Servicios → Catálogo v14: "Ver en el catálogo" aplica el filtro y baja ──
-   Cada tarjeta de Servicios lleva un enlace con data-filter (castillos,
-   combos, chorreras, juegos, obstaculos, toro, carpas, espuma, todos).
-   El clic aprieta el botón de filtro del catálogo (reusa applyFilter de
-   catalogo.js) y baja suave hasta #catalogo. Sin JS, el href lleva igual. */
-document.querySelectorAll(".svc-cat-link").forEach(function(link){
-  link.addEventListener("click", function(e){
-    e.preventDefault();
-    var f = link.getAttribute("data-filter") || "todos";
-    var btn = document.querySelector('#catFilters button[data-filter="' + f + '"]');
-    if(btn){ btn.click(); }
-    var cat = document.getElementById("catalogo");
-    if(cat){ cat.scrollIntoView({behavior: "smooth"}); }
-  });
-});
 })();

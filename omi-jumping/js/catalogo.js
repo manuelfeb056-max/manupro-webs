@@ -1,4 +1,4 @@
-/* ═══════════════ OMI JUMPING · CATÁLOGO v14 ═══════════════
+/* ═══════════════ OMI JUMPING · CATÁLOGO v16 ═══════════════
    Datos del documento FINAL 2026-11-06 (catalogo-omi-jumping-2026-11-06.md):
    44 ítems únicos (47 tarjetas: carpas/mesas/sillas son 5 precios con 2 fotos),
    47 tarjetas con precio SEGURO confirmado por Omar, todas con precio.
@@ -9,7 +9,7 @@
    Sin apóstrofes en los strings (regla standing: rompen el form de WhatsApp). */
 (function(){
 "use strict";
-var V = "?v=15";
+var V = "?v=16";
 var IMG = "img/catalogo/";
 var VID = "img/catalogo/videos/";
 
@@ -105,7 +105,7 @@ function waMsg(it){
   return m + ". ¿Me confirmas disponibilidad?";
 }
 
-/* ── Render del catálogo v14 · TIRA HORIZONTAL hacia el lado ──
+/* ── Render del catálogo v16 · TIRA HORIZONTAL hacia el lado ──
    Una sola tira con las 47 tarjetas en orden perfecto del documento
    (castillos → combos → chorreras → juegos → obstáculos → toro →
    carpas → espuma). Sin grid viejo: el único catálogo es esta tira.
@@ -261,6 +261,94 @@ if(track){
   applyFilter("todos");
 }
 
+/* ── Tira horizontal genérica (Anuncios v16): flechas + puntos + swipe ──
+   Mismo patrón que la tira del catálogo, sin auto-scroll ni bucle:
+   medir tarjetas, puntos por página, flechas por ~80% del viewport,
+   arrastre con mouse/táctil y snap a tarjeta. El clic justo después de
+   arrastrar queda bloqueado para no abrir el lightbox ni el video. */
+function initAdStrip(ids){
+  var vp = document.getElementById(ids.vp),
+      tr = document.getElementById(ids.tr),
+      dots = document.getElementById(ids.dots),
+      prev = document.getElementById(ids.prev),
+      next = document.getElementById(ids.next);
+  if(!vp || !tr || !tr.children.length) return;
+  var S = {cardW: 340, pages: 1, dragging: false, dragged: false};
+  function measure(){
+    var first = tr.children[0];
+    if(!first) return;
+    S.cardW = first.offsetWidth + 20;
+    var totalW = 0;
+    for(var i = 0; i < tr.children.length; i++){ totalW += S.cardW; }
+    S.pages = Math.max(1, Math.ceil(totalW / vp.clientWidth));
+    var html = "";
+    for(var p = 0; p < S.pages; p++){ html += '<button aria-label="Ir a la página ' + (p + 1) + '"></button>'; }
+    if(dots){ dots.innerHTML = html; }
+    updateDots();
+  }
+  function updateDots(){
+    if(!dots || !dots.children.length) return;
+    var page = Math.min(S.pages - 1, Math.floor(vp.scrollLeft / vp.clientWidth));
+    if(page < 0) page = 0;
+    for(var i = 0; i < dots.children.length; i++){
+      dots.children[i].classList.toggle("on", i === page);
+    }
+  }
+  function snap(){
+    var target = Math.round(vp.scrollLeft / S.cardW) * S.cardW;
+    vp.scrollTo({left: target, behavior: "smooth"});
+  }
+  function step(dir){
+    var st = Math.max(1, Math.round(vp.clientWidth * 0.8 / S.cardW)) * S.cardW;
+    vp.scrollBy({left: dir * st, behavior: "smooth"});
+    setTimeout(snap, 450);
+  }
+  if(prev){ prev.addEventListener("click", function(){ step(-1); }); }
+  if(next){ next.addEventListener("click", function(){ step(1); }); }
+  if(dots){
+    dots.addEventListener("click", function(e){
+      var btn = e.target.closest("button");
+      if(!btn) return;
+      var idx = Array.prototype.indexOf.call(dots.children, btn);
+      vp.scrollTo({left: idx * vp.clientWidth, behavior: "smooth"});
+      setTimeout(snap, 650);
+    });
+  }
+  vp.addEventListener("scroll", function(){ updateDots(); }, {passive: true});
+  var dX = 0, dScroll = 0, dMoved = 0;
+  vp.addEventListener("pointerdown", function(e){
+    S.dragging = true; S.dragged = false;
+    dX = e.clientX; dScroll = vp.scrollLeft; dMoved = 0;
+    vp.classList.add("dragging");
+    try{ vp.setPointerCapture(e.pointerId); }catch(_){}
+  });
+  vp.addEventListener("pointermove", function(e){
+    if(!S.dragging) return;
+    var dx = e.clientX - dX;
+    dMoved = Math.max(dMoved, Math.abs(dx));
+    if(dMoved > 7){ S.dragged = true; }
+    vp.scrollLeft = dScroll - dx;
+  });
+  function endDrag(){
+    if(!S.dragging) return;
+    S.dragging = false;
+    vp.classList.remove("dragging");
+    if(S.dragged){
+      vp.dataset.dragged = "1";
+      snap();
+      setTimeout(function(){ S.dragged = false; vp.dataset.dragged = ""; }, 350);
+    }
+  }
+  vp.addEventListener("pointerup", endDrag);
+  vp.addEventListener("pointercancel", endDrag);
+  vp.addEventListener("click", function(e){
+    if(vp.dataset.dragged === "1"){ e.preventDefault(); e.stopPropagation(); }
+  }, true);
+  window.addEventListener("resize", function(){ measure(); });
+  window.addEventListener("load", function(){ measure(); });
+  measure();
+}
+
 /* ── Render de flyers de Anuncios ── */
 var adGrid = document.getElementById("adFlyers");
 if(adGrid){
@@ -279,6 +367,7 @@ if(adGrid){
     var f = ANUNCIOS[parseInt(media.getAttribute("data-flyer"), 10)];
     if(window.openSingleLB) window.openSingleLB(IMG + f.img + V, f.name);
   });
+  initAdStrip({vp: "adFlyerViewport", tr: "adFlyers", dots: "adFlyerDots", prev: "adFlyerPrev", next: "adFlyerNext"});
 }
 
 /* ── Render de videos de Anuncios ── */
@@ -304,6 +393,7 @@ if(vidGrid){
       "</div></article>";
   });
   vidGrid.innerHTML = vidHtml;
+  initAdStrip({vp: "adVideoViewport", tr: "adVideos", dots: "adVideoDots", prev: "adVideoPrev", next: "adVideoNext"});
   /* Un solo video sonando a la vez */
   vidGrid.querySelectorAll("video").forEach(function(vid){
     vid.addEventListener("play", function(){
