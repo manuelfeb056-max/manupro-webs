@@ -25,7 +25,7 @@
 }
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{font-family:"Inter",system-ui,-apple-system,sans-serif;background:var(--beige);color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body{font-family:"Inter",system-ui,-apple-system,sans-serif;background:var(--beige);color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden;padding-bottom:76px}
 h1,h2,h3,.orbitron{font-family:"Orbitron",sans-serif;font-weight:900;line-height:1.15;letter-spacing:.01em}
 img{max-width:100%;display:block}
 a{color:inherit}
@@ -170,6 +170,12 @@ footer p{color:#b9b9b9}
 footer a{color:#fff}
 footer .foot-links{margin-top:16px;display:flex;gap:22px;justify-content:center;flex-wrap:wrap}
 footer .foot-links a{font-family:"Orbitron",sans-serif;font-weight:800;font-size:.85rem;text-decoration:none;color:var(--yellow)}
+
+/* ---------- barra inferior de pestañas estilo app (v10) ---------- */
+.tabbar{position:fixed;left:0;right:0;bottom:0;z-index:1000;background:#fff;border-top:1px solid #e5e5e5;display:flex;height:64px}
+.tabbar a{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;text-decoration:none;color:#555;font-size:.72rem;font-weight:700;line-height:1.1}
+.tabbar a svg{width:26px;height:26px}
+.tabbar a.active{color:var(--green)}
 </style>
 </head>
 <body>
@@ -398,6 +404,16 @@ footer .foot-links a{font-family:"Orbitron",sans-serif;font-weight:800;font-size
   </div>
 </footer>
 
+<!-- barra inferior de pestañas estilo app (v10) -->
+<nav class="tabbar" aria-label="Pestañas principales">
+  <a href="#inicio" class="active"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>Inicio</a>
+  <a href="#ofertas"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12.586 2.586A2 2 0 0 0 11.172 2H4a2 2 0 0 0-2 2v7.172a2 2 0 0 0 .586 1.414l8.704 8.704a2.426 2.426 0 0 0 3.42 0l6.58-6.58a2.426 2.426 0 0 0 0-3.42z"/><circle cx="7.5" cy="7.5" r=".5" fill="currentColor"/></svg>Ofertas</a>
+  <a href="#websites"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m2 7 4.41-4.41A2 2 0 0 1 7.83 2h8.34a2 2 0 0 1 1.42.59L22 7"/><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><path d="M15 22v-4a2 2 0 0 0-2-2h-2a2 2 0 0 0-2 2v4"/><path d="M2 7h20"/><path d="M22 7v3a2 2 0 0 1-2 2 2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 16 12a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 12 12a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 8 12a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 4 12a2 2 0 0 1-2-2V7"/></svg>Empresas</a>
+  <a href="#precios"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 9a3 3 0 0 1 0 6v2a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-2a3 3 0 0 1 0-6V7a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2Z"/><path d="M13 5v2"/><path d="M13 11v2"/><path d="M13 17v2"/></svg>Reservas</a>
+  <a href="https://wa.me/17873128042?text=Hola%20Manupro%2C%20quiero%20gestionar%20mi%20website" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="21" y1="4" x2="14" y2="4"/><line x1="10" y1="4" x2="3" y2="4"/><line x1="21" y1="12" x2="12" y2="12"/><line x1="8" y1="12" x2="3" y2="12"/><line x1="21" y1="20" x2="16" y2="20"/><line x1="12" y1="20" x2="3" y2="20"/><line x1="14" y1="2" x2="14" y2="6"/><line x1="8" y1="10" x2="8" y2="14"/><line x1="16" y1="18" x2="16" y2="22"/></svg>Gestionar</a>
+  <a href="https://wa.me/17873128042?text=Hola%20Manupro%2C%20quiero%20entrar%20a%20mi%20cuenta" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>Entrar</a>
+</nav>
+
 <script>
 (function(){
   "use strict";
@@ -432,6 +448,42 @@ footer .foot-links a{font-family:"Orbitron",sans-serif;font-weight:800;font-size
   document.addEventListener("keydown", function(e){
     if (e.key === "Escape" && drawer.classList.contains("open")) { closeMenu(); }
   });
+  /* barra inferior de pestañas (v10): activa al tocar + segun la seccion visible */
+  var tabs = document.querySelectorAll(".tabbar a");
+  var tabSections = [
+    { id: "inicio", tab: 0 },
+    { id: "ofertas", tab: 1 },
+    { id: "websites", tab: 2 },
+    { id: "precios", tab: 3 }
+  ];
+  function setActiveTab(i){
+    for (var k = 0; k < tabs.length; k++) {
+      if (k === i) { tabs[k].classList.add("active"); } else { tabs[k].classList.remove("active"); }
+    }
+  }
+  for (var t = 0; t < tabs.length; t++) {
+    (function(idx){
+      tabs[idx].addEventListener("click", function(){
+        setActiveTab(idx);
+        closeMenu();
+      });
+    })(t);
+  }
+  var ticking = false;
+  function spy(){
+    ticking = false;
+    var mid = window.innerHeight * 0.4;
+    var current = 0;
+    for (var s = 0; s < tabSections.length; s++) {
+      var el = document.getElementById(tabSections[s].id);
+      if (el && el.getBoundingClientRect().top <= mid) { current = tabSections[s].tab; }
+    }
+    setActiveTab(current);
+  }
+  window.addEventListener("scroll", function(){
+    if (!ticking) { ticking = true; window.requestAnimationFrame(spy); }
+  }, { passive: true });
+  spy();
 })();
 </script>
 </body>
