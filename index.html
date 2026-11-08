@@ -112,7 +112,8 @@ section{padding:34px 0}
 /* ---------- portafolio estilo app ---------- */
 .portfolio-count{font-weight:700;color:var(--muted);font-size:.95rem;margin-bottom:18px}
 .portfolio-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
-.site-card{background:#fff;border:1px solid var(--line);border-radius:20px;padding:16px 14px 14px;display:flex;flex-direction:column;box-shadow:0 6px 20px rgba(0,0,0,.05)}
+.site-card{background:#fff;border:1px solid var(--line);border-radius:20px;padding:16px 14px 14px;display:flex;flex-direction:column;box-shadow:0 6px 20px rgba(0,0,0,.05);transition:transform .25s ease,border-color .25s ease,box-shadow .25s ease}
+.site-card:hover{transform:translateY(-4px);border-color:var(--green);box-shadow:0 14px 30px rgba(22,135,48,.18)}
 /* REGLA DE LOGOS (Mannuel 2026-11-08): todos con la MISMA MEDIDA — cuadro fijo
    de 96x96 para cada logo, sea cuadrado, círculo o rectangular, centrado y
    ajustado dentro sin deformar; monogramas del mismo tamaño. */
@@ -132,6 +133,13 @@ section{padding:34px 0}
 .site-card .go svg{width:16px;height:16px;stroke:var(--yellow)}
 @media(min-width:760px){.portfolio-grid{grid-template-columns:repeat(3,1fr)}}
 @media(min-width:1024px){.portfolio-grid{grid-template-columns:repeat(4,1fr)}}
+
+/* ---------- simulador de crecimiento (v15, claro/verde) ---------- */
+.simulador{background:#fff;border:1px solid var(--line);border-radius:20px;padding:24px 20px;box-shadow:0 6px 20px rgba(0,0,0,.05)}
+.simulador input[type=range]{width:100%;accent-color:var(--green);margin:16px 0 6px}
+.sim-minmax{display:flex;justify-content:space-between;font-size:.78rem;color:var(--muted);font-weight:700}
+.sim-result{font-size:1.1rem;color:var(--black);text-align:center;margin-top:14px}
+.sim-result b{font-family:"Orbitron",sans-serif;font-weight:900;color:var(--green);font-size:1.6rem}
 
 /* ---------- precios (al final) ---------- */
 #precios{background:#fff}
@@ -190,6 +198,16 @@ footer .foot-links a{font-family:"Orbitron",sans-serif;font-weight:800;font-size
 </head>
 <body>
 
+<!-- barra inferior de pestañas estilo app (v10; v15: al inicio del body para que pinte rápido) -->
+<nav class="tabbar" aria-label="Pestañas principales">
+  <a href="#inicio" class="active"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>Inicio</a>
+  <a href="#ofertas"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12.586 2.586A2 2 0 0 0 11.172 2H4a2 2 0 0 0-2 2v7.172a2 2 0 0 0 .586 1.414l8.704 8.704a2.426 2.426 0 0 0 3.42 0l6.58-6.58a2.426 2.426 0 0 0 0-3.42z"/><circle cx="7.5" cy="7.5" r=".5" fill="currentColor"/></svg>Ofertas</a>
+  <a href="#websites"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m2 7 4.41-4.41A2 2 0 0 1 7.83 2h8.34a2 2 0 0 1 1.42.59L22 7"/><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><path d="M15 22v-4a2 2 0 0 0-2-2h-2a2 2 0 0 0-2 2v4"/><path d="M2 7h20"/><path d="M22 7v3a2 2 0 0 1-2 2 2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 16 12a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 12 12a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 8 12a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 4 12a2 2 0 0 1-2-2V7"/></svg>Empresas</a>
+  <a href="#precios"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 9a3 3 0 0 1 0 6v2a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-2a3 3 0 0 1 0-6V7a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2Z"/><path d="M13 5v2"/><path d="M13 11v2"/><path d="M13 17v2"/></svg>Reservas</a>
+  <a href="https://wa.me/17873128042?text=Hola%20Manupro%2C%20quiero%20gestionar%20mi%20website" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="21" y1="4" x2="14" y2="4"/><line x1="10" y1="4" x2="3" y2="4"/><line x1="21" y1="12" x2="12" y2="12"/><line x1="8" y1="12" x2="3" y2="12"/><line x1="21" y1="20" x2="16" y2="20"/><line x1="12" y1="20" x2="3" y2="20"/><line x1="14" y1="2" x2="14" y2="6"/><line x1="8" y1="10" x2="8" y2="14"/><line x1="16" y1="18" x2="16" y2="22"/></svg>Gestionar</a>
+  <a href="https://wa.me/17873128042?text=Hola%20Manupro%2C%20quiero%20entrar%20a%20mi%20cuenta" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>Entrar</a>
+</nav>
+
 <!-- floating hamburger: regla standing -->
 <button class="burger" id="burger" aria-label="Abrir menú" aria-expanded="false">
   <span></span><span></span><span></span>
@@ -245,6 +263,20 @@ footer .foot-links a{font-family:"Orbitron",sans-serif;font-weight:800;font-size
       <div class="diff"><div class="num">05</div><div><h3>El primer año va por nuestra cuenta</h3><p>Hosting + mantenimiento + dominio .com, incluidos el primer año.</p></div></div>
       <div class="diff"><div class="num">06</div><div><h3>Círculo Empresarial 2027</h3><p>El primero en Puerto Rico: solo 2 por categoría por pueblo.</p></div></div>
       <div class="diff"><div class="num">07</div><div><h3>Primero te mostramos la web, luego pagas</h3><p>Primero construimos tu website y te la mostramos con tu logo real; el cliente paga después de verla.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- simulador de crecimiento (v15) -->
+<section id="simulador">
+  <div class="wrap">
+    <div class="simulador">
+      <p class="sec-kicker">Simulador de crecimiento</p>
+      <h2 class="sec-title">¿Cuántos clientes buscas?</h2>
+      <p class="sec-lead">Mueve el nivel de clientes que buscas este mes:</p>
+      <input type="range" id="simRange" min="5" max="50" value="20" step="1" aria-label="Clientes que buscas este mes">
+      <div class="sim-minmax"><span>5</span><span>50</span></div>
+      <p class="sim-result">Clientes que buscas este mes: <b id="simCount">20</b></p>
     </div>
   </div>
 </section>
@@ -423,16 +455,6 @@ footer .foot-links a{font-family:"Orbitron",sans-serif;font-weight:800;font-size
   </div>
 </footer>
 
-<!-- barra inferior de pestañas estilo app (v10) -->
-<nav class="tabbar" aria-label="Pestañas principales">
-  <a href="#inicio" class="active"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>Inicio</a>
-  <a href="#ofertas"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12.586 2.586A2 2 0 0 0 11.172 2H4a2 2 0 0 0-2 2v7.172a2 2 0 0 0 .586 1.414l8.704 8.704a2.426 2.426 0 0 0 3.42 0l6.58-6.58a2.426 2.426 0 0 0 0-3.42z"/><circle cx="7.5" cy="7.5" r=".5" fill="currentColor"/></svg>Ofertas</a>
-  <a href="#websites"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m2 7 4.41-4.41A2 2 0 0 1 7.83 2h8.34a2 2 0 0 1 1.42.59L22 7"/><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><path d="M15 22v-4a2 2 0 0 0-2-2h-2a2 2 0 0 0-2 2v4"/><path d="M2 7h20"/><path d="M22 7v3a2 2 0 0 1-2 2 2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 16 12a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 12 12a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 8 12a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 4 12a2 2 0 0 1-2-2V7"/></svg>Empresas</a>
-  <a href="#precios"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 9a3 3 0 0 1 0 6v2a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-2a3 3 0 0 1 0-6V7a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2Z"/><path d="M13 5v2"/><path d="M13 11v2"/><path d="M13 17v2"/></svg>Reservas</a>
-  <a href="https://wa.me/17873128042?text=Hola%20Manupro%2C%20quiero%20gestionar%20mi%20website" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="21" y1="4" x2="14" y2="4"/><line x1="10" y1="4" x2="3" y2="4"/><line x1="21" y1="12" x2="12" y2="12"/><line x1="8" y1="12" x2="3" y2="12"/><line x1="21" y1="20" x2="16" y2="20"/><line x1="12" y1="20" x2="3" y2="20"/><line x1="14" y1="2" x2="14" y2="6"/><line x1="8" y1="10" x2="8" y2="14"/><line x1="16" y1="18" x2="16" y2="22"/></svg>Gestionar</a>
-  <a href="https://wa.me/17873128042?text=Hola%20Manupro%2C%20quiero%20entrar%20a%20mi%20cuenta" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>Entrar</a>
-</nav>
-
 <script>
 (function(){
   "use strict";
@@ -502,6 +524,12 @@ footer .foot-links a{font-family:"Orbitron",sans-serif;font-weight:800;font-size
   window.addEventListener("scroll", function(){
     if (!ticking) { ticking = true; window.requestAnimationFrame(spy); }
   }, { passive: true });
+  /* simulador de crecimiento (v15): solo muestra el nivel que el cliente busca, no promete resultados */
+  var simRange = document.getElementById("simRange");
+  var simCount = document.getElementById("simCount");
+  if (simRange && simCount) {
+    simRange.addEventListener("input", function(){ simCount.textContent = simRange.value; });
+  }
   spy();
 })();
 </script>
