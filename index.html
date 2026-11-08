@@ -134,13 +134,6 @@ section{padding:34px 0}
 @media(min-width:760px){.portfolio-grid{grid-template-columns:repeat(3,1fr)}}
 @media(min-width:1024px){.portfolio-grid{grid-template-columns:repeat(4,1fr)}}
 
-/* ---------- simulador de crecimiento (v15, claro/verde) ---------- */
-.simulador{background:#fff;border:1px solid var(--line);border-radius:20px;padding:24px 20px;box-shadow:0 6px 20px rgba(0,0,0,.05)}
-.simulador input[type=range]{width:100%;accent-color:var(--green);margin:16px 0 6px}
-.sim-minmax{display:flex;justify-content:space-between;font-size:.78rem;color:var(--muted);font-weight:700}
-.sim-result{font-size:1.1rem;color:var(--black);text-align:center;margin-top:14px}
-.sim-result b{font-family:"Orbitron",sans-serif;font-weight:900;color:var(--green);font-size:1.6rem}
-
 /* ---------- precios (al final) ---------- */
 #precios{background:#fff}
 .price-hint{text-align:center;color:var(--green);font-size:.9rem;font-weight:700;margin:0 0 18px;letter-spacing:.04em}
@@ -263,20 +256,6 @@ footer .foot-links a{font-family:"Orbitron",sans-serif;font-weight:800;font-size
       <div class="diff"><div class="num">05</div><div><h3>El primer año va por nuestra cuenta</h3><p>Hosting + mantenimiento + dominio .com, incluidos el primer año.</p></div></div>
       <div class="diff"><div class="num">06</div><div><h3>Círculo Empresarial 2027</h3><p>El primero en Puerto Rico: solo 2 por categoría por pueblo.</p></div></div>
       <div class="diff"><div class="num">07</div><div><h3>Primero te mostramos la web, luego pagas</h3><p>Primero construimos tu website y te la mostramos con tu logo real; el cliente paga después de verla.</p></div></div>
-    </div>
-  </div>
-</section>
-
-<!-- simulador de crecimiento (v15) -->
-<section id="simulador">
-  <div class="wrap">
-    <div class="simulador">
-      <p class="sec-kicker">Simulador de crecimiento</p>
-      <h2 class="sec-title">¿Cuántos clientes buscas?</h2>
-      <p class="sec-lead">Mueve el nivel de clientes que buscas este mes:</p>
-      <input type="range" id="simRange" min="5" max="50" value="20" step="1" aria-label="Clientes que buscas este mes">
-      <div class="sim-minmax"><span>5</span><span>50</span></div>
-      <p class="sim-result">Clientes que buscas este mes: <b id="simCount">20</b></p>
     </div>
   </div>
 </section>
@@ -524,12 +503,6 @@ footer .foot-links a{font-family:"Orbitron",sans-serif;font-weight:800;font-size
   window.addEventListener("scroll", function(){
     if (!ticking) { ticking = true; window.requestAnimationFrame(spy); }
   }, { passive: true });
-  /* simulador de crecimiento (v15): solo muestra el nivel que el cliente busca, no promete resultados */
-  var simRange = document.getElementById("simRange");
-  var simCount = document.getElementById("simCount");
-  if (simRange && simCount) {
-    simRange.addEventListener("input", function(){ simCount.textContent = simRange.value; });
-  }
   spy();
 })();
 </script>
