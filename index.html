@@ -134,6 +134,13 @@ section{padding:34px 0}
 @media(min-width:760px){.portfolio-grid{grid-template-columns:repeat(3,1fr)}}
 @media(min-width:1024px){.portfolio-grid{grid-template-columns:repeat(4,1fr)}}
 
+/* ---------- simulador de crecimiento (v15, claro/verde) ---------- */
+.simulador{background:#fff;border:1px solid var(--line);border-radius:20px;padding:24px 20px;box-shadow:0 6px 20px rgba(0,0,0,.05)}
+.simulador input[type=range]{width:100%;accent-color:var(--green);margin:16px 0 6px}
+.sim-minmax{display:flex;justify-content:space-between;font-size:.78rem;color:var(--muted);font-weight:700}
+.sim-result{font-size:1.1rem;color:var(--black);text-align:center;margin-top:14px}
+.sim-result b{font-family:"Orbitron",sans-serif;font-weight:900;color:var(--green);font-size:1.6rem}
+
 /* ---------- precios (al final) ---------- */
 #precios{background:#fff}
 .price-hint{text-align:center;color:var(--green);font-size:.9rem;font-weight:700;margin:0 0 18px;letter-spacing:.04em}
@@ -162,6 +169,13 @@ section{padding:34px 0}
 .btn-thin:hover{background:var(--green);color:#fff}
 @media(min-width:760px){.price-card{flex:1 1 0;min-width:280px}}
 @media(max-width:480px){.price-amount{font-size:2.2rem}}
+
+/* ---------- ofertas de Navidad (v17) ---------- */
+#navidad{background:#fff}
+#navidad .price-card.featured{border-color:#c0392b;box-shadow:0 18px 44px rgba(192,57,43,.16)}
+#navidad .price-tag{background:#c0392b}
+#navidad .price-cupos{color:#c0392b}
+#navidad .price-amount{color:#c0392b}
 
 /* ---------- Shopify (v11: sección propia, después de precios) ---------- */
 .shopify-card{background:#fff;border:1px solid var(--line);border-radius:24px;padding:36px 28px;text-align:center;box-shadow:0 6px 20px rgba(0,0,0,.05)}
@@ -256,6 +270,20 @@ footer .foot-links a{font-family:"Orbitron",sans-serif;font-weight:800;font-size
       <div class="diff"><div class="num">05</div><div><h3>El primer año va por nuestra cuenta</h3><p>Hosting + mantenimiento + dominio .com, incluidos el primer año.</p></div></div>
       <div class="diff"><div class="num">06</div><div><h3>Círculo Empresarial 2027</h3><p>El primero en Puerto Rico: solo 2 por categoría por pueblo.</p></div></div>
       <div class="diff"><div class="num">07</div><div><h3>Primero te mostramos la web, luego pagas</h3><p>Primero construimos tu website y te la mostramos con tu logo real; el cliente paga después de verla.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- simulador de crecimiento (v15) -->
+<section id="simulador">
+  <div class="wrap">
+    <div class="simulador">
+      <p class="sec-kicker">Simulador de crecimiento</p>
+      <h2 class="sec-title">¿Cuántos clientes buscas?</h2>
+      <p class="sec-lead">Mueve el nivel de clientes que buscas este mes:</p>
+      <input type="range" id="simRange" min="5" max="50" value="20" step="1" aria-label="Clientes que buscas este mes">
+      <div class="sim-minmax"><span>5</span><span>50</span></div>
+      <p class="sim-result">Clientes que buscas este mes: <b id="simCount">20</b></p>
     </div>
   </div>
 </section>
@@ -408,6 +436,54 @@ footer .foot-links a{font-family:"Orbitron",sans-serif;font-weight:800;font-size
   </div>
 </section>
 
+<!-- OFERTAS DE NAVIDAD (v17): Agente IA $150 y Website+Google $199, solo 10 cupos -->
+<section id="navidad">
+  <div class="wrap">
+    <p class="sec-kicker">&#127876; Ofertas de Navidad</p>
+    <h2 class="sec-title">Ofertas de Navidad.</h2>
+    <p class="sec-lead">Descuento de Navidad en dos ofertas. Solo 10 cupos cada una.</p>
+    <p class="price-hint">Desliza hacia el lado para ver las 2 ofertas</p>
+    <div class="price-grid">
+      <div class="price-card featured">
+        <span class="price-tag">DESCUENTO DE NAVIDAD</span>
+        <h3>Agente de IA</h3>
+        <div class="price-amount"><small>$</small>150</div>
+        <p class="price-cupos">Valor real $2,500 &middot; Solo 10 cupos</p>
+        <table class="value-table">
+          <tr class="total"><td>Valor real</td><td>$2,500</td></tr>
+          <tr class="save"><td>Hoy $150</td><td>ahorras $2,350</td></tr>
+        </table>
+        <ul>
+          <li>Redes sociales, sin l&iacute;mite</li>
+          <li>Google y YouTube, sin l&iacute;mite</li>
+          <li>Anuncios con m&eacute;tricas avanzadas, sin l&iacute;mite</li>
+          <li>Atiende y vende por ti 24/7, sin l&iacute;mite</li>
+          <li>F&aacute;cil por chat, lo ves en tiempo real, tomas el control del navegador</li>
+        </ul>
+        <a class="btn-thin" href="https://wa.me/17873128042?text=Hola%20Manupro%2C%20quiero%20el%20Agente%20de%20IA%20por%20%24150%20(Descuento%20de%20Navidad)." target="_blank" rel="noopener">Quiero el Agente de IA por $150</a>
+      </div>
+      <div class="price-card featured">
+        <span class="price-tag">DESCUENTO DE NAVIDAD</span>
+        <h3>Website + Perfil de Google</h3>
+        <div class="price-amount"><small>$</small>199</div>
+        <p class="price-cupos">Valor real $2,470 &middot; Solo 10 cupos</p>
+        <table class="value-table">
+          <tr class="total"><td>Valor real</td><td>$2,470</td></tr>
+          <tr class="save"><td>Hoy $199</td><td>ahorras $2,271</td></tr>
+        </table>
+        <ul>
+          <li>Creaci&oacute;n de Website</li>
+          <li>Creaci&oacute;n del perfil de Google</li>
+          <li>Hosting por 1 a&ntilde;o</li>
+          <li>Mantenimiento por 1 a&ntilde;o</li>
+          <li>Dominio .com por 1 a&ntilde;o</li>
+        </ul>
+        <a class="btn-thin" href="https://wa.me/17873128042?text=Hola%20Manupro%2C%20quiero%20mi%20Website%20%2B%20Perfil%20de%20Google%20por%20%24199%20(Descuento%20de%20Navidad)." target="_blank" rel="noopener">Quiero mi Website por $199</a>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- Shopify: tienda online automatizada (v11, sección propia, no tabla de precios) -->
 <section id="shopify">
   <div class="wrap">
@@ -503,6 +579,12 @@ footer .foot-links a{font-family:"Orbitron",sans-serif;font-weight:800;font-size
   window.addEventListener("scroll", function(){
     if (!ticking) { ticking = true; window.requestAnimationFrame(spy); }
   }, { passive: true });
+  /* simulador de crecimiento (v15): solo muestra el nivel que el cliente busca, no promete resultados */
+  var simRange = document.getElementById("simRange");
+  var simCount = document.getElementById("simCount");
+  if (simRange && simCount) {
+    simRange.addEventListener("input", function(){ simCount.textContent = simRange.value; });
+  }
   spy();
 })();
 </script>
